@@ -1,0 +1,106 @@
+---
+description: >-
+  This page contain instructions that will help you to setup a node. For the
+  installation we use Ubuntu 20.04
+---
+
+# Installation
+
+### Install dependencies
+
+#### Update system and install build tools
+
+```bash
+sudo apt update
+sudo apt install curl git jq lz4 build-essential -y
+```
+
+#### Install GO
+
+```bash
+sudo rm -rf /usr/local/go
+sudo curl -Ls https://go.dev/dl/go1.19.linux-amd64.tar.gz | sudo tar -C /usr/local -xz
+tee -a $HOME/.profile > /dev/null << EOF
+export PATH=$PATH:/usr/local/go/bin
+EOF
+source $HOME/.profile
+```
+
+### Download and build binaries
+
+```bash
+cd $HOME
+rm -rf stride
+git clone https://github.com/Stride-Labs/stride.git
+cd stride
+
+# Compile version v1.0.2
+git checkout v1.0.2
+make build
+mkdir -p $HOME/.stride/cosmovisor/genesis/bin
+mv build/strided $HOME/.stride/cosmovisor/genesis/bin/
+```
+
+### Install Cosmovisor and create a service
+
+```bash
+curl -Ls https://github.com/cosmos/cosmos-sdk/releases/download/cosmovisor%2Fv1.3.0/cosmovisor-v1.3.0-linux-amd64.tar.gz | tar xz
+chmod 755 cosmovisor
+sudo mv cosmovisor /usr/bin/cosmovisor
+
+sudo tee /etc/systemd/system/strided.service > /dev/null << EOF
+[Unit]
+Description=Stride Node Service
+After=network-online.target
+[Service]
+User=$USER
+ExecStart=/usr/bin/cosmovisor run start
+Restart=on-failure
+RestartSec=10
+LimitNOFILE=65535
+Environment="DAEMON_HOME=$HOME/.stride"
+Environment="DAEMON_NAME=strided"
+Environment="UNSAFE_SKIP_BACKUP=true"
+[Install]
+WantedBy=multi-user.target
+EOF
+sudo systemctl daemon-reload
+sudo systemctl enable strided
+```
+
+### Initialize the node
+
+```bash
+MONIKER="YOUR_MONIKER_GOES_HERE"
+
+ln -s $HOME/.stride/cosmovisor/genesis $HOME/.stride/cosmovisor/current
+sudo ln -s $HOME/.stride/cosmovisor/current/bin/strided /usr/local/bin/strided
+strided config chain-id stride-1
+strided init $MONIKER --chain-id stride-1
+curl -Ls https://snapshots.kjnodes.com/stride/genesis.json > $HOME/.stride/config/genesis.json
+sed -i -e "s|^seeds *=.*|seeds = \"d07f430ddf0725804b3755c31660f88518547345@stride.rpc.kjnodes.com:16659\"|" $HOME/.stride/config/config.toml
+tee $HOME/.stride/data/priv_validator_state.json > /dev/null << EOF
+{
+  "height": "0",
+  "round": 0,
+  "step": 0
+}
+EOF
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.0001ustrd\"|" $HOME/.stride/config/app.toml
+sed -i -e "s|^pruning *=.*|pruning = \"custom\"|" $HOME/.stride/config/app.toml
+sed -i -e "s|^pruning-keep-recent *=.*|pruning-keep-recent = \"5\"|" $HOME/.stride/config/app.toml
+sed -i -e "s|^pruning-keep-every *=.*|pruning-keep-every = \"0\"|" $HOME/.stride/config/app.toml
+sed -i -e "s|^pruning-interval *=.*|pruning-interval = \"1000\"|" $HOME/.stride/config/app.toml
+```
+
+### Download latest chain snapshot
+
+```bash
+curl -L https://snapshots.kjnodes.com/stride/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.stride
+```
+
+### Start service and check the logs
+
+```bash
+sudo systemctl start strided && journalctl -u strided -f --no-hostname -o cat
+```
