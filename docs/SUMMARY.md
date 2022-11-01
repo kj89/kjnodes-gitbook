@@ -22,10 +22,8 @@
 * [Installation](kujira/installation.md)
 * [Snapshot](kujira/snapshot.md)
 * [State sync](kujira/state-sync.md)
-* [Services](kujira/services/README.md)
-  * [Useful commands](kujira/services/useful-commands.md)
+* [Services](kujira/services.md)
 * [Useful commands](kujira/useful-commands.md)
-* [Useful commands](kujira/useful-commands-1.md)
 
 ## 🥥 Rebus
 

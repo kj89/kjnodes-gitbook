@@ -1,8 +1,6 @@
----
-description: This page contains useful commands for validators
----
-
 # Useful commands
+
+This page contains useful commands for validators
 
 ### Key management
 
