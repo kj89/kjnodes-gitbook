@@ -2,21 +2,6 @@
 
 * [🍋 Supported chains](README.md)
 
-## 🍍 Agoric
-
-* [MAINNET](agoric/mainnet/README.md)
-  * [Installation](agoric/mainnet/installation.md)
-  * [Snapshot](agoric/mainnet/snapshot.md)
-  * [State sync](agoric/mainnet/state-sync.md)
-  * [Services](agoric/mainnet/services.md)
-  * [Useful commands](agoric/mainnet/useful-commands.md)
-* [TESTNET](agoric/testnet/README.md)
-  * [Installation](agoric/testnet/installation.md)
-  * [Snapshot](agoric/testnet/snapshot.md)
-  * [State sync](agoric/testnet/state-sync.md)
-  * [Services](agoric/testnet/services.md)
-  * [Useful commands](agoric/testnet/useful-commands.md)
-
 ## 🐋 Kujira
 
 * [Installation](kujira/installation.md)
