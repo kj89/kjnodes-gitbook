@@ -87,7 +87,7 @@ tee $HOME/${CHAIN_DIR}/data/priv_validator_state.json > /dev/null << EOF
   "step": 0
 }
 EOF
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.0001${CHAIN_DENOM}\"|" $HOME/${CHAIN_DIR}/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"${MIN_GAS_PRICE}\"|" $HOME/${CHAIN_DIR}/config/app.toml
 sed -i -e "s|^pruning *=.*|pruning = \"custom\"|" $HOME/${CHAIN_DIR}/config/app.toml
 sed -i -e "s|^pruning-keep-recent *=.*|pruning-keep-recent = \"5\"|" $HOME/${CHAIN_DIR}/config/app.toml
 sed -i -e "s|^pruning-keep-every *=.*|pruning-keep-every = \"0\"|" $HOME/${CHAIN_DIR}/config/app.toml
