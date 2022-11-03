@@ -6,10 +6,10 @@ description: >-
 
 # Snapshot
 
-| BLOCK  | TIMESTAMP  | SIZE    | DOWNLOAD                                                                                                                       |
-| ------ | ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| BLOCK <img width=200/> | TIMESTAMP <img width=200/> | SIZE <img width=200/> | DOWNLOAD <img width=500/>                                                   |
+| ------ | ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------- |
 | 1623670 | 10 hours ago | 4.36 GB | [snapshot\_latest.tar.lz4](https://snapshots.kjnodes.com/rebus/snapshot\_latest.tar.lz4) |
-
+|<img width=200/>|<img width=500/>|
 ### Stop the service and reset the data
 
 ```bash
