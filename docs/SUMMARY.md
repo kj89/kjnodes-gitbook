@@ -22,7 +22,7 @@
   * [State sync](mainnet/stride/state-sync/README.md)
   * [Useful commands](mainnet/stride/useful-commands/README.md)
 
-* [🍊 Teritori](mainnet/teritori/README/README.md)
+* [🍊 Teritori](mainnet/teritori/README.md)
   * [Installation](mainnet/teritori/installation/README.md)
   * [Snapshot](mainnet/teritori/snapshot/README.md)
   * [State sync](mainnet/teritori/state-sync/README.md)
