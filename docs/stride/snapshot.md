@@ -6,7 +6,7 @@ description: >-
 
 # Snapshot
 
-| BLOCK <img width=200/> | TIMESTAMP <img width=200/> | SIZE <img width=200/> | DOWNLOAD <img width=500/>                                                   |
+| BLOCK <img width=200/> | TIMESTAMP <img width=200/> | SIZE <img width=200/> | DOWNLOAD <img width=5000/>                                                  |
 | ------ | ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------- |
 | 865090 | 11 hours ago | 6.14 GB | [snapshot\_latest.tar.lz4](https://snapshots.kjnodes.com/stride/snapshot\_latest.tar.lz4) |
 
