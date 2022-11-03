@@ -39,11 +39,17 @@ rm -rf core
 git clone https://github.com/Team-Kujira/core.git
 cd core
 
-# Compile version v0.6.4
-git checkout v0.6.4
+# Compile genesis version ${GENESIS_VERSION}
+git checkout ${GENESIS_VERSION}
 make build
 mkdir -p $HOME/.kujira/cosmovisor/genesis/bin
 mv build/kujirad $HOME/.kujira/cosmovisor/genesis/bin/
+
+# Compile latest version v0.6.4
+git checkout v0.6.4
+make build
+mkdir -p $HOME/.kujira/cosmovisor/upgrades/v0.6.4/bin
+mv build/kujirad $HOME/.kujira/cosmovisor/upgrades/v0.6.4/bin/
 ```
 
 ### Install Cosmovisor and create a service

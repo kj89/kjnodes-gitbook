@@ -39,11 +39,17 @@ rm -rf rebus.core
 git clone https://github.com/rebuschain/rebus.core.git
 cd rebus.core
 
-# Compile version v0.2.0
-git checkout v0.2.0
+# Compile genesis version ${GENESIS_VERSION}
+git checkout ${GENESIS_VERSION}
 make build
 mkdir -p $HOME/.rebusd/cosmovisor/genesis/bin
 mv build/rebusd $HOME/.rebusd/cosmovisor/genesis/bin/
+
+# Compile latest version v0.2.0
+git checkout v0.2.0
+make build
+mkdir -p $HOME/.rebusd/cosmovisor/upgrades/v0.2.0/bin
+mv build/rebusd $HOME/.rebusd/cosmovisor/upgrades/v0.2.0/bin/
 ```
 
 ### Install Cosmovisor and create a service

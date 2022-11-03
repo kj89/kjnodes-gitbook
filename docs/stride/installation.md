@@ -39,11 +39,17 @@ rm -rf stride
 git clone https://github.com/Stride-Labs/stride.git
 cd stride
 
-# Compile version v2.0.3
-git checkout v2.0.3
+# Compile genesis version ${GENESIS_VERSION}
+git checkout ${GENESIS_VERSION}
 make build
 mkdir -p $HOME/.stride/cosmovisor/genesis/bin
 mv build/strided $HOME/.stride/cosmovisor/genesis/bin/
+
+# Compile latest version v2.0.3
+git checkout v2.0.3
+make build
+mkdir -p $HOME/.stride/cosmovisor/upgrades/v2.0.3/bin
+mv build/strided $HOME/.stride/cosmovisor/upgrades/v2.0.3/bin/
 ```
 
 ### Install Cosmovisor and create a service

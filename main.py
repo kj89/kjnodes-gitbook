@@ -83,7 +83,8 @@ def get_replacement_params(chain):
 
         git_dir = list(data['chain_git_repos'].keys())[0]
         git_url = data['chain_git_repos'][git_dir]
-        bin_version = data['chain_upgrades'][-1]['tag']
+        genesis_version = data['chain_upgrades'][0]['tag']
+        latest_version = data['chain_upgrades'][-1]['tag']
         chain_name = data['chain_user']
         chain_id = data['chain_id']
         chain_app = data['chain_binary']
@@ -93,7 +94,8 @@ def get_replacement_params(chain):
 
         replacements['${GIT_DIR}'] = git_dir
         replacements['${GIT_URL}'] = git_url
-        replacements['${VERSION}'] = bin_version
+        replacements['${LATEST_VERSION}'] = genesis_version
+        replacements['${LATEST_VERSION}'] = latest_version
         replacements['${CHAIN_NAME}'] = chain_name
         replacements['${CHAIN_ID}'] = chain_id
         replacements['${CHAIN_APP}'] = chain_app
