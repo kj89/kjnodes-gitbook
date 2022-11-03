@@ -44,6 +44,7 @@ git checkout v0.4.1
 make build
 mkdir -p $HOME/.kujira/cosmovisor/genesis/bin
 mv build/kujirad $HOME/.kujira/cosmovisor/genesis/bin/
+rm build -rf
 
 # Compile latest version v0.6.4
 git checkout v0.6.4

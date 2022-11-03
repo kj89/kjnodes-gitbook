@@ -8,7 +8,7 @@ description: >-
 
 | BLOCK  | TIMESTAMP  | SIZE    | DOWNLOAD                                                                                                                       |
 | ------ | ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| 4766586 | 2 hours ago | 3.39 GB | [https://snapshots.kjnodes.com/kujira/snapshot\_latest.tar.lz4](https://snapshots.kjnodes.com/kujira/snapshot\_latest.tar.lz4) |
+| 4766586 | 3 hours ago | 3.39 GB | [https://snapshots.kjnodes.com/kujira/snapshot\_latest.tar.lz4](https://snapshots.kjnodes.com/kujira/snapshot\_latest.tar.lz4) |
 
 ### Stop the service and reset the data
 
