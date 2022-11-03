@@ -295,9 +295,9 @@ sudo systemctl stop kujirad
 sudo systemctl disable kujirad
 sudo rm /etc/systemd/system/kujirad.service
 sudo systemctl daemon-reload
+rm -rf $(which kujirad) 
 rm -rf $HOME/.kujira
 rm -rf $HOME/core
-rm $(which kujirad) 
 ```
 
 ### Service Management

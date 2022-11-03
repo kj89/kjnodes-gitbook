@@ -295,9 +295,9 @@ sudo systemctl stop rebusd
 sudo systemctl disable rebusd
 sudo rm /etc/systemd/system/rebusd.service
 sudo systemctl daemon-reload
+rm -rf $(which rebusd) 
 rm -rf $HOME/.rebusd
 rm -rf $HOME/rebus.core
-rm $(which rebusd) 
 ```
 
 ### Service Management

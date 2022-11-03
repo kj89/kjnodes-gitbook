@@ -295,9 +295,9 @@ sudo systemctl stop teritorid
 sudo systemctl disable teritorid
 sudo rm /etc/systemd/system/teritorid.service
 sudo systemctl daemon-reload
+rm -rf $(which teritorid) 
 rm -rf $HOME/.teritorid
 rm -rf $HOME/teritori-chain
-rm $(which teritorid) 
 ```
 
 ### Service Management

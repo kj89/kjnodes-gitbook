@@ -295,9 +295,9 @@ sudo systemctl stop strided
 sudo systemctl disable strided
 sudo rm /etc/systemd/system/strided.service
 sudo systemctl daemon-reload
+rm -rf $(which strided) 
 rm -rf $HOME/.stride
 rm -rf $HOME/stride
-rm $(which strided) 
 ```
 
 ### Service Management
