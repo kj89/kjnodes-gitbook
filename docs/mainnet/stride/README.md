@@ -28,4 +28,4 @@ seed-node-peer
 ## Downloads
 
 * addrbook: [addrbook.json](https://snapshots.kjnodes.com/stride/addrbook.json)
-* snapshot: [snapshot](https://snapshots.kjnodes.com/stride/snapshot\_latest.tar.lz4)
+* snapshot: [snapshot_latest.tar.lz4](https://snapshots.kjnodes.com/stride/snapshot\_latest.tar.lz4)
