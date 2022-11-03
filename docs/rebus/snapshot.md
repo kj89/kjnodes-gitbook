@@ -8,25 +8,25 @@ description: >-
 
 | BLOCK  | TIMESTAMP  | SIZE    | DOWNLOAD                                                                                                                       |
 | ------ | ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| 332263 | 1 hour ago | 0.3 GB | [https://snapshots.kjnodes.com/${CHAIN_NAME}/snapshot\_latest.tar.lz4](https://snapshots.kjnodes.com/${CHAIN_NAME}/snapshot\_latest.tar.lz4) |
+| 1623670 | 28 minutes ago | 4.36 GB | [https://snapshots.kjnodes.com/rebus/snapshot\_latest.tar.lz4](https://snapshots.kjnodes.com/rebus/snapshot\_latest.tar.lz4) |
 
 ### Stop the service and reset the data
 
 ```bash
-sudo systemctl stop ${CHAIN_APP}
-cp $HOME/${CHAIN_DIR}/data/priv_validator_state.json $HOME/${CHAIN_DIR}/priv_validator_state.json.backup
-rm -rf $HOME/${CHAIN_DIR}/data
+sudo systemctl stop rebusd
+cp $HOME/.rebusd/data/priv_validator_state.json $HOME/.rebusd/priv_validator_state.json.backup
+rm -rf $HOME/.rebusd/data
 ```
 
 ### Download the latest snapshot
 
 ```bash
-curl -L https://snapshots.kjnodes.com/${CHAIN_NAME}/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/${CHAIN_DIR}
-mv $HOME/${CHAIN_DIR}/priv_validator_state.json.backup $HOME/${CHAIN_DIR}/data/priv_validator_state.json
+curl -L https://snapshots.kjnodes.com/rebus/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.rebusd
+mv $HOME/.rebusd/priv_validator_state.json.backup $HOME/.rebusd/data/priv_validator_state.json
 ```
 
 ### Restart the service and check the log
 
 ```bash
-sudo systemctl start ${CHAIN_APP} && journalctl -u ${CHAIN_APP} -f --no-hostname -o cat
+sudo systemctl start rebusd && journalctl -u rebusd -f --no-hostname -o cat
 ```

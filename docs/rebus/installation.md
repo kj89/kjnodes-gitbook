@@ -30,15 +30,15 @@ source $HOME/.profile
 
 ```bash
 cd $HOME
-rm -rf ${GIT_DIR}
-git clone ${GIT_URL}
-cd ${GIT_DIR}
+rm -rf rebus.core
+git clone https://github.com/rebuschain/rebus.core.git
+cd rebus.core
 
-# Compile version ${VERSION}
-git checkout ${VERSION}
+# Compile version v0.2.0
+git checkout v0.2.0
 make build
-mkdir -p $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin
-mv build/${CHAIN_APP} $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin/
+mkdir -p $HOME/.rebusd/cosmovisor/genesis/bin
+mv build/rebusd $HOME/.rebusd/cosmovisor/genesis/bin/
 ```
 
 ### Install Cosmovisor and create a service
@@ -48,9 +48,9 @@ curl -Ls https://github.com/cosmos/cosmos-sdk/releases/download/cosmovisor%2Fv1.
 chmod 755 cosmovisor
 sudo mv cosmovisor /usr/bin/cosmovisor
 
-sudo tee /etc/systemd/system/${CHAIN_APP}.service > /dev/null << EOF
+sudo tee /etc/systemd/system/rebusd.service > /dev/null << EOF
 [Unit]
-Description=${CHAIN_NAME} node service
+Description=rebus node service
 After=network-online.target
 [Service]
 User=$USER
@@ -58,14 +58,14 @@ ExecStart=/usr/bin/cosmovisor run start
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
-Environment="DAEMON_HOME=$HOME/${CHAIN_DIR}"
-Environment="DAEMON_NAME=${CHAIN_APP}"
+Environment="DAEMON_HOME=$HOME/.rebusd"
+Environment="DAEMON_NAME=rebusd"
 Environment="UNSAFE_SKIP_BACKUP=true"
 [Install]
 WantedBy=multi-user.target
 EOF
 sudo systemctl daemon-reload
-sudo systemctl enable ${CHAIN_APP}
+sudo systemctl enable rebusd
 ```
 
 ### Initialize the node
@@ -73,35 +73,35 @@ sudo systemctl enable ${CHAIN_APP}
 ```bash
 MONIKER="YOUR_MONIKER_GOES_HERE"
 
-# ln -s $HOME/${CHAIN_DIR}/cosmovisor/genesis $HOME/${CHAIN_DIR}/cosmovisor/current
-# ln -s $HOME/${CHAIN_DIR}/cosmovisor/upgrades/${VERSION} $HOME/${CHAIN_DIR}/cosmovisor/current
-sudo ln -s $HOME/${CHAIN_DIR}/cosmovisor/current/bin/${CHAIN_APP} /usr/local/bin/${CHAIN_APP}
-${CHAIN_APP} config chain-id ${CHAIN_ID}
-${CHAIN_APP} init $MONIKER --chain-id ${CHAIN_ID}
-curl -Ls https://snapshots.kjnodes.com/${CHAIN_NAME}/genesis.json > $HOME/${CHAIN_DIR}/config/genesis.json
-sed -i -e "s|^seeds *=.*|seeds = \"d07f430ddf0725804b3755c31660f88518547345@${CHAIN_NAME}.rpc.kjnodes.com:16659\"|" $HOME/${CHAIN_DIR}/config/config.toml
-tee $HOME/${CHAIN_DIR}/data/priv_validator_state.json > /dev/null << EOF
+# ln -s $HOME/.rebusd/cosmovisor/genesis $HOME/.rebusd/cosmovisor/current
+# ln -s $HOME/.rebusd/cosmovisor/upgrades/v0.2.0 $HOME/.rebusd/cosmovisor/current
+sudo ln -s $HOME/.rebusd/cosmovisor/current/bin/rebusd /usr/local/bin/rebusd
+rebusd config chain-id reb_1111-1
+rebusd init $MONIKER --chain-id reb_1111-1
+curl -Ls https://snapshots.kjnodes.com/rebus/genesis.json > $HOME/.rebusd/config/genesis.json
+sed -i -e "s|^seeds *=.*|seeds = \"d07f430ddf0725804b3755c31660f88518547345@rebus.rpc.kjnodes.com:16659\"|" $HOME/.rebusd/config/config.toml
+tee $HOME/.rebusd/data/priv_validator_state.json > /dev/null << EOF
 {
   "height": "0",
   "round": 0,
   "step": 0
 }
 EOF
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.0001${CHAIN_DENOM}\"|" $HOME/${CHAIN_DIR}/config/app.toml
-sed -i -e "s|^pruning *=.*|pruning = \"custom\"|" $HOME/${CHAIN_DIR}/config/app.toml
-sed -i -e "s|^pruning-keep-recent *=.*|pruning-keep-recent = \"5\"|" $HOME/${CHAIN_DIR}/config/app.toml
-sed -i -e "s|^pruning-keep-every *=.*|pruning-keep-every = \"0\"|" $HOME/${CHAIN_DIR}/config/app.toml
-sed -i -e "s|^pruning-interval *=.*|pruning-interval = \"1000\"|" $HOME/${CHAIN_DIR}/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0arebus\"|" $HOME/.rebusd/config/app.toml
+sed -i -e "s|^pruning *=.*|pruning = \"custom\"|" $HOME/.rebusd/config/app.toml
+sed -i -e "s|^pruning-keep-recent *=.*|pruning-keep-recent = \"5\"|" $HOME/.rebusd/config/app.toml
+sed -i -e "s|^pruning-keep-every *=.*|pruning-keep-every = \"0\"|" $HOME/.rebusd/config/app.toml
+sed -i -e "s|^pruning-interval *=.*|pruning-interval = \"1000\"|" $HOME/.rebusd/config/app.toml
 ```
 
 ### Download latest chain snapshot
 
 ```bash
-curl -L https://snapshots.kjnodes.com/${CHAIN_NAME}/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/${CHAIN_DIR}
+curl -L https://snapshots.kjnodes.com/rebus/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.rebusd
 ```
 
 ### Start service and check the logs
 
 ```bash
-sudo systemctl start ${CHAIN_APP} && journalctl -u ${CHAIN_APP} -f --no-hostname -o cat
+sudo systemctl start rebusd && journalctl -u rebusd -f --no-hostname -o cat
 ```

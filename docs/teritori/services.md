@@ -6,10 +6,10 @@ description: >-
 
 # Services
 
-| PUBLIC RPC      | &#xD;https://${CHAIN_NAME}.rpc.kjnodes.com                                   |
+| PUBLIC RPC      | &#xD;https://teritori.rpc.kjnodes.com                                   |
 | --------------- | --------------------------------------------------------------------- |
-| PUBLIC API      | https://${CHAIN_NAME}.api.kjnodes.com                                        |
-| STATE SYNC PEER | 6f56d09b7d921e3520c1e7129b20a40dae2c7973@${CHAIN_NAME}.rpc.kjnodes.com:16656 |
+| PUBLIC API      | https://teritori.api.kjnodes.com                                        |
+| STATE SYNC PEER | 6f56d09b7d921e3520c1e7129b20a40dae2c7973@teritori.rpc.kjnodes.com:16656 |
 | SEED NODE       | N/A                                                                   |
 | EXPLORER        | N/A                                                                   |
 |                 |                                                                       |
