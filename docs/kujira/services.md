@@ -8,10 +8,10 @@ description: >-
 
 | Service name    | Value                                                                                   |
 | --------------- | --------------------------------------------------------------------------------------- |
-| Public-rpc      | https://kujira.rpc.kjnodes.com                                                   |
-| Public-api      | https://kujira.api.kjnodes.com                                                   |
-| State-sync-peer | d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@kujira.rpc.kjnodes.com:13656 |
-| Seed-node-peer  | 400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@kujira.rpc.kjnodes.com:13659 |
-| Addrbook        | [addrbook.json](https://snapshots.kjnodes.com/kujira/addrbook.json)              |
-| Snapshot        | [snapshot](https://snapshots.kjnodes.com/kujira/snapshot\_latest.tar.lz4)        |
-| Explorer        | N/A                                                                                     |
+| public-rpc      | [https://kujira.rpc.kjnodes.com](https://kujira.rpc.kjnodes.com)          |
+| public-api      | [https://kujira.api.kjnodes.com](https://kujira.api.kjnodes.com)          |
+| state-sync-peer | d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@kujira.rpc.kjnodes.com:13656 |
+| seed-node-peer  | 400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@kujira.rpc.kjnodes.com:13659 |
+| addrbook        | [addrbook.json](https://snapshots.kjnodes.com/kujira/addrbook.json)              |
+| snapshot        | [snapshot](https://snapshots.kjnodes.com/kujira/snapshot\_latest.tar.lz4)        |
+| explorer        | N/A                                                                                     |
