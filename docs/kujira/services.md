@@ -9,7 +9,7 @@ description: >-
 | PUBLIC RPC      | &#xD;https://kujira.rpc.kjnodes.com                                   |
 | --------------- | --------------------------------------------------------------------- |
 | PUBLIC API      | https://kujira.api.kjnodes.com                                        |
-| STATE SYNC PEER | 6f56d09b7d921e3520c1e7129b20a40dae2c7973@kujira.rpc.kjnodes.com:16656 |
-| SEED NODE       | 400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@kujira.rpc.kjnodes.com:16659                                                                   |
+| STATE SYNC PEER | d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@kujira.rpc.kjnodes.com:kaiyo-1656 |
+| SEED NODE       | 400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@kujira.rpc.kjnodes.com:kaiyo-1659                                                                   |
 | EXPLORER        | N/A                                                                   |
 |                 |                                                                       |

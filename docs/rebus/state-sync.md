@@ -15,7 +15,7 @@ https://rebus.rpc.kjnodes.com:443
 #### Peer:
 
 ```bash
-6f56d09b7d921e3520c1e7129b20a40dae2c7973@rebus.rpc.kjnodes.com:16656
+d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@rebus.rpc.kjnodes.com:16656
 ```
 
 ### Stop the service and reset the data
@@ -30,7 +30,7 @@ rebusd tendermint unsafe-reset-all --home $HOME/.rebusd
 
 ```bash
 STATE_SYNC_RPC=https://rebus.rpc.kjnodes.com:443
-STATE_SYNC_PEER=6f56d09b7d921e3520c1e7129b20a40dae2c7973@rebus.rpc.kjnodes.com:16656
+STATE_SYNC_PEER=d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@rebus.rpc.kjnodes.com:16656
 LATEST_HEIGHT=$(curl -s $STATE_SYNC_RPC/block | jq -r .result.block.header.height)
 SYNC_BLOCK_HEIGHT=$(($LATEST_HEIGHT - 2000))
 SYNC_BLOCK_HASH=$(curl -s "$STATE_SYNC_RPC/block?height=$SYNC_BLOCK_HEIGHT" | jq -r .result.block_id.hash)

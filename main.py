@@ -87,6 +87,7 @@ def get_replacement_params(chain):
         latest_version = data['chain_upgrades'][-1]['tag']
         chain_name = data['chain_user']
         chain_id = data['chain_id']
+        chain_port_prefix = data['chain_port_prefix']
         chain_app = data['chain_binary']
         chain_dir = data['chain_dir']
         chain_denom = 'unknown'
@@ -98,6 +99,7 @@ def get_replacement_params(chain):
         replacements['${LATEST_VERSION}'] = latest_version
         replacements['${CHAIN_NAME}'] = chain_name
         replacements['${CHAIN_ID}'] = chain_id
+        replacements['${CHAIN_PORT}'] = chain_id
         replacements['${CHAIN_APP}'] = chain_app
         replacements['${CHAIN_DIR}'] = chain_dir
         replacements['${CHAIN_DENOM}'] = chain_denom
