@@ -73,8 +73,7 @@ sudo systemctl enable strided
 ```bash
 MONIKER="YOUR_MONIKER_GOES_HERE"
 
-# ln -s $HOME/.stride/cosmovisor/genesis $HOME/.stride/cosmovisor/current
-# ln -s $HOME/.stride/cosmovisor/upgrades/v2.0.3 $HOME/.stride/cosmovisor/current
+ln -s $HOME/.stride/cosmovisor/upgrades/v2.0.3 $HOME/.stride/cosmovisor/current
 sudo ln -s $HOME/.stride/cosmovisor/current/bin/strided /usr/local/bin/strided
 strided config chain-id stride-1
 strided init $MONIKER --chain-id stride-1

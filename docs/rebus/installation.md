@@ -73,8 +73,7 @@ sudo systemctl enable rebusd
 ```bash
 MONIKER="YOUR_MONIKER_GOES_HERE"
 
-# ln -s $HOME/.rebusd/cosmovisor/genesis $HOME/.rebusd/cosmovisor/current
-# ln -s $HOME/.rebusd/cosmovisor/upgrades/v0.2.0 $HOME/.rebusd/cosmovisor/current
+ln -s $HOME/.rebusd/cosmovisor/upgrades/v0.2.0 $HOME/.rebusd/cosmovisor/current
 sudo ln -s $HOME/.rebusd/cosmovisor/current/bin/rebusd /usr/local/bin/rebusd
 rebusd config chain-id reb_1111-1
 rebusd init $MONIKER --chain-id reb_1111-1

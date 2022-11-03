@@ -73,8 +73,7 @@ sudo systemctl enable teritorid
 ```bash
 MONIKER="YOUR_MONIKER_GOES_HERE"
 
-# ln -s $HOME/.teritorid/cosmovisor/genesis $HOME/.teritorid/cosmovisor/current
-# ln -s $HOME/.teritorid/cosmovisor/upgrades/v1.3.0 $HOME/.teritorid/cosmovisor/current
+ln -s $HOME/.teritorid/cosmovisor/upgrades/v1.3.0 $HOME/.teritorid/cosmovisor/current
 sudo ln -s $HOME/.teritorid/cosmovisor/current/bin/teritorid /usr/local/bin/teritorid
 teritorid config chain-id teritori-1
 teritorid init $MONIKER --chain-id teritori-1

@@ -73,8 +73,7 @@ sudo systemctl enable kujirad
 ```bash
 MONIKER="YOUR_MONIKER_GOES_HERE"
 
-# ln -s $HOME/.kujira/cosmovisor/genesis $HOME/.kujira/cosmovisor/current
-# ln -s $HOME/.kujira/cosmovisor/upgrades/v0.6.4 $HOME/.kujira/cosmovisor/current
+ln -s $HOME/.kujira/cosmovisor/upgrades/v0.6.4 $HOME/.kujira/cosmovisor/current
 sudo ln -s $HOME/.kujira/cosmovisor/current/bin/kujirad /usr/local/bin/kujirad
 kujirad config chain-id kaiyo-1
 kujirad init $MONIKER --chain-id kaiyo-1
