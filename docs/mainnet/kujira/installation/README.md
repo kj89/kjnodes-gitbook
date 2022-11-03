@@ -88,6 +88,7 @@ sudo systemctl enable kujirad
 ln -s $HOME/.kujira/cosmovisor/upgrades/v0.6.4 $HOME/.kujira/cosmovisor/current
 sudo ln -s $HOME/.kujira/cosmovisor/current/bin/kujirad /usr/local/bin/kujirad
 kujirad config chain-id kaiyo-1
+kujirad config node tcp://localhost:13657
 kujirad init $MONIKER --chain-id kaiyo-1
 curl -Ls https://snapshots.kjnodes.com/kujira/genesis.json > $HOME/.kujira/config/genesis.json
 curl -Ls https://snapshots.kjnodes.com/kujira/addrbook.json > $HOME/.kujira/config/addrbook.json

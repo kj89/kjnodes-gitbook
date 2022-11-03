@@ -88,6 +88,7 @@ sudo systemctl enable strided
 ln -s $HOME/.stride/cosmovisor/upgrades/v2.0.3 $HOME/.stride/cosmovisor/current
 sudo ln -s $HOME/.stride/cosmovisor/current/bin/strided /usr/local/bin/strided
 strided config chain-id stride-1
+strided config node tcp://localhost:16657
 strided init $MONIKER --chain-id stride-1
 curl -Ls https://snapshots.kjnodes.com/stride/genesis.json > $HOME/.stride/config/genesis.json
 curl -Ls https://snapshots.kjnodes.com/stride/addrbook.json > $HOME/.stride/config/addrbook.json

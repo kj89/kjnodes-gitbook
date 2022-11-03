@@ -88,6 +88,7 @@ sudo systemctl enable teritorid
 ln -s $HOME/.teritorid/cosmovisor/upgrades/v1.3.0 $HOME/.teritorid/cosmovisor/current
 sudo ln -s $HOME/.teritorid/cosmovisor/current/bin/teritorid /usr/local/bin/teritorid
 teritorid config chain-id teritori-1
+teritorid config node tcp://localhost:19657
 teritorid init $MONIKER --chain-id teritori-1
 curl -Ls https://snapshots.kjnodes.com/teritori/genesis.json > $HOME/.teritorid/config/genesis.json
 curl -Ls https://snapshots.kjnodes.com/teritori/addrbook.json > $HOME/.teritorid/config/addrbook.json
