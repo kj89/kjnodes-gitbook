@@ -6,10 +6,10 @@
 
 * [🐋 Kujira](mainnet/kujira/README.md)
   * [Installation](mainnet/kujira/installation/README.md)
-  * [Snapshot](mainnet/kujira/snapshot.md)
-  * [State sync](mainnet/kujira/state-sync.md)
-  * [Services](mainnet/kujira/services.md)
-  * [Useful commands](mainnet/kujira/useful-commands.md)
+  * [Snapshot](mainnet/kujira/snapshot/README.md)
+  * [State sync](mainnet/kujira/state-sync/README.md)
+  * [Services](mainnet/kujira/services/README.md)
+  * [Useful commands](mainnet/kujira/useful-commands/README.md)
 
 * [🥥 Rebus](mainnet/rebus/README.md)
   * [Installation](mainnet/rebus/installation/README.md)
