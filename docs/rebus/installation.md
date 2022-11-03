@@ -51,6 +51,7 @@ git checkout v0.2.0
 make build
 mkdir -p $HOME/.rebusd/cosmovisor/upgrades/v0.2.0/bin
 mv build/rebusd $HOME/.rebusd/cosmovisor/upgrades/v0.2.0/bin/
+rm build -rf
 ```
 
 ### Install Cosmovisor and create a service
