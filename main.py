@@ -94,7 +94,7 @@ def get_replacement_params(chain):
 
         replacements['${GIT_DIR}'] = git_dir
         replacements['${GIT_URL}'] = git_url
-        replacements['${LATEST_VERSION}'] = genesis_version
+        replacements['${GENESIS_VERSION}'] = genesis_version
         replacements['${LATEST_VERSION}'] = latest_version
         replacements['${CHAIN_NAME}'] = chain_name
         replacements['${CHAIN_ID}'] = chain_id

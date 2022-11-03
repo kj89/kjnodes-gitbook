@@ -39,8 +39,8 @@ rm -rf stride
 git clone https://github.com/Stride-Labs/stride.git
 cd stride
 
-# Compile genesis version ${GENESIS_VERSION}
-git checkout ${GENESIS_VERSION}
+# Compile genesis version v1.0.2
+git checkout v1.0.2
 make build
 mkdir -p $HOME/.stride/cosmovisor/genesis/bin
 mv build/strided $HOME/.stride/cosmovisor/genesis/bin/

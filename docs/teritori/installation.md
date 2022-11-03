@@ -39,8 +39,8 @@ rm -rf teritori-chain
 git clone https://github.com/TERITORI/teritori-chain.git
 cd teritori-chain
 
-# Compile genesis version ${GENESIS_VERSION}
-git checkout ${GENESIS_VERSION}
+# Compile genesis version v1.1.2
+git checkout v1.1.2
 make build
 mkdir -p $HOME/.teritorid/cosmovisor/genesis/bin
 mv build/teritorid $HOME/.teritorid/cosmovisor/genesis/bin/
