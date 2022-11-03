@@ -9,7 +9,7 @@ description: >-
 | BLOCK <img width=200/> | TIMESTAMP <img width=200/> | SIZE <img width=200/> | DOWNLOAD <img width=500/>                                                   |
 | ------ | ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------- |
 | 865090 | 11 hours ago | 6.14 GB | [snapshot\_latest.tar.lz4](https://snapshots.kjnodes.com/stride/snapshot\_latest.tar.lz4) |
-|<img width=200/>|<img width=500/>|
+
 ### Stop the service and reset the data
 
 ```bash
