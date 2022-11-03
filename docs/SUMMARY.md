@@ -4,7 +4,8 @@
 
 ## 🐋 Kujira
 
-* [Installation](kujira/installation.md)
+* [Installation](kujira/installation/README.md)
+  * [Page 1](kujira/installation/page-1.md)
 * [Snapshot](kujira/snapshot.md)
 * [State sync](kujira/state-sync.md)
 * [Services](kujira/services.md)
