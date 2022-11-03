@@ -286,6 +286,7 @@ rebusd tendermint unsafe-reset-all --home $HOME/.rebusd --keep-addr-book
 #### Remove node
 
 ```bash
+cd $HOME
 sudo systemctl stop rebusd && \
 sudo systemctl disable rebusd && \
 sudo rm /etc/systemd/system/rebusd.service && \

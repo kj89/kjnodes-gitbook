@@ -286,6 +286,7 @@ kujirad tendermint unsafe-reset-all --home $HOME/.kujira --keep-addr-book
 #### Remove node
 
 ```bash
+cd $HOME
 sudo systemctl stop kujirad && \
 sudo systemctl disable kujirad && \
 sudo rm /etc/systemd/system/kujirad.service && \

@@ -286,6 +286,7 @@ teritorid tendermint unsafe-reset-all --home $HOME/.teritorid --keep-addr-book
 #### Remove node
 
 ```bash
+cd $HOME
 sudo systemctl stop teritorid && \
 sudo systemctl disable teritorid && \
 sudo rm /etc/systemd/system/teritorid.service && \

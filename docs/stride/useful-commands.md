@@ -286,6 +286,7 @@ strided tendermint unsafe-reset-all --home $HOME/.stride --keep-addr-book
 #### Remove node
 
 ```bash
+cd $HOME
 sudo systemctl stop strided && \
 sudo systemctl disable strided && \
 sudo rm /etc/systemd/system/strided.service && \
