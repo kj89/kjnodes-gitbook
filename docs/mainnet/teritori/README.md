@@ -6,38 +6,26 @@ description: >-
 
 # Services
 
-### public-rpc
+## Public endpoints
 
-```
-https://teritori.rpc.kjnodes.com
-```
+* rpc: [https://teritori.rpc.kjnodes.com](https://teritori.rpc.kjnodes.com)
+* api: [https://teritori.api.kjnodes.com](https://teritori.api.kjnodes.com)
 
-### public-api
+## Public peers
 
-```
-https://teritori.api.kjnodes.com
-```
-
-### state-sync-pee
+state-sync
 
 ```
 d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@teritori.rpc.kjnodes.com:19656
 ```
 
-### seed-node-peer
+seed-node-peer
 
 ```
 400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@teritori.rpc.kjnodes.com:19659
 ```
 
-### addrbook
+## Downloads
 
-```
-https://snapshots.kjnodes.com/teritori/addrbook.json
-```
-
-### snapshot
-
-```
-https://snapshots.kjnodes.com/teritori/snapshot\_latest.tar.lz4
-```
+* addrbook: [addrbook.json](https://snapshots.kjnodes.com/teritori/addrbook.json)
+* snapshot: [snapshot](https://snapshots.kjnodes.com/teritori/snapshot\_latest.tar.lz4)
