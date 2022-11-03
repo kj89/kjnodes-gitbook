@@ -1,6 +1,18 @@
 import os
 import shutil
 import datetime
+from git import Repo
+
+
+def git_push():
+    try:
+        repo = Repo('.')
+        repo.git.add(update=True)
+        repo.index.commit('Update gitbook contents')
+        origin = repo.remote(name='origin')
+        origin.push()
+    except:
+        print('Some error occurred while pushing the code')
 
 
 def display_time(seconds, granularity=1):

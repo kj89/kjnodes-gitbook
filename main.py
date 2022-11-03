@@ -2,7 +2,7 @@ import yaml
 from env import GITHUB_USER, GITHUB_TOKEN
 import requests
 import datetime
-from misc import get_file_list, get_time_ago, copy_and_overwrite, inplace_change
+from misc import get_file_list, get_time_ago, copy_and_overwrite, inplace_change, git_push
 
 chains = ['kujira', 'stride', 'teritori', 'rebus']
 
@@ -72,6 +72,8 @@ def main():
         for f in files:
             for src, dst in replace_list.items():
                 inplace_change(f, src, dst)
+
+    git_push()
 
 
 if __name__ == '__main__':
