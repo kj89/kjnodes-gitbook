@@ -7,6 +7,7 @@ description: >-
 # Installation
 
 ### Setup validator name
+
 ```bash
 MONIKER="YOUR_MONIKER_GOES_HERE"
 ```
