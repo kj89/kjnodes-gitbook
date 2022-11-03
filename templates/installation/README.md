@@ -88,6 +88,7 @@ sudo systemctl enable ${CHAIN_APP}
 ln -s $HOME/${CHAIN_DIR}/cosmovisor/upgrades/${LATEST_VERSION} $HOME/${CHAIN_DIR}/cosmovisor/current
 sudo ln -s $HOME/${CHAIN_DIR}/cosmovisor/current/bin/${CHAIN_APP} /usr/local/bin/${CHAIN_APP}
 ${CHAIN_APP} config chain-id ${CHAIN_ID}
+${CHAIN_APP} config node tcp://localhost:${CHAIN_PORT}657
 ${CHAIN_APP} init $MONIKER --chain-id ${CHAIN_ID}
 curl -Ls https://snapshots.kjnodes.com/${CHAIN_NAME}/genesis.json > $HOME/${CHAIN_DIR}/config/genesis.json
 curl -Ls https://snapshots.kjnodes.com/${CHAIN_NAME}/addrbook.json > $HOME/${CHAIN_DIR}/config/addrbook.json
