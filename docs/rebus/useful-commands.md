@@ -284,15 +284,17 @@ rebusd tendermint unsafe-reset-all --home $HOME/.rebusd --keep-addr-book
 ```
 
 #### Remove node
-
+{% hint style='danger' %}
+Important info: Please make sure you have backed up your `priv_validator_key.json` before proceeding with nex step! All chain data will be lost!
+{% endhint %}
 ```bash
 cd $HOME
-sudo systemctl stop rebusd && \
-sudo systemctl disable rebusd && \
-sudo rm /etc/systemd/system/rebusd.service && \
-sudo systemctl daemon-reload && \
-rm -rf $HOME/.rebusd && \
-rm -rf $HOME/rebus.core && \
+sudo systemctl stop rebusd
+sudo systemctl disable rebusd
+sudo rm /etc/systemd/system/rebusd.service
+sudo systemctl daemon-reload
+rm -rf $HOME/.rebusd
+rm -rf $HOME/rebus.core
 rm $(which rebusd) 
 ```
 

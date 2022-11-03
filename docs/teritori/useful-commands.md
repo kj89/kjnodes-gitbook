@@ -284,15 +284,17 @@ teritorid tendermint unsafe-reset-all --home $HOME/.teritorid --keep-addr-book
 ```
 
 #### Remove node
-
+{% hint style='danger' %}
+Important info: Please make sure you have backed up your `priv_validator_key.json` before proceeding with nex step! All chain data will be lost!
+{% endhint %}
 ```bash
 cd $HOME
-sudo systemctl stop teritorid && \
-sudo systemctl disable teritorid && \
-sudo rm /etc/systemd/system/teritorid.service && \
-sudo systemctl daemon-reload && \
-rm -rf $HOME/.teritorid && \
-rm -rf $HOME/teritori-chain && \
+sudo systemctl stop teritorid
+sudo systemctl disable teritorid
+sudo rm /etc/systemd/system/teritorid.service
+sudo systemctl daemon-reload
+rm -rf $HOME/.teritorid
+rm -rf $HOME/teritori-chain
 rm $(which teritorid) 
 ```
 
