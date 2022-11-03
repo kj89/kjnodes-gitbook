@@ -6,32 +6,9 @@ description: >-
 
 # Snapshot
 
-| BLOCK  | TIMESTAMP  | SIZE    | DOWNLOAD                                                                                                                  |
-| ------ | ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------- |
+|` BLOCK `|` TIMESTAMP `|` SIZE `|` DOWNLOAD                                                                                                               `|
+| ------- | ----------- | ------ | ------------------------------------------------------------------------------------------------------------------------ |
 | 4766586 | 12 hours ago | 3.39 GB | [snapshot\_latest.tar.lz4](https://snapshots.kjnodes.com/kujira/snapshot\_latest.tar.lz4) |
-
-
-<style>
-table th:first-of-type {
-    width: 10%;
-}
-table th:nth-of-type(2) {
-    width: 10%;
-}
-table th:nth-of-type(3) {
-    width: 50%;
-}
-table th:nth-of-type(4) {
-    width: 30%;
-}
-</style>
-
-
-+---------+---------+---------+----------+
-| Header1 | header2 | header3 | header4  |
-+---------+---------+---------+----------+
-| Bar     | bar     | bar     | bar      |
-+---------+---------+---------+----------+
 
 ### Stop the service and reset the data
 
