@@ -8,7 +8,7 @@ description: >-
 
 | BLOCK             | AGE             | DOWNLOAD                                                                         | SIZE             |
 | ----------------- | --------------- | -------------------------------------------------------------------------------- | ---------------- |
-| 469993 | 22 minutes ago | [snapshot](https://snapshots.kjnodes.com/teritori/snapshot\_latest.tar.lz4) | 0.48 GB |
+| 469993 | 31 minutes ago | [snapshot](https://snapshots.kjnodes.com/teritori/snapshot\_latest.tar.lz4) | 0.48 GB |
 
 ### Stop the service and reset the data
 
