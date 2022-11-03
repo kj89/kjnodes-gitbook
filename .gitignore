@@ -212,4 +212,4 @@ dmypy.json
 cython_debug/
 
 # Project variables
-env.py
+*.py
