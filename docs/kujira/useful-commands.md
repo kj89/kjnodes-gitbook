@@ -284,9 +284,11 @@ kujirad tendermint unsafe-reset-all --home $HOME/.kujira --keep-addr-book
 ```
 
 #### Remove node
+
 {% hint style='danger' %}
 Important info: Please make sure you have backed up your `priv_validator_key.json` before proceeding with nex step! All chain data will be lost!
 {% endhint %}
+
 ```bash
 cd $HOME
 sudo systemctl stop kujirad
