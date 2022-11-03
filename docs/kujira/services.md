@@ -6,12 +6,12 @@ description: >-
 
 # Services
 
-| PUBLIC RPC      | &#xD;https://kujira.rpc.kjnodes.com                                              |
-| --------------- | ---------------------------------------------------------------------                   |
-| PUBLIC API      | https://kujira.api.kjnodes.com                                                   |
-| STATE SYNC PEER | d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@kujira.rpc.kjnodes.com:13656 |
-| SEED NODE       | 400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@kujira.rpc.kjnodes.com:13659 |
-| ADDRBOOK        | N/A                                                                                     |
-| SNAPSHOT        | N/A                                                                                     |
-| EXPLORER        | N/A                                                                                     |
-|                 |                                                                                         |
+| Service name    | Value                                                                                   |
+| --------------- | --------------------------------------------------------------------------------------- |
+| Public-rpc      | https://kujira.rpc.kjnodes.com                                                   |
+| Public-api      | https://kujira.api.kjnodes.com                                                   |
+| State-sync-peer | d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@kujira.rpc.kjnodes.com:13656 |
+| Seed-node-peer  | 400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@kujira.rpc.kjnodes.com:13659 |
+| Addrbook        | [addrbook.json](https://snapshots.kjnodes.com/kujira/addrbook.json)              |
+| Snapshot        | [snapshot](https://snapshots.kjnodes.com/kujira/snapshot\_latest.tar.lz4)        |
+| Explorer        | N/A                                                                                     |
