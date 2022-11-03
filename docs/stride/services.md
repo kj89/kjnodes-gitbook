@@ -9,7 +9,7 @@ description: >-
 | PUBLIC RPC      | &#xD;https://stride.rpc.kjnodes.com                                   |
 | --------------- | --------------------------------------------------------------------- |
 | PUBLIC API      | https://stride.api.kjnodes.com                                        |
-| STATE SYNC PEER | d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@stride.rpc.kjnodes.com:stride-1656 |
-| SEED NODE       | 400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@stride.rpc.kjnodes.com:stride-1659                                                                   |
+| STATE SYNC PEER | d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@stride.rpc.kjnodes.com:16656 |
+| SEED NODE       | 400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@stride.rpc.kjnodes.com:16659                                                                   |
 | EXPLORER        | N/A                                                                   |
 |                 |                                                                       |

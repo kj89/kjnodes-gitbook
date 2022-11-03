@@ -89,7 +89,7 @@ sudo ln -s $HOME/.kujira/cosmovisor/current/bin/kujirad /usr/local/bin/kujirad
 kujirad config chain-id kaiyo-1
 kujirad init $MONIKER --chain-id kaiyo-1
 curl -Ls https://snapshots.kjnodes.com/kujira/genesis.json > $HOME/.kujira/config/genesis.json
-sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@kujira.rpc.kjnodes.com:kaiyo-1659\"|" $HOME/.kujira/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@kujira.rpc.kjnodes.com:13659\"|" $HOME/.kujira/config/config.toml
 tee $HOME/.kujira/data/priv_validator_state.json > /dev/null << EOF
 {
   "height": "0",

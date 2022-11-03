@@ -89,7 +89,7 @@ sudo ln -s $HOME/.rebusd/cosmovisor/current/bin/rebusd /usr/local/bin/rebusd
 rebusd config chain-id reb_1111-1
 rebusd init $MONIKER --chain-id reb_1111-1
 curl -Ls https://snapshots.kjnodes.com/rebus/genesis.json > $HOME/.rebusd/config/genesis.json
-sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@rebus.rpc.kjnodes.com:reb_1111-1659\"|" $HOME/.rebusd/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@rebus.rpc.kjnodes.com:21659\"|" $HOME/.rebusd/config/config.toml
 tee $HOME/.rebusd/data/priv_validator_state.json > /dev/null << EOF
 {
   "height": "0",

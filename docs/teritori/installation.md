@@ -89,7 +89,7 @@ sudo ln -s $HOME/.teritorid/cosmovisor/current/bin/teritorid /usr/local/bin/teri
 teritorid config chain-id teritori-1
 teritorid init $MONIKER --chain-id teritori-1
 curl -Ls https://snapshots.kjnodes.com/teritori/genesis.json > $HOME/.teritorid/config/genesis.json
-sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@teritori.rpc.kjnodes.com:teritori-1659\"|" $HOME/.teritorid/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@teritori.rpc.kjnodes.com:19659\"|" $HOME/.teritorid/config/config.toml
 tee $HOME/.teritorid/data/priv_validator_state.json > /dev/null << EOF
 {
   "height": "0",
