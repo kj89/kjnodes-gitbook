@@ -6,7 +6,7 @@ description: >-
 
 # Snapshot
 
-| BLOCK <img width=200/> | TIMESTAMP <img width=200/> | SIZE <img width=200/> | DOWNLOAD <img width=5000/>                                                  |
+| BLOCK  | TIMESTAMP  | SIZE    | DOWNLOAD &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 | ------ | ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------- |
 | 4766586 | 12 hours ago | 3.39 GB | [snapshot\_latest.tar.lz4](https://snapshots.kjnodes.com/kujira/snapshot\_latest.tar.lz4) |
 

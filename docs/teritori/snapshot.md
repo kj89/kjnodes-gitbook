@@ -6,7 +6,7 @@ description: >-
 
 # Snapshot
 
-| BLOCK <img width=200/> | TIMESTAMP <img width=200/> | SIZE <img width=200/> | DOWNLOAD <img width=5000/>                                                  |
+| BLOCK  | TIMESTAMP  | SIZE    | DOWNLOAD &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 | ------ | ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------- |
 | 458714 | 13 hours ago | 3.11 GB | [snapshot\_latest.tar.lz4](https://snapshots.kjnodes.com/teritori/snapshot\_latest.tar.lz4) |
 

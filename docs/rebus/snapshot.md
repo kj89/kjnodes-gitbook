@@ -6,7 +6,7 @@ description: >-
 
 # Snapshot
 
-| BLOCK <img width=200/> | TIMESTAMP <img width=200/> | SIZE <img width=200/> | DOWNLOAD <img width=5000/>                                                  |
+| BLOCK  | TIMESTAMP  | SIZE    | DOWNLOAD &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 | ------ | ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------- |
 | 1623670 | 10 hours ago | 4.36 GB | [snapshot\_latest.tar.lz4](https://snapshots.kjnodes.com/rebus/snapshot\_latest.tar.lz4) |
 
