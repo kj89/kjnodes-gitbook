@@ -6,6 +6,11 @@ description: >-
 
 # Installation
 
+### Setup validator name
+```bash
+MONIKER="YOUR_MONIKER_GOES_HERE"
+```
+
 ### Install dependencies
 
 #### Update system and install build tools
@@ -71,8 +76,6 @@ sudo systemctl enable strided
 ### Initialize the node
 
 ```bash
-MONIKER="YOUR_MONIKER_GOES_HERE"
-
 ln -s $HOME/.stride/cosmovisor/upgrades/v2.0.3 $HOME/.stride/cosmovisor/current
 sudo ln -s $HOME/.stride/cosmovisor/current/bin/strided /usr/local/bin/strided
 strided config chain-id stride-1

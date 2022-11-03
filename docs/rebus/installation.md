@@ -6,6 +6,11 @@ description: >-
 
 # Installation
 
+### Setup validator name
+```bash
+MONIKER="YOUR_MONIKER_GOES_HERE"
+```
+
 ### Install dependencies
 
 #### Update system and install build tools
@@ -71,8 +76,6 @@ sudo systemctl enable rebusd
 ### Initialize the node
 
 ```bash
-MONIKER="YOUR_MONIKER_GOES_HERE"
-
 ln -s $HOME/.rebusd/cosmovisor/upgrades/v0.2.0 $HOME/.rebusd/cosmovisor/current
 sudo ln -s $HOME/.rebusd/cosmovisor/current/bin/rebusd /usr/local/bin/rebusd
 rebusd config chain-id reb_1111-1

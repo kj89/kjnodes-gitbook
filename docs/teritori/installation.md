@@ -6,6 +6,11 @@ description: >-
 
 # Installation
 
+### Setup validator name
+```bash
+MONIKER="YOUR_MONIKER_GOES_HERE"
+```
+
 ### Install dependencies
 
 #### Update system and install build tools
@@ -71,8 +76,6 @@ sudo systemctl enable teritorid
 ### Initialize the node
 
 ```bash
-MONIKER="YOUR_MONIKER_GOES_HERE"
-
 ln -s $HOME/.teritorid/cosmovisor/upgrades/v1.3.0 $HOME/.teritorid/cosmovisor/current
 sudo ln -s $HOME/.teritorid/cosmovisor/current/bin/teritorid /usr/local/bin/teritorid
 teritorid config chain-id teritori-1

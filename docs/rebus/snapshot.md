@@ -8,7 +8,7 @@ description: >-
 
 | BLOCK  | TIMESTAMP  | SIZE    | DOWNLOAD                                                                                                                       |
 | ------ | ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| 1623670 | 34 minutes ago | 4.36 GB | [https://snapshots.kjnodes.com/rebus/snapshot\_latest.tar.lz4](https://snapshots.kjnodes.com/rebus/snapshot\_latest.tar.lz4) |
+| 1623670 | 37 minutes ago | 4.36 GB | [https://snapshots.kjnodes.com/rebus/snapshot\_latest.tar.lz4](https://snapshots.kjnodes.com/rebus/snapshot\_latest.tar.lz4) |
 
 ### Stop the service and reset the data
 

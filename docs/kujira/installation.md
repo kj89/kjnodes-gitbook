@@ -6,6 +6,11 @@ description: >-
 
 # Installation
 
+### Setup validator name
+```bash
+MONIKER="YOUR_MONIKER_GOES_HERE"
+```
+
 ### Install dependencies
 
 #### Update system and install build tools
@@ -71,8 +76,6 @@ sudo systemctl enable kujirad
 ### Initialize the node
 
 ```bash
-MONIKER="YOUR_MONIKER_GOES_HERE"
-
 ln -s $HOME/.kujira/cosmovisor/upgrades/v0.6.4 $HOME/.kujira/cosmovisor/current
 sudo ln -s $HOME/.kujira/cosmovisor/current/bin/kujirad /usr/local/bin/kujirad
 kujirad config chain-id kaiyo-1
