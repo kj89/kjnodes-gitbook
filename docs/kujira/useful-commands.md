@@ -58,7 +58,7 @@ Please make sure you have adjusted `moniker`, `identity`, `details` and `website
 
 ```bash
 kujirad tx staking create-validator \
---amount=1000000unknown \
+--amount=1000000ukuji \
 --pubkey=$(kujirad tendermint show-validator) \
 --moniker="YOUR_MONIKER_NAME" \
 --identity="YOUR_KEYBASE_ID" \
@@ -138,31 +138,31 @@ kujirad tx distribution withdraw-rewards $(kujirad keys show wallet --bech val -
 #### Delegate tokens to yourself
 
 ```bash
-kujirad tx staking delegate $(kujirad keys show wallet --bech val -a) 1000000unknown --from wallet --chain-id kaiyo-1 --gas-adjustment 1.4 --gas auto -y
+kujirad tx staking delegate $(kujirad keys show wallet --bech val -a) 1000000ukuji --from wallet --chain-id kaiyo-1 --gas-adjustment 1.4 --gas auto -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-kujirad tx staking delegate <TO_VALOPER_ADDRESS> 1000000unknown --from wallet --chain-id kaiyo-1 --gas-adjustment 1.4 --gas auto -y
+kujirad tx staking delegate <TO_VALOPER_ADDRESS> 1000000ukuji --from wallet --chain-id kaiyo-1 --gas-adjustment 1.4 --gas auto -y
 ```
 
 Redelegate tokens to another validator
 
 ```bash
-kujirad tx staking redelegate $(kujirad keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000unknown --from wallet --chain-id kaiyo-1 --gas-adjustment 1.4 --gas auto -y
+kujirad tx staking redelegate $(kujirad keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000ukuji --from wallet --chain-id kaiyo-1 --gas-adjustment 1.4 --gas auto -y
 ```
 
 Unbond tokens from your validator
 
 ```bash
-kujirad tx staking unbond $(kujirad keys show wallet --bech val -a) 1000000unknown --from wallet --chain-id kaiyo-1 --gas-adjustment 1.4 --gas auto -y
+kujirad tx staking unbond $(kujirad keys show wallet --bech val -a) 1000000ukuji --from wallet --chain-id kaiyo-1 --gas-adjustment 1.4 --gas auto -y
 ```
 
 Send tokens to the wallet
 
 ```bash
-kujirad tx bank send wallet <TO_WALLET_ADDRESS> 1000000unknown --from wallet --chain-id kaiyo-1
+kujirad tx bank send wallet <TO_WALLET_ADDRESS> 1000000ukuji --from wallet --chain-id kaiyo-1
 ```
 
 ### Governance
@@ -268,7 +268,7 @@ curl -sS http://localhost:26657/net_info | jq -r '.result.peers[] | "\(.node_inf
 #### Set minimum gas price
 
 ```
-sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0unknown\"/" $HOME/.kujira/config/app.toml
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0ukuji\"/" $HOME/.kujira/config/app.toml
 ```
 
 #### Enable prometheus

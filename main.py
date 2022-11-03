@@ -38,7 +38,7 @@ def get_replacement_params(chain):
         chain_port_prefix = str(data['chain_port_prefix'])
         chain_app = data['chain_binary']
         chain_dir = data['chain_dir']
-        chain_denom = 'unknown'
+        chain_denom = data['chain_denom']
         chain_min_gas_price = data['chain_min_gas_prices']
 
         replacements['${GIT_DIR}'] = git_dir

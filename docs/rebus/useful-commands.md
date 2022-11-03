@@ -58,7 +58,7 @@ Please make sure you have adjusted `moniker`, `identity`, `details` and `website
 
 ```bash
 rebusd tx staking create-validator \
---amount=1000000unknown \
+--amount=1000000arebus \
 --pubkey=$(rebusd tendermint show-validator) \
 --moniker="YOUR_MONIKER_NAME" \
 --identity="YOUR_KEYBASE_ID" \
@@ -138,31 +138,31 @@ rebusd tx distribution withdraw-rewards $(rebusd keys show wallet --bech val -a)
 #### Delegate tokens to yourself
 
 ```bash
-rebusd tx staking delegate $(rebusd keys show wallet --bech val -a) 1000000unknown --from wallet --chain-id reb_1111-1 --gas-adjustment 1.4 --gas auto -y
+rebusd tx staking delegate $(rebusd keys show wallet --bech val -a) 1000000arebus --from wallet --chain-id reb_1111-1 --gas-adjustment 1.4 --gas auto -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-rebusd tx staking delegate <TO_VALOPER_ADDRESS> 1000000unknown --from wallet --chain-id reb_1111-1 --gas-adjustment 1.4 --gas auto -y
+rebusd tx staking delegate <TO_VALOPER_ADDRESS> 1000000arebus --from wallet --chain-id reb_1111-1 --gas-adjustment 1.4 --gas auto -y
 ```
 
 Redelegate tokens to another validator
 
 ```bash
-rebusd tx staking redelegate $(rebusd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000unknown --from wallet --chain-id reb_1111-1 --gas-adjustment 1.4 --gas auto -y
+rebusd tx staking redelegate $(rebusd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000arebus --from wallet --chain-id reb_1111-1 --gas-adjustment 1.4 --gas auto -y
 ```
 
 Unbond tokens from your validator
 
 ```bash
-rebusd tx staking unbond $(rebusd keys show wallet --bech val -a) 1000000unknown --from wallet --chain-id reb_1111-1 --gas-adjustment 1.4 --gas auto -y
+rebusd tx staking unbond $(rebusd keys show wallet --bech val -a) 1000000arebus --from wallet --chain-id reb_1111-1 --gas-adjustment 1.4 --gas auto -y
 ```
 
 Send tokens to the wallet
 
 ```bash
-rebusd tx bank send wallet <TO_WALLET_ADDRESS> 1000000unknown --from wallet --chain-id reb_1111-1
+rebusd tx bank send wallet <TO_WALLET_ADDRESS> 1000000arebus --from wallet --chain-id reb_1111-1
 ```
 
 ### Governance
@@ -268,7 +268,7 @@ curl -sS http://localhost:26657/net_info | jq -r '.result.peers[] | "\(.node_inf
 #### Set minimum gas price
 
 ```
-sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0unknown\"/" $HOME/.rebusd/config/app.toml
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0arebus\"/" $HOME/.rebusd/config/app.toml
 ```
 
 #### Enable prometheus

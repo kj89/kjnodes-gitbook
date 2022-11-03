@@ -58,7 +58,7 @@ Please make sure you have adjusted `moniker`, `identity`, `details` and `website
 
 ```bash
 teritorid tx staking create-validator \
---amount=1000000unknown \
+--amount=1000000utori \
 --pubkey=$(teritorid tendermint show-validator) \
 --moniker="YOUR_MONIKER_NAME" \
 --identity="YOUR_KEYBASE_ID" \
@@ -138,31 +138,31 @@ teritorid tx distribution withdraw-rewards $(teritorid keys show wallet --bech v
 #### Delegate tokens to yourself
 
 ```bash
-teritorid tx staking delegate $(teritorid keys show wallet --bech val -a) 1000000unknown --from wallet --chain-id teritori-1 --gas-adjustment 1.4 --gas auto -y
+teritorid tx staking delegate $(teritorid keys show wallet --bech val -a) 1000000utori --from wallet --chain-id teritori-1 --gas-adjustment 1.4 --gas auto -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-teritorid tx staking delegate <TO_VALOPER_ADDRESS> 1000000unknown --from wallet --chain-id teritori-1 --gas-adjustment 1.4 --gas auto -y
+teritorid tx staking delegate <TO_VALOPER_ADDRESS> 1000000utori --from wallet --chain-id teritori-1 --gas-adjustment 1.4 --gas auto -y
 ```
 
 Redelegate tokens to another validator
 
 ```bash
-teritorid tx staking redelegate $(teritorid keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000unknown --from wallet --chain-id teritori-1 --gas-adjustment 1.4 --gas auto -y
+teritorid tx staking redelegate $(teritorid keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000utori --from wallet --chain-id teritori-1 --gas-adjustment 1.4 --gas auto -y
 ```
 
 Unbond tokens from your validator
 
 ```bash
-teritorid tx staking unbond $(teritorid keys show wallet --bech val -a) 1000000unknown --from wallet --chain-id teritori-1 --gas-adjustment 1.4 --gas auto -y
+teritorid tx staking unbond $(teritorid keys show wallet --bech val -a) 1000000utori --from wallet --chain-id teritori-1 --gas-adjustment 1.4 --gas auto -y
 ```
 
 Send tokens to the wallet
 
 ```bash
-teritorid tx bank send wallet <TO_WALLET_ADDRESS> 1000000unknown --from wallet --chain-id teritori-1
+teritorid tx bank send wallet <TO_WALLET_ADDRESS> 1000000utori --from wallet --chain-id teritori-1
 ```
 
 ### Governance
@@ -268,7 +268,7 @@ curl -sS http://localhost:26657/net_info | jq -r '.result.peers[] | "\(.node_inf
 #### Set minimum gas price
 
 ```
-sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0unknown\"/" $HOME/.teritorid/config/app.toml
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0utori\"/" $HOME/.teritorid/config/app.toml
 ```
 
 #### Enable prometheus
