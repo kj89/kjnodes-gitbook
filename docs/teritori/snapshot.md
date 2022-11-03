@@ -6,9 +6,9 @@ description: >-
 
 # Snapshot
 
-| BLOCK             | TIMESTAMP       | SIZE             | DOWNLOAD                                                                         |
-| ----------------- | --------------- | ---------------- | -------------------------------------------------------------------------------- |
-| 458714 | 14 hours ago | 3.11 GB | [snapshot](https://snapshots.kjnodes.com/teritori/snapshot\_latest.tar.lz4) |
+| BLOCK             | AGE             | DOWNLOAD                                                                         | SIZE             |
+| ----------------- | --------------- | -------------------------------------------------------------------------------- | ---------------- |
+| 458714 | 14 hours ago | [snapshot](https://snapshots.kjnodes.com/teritori/snapshot\_latest.tar.lz4) | 3.11 GB |
 
 ### Stop the service and reset the data
 

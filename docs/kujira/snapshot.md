@@ -6,9 +6,9 @@ description: >-
 
 # Snapshot
 
-| BLOCK             | TIMESTAMP       | SIZE             | DOWNLOAD                                                                         |
-| ----------------- | --------------- | ---------------- | -------------------------------------------------------------------------------- |
-| 4766586 | 13 hours ago | 3.39 GB | [snapshot](https://snapshots.kjnodes.com/kujira/snapshot\_latest.tar.lz4) |
+| BLOCK             | AGE             | DOWNLOAD                                                                         | SIZE             |
+| ----------------- | --------------- | -------------------------------------------------------------------------------- | ---------------- |
+| 4766586 | 13 hours ago | [snapshot](https://snapshots.kjnodes.com/kujira/snapshot\_latest.tar.lz4) | 3.39 GB |
 
 ### Stop the service and reset the data
 

@@ -6,9 +6,9 @@ description: >-
 
 # Snapshot
 
-| BLOCK             | TIMESTAMP       | SIZE             | DOWNLOAD                                                                         |
-| ----------------- | --------------- | ---------------- | -------------------------------------------------------------------------------- |
-| 1623670 | 11 hours ago | 4.36 GB | [snapshot](https://snapshots.kjnodes.com/rebus/snapshot\_latest.tar.lz4) |
+| BLOCK             | AGE             | DOWNLOAD                                                                         | SIZE             |
+| ----------------- | --------------- | -------------------------------------------------------------------------------- | ---------------- |
+| 1623670 | 11 hours ago | [snapshot](https://snapshots.kjnodes.com/rebus/snapshot\_latest.tar.lz4) | 4.36 GB |
 
 ### Stop the service and reset the data
 

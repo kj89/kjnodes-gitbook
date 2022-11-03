@@ -6,9 +6,9 @@ description: >-
 
 # Snapshot
 
-| BLOCK             | TIMESTAMP       | SIZE             | DOWNLOAD                                                                         |
-| ----------------- | --------------- | ---------------- | -------------------------------------------------------------------------------- |
-| 865090 | 12 hours ago | 6.14 GB | [snapshot](https://snapshots.kjnodes.com/stride/snapshot\_latest.tar.lz4) |
+| BLOCK             | AGE             | DOWNLOAD                                                                         | SIZE             |
+| ----------------- | --------------- | -------------------------------------------------------------------------------- | ---------------- |
+| 865090 | 12 hours ago | [snapshot](https://snapshots.kjnodes.com/stride/snapshot\_latest.tar.lz4) | 6.14 GB |
 
 ### Stop the service and reset the data
 
