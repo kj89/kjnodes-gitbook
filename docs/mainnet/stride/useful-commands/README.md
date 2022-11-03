@@ -51,7 +51,7 @@ strided q bank balances $(strided keys show wallet -a)
 ### Validator management
 
 {% hint style="info" %}
-Please make sure you have adjusted `moniker`, `identity`, `details` and `website` to match your values.
+Please make sure you have adjusted **moniker**, **identity**, **details** and **website** to match your values.
 {% endhint %}
 
 #### Create new validator
