@@ -36,8 +36,8 @@
   * [State sync](testnet/defund/state-sync/README.md)
   * [Useful commands](testnet/defund/useful-commands/README.md)
 
-* [🥭 Nibiri](testnet/nibiri/README.md)
-  * [Installation](testnet/nibiri/installation/README.md)
-  * [Snapshot](testnet/nibiri/snapshot/README.md)
-  * [State sync](testnet/nibiri/state-sync/README.md)
-  * [Useful commands](testnet/nibiri/useful-commands/README.md)
+* [🥭 Nibiri](testnet/nibiru/README.md)
+  * [Installation](testnet/nibiru/installation/README.md)
+  * [Snapshot](testnet/nibiru/snapshot/README.md)
+  * [State sync](testnet/nibiru/state-sync/README.md)
+  * [Useful commands](testnet/nibiru/useful-commands/README.md)
