@@ -29,3 +29,15 @@
   * [Useful commands](mainnet/teritori/useful-commands/README.md)
 
 ## TESTNET
+
+* [🍇 Defund](mainnet/defund-testnet/README.md)
+  * [Installation](mainnet/defund-testnet/installation/README.md)
+  * [Snapshot](mainnet/defund-testnet/snapshot/README.md)
+  * [State sync](mainnet/defund-testnet/state-sync/README.md)
+  * [Useful commands](mainnet/defund-testnet/useful-commands/README.md)
+
+* [🥭 Nibiri](mainnet/nibiri-testnet/README.md)
+  * [Installation](mainnet/nibiri-testnet/installation/README.md)
+  * [Snapshot](mainnet/nibiri-testnet/snapshot/README.md)
+  * [State sync](mainnet/nibiri-testnet/state-sync/README.md)
+  * [Useful commands](mainnet/nibiri-testnet/useful-commands/README.md)
