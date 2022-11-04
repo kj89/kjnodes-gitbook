@@ -30,14 +30,14 @@
 
 ## TESTNET
 
-* [🍇 Defund](mainnet/defund-testnet/README.md)
-  * [Installation](mainnet/defund-testnet/installation/README.md)
-  * [Snapshot](mainnet/defund-testnet/snapshot/README.md)
-  * [State sync](mainnet/defund-testnet/state-sync/README.md)
-  * [Useful commands](mainnet/defund-testnet/useful-commands/README.md)
+* [🍇 Defund](testnet/defund/README.md)
+  * [Installation](testnet/defund/installation/README.md)
+  * [Snapshot](testnet/defund/snapshot/README.md)
+  * [State sync](testnet/defund/state-sync/README.md)
+  * [Useful commands](testnet/defund/useful-commands/README.md)
 
-* [🥭 Nibiri](mainnet/nibiri-testnet/README.md)
-  * [Installation](mainnet/nibiri-testnet/installation/README.md)
-  * [Snapshot](mainnet/nibiri-testnet/snapshot/README.md)
-  * [State sync](mainnet/nibiri-testnet/state-sync/README.md)
-  * [Useful commands](mainnet/nibiri-testnet/useful-commands/README.md)
+* [🥭 Nibiri](testnet/nibiri/README.md)
+  * [Installation](testnet/nibiri/installation/README.md)
+  * [Snapshot](testnet/nibiri/snapshot/README.md)
+  * [State sync](testnet/nibiri/state-sync/README.md)
+  * [Useful commands](testnet/nibiri/useful-commands/README.md)
