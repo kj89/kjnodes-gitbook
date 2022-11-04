@@ -8,7 +8,7 @@ description: >-
 
 | BLOCK             | AGE             | DOWNLOAD                                                                         | SIZE             |
 | ----------------- | --------------- | -------------------------------------------------------------------------------- | ---------------- |
-| 220794 | 18 minutes ago | [snapshot](https://snapshots.kjnodes.com/nibiru-testnet/snapshot\_latest.tar.lz4) | 0.4 GB |
+| 220794 | 19 minutes ago | [snapshot](https://snapshots.kjnodes.com/nibiru-testnet/snapshot\_latest.tar.lz4) | 0.4 GB |
 
 ### Stop the service and reset the data
 
