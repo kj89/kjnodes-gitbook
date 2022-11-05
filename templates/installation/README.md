@@ -46,7 +46,6 @@ make build
 mkdir -p $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin
 mv build/${CHAIN_APP} $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin/
 rm build -rf
-
 ${COMPILE_LATEST_VERSION}
 ```
 

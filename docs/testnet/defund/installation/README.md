@@ -47,7 +47,6 @@ mkdir -p $HOME/.defund/cosmovisor/genesis/bin
 mv build/defundd $HOME/.defund/cosmovisor/genesis/bin/
 rm build -rf
 
-
 ```
 
 ### Install Cosmovisor and create a service

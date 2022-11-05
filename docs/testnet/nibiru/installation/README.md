@@ -47,7 +47,6 @@ mkdir -p $HOME/.nibid/cosmovisor/genesis/bin
 mv build/nibid $HOME/.nibid/cosmovisor/genesis/bin/
 rm build -rf
 
-
 ```
 
 ### Install Cosmovisor and create a service
