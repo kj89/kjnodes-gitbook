@@ -4,6 +4,12 @@
 
 ## MAINNET
 
+* [🐋 Agoric](mainnet/agoric/README.md)
+  * [Installation](mainnet/agoric/installation/README.md)
+  * [Snapshot](mainnet/agoric/snapshot/README.md)
+  * [State sync](mainnet/agoric/state-sync/README.md)
+  * [Useful commands](mainnet/agoric/useful-commands/README.md)
+
 * [🐋 Kujira](mainnet/kujira/README.md)
   * [Installation](mainnet/kujira/installation/README.md)
   * [Snapshot](mainnet/kujira/snapshot/README.md)
@@ -43,5 +49,17 @@
   * [Snapshot](testnet/nibiru/snapshot/README.md)
   * [State sync](testnet/nibiru/state-sync/README.md)
   * [Useful commands](testnet/nibiru/useful-commands/README.md)
+
+* [🐋 Ollo](testnet/ollo/README.md)
+  * [Installation](testnet/ollo/installation/README.md)
+  * [Snapshot](testnet/ollo/snapshot/README.md)
+  * [State sync](testnet/ollo/state-sync/README.md)
+  * [Useful commands](testnet/ollo/useful-commands/README.md)
+
+* [🐋 Quicksilver](testnet/quicksilver/README.md)
+  * [Installation](testnet/quicksilver/installation/README.md)
+  * [Snapshot](testnet/quicksilver/snapshot/README.md)
+  * [State sync](testnet/quicksilver/state-sync/README.md)
+  * [Useful commands](testnet/quicksilver/useful-commands/README.md)
 
 

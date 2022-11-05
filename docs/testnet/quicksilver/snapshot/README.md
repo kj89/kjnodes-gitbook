@@ -8,25 +8,25 @@ description: >-
 
 | BLOCK             | AGE             | DOWNLOAD                                                                         | SIZE             |
 | ----------------- | --------------- | -------------------------------------------------------------------------------- | ---------------- |
-| ${SNAPSHOT_BLOCK} | ${SNAPSHOT_AGE} | [snapshot](https://snapshots.kjnodes.com/${CHAIN_NAME}/snapshot\_latest.tar.lz4) | ${SNAPSHOT_SIZE} |
+| 586227 | 22 minutes ago | [snapshot](https://snapshots.kjnodes.com/quicksilver-testnet/snapshot\_latest.tar.lz4) | 0.17 GB |
 
 ### Stop the service and reset the data
 
 ```bash
-sudo systemctl stop ${CHAIN_APP}
-cp $HOME/${CHAIN_DIR}/data/priv_validator_state.json $HOME/${CHAIN_DIR}/priv_validator_state.json.backup
-rm -rf $HOME/${CHAIN_DIR}/data
+sudo systemctl stop quicksilverd
+cp $HOME/.quicksilverd/data/priv_validator_state.json $HOME/.quicksilverd/priv_validator_state.json.backup
+rm -rf $HOME/.quicksilverd/data
 ```
 
 ### Download the latest snapshot
 
 ```bash
-curl -L https://snapshots.kjnodes.com/${CHAIN_NAME}/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/${CHAIN_DIR}
-mv $HOME/${CHAIN_DIR}/priv_validator_state.json.backup $HOME/${CHAIN_DIR}/data/priv_validator_state.json
+curl -L https://snapshots.kjnodes.com/quicksilver-testnet/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.quicksilverd
+mv $HOME/.quicksilverd/priv_validator_state.json.backup $HOME/.quicksilverd/data/priv_validator_state.json
 ```
 
 ### Restart the service and check the log
 
 ```bash
-sudo systemctl start ${CHAIN_APP} && journalctl -u ${CHAIN_APP} -f --no-hostname -o cat
+sudo systemctl start quicksilverd && journalctl -u quicksilverd -f --no-hostname -o cat
 ```
