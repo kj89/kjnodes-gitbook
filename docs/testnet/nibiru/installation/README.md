@@ -47,12 +47,7 @@ mkdir -p $HOME/.nibid/cosmovisor/genesis/bin
 mv build/nibid $HOME/.nibid/cosmovisor/genesis/bin/
 rm build -rf
 
-# Compile latest version v0.15.0
-git checkout v0.15.0
-make build
-mkdir -p $HOME/.nibid/cosmovisor/upgrades/v0.15.0/bin
-mv build/nibid $HOME/.nibid/cosmovisor/upgrades/v0.15.0/bin/
-rm build -rf
+${COMPILE_LATEST_VERSION}
 ```
 
 ### Install Cosmovisor and create a service
@@ -85,7 +80,7 @@ sudo systemctl enable nibid
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.nibid/cosmovisor/upgrades/v0.15.0 $HOME/.nibid/cosmovisor/current
+ln -s $HOME/.nibid/cosmovisor/genesis $HOME/.nibid/cosmovisor/current
 sudo ln -s $HOME/.nibid/cosmovisor/current/bin/nibid /usr/local/bin/nibid
 nibid config chain-id nibiru-testnet-1
 nibid config node tcp://localhost:39657

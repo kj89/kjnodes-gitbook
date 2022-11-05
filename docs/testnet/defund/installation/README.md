@@ -47,12 +47,7 @@ mkdir -p $HOME/.defund/cosmovisor/genesis/bin
 mv build/defundd $HOME/.defund/cosmovisor/genesis/bin/
 rm build -rf
 
-# Compile latest version v0.1.0
-git checkout v0.1.0
-make build
-mkdir -p $HOME/.defund/cosmovisor/upgrades/v0.1.0/bin
-mv build/defundd $HOME/.defund/cosmovisor/upgrades/v0.1.0/bin/
-rm build -rf
+${COMPILE_LATEST_VERSION}
 ```
 
 ### Install Cosmovisor and create a service
@@ -85,7 +80,7 @@ sudo systemctl enable defundd
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.defund/cosmovisor/upgrades/v0.1.0 $HOME/.defund/cosmovisor/current
+ln -s $HOME/.defund/cosmovisor/genesis $HOME/.defund/cosmovisor/current
 sudo ln -s $HOME/.defund/cosmovisor/current/bin/defundd /usr/local/bin/defundd
 defundd config chain-id defund-private-2
 defundd config node tcp://localhost:40657
