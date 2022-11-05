@@ -8,7 +8,7 @@ description: >-
 
 | BLOCK             | AGE             | DOWNLOAD                                                                         | SIZE             |
 | ----------------- | --------------- | -------------------------------------------------------------------------------- | ---------------- |
-| 121847 | 14 hours ago | [snapshot](https://snapshots.kjnodes.com/defund-testnet/snapshot\_latest.tar.lz4) | 1.86 GB |
+| 121847 | 16 hours ago | [snapshot](https://snapshots.kjnodes.com/defund-testnet/snapshot\_latest.tar.lz4) | 1.86 GB |
 
 ### Stop the service and reset the data
 
