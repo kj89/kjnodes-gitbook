@@ -47,12 +47,7 @@ mkdir -p $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin
 mv build/${CHAIN_APP} $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin/
 rm build -rf
 
-# Compile latest version ${LATEST_VERSION}
-git checkout ${LATEST_VERSION}
-make build
-mkdir -p $HOME/${CHAIN_DIR}/cosmovisor/upgrades/${LATEST_VERSION}/bin
-mv build/${CHAIN_APP} $HOME/${CHAIN_DIR}/cosmovisor/upgrades/${LATEST_VERSION}/bin/
-rm build -rf
+${COMPILE_LATEST_VERSION}
 ```
 
 ### Install Cosmovisor and create a service
@@ -85,7 +80,7 @@ sudo systemctl enable ${CHAIN_APP}
 ### Initialize the node
 
 ```bash
-ln -s $HOME/${CHAIN_DIR}/cosmovisor/upgrades/${LATEST_VERSION} $HOME/${CHAIN_DIR}/cosmovisor/current
+ln -s $HOME/${CHAIN_DIR}/cosmovisor/${BINARY_CURRENT} $HOME/${CHAIN_DIR}/cosmovisor/current
 sudo ln -s $HOME/${CHAIN_DIR}/cosmovisor/current/bin/${CHAIN_APP} /usr/local/bin/${CHAIN_APP}
 ${CHAIN_APP} config chain-id ${CHAIN_ID}
 ${CHAIN_APP} config node tcp://localhost:${CHAIN_PORT}657
