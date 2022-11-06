@@ -14,7 +14,7 @@ description: Resources and services that we provide for the crypto community
 
 </div>
 
-<figure><img src=".gitbook/assets/jackal.png" alt=""><figcaption><p>Jackal</p></figcaption></figure>
+<figure><img src=".gitbook/assets/jackal.png" alt=""><figcaption><p>Jackal</p></figcaption></figure><figure><img src=".gitbook/assets/kujira.png" alt=""><figcaption><p>Kujira</p></figcaption></figure>
 
 <figure><img src=".gitbook/assets/kujira.png" alt=""><figcaption><p>Kujira</p></figcaption></figure>
 
