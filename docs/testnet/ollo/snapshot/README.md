@@ -8,7 +8,7 @@ description: >-
 
 | BLOCK             | AGE             | DOWNLOAD                                                                         | SIZE             |
 | ----------------- | --------------- | -------------------------------------------------------------------------------- | ---------------- |
-| 76929 | 2 hours ago | [snapshot](https://snapshots.kjnodes.com/ollo-testnet/snapshot\_latest.tar.lz4) | 0.04 GB |
+| 80507 | 10 hours ago | [snapshot](https://snapshots.kjnodes.com/ollo-testnet/snapshot\_latest.tar.lz4) | 0.15 GB |
 
 ### Stop the service and reset the data
 
