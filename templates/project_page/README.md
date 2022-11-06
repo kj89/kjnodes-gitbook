@@ -17,13 +17,13 @@ Latest version: **${LATEST_VERSION}**
 ### state-sync
 
 ```
-d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@${CHAIN_NAME}.rpc.kjnodes.com:${CHAIN_PORT}656
+${CHAIN_PEER}@${CHAIN_NAME}.rpc.kjnodes.com:${CHAIN_PORT}656
 ```
 
 ### seed-node
 
 ```
-400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@${CHAIN_NAME}.rpc.kjnodes.com:${CHAIN_PORT}659
+${CHAIN_TENDERSEED_PEER}@${CHAIN_NAME}.rpc.kjnodes.com:${CHAIN_PORT}659
 ```
 
 ## Downloads
