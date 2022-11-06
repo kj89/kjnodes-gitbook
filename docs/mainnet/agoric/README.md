@@ -4,7 +4,9 @@ description: >-
   long as you use them fairly.
 ---
 
-# Services
+# 🐋 Agoric
+
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-type="rating" data-max="5"></th></tr></thead><tbody><tr><td></td><td></td><td><a href="../../.gitbook/assets/kujira.png">kujira.png</a></td><td>null</td></tr><tr><td>A Proof-of-Stake chain utilizing Hardened JavaScript smart contracts to rapidly build and deploy DeFi.</td><td></td><td></td><td>null</td></tr></tbody></table>
 
 ## Public endpoints
 
@@ -28,4 +30,4 @@ d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@agoric.rpc.kjnodes.com:27656
 ## Downloads
 
 * addrbook: [addrbook.json](https://snapshots.kjnodes.com/agoric/addrbook.json)
-* snapshot: [snapshot_latest.tar.lz4](https://snapshots.kjnodes.com/agoric/snapshot\_latest.tar.lz4)
+* snapshot: [snapshot\_latest.tar.lz4](https://snapshots.kjnodes.com/agoric/snapshot\_latest.tar.lz4)
