@@ -1,11 +1,10 @@
-# Services
+# 🍇 Defund
 
-<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/defund.png" width="150" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/defund.png" alt=""><figcaption></figcaption></figure>
 
-DeFund is an L1 blockchain built for building decentralized permissionless,  on-chain trading strategies that are packaged into a dETF (decentralized  exchange-traded fund) token, tradable within any ecosystem or CEX.
+DeFund is an L1 blockchain built for building decentralized permissionless, on-chain trading strategies that are packaged into a dETF (decentralized exchange-traded fund) token, tradable within any ecosystem or CEX.
 
-
-Website: [https://www.defund.app](https://www.defund.app) \
+Website: [https://www.defund.app](https://www.defund.app)\
 Latest version: **v0.1.0**
 
 ## Public endpoints
@@ -30,4 +29,4 @@ d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@defund-testnet.rpc.kjnodes.com:40656
 ## Downloads
 
 * addrbook: [addrbook.json](https://snapshots.kjnodes.com/defund-testnet/addrbook.json)
-* snapshot: [snapshot_latest.tar.lz4](https://snapshots.kjnodes.com/defund-testnet/snapshot\_latest.tar.lz4)
+* snapshot: [snapshot\_latest.tar.lz4](https://snapshots.kjnodes.com/defund-testnet/snapshot\_latest.tar.lz4)

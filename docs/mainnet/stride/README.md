@@ -1,11 +1,10 @@
-# Services
+# 🍉 Stride
 
-<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/stride.png" width="150" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/stride.png" alt=""><figcaption></figcaption></figure>
 
-Stride is a blockchain ("zone") that provides liquidity for staked assets.  Using Stride, you can earn both staking and DeFi yields across the Cosmos IBC ecosystem
+Stride is a blockchain ("zone") that provides liquidity for staked assets. Using Stride, you can earn both staking and DeFi yields across the Cosmos IBC ecosystem
 
-
-Website: [https://stride.zone](https://stride.zone) \
+Website: [https://stride.zone](https://stride.zone)\
 Latest version: **v2.0.3**
 
 ## Public endpoints
@@ -30,4 +29,4 @@ d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@stride.rpc.kjnodes.com:16656
 ## Downloads
 
 * addrbook: [addrbook.json](https://snapshots.kjnodes.com/stride/addrbook.json)
-* snapshot: [snapshot_latest.tar.lz4](https://snapshots.kjnodes.com/stride/snapshot\_latest.tar.lz4)
+* snapshot: [snapshot\_latest.tar.lz4](https://snapshots.kjnodes.com/stride/snapshot\_latest.tar.lz4)

@@ -1,11 +1,10 @@
-# Services
+# 🍍 Rebus
 
-<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/rebus.png" width="150" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/rebus.png" alt=""><figcaption></figcaption></figure>
 
-Rebuschain is a platform that will provide DeFi (Decentralized Finance)  investment opportunities to traditional investors clearly and conveniently
+Rebuschain is a platform that will provide DeFi (Decentralized Finance) investment opportunities to traditional investors clearly and conveniently
 
-
-Website: [https://www.rebuschain.com](https://www.rebuschain.com) \
+Website: [https://www.rebuschain.com](https://www.rebuschain.com)\
 Latest version: **v0.2.0**
 
 ## Public endpoints
@@ -30,4 +29,4 @@ d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@rebus.rpc.kjnodes.com:21656
 ## Downloads
 
 * addrbook: [addrbook.json](https://snapshots.kjnodes.com/rebus/addrbook.json)
-* snapshot: [snapshot_latest.tar.lz4](https://snapshots.kjnodes.com/rebus/snapshot\_latest.tar.lz4)
+* snapshot: [snapshot\_latest.tar.lz4](https://snapshots.kjnodes.com/rebus/snapshot\_latest.tar.lz4)

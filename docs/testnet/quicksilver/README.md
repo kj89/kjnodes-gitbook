@@ -1,11 +1,10 @@
-# Services
+# 🌽 Quicksilver
 
-<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/quicksilver.png" width="150" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/quicksilver.png" alt=""><figcaption></figcaption></figure>
 
 Quicksilver is a permissionless, sovereign Cosmos SDK zone providing liquid staking for the entire Cosmos Ecosystem.
 
-
-Website: [https://quicksilver.zone](https://quicksilver.zone) \
+Website: [https://quicksilver.zone](https://quicksilver.zone)\
 Latest version: **https://github.com/ingenuity-build/testnets/releases/download/v0.9.0/quicksilverd-v0.9.6-amd64**
 
 ## Public endpoints
@@ -30,4 +29,4 @@ d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@quicksilver-testnet.rpc.kjnodes.com:116
 ## Downloads
 
 * addrbook: [addrbook.json](https://snapshots.kjnodes.com/quicksilver-testnet/addrbook.json)
-* snapshot: [snapshot_latest.tar.lz4](https://snapshots.kjnodes.com/quicksilver-testnet/snapshot\_latest.tar.lz4)
+* snapshot: [snapshot\_latest.tar.lz4](https://snapshots.kjnodes.com/quicksilver-testnet/snapshot\_latest.tar.lz4)
