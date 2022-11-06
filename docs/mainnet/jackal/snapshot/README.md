@@ -8,7 +8,7 @@ description: >-
 
 | BLOCK             | AGE             | DOWNLOAD                                                                         | SIZE             |
 | ----------------- | --------------- | -------------------------------------------------------------------------------- | ---------------- |
-| 45381 | 55 minutes ago | [snapshot](https://snapshots.kjnodes.com/jackal/snapshot\_latest.tar.lz4) | 0.31 GB |
+| 45381 | 1 hour ago | [snapshot](https://snapshots.kjnodes.com/jackal/snapshot\_latest.tar.lz4) | 0.31 GB |
 
 ### Stop the service and reset the data
 
