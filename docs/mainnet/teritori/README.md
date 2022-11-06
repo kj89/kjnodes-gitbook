@@ -4,6 +4,9 @@
 
 Agoric is an interoperable Proof-of-Stake chain in the Cosmos ecosystem. Our JavaScript smart contract platform enables 15M+ developers across the globe to rapidly build and deploy dapps on-chain.
 
+Website: https://agoric.com/ \
+Latest version: v1.3.0
+
 ## Public endpoints
 
 * rpc: [https://teritori.rpc.kjnodes.com](https://teritori.rpc.kjnodes.com)
