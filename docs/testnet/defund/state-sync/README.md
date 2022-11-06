@@ -15,7 +15,7 @@ https://defund-testnet.rpc.kjnodes.com:443
 #### Peer:
 
 ```bash
-d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@defund-testnet.rpc.kjnodes.com:40656
+d5519e378247dfb61dfe90652d1fe3e2b3005a5b@defund-testnet.rpc.kjnodes.com:40656
 ```
 
 ### Stop the service and reset the data
@@ -30,7 +30,7 @@ defundd tendermint unsafe-reset-all --home $HOME/.defund
 
 ```bash
 STATE_SYNC_RPC=https://defund-testnet.rpc.kjnodes.com:443
-STATE_SYNC_PEER=d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@defund-testnet.rpc.kjnodes.com:40656
+STATE_SYNC_PEER=d5519e378247dfb61dfe90652d1fe3e2b3005a5b@defund-testnet.rpc.kjnodes.com:40656
 LATEST_HEIGHT=$(curl -s $STATE_SYNC_RPC/block | jq -r .result.block.header.height)
 SYNC_BLOCK_HEIGHT=$(($LATEST_HEIGHT - 2000))
 SYNC_BLOCK_HASH=$(curl -s "$STATE_SYNC_RPC/block?height=$SYNC_BLOCK_HEIGHT" | jq -r .result.block_id.hash)

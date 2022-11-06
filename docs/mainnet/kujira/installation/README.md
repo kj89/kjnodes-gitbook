@@ -92,7 +92,7 @@ kujirad config node tcp://localhost:13657
 kujirad init $MONIKER --chain-id kaiyo-1
 curl -Ls https://snapshots.kjnodes.com/kujira/genesis.json > $HOME/.kujira/config/genesis.json
 curl -Ls https://snapshots.kjnodes.com/kujira/addrbook.json > $HOME/.kujira/config/addrbook.json
-sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@kujira.rpc.kjnodes.com:13659\"|" $HOME/.kujira/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@kujira.rpc.kjnodes.com:13659\"|" $HOME/.kujira/config/config.toml
 tee $HOME/.kujira/data/priv_validator_state.json > /dev/null << EOF
 {
   "height": "0",

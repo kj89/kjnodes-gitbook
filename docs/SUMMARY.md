@@ -10,6 +10,12 @@
   * [State sync](mainnet/agoric/state-sync/README.md)
   * [Useful commands](mainnet/agoric/useful-commands/README.md)
 
+* [🦊 Jackal](mainnet/jackal/README.md)
+  * [Installation](mainnet/jackal/installation/README.md)
+  * [Snapshot](mainnet/jackal/snapshot/README.md)
+  * [State sync](mainnet/jackal/state-sync/README.md)
+  * [Useful commands](mainnet/jackal/useful-commands/README.md)
+
 * [🐋 Kujira](mainnet/kujira/README.md)
   * [Installation](mainnet/kujira/installation/README.md)
   * [Snapshot](mainnet/kujira/snapshot/README.md)

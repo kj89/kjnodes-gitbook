@@ -1,10 +1,11 @@
-# 🍐 Ollo
+# Services
 
-<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/ollo.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/ollo.png" width="150" alt=""><figcaption></figcaption></figure>
 
-OLLO is a sovereign L1 chain built on the Cosmos network providing next-gen trading tools & sustainable tokenomics.
+OLLO is a sovereign L1 chain built on the Cosmos network providing  next-gen trading tools & sustainable tokenomics.
 
-Website: [https://www.ollostation.zone](https://www.ollostation.zone)\
+
+Website: [https://www.ollostation.zone](https://www.ollostation.zone) \
 Latest version: **v0.0.1**
 
 ## Public endpoints
@@ -17,16 +18,16 @@ Latest version: **v0.0.1**
 ### state-sync
 
 ```
-d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@ollo-testnet.rpc.kjnodes.com:32656
+d5519e378247dfb61dfe90652d1fe3e2b3005a5b@ollo-testnet.rpc.kjnodes.com:32656
 ```
 
 ### seed-node
 
 ```
-400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@ollo-testnet.rpc.kjnodes.com:32659
+3f472746f46493309650e5a033076689996c8881@ollo-testnet.rpc.kjnodes.com:32659
 ```
 
 ## Downloads
 
 * addrbook: [addrbook.json](https://snapshots.kjnodes.com/ollo-testnet/addrbook.json)
-* snapshot: [snapshot\_latest.tar.lz4](https://snapshots.kjnodes.com/ollo-testnet/snapshot\_latest.tar.lz4)
+* snapshot: [snapshot_latest.tar.lz4](https://snapshots.kjnodes.com/ollo-testnet/snapshot\_latest.tar.lz4)

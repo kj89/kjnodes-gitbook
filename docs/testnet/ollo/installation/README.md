@@ -86,7 +86,7 @@ ollod config node tcp://localhost:32657
 ollod init $MONIKER --chain-id ollo-testnet-1
 curl -Ls https://snapshots.kjnodes.com/ollo-testnet/genesis.json > $HOME/.ollo/config/genesis.json
 curl -Ls https://snapshots.kjnodes.com/ollo-testnet/addrbook.json > $HOME/.ollo/config/addrbook.json
-sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@ollo-testnet.rpc.kjnodes.com:32659\"|" $HOME/.ollo/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@ollo-testnet.rpc.kjnodes.com:32659\"|" $HOME/.ollo/config/config.toml
 tee $HOME/.ollo/data/priv_validator_state.json > /dev/null << EOF
 {
   "height": "0",

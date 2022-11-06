@@ -1,10 +1,11 @@
-# 🌽 Quicksilver
+# Services
 
-<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/quicksilver.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/quicksilver.png" width="150" alt=""><figcaption></figcaption></figure>
 
 Quicksilver is a permissionless, sovereign Cosmos SDK zone providing liquid staking for the entire Cosmos Ecosystem.
 
-Website: [https://quicksilver.zone](https://quicksilver.zone)\
+
+Website: [https://quicksilver.zone](https://quicksilver.zone) \
 Latest version: **https://github.com/ingenuity-build/testnets/releases/download/v0.9.0/quicksilverd-v0.9.6-amd64**
 
 ## Public endpoints
@@ -17,16 +18,16 @@ Latest version: **https://github.com/ingenuity-build/testnets/releases/download/
 ### state-sync
 
 ```
-d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@quicksilver-testnet.rpc.kjnodes.com:11656
+d5519e378247dfb61dfe90652d1fe3e2b3005a5b@quicksilver-testnet.rpc.kjnodes.com:11656
 ```
 
 ### seed-node
 
 ```
-400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@quicksilver-testnet.rpc.kjnodes.com:11659
+3f472746f46493309650e5a033076689996c8881@quicksilver-testnet.rpc.kjnodes.com:11659
 ```
 
 ## Downloads
 
 * addrbook: [addrbook.json](https://snapshots.kjnodes.com/quicksilver-testnet/addrbook.json)
-* snapshot: [snapshot\_latest.tar.lz4](https://snapshots.kjnodes.com/quicksilver-testnet/snapshot\_latest.tar.lz4)
+* snapshot: [snapshot_latest.tar.lz4](https://snapshots.kjnodes.com/quicksilver-testnet/snapshot\_latest.tar.lz4)
