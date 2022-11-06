@@ -50,8 +50,8 @@ mv build/quicksilverd $HOME/.quicksilverd/cosmovisor/genesis/bin/
 git checkout https://github.com/ingenuity-build/testnets/releases/download/v0.9.0/quicksilverd-v0.9.6-amd64
 make build
 mkdir -p $HOME/.quicksilverd/cosmovisor/upgrades/https://github.com/ingenuity-build/testnets/releases/download/v0.9.0/quicksilverd-v0.9.6-amd64/bin
-mv build/$quicksilverd $HOME/$.quicksilverd/cosmovisor/upgrades/$https://github.com/ingenuity-build/testnets/releases/download/v0.9.0/quicksilverd-v0.9.6-amd64/bin/
-rm build -rf'
+mv build/quicksilverd $HOME/$.quicksilverd/cosmovisor/upgrades/$https://github.com/ingenuity-build/testnets/releases/download/v0.9.0/quicksilverd-v0.9.6-amd64/bin/
+rm build/quicksilverd -rf
 ```
 
 ### Install Cosmovisor and create a service

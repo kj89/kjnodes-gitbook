@@ -50,8 +50,8 @@ mv build/strided $HOME/.stride/cosmovisor/genesis/bin/
 git checkout v2.0.3
 make build
 mkdir -p $HOME/.stride/cosmovisor/upgrades/v2.0.3/bin
-mv build/$strided $HOME/$.stride/cosmovisor/upgrades/$v2.0.3/bin/
-rm build -rf'
+mv build/strided $HOME/$.stride/cosmovisor/upgrades/$v2.0.3/bin/
+rm build/strided -rf
 ```
 
 ### Install Cosmovisor and create a service

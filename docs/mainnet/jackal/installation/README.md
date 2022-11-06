@@ -50,8 +50,8 @@ mv build/canined $HOME/.canine/cosmovisor/genesis/bin/
 git checkout v1.1.2-hotfix
 make build
 mkdir -p $HOME/.canine/cosmovisor/upgrades/v1.1.2-hotfix/bin
-mv build/$canined $HOME/$.canine/cosmovisor/upgrades/$v1.1.2-hotfix/bin/
-rm build -rf'
+mv build/canined $HOME/$.canine/cosmovisor/upgrades/$v1.1.2-hotfix/bin/
+rm build/canined -rf
 ```
 
 ### Install Cosmovisor and create a service

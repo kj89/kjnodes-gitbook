@@ -50,8 +50,8 @@ mv build/kujirad $HOME/.kujira/cosmovisor/genesis/bin/
 git checkout v0.6.4
 make build
 mkdir -p $HOME/.kujira/cosmovisor/upgrades/v0.6.4/bin
-mv build/$kujirad $HOME/$.kujira/cosmovisor/upgrades/$v0.6.4/bin/
-rm build -rf'
+mv build/kujirad $HOME/$.kujira/cosmovisor/upgrades/$v0.6.4/bin/
+rm build/kujirad -rf
 ```
 
 ### Install Cosmovisor and create a service

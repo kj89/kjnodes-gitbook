@@ -50,8 +50,8 @@ mv build/teritorid $HOME/.teritorid/cosmovisor/genesis/bin/
 git checkout v1.3.0
 make build
 mkdir -p $HOME/.teritorid/cosmovisor/upgrades/v1.3.0/bin
-mv build/$teritorid $HOME/$.teritorid/cosmovisor/upgrades/$v1.3.0/bin/
-rm build -rf'
+mv build/teritorid $HOME/$.teritorid/cosmovisor/upgrades/$v1.3.0/bin/
+rm build/teritorid -rf
 ```
 
 ### Install Cosmovisor and create a service
