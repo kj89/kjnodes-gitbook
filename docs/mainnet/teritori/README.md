@@ -1,14 +1,14 @@
 ---
 description: >-
-  These are the public services provided by kjnodes. Feel free to use them as
-  long as you use them fairly.
+  Agoric is an interoperable Proof-of-Stake chain in the Cosmos ecosystem. 
+  Our JavaScript smart contract platform enables 15M+ developers across the globe to rapidly build and deploy dapps on-chain.
 ---
 
 # Services
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/teritori.png" width="150" alt=""><figcaption></figcaption></figure>
 
-Agoric is an interoperable Proof-of-Stake chain in the Cosmos ecosystem. Our JavaScript smart contract platform enables 15M+ developers across the globe to rapidly build and deploy dapps on-chain.
+These are the public services provided by kjnodes. Feel free to use them as long as you use them fairly.
 
 ## Public endpoints
 
