@@ -45,7 +45,6 @@ git checkout v0.15.0
 make build
 mkdir -p $HOME/.nibid/cosmovisor/genesis/bin
 mv build/nibid $HOME/.nibid/cosmovisor/genesis/bin/
-rm build -rf
 
 ```
 

@@ -44,8 +44,7 @@ cd ollo
 git checkout v0.0.1
 make build
 mkdir -p $HOME/.ollo/cosmovisor/genesis/bin
-mv build/ollod $HOME/.ollo/cosmovisor/genesis/bin/
-rm build -rf
+mv bin/ollod $HOME/.ollo/cosmovisor/genesis/bin/
 
 ```
 

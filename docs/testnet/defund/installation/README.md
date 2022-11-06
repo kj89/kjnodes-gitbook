@@ -45,7 +45,6 @@ git checkout v0.1.0
 make build
 mkdir -p $HOME/.defund/cosmovisor/genesis/bin
 mv build/defundd $HOME/.defund/cosmovisor/genesis/bin/
-rm build -rf
 
 ```
 

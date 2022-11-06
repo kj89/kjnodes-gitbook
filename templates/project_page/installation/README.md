@@ -44,8 +44,7 @@ cd ${GIT_DIR}
 git checkout ${GENESIS_VERSION}
 make build
 mkdir -p $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin
-mv build/${CHAIN_APP} $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin/
-rm build -rf
+mv ${CHAIN_BINARY_SRC} $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin/
 ${COMPILE_LATEST_VERSION}
 ```
 
