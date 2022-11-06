@@ -87,6 +87,7 @@ sudo systemctl enable rebusd
 ln -s $HOME/.rebusd/cosmovisor/upgrades/v0.2.0 $HOME/.rebusd/cosmovisor/current
 sudo ln -s $HOME/.rebusd/cosmovisor/current/bin/rebusd /usr/local/bin/rebusd
 rebusd config chain-id reb_1111-1
+rebusd config keyring-backend file
 rebusd config node tcp://localhost:21657
 rebusd init $MONIKER --chain-id reb_1111-1
 curl -Ls https://snapshots.kjnodes.com/rebus/genesis.json > $HOME/.rebusd/config/genesis.json

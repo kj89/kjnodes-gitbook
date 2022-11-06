@@ -87,6 +87,7 @@ sudo systemctl enable quicksilverd
 ln -s $HOME/.quicksilverd/cosmovisor/upgrades/https://github.com/ingenuity-build/testnets/releases/download/v0.9.0/quicksilverd-v0.9.6-amd64 $HOME/.quicksilverd/cosmovisor/current
 sudo ln -s $HOME/.quicksilverd/cosmovisor/current/bin/quicksilverd /usr/local/bin/quicksilverd
 quicksilverd config chain-id innuendo-3
+quicksilverd config keyring-backend test
 quicksilverd config node tcp://localhost:11657
 quicksilverd init $MONIKER --chain-id innuendo-3
 curl -Ls https://snapshots.kjnodes.com/quicksilver-testnet/genesis.json > $HOME/.quicksilverd/config/genesis.json

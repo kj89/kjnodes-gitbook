@@ -81,6 +81,7 @@ sudo systemctl enable ${CHAIN_APP}
 ln -s $HOME/${CHAIN_DIR}/cosmovisor/${BINARY_CURRENT} $HOME/${CHAIN_DIR}/cosmovisor/current
 sudo ln -s $HOME/${CHAIN_DIR}/cosmovisor/current/bin/${CHAIN_APP} /usr/local/bin/${CHAIN_APP}
 ${CHAIN_APP} config chain-id ${CHAIN_ID}
+${CHAIN_APP} config keyring-backend ${KEYRING_BACKEND}
 ${CHAIN_APP} config node tcp://localhost:${CHAIN_PORT}657
 ${CHAIN_APP} init $MONIKER --chain-id ${CHAIN_ID}
 curl -Ls https://snapshots.kjnodes.com/${CHAIN_NAME}/genesis.json > $HOME/${CHAIN_DIR}/config/genesis.json

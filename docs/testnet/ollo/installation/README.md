@@ -81,6 +81,7 @@ sudo systemctl enable ollod
 ln -s $HOME/.ollo/cosmovisor/genesis $HOME/.ollo/cosmovisor/current
 sudo ln -s $HOME/.ollo/cosmovisor/current/bin/ollod /usr/local/bin/ollod
 ollod config chain-id ollo-testnet-1
+ollod config keyring-backend test
 ollod config node tcp://localhost:32657
 ollod init $MONIKER --chain-id ollo-testnet-1
 curl -Ls https://snapshots.kjnodes.com/ollo-testnet/genesis.json > $HOME/.ollo/config/genesis.json

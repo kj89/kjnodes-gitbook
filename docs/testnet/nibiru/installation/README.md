@@ -81,6 +81,7 @@ sudo systemctl enable nibid
 ln -s $HOME/.nibid/cosmovisor/genesis $HOME/.nibid/cosmovisor/current
 sudo ln -s $HOME/.nibid/cosmovisor/current/bin/nibid /usr/local/bin/nibid
 nibid config chain-id nibiru-testnet-1
+nibid config keyring-backend test
 nibid config node tcp://localhost:39657
 nibid init $MONIKER --chain-id nibiru-testnet-1
 curl -Ls https://snapshots.kjnodes.com/nibiru-testnet/genesis.json > $HOME/.nibid/config/genesis.json

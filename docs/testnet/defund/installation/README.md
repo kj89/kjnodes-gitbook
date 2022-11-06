@@ -81,6 +81,7 @@ sudo systemctl enable defundd
 ln -s $HOME/.defund/cosmovisor/genesis $HOME/.defund/cosmovisor/current
 sudo ln -s $HOME/.defund/cosmovisor/current/bin/defundd /usr/local/bin/defundd
 defundd config chain-id defund-private-2
+defundd config keyring-backend test
 defundd config node tcp://localhost:40657
 defundd init $MONIKER --chain-id defund-private-2
 curl -Ls https://snapshots.kjnodes.com/defund-testnet/genesis.json > $HOME/.defund/config/genesis.json
