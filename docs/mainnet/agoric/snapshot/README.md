@@ -8,7 +8,7 @@ description: >-
 
 | BLOCK             | AGE             | DOWNLOAD                                                                         | SIZE             |
 | ----------------- | --------------- | -------------------------------------------------------------------------------- | ---------------- |
-| 7309137 | 13 hours ago | [snapshot](https://snapshots.kjnodes.com/agoric/snapshot\_latest.tar.lz4) | 5.22 GB |
+| 7309137 | 16 hours ago | [snapshot](https://snapshots.kjnodes.com/agoric/snapshot\_latest.tar.lz4) | 5.22 GB |
 
 ### Stop the service and reset the data
 
