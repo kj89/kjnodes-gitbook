@@ -6,6 +6,10 @@ description: >-
 
 # Services
 
+<figure><img src="../../.gitbook/assets/teritori.png" width="150" alt=""><figcaption></figcaption></figure>
+
+Agoric is an interoperable Proof-of-Stake chain in the Cosmos ecosystem. Our JavaScript smart contract platform enables 15M+ developers across the globe to rapidly build and deploy dapps on-chain.
+
 ## Public endpoints
 
 * rpc: [https://teritori.rpc.kjnodes.com](https://teritori.rpc.kjnodes.com)

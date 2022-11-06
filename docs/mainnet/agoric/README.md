@@ -6,9 +6,9 @@ description: >-
 
 # Services
 
-<figure><img src="../../.gitbook/assets/agoric.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/agoric.png" width="150" alt=""><figcaption></figcaption></figure>
 
-<img src="../../.gitbook/assets/agoric.png" alt="agoric logo" data-size="line"> Agoric is an interoperable Proof-of-Stake chain in the Cosmos ecosystem. Our JavaScript smart contract platform enables 15M+ developers across the globe to rapidly build and deploy dapps on-chain.
+Agoric is an interoperable Proof-of-Stake chain in the Cosmos ecosystem. Our JavaScript smart contract platform enables 15M+ developers across the globe to rapidly build and deploy dapps on-chain.
 
 ## Public endpoints
 
