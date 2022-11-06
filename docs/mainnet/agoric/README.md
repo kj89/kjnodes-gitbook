@@ -6,7 +6,25 @@ description: >-
 
 # 🐋 Agoric
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-type="rating" data-max="5"></th></tr></thead><tbody><tr><td></td><td></td><td><img src=""../../.gitbook/assets/kujira.png"" width="150" height=150 /></td><td>null</td></tr><tr><td>A Proof-of-Stake chain utilizing Hardened JavaScript smart contracts to rapidly build and deploy DeFi.</td><td></td><td></td><td>null</td></tr></tbody></table>
+1
+
+<img src="../../.gitbook/assets/kujira.png" width=150 height=150 />
+
+2
+
+![test]("../../.gitbook/assets/kujira.png"=192x102)
+
+3
+
+<img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/kujira.png" width="150">
+
+4
+
+<img src="../../.gitbook/assets/kujira.png" width="150" />
+
+5
+
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-type="rating" data-max="5"></th></tr></thead><tbody><tr><td></td><td></td><td><img src="../../.gitbook/assets/kujira.png" width="150" height=150 /></td><td>null</td></tr><tr><td>A Proof-of-Stake chain utilizing Hardened JavaScript smart contracts to rapidly build and deploy DeFi.</td><td></td><td></td><td>null</td></tr></tbody></table>
 
 ## Public endpoints
 
