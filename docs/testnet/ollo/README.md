@@ -2,9 +2,10 @@
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/ollo.png" width="150" alt=""><figcaption></figcaption></figure>
 
-Agoric is an interoperable Proof-of-Stake chain in the Cosmos ecosystem. Our JavaScript smart contract platform enables 15M+ developers across the globe to rapidly build and deploy dapps on-chain.
+OLLO is a sovereign L1 chain built on the Cosmos network providing  next-gen trading tools & sustainable tokenomics.
 
-Website: [https://agoric.com](https://agoric.com) \
+
+Website: [https://www.ollostation.zone](https://www.ollostation.zone) \
 Latest version: **v0.0.1**
 
 ## Public endpoints

@@ -2,9 +2,10 @@
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/kujira.png" width="150" alt=""><figcaption></figcaption></figure>
 
-Agoric is an interoperable Proof-of-Stake chain in the Cosmos ecosystem. Our JavaScript smart contract platform enables 15M+ developers across the globe to rapidly build and deploy dapps on-chain.
+Kujira is a Layer 1 protocol built on Cosmos, which can be used for  hosting community-selected projects.
 
-Website: [https://agoric.com](https://agoric.com) \
+
+Website: [https://kujira.app](https://kujira.app) \
 Latest version: **v0.6.4**
 
 ## Public endpoints

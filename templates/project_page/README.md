@@ -2,9 +2,9 @@
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/${PROJECT_NAME}.png" width="150" alt=""><figcaption></figcaption></figure>
 
-Agoric is an interoperable Proof-of-Stake chain in the Cosmos ecosystem. Our JavaScript smart contract platform enables 15M+ developers across the globe to rapidly build and deploy dapps on-chain.
+${CHAIN_SHORT_DESCRIPTION}
 
-Website: [https://agoric.com](https://agoric.com) \
+Website: [${CHAIN_WEBSITE}](${CHAIN_WEBSITE}) \
 Latest version: **${LATEST_VERSION}**
 
 ## Public endpoints
