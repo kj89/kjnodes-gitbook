@@ -1,6 +1,6 @@
 # Table of contents
 
-* [🍋 Supported chains](README.md)
+* [<img src="https://github.com/kj89/testnet_manuals/blob/main/pingpub/logos/agoric.png" alt="agoric logo" data-size="line"> Supported chains](README.md)
 
 ## MAINNET
 
