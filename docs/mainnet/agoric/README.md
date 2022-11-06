@@ -6,6 +6,11 @@ description: >-
 
 # Services
 
+<p align="center">
+  <img height="100" height="auto" src="https://user-images.githubusercontent.com/50621007/167032367-fee4380e-7678-43e0-9206-36d72b32b8ae.png">
+  Hello world!
+</p>
+
 ## Public endpoints
 
 * rpc: [https://agoric.rpc.kjnodes.com](https://agoric.rpc.kjnodes.com)
