@@ -7,8 +7,8 @@ description: >-
 # Services
 
 <p align="center">
-  <img height="100" height="auto" src="https://user-images.githubusercontent.com/50621007/167032367-fee4380e-7678-43e0-9206-36d72b32b8ae.png">
-  Hello world!
+  <img height="100" height="auto" src="https://github.com/kj89/testnet_manuals/blob/main/pingpub/logos/agoric.png?raw=true">
+  **Agoric is an interoperable Proof-of-Stake chain in the Cosmos ecosystem. Our JavaScript smart contract platform enables 15M+ developers across the globe to rapidly build and deploy dapps on-chain.**
 </p>
 
 ## Public endpoints
