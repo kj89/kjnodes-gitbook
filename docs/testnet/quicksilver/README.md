@@ -6,7 +6,7 @@ description: >-
 
 # Services
 
-<figure><img src="../../.gitbook/assets/quicksilver-testnet.png" width="150" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/quicksilver-testnet.png" width="150" alt=""><figcaption></figcaption></figure>
 
 Agoric is an interoperable Proof-of-Stake chain in the Cosmos ecosystem. Our JavaScript smart contract platform enables 15M+ developers across the globe to rapidly build and deploy dapps on-chain.
 
