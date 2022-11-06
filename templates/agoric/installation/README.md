@@ -51,6 +51,7 @@ cd $HOME
 rm -rf ${GIT_DIR}
 git clone ${GIT_URL}
 cd ${GIT_DIR}
+git checkout ${LATEST_VERSION}
 
 # Install and build Agoric Javascript packages
 yarn install && yarn build
