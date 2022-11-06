@@ -6,36 +6,48 @@ description: Resources and services that we provide for the crypto community
 
 ## MAINNET
 
-<figure><img src=".gitbook/assets/agoric.png" alt=""><figcaption><p>Agoric</p></figcaption></figure>
+{ % content-ref url="mainnet/agoric/" %}
+[agoric](mainnet/agoric/)
+{ % endcontent-ref %}
 
-<figure><img src=".gitbook/assets/jackal.png" alt=""><figcaption><p>Jackal</p></figcaption></figure>
+{ % content-ref url="mainnet/jackal/" %}
+[jackal](mainnet/jackal/)
+{ % endcontent-ref %}
 
-<figure><img src=".gitbook/assets/kujira.png" alt=""><figcaption><p>Kujira</p></figcaption></figure>
+{ % content-ref url="mainnet/kujira/" %}
+[kujira](mainnet/kujira/)
+{ % endcontent-ref %}
 
-<figure><img src=".gitbook/assets/stride.png" alt=""><figcaption><p>Stride</p></figcaption></figure>
+{ % content-ref url="mainnet/stride/" %}
+[stride](mainnet/stride/)
+{ % endcontent-ref %}
 
-<figure><img src=".gitbook/assets/teritori.png" alt=""><figcaption><p>Teritori</p></figcaption></figure>
+{ % content-ref url="mainnet/teritori/" %}
+[teritori](mainnet/teritori/)
+{ % endcontent-ref %}
 
-<figure><img src=".gitbook/assets/rebus.png" alt=""><figcaption><p>Rebus</p></figcaption></figure>
+{ % content-ref url="mainnet/rebus/" %}
+[rebus](mainnet/rebus/)
+{ % endcontent-ref %}
+
+
 
 ## TESTNET
 
-<figure><img src=".gitbook/assets/defund.png" alt=""><figcaption><p>Defund</p></figcaption></figure>
+{ % content-ref url="testnet/defund/" %}
+[defund](testnet/defund/)
+{ % endcontent-ref %}
 
-<figure><img src=".gitbook/assets/nibiru.png" alt=""><figcaption><p>Nibiru</p></figcaption></figure>
+{ % content-ref url="testnet/nibiru/" %}
+[nibiru](testnet/nibiru/)
+{ % endcontent-ref %}
 
-<figure><img src=".gitbook/assets/ollo.png" alt=""><figcaption><p>Ollo</p></figcaption></figure>
+{ % content-ref url="testnet/ollo/" %}
+[ollo](testnet/ollo/)
+{ % endcontent-ref %}
 
-<figure><img src=".gitbook/assets/quicksilver.png" alt=""><figcaption><p>Quicksilver</p></figcaption></figure>
+{ % content-ref url="testnet/quicksilver/" %}
+[quicksilver](testnet/quicksilver/)
+{ % endcontent-ref %}
 
-{% content-ref url="mainnet/agoric/" %}
-[agoric](mainnet/agoric/)
-{% endcontent-ref %}
 
-{% content-ref url="mainnet/jackal/" %}
-[jackal](mainnet/jackal/)
-{% endcontent-ref %}
-
-{% content-ref url="mainnet/kujira/" %}
-[kujira](mainnet/kujira/)
-{% endcontent-ref %}
