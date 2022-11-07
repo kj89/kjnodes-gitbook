@@ -5,9 +5,9 @@
 ## MAINNET
 
 * [Agoric](mainnet/agoric/README.md)
-  * [Snapshot](mainnet/agoric/snapshot/README.md)
-  * [State sync](mainnet/agoric/state-sync/README.md)
-  * [Useful commands](mainnet/agoric/useful-commands/README.md)
+  * [💊 Snapshot](mainnet/agoric/snapshot/README.md)
+  * [♻ State sync](mainnet/agoric/state-sync/README.md)
+  * [🧰 Useful commands](mainnet/agoric/useful-commands/README.md)
 * [Jackal](mainnet/jackal/README.md)
   * [Snapshot](mainnet/jackal/snapshot/README.md)
   * [State sync](mainnet/jackal/state-sync/README.md)
