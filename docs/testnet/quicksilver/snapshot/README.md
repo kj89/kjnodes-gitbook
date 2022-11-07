@@ -8,7 +8,7 @@ description: >-
 
 | BLOCK             | AGE             | DOWNLOAD                                                                         | SIZE             |
 | ----------------- | --------------- | -------------------------------------------------------------------------------- | ---------------- |
-| 589123 | 19 hours ago | [snapshot](https://snapshots.kjnodes.com/quicksilver-testnet/snapshot\_latest.tar.lz4) | 0.36 GB |
+| 589123 | 20 hours ago | [snapshot](https://snapshots.kjnodes.com/quicksilver-testnet/snapshot\_latest.tar.lz4) | 0.36 GB |
 
 ### Stop the service and reset the data
 
