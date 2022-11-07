@@ -6,7 +6,6 @@ Quicksilver is a permissionless, sovereign Cosmos SDK zone providing liquid stak
 
 
 Website: [https://quicksilver.zone](https://quicksilver.zone) \
-Chain id: **innuendo-3**
 Latest version: **https://github.com/ingenuity-build/testnets/releases/download/v0.9.0/quicksilverd-v0.9.6-amd64**
 
 ## Public endpoints

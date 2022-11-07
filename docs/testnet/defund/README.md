@@ -6,7 +6,6 @@ DeFund is an L1 blockchain built for building decentralized permissionless,  on-
 
 
 Website: [https://www.defund.app](https://www.defund.app) \
-Chain id: **defund-private-2**
 Latest version: **v0.1.0**
 
 ## Public endpoints
