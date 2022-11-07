@@ -1,4 +1,4 @@
-# Useful commands
+# 🧰 Useful commands
 
 {% hint style='info' %}
 This page contains list of useful commands for node operators.
@@ -203,7 +203,7 @@ ${CHAIN_APP} tx gov vote 1 abstain --from wallet --chain-id ${CHAIN_ID} --gas-ad
 ${CHAIN_APP} tx gov vote 1 nowithveto --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto -y
 ```
 
-## 🪄 Utility
+## ⚡️ Utility
 
 #### Update ports
 
@@ -233,7 +233,7 @@ sed -i 's|^indexer *=.*|indexer = "kv"|' $HOME/${CHAIN_DIR}/config/config.toml
 sed -i.bak -e 's|^pruning *=.*|pruning = "custom"|; s|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|; s|^pruning-keep-every *=.*|pruning-keep-every = "0"|; s|^pruning-interval *=.*|pruning-interval = "10"|' $HOME/${CHAIN_DIR}/config/app.toml
 ```
 
-## 🪛 Maintenance
+## 🚨 Maintenance
 
 #### Get validator info
 

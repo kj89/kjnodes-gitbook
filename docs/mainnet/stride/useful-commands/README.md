@@ -1,4 +1,4 @@
-# Useful commands
+# 🧰 Useful commands
 
 {% hint style='info' %}
 This page contains list of useful commands for node operators.
@@ -203,7 +203,7 @@ strided tx gov vote 1 abstain --from wallet --chain-id stride-1 --gas-adjustment
 strided tx gov vote 1 nowithveto --from wallet --chain-id stride-1 --gas-adjustment 1.4 --gas auto -y
 ```
 
-## 🪄 Utility
+## ⚡️ Utility
 
 #### Update ports
 
@@ -233,7 +233,7 @@ sed -i 's|^indexer *=.*|indexer = "kv"|' $HOME/.stride/config/config.toml
 sed -i.bak -e 's|^pruning *=.*|pruning = "custom"|; s|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|; s|^pruning-keep-every *=.*|pruning-keep-every = "0"|; s|^pruning-interval *=.*|pruning-interval = "10"|' $HOME/.stride/config/app.toml
 ```
 
-## 🪛 Maintenance
+## 🚨 Maintenance
 
 #### Get validator info
 

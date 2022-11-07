@@ -1,4 +1,4 @@
-# Snapshot
+# 💊 Snapshot
 
 {% hint style='info' %}
 Snapshots allows a new node to join the network by recovering application state from a backup file. 
@@ -8,7 +8,7 @@ snapshot server is periodically beeing state-synced.
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 923303 | 17 minutes ago | [snapshot (0.51 GB)](https://snapshots.kjnodes.com/stride/snapshot\_latest.tar.lz4) |
+| 923303 | 21 minutes ago | [snapshot (0.51 GB)](https://snapshots.kjnodes.com/stride/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
