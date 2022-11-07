@@ -35,8 +35,7 @@ d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@jackal.rpc.kjnodes.com:37656
 
 ## Restake
 
-[Restake with kjnodes (every day at 08:00, 20:00)](https://restake.app/jackal/jklvaloper1tr3wm3mdkz0tda6t7vavqnn7fe2g4un0f67xmt)
-
+[Restake with kjnodes](https://restake.app/jackal/jklvaloper1tr3wm3mdkz0tda6t7vavqnn7fe2g4un0f67xmt) (every day at 08:00, 20:00)
 ## Downloads
 
 * addrbook: [addrbook.json](https://snapshots.kjnodes.com/jackal/addrbook.json)
