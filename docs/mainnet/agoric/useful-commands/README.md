@@ -4,7 +4,7 @@
 This page contains list of useful commands for node operators.
 {% endhint %}
 
-### Key management
+## 🔑 Key management
 
 #### Add new key
 
@@ -48,7 +48,7 @@ agd keys import wallet wallet.backup
 agd q bank balances $(agd keys show wallet -a)
 ```
 
-### Validator management
+## 👷 Validator management
 
 {% hint style="info" %}
 Please make sure you have adjusted **moniker**, **identity**, **details** and **website** to match your values.
@@ -121,7 +121,7 @@ agd q staking validators -oj --limit=3000 | jq '.validators[] | select(.status==
 agd q staking validator $(agd keys show wallet --bech val -a)
 ```
 
-### Token management
+## 🪙 Token management
 
 #### Withdraw rewards from all validators
 
@@ -165,7 +165,7 @@ Send tokens to the wallet
 agd tx bank send wallet <TO_WALLET_ADDRESS> 1000000ubld --from wallet --chain-id agoric-3
 ```
 
-### Governance
+## 🗳 Governance
 
 #### List all proposals
 
@@ -203,7 +203,7 @@ agd tx gov vote 1 abstain --from wallet --chain-id agoric-3 --gas-adjustment 1.4
 agd tx gov vote 1 nowithveto --from wallet --chain-id agoric-3 --gas-adjustment 1.4 --gas auto -y
 ```
 
-### Utility
+## 🪄 Utility
 
 #### Update ports
 
@@ -233,7 +233,7 @@ sed -i 's|^indexer *=.*|indexer = "kv"|' $HOME/.agoric/config/config.toml
 sed -i.bak -e 's|^pruning *=.*|pruning = "custom"|; s|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|; s|^pruning-keep-every *=.*|pruning-keep-every = "0"|; s|^pruning-interval *=.*|pruning-interval = "10"|' $HOME/.agoric/config/app.toml
 ```
 
-### Maintenance
+## 🪛 Maintenance
 
 #### Get validator info
 
@@ -300,7 +300,7 @@ rm -rf $HOME/.agoric
 rm -rf $HOME/agoric-sdk
 ```
 
-### Service Management
+## ⚙️ Service Management
 
 #### Reload service configuration
 

@@ -4,7 +4,7 @@
 This page contains list of useful commands for node operators.
 {% endhint %}
 
-### Key management
+## 🔑 Key management
 
 #### Add new key
 
@@ -48,7 +48,7 @@ ${CHAIN_APP} keys import wallet wallet.backup
 ${CHAIN_APP} q bank balances $(${CHAIN_APP} keys show wallet -a)
 ```
 
-### Validator management
+## 👷 Validator management
 
 {% hint style="info" %}
 Please make sure you have adjusted **moniker**, **identity**, **details** and **website** to match your values.
@@ -121,7 +121,7 @@ ${CHAIN_APP} q staking validators -oj --limit=3000 | jq '.validators[] | select(
 ${CHAIN_APP} q staking validator $(${CHAIN_APP} keys show wallet --bech val -a)
 ```
 
-### Token management
+## 🪙 Token management
 
 #### Withdraw rewards from all validators
 
@@ -165,7 +165,7 @@ Send tokens to the wallet
 ${CHAIN_APP} tx bank send wallet <TO_WALLET_ADDRESS> 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID}
 ```
 
-### Governance
+## 🗳 Governance
 
 #### List all proposals
 
@@ -203,7 +203,7 @@ ${CHAIN_APP} tx gov vote 1 abstain --from wallet --chain-id ${CHAIN_ID} --gas-ad
 ${CHAIN_APP} tx gov vote 1 nowithveto --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto -y
 ```
 
-### Utility
+## 🪄 Utility
 
 #### Update ports
 
@@ -233,7 +233,7 @@ sed -i 's|^indexer *=.*|indexer = "kv"|' $HOME/${CHAIN_DIR}/config/config.toml
 sed -i.bak -e 's|^pruning *=.*|pruning = "custom"|; s|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|; s|^pruning-keep-every *=.*|pruning-keep-every = "0"|; s|^pruning-interval *=.*|pruning-interval = "10"|' $HOME/${CHAIN_DIR}/config/app.toml
 ```
 
-### Maintenance
+## 🪛 Maintenance
 
 #### Get validator info
 
@@ -300,7 +300,7 @@ rm -rf $HOME/${CHAIN_DIR}
 rm -rf $HOME/${GIT_DIR}
 ```
 
-### Service Management
+## ⚙️ Service Management
 
 #### Reload service configuration
 
