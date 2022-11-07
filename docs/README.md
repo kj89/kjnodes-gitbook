@@ -1,4 +1,4 @@
-# 🍋 Supported chains
+# Supported chains
 
 ## MAINNET
 
