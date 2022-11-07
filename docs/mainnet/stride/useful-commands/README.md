@@ -121,7 +121,7 @@ strided q staking validators -oj --limit=3000 | jq '.validators[] | select(.stat
 strided q staking validator $(strided keys show wallet --bech val -a)
 ```
 
-## 🪙 Token management
+## 💲 Token management
 
 #### Withdraw rewards from all validators
 

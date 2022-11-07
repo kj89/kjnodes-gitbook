@@ -121,7 +121,7 @@ nibid q staking validators -oj --limit=3000 | jq '.validators[] | select(.status
 nibid q staking validator $(nibid keys show wallet --bech val -a)
 ```
 
-## 🪙 Token management
+## 💲 Token management
 
 #### Withdraw rewards from all validators
 

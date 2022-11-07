@@ -121,7 +121,7 @@ ollod q staking validators -oj --limit=3000 | jq '.validators[] | select(.status
 ollod q staking validator $(ollod keys show wallet --bech val -a)
 ```
 
-## 🪙 Token management
+## 💲 Token management
 
 #### Withdraw rewards from all validators
 

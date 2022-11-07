@@ -121,7 +121,7 @@ ${CHAIN_APP} q staking validators -oj --limit=3000 | jq '.validators[] | select(
 ${CHAIN_APP} q staking validator $(${CHAIN_APP} keys show wallet --bech val -a)
 ```
 
-## 🪙 Token management
+## 💲 Token management
 
 #### Withdraw rewards from all validators
 

@@ -121,7 +121,7 @@ canined q staking validators -oj --limit=3000 | jq '.validators[] | select(.stat
 canined q staking validator $(canined keys show wallet --bech val -a)
 ```
 
-## 🪙 Token management
+## 💲 Token management
 
 #### Withdraw rewards from all validators
 
