@@ -4,6 +4,10 @@ description: List of useful commands for node operators.
 
 # Useful commands
 
+{% hint style='info' %}
+This page contains list of useful commands for node operators.
+{% endhint %}
+
 ### Key management
 
 #### Add new key
