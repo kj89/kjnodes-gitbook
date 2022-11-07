@@ -1,5 +1,5 @@
 ---
-description: This page contains useful commands for validators
+description: List of useful commands for node operators.
 ---
 
 # Useful commands

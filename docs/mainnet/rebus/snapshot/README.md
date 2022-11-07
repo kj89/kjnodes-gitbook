@@ -1,14 +1,14 @@
 ---
 description: >-
-  This page contains the latest snapshot to help validators rapidly recover node
-  functionality.
+  Snapshots allows a new node to join the network by recovering application state from a backup file. 
+  It is compressed copy of chain data direcotry. To keep backup files small, snapshot server is periodically beeing state-synced.
 ---
 
 # Snapshot
 
 | BLOCK             | AGE             | DOWNLOAD                                                                         | SIZE             |
 | ----------------- | --------------- | -------------------------------------------------------------------------------- | ---------------- |
-| 1716077 | 21 hours ago | [snapshot](https://snapshots.kjnodes.com/rebus/snapshot\_latest.tar.lz4) | 0.95 GB |
+| 1716077 | 22 hours ago | [snapshot](https://snapshots.kjnodes.com/rebus/snapshot\_latest.tar.lz4) | 0.95 GB |
 
 ### Stop the service and reset the data
 
