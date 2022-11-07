@@ -7,20 +7,6 @@ application state is generally much smaller than the blocks, and restoring it is
 faster than replaying blocks, this can reduce the time to sync with the network from days to minutes.
 {% endhint %}
 
-### Basic information
-
-#### RPC endpoint:
-
-```bash
-https://kujira.rpc.kjnodes.com:443
-```
-
-#### Peer:
-
-```bash
-d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@kujira.rpc.kjnodes.com:13656
-```
-
 ### Stop the service and reset the data
 
 ```bash
