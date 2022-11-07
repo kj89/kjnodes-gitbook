@@ -33,6 +33,7 @@ d5519e378247dfb61dfe90652d1fe3e2b3005a5b@nibiru-testnet.rpc.kjnodes.com:39656
 3f472746f46493309650e5a033076689996c8881@nibiru-testnet.rpc.kjnodes.com:39659
 ```
 
+
 ## Downloads
 
 * addrbook: [addrbook.json](https://snapshots.kjnodes.com/nibiru-testnet/addrbook.json)

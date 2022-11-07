@@ -33,6 +33,7 @@ d5519e378247dfb61dfe90652d1fe3e2b3005a5b@defund-testnet.rpc.kjnodes.com:40656
 3f472746f46493309650e5a033076689996c8881@defund-testnet.rpc.kjnodes.com:40659
 ```
 
+
 ## Downloads
 
 * addrbook: [addrbook.json](https://snapshots.kjnodes.com/defund-testnet/addrbook.json)

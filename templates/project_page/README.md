@@ -31,6 +31,7 @@ ${CHAIN_PEER}@${CHAIN_NAME}.rpc.kjnodes.com:${CHAIN_PORT}656
 ```
 ${CHAIN_TENDERSEED_PEER}@${CHAIN_NAME}.rpc.kjnodes.com:${CHAIN_PORT}659
 ```
+
 ${RESTAKE}
 ## Downloads
 

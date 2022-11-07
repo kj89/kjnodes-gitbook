@@ -33,6 +33,7 @@ d5519e378247dfb61dfe90652d1fe3e2b3005a5b@quicksilver-testnet.rpc.kjnodes.com:116
 3f472746f46493309650e5a033076689996c8881@quicksilver-testnet.rpc.kjnodes.com:11659
 ```
 
+
 ## Downloads
 
 * addrbook: [addrbook.json](https://snapshots.kjnodes.com/quicksilver-testnet/addrbook.json)
