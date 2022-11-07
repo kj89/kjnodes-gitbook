@@ -1,7 +1,3 @@
----
-description: Resources and services that we provide for the crypto community
----
-
 # 🍋 Supported chains
 
 ## MAINNET
@@ -19,7 +15,6 @@ description: Resources and services that we provide for the crypto community
 <img src=".gitbook/assets/rebus.png" alt="" data-size="line"> [Rebus](mainnet/rebus/)
 
 
-
 ## TESTNET
 
 <img src=".gitbook/assets/defund.png" alt="" data-size="line"> [Defund](testnet/defund/)
@@ -29,5 +24,4 @@ description: Resources and services that we provide for the crypto community
 <img src=".gitbook/assets/ollo.png" alt="" data-size="line"> [Ollo](testnet/ollo/)
 
 <img src=".gitbook/assets/quicksilver.png" alt="" data-size="line"> [Quicksilver](testnet/quicksilver/)
-
 
