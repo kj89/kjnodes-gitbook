@@ -6,6 +6,7 @@ Rebuschain is a platform that will provide DeFi (Decentralized Finance)  investm
 
 
 Website: [https://www.rebuschain.com](https://www.rebuschain.com) \
+Chain id: **reb_1111-1**
 Latest version: **v0.2.0**
 
 ## Public endpoints

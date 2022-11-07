@@ -6,6 +6,7 @@ The Jackal Protocol is a fast, scalable, and secure blockchain that empowers  in
 
 
 Website: [https://jackalprotocol.com](https://jackalprotocol.com) \
+Chain id: **jackal-1**
 Latest version: **v1.1.2-hotfix**
 
 ## Public endpoints
