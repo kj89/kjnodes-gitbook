@@ -1,7 +1,3 @@
----
-description: List of useful commands for node operators.
----
-
 # Useful commands
 
 {% hint style='info' %}
