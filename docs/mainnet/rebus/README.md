@@ -35,7 +35,7 @@ d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@rebus.rpc.kjnodes.com:21656
 
 ## Restake
 
-[Restake with kjnodes | every day at 08:00, 20:00](https://restake.app/rebus/rebusvaloper1vndzy8y55ylgpmmsc34uy8rm6kqlml6ffs9lrv)
+[Restake with kjnodes (every day at 08:00, 20:00)](https://restake.app/rebus/rebusvaloper1vndzy8y55ylgpmmsc34uy8rm6kqlml6ffs9lrv)
 
 ## Downloads
 
