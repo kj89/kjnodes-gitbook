@@ -1,27 +1,33 @@
-# Supported chains
+# Services
 
-## MAINNET
+<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/agoric.png" width="150" alt=""><figcaption></figcaption></figure>
 
-<img src=".gitbook/assets/agoric.png" alt="" data-size="line"> [Agoric](mainnet/agoric/)
-
-<img src=".gitbook/assets/jackal.png" alt="" data-size="line"> [Jackal](mainnet/jackal/)
-
-<img src=".gitbook/assets/kujira.png" alt="" data-size="line"> [Kujira](mainnet/kujira/)
-
-<img src=".gitbook/assets/stride.png" alt="" data-size="line"> [Stride](mainnet/stride/)
-
-<img src=".gitbook/assets/teritori.png" alt="" data-size="line"> [Teritori](mainnet/teritori/)
-
-<img src=".gitbook/assets/rebus.png" alt="" data-size="line"> [Rebus](mainnet/rebus/)
+Agoric is an interoperable Proof-of-Stake chain in the Cosmos ecosystem.  Agoric JavaScript smart contract platform enables 15M+ developers across the  globe to rapidly build and deploy dapps on-chain.
 
 
-## TESTNET
+Website: [https://agoric.com](https://agoric.com) \
+Latest version: **pismoA**
 
-<img src=".gitbook/assets/defund.png" alt="" data-size="line"> [Defund](testnet/defund/)
+## Public endpoints
 
-<img src=".gitbook/assets/nibiru.png" alt="" data-size="line"> [Nibiru](testnet/nibiru/)
+* rpc: [https://agoric.rpc.kjnodes.com](https://agoric.rpc.kjnodes.com)
+* api: [https://agoric.api.kjnodes.com](https://agoric.api.kjnodes.com)
 
-<img src=".gitbook/assets/ollo.png" alt="" data-size="line"> [Ollo](testnet/ollo/)
+## Public peers
 
-<img src=".gitbook/assets/quicksilver.png" alt="" data-size="line"> [Quicksilver](testnet/quicksilver/)
+### state-sync
 
+```
+d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@agoric.rpc.kjnodes.com:27656
+```
+
+### seed-node
+
+```
+400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@agoric.rpc.kjnodes.com:27659
+```
+
+## Downloads
+
+* addrbook: [addrbook.json](https://snapshots.kjnodes.com/agoric/addrbook.json)
+* snapshot: [snapshot_latest.tar.lz4](https://snapshots.kjnodes.com/agoric/snapshot\_latest.tar.lz4)
