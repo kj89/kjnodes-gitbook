@@ -2,7 +2,7 @@
 
 ## MAINNET
 
-<img src=".gitbook/assets/agoric.png" alt="" data-size="line"> [Agoric](mainnet/agoric/)
+<img src=".gitbook/assets/agoric.png" alt="" data-size="line"> [Agoric](<README (1).md>)
 
 <img src=".gitbook/assets/jackal.png" alt="" data-size="line"> [Jackal](mainnet/jackal/)
 
@@ -14,7 +14,6 @@
 
 <img src=".gitbook/assets/rebus.png" alt="" data-size="line"> [Rebus](mainnet/rebus/)
 
-
 ## TESTNET
 
 <img src=".gitbook/assets/defund.png" alt="" data-size="line"> [Defund](testnet/defund/)
@@ -24,4 +23,3 @@
 <img src=".gitbook/assets/ollo.png" alt="" data-size="line"> [Ollo](testnet/ollo/)
 
 <img src=".gitbook/assets/quicksilver.png" alt="" data-size="line"> [Quicksilver](testnet/quicksilver/)
-
