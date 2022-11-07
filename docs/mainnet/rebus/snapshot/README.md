@@ -8,7 +8,7 @@ snapshot server is periodically beeing state-synced.
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 1716077 | 22 hours ago | [snapshot(0.95 GB)](https://snapshots.kjnodes.com/rebus/snapshot\_latest.tar.lz4) |
+| 1716077 | 22 hours ago | [snapshot (0.95 GB)](https://snapshots.kjnodes.com/rebus/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

@@ -8,7 +8,7 @@ snapshot server is periodically beeing state-synced.
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| ${SNAPSHOT_BLOCK} | ${SNAPSHOT_AGE} | [snapshot(${SNAPSHOT_SIZE})](https://snapshots.kjnodes.com/${CHAIN_NAME}/snapshot\_latest.tar.lz4) |
+| ${SNAPSHOT_BLOCK} | ${SNAPSHOT_AGE} | [snapshot (${SNAPSHOT_SIZE})](https://snapshots.kjnodes.com/${CHAIN_NAME}/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
