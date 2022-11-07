@@ -1,14 +1,15 @@
 ---
 description: >-
   Snapshots allows a new node to join the network by recovering application state from a backup file. 
-  It is compressed copy of chain data direcotry. To keep backup files small, snapshot server is periodically beeing state-synced.
+  Snapshot contains compressed copy of chain data directory. To keep backup files as small as plausible, 
+  snapshot server is periodically beeing state-synced.
 ---
 
 # Snapshot
 
 | BLOCK             | AGE             | DOWNLOAD                                                                         | SIZE             |
 | ----------------- | --------------- | -------------------------------------------------------------------------------- | ---------------- |
-| 4906405 | 23 minutes ago | [snapshot](https://snapshots.kjnodes.com/kujira/snapshot\_latest.tar.lz4) | 1.43 GB |
+| 4906405 | 36 minutes ago | [snapshot](https://snapshots.kjnodes.com/kujira/snapshot\_latest.tar.lz4) | 1.43 GB |
 
 ### Stop the service and reset the data
 

@@ -1,7 +1,8 @@
 ---
 description: >-
   Snapshots allows a new node to join the network by recovering application state from a backup file. 
-  It is compressed copy of chain data direcotry. To keep backup files small, snapshot server is periodically beeing state-synced.
+  Snapshot contains compressed copy of chain data directory. To keep backup files as small as plausible, 
+  snapshot server is periodically beeing state-synced.
 ---
 
 # Snapshot
