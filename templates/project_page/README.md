@@ -4,10 +4,9 @@
 
 ${CHAIN_SHORT_DESCRIPTION}
 
-Website: [${CHAIN_WEBSITE}](${CHAIN_WEBSITE})\
-Git: [${GIT_URL}](${GIT_URL})
+Website: [${CHAIN_WEBSITE}](${CHAIN_WEBSITE})
 
-## Chain config
+## Chain info
 
 Chain id: **${CHAIN_ID}**\
 Custom port: **${CHAIN_PORT}**\

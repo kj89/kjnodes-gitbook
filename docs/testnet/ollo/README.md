@@ -5,10 +5,9 @@
 OLLO is a sovereign L1 chain built on the Cosmos network providing  next-gen trading tools & sustainable tokenomics.
 
 
-Website: [https://www.ollostation.zone](https://www.ollostation.zone)\
-Git: [https://github.com/OLLO-Station/ollo.git](https://github.com/OLLO-Station/ollo.git)
+Website: [https://www.ollostation.zone](https://www.ollostation.zone)
 
-## Chain config
+## Chain info
 
 Chain id: **ollo-testnet-1**\
 Custom port: **32**\

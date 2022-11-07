@@ -5,10 +5,9 @@
 Nibiru is a sovereign proof-of-stake blockchain, open-source platform,  and member of a family of interconnected blockchains that comprise the Cosmos Ecosystem.
 
 
-Website: [https://nibiru.fi](https://nibiru.fi)\
-Git: [https://github.com/NibiruChain/nibiru.git](https://github.com/NibiruChain/nibiru.git)
+Website: [https://nibiru.fi](https://nibiru.fi)
 
-## Chain config
+## Chain info
 
 Chain id: **nibiru-testnet-1**\
 Custom port: **39**\

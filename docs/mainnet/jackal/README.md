@@ -5,10 +5,9 @@
 The Jackal Protocol is a fast, scalable, and secure blockchain that empowers  individuals, developers, and enterprises to increase their data privacy and  cybersecurity posture without sacrificing ease of use. This protocol strives  to offer world-class applications to protect the planet's most important data–your data.
 
 
-Website: [https://jackalprotocol.com](https://jackalprotocol.com)\
-Git: [https://github.com/JackalLabs/canine-chain.git](https://github.com/JackalLabs/canine-chain.git)
+Website: [https://jackalprotocol.com](https://jackalprotocol.com)
 
-## Chain config
+## Chain info
 
 Chain id: **jackal-1**\
 Custom port: **37**\

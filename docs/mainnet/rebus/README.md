@@ -5,10 +5,9 @@
 Rebuschain is a platform that will provide DeFi (Decentralized Finance)  investment opportunities to traditional investors clearly and conveniently
 
 
-Website: [https://www.rebuschain.com](https://www.rebuschain.com)\
-Git: [https://github.com/rebuschain/rebus.core.git](https://github.com/rebuschain/rebus.core.git)
+Website: [https://www.rebuschain.com](https://www.rebuschain.com)
 
-## Chain config
+## Chain info
 
 Chain id: **reb_1111-1**\
 Custom port: **21**\
