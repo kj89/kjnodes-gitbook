@@ -6,9 +6,11 @@ Snapshot contains compressed copy of chain data directory. To keep backup files 
 snapshot server is periodically beeing state-synced.
 {% endhint %}
 
-| BLOCK             | AGE             | DOWNLOAD                                                                         | SIZE             |
-| ----------------- | --------------- | -------------------------------------------------------------------------------- | ---------------- |
-| 80507 | 20 hours ago | [snapshot](https://snapshots.kjnodes.com/ollo-testnet/snapshot\_latest.tar.lz4) | 0.15 GB |
+| BLOCK             | AGE             | DOWNLOAD                                                                                            |
+| ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
+| 80507 | 20 hours ago | [snapshot(0.15 GB)](https://snapshots.kjnodes.com/ollo-testnet/snapshot\_latest.tar.lz4) |
+
+## Instructions
 
 ### Stop the service and reset the data
 

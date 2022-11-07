@@ -6,9 +6,11 @@ Snapshot contains compressed copy of chain data directory. To keep backup files 
 snapshot server is periodically beeing state-synced.
 {% endhint %}
 
-| BLOCK             | AGE             | DOWNLOAD                                                                         | SIZE             |
-| ----------------- | --------------- | -------------------------------------------------------------------------------- | ---------------- |
-| 908748 | 23 hours ago | [snapshot](https://snapshots.kjnodes.com/stride/snapshot\_latest.tar.lz4) | 0.49 GB |
+| BLOCK             | AGE             | DOWNLOAD                                                                                            |
+| ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
+| 908748 | 23 hours ago | [snapshot(0.49 GB)](https://snapshots.kjnodes.com/stride/snapshot\_latest.tar.lz4) |
+
+## Instructions
 
 ### Stop the service and reset the data
 

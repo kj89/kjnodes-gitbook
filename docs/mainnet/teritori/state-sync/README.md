@@ -7,6 +7,8 @@ application state is generally much smaller than the blocks, and restoring it is
 faster than replaying blocks, this can reduce the time to sync with the network from days to minutes.
 {% endhint %}
 
+## Instructions
+
 ### Stop the service and reset the data
 
 ```bash
