@@ -35,8 +35,7 @@ d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@agoric.rpc.kjnodes.com:27656
 
 ## Restake
 
-[Restake with kjnodes](https://restake.app/agoric/agoricvaloper1ku5sm2twlsywdrp4wz3kfwgyrtqtp0lpr3nvk8)\
-Restake every day at **08:00, 20:00**
+[Restake with kjnodes | every day at 08:00, 20:00](https://restake.app/agoric/agoricvaloper1ku5sm2twlsywdrp4wz3kfwgyrtqtp0lpr3nvk8)
 
 ## Downloads
 

@@ -35,8 +35,7 @@ d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@kujira.rpc.kjnodes.com:13656
 
 ## Restake
 
-[Restake with kjnodes](https://restake.app/kujira/kujiravaloper1tnuqj73jfn3724lqz34c27tuv80nv336sadqym)\
-Restake every day at **08:00, 20:00**
+[Restake with kjnodes | every day at 08:00, 20:00](https://restake.app/kujira/kujiravaloper1tnuqj73jfn3724lqz34c27tuv80nv336sadqym)
 
 ## Downloads
 

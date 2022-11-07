@@ -35,8 +35,7 @@ d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@stride.rpc.kjnodes.com:16656
 
 ## Restake
 
-[Restake with kjnodes](https://restake.app/stride/stridevaloper1j8gkhtllnp252l6g6zwzea30e7pvzqttr9768n)\
-Restake every day at **08:00, 20:00**
+[Restake with kjnodes | every day at 08:00, 20:00](https://restake.app/stride/stridevaloper1j8gkhtllnp252l6g6zwzea30e7pvzqttr9768n)
 
 ## Downloads
 
