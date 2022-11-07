@@ -4,7 +4,6 @@
 
 DeFund is an L1 blockchain built for building decentralized permissionless,  on-chain trading strategies that are packaged into a dETF (decentralized  exchange-traded fund) token, tradable within any ecosystem or CEX.
 
-
 Website: [https://www.defund.app](https://www.defund.app)
 
 ## Chain info
@@ -14,7 +13,6 @@ Custom port: **40**\
 Chain denom: **ufetf**\
 Genesis version: **v0.1.0**\
 Latest version: **v0.1.0**
-
 
 ## Public endpoints
 
