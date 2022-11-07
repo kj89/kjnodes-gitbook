@@ -4,16 +4,16 @@
 
 ${CHAIN_SHORT_DESCRIPTION}
 
-Website: [${CHAIN_WEBSITE}](${CHAIN_WEBSITE})
+Website: [${CHAIN_WEBSITE}](${CHAIN_WEBSITE})\
 Git: [${GIT_URL}](${GIT_URL})
 
 ## Chain config
 
 Chain id: **${CHAIN_ID}**\
-Genesis version: **${GENESIS_VERSION}**\
-Latest version: **${LATEST_VERSION}**\
 Custom port: **${CHAIN_PORT}**\
 Chain denom: **${CHAIN_DENOM}**\
+Genesis version: **${GENESIS_VERSION}**\
+Latest version: **${LATEST_VERSION}**
 
 
 ## Public endpoints

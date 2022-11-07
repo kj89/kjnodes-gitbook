@@ -5,16 +5,16 @@
 Teritori is a multi-chain hub designed to allow IBC and non IBC communities  to connect, trade services & NFTs, launch new projects & build further existing ones.
 
 
-Website: [https://teritori.com](https://teritori.com)
+Website: [https://teritori.com](https://teritori.com)\
 Git: [https://github.com/TERITORI/teritori-chain.git](https://github.com/TERITORI/teritori-chain.git)
 
 ## Chain config
 
 Chain id: **teritori-1**\
-Genesis version: **v1.1.2**\
-Latest version: **v1.3.0**\
 Custom port: **19**\
 Chain denom: **utori**\
+Genesis version: **v1.1.2**\
+Latest version: **v1.3.0**
 
 
 ## Public endpoints
