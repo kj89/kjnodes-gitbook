@@ -4,7 +4,6 @@
 
 Stride is a blockchain ("zone") that provides liquidity for staked assets.  Using Stride, you can earn both staking and DeFi yields across the Cosmos IBC ecosystem
 
-
 Website: [https://stride.zone](https://stride.zone)
 
 ## Chain info
@@ -14,7 +13,6 @@ Custom port: **16**\
 Chain denom: **ustrd**\
 Genesis version: **v1.0.2**\
 Latest version: **v2.0.3**
-
 
 ## Public endpoints
 
@@ -34,7 +32,10 @@ d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@stride.rpc.kjnodes.com:16656
 ```
 400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@stride.rpc.kjnodes.com:16659
 ```
+## Restake
 
+[Restake with kjnodes](https://restake.app/stride/stridevaloper1j8gkhtllnp252l6g6zwzea30e7pvzqttr9768n)
+Restake every day at **08:00, 20:00**
 ## Downloads
 
 * addrbook: [addrbook.json](https://snapshots.kjnodes.com/stride/addrbook.json)

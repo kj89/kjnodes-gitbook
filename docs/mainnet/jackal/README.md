@@ -4,7 +4,6 @@
 
 The Jackal Protocol is a fast, scalable, and secure blockchain that empowers  individuals, developers, and enterprises to increase their data privacy and  cybersecurity posture without sacrificing ease of use. This protocol strives  to offer world-class applications to protect the planet's most important data–your data.
 
-
 Website: [https://jackalprotocol.com](https://jackalprotocol.com)
 
 ## Chain info
@@ -14,7 +13,6 @@ Custom port: **37**\
 Chain denom: **ujkl**\
 Genesis version: **v1.1.1**\
 Latest version: **v1.1.2-hotfix**
-
 
 ## Public endpoints
 
@@ -34,7 +32,10 @@ d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@jackal.rpc.kjnodes.com:37656
 ```
 400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@jackal.rpc.kjnodes.com:37659
 ```
+## Restake
 
+[Restake with kjnodes](https://restake.app/jackal/jklvaloper1tr3wm3mdkz0tda6t7vavqnn7fe2g4un0f67xmt)
+Restake every day at **08:00, 20:00**
 ## Downloads
 
 * addrbook: [addrbook.json](https://snapshots.kjnodes.com/jackal/addrbook.json)

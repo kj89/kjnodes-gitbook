@@ -4,7 +4,6 @@
 
 Kujira is a Layer 1 protocol built on Cosmos, which can be used for  hosting community-selected projects.
 
-
 Website: [https://kujira.app](https://kujira.app)
 
 ## Chain info
@@ -14,7 +13,6 @@ Custom port: **13**\
 Chain denom: **ukuji**\
 Genesis version: **v0.4.1**\
 Latest version: **v0.6.4**
-
 
 ## Public endpoints
 
@@ -34,7 +32,10 @@ d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@kujira.rpc.kjnodes.com:13656
 ```
 400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@kujira.rpc.kjnodes.com:13659
 ```
+## Restake
 
+[Restake with kjnodes](https://restake.app/kujira/kujiravaloper1tnuqj73jfn3724lqz34c27tuv80nv336sadqym)
+Restake every day at **08:00, 20:00**
 ## Downloads
 
 * addrbook: [addrbook.json](https://snapshots.kjnodes.com/kujira/addrbook.json)

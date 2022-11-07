@@ -3,7 +3,6 @@
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/${PROJECT_NAME}.png" width="150" alt=""><figcaption></figcaption></figure>
 
 ${CHAIN_SHORT_DESCRIPTION}
-
 Website: [${CHAIN_WEBSITE}](${CHAIN_WEBSITE})
 
 ## Chain info
@@ -13,7 +12,6 @@ Custom port: **${CHAIN_PORT}**\
 Chain denom: **${CHAIN_DENOM}**\
 Genesis version: **${GENESIS_VERSION}**\
 Latest version: **${LATEST_VERSION}**
-
 
 ## Public endpoints
 
@@ -33,7 +31,7 @@ ${CHAIN_PEER}@${CHAIN_NAME}.rpc.kjnodes.com:${CHAIN_PORT}656
 ```
 ${CHAIN_TENDERSEED_PEER}@${CHAIN_NAME}.rpc.kjnodes.com:${CHAIN_PORT}659
 ```
-
+${RESTAKE}
 ## Downloads
 
 * addrbook: [addrbook.json](https://snapshots.kjnodes.com/${CHAIN_NAME}/addrbook.json)

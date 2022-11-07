@@ -4,7 +4,6 @@
 
 Rebuschain is a platform that will provide DeFi (Decentralized Finance)  investment opportunities to traditional investors clearly and conveniently
 
-
 Website: [https://www.rebuschain.com](https://www.rebuschain.com)
 
 ## Chain info
@@ -14,7 +13,6 @@ Custom port: **21**\
 Chain denom: **arebus**\
 Genesis version: **v0.1.0**\
 Latest version: **v0.2.0**
-
 
 ## Public endpoints
 
@@ -34,7 +32,10 @@ d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@rebus.rpc.kjnodes.com:21656
 ```
 400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@rebus.rpc.kjnodes.com:21659
 ```
+## Restake
 
+[Restake with kjnodes](https://restake.app/rebus/rebusvaloper1vndzy8y55ylgpmmsc34uy8rm6kqlml6ffs9lrv)
+Restake every day at **08:00, 20:00**
 ## Downloads
 
 * addrbook: [addrbook.json](https://snapshots.kjnodes.com/rebus/addrbook.json)

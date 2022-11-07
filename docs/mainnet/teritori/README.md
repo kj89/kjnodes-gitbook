@@ -4,7 +4,6 @@
 
 Teritori is a multi-chain hub designed to allow IBC and non IBC communities  to connect, trade services & NFTs, launch new projects & build further existing ones.
 
-
 Website: [https://teritori.com](https://teritori.com)
 
 ## Chain info
@@ -14,7 +13,6 @@ Custom port: **19**\
 Chain denom: **utori**\
 Genesis version: **v1.1.2**\
 Latest version: **v1.3.0**
-
 
 ## Public endpoints
 
@@ -34,7 +32,10 @@ d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@teritori.rpc.kjnodes.com:19656
 ```
 400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@teritori.rpc.kjnodes.com:19659
 ```
+## Restake
 
+[Restake with kjnodes](https://restake.app/teritori/torivaloper184ln03hkpt75uhrrr26f66kvcqvf4yn4nc2xjm)
+Restake every day at **08:00, 20:00**
 ## Downloads
 
 * addrbook: [addrbook.json](https://snapshots.kjnodes.com/teritori/addrbook.json)
