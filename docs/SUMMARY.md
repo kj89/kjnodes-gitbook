@@ -35,7 +35,6 @@
   * [🧰 Useful commands](mainnet/rebus/useful-commands/README.md)
 
 
-
 ## TESTNET
 
 * [Defund](testnet/defund/README.md)
@@ -57,5 +56,4 @@
   * [💊 Snapshot](testnet/quicksilver/snapshot/README.md)
   * [♻ State sync](testnet/quicksilver/state-sync/README.md)
   * [🧰 Useful commands](testnet/quicksilver/useful-commands/README.md)
-
 
