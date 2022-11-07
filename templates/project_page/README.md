@@ -5,7 +5,7 @@
 ${CHAIN_SHORT_DESCRIPTION}
 
 Website: [${CHAIN_WEBSITE}](${CHAIN_WEBSITE}) \
-Chain id: **${CHAIN_ID}**
+Chain id: **${CHAIN_ID}** \
 Latest version: **${LATEST_VERSION}**
 
 ## Public endpoints

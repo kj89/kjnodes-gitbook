@@ -6,7 +6,7 @@ Nibiru is a sovereign proof-of-stake blockchain, open-source platform,  and memb
 
 
 Website: [https://nibiru.fi](https://nibiru.fi) \
-Chain id: **nibiru-testnet-1**
+Chain id: **nibiru-testnet-1** \
 Latest version: **v0.15.0**
 
 ## Public endpoints
