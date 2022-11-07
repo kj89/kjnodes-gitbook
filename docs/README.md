@@ -6,48 +6,28 @@ description: Resources and services that we provide for the crypto community
 
 ## MAINNET
 
-{% content-ref url="mainnet/agoric/" %}
-[agoric](mainnet/agoric/)
-{% endcontent-ref %}
+<img src=".gitbook/assets/agoric.png" alt="" data-size="line"> [Agoric](mainnet/agoric/)
 
-{% content-ref url="mainnet/jackal/" %}
-[jackal](mainnet/jackal/)
-{% endcontent-ref %}
+<img src=".gitbook/assets/jackal.png" alt="" data-size="line"> [Jackal](mainnet/jackal/)
 
-{% content-ref url="mainnet/kujira/" %}
-[kujira](mainnet/kujira/)
-{% endcontent-ref %}
+<img src=".gitbook/assets/kujira.png" alt="" data-size="line"> [Kujira](mainnet/kujira/)
 
-{% content-ref url="mainnet/stride/" %}
-[stride](mainnet/stride/)
-{% endcontent-ref %}
+<img src=".gitbook/assets/stride.png" alt="" data-size="line"> [Stride](mainnet/stride/)
 
-{% content-ref url="mainnet/teritori/" %}
-[teritori](mainnet/teritori/)
-{% endcontent-ref %}
+<img src=".gitbook/assets/teritori.png" alt="" data-size="line"> [Teritori](mainnet/teritori/)
 
-{% content-ref url="mainnet/rebus/" %}
-[rebus](mainnet/rebus/)
-{% endcontent-ref %}
+<img src=".gitbook/assets/rebus.png" alt="" data-size="line"> [Rebus](mainnet/rebus/)
 
 
 
 ## TESTNET
 
-{% content-ref url="testnet/defund/" %}
-[defund](testnet/defund/)
-{% endcontent-ref %}
+<img src=".gitbook/assets/defund.png" alt="" data-size="line"> [Defund](testnet/defund/)
 
-{% content-ref url="testnet/nibiru/" %}
-[nibiru](testnet/nibiru/)
-{% endcontent-ref %}
+<img src=".gitbook/assets/nibiru.png" alt="" data-size="line"> [Nibiru](testnet/nibiru/)
 
-{% content-ref url="testnet/ollo/" %}
-[ollo](testnet/ollo/)
-{% endcontent-ref %}
+<img src=".gitbook/assets/ollo.png" alt="" data-size="line"> [Ollo](testnet/ollo/)
 
-{% content-ref url="testnet/quicksilver/" %}
-[quicksilver](testnet/quicksilver/)
-{% endcontent-ref %}
+<img src=".gitbook/assets/quicksilver.png" alt="" data-size="line"> [Quicksilver](testnet/quicksilver/)
 
 
