@@ -1,9 +1,3 @@
----
-description: >-
-  This page contain instructions that will help you to setup a node. For the
-  installation we use Ubuntu 20.04
----
-
 # Installation
 
 ### Setup validator name
