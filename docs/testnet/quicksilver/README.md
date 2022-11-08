@@ -12,7 +12,7 @@ Chain id: **innuendo-3**\
 Custom port: **11**\
 Chain denom: **uqck**\
 Genesis version: **v0.6.1**\
-Latest version: **https://github.com/ingenuity-build/testnets/releases/download/v0.9.0/quicksilverd-v0.9.6-amd64**
+Latest version: **https://github.com/ingenuity-build/testnets/releases/download/v0.9.0/quicksilverd-v0.10.0-amd64**
 
 ## Public endpoints
 

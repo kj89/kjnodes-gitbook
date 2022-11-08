@@ -40,11 +40,11 @@ make build
 mkdir -p $HOME/.quicksilverd/cosmovisor/genesis/bin
 mv build/quicksilverd $HOME/.quicksilverd/cosmovisor/genesis/bin/
 
-# Compile latest version https://github.com/ingenuity-build/testnets/releases/download/v0.9.0/quicksilverd-v0.9.6-amd64
-git checkout https://github.com/ingenuity-build/testnets/releases/download/v0.9.0/quicksilverd-v0.9.6-amd64
+# Compile latest version https://github.com/ingenuity-build/testnets/releases/download/v0.9.0/quicksilverd-v0.10.0-amd64
+git checkout https://github.com/ingenuity-build/testnets/releases/download/v0.9.0/quicksilverd-v0.10.0-amd64
 make build
-mkdir -p $HOME/.quicksilverd/cosmovisor/upgrades/https://github.com/ingenuity-build/testnets/releases/download/v0.9.0/quicksilverd-v0.9.6-amd64/bin
-mv build/quicksilverd $HOME/$.quicksilverd/cosmovisor/upgrades/$https://github.com/ingenuity-build/testnets/releases/download/v0.9.0/quicksilverd-v0.9.6-amd64/bin/
+mkdir -p $HOME/.quicksilverd/cosmovisor/upgrades/https://github.com/ingenuity-build/testnets/releases/download/v0.9.0/quicksilverd-v0.10.0-amd64/bin
+mv build/quicksilverd $HOME/$.quicksilverd/cosmovisor/upgrades/$https://github.com/ingenuity-build/testnets/releases/download/v0.9.0/quicksilverd-v0.10.0-amd64/bin/
 rm build/quicksilverd -rf
 ```
 
@@ -78,7 +78,7 @@ sudo systemctl enable quicksilverd
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.quicksilverd/cosmovisor/upgrades/https://github.com/ingenuity-build/testnets/releases/download/v0.9.0/quicksilverd-v0.9.6-amd64 $HOME/.quicksilverd/cosmovisor/current
+ln -s $HOME/.quicksilverd/cosmovisor/upgrades/https://github.com/ingenuity-build/testnets/releases/download/v0.9.0/quicksilverd-v0.10.0-amd64 $HOME/.quicksilverd/cosmovisor/current
 sudo ln -s $HOME/.quicksilverd/cosmovisor/current/bin/quicksilverd /usr/local/bin/quicksilverd
 quicksilverd config chain-id innuendo-3
 quicksilverd config keyring-backend test
