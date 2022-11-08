@@ -2,17 +2,13 @@
 
 ### Chain configuration
 
-| Name              | Value                                                                |
-| ----------------- | -------------------------------------------------------------------- |
-| chain-id          | teritori-1                                                          |
-| custom-port       | 19                                                        |
-| chain-denom       | utori                                                       |
-| genesis-version   | v1.1.2                                                   |
-| git-repo          | https://github.com/TERITORI/teritori-chain.git                                                           |
-| chain-app         | teritorid                                                         |
-| chain-dir         | .teritorid                                                         |
-| chain-seed        | 400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@teritori.kjnodes.com:19659  |
-| min-gas-price     | 0utori                                                     |
+| key               | value                  |
+| ----------------- | ---------------------- |
+| chain-id          | **teritori-1**        |
+| custom-port       | **19**      |
+| chain-denom       | **utori**     |
+| genesis-version   | **v1.1.2** |
+| latest-version    | **v1.3.0**  |
 
 ### Setup validator name
 

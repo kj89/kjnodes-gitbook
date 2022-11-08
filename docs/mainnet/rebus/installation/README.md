@@ -2,17 +2,13 @@
 
 ### Chain configuration
 
-| Name              | Value                                                                |
-| ----------------- | -------------------------------------------------------------------- |
-| chain-id          | reb_1111-1                                                          |
-| custom-port       | 21                                                        |
-| chain-denom       | arebus                                                       |
-| genesis-version   | v0.1.0                                                   |
-| git-repo          | https://github.com/rebuschain/rebus.core.git                                                           |
-| chain-app         | rebusd                                                         |
-| chain-dir         | .rebusd                                                         |
-| chain-seed        | 400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@rebus.kjnodes.com:21659  |
-| min-gas-price     | 0arebus                                                     |
+| key               | value                  |
+| ----------------- | ---------------------- |
+| chain-id          | **reb_1111-1**        |
+| custom-port       | **21**      |
+| chain-denom       | **arebus**     |
+| genesis-version   | **v0.1.0** |
+| latest-version    | **v0.2.0**  |
 
 ### Setup validator name
 

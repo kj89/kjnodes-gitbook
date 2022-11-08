@@ -2,17 +2,13 @@
 
 ### Chain configuration
 
-| Name              | Value                                                                |
-| ----------------- | -------------------------------------------------------------------- |
-| chain-id          | euphoria-1                                                          |
-| custom-port       | 17                                                        |
-| chain-denom       | ueaura                                                       |
-| genesis-version   | euphoria_4027003                                                   |
-| git-repo          | https://github.com/aura-nw/aura.git                                                           |
-| chain-app         | aurad                                                         |
-| chain-dir         | .aura                                                         |
-| chain-seed        | 3f472746f46493309650e5a033076689996c8881@aura-testnet.kjnodes.com:17659  |
-| min-gas-price     | 0ueaura                                                     |
+| key               | value                  |
+| ----------------- | ---------------------- |
+| chain-id          | **euphoria-1**        |
+| custom-port       | **17**      |
+| chain-denom       | **ueaura**     |
+| genesis-version   | **euphoria_4027003** |
+| latest-version    | **euphoria_v0.3.3**  |
 
 ### Setup validator name
 

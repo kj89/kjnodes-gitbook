@@ -2,17 +2,13 @@
 
 ### Chain configuration
 
-| Name              | Value                                                                |
-| ----------------- | -------------------------------------------------------------------- |
-| chain-id          | atlantic-1                                                          |
-| custom-port       | 12                                                        |
-| chain-denom       | usei                                                       |
-| genesis-version   | 1.0.6beta-val-count-fix                                                   |
-| git-repo          | https://github.com/sei-protocol/sei-chain.git                                                           |
-| chain-app         | seid                                                         |
-| chain-dir         | .sei                                                         |
-| chain-seed        | 3f472746f46493309650e5a033076689996c8881@sei-testnet.kjnodes.com:12659  |
-| min-gas-price     | 0usei                                                     |
+| key               | value                  |
+| ----------------- | ---------------------- |
+| chain-id          | **atlantic-1**        |
+| custom-port       | **12**      |
+| chain-denom       | **usei**     |
+| genesis-version   | **1.0.6beta-val-count-fix** |
+| latest-version    | **1.2.2beta-postfix**  |
 
 ### Setup validator name
 

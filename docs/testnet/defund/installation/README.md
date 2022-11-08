@@ -2,17 +2,13 @@
 
 ### Chain configuration
 
-| Name              | Value                                                                |
-| ----------------- | -------------------------------------------------------------------- |
-| chain-id          | defund-private-3                                                          |
-| custom-port       | 40                                                        |
-| chain-denom       | ufetf                                                       |
-| genesis-version   | v0.1.0                                                   |
-| git-repo          | https://github.com/defund-labs/defund.git                                                           |
-| chain-app         | defundd                                                         |
-| chain-dir         | .defund                                                         |
-| chain-seed        | 3f472746f46493309650e5a033076689996c8881@defund-testnet.kjnodes.com:40659  |
-| min-gas-price     | 0ufetf                                                     |
+| key               | value                  |
+| ----------------- | ---------------------- |
+| chain-id          | **defund-private-3**        |
+| custom-port       | **40**      |
+| chain-denom       | **ufetf**     |
+| genesis-version   | **v0.1.0** |
+| latest-version    | **v0.1.0**  |
 
 ### Setup validator name
 
