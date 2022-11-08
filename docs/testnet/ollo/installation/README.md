@@ -2,13 +2,17 @@
 
 ### Chain configuration
 
-| Name              | Value                  |
-| ----------------- | ---------------------- |
-| chain-id          | **ollo-testnet-1**        |
-| custom-port       | **32**      |
-| chain-denom       | **utollo**     |
-| genesis-version   | **v0.0.1** |
-| latest-version    | **v0.0.1**  |
+| Name              | Value                                                                |
+| ----------------- | -------------------------------------------------------------------- |
+| chain-id          | ollo-testnet-1                                                          |
+| custom-port       | 32                                                        |
+| chain-denom       | utollo                                                       |
+| genesis-version   | v0.0.1                                                   |
+| git-repo          | https://github.com/OLLO-Station/ollo.git                                                           |
+| chain-app         | ollod                                                         |
+| chain-dir         | .ollo                                                         |
+| chain-seed        | 3f472746f46493309650e5a033076689996c8881@ollo-testnet.kjnodes.com:32659  |
+| min-gas-price     | 0utollo                                                     |
 
 
 ### Setup validator name

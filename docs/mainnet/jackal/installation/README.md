@@ -2,13 +2,17 @@
 
 ### Chain configuration
 
-| Name              | Value                  |
-| ----------------- | ---------------------- |
-| chain-id          | **jackal-1**        |
-| custom-port       | **37**      |
-| chain-denom       | **ujkl**     |
-| genesis-version   | **v1.1.1** |
-| latest-version    | **v1.1.2-hotfix**  |
+| Name              | Value                                                                |
+| ----------------- | -------------------------------------------------------------------- |
+| chain-id          | jackal-1                                                          |
+| custom-port       | 37                                                        |
+| chain-denom       | ujkl                                                       |
+| genesis-version   | v1.1.1                                                   |
+| git-repo          | https://github.com/JackalLabs/canine-chain.git                                                           |
+| chain-app         | canined                                                         |
+| chain-dir         | .canine                                                         |
+| chain-seed        | 400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@jackal.kjnodes.com:37659  |
+| min-gas-price     | 0.002ujkl                                                     |
 
 
 ### Setup validator name

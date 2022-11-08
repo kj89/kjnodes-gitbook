@@ -2,13 +2,17 @@
 
 ### Chain configuration
 
-| Name              | Value                  |
-| ----------------- | ---------------------- |
-| chain-id          | **nibiru-testnet-1**        |
-| custom-port       | **39**      |
-| chain-denom       | **unibi**     |
-| genesis-version   | **v0.15.0** |
-| latest-version    | **v0.15.0**  |
+| Name              | Value                                                                |
+| ----------------- | -------------------------------------------------------------------- |
+| chain-id          | nibiru-testnet-1                                                          |
+| custom-port       | 39                                                        |
+| chain-denom       | unibi                                                       |
+| genesis-version   | v0.15.0                                                   |
+| git-repo          | https://github.com/NibiruChain/nibiru.git                                                           |
+| chain-app         | nibid                                                         |
+| chain-dir         | .nibid                                                         |
+| chain-seed        | 3f472746f46493309650e5a033076689996c8881@nibiru-testnet.kjnodes.com:39659  |
+| min-gas-price     | 0unibi                                                     |
 
 
 ### Setup validator name

@@ -2,13 +2,17 @@
 
 ### Chain configuration
 
-| Name              | Value                  |
-| ----------------- | ---------------------- |
-| chain-id          | **innuendo-3**        |
-| custom-port       | **11**      |
-| chain-denom       | **uqck**     |
-| genesis-version   | **v0.6.1** |
-| latest-version    | **v0.10.0**  |
+| Name              | Value                                                                |
+| ----------------- | -------------------------------------------------------------------- |
+| chain-id          | innuendo-3                                                          |
+| custom-port       | 11                                                        |
+| chain-denom       | uqck                                                       |
+| genesis-version   | v0.6.1                                                   |
+| git-repo          | https://github.com/ingenuity-build/quicksilver.git                                                           |
+| chain-app         | quicksilverd                                                         |
+| chain-dir         | .quicksilverd                                                         |
+| chain-seed        | 3f472746f46493309650e5a033076689996c8881@quicksilver-testnet.kjnodes.com:11659  |
+| min-gas-price     | 0uqck                                                     |
 
 
 ### Setup validator name
