@@ -67,9 +67,15 @@
   * [♻ State sync](testnet/ollo/state-sync/README.md)
   * [🧰 Useful commands](testnet/ollo/useful-commands/README.md)
 
-* [Quicksilversei](testnet/quicksilversei/README.md)
-  * [👷 Installation](testnet/quicksilversei/installation/README.md)
-  * [💊 Snapshot](testnet/quicksilversei/snapshot/README.md)
-  * [♻ State sync](testnet/quicksilversei/state-sync/README.md)
-  * [🧰 Useful commands](testnet/quicksilversei/useful-commands/README.md)
+* [Quicksilver](testnet/quicksilver/README.md)
+  * [👷 Installation](testnet/quicksilver/installation/README.md)
+  * [💊 Snapshot](testnet/quicksilver/snapshot/README.md)
+  * [♻ State sync](testnet/quicksilver/state-sync/README.md)
+  * [🧰 Useful commands](testnet/quicksilver/useful-commands/README.md)
+
+* [Sei](testnet/sei/README.md)
+  * [👷 Installation](testnet/sei/installation/README.md)
+  * [💊 Snapshot](testnet/sei/snapshot/README.md)
+  * [♻ State sync](testnet/sei/state-sync/README.md)
+  * [🧰 Useful commands](testnet/sei/useful-commands/README.md)
 

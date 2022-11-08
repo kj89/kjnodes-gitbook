@@ -25,5 +25,7 @@
 
 <img src=".gitbook/assets/ollo.png" alt="" data-size="line"> [Ollo](testnet/ollo/)
 
-<img src=".gitbook/assets/quicksilversei.png" alt="" data-size="line"> [Quicksilversei](testnet/quicksilversei/)
+<img src=".gitbook/assets/quicksilver.png" alt="" data-size="line"> [Quicksilver](testnet/quicksilver/)
+
+<img src=".gitbook/assets/sei.png" alt="" data-size="line"> [Sei](testnet/sei/)
 
