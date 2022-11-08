@@ -19,13 +19,11 @@
 
 <img src=".gitbook/assets/aura.png" alt="" data-size="line"> [Aura](testnet/aura/)
 
-<img src=".gitbook/assets/sei.png" alt="" data-size="line"> [Sei](testnet/sei/)
-
 <img src=".gitbook/assets/defund.png" alt="" data-size="line"> [Defund](testnet/defund/)
 
 <img src=".gitbook/assets/nibiru.png" alt="" data-size="line"> [Nibiru](testnet/nibiru/)
 
 <img src=".gitbook/assets/ollo.png" alt="" data-size="line"> [Ollo](testnet/ollo/)
 
-<img src=".gitbook/assets/quicksilver.png" alt="" data-size="line"> [Quicksilver](testnet/quicksilver/)
+<img src=".gitbook/assets/quicksilversei.png" alt="" data-size="line"> [Quicksilversei](testnet/quicksilversei/)
 
