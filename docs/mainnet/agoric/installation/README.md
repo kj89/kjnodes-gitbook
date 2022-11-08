@@ -45,7 +45,7 @@ cd $HOME
 rm -rf agoric-sdk
 git clone https://github.com/Agoric/agoric-sdk.git
 cd agoric-sdk
-git checkout pismoA
+git checkout agoric-upgrade-8
 
 # Install and build Agoric Javascript packages
 yarn install && yarn build

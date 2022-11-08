@@ -11,8 +11,8 @@ Website: [https://nibiru.fi](https://nibiru.fi)
 Chain id: **nibiru-testnet-1**\
 Custom port: **39**\
 Chain denom: **unibi**\
-Genesis version: **v0.15.0**\
-Latest version: **v0.15.0**
+Genesis version: **genesis**\
+Latest version: **genesis**
 
 ## Public endpoints
 

@@ -11,7 +11,7 @@ Website: [https://teritori.com](https://teritori.com)
 Chain id: **teritori-1**\
 Custom port: **19**\
 Chain denom: **utori**\
-Genesis version: **v1.1.2**\
+Genesis version: **genesis**\
 Latest version: **v1.3.0**
 
 ## Public endpoints

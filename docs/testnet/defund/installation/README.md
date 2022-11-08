@@ -34,8 +34,8 @@ rm -rf defund
 git clone https://github.com/defund-labs/defund.git
 cd defund
 
-# Compile genesis version v0.1.0
-git checkout v0.1.0
+# Compile genesis version genesis
+git checkout genesis
 make build
 mkdir -p $HOME/.defund/cosmovisor/genesis/bin
 mv build/defundd $HOME/.defund/cosmovisor/genesis/bin/

@@ -34,8 +34,8 @@ rm -rf core
 git clone https://github.com/Team-Kujira/core.git
 cd core
 
-# Compile genesis version v0.4.1
-git checkout v0.4.1
+# Compile genesis version genesis
+git checkout genesis
 make build
 mkdir -p $HOME/.kujira/cosmovisor/genesis/bin
 mv build/kujirad $HOME/.kujira/cosmovisor/genesis/bin/
