@@ -8,7 +8,7 @@ Website: [https://www.defund.app](https://www.defund.app)
 
 ## Chain info
 
-Chain id: **defund-private-2**\
+Chain id: **defund-private-3**\
 Custom port: **40**\
 Chain denom: **ufetf**\
 Genesis version: **v0.1.0**\

@@ -74,10 +74,10 @@ sudo systemctl enable defundd
 ```bash
 ln -s $HOME/.defund/cosmovisor/genesis $HOME/.defund/cosmovisor/current
 sudo ln -s $HOME/.defund/cosmovisor/current/bin/defundd /usr/local/bin/defundd
-defundd config chain-id defund-private-2
+defundd config chain-id defund-private-3
 defundd config keyring-backend test
 defundd config node tcp://localhost:40657
-defundd init $MONIKER --chain-id defund-private-2
+defundd init $MONIKER --chain-id defund-private-3
 curl -Ls https://snapshots.kjnodes.com/defund-testnet/genesis.json > $HOME/.defund/config/genesis.json
 curl -Ls https://snapshots.kjnodes.com/defund-testnet/addrbook.json > $HOME/.defund/config/addrbook.json
 sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@defund-testnet.rpc.kjnodes.com:40659\"|" $HOME/.defund/config/config.toml
