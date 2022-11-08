@@ -14,7 +14,6 @@
 | chain-seed        | 400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@rebus.kjnodes.com:21659  |
 | min-gas-price     | 0arebus                                                     |
 
-
 ### Setup validator name
 
 ```bash

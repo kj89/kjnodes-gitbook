@@ -14,7 +14,6 @@
 | chain-seed        | 3f472746f46493309650e5a033076689996c8881@aura-testnet.kjnodes.com:17659  |
 | min-gas-price     | 0ueaura                                                     |
 
-
 ### Setup validator name
 
 ```bash

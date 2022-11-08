@@ -14,7 +14,6 @@
 | chain-seed        | 3f472746f46493309650e5a033076689996c8881@ollo-testnet.kjnodes.com:32659  |
 | min-gas-price     | 0utollo                                                     |
 
-
 ### Setup validator name
 
 ```bash

@@ -14,7 +14,6 @@
 | chain-seed        | 3f472746f46493309650e5a033076689996c8881@quicksilver-testnet.kjnodes.com:11659  |
 | min-gas-price     | 0uqck                                                     |
 
-
 ### Setup validator name
 
 ```bash

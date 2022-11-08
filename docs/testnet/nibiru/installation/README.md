@@ -14,7 +14,6 @@
 | chain-seed        | 3f472746f46493309650e5a033076689996c8881@nibiru-testnet.kjnodes.com:39659  |
 | min-gas-price     | 0unibi                                                     |
 
-
 ### Setup validator name
 
 ```bash

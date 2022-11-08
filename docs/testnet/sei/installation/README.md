@@ -14,7 +14,6 @@
 | chain-seed        | 3f472746f46493309650e5a033076689996c8881@sei-testnet.kjnodes.com:12659  |
 | min-gas-price     | 0usei                                                     |
 
-
 ### Setup validator name
 
 ```bash

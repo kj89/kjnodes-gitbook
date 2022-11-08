@@ -14,7 +14,6 @@
 | chain-seed        | 400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@jackal.kjnodes.com:37659  |
 | min-gas-price     | 0.002ujkl                                                     |
 
-
 ### Setup validator name
 
 ```bash

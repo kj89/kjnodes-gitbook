@@ -14,7 +14,6 @@
 | chain-seed        | ${CHAIN_TENDERSEED_PEER}@${CHAIN_NAME}.kjnodes.com:${CHAIN_PORT}659  |
 | min-gas-price     | ${MIN_GAS_PRICE}                                                     |
 
-
 ### Setup validator name
 
 ```bash

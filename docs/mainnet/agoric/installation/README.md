@@ -1,10 +1,18 @@
 # Installation
 
-Chain id: **agoric-3**\
-Custom port: **27**\
-Chain denom: **ubld**\
-Genesis version: **agoric-3.1**\
-Latest version: **pismoA**
+### Chain configuration
+
+| Name              | Value                                                                |
+| ----------------- | -------------------------------------------------------------------- |
+| chain-id          | agoric-3                                                          |
+| custom-port       | 27                                                        |
+| chain-denom       | ubld                                                       |
+| genesis-version   | agoric-3.1                                                   |
+| git-repo          | https://github.com/Agoric/agoric-sdk.git                                                           |
+| chain-app         | agd                                                         |
+| chain-dir         | .agoric                                                         |
+| chain-seed        | 400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@agoric.kjnodes.com:27659  |
+| min-gas-price     | 0.025ubld                                                     |
 
 ### Setup validator name
 

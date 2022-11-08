@@ -14,7 +14,6 @@
 | chain-seed        | 3f472746f46493309650e5a033076689996c8881@defund-testnet.kjnodes.com:40659  |
 | min-gas-price     | 0ufetf                                                     |
 
-
 ### Setup validator name
 
 ```bash

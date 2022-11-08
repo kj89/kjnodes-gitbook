@@ -1,10 +1,18 @@
 # Installation
 
-Chain id: **${CHAIN_ID}**\
-Custom port: **${CHAIN_PORT}**\
-Chain denom: **${CHAIN_DENOM}**\
-Genesis version: **${GENESIS_VERSION}**\
-Latest version: **${LATEST_VERSION}**
+### Chain configuration
+
+| Name              | Value                                                                |
+| ----------------- | -------------------------------------------------------------------- |
+| chain-id          | ${CHAIN_ID}                                                          |
+| custom-port       | ${CHAIN_PORT}                                                        |
+| chain-denom       | ${CHAIN_DENOM}                                                       |
+| genesis-version   | ${GENESIS_VERSION}                                                   |
+| git-repo          | ${GIT_URL}                                                           |
+| chain-app         | ${CHAIN_APP}                                                         |
+| chain-dir         | ${CHAIN_DIR}                                                         |
+| chain-seed        | ${CHAIN_TENDERSEED_PEER}@${CHAIN_NAME}.kjnodes.com:${CHAIN_PORT}659  |
+| min-gas-price     | ${MIN_GAS_PRICE}                                                     |
 
 ### Setup validator name
 

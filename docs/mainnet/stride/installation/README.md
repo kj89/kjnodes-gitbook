@@ -14,7 +14,6 @@
 | chain-seed        | 400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@stride.kjnodes.com:16659  |
 | min-gas-price     | 0ustrd                                                     |
 
-
 ### Setup validator name
 
 ```bash
