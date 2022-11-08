@@ -6,14 +6,6 @@ Kujira is a Layer 1 protocol built on Cosmos, which can be used for  hosting com
 
 Website: [https://kujira.app](https://kujira.app)
 
-## Chain info
-
-Chain id: **kaiyo-1**\
-Custom port: **13**\
-Chain denom: **ukuji**\
-Genesis version: **v0.4.1**\
-Latest version: **v0.6.4**
-
 ## Public endpoints
 
 * rpc: [https://kujira.rpc.kjnodes.com](https://kujira.rpc.kjnodes.com)

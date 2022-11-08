@@ -1,5 +1,11 @@
 # Installation
 
+Chain id: **kaiyo-1**\
+Custom port: **13**\
+Chain denom: **ukuji**\
+Genesis version: **v0.4.1**\
+Latest version: **v0.6.4**
+
 ### Setup validator name
 
 ```bash

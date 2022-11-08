@@ -6,14 +6,6 @@ The Aura Network protocol allows users to mint, rate, track data,  or trade NFT 
 
 Website: [https://aura.network](https://aura.network)
 
-## Chain info
-
-Chain id: **euphoria-1**\
-Custom port: **17**\
-Chain denom: **ueaura**\
-Genesis version: **euphoria_4027003**\
-Latest version: **euphoria_v0.3.3**
-
 ## Public endpoints
 
 * rpc: [https://aura-testnet.rpc.kjnodes.com](https://aura-testnet.rpc.kjnodes.com)

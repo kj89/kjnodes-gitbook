@@ -5,14 +5,6 @@
 ${CHAIN_SHORT_DESCRIPTION}
 Website: [${CHAIN_WEBSITE}](${CHAIN_WEBSITE})
 
-## Chain info
-
-Chain id: **${CHAIN_ID}**\
-Custom port: **${CHAIN_PORT}**\
-Chain denom: **${CHAIN_DENOM}**\
-Genesis version: **${GENESIS_VERSION}**\
-Latest version: **${LATEST_VERSION}**
-
 ## Public endpoints
 
 * rpc: [https://${CHAIN_NAME}.rpc.kjnodes.com](https://${CHAIN_NAME}.rpc.kjnodes.com)

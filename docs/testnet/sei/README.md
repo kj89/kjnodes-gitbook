@@ -6,14 +6,6 @@ Sei is a Layer 1 blockchain on Cosmos with orderbook-focused infrastructure at i
 
 Website: [https://www.seinetwork.io](https://www.seinetwork.io)
 
-## Chain info
-
-Chain id: **atlantic-1**\
-Custom port: **12**\
-Chain denom: **usei**\
-Genesis version: **1.0.6beta-val-count-fix**\
-Latest version: **1.2.2beta-postfix**
-
 ## Public endpoints
 
 * rpc: [https://sei-testnet.rpc.kjnodes.com](https://sei-testnet.rpc.kjnodes.com)

@@ -1,5 +1,11 @@
 # Installation
 
+Chain id: **reb_1111-1**\
+Custom port: **21**\
+Chain denom: **arebus**\
+Genesis version: **v0.1.0**\
+Latest version: **v0.2.0**
+
 ### Setup validator name
 
 ```bash

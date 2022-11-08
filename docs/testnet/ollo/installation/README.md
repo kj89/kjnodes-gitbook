@@ -1,5 +1,11 @@
 # Installation
 
+Chain id: **ollo-testnet-1**\
+Custom port: **32**\
+Chain denom: **utollo**\
+Genesis version: **v0.0.1**\
+Latest version: **v0.0.1**
+
 ### Setup validator name
 
 ```bash

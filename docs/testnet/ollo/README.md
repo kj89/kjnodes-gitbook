@@ -6,14 +6,6 @@ OLLO is a sovereign L1 chain built on the Cosmos network providing  next-gen tra
 
 Website: [https://www.ollostation.zone](https://www.ollostation.zone)
 
-## Chain info
-
-Chain id: **ollo-testnet-1**\
-Custom port: **32**\
-Chain denom: **utollo**\
-Genesis version: **v0.0.1**\
-Latest version: **v0.0.1**
-
 ## Public endpoints
 
 * rpc: [https://ollo-testnet.rpc.kjnodes.com](https://ollo-testnet.rpc.kjnodes.com)

@@ -6,14 +6,6 @@ Teritori is a multi-chain hub designed to allow IBC and non IBC communities  to 
 
 Website: [https://teritori.com](https://teritori.com)
 
-## Chain info
-
-Chain id: **teritori-1**\
-Custom port: **19**\
-Chain denom: **utori**\
-Genesis version: **v1.1.2**\
-Latest version: **v1.3.0**
-
 ## Public endpoints
 
 * rpc: [https://teritori.rpc.kjnodes.com](https://teritori.rpc.kjnodes.com)

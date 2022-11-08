@@ -1,5 +1,11 @@
 # Installation
 
+Chain id: **agoric-3**\
+Custom port: **27**\
+Chain denom: **ubld**\
+Genesis version: **agoric-3.1**\
+Latest version: **pismoA**
+
 ### Setup validator name
 
 ```bash

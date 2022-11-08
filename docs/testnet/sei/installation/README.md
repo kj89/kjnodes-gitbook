@@ -1,5 +1,11 @@
 # Installation
 
+Chain id: **atlantic-1**\
+Custom port: **12**\
+Chain denom: **usei**\
+Genesis version: **1.0.6beta-val-count-fix**\
+Latest version: **1.2.2beta-postfix**
+
 ### Setup validator name
 
 ```bash

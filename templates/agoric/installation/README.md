@@ -1,5 +1,11 @@
 # Installation
 
+Chain id: **${CHAIN_ID}**\
+Custom port: **${CHAIN_PORT}**\
+Chain denom: **${CHAIN_DENOM}**\
+Genesis version: **${GENESIS_VERSION}**\
+Latest version: **${LATEST_VERSION}**
+
 ### Setup validator name
 
 ```bash

@@ -1,5 +1,11 @@
 # Installation
 
+Chain id: **nibiru-testnet-1**\
+Custom port: **39**\
+Chain denom: **unibi**\
+Genesis version: **v0.15.0**\
+Latest version: **v0.15.0**
+
 ### Setup validator name
 
 ```bash

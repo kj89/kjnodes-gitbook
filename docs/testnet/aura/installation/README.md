@@ -1,5 +1,11 @@
 # Installation
 
+Chain id: **euphoria-1**\
+Custom port: **17**\
+Chain denom: **ueaura**\
+Genesis version: **euphoria_4027003**\
+Latest version: **euphoria_v0.3.3**
+
 ### Setup validator name
 
 ```bash

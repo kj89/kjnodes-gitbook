@@ -1,5 +1,11 @@
 # Installation
 
+Chain id: **defund-private-3**\
+Custom port: **40**\
+Chain denom: **ufetf**\
+Genesis version: **v0.1.0**\
+Latest version: **v0.1.0**
+
 ### Setup validator name
 
 ```bash

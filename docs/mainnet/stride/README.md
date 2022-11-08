@@ -6,14 +6,6 @@ Stride is a blockchain ("zone") that provides liquidity for staked assets.  Usin
 
 Website: [https://stride.zone](https://stride.zone)
 
-## Chain info
-
-Chain id: **stride-1**\
-Custom port: **16**\
-Chain denom: **ustrd**\
-Genesis version: **v1.0.2**\
-Latest version: **v2.0.3**
-
 ## Public endpoints
 
 * rpc: [https://stride.rpc.kjnodes.com](https://stride.rpc.kjnodes.com)

@@ -6,14 +6,6 @@ Agoric is an interoperable Proof-of-Stake chain in the Cosmos ecosystem.  Agoric
 
 Website: [https://agoric.com](https://agoric.com)
 
-## Chain info
-
-Chain id: **agoric-3**\
-Custom port: **27**\
-Chain denom: **ubld**\
-Genesis version: **agoric-3.1**\
-Latest version: **pismoA**
-
 ## Public endpoints
 
 * rpc: [https://agoric.rpc.kjnodes.com](https://agoric.rpc.kjnodes.com)
