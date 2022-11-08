@@ -1,7 +1,3 @@
----
-description: This is only a test
----
-
 # Supported chains
 
 ## MAINNET
