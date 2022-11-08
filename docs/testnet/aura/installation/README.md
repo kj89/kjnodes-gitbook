@@ -1,10 +1,10 @@
 # Installation
 
-Chain id: **euphoria-1**\
-Custom port: **17**\
-Chain denom: **ueaura**\
-Genesis version: **euphoria_4027003**\
-Latest version: **euphoria_v0.3.3**
+chain-id: **euphoria-1**\
+custom-port: **17**\
+chain-denom: **ueaura**\
+genesis-version: **euphoria_4027003**\
+latest-version: **euphoria_v0.3.3**
 
 ### Setup validator name
 

@@ -1,10 +1,10 @@
 # Installation
 
-Chain id: **teritori-1**\
-Custom port: **19**\
-Chain denom: **utori**\
-Genesis version: **v1.1.2**\
-Latest version: **v1.3.0**
+chain-id: **teritori-1**\
+custom-port: **19**\
+chain-denom: **utori**\
+genesis-version: **v1.1.2**\
+latest-version: **v1.3.0**
 
 ### Setup validator name
 

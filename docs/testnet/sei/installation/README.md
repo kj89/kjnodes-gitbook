@@ -1,10 +1,10 @@
 # Installation
 
-Chain id: **atlantic-1**\
-Custom port: **12**\
-Chain denom: **usei**\
-Genesis version: **1.0.6beta-val-count-fix**\
-Latest version: **1.2.2beta-postfix**
+chain-id: **atlantic-1**\
+custom-port: **12**\
+chain-denom: **usei**\
+genesis-version: **1.0.6beta-val-count-fix**\
+latest-version: **1.2.2beta-postfix**
 
 ### Setup validator name
 

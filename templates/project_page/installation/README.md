@@ -1,10 +1,10 @@
 # Installation
 
-Chain id: **${CHAIN_ID}**\
-Custom port: **${CHAIN_PORT}**\
-Chain denom: **${CHAIN_DENOM}**\
-Genesis version: **${GENESIS_VERSION}**\
-Latest version: **${LATEST_VERSION}**
+chain-id: **${CHAIN_ID}**\
+custom-port: **${CHAIN_PORT}**\
+chain-denom: **${CHAIN_DENOM}**\
+genesis-version: **${GENESIS_VERSION}**\
+latest-version: **${LATEST_VERSION}**
 
 ### Setup validator name
 

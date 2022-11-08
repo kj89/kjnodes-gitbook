@@ -1,10 +1,10 @@
 # Installation
 
-Chain id: **jackal-1**\
-Custom port: **37**\
-Chain denom: **ujkl**\
-Genesis version: **v1.1.1**\
-Latest version: **v1.1.2-hotfix**
+chain-id: **jackal-1**\
+custom-port: **37**\
+chain-denom: **ujkl**\
+genesis-version: **v1.1.1**\
+latest-version: **v1.1.2-hotfix**
 
 ### Setup validator name
 
