@@ -43,6 +43,18 @@
 
 ## TESTNET
 
+* [Aura](testnet/aura/README.md)
+  * [👷 Installation](testnet/aura/installation/README.md)
+  * [💊 Snapshot](testnet/aura/snapshot/README.md)
+  * [♻ State sync](testnet/aura/state-sync/README.md)
+  * [🧰 Useful commands](testnet/aura/useful-commands/README.md)
+
+* [Sei](testnet/sei/README.md)
+  * [👷 Installation](testnet/sei/installation/README.md)
+  * [💊 Snapshot](testnet/sei/snapshot/README.md)
+  * [♻ State sync](testnet/sei/state-sync/README.md)
+  * [🧰 Useful commands](testnet/sei/useful-commands/README.md)
+
 * [Defund](testnet/defund/README.md)
   * [👷 Installation](testnet/defund/installation/README.md)
   * [💊 Snapshot](testnet/defund/snapshot/README.md)
