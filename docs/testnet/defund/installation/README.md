@@ -1,10 +1,15 @@
 # Installation
 
-chain-id: **defund-private-3**\
-custom-port: **40**\
-chain-denom: **ufetf**\
-genesis-version: **v0.1.0**\
-latest-version: **v0.1.0**
+### Chain configuration
+
+| Name              | Value                  |
+| ----------------- | ---------------------- |
+| chain-id          | **defund-private-3**        |
+| custom-port       | **40**      |
+| chain-denom       | **ufetf**     |
+| genesis-version   | **v0.1.0** |
+| latest-version    | **v0.1.0**  |
+
 
 ### Setup validator name
 

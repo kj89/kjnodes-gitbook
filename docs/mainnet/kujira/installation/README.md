@@ -1,10 +1,15 @@
 # Installation
 
-chain-id: **kaiyo-1**\
-custom-port: **13**\
-chain-denom: **ukuji**\
-genesis-version: **v0.4.1**\
-latest-version: **v0.6.4**
+### Chain configuration
+
+| Name              | Value                  |
+| ----------------- | ---------------------- |
+| chain-id          | **kaiyo-1**        |
+| custom-port       | **13**      |
+| chain-denom       | **ukuji**     |
+| genesis-version   | **v0.4.1** |
+| latest-version    | **v0.6.4**  |
+
 
 ### Setup validator name
 

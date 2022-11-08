@@ -1,10 +1,15 @@
 # Installation
 
-chain-id: **ollo-testnet-1**\
-custom-port: **32**\
-chain-denom: **utollo**\
-genesis-version: **v0.0.1**\
-latest-version: **v0.0.1**
+### Chain configuration
+
+| Name              | Value                  |
+| ----------------- | ---------------------- |
+| chain-id          | **ollo-testnet-1**        |
+| custom-port       | **32**      |
+| chain-denom       | **utollo**     |
+| genesis-version   | **v0.0.1** |
+| latest-version    | **v0.0.1**  |
+
 
 ### Setup validator name
 

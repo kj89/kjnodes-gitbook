@@ -1,10 +1,15 @@
 # Installation
 
-chain-id: **stride-1**\
-custom-port: **16**\
-chain-denom: **ustrd**\
-genesis-version: **v1.0.2**\
-latest-version: **v2.0.3**
+### Chain configuration
+
+| Name              | Value                  |
+| ----------------- | ---------------------- |
+| chain-id          | **stride-1**        |
+| custom-port       | **16**      |
+| chain-denom       | **ustrd**     |
+| genesis-version   | **v1.0.2** |
+| latest-version    | **v2.0.3**  |
+
 
 ### Setup validator name
 
