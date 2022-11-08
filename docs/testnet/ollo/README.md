@@ -11,8 +11,8 @@ Website: [https://www.ollostation.zone](https://www.ollostation.zone)
 Chain id: **ollo-testnet-1**\
 Custom port: **32**\
 Chain denom: **utollo**\
-Genesis version: **genesis**\
-Latest version: **genesis**
+Genesis version: **v0.0.1**\
+Latest version: **v0.0.1**
 
 ## Public endpoints
 

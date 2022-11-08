@@ -11,8 +11,8 @@ Website: [https://agoric.com](https://agoric.com)
 Chain id: **agoric-3**\
 Custom port: **27**\
 Chain denom: **ubld**\
-Genesis version: **genesis**\
-Latest version: **agoric-upgrade-8**
+Genesis version: **agoric-3.1**\
+Latest version: **pismoA**
 
 ## Public endpoints
 

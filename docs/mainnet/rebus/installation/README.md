@@ -34,8 +34,8 @@ rm -rf rebus.core
 git clone https://github.com/rebuschain/rebus.core.git
 cd rebus.core
 
-# Compile genesis version genesis
-git checkout genesis
+# Compile genesis version v0.1.0
+git checkout v0.1.0
 make build
 mkdir -p $HOME/.rebusd/cosmovisor/genesis/bin
 mv build/rebusd $HOME/.rebusd/cosmovisor/genesis/bin/

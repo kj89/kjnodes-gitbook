@@ -11,8 +11,8 @@ Website: [https://stride.zone](https://stride.zone)
 Chain id: **stride-1**\
 Custom port: **16**\
 Chain denom: **ustrd**\
-Genesis version: **genesis**\
-Latest version: **v2**
+Genesis version: **v1.0.2**\
+Latest version: **v2.0.3**
 
 ## Public endpoints
 

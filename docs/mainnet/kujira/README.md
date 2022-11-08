@@ -11,7 +11,7 @@ Website: [https://kujira.app](https://kujira.app)
 Chain id: **kaiyo-1**\
 Custom port: **13**\
 Chain denom: **ukuji**\
-Genesis version: **genesis**\
+Genesis version: **v0.4.1**\
 Latest version: **v0.6.4**
 
 ## Public endpoints

@@ -11,8 +11,8 @@ Website: [https://www.defund.app](https://www.defund.app)
 Chain id: **defund-private-2**\
 Custom port: **40**\
 Chain denom: **ufetf**\
-Genesis version: **genesis**\
-Latest version: **genesis**
+Genesis version: **v0.1.0**\
+Latest version: **v0.1.0**
 
 ## Public endpoints
 

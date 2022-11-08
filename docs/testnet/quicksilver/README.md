@@ -11,7 +11,7 @@ Website: [https://quicksilver.zone](https://quicksilver.zone)
 Chain id: **innuendo-3**\
 Custom port: **11**\
 Chain denom: **uqck**\
-Genesis version: **genesis**\
+Genesis version: **v0.6.1**\
 Latest version: **v0.10.0**
 
 ## Public endpoints
