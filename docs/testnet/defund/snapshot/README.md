@@ -6,6 +6,8 @@ Snapshot contains compressed copy of chain data directory. To keep backup files 
 snapshot server is periodically beeing state-synced.
 {% endhint %}
 
+**pruning**: _100/0/19_ | **indexer**: _null_ | **version tag**: _v0.1.0_
+
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
 | 573167 | 20 hours ago | [snapshot (1.2 GB)](https://snapshots.kjnodes.com/defund-testnet/snapshot\_latest.tar.lz4) |

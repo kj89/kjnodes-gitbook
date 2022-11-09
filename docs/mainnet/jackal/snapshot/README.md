@@ -6,6 +6,8 @@ Snapshot contains compressed copy of chain data directory. To keep backup files 
 snapshot server is periodically beeing state-synced.
 {% endhint %}
 
+**pruning**: _100/0/19_ | **indexer**: _null_ | **version tag**: _v1.1.2-hotfix_
+
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
 | 69415 | 17 hours ago | [snapshot (0.86 GB)](https://snapshots.kjnodes.com/jackal/snapshot\_latest.tar.lz4) |
