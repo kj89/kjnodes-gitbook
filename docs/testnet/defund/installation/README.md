@@ -1,14 +1,6 @@
 # Installation
 
-### Chain configuration
-
-| key               | value                  |
-| ----------------- | ---------------------- |
-| chain-id          | **defund-private-3**        |
-| custom-port       | **40**      |
-| chain-denom       | **ufetf**     |
-| genesis-version   | **v0.1.0** |
-| latest-version    | **v0.1.0**  |
+**Chain ID**: defund-private-3 | **Current Node Version**: v0.1.0
 
 ### Setup validator name
 

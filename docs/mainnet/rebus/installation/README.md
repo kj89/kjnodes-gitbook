@@ -1,14 +1,6 @@
 # Installation
 
-### Chain configuration
-
-| key               | value                  |
-| ----------------- | ---------------------- |
-| chain-id          | **reb_1111-1**        |
-| custom-port       | **21**      |
-| chain-denom       | **arebus**     |
-| genesis-version   | **v0.1.0** |
-| latest-version    | **v0.2.0**  |
+**Chain ID**: reb_1111-1 | **Current Node Version**: v0.2.0
 
 ### Setup validator name
 

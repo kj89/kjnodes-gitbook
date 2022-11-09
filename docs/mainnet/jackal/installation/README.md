@@ -1,14 +1,6 @@
 # Installation
 
-### Chain configuration
-
-| key               | value                  |
-| ----------------- | ---------------------- |
-| chain-id          | **jackal-1**        |
-| custom-port       | **37**      |
-| chain-denom       | **ujkl**     |
-| genesis-version   | **v1.1.1** |
-| latest-version    | **v1.1.2-hotfix**  |
+**Chain ID**: jackal-1 | **Current Node Version**: v1.1.2-hotfix
 
 ### Setup validator name
 

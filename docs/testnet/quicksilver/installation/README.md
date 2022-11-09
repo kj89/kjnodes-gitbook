@@ -1,14 +1,6 @@
 # Installation
 
-### Chain configuration
-
-| key               | value                  |
-| ----------------- | ---------------------- |
-| chain-id          | **innuendo-3**        |
-| custom-port       | **11**      |
-| chain-denom       | **uqck**     |
-| genesis-version   | **v0.6.1** |
-| latest-version    | **v0.10.0**  |
+**Chain ID**: innuendo-3 | **Current Node Version**: v0.10.0
 
 ### Setup validator name
 

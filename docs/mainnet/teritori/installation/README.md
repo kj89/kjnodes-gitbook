@@ -1,14 +1,6 @@
 # Installation
 
-### Chain configuration
-
-| key               | value                  |
-| ----------------- | ---------------------- |
-| chain-id          | **teritori-1**        |
-| custom-port       | **19**      |
-| chain-denom       | **utori**     |
-| genesis-version   | **v1.1.2** |
-| latest-version    | **v1.3.0**  |
+**Chain ID**: teritori-1 | **Current Node Version**: v1.3.0
 
 ### Setup validator name
 

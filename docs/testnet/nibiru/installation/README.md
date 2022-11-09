@@ -1,14 +1,6 @@
 # Installation
 
-### Chain configuration
-
-| key               | value                  |
-| ----------------- | ---------------------- |
-| chain-id          | **nibiru-testnet-1**        |
-| custom-port       | **39**      |
-| chain-denom       | **unibi**     |
-| genesis-version   | **v0.15.0** |
-| latest-version    | **v0.15.0**  |
+**Chain ID**: nibiru-testnet-1 | **Current Node Version**: v0.15.0
 
 ### Setup validator name
 

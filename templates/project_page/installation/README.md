@@ -1,14 +1,6 @@
 # Installation
 
-### Chain configuration
-
-| key               | value                  |
-| ----------------- | ---------------------- |
-| chain-id          | **${CHAIN_ID}**        |
-| custom-port       | **${CHAIN_PORT}**      |
-| chain-denom       | **${CHAIN_DENOM}**     |
-| genesis-version   | **${GENESIS_VERSION}** |
-| latest-version    | **${LATEST_VERSION}**  |
+**Chain ID**: ${CHAIN_ID} | **Current Node Version**: ${LATEST_VERSION}
 
 ### Setup validator name
 

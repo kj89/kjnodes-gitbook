@@ -1,14 +1,6 @@
 # Installation
 
-### Chain configuration
-
-| key               | value                  |
-| ----------------- | ---------------------- |
-| chain-id          | **euphoria-1**        |
-| custom-port       | **17**      |
-| chain-denom       | **ueaura**     |
-| genesis-version   | **euphoria_4027003** |
-| latest-version    | **euphoria_v0.3.3**  |
+**Chain ID**: euphoria-1 | **Current Node Version**: euphoria_v0.3.3
 
 ### Setup validator name
 
