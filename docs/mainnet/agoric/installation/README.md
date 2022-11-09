@@ -1,14 +1,6 @@
 # Installation
 
-### Chain configuration
-
-| key               | value                  |
-| ----------------- | ---------------------- |
-| chain-id          | **agoric-3**        |
-| custom-port       | **27**      |
-| chain-denom       | **ubld**     |
-| genesis-version   | **agoric-3.1** |
-| latest-version    | **pismoA**  |
+**Chain ID**: agoric-3 | **Current Node Version**: pismoA
 
 ### Setup validator name
 
