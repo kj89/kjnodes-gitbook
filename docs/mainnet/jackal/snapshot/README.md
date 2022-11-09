@@ -6,7 +6,7 @@ Snapshot contains compressed copy of chain data directory. To keep backup files 
 snapshot server is periodically beeing state-synced.
 {% endhint %}
 
-**pruning**: _100/0/19_ | **indexer**: _null_ | **version tag**: _v1.1.2-hotfix_
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v1.1.2-hotfix
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
