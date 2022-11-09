@@ -1,6 +1,6 @@
 # Installation
 
-**Chain ID**: teritori-1 | **Current Node Version**: v1.3.0
+**Chain ID**: teritori-1 | **Latest Version Tag**: v1.3.0
 
 ### Setup validator name
 

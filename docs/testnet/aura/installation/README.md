@@ -1,6 +1,6 @@
 # Installation
 
-**Chain ID**: euphoria-1 | **Current Node Version**: euphoria_v0.3.3
+**Chain ID**: euphoria-1 | **Latest Version Tag**: euphoria_v0.3.3
 
 ### Setup validator name
 

@@ -1,6 +1,6 @@
 # Installation
 
-**Chain ID**: agoric-3 | **Current Node Version**: pismoA
+**Chain ID**: agoric-3 | **Latest Version Tag**: pismoA
 
 ### Setup validator name
 

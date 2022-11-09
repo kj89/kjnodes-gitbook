@@ -1,6 +1,6 @@
 # Installation
 
-**Chain ID**: reb_1111-1 | **Current Node Version**: v0.2.0
+**Chain ID**: reb_1111-1 | **Latest Version Tag**: v0.2.0
 
 ### Setup validator name
 

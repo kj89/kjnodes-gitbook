@@ -1,6 +1,6 @@
 # Installation
 
-**Chain ID**: innuendo-3 | **Current Node Version**: v0.10.0
+**Chain ID**: innuendo-3 | **Latest Version Tag**: v0.10.0
 
 ### Setup validator name
 

@@ -1,6 +1,6 @@
 # Installation
 
-**Chain ID**: stride-1 | **Current Node Version**: v2.0.3
+**Chain ID**: stride-1 | **Latest Version Tag**: v2.0.3
 
 ### Setup validator name
 

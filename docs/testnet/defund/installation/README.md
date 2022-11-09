@@ -1,6 +1,6 @@
 # Installation
 
-**Chain ID**: defund-private-3 | **Current Node Version**: v0.1.0
+**Chain ID**: defund-private-3 | **Latest Version Tag**: v0.1.0
 
 ### Setup validator name
 

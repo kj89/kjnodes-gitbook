@@ -1,6 +1,6 @@
 # Installation
 
-**Chain ID**: ollo-testnet-1 | **Current Node Version**: v0.0.1
+**Chain ID**: ollo-testnet-1 | **Latest Version Tag**: v0.0.1
 
 ### Setup validator name
 

@@ -1,6 +1,6 @@
 # Installation
 
-**Chain ID**: kaiyo-1 | **Current Node Version**: v0.6.4
+**Chain ID**: kaiyo-1 | **Latest Version Tag**: v0.6.4
 
 ### Setup validator name
 

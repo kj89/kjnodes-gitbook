@@ -4,6 +4,8 @@
 
 Kujira is a Layer 1 protocol built on Cosmos, which can be used for  hosting community-selected projects.
 
+**Chain ID**: kaiyo-1 | **Latest Version Tag**: v0.6.4
+
 Website: [https://kujira.app](https://kujira.app)
 
 ## Public endpoints

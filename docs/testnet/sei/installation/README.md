@@ -1,6 +1,6 @@
 # Installation
 
-**Chain ID**: atlantic-1 | **Current Node Version**: 1.2.2beta-postfix
+**Chain ID**: atlantic-1 | **Latest Version Tag**: 1.2.2beta-postfix
 
 ### Setup validator name
 

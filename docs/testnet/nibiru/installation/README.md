@@ -1,6 +1,6 @@
 # Installation
 
-**Chain ID**: nibiru-testnet-1 | **Current Node Version**: v0.15.0
+**Chain ID**: nibiru-testnet-1 | **Latest Version Tag**: v0.15.0
 
 ### Setup validator name
 

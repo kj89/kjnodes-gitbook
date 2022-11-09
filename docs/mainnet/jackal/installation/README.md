@@ -1,6 +1,6 @@
 # Installation
 
-**Chain ID**: jackal-1 | **Current Node Version**: v1.1.2-hotfix
+**Chain ID**: jackal-1 | **Latest Version Tag**: v1.1.2-hotfix
 
 ### Setup validator name
 

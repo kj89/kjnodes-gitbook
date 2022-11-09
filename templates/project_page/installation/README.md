@@ -1,6 +1,6 @@
 # Installation
 
-**Chain ID**: ${CHAIN_ID} | **Current Node Version**: ${LATEST_VERSION}
+**Chain ID**: ${CHAIN_ID} | **Latest Version Tag**: ${LATEST_VERSION}
 
 ### Setup validator name
 
