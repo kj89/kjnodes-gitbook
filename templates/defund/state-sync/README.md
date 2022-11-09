@@ -8,5 +8,5 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 {% endhint %}
 
 {% hint style='warning' %}
-Currently Defund does not support State sync 😢
+Currently ${PROJECT_NAME} does not support State sync 😢
 {% endhint %}
