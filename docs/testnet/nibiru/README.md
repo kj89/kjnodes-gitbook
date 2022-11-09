@@ -1,10 +1,10 @@
 # Services
 
-**Chain ID**: nibiru-testnet-1 | **Latest Version Tag**: v0.15.0
-
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/nibiru.png" width="150" alt=""><figcaption></figcaption></figure>
 
 Nibiru is a sovereign proof-of-stake blockchain, open-source platform,  and member of a family of interconnected blockchains that comprise the Cosmos Ecosystem.
+
+**Chain ID**: nibiru-testnet-1 | **Latest Version Tag**: v0.15.0
 
 Website: [https://nibiru.fi](https://nibiru.fi)
 
