@@ -2,9 +2,9 @@
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/quicksilver.png" width="150" alt=""><figcaption></figcaption></figure>
 
-Quicksilver is a permissionless, sovereign Cosmos SDK zone providing liquid staking for the entire Cosmos Ecosystem.
-
 **Chain ID**: innuendo-3 | **Latest Version Tag**: v0.10.0
+
+Quicksilver is a permissionless, sovereign Cosmos SDK zone providing liquid staking for the entire Cosmos Ecosystem.
 
 Website: [https://quicksilver.zone](https://quicksilver.zone)
 
