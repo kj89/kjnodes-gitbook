@@ -297,7 +297,7 @@ sudo rm /etc/systemd/system/canined.service
 sudo systemctl daemon-reload
 rm -rf $(which canined) 
 rm -rf $HOME/.canine
-rm -rf $HOME/core
+rm -rf $HOME/canine-chain
 ```
 
 ## ⚙️ Service Management

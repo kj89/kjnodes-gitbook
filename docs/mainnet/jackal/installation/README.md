@@ -40,9 +40,9 @@ source $HOME/.profile
 
 ```bash
 cd $HOME
-rm -rf core
+rm -rf canine-chain
 git clone https://github.com/JackalLabs/canine-chain.git
-cd core
+cd canine-chain
 
 # Compile genesis version v1.1.1
 git checkout v1.1.1
