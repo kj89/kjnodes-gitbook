@@ -1,6 +1,6 @@
 # Installation
 
-**Chain ID**: nibiru-testnet-1 | **Latest Version Tag**: v0.15.0
+**chain id**: nibiru-testnet-1 | **latest version tag**: v0.15.0 | **custom port**: 39
 
 ### Setup validator name
 

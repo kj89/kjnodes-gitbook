@@ -1,6 +1,6 @@
 # Installation
 
-**Chain ID**: stride-1 | **Latest Version Tag**: v2.0.3
+**chain id**: stride-1 | **latest version tag**: v2.0.3 | **custom port**: 16
 
 ### Setup validator name
 

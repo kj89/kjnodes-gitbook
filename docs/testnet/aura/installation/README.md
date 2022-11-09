@@ -1,6 +1,6 @@
 # Installation
 
-**Chain ID**: euphoria-1 | **Latest Version Tag**: euphoria_v0.3.3
+**chain id**: euphoria-1 | **latest version tag**: euphoria_v0.3.3 | **custom port**: 17
 
 ### Setup validator name
 

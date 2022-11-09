@@ -1,6 +1,6 @@
 # Installation
 
-**Chain ID**: kaiyo-1 | **Latest Version Tag**: v0.6.4
+**chain id**: kaiyo-1 | **latest version tag**: v0.6.4 | **custom port**: 13
 
 ### Setup validator name
 

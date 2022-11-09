@@ -1,6 +1,6 @@
 # Installation
 
-**Chain ID**: defund-private-3 | **Latest Version Tag**: v0.1.0
+**chain id**: defund-private-3 | **latest version tag**: v0.1.0 | **custom port**: 40
 
 ### Setup validator name
 

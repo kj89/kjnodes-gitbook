@@ -1,6 +1,6 @@
 # Installation
 
-**Chain ID**: atlantic-1 | **Latest Version Tag**: 1.2.2beta-postfix
+**chain id**: atlantic-1 | **latest version tag**: 1.2.2beta-postfix | **custom port**: 12
 
 ### Setup validator name
 

@@ -1,6 +1,6 @@
 # Installation
 
-**Chain ID**: reb_1111-1 | **Latest Version Tag**: v0.2.0
+**chain id**: reb_1111-1 | **latest version tag**: v0.2.0 | **custom port**: 21
 
 ### Setup validator name
 

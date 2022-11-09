@@ -1,6 +1,6 @@
 # Installation
 
-**Chain ID**: jackal-1 | **Latest Version Tag**: v1.1.2-hotfix
+**chain id**: jackal-1 | **latest version tag**: v1.1.2-hotfix | **custom port**: 37
 
 ### Setup validator name
 

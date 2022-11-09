@@ -1,6 +1,6 @@
 # Installation
 
-**Chain ID**: agoric-3 | **Latest Version Tag**: pismoA
+**chain id**: agoric-3 | **latest version tag**: pismoA | **custom port**: 27
 
 ### Setup validator name
 

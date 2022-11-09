@@ -1,6 +1,6 @@
 # Installation
 
-**Chain ID**: innuendo-3 | **Latest Version Tag**: v0.10.0
+**chain id**: innuendo-3 | **latest version tag**: v0.10.0 | **custom port**: 11
 
 ### Setup validator name
 

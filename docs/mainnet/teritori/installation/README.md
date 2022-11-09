@@ -1,6 +1,6 @@
 # Installation
 
-**Chain ID**: teritori-1 | **Latest Version Tag**: v1.3.0
+**chain id**: teritori-1 | **latest version tag**: v1.3.0 | **custom port**: 19
 
 ### Setup validator name
 

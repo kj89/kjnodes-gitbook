@@ -1,6 +1,6 @@
 # Installation
 
-**Chain ID**: ${CHAIN_ID} | **Latest Version Tag**: ${LATEST_VERSION}
+**chain id**: ${CHAIN_ID} | **latest version tag**: ${LATEST_VERSION} | **custom port**: ${CHAIN_PORT}
 
 ### Setup validator name
 
