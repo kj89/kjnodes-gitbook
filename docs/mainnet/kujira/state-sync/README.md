@@ -4,8 +4,6 @@ description: With our state sync services you will be able to catch up latest ch
 
 # State sync
 
-With live editing you can start making changes to your internal documentation on the spot. There's no need to create a change request first.
-
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/kujira.png" width="150" alt=""><figcaption></figcaption></figure>
 
 {% hint style='info' %}
