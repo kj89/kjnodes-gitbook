@@ -32,8 +32,8 @@ ${CHAIN_TENDERSEED_PEER}@${CHAIN_NAME}.rpc.kjnodes.com:${CHAIN_PORT}659
 curl -Ls https://snapshots.kjnodes.com/${CHAIN_NAME}/addrbook.json > $HOME/${CHAIN_DIR}/config/addrbook.json
 ```
 
-**live-peers**: ${CHAIN_LIVE_PEERS_COUNT}
+**live-peers** | ${CHAIN_LIVE_PEERS_COUNT}
 ```
-PEERS="${CHAIN_LIVE_PEERS}"
-sed -i 's|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/${CHAIN_DIR}/config/config.toml
+peers="${CHAIN_LIVE_PEERS}"
+sed -i 's|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/${CHAIN_DIR}/config/config.toml
 ```
