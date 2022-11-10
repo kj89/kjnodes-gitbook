@@ -14,6 +14,8 @@
 
 <img src=".gitbook/assets/rebus.png" alt="" data-size="line"> [Rebus](mainnet/rebus/)
 
+<img src=".gitbook/assets/osmosis.png" alt="" data-size="line"> [Osmosis](mainnet/osmosis/)
+
 
 ## TESTNET
 

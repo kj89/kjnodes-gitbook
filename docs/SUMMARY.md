@@ -40,6 +40,12 @@
   * [State sync](mainnet/rebus/state-sync/README.md)
   * [Useful commands](mainnet/rebus/useful-commands/README.md)
 
+* [Osmosis](mainnet/osmosis/README.md)
+  * [Installation](mainnet/osmosis/installation/README.md)
+  * [Snapshot](mainnet/osmosis/snapshot/README.md)
+  * [State sync](mainnet/osmosis/state-sync/README.md)
+  * [Useful commands](mainnet/osmosis/useful-commands/README.md)
+
 
 ## TESTNET
 
