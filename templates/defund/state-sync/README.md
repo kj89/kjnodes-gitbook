@@ -1,4 +1,6 @@
-# ♻ State sync
+# State sync
+
+<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/${PROJECT_NAME}.png" width="150" alt=""><figcaption></figcaption></figure>
 
 {% hint style='info' %}
 State Sync allows a new node to join the network by fetching a snapshot of the application state 

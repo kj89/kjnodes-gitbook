@@ -1,5 +1,7 @@
 # Installation
 
+<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/nibiru.png" width="150" alt=""><figcaption></figcaption></figure>
+
 **chain id**: nibiru-testnet-1 | **latest version tag**: v0.15.0 | **custom port**: 39
 
 ### Setup validator name

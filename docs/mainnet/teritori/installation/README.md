@@ -1,5 +1,7 @@
 # Installation
 
+<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/teritori.png" width="150" alt=""><figcaption></figcaption></figure>
+
 **chain id**: teritori-1 | **latest version tag**: v1.3.0 | **custom port**: 19
 
 ### Setup validator name

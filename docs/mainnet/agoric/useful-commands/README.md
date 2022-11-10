@@ -1,4 +1,6 @@
-# 🧰 Useful commands
+# Useful commands
+
+<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/agoric.png" width="150" alt=""><figcaption></figcaption></figure>
 
 {% hint style='info' %}
 This page contains list of useful commands for node operators.

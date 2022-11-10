@@ -1,5 +1,7 @@
 # Installation
 
+<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/jackal.png" width="150" alt=""><figcaption></figcaption></figure>
+
 **chain id**: jackal-1 | **latest version tag**: v1.1.2-hotfix | **custom port**: 37
 
 ### Setup validator name

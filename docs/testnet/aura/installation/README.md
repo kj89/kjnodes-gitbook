@@ -1,5 +1,7 @@
 # Installation
 
+<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/aura.png" width="150" alt=""><figcaption></figcaption></figure>
+
 **chain id**: euphoria-1 | **latest version tag**: euphoria_v0.3.3 | **custom port**: 17
 
 ### Setup validator name
