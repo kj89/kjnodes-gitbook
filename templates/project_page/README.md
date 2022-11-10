@@ -7,32 +7,32 @@ ${CHAIN_SHORT_DESCRIPTION}
 
 Website: [${CHAIN_WEBSITE}](${CHAIN_WEBSITE})
 
+${RESTAKE}
 ## Public endpoints
 
 * rpc: [https://${CHAIN_NAME}.rpc.kjnodes.com](https://${CHAIN_NAME}.rpc.kjnodes.com)
 * api: [https://${CHAIN_NAME}.api.kjnodes.com](https://${CHAIN_NAME}.api.kjnodes.com)
 
-## Public peers
+## Peering
 
-### state-sync
+**state-sync**
 
 ```
 ${CHAIN_PEER}@${CHAIN_NAME}.rpc.kjnodes.com:${CHAIN_PORT}656
 ```
 
-### seed-node
+**seed-node**
 
 ```
 ${CHAIN_TENDERSEED_PEER}@${CHAIN_NAME}.rpc.kjnodes.com:${CHAIN_PORT}659
 ```
 
-${RESTAKE}
-## Address book
+**addrbook**
 ```
 curl -Ls https://snapshots.kjnodes.com/${CHAIN_NAME}/addrbook.json > $HOME/${CHAIN_DIR}/config/addrbook.json
 ```
 
-## Live peers (${CHAIN_LIVE_PEERS_COUNT})
+**live-peers**: ${CHAIN_LIVE_PEERS_COUNT}
 ```
 PEERS="${CHAIN_LIVE_PEERS}"
 sed -i 's|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/${CHAIN_DIR}/config/config.toml
