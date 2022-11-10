@@ -4,7 +4,7 @@
 
 Osmosis is a DEX protocol, which means it uses smart contracts  to determine the price of digital assets, to produce liquidity  via a peer-to-peer (P2P) methodology, and to exact trades between users
 
-**Chain ID**: osmosis-1 | **Latest Version Tag**: v12.2.0
+**Chain ID**: osmosis-1 | **Latest Version Tag**: v12.2.0 | **Wasm**: ON
 
 Website: [https://osmosis.zone](https://osmosis.zone)
 
