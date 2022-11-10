@@ -1,3 +1,7 @@
+---
+description: With state sync you will be able to catch up latest chain block in matter of minutes
+---
+
 # State sync
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/${PROJECT_NAME}.png" width="150" alt=""><figcaption></figcaption></figure>

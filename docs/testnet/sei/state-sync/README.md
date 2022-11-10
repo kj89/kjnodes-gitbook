@@ -1,4 +1,10 @@
+---
+description: With state sync you will be able to catch up latest chain block in matter of minutes
+---
+
 # State sync
+
+With live editing you can start making changes to your internal documentation on the spot. There's no need to create a change request first.
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/sei.png" width="150" alt=""><figcaption></figcaption></figure>
 

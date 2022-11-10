@@ -1,3 +1,7 @@
+---
+description: Catch the latest block faster by using our daily snapshots.
+---
+
 # Snapshot
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/sei.png" width="150" alt=""><figcaption></figcaption></figure>
@@ -12,7 +16,7 @@ snapshot server is periodically beeing state-synced.
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 10665813 | 2 hours ago | [snapshot (2.55 GB)](https://snapshots.kjnodes.com/sei-testnet/snapshot\_latest.tar.lz4) |
+| 10665813 | 4 hours ago | [snapshot (2.55 GB)](https://snapshots.kjnodes.com/sei-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

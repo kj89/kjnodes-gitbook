@@ -20,6 +20,7 @@ description: Discover base tools contributed to the projects by kjnodes team.
 
 <img src=".gitbook/assets/osmosis.png" alt="" data-size="line"> [Osmosis](mainnet/osmosis/)
 
+
 ## TESTNET
 
 <img src=".gitbook/assets/aura.png" alt="" data-size="line"> [Aura](testnet/aura/)
@@ -33,3 +34,4 @@ description: Discover base tools contributed to the projects by kjnodes team.
 <img src=".gitbook/assets/quicksilver.png" alt="" data-size="line"> [Quicksilver](testnet/quicksilver/)
 
 <img src=".gitbook/assets/sei.png" alt="" data-size="line"> [Sei](testnet/sei/)
+
