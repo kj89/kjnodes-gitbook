@@ -43,6 +43,7 @@ git checkout v1.1.2
 make build
 mkdir -p $HOME/.teritorid/cosmovisor/genesis/bin
 mv build/teritorid $HOME/.teritorid/cosmovisor/genesis/bin/
+rm -rf build
 
 # Compile latest version v1.3.0
 git checkout v1.3.0

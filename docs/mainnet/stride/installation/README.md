@@ -43,6 +43,7 @@ git checkout v1.0.2
 make build
 mkdir -p $HOME/.stride/cosmovisor/genesis/bin
 mv build/strided $HOME/.stride/cosmovisor/genesis/bin/
+rm -rf build
 
 # Compile latest version v2.0.3
 git checkout v2.0.3

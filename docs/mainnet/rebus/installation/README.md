@@ -43,6 +43,7 @@ git checkout v0.1.0
 make build
 mkdir -p $HOME/.rebusd/cosmovisor/genesis/bin
 mv build/rebusd $HOME/.rebusd/cosmovisor/genesis/bin/
+rm -rf build
 
 # Compile latest version v0.2.0
 git checkout v0.2.0

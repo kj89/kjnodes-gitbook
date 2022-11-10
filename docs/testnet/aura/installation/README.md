@@ -43,6 +43,7 @@ git checkout euphoria_4027003
 make build
 mkdir -p $HOME/.aura/cosmovisor/genesis/bin
 mv build/aurad $HOME/.aura/cosmovisor/genesis/bin/
+rm -rf build
 
 # Compile latest version euphoria_v0.3.3
 git checkout euphoria_v0.3.3

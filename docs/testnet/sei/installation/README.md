@@ -43,6 +43,7 @@ git checkout 1.0.6beta-val-count-fix
 make build
 mkdir -p $HOME/.sei/cosmovisor/genesis/bin
 mv build/seid $HOME/.sei/cosmovisor/genesis/bin/
+rm -rf build
 
 # Compile latest version 1.2.2beta-postfix
 git checkout 1.2.2beta-postfix

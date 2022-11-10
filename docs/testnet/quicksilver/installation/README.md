@@ -43,6 +43,7 @@ git checkout v0.6.1
 make build
 mkdir -p $HOME/.quicksilverd/cosmovisor/genesis/bin
 mv build/quicksilverd $HOME/.quicksilverd/cosmovisor/genesis/bin/
+rm -rf build
 
 # Compile latest version v0.10.0
 git checkout v0.10.0

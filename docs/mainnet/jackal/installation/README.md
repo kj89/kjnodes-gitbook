@@ -43,6 +43,7 @@ git checkout v1.1.1
 make build
 mkdir -p $HOME/.canine/cosmovisor/genesis/bin
 mv build/canined $HOME/.canine/cosmovisor/genesis/bin/
+rm -rf build
 
 # Compile latest version v1.1.2-hotfix
 git checkout v1.1.2-hotfix

@@ -43,6 +43,7 @@ git checkout v1.0.0
 make build
 mkdir -p $HOME/.osmosisd/cosmovisor/genesis/bin
 mv build/osmosisd $HOME/.osmosisd/cosmovisor/genesis/bin/
+rm -rf build
 
 # Compile latest version v12.2.0
 git checkout v12.2.0
