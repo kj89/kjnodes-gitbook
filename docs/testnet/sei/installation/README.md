@@ -49,7 +49,7 @@ rm -rf build
 git checkout 1.2.2beta-postfix
 make build
 mkdir -p $HOME/.sei/cosmovisor/upgrades/1.2.2beta-postfix/bin
-mv build/seid $HOME/$.sei/cosmovisor/upgrades/$1.2.2beta-postfix/bin/
+mv build/seid $HOME/.sei/cosmovisor/upgrades/1.2.2beta-postfix/bin/
 rm build/seid -rf
 ```
 

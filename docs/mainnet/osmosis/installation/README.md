@@ -49,7 +49,7 @@ rm -rf build
 git checkout v12.2.0
 make build
 mkdir -p $HOME/.osmosisd/cosmovisor/upgrades/v12.2.0/bin
-mv build/osmosisd $HOME/$.osmosisd/cosmovisor/upgrades/$v12.2.0/bin/
+mv build/osmosisd $HOME/.osmosisd/cosmovisor/upgrades/v12.2.0/bin/
 rm build/osmosisd -rf
 ```
 

@@ -49,7 +49,7 @@ rm -rf build
 git checkout v0.10.0
 make build
 mkdir -p $HOME/.quicksilverd/cosmovisor/upgrades/v0.10.0/bin
-mv build/quicksilverd $HOME/$.quicksilverd/cosmovisor/upgrades/$v0.10.0/bin/
+mv build/quicksilverd $HOME/.quicksilverd/cosmovisor/upgrades/v0.10.0/bin/
 rm build/quicksilverd -rf
 ```
 

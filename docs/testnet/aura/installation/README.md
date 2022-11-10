@@ -49,7 +49,7 @@ rm -rf build
 git checkout euphoria_v0.3.3
 make build
 mkdir -p $HOME/.aura/cosmovisor/upgrades/euphoria_v0.3.3/bin
-mv build/aurad $HOME/$.aura/cosmovisor/upgrades/$euphoria_v0.3.3/bin/
+mv build/aurad $HOME/.aura/cosmovisor/upgrades/euphoria_v0.3.3/bin/
 rm build/aurad -rf
 ```
 

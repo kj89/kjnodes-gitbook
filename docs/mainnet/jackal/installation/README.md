@@ -49,7 +49,7 @@ rm -rf build
 git checkout v1.1.2-hotfix
 make build
 mkdir -p $HOME/.canine/cosmovisor/upgrades/v1.1.2-hotfix/bin
-mv build/canined $HOME/$.canine/cosmovisor/upgrades/$v1.1.2-hotfix/bin/
+mv build/canined $HOME/.canine/cosmovisor/upgrades/v1.1.2-hotfix/bin/
 rm build/canined -rf
 ```
 
