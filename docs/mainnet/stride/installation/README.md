@@ -6,7 +6,7 @@ description: Setting up your validator node was never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/stride.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**chain id**: stride-1 | **latest version tag**: v2.0.3 | **custom port**: 16
+**Chain ID**: stride-1 | **Latest Version Tag**: v2.0.3 | **Custom Port**: 16
 
 ### Setup validator name
 

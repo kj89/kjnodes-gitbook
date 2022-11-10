@@ -6,7 +6,7 @@ description: Setting up your validator node was never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/osmosis.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**chain id**: osmosis-1 | **latest version tag**: v12.2.0 | **custom port**: 29
+**Chain ID**: osmosis-1 | **Latest Version Tag**: v12.2.0 | **Custom Port**: 29
 
 ### Setup validator name
 

@@ -6,7 +6,7 @@ description: Setting up your validator node was never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/ollo.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**chain id**: ollo-testnet-1 | **latest version tag**: v0.0.1 | **custom port**: 32
+**Chain ID**: ollo-testnet-1 | **Latest Version Tag**: v0.0.1 | **Custom Port**: 32
 
 ### Setup validator name
 

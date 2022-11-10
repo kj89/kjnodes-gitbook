@@ -6,7 +6,7 @@ description: Setting up your validator node was never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/rebus.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**chain id**: reb_1111-1 | **latest version tag**: v0.2.0 | **custom port**: 21
+**Chain ID**: reb_1111-1 | **Latest Version Tag**: v0.2.0 | **Custom Port**: 21
 
 ### Setup validator name
 

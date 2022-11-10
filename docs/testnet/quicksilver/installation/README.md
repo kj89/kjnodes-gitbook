@@ -6,7 +6,7 @@ description: Setting up your validator node was never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/quicksilver.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**chain id**: innuendo-3 | **latest version tag**: v0.10.0 | **custom port**: 11
+**Chain ID**: innuendo-3 | **Latest Version Tag**: v0.10.0 | **Custom Port**: 11
 
 ### Setup validator name
 

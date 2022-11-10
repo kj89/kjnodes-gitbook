@@ -6,7 +6,7 @@ description: Setting up your validator node was never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/agoric.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**chain id**: agoric-3 | **latest version tag**: pismoA | **custom port**: 27
+**Chain ID**: agoric-3 | **Latest Version Tag**: pismoA | **Custom Port**: 27
 
 ### Setup validator name
 

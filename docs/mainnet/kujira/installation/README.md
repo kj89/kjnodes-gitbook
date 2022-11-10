@@ -6,7 +6,7 @@ description: Setting up your validator node was never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/kujira.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**chain id**: kaiyo-1 | **latest version tag**: v0.6.4 | **custom port**: 13
+**Chain ID**: kaiyo-1 | **Latest Version Tag**: v0.6.4 | **Custom Port**: 13
 
 ### Setup validator name
 

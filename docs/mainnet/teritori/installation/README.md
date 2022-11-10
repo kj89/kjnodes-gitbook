@@ -6,7 +6,7 @@ description: Setting up your validator node was never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/teritori.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**chain id**: teritori-1 | **latest version tag**: v1.3.0 | **custom port**: 19
+**Chain ID**: teritori-1 | **Latest Version Tag**: v1.3.0 | **Custom Port**: 19
 
 ### Setup validator name
 

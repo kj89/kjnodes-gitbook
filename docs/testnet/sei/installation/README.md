@@ -6,7 +6,7 @@ description: Setting up your validator node was never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/sei.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**chain id**: atlantic-1 | **latest version tag**: 1.2.2beta-postfix | **custom port**: 12
+**Chain ID**: atlantic-1 | **Latest Version Tag**: 1.2.2beta-postfix | **Custom Port**: 12
 
 ### Setup validator name
 
