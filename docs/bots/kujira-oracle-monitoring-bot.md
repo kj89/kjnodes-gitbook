@@ -1,7 +1,7 @@
 ---
 description: >-
-  Don't miss any chain proposals with our free Telegram bot. Proposal bot will
-  notify its subscribers every time when new proposal kicks in.
+  Our free Telegram bot is the simpliest way to monitor your Kujira Oracle Feeder health status.
+  Get notified when your validator starts to miss Oracle Votes.
 ---
 
 # Kujira Oracle Monitoring Bot
