@@ -2,7 +2,7 @@
 description: Discover base tools contributed to the projects by kjnodes team.
 ---
 
-# Supported chains
+# 🖤 Supported chains
 
 ## MAINNET
 
@@ -20,7 +20,6 @@ description: Discover base tools contributed to the projects by kjnodes team.
 
 <img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/osmosis.png" alt="" data-size="line"> [Osmosis](mainnet/osmosis/)
 
-
 ## TESTNET
 
 <img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/aura.png" alt="" data-size="line"> [Aura](testnet/aura/)
@@ -34,4 +33,3 @@ description: Discover base tools contributed to the projects by kjnodes team.
 <img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/quicksilver.png" alt="" data-size="line"> [Quicksilver](testnet/quicksilver/)
 
 <img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/sei.png" alt="" data-size="line"> [Sei](testnet/sei/)
-
