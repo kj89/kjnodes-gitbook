@@ -6,32 +6,32 @@ description: Discover base tools contributed to the projects by kjnodes team.
 
 ## MAINNET
 
-<img src=".gitbook/assets/agoric.png" alt="" data-size="line"> [Agoric](mainnet/agoric/)
+<img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/agoric.png" alt="" data-size="line"> [Agoric](mainnet/agoric/)
 
-<img src=".gitbook/assets/jackal.png" alt="" data-size="line"> [Jackal](mainnet/jackal/)
+<img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/jackal.png" alt="" data-size="line"> [Jackal](mainnet/jackal/)
 
-<img src=".gitbook/assets/kujira.png" alt="" data-size="line"> [Kujira](mainnet/kujira/)
+<img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/kujira.png" alt="" data-size="line"> [Kujira](mainnet/kujira/)
 
-<img src=".gitbook/assets/stride.png" alt="" data-size="line"> [Stride](mainnet/stride/)
+<img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/stride.png" alt="" data-size="line"> [Stride](mainnet/stride/)
 
-<img src=".gitbook/assets/teritori.png" alt="" data-size="line"> [Teritori](mainnet/teritori/)
+<img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/teritori.png" alt="" data-size="line"> [Teritori](mainnet/teritori/)
 
-<img src=".gitbook/assets/rebus.png" alt="" data-size="line"> [Rebus](mainnet/rebus/)
+<img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/rebus.png" alt="" data-size="line"> [Rebus](mainnet/rebus/)
 
-<img src=".gitbook/assets/osmosis.png" alt="" data-size="line"> [Osmosis](mainnet/osmosis/)
+<img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/osmosis.png" alt="" data-size="line"> [Osmosis](mainnet/osmosis/)
 
 
 ## TESTNET
 
-<img src=".gitbook/assets/aura.png" alt="" data-size="line"> [Aura](testnet/aura/)
+<img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/aura.png" alt="" data-size="line"> [Aura](testnet/aura/)
 
-<img src=".gitbook/assets/defund.png" alt="" data-size="line"> [Defund](testnet/defund/)
+<img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/defund.png" alt="" data-size="line"> [Defund](testnet/defund/)
 
-<img src=".gitbook/assets/nibiru.png" alt="" data-size="line"> [Nibiru](testnet/nibiru/)
+<img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/nibiru.png" alt="" data-size="line"> [Nibiru](testnet/nibiru/)
 
-<img src=".gitbook/assets/ollo.png" alt="" data-size="line"> [Ollo](testnet/ollo/)
+<img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/ollo.png" alt="" data-size="line"> [Ollo](testnet/ollo/)
 
-<img src=".gitbook/assets/quicksilver.png" alt="" data-size="line"> [Quicksilver](testnet/quicksilver/)
+<img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/quicksilver.png" alt="" data-size="line"> [Quicksilver](testnet/quicksilver/)
 
-<img src=".gitbook/assets/sei.png" alt="" data-size="line"> [Sei](testnet/sei/)
+<img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/sei.png" alt="" data-size="line"> [Sei](testnet/sei/)
 
