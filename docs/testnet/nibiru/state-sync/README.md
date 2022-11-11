@@ -44,6 +44,8 @@ sed -i.bak -e "s|^persistent_peers *=.*|persistent_peers = \"$STATE_SYNC_PEER\"|
 mv $HOME/.nibid/priv_validator_state.json.backup $HOME/.nibid/data/priv_validator_state.json
 ```
 
+
+
 ### Restart the service and check the log
 
 ```bash

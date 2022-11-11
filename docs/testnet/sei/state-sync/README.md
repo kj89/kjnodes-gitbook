@@ -44,6 +44,12 @@ sed -i.bak -e "s|^persistent_peers *=.*|persistent_peers = \"$STATE_SYNC_PEER\"|
 mv $HOME/.sei/priv_validator_state.json.backup $HOME/.sei/data/priv_validator_state.json
 ```
 
+### Download the latest wasm
+
+```bash
+curl -L https://snapshots.kjnodes.com/sei_testnet/wasm_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.sei
+```
+
 ### Restart the service and check the log
 
 ```bash
