@@ -46,6 +46,10 @@ mv $HOME/.teritorid/priv_validator_state.json.backup $HOME/.teritorid/data/priv_
 
 ### Download the latest wasm
 
+{% hint style='info' %}
+Currently state sync does not support copy of the `wasm` folder. Therefore, you will have to download it manually.
+{% endhint %}
+
 ```bash
 curl -L https://snapshots.kjnodes.com/teritori/wasm_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.teritorid
 ```
