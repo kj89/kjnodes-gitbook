@@ -38,59 +38,17 @@ source $HOME/.profile
 
 ```bash
 cd $HOME
-rm -rf 
-git clone 
-cd 
-
-# Compile genesis version genesis
-git checkout genesis
-make build
-mkdir -p $HOME/.gravity/cosmovisor/genesis/bin
-mv gravity $HOME/.gravity/cosmovisor/genesis/bin/
-rm -rf build
-
-# Compile latest version pleiades
-git checkout pleiades
-make build
-mkdir -p $HOME/.gravity/cosmovisor/upgrades/pleiades/bin
-mv gravity $HOME/.gravity/cosmovisor/upgrades/pleiades/bin/
-rm gravity -rf
-```
-
-### Install Cosmovisor and create a service
-
-```bash
-curl -Ls https://github.com/cosmos/cosmos-sdk/releases/download/cosmovisor%2Fv1.3.0/cosmovisor-v1.3.0-linux-amd64.tar.gz | tar xz
-chmod 755 cosmovisor
-sudo mv cosmovisor /usr/bin/cosmovisor
-
-sudo tee /etc/systemd/system/gravityd.service > /dev/null << EOF
-[Unit]
-Description=gravitybridge node service
-After=network-online.target
-[Service]
-User=$USER
-ExecStart=/usr/bin/cosmovisor run start
-Restart=on-failure
-RestartSec=10
-LimitNOFILE=65535
-Environment="DAEMON_HOME=$HOME/.gravity"
-Environment="DAEMON_NAME=gravityd"
-Environment="UNSAFE_SKIP_BACKUP=true"
-[Install]
-WantedBy=multi-user.target
-EOF
-sudo systemctl daemon-reload
-sudo systemctl enable gravityd
+mkdir gravity-bin && cd gravity-bin
+wget -O gravityd https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/v1.7.2/gravity-linux-amd64
+wget -O gbt https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/v1.7.2/gbt
+chmod +x *
+sudo mv * /usr/bin/
 ```
 
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.gravity/cosmovisor/upgrades/pleiades $HOME/.gravity/cosmovisor/current
-sudo ln -s $HOME/.gravity/cosmovisor/current/bin/gravityd /usr/local/bin/gravityd
 gravityd config chain-id gravity-bridge-3
-gravityd config keyring-backend file
 gravityd config node tcp://localhost:26657
 gravityd init $MONIKER --chain-id gravity-bridge-3
 curl -Ls https://snapshots.kjnodes.com/gravitybridge/genesis.json > $HOME/.gravity/config/genesis.json
