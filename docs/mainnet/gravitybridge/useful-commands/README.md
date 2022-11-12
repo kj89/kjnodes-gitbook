@@ -299,7 +299,7 @@ sudo rm /etc/systemd/system/gravityd.service
 sudo systemctl daemon-reload
 rm -rf $(which gravityd) 
 rm -rf $HOME/.gravity
-rm -rf $HOME/
+rm -rf $HOME/gravity-bin
 ```
 
 ## ⚙️ Service Management
