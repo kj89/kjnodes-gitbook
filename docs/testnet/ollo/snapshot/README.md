@@ -28,7 +28,7 @@ cp $HOME/.ollo/data/priv_validator_state.json $HOME/.ollo/priv_validator_state.j
 rm -rf $HOME/.ollo/data
 ```
 
-### Download the latest snapshot
+### Download latest snapshot
 
 ```bash
 curl -L https://snapshots.kjnodes.com/ollo-testnet/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.ollo

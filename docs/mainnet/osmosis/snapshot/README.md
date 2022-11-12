@@ -28,7 +28,7 @@ cp $HOME/.osmosisd/data/priv_validator_state.json $HOME/.osmosisd/priv_validator
 rm -rf $HOME/.osmosisd/data
 ```
 
-### Download the latest snapshot
+### Download latest snapshot
 
 ```bash
 curl -L https://snapshots.kjnodes.com/osmosis/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.osmosisd

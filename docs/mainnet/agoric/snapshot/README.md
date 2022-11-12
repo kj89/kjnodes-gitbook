@@ -28,7 +28,7 @@ cp $HOME/.agoric/data/priv_validator_state.json $HOME/.agoric/priv_validator_sta
 rm -rf $HOME/.agoric/data
 ```
 
-### Download the latest snapshot
+### Download latest snapshot
 
 ```bash
 curl -L https://snapshots.kjnodes.com/agoric/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.agoric

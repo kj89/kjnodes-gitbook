@@ -16,7 +16,7 @@ snapshot server is periodically beeing state-synced.
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 12816376 | 27 minutes ago | [snapshot (4.42 GB)](https://snapshots.kjnodes.com/cosmoshub/snapshot\_latest.tar.lz4) |
+| 12816376 | 29 minutes ago | [snapshot (4.42 GB)](https://snapshots.kjnodes.com/cosmoshub/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
@@ -28,7 +28,7 @@ cp $HOME/.gaiad/data/priv_validator_state.json $HOME/.gaiad/priv_validator_state
 rm -rf $HOME/.gaiad/data
 ```
 
-### Download the latest snapshot
+### Download latest snapshot
 
 ```bash
 curl -L https://snapshots.kjnodes.com/cosmoshub/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.gaiad

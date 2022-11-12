@@ -28,7 +28,7 @@ cp $HOME/.rebusd/data/priv_validator_state.json $HOME/.rebusd/priv_validator_sta
 rm -rf $HOME/.rebusd/data
 ```
 
-### Download the latest snapshot
+### Download latest snapshot
 
 ```bash
 curl -L https://snapshots.kjnodes.com/rebus/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.rebusd

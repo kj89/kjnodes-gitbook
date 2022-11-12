@@ -28,7 +28,7 @@ cp $HOME/.quicksilverd/data/priv_validator_state.json $HOME/.quicksilverd/priv_v
 rm -rf $HOME/.quicksilverd/data
 ```
 
-### Download the latest snapshot
+### Download latest snapshot
 
 ```bash
 curl -L https://snapshots.kjnodes.com/quicksilver-testnet/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.quicksilverd

@@ -28,7 +28,7 @@ cp $HOME/.defund/data/priv_validator_state.json $HOME/.defund/priv_validator_sta
 rm -rf $HOME/.defund/data
 ```
 
-### Download the latest snapshot
+### Download latest snapshot
 
 ```bash
 curl -L https://snapshots.kjnodes.com/defund-testnet/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.defund

@@ -28,7 +28,7 @@ cp $HOME/.canine/data/priv_validator_state.json $HOME/.canine/priv_validator_sta
 rm -rf $HOME/.canine/data
 ```
 
-### Download the latest snapshot
+### Download latest snapshot
 
 ```bash
 curl -L https://snapshots.kjnodes.com/jackal/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.canine

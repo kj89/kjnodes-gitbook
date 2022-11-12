@@ -44,7 +44,7 @@ sed -i.bak -e "s|^persistent_peers *=.*|persistent_peers = \"$STATE_SYNC_PEER\"|
 mv $HOME/.sei/priv_validator_state.json.backup $HOME/.sei/data/priv_validator_state.json
 ```
 
-### Download the latest wasm
+### Download latest wasm
 
 {% hint style='info' %}
 Currently state sync does not support copy of the `wasm` folder. Therefore, you will have to download it manually.

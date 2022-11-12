@@ -28,7 +28,7 @@ cp $HOME/.sei/data/priv_validator_state.json $HOME/.sei/priv_validator_state.jso
 rm -rf $HOME/.sei/data
 ```
 
-### Download the latest snapshot
+### Download latest snapshot
 
 ```bash
 curl -L https://snapshots.kjnodes.com/sei-testnet/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.sei

@@ -28,7 +28,7 @@ cp $HOME/.aura/data/priv_validator_state.json $HOME/.aura/priv_validator_state.j
 rm -rf $HOME/.aura/data
 ```
 
-### Download the latest snapshot
+### Download latest snapshot
 
 ```bash
 curl -L https://snapshots.kjnodes.com/aura-testnet/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.aura
