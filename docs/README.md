@@ -8,8 +8,6 @@ description: Discover base tools contributed to the projects by kjnodes team.
 
 <img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/agoric.png" alt="" data-size="line"> [Agoric](mainnet/agoric/)
 
-<img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/cosmoshub.png" alt="" data-size="line"> [Cosmoshub](mainnet/cosmoshub/)
-
 <img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/jackal.png" alt="" data-size="line"> [Jackal](mainnet/jackal/)
 
 <img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/kujira.png" alt="" data-size="line"> [Kujira](mainnet/kujira/)
