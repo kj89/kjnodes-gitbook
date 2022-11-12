@@ -70,8 +70,6 @@ sudo systemctl enable gravityd
 ### Initialize the node
 
 ```bash
-gravityd config chain-id gravity-bridge-3
-gravityd config node tcp://localhost:26657
 gravityd init $MONIKER --chain-id gravity-bridge-3
 curl -Ls https://snapshots.kjnodes.com/gravitybridge/genesis.json > $HOME/.gravity/config/genesis.json
 curl -Ls https://snapshots.kjnodes.com/gravitybridge/addrbook.json > $HOME/.gravity/config/addrbook.json
