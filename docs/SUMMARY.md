@@ -19,6 +19,12 @@
   * [State sync](mainnet/cosmoshub/state-sync/README.md)
   * [Useful commands](mainnet/cosmoshub/useful-commands/README.md)
 
+* [Gravitybridge](mainnet/gravitybridge/README.md)
+  * [Installation](mainnet/gravitybridge/installation/README.md)
+  * [Snapshot](mainnet/gravitybridge/snapshot/README.md)
+  * [State sync](mainnet/gravitybridge/state-sync/README.md)
+  * [Useful commands](mainnet/gravitybridge/useful-commands/README.md)
+
 * [Jackal](mainnet/jackal/README.md)
   * [Installation](mainnet/jackal/installation/README.md)
   * [Snapshot](mainnet/jackal/snapshot/README.md)
