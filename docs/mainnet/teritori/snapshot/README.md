@@ -16,7 +16,7 @@ snapshot server is periodically beeing state-synced.
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 588967 | 32 seconds ago | [snapshot (0.64 GB)](https://snapshots.kjnodes.com/teritori/snapshot\_latest.tar.lz4) |
+| 594014 | 8 hours ago | [snapshot (0.79 GB)](https://snapshots.kjnodes.com/teritori/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

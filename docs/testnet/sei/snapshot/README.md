@@ -16,7 +16,7 @@ snapshot server is periodically beeing state-synced.
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 10725662 | 13 hours ago | [snapshot (3.23 GB)](https://snapshots.kjnodes.com/sei-testnet/snapshot\_latest.tar.lz4) |
+| 10824039 | 6 hours ago | [snapshot (3.99 GB)](https://snapshots.kjnodes.com/sei-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
