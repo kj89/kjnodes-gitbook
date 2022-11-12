@@ -45,6 +45,28 @@ chmod +x *
 sudo mv * /usr/bin/
 ```
 
+### Create a service
+
+```bash
+sudo tee /etc/systemd/system/${CHAIN_APP}.service > /dev/null << EOF
+[Unit]
+Description=${CHAIN_NAME} node service
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=$(which ${CHAIN_APP}) start --home $HOME/${CHAIN_DIR}
+Restart=on-failure
+RestartSec=3
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
+EOF
+sudo systemctl daemon-reload
+sudo systemctl enable ${CHAIN_APP}
+```
+
 ### Initialize the node
 
 ```bash

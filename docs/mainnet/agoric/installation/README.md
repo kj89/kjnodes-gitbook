@@ -62,6 +62,28 @@ yarn install && yarn build
 (cd packages/cosmic-swingset && make)
 ```
 
+### Create a service
+
+```bash
+sudo tee /etc/systemd/system/agd.service > /dev/null << EOF
+[Unit]
+Description=agoric node service
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=$(which agd) start --home $HOME/.agoric
+Restart=on-failure
+RestartSec=3
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
+EOF
+sudo systemctl daemon-reload
+sudo systemctl enable agd
+```
+
 ### Initialize the node
 
 ```bash

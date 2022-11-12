@@ -45,6 +45,28 @@ chmod +x *
 sudo mv * /usr/bin/
 ```
 
+### Create a service
+
+```bash
+sudo tee /etc/systemd/system/gravityd.service > /dev/null << EOF
+[Unit]
+Description=gravitybridge node service
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=$(which gravityd) start --home $HOME/.gravity
+Restart=on-failure
+RestartSec=3
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
+EOF
+sudo systemctl daemon-reload
+sudo systemctl enable gravityd
+```
+
 ### Initialize the node
 
 ```bash
