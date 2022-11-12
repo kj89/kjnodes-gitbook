@@ -13,6 +13,12 @@
   * [State sync](mainnet/agoric/state-sync/README.md)
   * [Useful commands](mainnet/agoric/useful-commands/README.md)
 
+* [Cosmoshub](mainnet/cosmoshub/README.md)
+  * [Installation](mainnet/cosmoshub/installation/README.md)
+  * [Snapshot](mainnet/cosmoshub/snapshot/README.md)
+  * [State sync](mainnet/cosmoshub/state-sync/README.md)
+  * [Useful commands](mainnet/cosmoshub/useful-commands/README.md)
+
 * [Jackal](mainnet/jackal/README.md)
   * [Installation](mainnet/jackal/installation/README.md)
   * [Snapshot](mainnet/jackal/snapshot/README.md)
