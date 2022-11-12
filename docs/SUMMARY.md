@@ -100,3 +100,9 @@
   * [State sync](testnet/sei/state-sync/README.md)
   * [Useful commands](testnet/sei/useful-commands/README.md)
 
+* [Teritori](testnet/teritori/README.md)
+  * [Installation](testnet/teritori/installation/README.md)
+  * [Snapshot](testnet/teritori/snapshot/README.md)
+  * [State sync](testnet/teritori/state-sync/README.md)
+  * [Useful commands](testnet/teritori/useful-commands/README.md)
+

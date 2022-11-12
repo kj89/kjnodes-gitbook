@@ -39,3 +39,5 @@ description: Discover base tools contributed to the projects by kjnodes team.
 
 <img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/sei.png" alt="" data-size="line"> [Sei](testnet/sei/)
 
+<img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/teritori.png" alt="" data-size="line"> [Teritori](testnet/teritori/)
+
