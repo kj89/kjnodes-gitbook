@@ -90,13 +90,6 @@ nibid init $MONIKER --chain-id nibiru-testnet-1
 curl -Ls https://snapshots.kjnodes.com/nibiru-testnet/genesis.json > $HOME/.nibid/config/genesis.json
 curl -Ls https://snapshots.kjnodes.com/nibiru-testnet/addrbook.json > $HOME/.nibid/config/addrbook.json
 sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@nibiru-testnet.rpc.kjnodes.com:39659\"|" $HOME/.nibid/config/config.toml
-tee $HOME/.nibid/data/priv_validator_state.json > /dev/null << EOF
-{
-  "height": "0",
-  "round": 0,
-  "step": 0
-}
-EOF
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0unibi\"|" $HOME/.nibid/config/app.toml
 sed -i -e "s|^pruning *=.*|pruning = \"custom\"|" $HOME/.nibid/config/app.toml
 sed -i -e "s|^pruning-keep-recent *=.*|pruning-keep-recent = \"100\"|" $HOME/.nibid/config/app.toml

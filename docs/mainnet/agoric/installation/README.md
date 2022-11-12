@@ -93,13 +93,6 @@ agd init $MONIKER --chain-id agoric-3
 curl -Ls https://snapshots.kjnodes.com/agoric/genesis.json > $HOME/.agoric/config/genesis.json
 curl -Ls https://snapshots.kjnodes.com/agoric/addrbook.json > $HOME/.agoric/config/addrbook.json
 sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@agoric.rpc.kjnodes.com:27659\"|" $HOME/.agoric/config/config.toml
-tee $HOME/.agoric/data/priv_validator_state.json > /dev/null << EOF
-{
-  "height": "0",
-  "round": 0,
-  "step": 0
-}
-EOF
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.025ubld\"|" $HOME/.agoric/config/app.toml
 sed -i -e "s|^pruning *=.*|pruning = \"custom\"|" $HOME/.agoric/config/app.toml
 sed -i -e "s|^pruning-keep-recent *=.*|pruning-keep-recent = \"100\"|" $HOME/.agoric/config/app.toml

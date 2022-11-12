@@ -76,13 +76,6 @@ gravityd init $MONIKER --chain-id gravity-bridge-3
 curl -Ls https://snapshots.kjnodes.com/gravitybridge/genesis.json > $HOME/.gravity/config/genesis.json
 curl -Ls https://snapshots.kjnodes.com/gravitybridge/addrbook.json > $HOME/.gravity/config/addrbook.json
 sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@gravitybridge.rpc.kjnodes.com:26659\"|" $HOME/.gravity/config/config.toml
-tee $HOME/.gravity/data/priv_validator_state.json > /dev/null << EOF
-{
-  "height": "0",
-  "round": 0,
-  "step": 0
-}
-EOF
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0ugraviton\"|" $HOME/.gravity/config/app.toml
 sed -i -e "s|^pruning *=.*|pruning = \"custom\"|" $HOME/.gravity/config/app.toml
 sed -i -e "s|^pruning-keep-recent *=.*|pruning-keep-recent = \"100\"|" $HOME/.gravity/config/app.toml

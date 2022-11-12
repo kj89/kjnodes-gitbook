@@ -96,13 +96,6 @@ aurad init $MONIKER --chain-id euphoria-1
 curl -Ls https://snapshots.kjnodes.com/aura-testnet/genesis.json > $HOME/.aura/config/genesis.json
 curl -Ls https://snapshots.kjnodes.com/aura-testnet/addrbook.json > $HOME/.aura/config/addrbook.json
 sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@aura-testnet.rpc.kjnodes.com:17659\"|" $HOME/.aura/config/config.toml
-tee $HOME/.aura/data/priv_validator_state.json > /dev/null << EOF
-{
-  "height": "0",
-  "round": 0,
-  "step": 0
-}
-EOF
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0ueaura\"|" $HOME/.aura/config/app.toml
 sed -i -e "s|^pruning *=.*|pruning = \"custom\"|" $HOME/.aura/config/app.toml
 sed -i -e "s|^pruning-keep-recent *=.*|pruning-keep-recent = \"100\"|" $HOME/.aura/config/app.toml

@@ -96,13 +96,6 @@ gaiad init $MONIKER --chain-id cosmoshub-4
 curl -Ls https://snapshots.kjnodes.com/cosmoshub/genesis.json > $HOME/.gaiad/config/genesis.json
 curl -Ls https://snapshots.kjnodes.com/cosmoshub/addrbook.json > $HOME/.gaiad/config/addrbook.json
 sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@cosmoshub.rpc.kjnodes.com:34659\"|" $HOME/.gaiad/config/config.toml
-tee $HOME/.gaiad/data/priv_validator_state.json > /dev/null << EOF
-{
-  "height": "0",
-  "round": 0,
-  "step": 0
-}
-EOF
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0uatom\"|" $HOME/.gaiad/config/app.toml
 sed -i -e "s|^pruning *=.*|pruning = \"custom\"|" $HOME/.gaiad/config/app.toml
 sed -i -e "s|^pruning-keep-recent *=.*|pruning-keep-recent = \"100\"|" $HOME/.gaiad/config/app.toml
