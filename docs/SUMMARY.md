@@ -64,6 +64,12 @@
 
 ## TESTNET
 
+* [Agoric](testnet/agoric/README.md)
+  * [Installation](testnet/agoric/installation/README.md)
+  * [Snapshot](testnet/agoric/snapshot/README.md)
+  * [State sync](testnet/agoric/state-sync/README.md)
+  * [Useful commands](testnet/agoric/useful-commands/README.md)
+
 * [Aura](testnet/aura/README.md)
   * [Installation](testnet/aura/installation/README.md)
   * [Snapshot](testnet/aura/snapshot/README.md)

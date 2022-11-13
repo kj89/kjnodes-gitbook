@@ -27,6 +27,8 @@ description: Discover base tools contributed to the projects by kjnodes team.
 
 ## TESTNET
 
+<img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/agoric.png" alt="" data-size="line"> [Agoric](testnet/agoric/)
+
 <img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/aura.png" alt="" data-size="line"> [Aura](testnet/aura/)
 
 <img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/defund.png" alt="" data-size="line"> [Defund](testnet/defund/)
