@@ -82,6 +82,12 @@
   * [State sync](testnet/defund/state-sync/README.md)
   * [Useful commands](testnet/defund/useful-commands/README.md)
 
+* [Gitopia](testnet/gitopia/README.md)
+  * [Installation](testnet/gitopia/installation/README.md)
+  * [Snapshot](testnet/gitopia/snapshot/README.md)
+  * [State sync](testnet/gitopia/state-sync/README.md)
+  * [Useful commands](testnet/gitopia/useful-commands/README.md)
+
 * [Nibiru](testnet/nibiru/README.md)
   * [Installation](testnet/nibiru/installation/README.md)
   * [Snapshot](testnet/nibiru/snapshot/README.md)

@@ -33,6 +33,8 @@ description: Discover base tools contributed to the projects by kjnodes team.
 
 <img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/defund.png" alt="" data-size="line"> [Defund](testnet/defund/)
 
+<img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/gitopia.png" alt="" data-size="line"> [Gitopia](testnet/gitopia/)
+
 <img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/nibiru.png" alt="" data-size="line"> [Nibiru](testnet/nibiru/)
 
 <img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/ollo.png" alt="" data-size="line"> [Ollo](testnet/ollo/)
