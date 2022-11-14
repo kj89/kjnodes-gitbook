@@ -20,7 +20,7 @@ MONIKER="YOUR_MONIKER_GOES_HERE"
 
 ```bash
 sudo apt update
-sudo apt install curl git jq lz4 build-essential -y
+sudo apt install curl git jq lz4 build-essential nodejs=16.* yarn -y
 ```
 
 #### Install GO
@@ -29,48 +29,39 @@ sudo apt install curl git jq lz4 build-essential -y
 sudo rm -rf /usr/local/go
 sudo curl -Ls https://go.dev/dl/go1.19.linux-amd64.tar.gz | sudo tar -C /usr/local -xz
 tee -a $HOME/.profile > /dev/null << EOF
-export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 EOF
 source $HOME/.profile
+```
+
+#### Install Git Remote Helper
+```
+curl https://get.gitopia.com | bash
 ```
 
 ### Download and build binaries
 
 ```bash
-cd $HOME
-rm -rf gitopia
-git clone gitopia://gitopia/gitopia
-cd gitopia
-
-# Compile genesis version v1.2.0
-git checkout v1.2.0
-make build
-mkdir -p $HOME/.gitopia/cosmovisor/genesis/bin
-mv build/gitopiad $HOME/.gitopia/cosmovisor/genesis/bin/
-rm -rf build
-
+cd $HOME && rm -rf gitopia
+git clone -b v1.2.0 gitopia://gitopia/gitopia && cd gitopia
+make install
 ```
 
-### Install Cosmovisor and create a service
+### Create a service
 
 ```bash
-curl -Ls https://github.com/cosmos/cosmos-sdk/releases/download/cosmovisor%2Fv1.3.0/cosmovisor-v1.3.0-linux-amd64.tar.gz | tar xz
-chmod 755 cosmovisor
-sudo mv cosmovisor /usr/bin/cosmovisor
-
 sudo tee /etc/systemd/system/gitopiad.service > /dev/null << EOF
 [Unit]
 Description=gitopia-testnet node service
 After=network-online.target
+
 [Service]
 User=$USER
-ExecStart=/usr/bin/cosmovisor run start
+ExecStart=$(which gitopiad) start --home $HOME/.gitopia
 Restart=on-failure
-RestartSec=10
+RestartSec=3
 LimitNOFILE=65535
-Environment="DAEMON_HOME=$HOME/.gitopia"
-Environment="DAEMON_NAME=gitopiad"
-Environment="UNSAFE_SKIP_BACKUP=true"
+
 [Install]
 WantedBy=multi-user.target
 EOF
@@ -81,10 +72,7 @@ sudo systemctl enable gitopiad
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.gitopia/cosmovisor/genesis $HOME/.gitopia/cosmovisor/current
-sudo ln -s $HOME/.gitopia/cosmovisor/current/bin/gitopiad /usr/local/bin/gitopiad
 gitopiad config chain-id gitopia-janus-testnet-2
-gitopiad config keyring-backend test
 gitopiad config node tcp://localhost:41657
 gitopiad init $MONIKER --chain-id gitopia-janus-testnet-2
 curl -Ls https://snapshots.kjnodes.com/gitopia-testnet/genesis.json > $HOME/.gitopia/config/genesis.json
