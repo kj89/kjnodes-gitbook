@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/kujira.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: kaiyo-1 | **Latest Version Tag**: v0.6.4 | **Custom Port**: 13
+**Chain ID**: kaiyo-1 | **Latest Version Tag**: v0.7.1 | **Custom Port**: 13
 
 ### Setup validator name
 
@@ -49,11 +49,11 @@ mkdir -p $HOME/.kujira/cosmovisor/genesis/bin
 mv build/kujirad $HOME/.kujira/cosmovisor/genesis/bin/
 rm -rf build
 
-# Compile latest version v0.6.4
-git checkout v0.6.4
+# Compile latest version v0.7.1
+git checkout v0.7.1
 make build
-mkdir -p $HOME/.kujira/cosmovisor/upgrades/v0.6.4/bin
-mv build/kujirad $HOME/.kujira/cosmovisor/upgrades/v0.6.4/bin/
+mkdir -p $HOME/.kujira/cosmovisor/upgrades/v0.7.1/bin
+mv build/kujirad $HOME/.kujira/cosmovisor/upgrades/v0.7.1/bin/
 rm build/kujirad -rf
 ```
 
@@ -87,7 +87,7 @@ sudo systemctl enable kujirad
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.kujira/cosmovisor/upgrades/v0.6.4 $HOME/.kujira/cosmovisor/current
+ln -s $HOME/.kujira/cosmovisor/upgrades/v0.7.1 $HOME/.kujira/cosmovisor/current
 sudo ln -s $HOME/.kujira/cosmovisor/current/bin/kujirad /usr/local/bin/kujirad
 kujirad config chain-id kaiyo-1
 kujirad config keyring-backend file
