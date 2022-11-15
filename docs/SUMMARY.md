@@ -88,6 +88,12 @@
   * [State sync](testnet/gitopia/state-sync/README.md)
   * [Useful commands](testnet/gitopia/useful-commands/README.md)
 
+* [Haqq](testnet/haqq/README.md)
+  * [Installation](testnet/haqq/installation/README.md)
+  * [Snapshot](testnet/haqq/snapshot/README.md)
+  * [State sync](testnet/haqq/state-sync/README.md)
+  * [Useful commands](testnet/haqq/useful-commands/README.md)
+
 * [Nibiru](testnet/nibiru/README.md)
   * [Installation](testnet/nibiru/installation/README.md)
   * [Snapshot](testnet/nibiru/snapshot/README.md)
