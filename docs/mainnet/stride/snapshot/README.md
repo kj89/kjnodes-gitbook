@@ -16,7 +16,7 @@ snapshot server is periodically beeing state-synced.
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 1025807 | 23 hours ago | [snapshot (0.74 GB)](https://snapshots.kjnodes.com/stride/snapshot\_latest.tar.lz4) |
+| 1040392 | 16 minutes ago | [snapshot (0.74 GB)](https://snapshots.kjnodes.com/stride/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
