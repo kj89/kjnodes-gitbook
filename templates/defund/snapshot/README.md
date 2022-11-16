@@ -13,7 +13,7 @@ snapshot server is periodically beeing state-synced.
 {% endhint %}
 
 {% hint style='warning' %}
-Defund snapshots are currently going through the maintenance. Please use alternative snapshot sources for now.
+Defund snapshots are under the maintenance. Please use alternative snapshot sources for now:
 - https://www.stakepile.com/defund-testnet-snapshot/
 - https://nodejumper.io/defund-testnet/sync
 {% endhint %}
