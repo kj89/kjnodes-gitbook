@@ -13,6 +13,5 @@ snapshot server is periodically beeing state-synced.
 {% endhint %}
 
 {% hint style='warning' %}
-Gitopia snapshots are under the maintenance. Please use State sync services instead.
-- [Gitopia State-Sync](https://services.kjnodes.com/home/testnet/gitopia/state-sync)
+Snapshots are under the maintenance. Please use State sync services instead.
 {% endhint %}

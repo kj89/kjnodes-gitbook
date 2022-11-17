@@ -12,31 +12,6 @@ Snapshot contains compressed copy of chain data directory. To keep backup files 
 snapshot server is periodically beeing state-synced.
 {% endhint %}
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: v0.15.0
-
-| BLOCK             | AGE             | DOWNLOAD                                                                                            |
-| ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 497073 | 12 hours ago | [snapshot (1.24 GB)](https://snapshots.kjnodes.com/nibiru-testnet/snapshot\_latest.tar.lz4) |
-
-## Instructions
-
-### Stop the service and reset the data
-
-```bash
-sudo systemctl stop nibid
-cp $HOME/.nibid/data/priv_validator_state.json $HOME/.nibid/priv_validator_state.json.backup
-rm -rf $HOME/.nibid/data
-```
-
-### Download latest snapshot
-
-```bash
-curl -L https://snapshots.kjnodes.com/nibiru-testnet/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.nibid
-mv $HOME/.nibid/priv_validator_state.json.backup $HOME/.nibid/data/priv_validator_state.json
-```
-
-### Restart the service and check the log
-
-```bash
-sudo systemctl start nibid && journalctl -u nibid -f --no-hostname -o cat
-```
+{% hint style='warning' %}
+Snapshots are under the maintenance. Please use State sync services instead.
+{% endhint %}

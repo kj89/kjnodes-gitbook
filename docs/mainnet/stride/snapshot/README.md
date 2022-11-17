@@ -12,31 +12,6 @@ Snapshot contains compressed copy of chain data directory. To keep backup files 
 snapshot server is periodically beeing state-synced.
 {% endhint %}
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: v2.0.3
-
-| BLOCK             | AGE             | DOWNLOAD                                                                                            |
-| ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 1069451 | 13 hours ago | [snapshot (0.84 GB)](https://snapshots.kjnodes.com/stride/snapshot\_latest.tar.lz4) |
-
-## Instructions
-
-### Stop the service and reset the data
-
-```bash
-sudo systemctl stop strided
-cp $HOME/.stride/data/priv_validator_state.json $HOME/.stride/priv_validator_state.json.backup
-rm -rf $HOME/.stride/data
-```
-
-### Download latest snapshot
-
-```bash
-curl -L https://snapshots.kjnodes.com/stride/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.stride
-mv $HOME/.stride/priv_validator_state.json.backup $HOME/.stride/data/priv_validator_state.json
-```
-
-### Restart the service and check the log
-
-```bash
-sudo systemctl start strided && journalctl -u strided -f --no-hostname -o cat
-```
+{% hint style='warning' %}
+Snapshots are under the maintenance. Please use State sync services instead.
+{% endhint %}
