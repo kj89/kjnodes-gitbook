@@ -76,12 +76,6 @@
   * [State sync](testnet/aura/state-sync/README.md)
   * [Useful commands](testnet/aura/useful-commands/README.md)
 
-* [Defund](testnet/defund/README.md)
-  * [Installation](testnet/defund/installation/README.md)
-  * [Snapshot](testnet/defund/snapshot/README.md)
-  * [State sync](testnet/defund/state-sync/README.md)
-  * [Useful commands](testnet/defund/useful-commands/README.md)
-
 * [Gitopia](testnet/gitopia/README.md)
   * [Installation](testnet/gitopia/installation/README.md)
   * [Snapshot](testnet/gitopia/snapshot/README.md)
