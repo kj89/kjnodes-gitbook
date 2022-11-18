@@ -12,6 +12,31 @@ Snapshot contains compressed copy of chain data directory. To keep backup files 
 snapshot server is periodically beeing state-synced.
 {% endhint %}
 
-{% hint style='warning' %}
-Snapshots are under the maintenance. Please use State sync services instead.
-{% endhint %}
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v130
+
+| BLOCK             | AGE             | DOWNLOAD                                                                                            |
+| ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
+| 1954596 | 11 hours ago | [snapshot (0.45 GB)](https://snapshots.kjnodes.com/teritori-testnet/snapshot\_latest.tar.lz4) |
+
+## Instructions
+
+### Stop the service and reset the data
+
+```bash
+sudo systemctl stop teritorid
+cp $HOME/.teritorid/data/priv_validator_state.json $HOME/.teritorid/priv_validator_state.json.backup
+rm -rf $HOME/.teritorid/data
+```
+
+### Download latest snapshot
+
+```bash
+curl -L https://snapshots.kjnodes.com/teritori-testnet/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.teritorid
+mv $HOME/.teritorid/priv_validator_state.json.backup $HOME/.teritorid/data/priv_validator_state.json
+```
+
+### Restart the service and check the log
+
+```bash
+sudo systemctl start teritorid && journalctl -u teritorid -f --no-hostname -o cat
+```

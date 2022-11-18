@@ -12,6 +12,31 @@ Snapshot contains compressed copy of chain data directory. To keep backup files 
 snapshot server is periodically beeing state-synced.
 {% endhint %}
 
-{% hint style='warning' %}
-Snapshots are under the maintenance. Please use State sync services instead.
-{% endhint %}
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v071
+
+| BLOCK             | AGE             | DOWNLOAD                                                                                            |
+| ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
+| 5283228 | 10 hours ago | [snapshot (1.53 GB)](https://snapshots.kjnodes.com/kujira/snapshot\_latest.tar.lz4) |
+
+## Instructions
+
+### Stop the service and reset the data
+
+```bash
+sudo systemctl stop kujirad
+cp $HOME/.kujira/data/priv_validator_state.json $HOME/.kujira/priv_validator_state.json.backup
+rm -rf $HOME/.kujira/data
+```
+
+### Download latest snapshot
+
+```bash
+curl -L https://snapshots.kjnodes.com/kujira/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.kujira
+mv $HOME/.kujira/priv_validator_state.json.backup $HOME/.kujira/data/priv_validator_state.json
+```
+
+### Restart the service and check the log
+
+```bash
+sudo systemctl start kujirad && journalctl -u kujirad -f --no-hostname -o cat
+```

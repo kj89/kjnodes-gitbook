@@ -12,6 +12,31 @@ Snapshot contains compressed copy of chain data directory. To keep backup files 
 snapshot server is periodically beeing state-synced.
 {% endhint %}
 
-{% hint style='warning' %}
-Snapshots are under the maintenance. Please use State sync services instead.
-{% endhint %}
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: pleiades
+
+| BLOCK             | AGE             | DOWNLOAD                                                                                            |
+| ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
+| 4609593 | 3 hours ago | [snapshot (1.09 GB)](https://snapshots.kjnodes.com/gravitybridge/snapshot\_latest.tar.lz4) |
+
+## Instructions
+
+### Stop the service and reset the data
+
+```bash
+sudo systemctl stop gravityd
+cp $HOME/.gravity/data/priv_validator_state.json $HOME/.gravity/priv_validator_state.json.backup
+rm -rf $HOME/.gravity/data
+```
+
+### Download latest snapshot
+
+```bash
+curl -L https://snapshots.kjnodes.com/gravitybridge/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.gravity
+mv $HOME/.gravity/priv_validator_state.json.backup $HOME/.gravity/data/priv_validator_state.json
+```
+
+### Restart the service and check the log
+
+```bash
+sudo systemctl start gravityd && journalctl -u gravityd -f --no-hostname -o cat
+```
