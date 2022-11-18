@@ -12,8 +12,31 @@ Snapshot contains compressed copy of chain data directory. To keep backup files 
 snapshot server is periodically beeing state-synced.
 {% endhint %}
 
-{% hint style='warning' %}
-Defund snapshots are under the maintenance. Please use alternative snapshot sources for now:
-- https://www.stakepile.com/defund-testnet-snapshot/
-- https://nodejumper.io/defund-testnet/sync
-{% endhint %}
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: genesis
+
+| BLOCK             | AGE             | DOWNLOAD                                                                                            |
+| ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
+| 1774130 | 8 hours ago | [snapshot (9.44 GB)](https://snapshots.kjnodes.com/defund-testnet/snapshot\_latest.tar.lz4) |
+
+## Instructions
+
+### Stop the service and reset the data
+
+```bash
+sudo systemctl stop defundd
+cp $HOME/.defund/data/priv_validator_state.json $HOME/.defund/priv_validator_state.json.backup
+rm -rf $HOME/.defund/data
+```
+
+### Download latest snapshot
+
+```bash
+curl -L https://snapshots.kjnodes.com/defund-testnet/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.defund
+mv $HOME/.defund/priv_validator_state.json.backup $HOME/.defund/data/priv_validator_state.json
+```
+
+### Restart the service and check the log
+
+```bash
+sudo systemctl start defundd && journalctl -u defundd -f --no-hostname -o cat
+```
