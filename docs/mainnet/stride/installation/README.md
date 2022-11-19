@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/stride.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: stride-1 | **Latest Version Tag**: v2.0.3 | **Custom Port**: 16
+**Chain ID**: stride-1 | **Latest Version Tag**: v3.0.0 | **Custom Port**: 16
 
 ### Setup validator name
 
@@ -49,11 +49,11 @@ mkdir -p $HOME/.stride/cosmovisor/genesis/bin
 mv build/strided $HOME/.stride/cosmovisor/genesis/bin/
 rm -rf build
 
-# Compile latest version v2.0.3
-git checkout v2.0.3
+# Compile latest version v3.0.0
+git checkout v3.0.0
 make build
-mkdir -p $HOME/.stride/cosmovisor/upgrades/v2.0.3/bin
-mv build/strided $HOME/.stride/cosmovisor/upgrades/v2.0.3/bin/
+mkdir -p $HOME/.stride/cosmovisor/upgrades/v3.0.0/bin
+mv build/strided $HOME/.stride/cosmovisor/upgrades/v3.0.0/bin/
 rm build/strided -rf
 ```
 
@@ -87,7 +87,7 @@ sudo systemctl enable strided
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.stride/cosmovisor/upgrades/v2.0.3 $HOME/.stride/cosmovisor/current
+ln -s $HOME/.stride/cosmovisor/upgrades/v3.0.0 $HOME/.stride/cosmovisor/current
 sudo ln -s $HOME/.stride/cosmovisor/current/bin/strided /usr/local/bin/strided
 strided config chain-id stride-1
 strided config keyring-backend file
