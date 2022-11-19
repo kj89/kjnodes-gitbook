@@ -124,7 +124,7 @@ sudo systemctl start teritorid && journalctl -u teritorid -f --no-hostname -o ca
 cd $HOME
 rm -rf teritori-chain
 git clone https://github.com/TERITORI/teritori-chain.git
-cd $teritori-chain
+cd teritori-chain
 
 # Compile latest version v1.3.0
 git checkout v1.3.0

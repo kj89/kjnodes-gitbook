@@ -124,7 +124,7 @@ sudo systemctl start canined && journalctl -u canined -f --no-hostname -o cat
 cd $HOME
 rm -rf canine-chain
 git clone https://github.com/JackalLabs/canine-chain.git
-cd $canine-chain
+cd canine-chain
 
 # Compile latest version v1.1.2-hotfix
 git checkout v1.1.2-hotfix

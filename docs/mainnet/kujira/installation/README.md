@@ -124,7 +124,7 @@ sudo systemctl start kujirad && journalctl -u kujirad -f --no-hostname -o cat
 cd $HOME
 rm -rf core
 git clone https://github.com/Team-Kujira/core.git
-cd $core
+cd core
 
 # Compile latest version v0.7.1
 git checkout v0.7.1

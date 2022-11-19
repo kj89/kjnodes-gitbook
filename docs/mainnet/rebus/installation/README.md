@@ -124,7 +124,7 @@ sudo systemctl start rebusd && journalctl -u rebusd -f --no-hostname -o cat
 cd $HOME
 rm -rf rebus.core
 git clone https://github.com/rebuschain/rebus.core.git
-cd $rebus.core
+cd rebus.core
 
 # Compile latest version v0.2.0
 git checkout v0.2.0

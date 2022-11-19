@@ -124,7 +124,7 @@ sudo systemctl start quicksilverd && journalctl -u quicksilverd -f --no-hostname
 cd $HOME
 rm -rf quicksilver
 git clone https://github.com/ingenuity-build/quicksilver.git
-cd $quicksilver
+cd quicksilver
 
 # Compile latest version v0.10.1
 git checkout v0.10.1

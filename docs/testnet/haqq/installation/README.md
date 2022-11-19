@@ -124,7 +124,7 @@ sudo systemctl start haqqd && journalctl -u haqqd -f --no-hostname -o cat
 cd $HOME
 rm -rf haqq
 git clone https://github.com/haqq-network/haqq.git
-cd $haqq
+cd haqq
 
 # Compile latest version v1.2.1
 git checkout v1.2.1

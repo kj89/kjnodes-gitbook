@@ -124,7 +124,7 @@ sudo systemctl start gaiad && journalctl -u gaiad -f --no-hostname -o cat
 cd $HOME
 rm -rf gaia
 git clone https://github.com/cosmos/gaia.git
-cd $gaia
+cd gaia
 
 # Compile latest version v7.1.0
 git checkout v7.1.0

@@ -124,7 +124,7 @@ sudo systemctl start osmosisd && journalctl -u osmosisd -f --no-hostname -o cat
 cd $HOME
 rm -rf osmosis
 git clone https://github.com/osmosis-labs/osmosis.git
-cd $osmosis
+cd osmosis
 
 # Compile latest version v12.2.0
 git checkout v12.2.0

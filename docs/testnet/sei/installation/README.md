@@ -124,7 +124,7 @@ sudo systemctl start seid && journalctl -u seid -f --no-hostname -o cat
 cd $HOME
 rm -rf sei-chain
 git clone https://github.com/sei-protocol/sei-chain.git
-cd $sei-chain
+cd sei-chain
 
 # Compile latest version 1.2.2beta-postfix
 git checkout 1.2.2beta-postfix

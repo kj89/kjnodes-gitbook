@@ -124,7 +124,7 @@ sudo systemctl start aurad && journalctl -u aurad -f --no-hostname -o cat
 cd $HOME
 rm -rf aura
 git clone https://github.com/aura-nw/aura.git
-cd $aura
+cd aura
 
 # Compile latest version euphoria_v0.3.3
 git checkout euphoria_v0.3.3

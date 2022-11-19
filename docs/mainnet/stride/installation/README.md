@@ -124,7 +124,7 @@ sudo systemctl start strided && journalctl -u strided -f --no-hostname -o cat
 cd $HOME
 rm -rf stride
 git clone https://github.com/Stride-Labs/stride.git
-cd $stride
+cd stride
 
 # Compile latest version v3.0.0
 git checkout v3.0.0
