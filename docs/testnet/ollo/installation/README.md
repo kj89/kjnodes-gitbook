@@ -111,5 +111,3 @@ curl -L https://snapshots.kjnodes.com/ollo-testnet/snapshot_latest.tar.lz4 | lz4
 ```bash
 sudo systemctl start ollod && journalctl -u ollod -f --no-hostname -o cat
 ```
-
-${UPGRADE}

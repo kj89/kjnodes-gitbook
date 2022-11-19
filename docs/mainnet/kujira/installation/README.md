@@ -117,19 +117,3 @@ curl -L https://snapshots.kjnodes.com/kujira/snapshot_latest.tar.lz4 | lz4 -dc -
 ```bash
 sudo systemctl start kujirad && journalctl -u kujirad -f --no-hostname -o cat
 ```
-
-### Prepare for an upcoming upgrade
-
-```bash
-cd $HOME
-rm -rf core
-git clone https://github.com/Team-Kujira/core.git
-cd core
-
-# Compile latest version v0.7.1
-git checkout v0.7.1
-make build
-mkdir -p $HOME/.kujira/cosmovisor/upgrades/v0.7.1/bin
-mv build/kujirad $HOME/.kujira/cosmovisor/upgrades/v0.7.1/bin/
-rm build/kujirad -rf
-```

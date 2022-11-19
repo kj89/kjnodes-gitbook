@@ -117,19 +117,3 @@ curl -L https://snapshots.kjnodes.com/jackal/snapshot_latest.tar.lz4 | lz4 -dc -
 ```bash
 sudo systemctl start canined && journalctl -u canined -f --no-hostname -o cat
 ```
-
-### Prepare for an upcoming upgrade
-
-```bash
-cd $HOME
-rm -rf canine-chain
-git clone https://github.com/JackalLabs/canine-chain.git
-cd canine-chain
-
-# Compile latest version v1.1.2-hotfix
-git checkout v1.1.2-hotfix
-make build
-mkdir -p $HOME/.canine/cosmovisor/upgrades/v1.1.2-hotfix/bin
-mv build/canined $HOME/.canine/cosmovisor/upgrades/v1.1.2-hotfix/bin/
-rm build/canined -rf
-```

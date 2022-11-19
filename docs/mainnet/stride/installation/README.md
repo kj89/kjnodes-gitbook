@@ -117,19 +117,3 @@ curl -L https://snapshots.kjnodes.com/stride/snapshot_latest.tar.lz4 | lz4 -dc -
 ```bash
 sudo systemctl start strided && journalctl -u strided -f --no-hostname -o cat
 ```
-
-### Prepare for an upcoming upgrade
-
-```bash
-cd $HOME
-rm -rf stride
-git clone https://github.com/Stride-Labs/stride.git
-cd stride
-
-# Compile latest version v3.0.0
-git checkout v3.0.0
-make build
-mkdir -p $HOME/.stride/cosmovisor/upgrades/v3.0.0/bin
-mv build/strided $HOME/.stride/cosmovisor/upgrades/v3.0.0/bin/
-rm build/strided -rf
-```

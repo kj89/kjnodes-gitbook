@@ -117,19 +117,3 @@ curl -L https://snapshots.kjnodes.com/quicksilver-testnet/snapshot_latest.tar.lz
 ```bash
 sudo systemctl start quicksilverd && journalctl -u quicksilverd -f --no-hostname -o cat
 ```
-
-### Prepare for an upcoming upgrade
-
-```bash
-cd $HOME
-rm -rf quicksilver
-git clone https://github.com/ingenuity-build/quicksilver.git
-cd quicksilver
-
-# Compile latest version v0.10.1
-git checkout v0.10.1
-make build
-mkdir -p $HOME/.quicksilverd/cosmovisor/upgrades/v0.10.1/bin
-mv build/quicksilverd $HOME/.quicksilverd/cosmovisor/upgrades/v0.10.1/bin/
-rm build/quicksilverd -rf
-```

@@ -111,5 +111,3 @@ curl -L https://snapshots.kjnodes.com/nibiru-testnet/snapshot_latest.tar.lz4 | l
 ```bash
 sudo systemctl start nibid && journalctl -u nibid -f --no-hostname -o cat
 ```
-
-${UPGRADE}

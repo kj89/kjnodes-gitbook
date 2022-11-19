@@ -117,19 +117,3 @@ curl -L https://snapshots.kjnodes.com/aura-testnet/snapshot_latest.tar.lz4 | lz4
 ```bash
 sudo systemctl start aurad && journalctl -u aurad -f --no-hostname -o cat
 ```
-
-### Prepare for an upcoming upgrade
-
-```bash
-cd $HOME
-rm -rf aura
-git clone https://github.com/aura-nw/aura.git
-cd aura
-
-# Compile latest version euphoria_v0.3.3
-git checkout euphoria_v0.3.3
-make build
-mkdir -p $HOME/.aura/cosmovisor/upgrades/euphoria_v0.3.3/bin
-mv build/aurad $HOME/.aura/cosmovisor/upgrades/euphoria_v0.3.3/bin/
-rm build/aurad -rf
-```

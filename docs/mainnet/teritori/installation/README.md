@@ -117,19 +117,3 @@ curl -L https://snapshots.kjnodes.com/teritori/snapshot_latest.tar.lz4 | lz4 -dc
 ```bash
 sudo systemctl start teritorid && journalctl -u teritorid -f --no-hostname -o cat
 ```
-
-### Prepare for an upcoming upgrade
-
-```bash
-cd $HOME
-rm -rf teritori-chain
-git clone https://github.com/TERITORI/teritori-chain.git
-cd teritori-chain
-
-# Compile latest version v1.3.0
-git checkout v1.3.0
-make build
-mkdir -p $HOME/.teritorid/cosmovisor/upgrades/v1.3.0/bin
-mv build/teritorid $HOME/.teritorid/cosmovisor/upgrades/v1.3.0/bin/
-rm build/teritorid -rf
-```
