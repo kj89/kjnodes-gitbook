@@ -117,3 +117,19 @@ curl -L https://snapshots.kjnodes.com/osmosis/snapshot_latest.tar.lz4 | lz4 -dc 
 ```bash
 sudo systemctl start osmosisd && journalctl -u osmosisd -f --no-hostname -o cat
 ```
+
+### Prepare for an upcoming upgrade
+
+```bash
+cd $HOME
+rm -rf osmosis
+git clone https://github.com/osmosis-labs/osmosis.git
+cd $osmosis
+
+# Compile latest version v12.2.0
+git checkout v12.2.0
+make build
+mkdir -p $HOME/.osmosisd/cosmovisor/upgrades/v12.2.0/bin
+mv build/osmosisd $HOME/.osmosisd/cosmovisor/upgrades/v12.2.0/bin/
+rm build/osmosisd -rf
+```

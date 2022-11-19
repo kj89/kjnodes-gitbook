@@ -117,3 +117,19 @@ curl -L https://snapshots.kjnodes.com/rebus/snapshot_latest.tar.lz4 | lz4 -dc - 
 ```bash
 sudo systemctl start rebusd && journalctl -u rebusd -f --no-hostname -o cat
 ```
+
+### Prepare for an upcoming upgrade
+
+```bash
+cd $HOME
+rm -rf rebus.core
+git clone https://github.com/rebuschain/rebus.core.git
+cd $rebus.core
+
+# Compile latest version v0.2.0
+git checkout v0.2.0
+make build
+mkdir -p $HOME/.rebusd/cosmovisor/upgrades/v0.2.0/bin
+mv build/rebusd $HOME/.rebusd/cosmovisor/upgrades/v0.2.0/bin/
+rm build/rebusd -rf
+```

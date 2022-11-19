@@ -117,3 +117,19 @@ curl -L https://snapshots.kjnodes.com/haqq-testnet/snapshot_latest.tar.lz4 | lz4
 ```bash
 sudo systemctl start haqqd && journalctl -u haqqd -f --no-hostname -o cat
 ```
+
+### Prepare for an upcoming upgrade
+
+```bash
+cd $HOME
+rm -rf haqq
+git clone https://github.com/haqq-network/haqq.git
+cd $haqq
+
+# Compile latest version v1.2.1
+git checkout v1.2.1
+make build
+mkdir -p $HOME/.haqqd/cosmovisor/upgrades/v1.2.1/bin
+mv build/haqqd $HOME/.haqqd/cosmovisor/upgrades/v1.2.1/bin/
+rm build/haqqd -rf
+```

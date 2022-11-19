@@ -111,3 +111,5 @@ curl -L https://snapshots.kjnodes.com/defund-testnet/snapshot_latest.tar.lz4 | l
 ```bash
 sudo systemctl start defundd && journalctl -u defundd -f --no-hostname -o cat
 ```
+
+${UPGRADE}

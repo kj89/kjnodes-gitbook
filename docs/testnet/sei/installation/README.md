@@ -117,3 +117,19 @@ curl -L https://snapshots.kjnodes.com/sei-testnet/snapshot_latest.tar.lz4 | lz4 
 ```bash
 sudo systemctl start seid && journalctl -u seid -f --no-hostname -o cat
 ```
+
+### Prepare for an upcoming upgrade
+
+```bash
+cd $HOME
+rm -rf sei-chain
+git clone https://github.com/sei-protocol/sei-chain.git
+cd $sei-chain
+
+# Compile latest version 1.2.2beta-postfix
+git checkout 1.2.2beta-postfix
+make build
+mkdir -p $HOME/.sei/cosmovisor/upgrades/1.2.2beta-postfix/bin
+mv build/seid $HOME/.sei/cosmovisor/upgrades/1.2.2beta-postfix/bin/
+rm build/seid -rf
+```

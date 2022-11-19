@@ -117,3 +117,19 @@ curl -L https://snapshots.kjnodes.com/cosmoshub/snapshot_latest.tar.lz4 | lz4 -d
 ```bash
 sudo systemctl start gaiad && journalctl -u gaiad -f --no-hostname -o cat
 ```
+
+### Prepare for an upcoming upgrade
+
+```bash
+cd $HOME
+rm -rf gaia
+git clone https://github.com/cosmos/gaia.git
+cd $gaia
+
+# Compile latest version v7.1.0
+git checkout v7.1.0
+make build
+mkdir -p $HOME/.gaiad/cosmovisor/upgrades/v7.1.0/bin
+mv build/gaiad $HOME/.gaiad/cosmovisor/upgrades/v7.1.0/bin/
+rm build/gaiad -rf
+```
