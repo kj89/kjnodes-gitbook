@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/gravitybridge.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: gravity-bridge-3 | **Latest Version Tag**: ${LATEST_VERSION_TAG} | **Custom Port**: 26
+**Chain ID**: gravity-bridge-3 | **Latest Binary Version**: v1.7.2 | **Custom Port**: 26
 
 ### Setup validator name
 
