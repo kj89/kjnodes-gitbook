@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/${PROJECT_NAME}.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: ${CHAIN_ID} | **Latest Binary Version**: ${LATEST_BINARY_VERSION} | **Custom Port**: ${CHAIN_PORT}
+**Chain ID**: ${CHAIN_ID} | **Latest Binary Version**: ${LATEST_VERSION_NAME} | **Custom Port**: ${CHAIN_PORT}
 
 ### Setup validator name
 
