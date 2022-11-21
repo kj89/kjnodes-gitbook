@@ -4,7 +4,7 @@
 
 Stride is a blockchain ("zone") that provides liquidity for staked assets.  Using Stride, you can earn both staking and DeFi yields across the Cosmos IBC ecosystem
 
-**Chain ID**: stride-1 | **Latest Version Tag**: v3.0.0 | **Wasm**: OFF
+**Chain ID**: stride-1 | **Latest Version Tag**: v2.0.3 | **Wasm**: OFF
 
 Website: [https://stride.zone](https://stride.zone)
 
