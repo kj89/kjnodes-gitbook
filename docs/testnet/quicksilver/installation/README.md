@@ -38,8 +38,8 @@ source $HOME/.profile
 
 ```bash
 cd $HOME
-rm quicksilver -rf
 sudo wget -O /usr/bin/quicksilverd https://github.com/ingenuity-build/testnets/releases/download/v0.10.0/quicksilverd-v0.10.1-amd64
+chmod +x /usr/bin/quicksilverd
 ```
 
 ### Create a service
