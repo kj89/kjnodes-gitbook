@@ -52,8 +52,8 @@ rm -rf build
 # Compile latest version v3.0.0
 git checkout v3.0.0
 make build
-mkdir -p $HOME/.stride/cosmovisor/upgrades/v3.0.0/bin
-mv build/strided $HOME/.stride/cosmovisor/upgrades/v3.0.0/bin/
+mkdir -p $HOME/.stride/cosmovisor/upgrades/v3/bin
+mv build/strided $HOME/.stride/cosmovisor/upgrades/v3/bin/
 rm build/strided -rf
 ```
 
@@ -87,7 +87,7 @@ sudo systemctl enable strided
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.stride/cosmovisor/upgrades/v3.0.0 $HOME/.stride/cosmovisor/current
+ln -s $HOME/.stride/cosmovisor/upgrades/v3 $HOME/.stride/cosmovisor/current
 sudo ln -s $HOME/.stride/cosmovisor/current/bin/strided /usr/local/bin/strided
 strided config chain-id stride-1
 strided config keyring-backend file

@@ -3,7 +3,7 @@
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/${PROJECT_NAME}.png" width="150" alt=""><figcaption></figcaption></figure>
 
 ${CHAIN_SHORT_DESCRIPTION}
-**Chain ID**: ${CHAIN_ID} | **Latest Version Tag**: ${LATEST_VERSION} | **Wasm**: ${CHAIN_WASM}
+**Chain ID**: ${CHAIN_ID} | **Latest Version Tag**: ${LATEST_VERSION_TAG} | **Wasm**: ${CHAIN_WASM}
 
 Website: [${CHAIN_WEBSITE}](${CHAIN_WEBSITE})
 

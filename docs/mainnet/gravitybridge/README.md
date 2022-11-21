@@ -4,7 +4,7 @@
 
 An open, decentralized bridge that unlocks the power of  interoperability & liquidity between blockchain ecosystems.
 
-**Chain ID**: gravity-bridge-3 | **Latest Version Tag**: pleiades | **Wasm**: OFF
+**Chain ID**: gravity-bridge-3 | **Latest Version Tag**: ${LATEST_VERSION_TAG} | **Wasm**: OFF
 
 Website: [https://www.gravitybridge.net](https://www.gravitybridge.net)
 

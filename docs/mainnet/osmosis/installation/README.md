@@ -52,8 +52,8 @@ rm -rf build
 # Compile latest version v12.2.0
 git checkout v12.2.0
 make build
-mkdir -p $HOME/.osmosisd/cosmovisor/upgrades/v12.2.0/bin
-mv build/osmosisd $HOME/.osmosisd/cosmovisor/upgrades/v12.2.0/bin/
+mkdir -p $HOME/.osmosisd/cosmovisor/upgrades/v12/bin
+mv build/osmosisd $HOME/.osmosisd/cosmovisor/upgrades/v12/bin/
 rm build/osmosisd -rf
 ```
 
@@ -87,7 +87,7 @@ sudo systemctl enable osmosisd
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.osmosisd/cosmovisor/upgrades/v12.2.0 $HOME/.osmosisd/cosmovisor/current
+ln -s $HOME/.osmosisd/cosmovisor/upgrades/v12 $HOME/.osmosisd/cosmovisor/current
 sudo ln -s $HOME/.osmosisd/cosmovisor/current/bin/osmosisd /usr/local/bin/osmosisd
 osmosisd config chain-id osmosis-1
 osmosisd config keyring-backend file

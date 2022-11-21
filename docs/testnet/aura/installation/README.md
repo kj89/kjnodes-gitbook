@@ -52,8 +52,8 @@ rm -rf build
 # Compile latest version euphoria_v0.3.3
 git checkout euphoria_v0.3.3
 make build
-mkdir -p $HOME/.aura/cosmovisor/upgrades/euphoria_v0.3.3/bin
-mv build/aurad $HOME/.aura/cosmovisor/upgrades/euphoria_v0.3.3/bin/
+mkdir -p $HOME/.aura/cosmovisor/upgrades/v0.3.3/bin
+mv build/aurad $HOME/.aura/cosmovisor/upgrades/v0.3.3/bin/
 rm build/aurad -rf
 ```
 
@@ -87,7 +87,7 @@ sudo systemctl enable aurad
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.aura/cosmovisor/upgrades/euphoria_v0.3.3 $HOME/.aura/cosmovisor/current
+ln -s $HOME/.aura/cosmovisor/upgrades/v0.3.3 $HOME/.aura/cosmovisor/current
 sudo ln -s $HOME/.aura/cosmovisor/current/bin/aurad /usr/local/bin/aurad
 aurad config chain-id euphoria-1
 aurad config keyring-backend test

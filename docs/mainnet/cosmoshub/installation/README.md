@@ -52,8 +52,8 @@ rm -rf build
 # Compile latest version v7.1.0
 git checkout v7.1.0
 make build
-mkdir -p $HOME/.gaia/cosmovisor/upgrades/v7.1.0/bin
-mv build/gaiad $HOME/.gaia/cosmovisor/upgrades/v7.1.0/bin/
+mkdir -p $HOME/.gaia/cosmovisor/upgrades/v7-Theta/bin
+mv build/gaiad $HOME/.gaia/cosmovisor/upgrades/v7-Theta/bin/
 rm build/gaiad -rf
 ```
 
@@ -87,7 +87,7 @@ sudo systemctl enable gaiad
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.gaia/cosmovisor/upgrades/v7.1.0 $HOME/.gaia/cosmovisor/current
+ln -s $HOME/.gaia/cosmovisor/upgrades/v7-Theta $HOME/.gaia/cosmovisor/current
 sudo ln -s $HOME/.gaia/cosmovisor/current/bin/gaiad /usr/local/bin/gaiad
 gaiad config chain-id cosmoshub-4
 gaiad config keyring-backend file

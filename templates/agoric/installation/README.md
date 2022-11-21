@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/${PROJECT_NAME}.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: ${CHAIN_ID} | **Latest Version Tag**: ${LATEST_VERSION} | **Custom Port**: ${CHAIN_PORT}
+**Chain ID**: ${CHAIN_ID} | **Latest Version Tag**: ${LATEST_VERSION_TAG} | **Custom Port**: ${CHAIN_PORT}
 
 ### Setup validator name
 
@@ -53,7 +53,7 @@ cd $HOME
 rm -rf ${GIT_DIR}
 git clone ${GIT_URL}
 cd ${GIT_DIR}
-git checkout ${LATEST_VERSION}
+git checkout ${LATEST_VERSION_TAG}
 
 # Install and build Agoric Javascript packages
 yarn install && yarn build

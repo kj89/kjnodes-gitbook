@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/quicksilver.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: innuendo-3 | **Latest Version Tag**: v0.10.1 | **Custom Port**: 11
+**Chain ID**: innuendo-3 | **Latest Version Tag**: ${LATEST_VERSION_TAG} | **Custom Port**: 11
 
 ### Setup validator name
 
@@ -42,19 +42,13 @@ rm -rf quicksilver
 git clone https://github.com/ingenuity-build/quicksilver.git
 cd quicksilver
 
-# Compile genesis version v0.6.1
-git checkout v0.6.1
+# Compile genesis version ${GENESIS_VERSION_TAG}
+git checkout ${GENESIS_VERSION_TAG}
 make build
 mkdir -p $HOME/.quicksilverd/cosmovisor/genesis/bin
 mv build/quicksilverd $HOME/.quicksilverd/cosmovisor/genesis/bin/
 rm -rf build
-
-# Compile latest version v0.10.1
-git checkout v0.10.1
-make build
-mkdir -p $HOME/.quicksilverd/cosmovisor/upgrades/v0.10.1/bin
-mv build/quicksilverd $HOME/.quicksilverd/cosmovisor/upgrades/v0.10.1/bin/
-rm build/quicksilverd -rf
+${COMPILE_LATEST_VERSION}
 ```
 
 ### Install Cosmovisor and create a service
@@ -87,7 +81,7 @@ sudo systemctl enable quicksilverd
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.quicksilverd/cosmovisor/upgrades/v0.10.1 $HOME/.quicksilverd/cosmovisor/current
+ln -s $HOME/.quicksilverd/cosmovisor/${BINARY_CURRENT} $HOME/.quicksilverd/cosmovisor/current
 sudo ln -s $HOME/.quicksilverd/cosmovisor/current/bin/quicksilverd /usr/local/bin/quicksilverd
 quicksilverd config chain-id innuendo-3
 quicksilverd config keyring-backend test
