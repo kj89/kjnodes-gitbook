@@ -20,7 +20,7 @@ MONIKER="YOUR_MONIKER_GOES_HERE"
 
 ```bash
 sudo apt update
-sudo apt install curl git jq lz4 build-essential nodejs=16.* yarn -y
+sudo apt install curl git jq lz4 build-essential -y
 ```
 
 #### Install GO

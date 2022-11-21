@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/quicksilver.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: innuendo-3 | **Latest Version Tag**: ${LATEST_VERSION_TAG} | **Custom Port**: 11
+**Chain ID**: innuendo-3 | **Latest Binary Version**: ${LATEST_BINARY_VERSION} | **Custom Port**: 11
 
 ### Setup validator name
 
@@ -38,39 +38,25 @@ source $HOME/.profile
 
 ```bash
 cd $HOME
-rm -rf quicksilver
-git clone https://github.com/ingenuity-build/quicksilver.git
-cd quicksilver
-
-# Compile genesis version ${GENESIS_VERSION_TAG}
-git checkout ${GENESIS_VERSION_TAG}
-make build
-mkdir -p $HOME/.quicksilverd/cosmovisor/genesis/bin
-mv build/quicksilverd $HOME/.quicksilverd/cosmovisor/genesis/bin/
-rm -rf build
-${COMPILE_LATEST_VERSION}
+rm quicksilver -rf
+sudo wget -O /usr/bin/quicksilverd https://github.com/ingenuity-build/testnets/releases/download/v0.10.0/quicksilverd-v0.10.1-amd64
 ```
 
-### Install Cosmovisor and create a service
+### Create a service
 
 ```bash
-curl -Ls https://github.com/cosmos/cosmos-sdk/releases/download/cosmovisor%2Fv1.3.0/cosmovisor-v1.3.0-linux-amd64.tar.gz | tar xz
-chmod 755 cosmovisor
-sudo mv cosmovisor /usr/bin/cosmovisor
-
 sudo tee /etc/systemd/system/quicksilverd.service > /dev/null << EOF
 [Unit]
 Description=quicksilver-testnet node service
 After=network-online.target
+
 [Service]
 User=$USER
-ExecStart=/usr/bin/cosmovisor run start
+ExecStart=$(which quicksilverd) start --home $HOME/.quicksilverd
 Restart=on-failure
-RestartSec=10
+RestartSec=3
 LimitNOFILE=65535
-Environment="DAEMON_HOME=$HOME/.quicksilverd"
-Environment="DAEMON_NAME=quicksilverd"
-Environment="UNSAFE_SKIP_BACKUP=true"
+
 [Install]
 WantedBy=multi-user.target
 EOF
@@ -81,11 +67,6 @@ sudo systemctl enable quicksilverd
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.quicksilverd/cosmovisor/${BINARY_CURRENT} $HOME/.quicksilverd/cosmovisor/current
-sudo ln -s $HOME/.quicksilverd/cosmovisor/current/bin/quicksilverd /usr/local/bin/quicksilverd
-quicksilverd config chain-id innuendo-3
-quicksilverd config keyring-backend test
-quicksilverd config node tcp://localhost:11657
 quicksilverd init $MONIKER --chain-id innuendo-3
 curl -Ls https://snapshots.kjnodes.com/quicksilver-testnet/genesis.json > $HOME/.quicksilverd/config/genesis.json
 curl -Ls https://snapshots.kjnodes.com/quicksilver-testnet/addrbook.json > $HOME/.quicksilverd/config/addrbook.json

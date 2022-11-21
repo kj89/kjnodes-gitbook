@@ -16,7 +16,7 @@ snapshot server is periodically beeing state-synced.
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 5400109 | 2 hours ago | [snapshot (1.44 GB)](https://snapshots.kjnodes.com/kujira/snapshot\_latest.tar.lz4) |
+| 5400109 | 5 hours ago | [snapshot (1.44 GB)](https://snapshots.kjnodes.com/kujira/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

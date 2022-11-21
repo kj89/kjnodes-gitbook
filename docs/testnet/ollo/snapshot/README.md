@@ -16,7 +16,7 @@ snapshot server is periodically beeing state-synced.
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 255395 | 2 hours ago | [snapshot (1.09 GB)](https://snapshots.kjnodes.com/ollo-testnet/snapshot\_latest.tar.lz4) |
+| 255395 | 4 hours ago | [snapshot (1.09 GB)](https://snapshots.kjnodes.com/ollo-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

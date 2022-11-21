@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/${PROJECT_NAME}.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: ${CHAIN_ID} | **Latest Version Tag**: ${LATEST_VERSION_TAG} | **Custom Port**: ${CHAIN_PORT}
+**Chain ID**: ${CHAIN_ID} | **Latest Binary Version**: ${LATEST_BINARY_VERSION} | **Custom Port**: ${CHAIN_PORT}
 
 ### Setup validator name
 
@@ -29,22 +29,17 @@ sudo apt install curl git jq lz4 build-essential -y
 sudo rm -rf /usr/local/go
 sudo curl -Ls https://go.dev/dl/go1.19.linux-amd64.tar.gz | sudo tar -C /usr/local -xz
 tee -a $HOME/.profile > /dev/null << EOF
-export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
+export PATH=$PATH:/usr/local/go/bin
 EOF
 source $HOME/.profile
-```
-
-#### Install Git Remote Helper
-```
-curl https://get.gitopia.com | bash
 ```
 
 ### Download and build binaries
 
 ```bash
-cd $HOME && rm -rf gitopia
-git clone -b v1.2.0 gitopia://gitopia/gitopia && cd gitopia
-make install
+cd $HOME
+rm quicksilver -rf
+sudo wget -O /usr/bin/quicksilverd https://github.com/ingenuity-build/testnets/releases/download/v0.10.0/quicksilverd-v0.10.1-amd64
 ```
 
 ### Create a service
@@ -72,8 +67,6 @@ sudo systemctl enable ${CHAIN_APP}
 ### Initialize the node
 
 ```bash
-${CHAIN_APP} config chain-id ${CHAIN_ID}
-${CHAIN_APP} config node tcp://localhost:${CHAIN_PORT}657
 ${CHAIN_APP} init $MONIKER --chain-id ${CHAIN_ID}
 curl -Ls https://snapshots.kjnodes.com/${CHAIN_NAME}/genesis.json > $HOME/${CHAIN_DIR}/config/genesis.json
 curl -Ls https://snapshots.kjnodes.com/${CHAIN_NAME}/addrbook.json > $HOME/${CHAIN_DIR}/config/addrbook.json
