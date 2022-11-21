@@ -16,7 +16,7 @@ snapshot server is periodically beeing state-synced.
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 12917943 | 15 hours ago | [snapshot (10.31 GB)](https://snapshots.kjnodes.com/cosmoshub/snapshot\_latest.tar.lz4) |
+| 12933155 | 34 minutes ago | [snapshot (10.54 GB)](https://snapshots.kjnodes.com/cosmoshub/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
@@ -24,15 +24,15 @@ snapshot server is periodically beeing state-synced.
 
 ```bash
 sudo systemctl stop gaiad
-cp $HOME/.gaiad/data/priv_validator_state.json $HOME/.gaiad/priv_validator_state.json.backup
-rm -rf $HOME/.gaiad/data
+cp $HOME/.gaia/data/priv_validator_state.json $HOME/.gaia/priv_validator_state.json.backup
+rm -rf $HOME/.gaia/data
 ```
 
 ### Download latest snapshot
 
 ```bash
-curl -L https://snapshots.kjnodes.com/cosmoshub/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.gaiad
-mv $HOME/.gaiad/priv_validator_state.json.backup $HOME/.gaiad/data/priv_validator_state.json
+curl -L https://snapshots.kjnodes.com/cosmoshub/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.gaia
+mv $HOME/.gaia/priv_validator_state.json.backup $HOME/.gaia/data/priv_validator_state.json
 ```
 
 ### Restart the service and check the log

@@ -211,8 +211,8 @@ gaiad tx gov vote 1 nowithveto --from wallet --chain-id cosmoshub-4 --gas-adjust
 
 ```bash
 CUSTOM_PORT=10
-sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CUSTOM_PORT}658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${CUSTOM_PORT}657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CUSTOM_PORT}060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CUSTOM_PORT}656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CUSTOM_PORT}660\"%" $HOME/.gaiad/config/config.toml
-sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${CUSTOM_PORT}317\"%; s%^address = \":8080\"%address = \":${CUSTOM_PORT}080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:${CUSTOM_PORT}090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${CUSTOM_PORT}091\"%" $HOME/.gaiad/config/app.toml
+sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CUSTOM_PORT}658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${CUSTOM_PORT}657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CUSTOM_PORT}060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CUSTOM_PORT}656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CUSTOM_PORT}660\"%" $HOME/.gaia/config/config.toml
+sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${CUSTOM_PORT}317\"%; s%^address = \":8080\"%address = \":${CUSTOM_PORT}080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:${CUSTOM_PORT}090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${CUSTOM_PORT}091\"%" $HOME/.gaia/config/app.toml
 ```
 
 #### Update Indexer
@@ -220,19 +220,19 @@ sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${C
 Disable indexer
 
 ```bash
-sed -i 's|^indexer *=.*|indexer = "null"|' $HOME/.gaiad/config/config.toml
+sed -i 's|^indexer *=.*|indexer = "null"|' $HOME/.gaia/config/config.toml
 ```
 
 Enable indexer
 
 ```bash
-sed -i 's|^indexer *=.*|indexer = "kv"|' $HOME/.gaiad/config/config.toml
+sed -i 's|^indexer *=.*|indexer = "kv"|' $HOME/.gaia/config/config.toml
 ```
 
 #### Update pruning
 
 ```bash
-sed -i.bak -e 's|^pruning *=.*|pruning = "custom"|; s|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|; s|^pruning-keep-every *=.*|pruning-keep-every = "0"|; s|^pruning-interval *=.*|pruning-interval = "10"|' $HOME/.gaiad/config/app.toml
+sed -i.bak -e 's|^pruning *=.*|pruning = "custom"|; s|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|; s|^pruning-keep-every *=.*|pruning-keep-every = "0"|; s|^pruning-interval *=.*|pruning-interval = "10"|' $HOME/.gaia/config/app.toml
 ```
 
 ## 🚨 Maintenance
@@ -252,7 +252,7 @@ gaiad status 2>&1 | jq .SyncInfo
 #### Get node peer
 
 ```bash
-echo $(gaiad tendermint show-node-id)'@'$(curl -s ifconfig.me)':'$(cat $HOME/.gaiad/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
+echo $(gaiad tendermint show-node-id)'@'$(curl -s ifconfig.me)':'$(cat $HOME/.gaia/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
 ```
 
 #### Check if validator key is correct
@@ -270,19 +270,19 @@ curl -sS http://localhost:26657/net_info | jq -r '.result.peers[] | "\(.node_inf
 #### Set minimum gas price
 
 ```
-sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0uatom\"/" $HOME/.gaiad/config/app.toml
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0uatom\"/" $HOME/.gaia/config/app.toml
 ```
 
 #### Enable prometheus
 
 ```
-sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.gaiad/config/config.toml
+sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.gaia/config/config.toml
 ```
 
 #### Reset chain data
 
 ```bash
-gaiad tendermint unsafe-reset-all --home $HOME/.gaiad --keep-addr-book
+gaiad tendermint unsafe-reset-all --home $HOME/.gaia --keep-addr-book
 ```
 
 #### Remove node
@@ -298,7 +298,7 @@ sudo systemctl disable gaiad
 sudo rm /etc/systemd/system/gaiad.service
 sudo systemctl daemon-reload
 rm -rf $(which gaiad) 
-rm -rf $HOME/.gaiad
+rm -rf $HOME/.gaia
 rm -rf $HOME/gaia
 ```
 

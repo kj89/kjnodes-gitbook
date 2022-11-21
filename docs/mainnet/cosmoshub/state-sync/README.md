@@ -19,8 +19,8 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 
 ```bash
 sudo systemctl stop gaiad
-cp $HOME/.gaiad/data/priv_validator_state.json $HOME/.gaiad/priv_validator_state.json.backup
-gaiad tendermint unsafe-reset-all --home $HOME/.gaiad
+cp $HOME/.gaia/data/priv_validator_state.json $HOME/.gaia/priv_validator_state.json.backup
+gaiad tendermint unsafe-reset-all --home $HOME/.gaia
 ```
 
 ### Get and configure the state sync information
@@ -32,16 +32,16 @@ LATEST_HEIGHT=$(curl -s $STATE_SYNC_RPC/block | jq -r .result.block.header.heigh
 SYNC_BLOCK_HEIGHT=$(($LATEST_HEIGHT - 2000))
 SYNC_BLOCK_HASH=$(curl -s "$STATE_SYNC_RPC/block?height=$SYNC_BLOCK_HEIGHT" | jq -r .result.block_id.hash)
 
-sed -i.bak -e "s|^enable *=.*|enable = true|" $HOME/.gaiad/config/config.toml
+sed -i.bak -e "s|^enable *=.*|enable = true|" $HOME/.gaia/config/config.toml
 sed -i.bak -e "s|^rpc_servers *=.*|rpc_servers = \"$STATE_SYNC_RPC,$STATE_SYNC_RPC\"|" \
-  $HOME/.gaiad/config/config.toml
+  $HOME/.gaia/config/config.toml
 sed -i.bak -e "s|^trust_height *=.*|trust_height = $SYNC_BLOCK_HEIGHT|" \
-  $HOME/.gaiad/config/config.toml
+  $HOME/.gaia/config/config.toml
 sed -i.bak -e "s|^trust_hash *=.*|trust_hash = \"$SYNC_BLOCK_HASH\"|" \
-  $HOME/.gaiad/config/config.toml
+  $HOME/.gaia/config/config.toml
 sed -i.bak -e "s|^persistent_peers *=.*|persistent_peers = \"$STATE_SYNC_PEER\"|" \
-  $HOME/.gaiad/config/config.toml
-mv $HOME/.gaiad/priv_validator_state.json.backup $HOME/.gaiad/data/priv_validator_state.json
+  $HOME/.gaia/config/config.toml
+mv $HOME/.gaia/priv_validator_state.json.backup $HOME/.gaia/data/priv_validator_state.json
 ```
 
 
