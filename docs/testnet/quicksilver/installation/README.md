@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/quicksilver.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: innuendo-3 | **Latest Binary Version**: v0.10.1 | **Custom Port**: 11
+**Chain ID**: innuendo-3 | **Latest Binary Version**: v0.10.2 | **Custom Port**: 11
 
 ### Setup validator name
 
@@ -67,6 +67,9 @@ sudo systemctl enable quicksilverd
 ### Initialize the node
 
 ```bash
+quicksilverd config chain-id innuendo-3
+quicksilverd config keyring-backend test
+quicksilverd config node tcp://localhost:11657
 quicksilverd init $MONIKER --chain-id innuendo-3
 curl -Ls https://snapshots.kjnodes.com/quicksilver-testnet/genesis.json > $HOME/.quicksilverd/config/genesis.json
 curl -Ls https://snapshots.kjnodes.com/quicksilver-testnet/addrbook.json > $HOME/.quicksilverd/config/addrbook.json
