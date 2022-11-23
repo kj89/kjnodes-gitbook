@@ -51,7 +51,7 @@ Currently state sync does not support copy of the `wasm` folder. Therefore, you 
 {% endhint %}
 
 ```bash
-curl -L https://snapshots.kjnodes.com/aura_testnet/wasm_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.aura
+curl -L https://snapshots.kjnodes.com/aura-testnet/wasm_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.aura
 ```
 
 ### Restart the service and check the log
