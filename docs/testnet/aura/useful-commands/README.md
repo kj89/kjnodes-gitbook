@@ -66,7 +66,7 @@ aurad tx staking create-validator \
 --identity="YOUR_KEYBASE_ID" \
 --details="YOUR_DETAILS" \
 --website="YOUR_WEBSITE_URL"
---chain-id=euphoria-1 \
+--chain-id=euphoria-2 \
 --commission-rate=0.05 \
 --commission-max-rate=0.20 \
 --commission-max-change-rate=0.01 \
@@ -85,7 +85,7 @@ aurad tx staking edit-validator \
 --identity="YOUR_KEYBASE_ID" \
 --details="YOUR_DETAILS" \
 --website="YOUR_WEBSITE_URL"
---chain-id=euphoria-1 \
+--chain-id=euphoria-2 \
 --commission-rate=0.05 \
 --from=wallet \
 --gas-adjustment=1.4 \
@@ -96,7 +96,7 @@ aurad tx staking edit-validator \
 #### Unjail validator
 
 ```bash
-aurad tx slashing unjail --from wallet --chain-id euphoria-1 --gas auto --gas-adjustment 1.4 -y
+aurad tx slashing unjail --from wallet --chain-id euphoria-2 --gas auto --gas-adjustment 1.4 -y
 ```
 
 #### Jail reason
@@ -128,43 +128,43 @@ aurad q staking validator $(aurad keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-aurad tx distribution withdraw-all-rewards --from wallet --chain-id euphoria-1 --gas-adjustment 1.4 --gas auto -y
+aurad tx distribution withdraw-all-rewards --from wallet --chain-id euphoria-2 --gas-adjustment 1.4 --gas auto -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-aurad tx distribution withdraw-rewards $(aurad keys show wallet --bech val -a) --commission --from wallet --chain-id euphoria-1 --gas-adjustment 1.4 --gas auto -y
+aurad tx distribution withdraw-rewards $(aurad keys show wallet --bech val -a) --commission --from wallet --chain-id euphoria-2 --gas-adjustment 1.4 --gas auto -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-aurad tx staking delegate $(aurad keys show wallet --bech val -a) 1000000ueaura --from wallet --chain-id euphoria-1 --gas-adjustment 1.4 --gas auto -y
+aurad tx staking delegate $(aurad keys show wallet --bech val -a) 1000000ueaura --from wallet --chain-id euphoria-2 --gas-adjustment 1.4 --gas auto -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-aurad tx staking delegate <TO_VALOPER_ADDRESS> 1000000ueaura --from wallet --chain-id euphoria-1 --gas-adjustment 1.4 --gas auto -y
+aurad tx staking delegate <TO_VALOPER_ADDRESS> 1000000ueaura --from wallet --chain-id euphoria-2 --gas-adjustment 1.4 --gas auto -y
 ```
 
 Redelegate tokens to another validator
 
 ```bash
-aurad tx staking redelegate $(aurad keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000ueaura --from wallet --chain-id euphoria-1 --gas-adjustment 1.4 --gas auto -y
+aurad tx staking redelegate $(aurad keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000ueaura --from wallet --chain-id euphoria-2 --gas-adjustment 1.4 --gas auto -y
 ```
 
 Unbond tokens from your validator
 
 ```bash
-aurad tx staking unbond $(aurad keys show wallet --bech val -a) 1000000ueaura --from wallet --chain-id euphoria-1 --gas-adjustment 1.4 --gas auto -y
+aurad tx staking unbond $(aurad keys show wallet --bech val -a) 1000000ueaura --from wallet --chain-id euphoria-2 --gas-adjustment 1.4 --gas auto -y
 ```
 
 Send tokens to the wallet
 
 ```bash
-aurad tx bank send wallet <TO_WALLET_ADDRESS> 1000000ueaura --from wallet --chain-id euphoria-1
+aurad tx bank send wallet <TO_WALLET_ADDRESS> 1000000ueaura --from wallet --chain-id euphoria-2
 ```
 
 ## 🗳 Governance
@@ -184,25 +184,25 @@ aurad query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-aurad tx gov vote 1 yes --from wallet --chain-id euphoria-1 --gas-adjustment 1.4 --gas auto -y
+aurad tx gov vote 1 yes --from wallet --chain-id euphoria-2 --gas-adjustment 1.4 --gas auto -y
 ```
 
 #### Vote 'No'
 
 ```bash
-aurad tx gov vote 1 no --from wallet --chain-id euphoria-1 --gas-adjustment 1.4 --gas auto -y
+aurad tx gov vote 1 no --from wallet --chain-id euphoria-2 --gas-adjustment 1.4 --gas auto -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-aurad tx gov vote 1 abstain --from wallet --chain-id euphoria-1 --gas-adjustment 1.4 --gas auto -y
+aurad tx gov vote 1 abstain --from wallet --chain-id euphoria-2 --gas-adjustment 1.4 --gas auto -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-aurad tx gov vote 1 nowithveto --from wallet --chain-id euphoria-1 --gas-adjustment 1.4 --gas auto -y
+aurad tx gov vote 1 nowithveto --from wallet --chain-id euphoria-2 --gas-adjustment 1.4 --gas auto -y
 ```
 
 ## ⚡️ Utility

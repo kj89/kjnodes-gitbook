@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/aura.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: euphoria-1 | **Latest Version Tag**: euphoria_v0.3.3 | **Custom Port**: 17
+**Chain ID**: euphoria-2 | **Latest Version Tag**: euphoria_v0.4.1 | **Custom Port**: 17
 
 ### Setup validator name
 
@@ -42,19 +42,13 @@ rm -rf aura
 git clone https://github.com/aura-nw/aura.git
 cd aura
 
-# Compile genesis version euphoria_4027003
-git checkout euphoria_4027003
+# Compile genesis version euphoria_v0.4.1
+git checkout euphoria_v0.4.1
 make build
 mkdir -p $HOME/.aura/cosmovisor/genesis/bin
 mv build/aurad $HOME/.aura/cosmovisor/genesis/bin/
 rm -rf build
 
-# Compile latest version euphoria_v0.3.3
-git checkout euphoria_v0.3.3
-make build
-mkdir -p $HOME/.aura/cosmovisor/upgrades/v0.3.3/bin
-mv build/aurad $HOME/.aura/cosmovisor/upgrades/v0.3.3/bin/
-rm build/aurad -rf
 ```
 
 ### Install Cosmovisor and create a service
@@ -87,12 +81,12 @@ sudo systemctl enable aurad
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.aura/cosmovisor/upgrades/v0.3.3 $HOME/.aura/cosmovisor/current
+ln -s $HOME/.aura/cosmovisor/genesis $HOME/.aura/cosmovisor/current
 sudo ln -s $HOME/.aura/cosmovisor/current/bin/aurad /usr/local/bin/aurad
-aurad config chain-id euphoria-1
+aurad config chain-id euphoria-2
 aurad config keyring-backend test
 aurad config node tcp://localhost:17657
-aurad init $MONIKER --chain-id euphoria-1
+aurad init $MONIKER --chain-id euphoria-2
 curl -Ls https://snapshots.kjnodes.com/aura-testnet/genesis.json > $HOME/.aura/config/genesis.json
 curl -Ls https://snapshots.kjnodes.com/aura-testnet/addrbook.json > $HOME/.aura/config/addrbook.json
 sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@aura-testnet.rpc.kjnodes.com:17659\"|" $HOME/.aura/config/config.toml
