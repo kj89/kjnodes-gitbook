@@ -124,3 +124,9 @@
   * [State sync](testnet/teritori/state-sync/README.md)
   * [Useful commands](testnet/teritori/useful-commands/README.md)
 
+* [Uptick](testnet/uptick/README.md)
+  * [Installation](testnet/uptick/installation/README.md)
+  * [Snapshot](testnet/uptick/snapshot/README.md)
+  * [State sync](testnet/uptick/state-sync/README.md)
+  * [Useful commands](testnet/uptick/useful-commands/README.md)
+
