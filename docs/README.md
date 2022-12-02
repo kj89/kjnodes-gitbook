@@ -49,3 +49,5 @@ description: Discover base tools contributed to the projects by kjnodes team.
 
 <img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/uptick.png" alt="" data-size="line"> [Uptick](testnet/uptick/)
 
+<img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/jackal.png" alt="" data-size="line"> [Jackal](testnet/jackal/)
+
