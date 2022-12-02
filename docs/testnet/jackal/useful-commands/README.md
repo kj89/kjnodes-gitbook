@@ -60,7 +60,7 @@ Please make sure you have adjusted **moniker**, **identity**, **details** and **
 
 ```bash
 canined tx staking create-validator \
---amount=1000000uejackal \
+--amount=1000000ujkl \
 --pubkey=$(canined tendermint show-validator) \
 --moniker="YOUR_MONIKER_NAME" \
 --identity="YOUR_KEYBASE_ID" \
@@ -140,31 +140,31 @@ canined tx distribution withdraw-rewards $(canined keys show wallet --bech val -
 #### Delegate tokens to yourself
 
 ```bash
-canined tx staking delegate $(canined keys show wallet --bech val -a) 1000000uejackal --from wallet --chain-id lupulella-2 --gas-adjustment 1.4 --gas auto -y
+canined tx staking delegate $(canined keys show wallet --bech val -a) 1000000ujkl --from wallet --chain-id lupulella-2 --gas-adjustment 1.4 --gas auto -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-canined tx staking delegate <TO_VALOPER_ADDRESS> 1000000uejackal --from wallet --chain-id lupulella-2 --gas-adjustment 1.4 --gas auto -y
+canined tx staking delegate <TO_VALOPER_ADDRESS> 1000000ujkl --from wallet --chain-id lupulella-2 --gas-adjustment 1.4 --gas auto -y
 ```
 
 Redelegate tokens to another validator
 
 ```bash
-canined tx staking redelegate $(canined keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000uejackal --from wallet --chain-id lupulella-2 --gas-adjustment 1.4 --gas auto -y
+canined tx staking redelegate $(canined keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000ujkl --from wallet --chain-id lupulella-2 --gas-adjustment 1.4 --gas auto -y
 ```
 
 Unbond tokens from your validator
 
 ```bash
-canined tx staking unbond $(canined keys show wallet --bech val -a) 1000000uejackal --from wallet --chain-id lupulella-2 --gas-adjustment 1.4 --gas auto -y
+canined tx staking unbond $(canined keys show wallet --bech val -a) 1000000ujkl --from wallet --chain-id lupulella-2 --gas-adjustment 1.4 --gas auto -y
 ```
 
 Send tokens to the wallet
 
 ```bash
-canined tx bank send wallet <TO_WALLET_ADDRESS> 1000000uejackal --from wallet --chain-id lupulella-2
+canined tx bank send wallet <TO_WALLET_ADDRESS> 1000000ujkl --from wallet --chain-id lupulella-2
 ```
 
 ## 🗳 Governance
@@ -270,7 +270,7 @@ curl -sS http://localhost:26657/net_info | jq -r '.result.peers[] | "\(.node_inf
 #### Set minimum gas price
 
 ```
-sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0uejackal\"/" $HOME/.canine/config/app.toml
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0ujkl\"/" $HOME/.canine/config/app.toml
 ```
 
 #### Enable prometheus

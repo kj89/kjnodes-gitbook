@@ -90,7 +90,7 @@ canined init $MONIKER --chain-id lupulella-2
 curl -Ls https://snapshots.kjnodes.com/jackal-testnet/genesis.json > $HOME/.canine/config/genesis.json
 curl -Ls https://snapshots.kjnodes.com/jackal-testnet/addrbook.json > $HOME/.canine/config/addrbook.json
 sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@jackal-testnet.rpc.kjnodes.com:37659\"|" $HOME/.canine/config/config.toml
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0uejackal\"|" $HOME/.canine/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.002ujkl\"|" $HOME/.canine/config/app.toml
 sed -i -e "s|^pruning *=.*|pruning = \"custom\"|" $HOME/.canine/config/app.toml
 sed -i -e "s|^pruning-keep-recent *=.*|pruning-keep-recent = \"100\"|" $HOME/.canine/config/app.toml
 sed -i -e "s|^pruning-keep-every *=.*|pruning-keep-every = \"0\"|" $HOME/.canine/config/app.toml
