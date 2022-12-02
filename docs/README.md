@@ -37,6 +37,8 @@ description: Discover base tools contributed to the projects by kjnodes team.
 
 <img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/haqq.png" alt="" data-size="line"> [Haqq](testnet/haqq/)
 
+<img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/jackal.png" alt="" data-size="line"> [Jackal](testnet/jackal/)
+
 <img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/nibiru.png" alt="" data-size="line"> [Nibiru](testnet/nibiru/)
 
 <img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/ollo.png" alt="" data-size="line"> [Ollo](testnet/ollo/)
@@ -48,6 +50,4 @@ description: Discover base tools contributed to the projects by kjnodes team.
 <img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/teritori.png" alt="" data-size="line"> [Teritori](testnet/teritori/)
 
 <img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/uptick.png" alt="" data-size="line"> [Uptick](testnet/uptick/)
-
-<img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/jackal.png" alt="" data-size="line"> [Jackal](testnet/jackal/)
 

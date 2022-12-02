@@ -8,10 +8,9 @@ import os
 
 environments = {
     'mainnet': ['agoric', 'cosmoshub', 'gravitybridge', 'jackal', 'kujira', 'stride', 'teritori', 'rebus', 'osmosis'],
-    'testnet': ['agoric', 'aura', 'defund', 'gitopia', 'haqq', 'nibiru', 'ollo', 'quicksilver', 'sei', 'teritori',
-                'uptick', 'jackal']
+    'testnet': ['agoric', 'aura', 'defund', 'gitopia', 'haqq', 'jackal', 'nibiru', 'ollo', 'quicksilver', 'sei',
+                'teritori', 'uptick']
 }
-
 
 def get_replacement_params(chain, chain_environment):
     print(chain, chain_environment)
