@@ -16,7 +16,7 @@ snapshot server is periodically beeing state-synced.
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 981018 | 6 hours ago | [snapshot (1.31 GB)](https://snapshots.kjnodes.com/uptick-testnet/snapshot\_latest.tar.lz4) |
+| 981018 | 8 hours ago | [snapshot (1.31 GB)](https://snapshots.kjnodes.com/uptick-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

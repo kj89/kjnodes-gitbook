@@ -12,6 +12,7 @@ environments = {
                 'teritori', 'uptick']
 }
 
+
 def get_replacement_params(chain, chain_environment):
     print(chain, chain_environment)
     replacements = {'${PROJECT_NAME}': chain}

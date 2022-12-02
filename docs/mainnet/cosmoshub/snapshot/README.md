@@ -16,7 +16,7 @@ snapshot server is periodically beeing state-synced.
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 13079304 | 5 hours ago | [snapshot (14.37 GB)](https://snapshots.kjnodes.com/cosmoshub/snapshot\_latest.tar.lz4) |
+| 13079304 | 7 hours ago | [snapshot (14.37 GB)](https://snapshots.kjnodes.com/cosmoshub/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
