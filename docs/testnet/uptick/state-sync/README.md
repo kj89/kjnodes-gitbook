@@ -18,36 +18,36 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ### Stop the service and reset the data
 
 ```bash
-sudo systemctl stop uptickd
-cp $HOME/.uptickd/data/priv_validator_state.json $HOME/.uptickd/priv_validator_state.json.backup
-uptickd tendermint unsafe-reset-all --home $HOME/.uptickd
+sudo systemctl stop ${CHAIN_APP}
+cp $HOME/${CHAIN_DIR}/data/priv_validator_state.json $HOME/${CHAIN_DIR}/priv_validator_state.json.backup
+${CHAIN_APP} tendermint unsafe-reset-all --home $HOME/${CHAIN_DIR}
 ```
 
 ### Get and configure the state sync information
 
 ```bash
-STATE_SYNC_RPC=https://uptick-testnet.rpc.kjnodes.com:443
-STATE_SYNC_PEER=d5519e378247dfb61dfe90652d1fe3e2b3005a5b@uptick-testnet.rpc.kjnodes.com:15656
+STATE_SYNC_RPC=https://${CHAIN_NAME}.rpc.kjnodes.com:443
+STATE_SYNC_PEER=${CHAIN_PEER}@${CHAIN_NAME}.rpc.kjnodes.com:${CHAIN_PORT}656
 LATEST_HEIGHT=$(curl -s $STATE_SYNC_RPC/block | jq -r .result.block.header.height)
 SYNC_BLOCK_HEIGHT=$(($LATEST_HEIGHT - 2000))
 SYNC_BLOCK_HASH=$(curl -s "$STATE_SYNC_RPC/block?height=$SYNC_BLOCK_HEIGHT" | jq -r .result.block_id.hash)
 
-sed -i.bak -e "s|^enable *=.*|enable = true|" $HOME/.uptickd/config/config.toml
+sed -i.bak -e "s|^enable *=.*|enable = true|" $HOME/${CHAIN_DIR}/config/config.toml
 sed -i.bak -e "s|^rpc_servers *=.*|rpc_servers = \"$STATE_SYNC_RPC,$STATE_SYNC_RPC\"|" \
-  $HOME/.uptickd/config/config.toml
+  $HOME/${CHAIN_DIR}/config/config.toml
 sed -i.bak -e "s|^trust_height *=.*|trust_height = $SYNC_BLOCK_HEIGHT|" \
-  $HOME/.uptickd/config/config.toml
+  $HOME/${CHAIN_DIR}/config/config.toml
 sed -i.bak -e "s|^trust_hash *=.*|trust_hash = \"$SYNC_BLOCK_HASH\"|" \
-  $HOME/.uptickd/config/config.toml
+  $HOME/${CHAIN_DIR}/config/config.toml
 sed -i.bak -e "s|^persistent_peers *=.*|persistent_peers = \"$STATE_SYNC_PEER\"|" \
-  $HOME/.uptickd/config/config.toml
-mv $HOME/.uptickd/priv_validator_state.json.backup $HOME/.uptickd/data/priv_validator_state.json
+  $HOME/${CHAIN_DIR}/config/config.toml
+mv $HOME/${CHAIN_DIR}/priv_validator_state.json.backup $HOME/${CHAIN_DIR}/data/priv_validator_state.json
 ```
 
-
+${RECOVER_WASM}
 
 ### Restart the service and check the log
 
 ```bash
-sudo systemctl start uptickd && journalctl -u uptickd -f --no-hostname -o cat
+sudo systemctl start ${CHAIN_APP} && journalctl -u ${CHAIN_APP} -f --no-hostname -o cat
 ```

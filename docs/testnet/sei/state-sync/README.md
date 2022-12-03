@@ -18,44 +18,36 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ### Stop the service and reset the data
 
 ```bash
-sudo systemctl stop seid
-cp $HOME/.sei/data/priv_validator_state.json $HOME/.sei/priv_validator_state.json.backup
-seid tendermint unsafe-reset-all --home $HOME/.sei
+sudo systemctl stop ${CHAIN_APP}
+cp $HOME/${CHAIN_DIR}/data/priv_validator_state.json $HOME/${CHAIN_DIR}/priv_validator_state.json.backup
+${CHAIN_APP} tendermint unsafe-reset-all --home $HOME/${CHAIN_DIR}
 ```
 
 ### Get and configure the state sync information
 
 ```bash
-STATE_SYNC_RPC=https://sei-testnet.rpc.kjnodes.com:443
-STATE_SYNC_PEER=d5519e378247dfb61dfe90652d1fe3e2b3005a5b@sei-testnet.rpc.kjnodes.com:12656
+STATE_SYNC_RPC=https://${CHAIN_NAME}.rpc.kjnodes.com:443
+STATE_SYNC_PEER=${CHAIN_PEER}@${CHAIN_NAME}.rpc.kjnodes.com:${CHAIN_PORT}656
 LATEST_HEIGHT=$(curl -s $STATE_SYNC_RPC/block | jq -r .result.block.header.height)
 SYNC_BLOCK_HEIGHT=$(($LATEST_HEIGHT - 2000))
 SYNC_BLOCK_HASH=$(curl -s "$STATE_SYNC_RPC/block?height=$SYNC_BLOCK_HEIGHT" | jq -r .result.block_id.hash)
 
-sed -i.bak -e "s|^enable *=.*|enable = true|" $HOME/.sei/config/config.toml
+sed -i.bak -e "s|^enable *=.*|enable = true|" $HOME/${CHAIN_DIR}/config/config.toml
 sed -i.bak -e "s|^rpc_servers *=.*|rpc_servers = \"$STATE_SYNC_RPC,$STATE_SYNC_RPC\"|" \
-  $HOME/.sei/config/config.toml
+  $HOME/${CHAIN_DIR}/config/config.toml
 sed -i.bak -e "s|^trust_height *=.*|trust_height = $SYNC_BLOCK_HEIGHT|" \
-  $HOME/.sei/config/config.toml
+  $HOME/${CHAIN_DIR}/config/config.toml
 sed -i.bak -e "s|^trust_hash *=.*|trust_hash = \"$SYNC_BLOCK_HASH\"|" \
-  $HOME/.sei/config/config.toml
+  $HOME/${CHAIN_DIR}/config/config.toml
 sed -i.bak -e "s|^persistent_peers *=.*|persistent_peers = \"$STATE_SYNC_PEER\"|" \
-  $HOME/.sei/config/config.toml
-mv $HOME/.sei/priv_validator_state.json.backup $HOME/.sei/data/priv_validator_state.json
+  $HOME/${CHAIN_DIR}/config/config.toml
+mv $HOME/${CHAIN_DIR}/priv_validator_state.json.backup $HOME/${CHAIN_DIR}/data/priv_validator_state.json
 ```
 
-### Download latest wasm
-
-{% hint style='info' %}
-Currently state sync does not support copy of the `wasm` folder. Therefore, you will have to download it manually.
-{% endhint %}
-
-```bash
-curl -L https://snapshots.kjnodes.com/sei-testnet/wasm_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.sei
-```
+${RECOVER_WASM}
 
 ### Restart the service and check the log
 
 ```bash
-sudo systemctl start seid && journalctl -u seid -f --no-hostname -o cat
+sudo systemctl start ${CHAIN_APP} && journalctl -u ${CHAIN_APP} -f --no-hostname -o cat
 ```
