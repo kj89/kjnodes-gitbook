@@ -18,36 +18,36 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ### Stop the service and reset the data
 
 ```bash
-sudo systemctl stop ${CHAIN_APP}
-cp $HOME/${CHAIN_DIR}/data/priv_validator_state.json $HOME/${CHAIN_DIR}/priv_validator_state.json.backup
-${CHAIN_APP} tendermint unsafe-reset-all --home $HOME/${CHAIN_DIR}
+sudo systemctl stop gaiad
+cp $HOME/.gaia/data/priv_validator_state.json $HOME/.gaia/priv_validator_state.json.backup
+gaiad tendermint unsafe-reset-all --home $HOME/.gaia
 ```
 
 ### Get and configure the state sync information
 
 ```bash
-STATE_SYNC_RPC=https://${CHAIN_NAME}.rpc.kjnodes.com:443
-STATE_SYNC_PEER=${CHAIN_PEER}@${CHAIN_NAME}.rpc.kjnodes.com:${CHAIN_PORT}656
+STATE_SYNC_RPC=https://cosmoshub.rpc.kjnodes.com:443
+STATE_SYNC_PEER=d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@cosmoshub.rpc.kjnodes.com:34656
 LATEST_HEIGHT=$(curl -s $STATE_SYNC_RPC/block | jq -r .result.block.header.height)
 SYNC_BLOCK_HEIGHT=$(($LATEST_HEIGHT - 2000))
 SYNC_BLOCK_HASH=$(curl -s "$STATE_SYNC_RPC/block?height=$SYNC_BLOCK_HEIGHT" | jq -r .result.block_id.hash)
 
-sed -i.bak -e "s|^enable *=.*|enable = true|" $HOME/${CHAIN_DIR}/config/config.toml
+sed -i.bak -e "s|^enable *=.*|enable = true|" $HOME/.gaia/config/config.toml
 sed -i.bak -e "s|^rpc_servers *=.*|rpc_servers = \"$STATE_SYNC_RPC,$STATE_SYNC_RPC\"|" \
-  $HOME/${CHAIN_DIR}/config/config.toml
+  $HOME/.gaia/config/config.toml
 sed -i.bak -e "s|^trust_height *=.*|trust_height = $SYNC_BLOCK_HEIGHT|" \
-  $HOME/${CHAIN_DIR}/config/config.toml
+  $HOME/.gaia/config/config.toml
 sed -i.bak -e "s|^trust_hash *=.*|trust_hash = \"$SYNC_BLOCK_HASH\"|" \
-  $HOME/${CHAIN_DIR}/config/config.toml
+  $HOME/.gaia/config/config.toml
 sed -i.bak -e "s|^persistent_peers *=.*|persistent_peers = \"$STATE_SYNC_PEER\"|" \
-  $HOME/${CHAIN_DIR}/config/config.toml
-mv $HOME/${CHAIN_DIR}/priv_validator_state.json.backup $HOME/${CHAIN_DIR}/data/priv_validator_state.json
+  $HOME/.gaia/config/config.toml
+mv $HOME/.gaia/priv_validator_state.json.backup $HOME/.gaia/data/priv_validator_state.json
 ```
 
-${RECOVER_WASM}
+
 
 ### Restart the service and check the log
 
 ```bash
-sudo systemctl start ${CHAIN_APP} && journalctl -u ${CHAIN_APP} -f --no-hostname -o cat
+sudo systemctl start gaiad && journalctl -u gaiad -f --no-hostname -o cat
 ```

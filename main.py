@@ -23,6 +23,7 @@ def get_replacement_params(chain, chain_environment):
     url = f'https://raw.githubusercontent.com/kj89/ansible-cosmos/main/group_vars/{chain}.yml'
 
     resp = requests.get(url, auth=(GITHUB_USER, GITHUB_TOKEN))
+    print(resp.status_code)
 
     if resp.status_code == 200:
         data = yaml.safe_load(resp.content)
@@ -211,7 +212,7 @@ def main():
                 for src, dst in replace_list.items():
                     inplace_change(f, src, dst)
 
-    git_push()
+    # git_push()
 
 
 if __name__ == '__main__':

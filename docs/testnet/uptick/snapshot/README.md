@@ -12,31 +12,31 @@ Snapshot contains compressed copy of chain data directory. To keep backup files 
 snapshot server is periodically beeing state-synced.
 {% endhint %}
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: ${SNAPSHOT_VERSION}
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v0.2.4
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| ${SNAPSHOT_BLOCK} | ${SNAPSHOT_AGE} | [snapshot (${SNAPSHOT_SIZE})](https://snapshots.kjnodes.com/${CHAIN_NAME}/snapshot\_latest.tar.lz4) |
+| 995829 | 45 minutes ago | [snapshot (1.38 GB)](https://snapshots.kjnodes.com/uptick-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
 ### Stop the service and reset the data
 
 ```bash
-sudo systemctl stop ${CHAIN_APP}
-cp $HOME/${CHAIN_DIR}/data/priv_validator_state.json $HOME/${CHAIN_DIR}/priv_validator_state.json.backup
-rm -rf $HOME/${CHAIN_DIR}/data
+sudo systemctl stop uptickd
+cp $HOME/.uptickd/data/priv_validator_state.json $HOME/.uptickd/priv_validator_state.json.backup
+rm -rf $HOME/.uptickd/data
 ```
 
 ### Download latest snapshot
 
 ```bash
-curl -L https://snapshots.kjnodes.com/${CHAIN_NAME}/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/${CHAIN_DIR}
-mv $HOME/${CHAIN_DIR}/priv_validator_state.json.backup $HOME/${CHAIN_DIR}/data/priv_validator_state.json
+curl -L https://snapshots.kjnodes.com/uptick-testnet/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.uptickd
+mv $HOME/.uptickd/priv_validator_state.json.backup $HOME/.uptickd/data/priv_validator_state.json
 ```
 
 ### Restart the service and check the log
 
 ```bash
-sudo systemctl start ${CHAIN_APP} && journalctl -u ${CHAIN_APP} -f --no-hostname -o cat
+sudo systemctl start uptickd && journalctl -u uptickd -f --no-hostname -o cat
 ```

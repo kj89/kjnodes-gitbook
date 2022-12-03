@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/osmosis.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: ${CHAIN_ID} | **Latest Version Tag**: ${LATEST_VERSION_TAG} | **Custom Port**: ${CHAIN_PORT}
+**Chain ID**: osmosis-1 | **Latest Version Tag**: v12.2.0 | **Custom Port**: 29
 
 ### Setup validator name
 
@@ -38,17 +38,23 @@ source $HOME/.profile
 
 ```bash
 cd $HOME
-rm -rf ${GIT_DIR}
-git clone ${GIT_URL}
-cd ${GIT_DIR}
+rm -rf osmosis
+git clone https://github.com/osmosis-labs/osmosis.git
+cd osmosis
 
-# Compile genesis version ${GENESIS_VERSION_TAG}
-git checkout ${GENESIS_VERSION_TAG}
+# Compile genesis version v1.0.0
+git checkout v1.0.0
 make build
-mkdir -p $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin
-mv ${CHAIN_BINARY_SRC} $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin/
+mkdir -p $HOME/.osmosisd/cosmovisor/genesis/bin
+mv build/osmosisd $HOME/.osmosisd/cosmovisor/genesis/bin/
 rm -rf build
-${COMPILE_LATEST_VERSION}
+
+# Compile latest version v12.2.0
+git checkout v12.2.0
+make build
+mkdir -p $HOME/.osmosisd/cosmovisor/upgrades/v12/bin
+mv build/osmosisd $HOME/.osmosisd/cosmovisor/upgrades/v12/bin/
+rm build/osmosisd -rf
 ```
 
 ### Install Cosmovisor and create a service
@@ -58,9 +64,9 @@ curl -Ls https://github.com/cosmos/cosmos-sdk/releases/download/cosmovisor%2Fv1.
 chmod 755 cosmovisor
 sudo mv cosmovisor /usr/bin/cosmovisor
 
-sudo tee /etc/systemd/system/${CHAIN_APP}.service > /dev/null << EOF
+sudo tee /etc/systemd/system/osmosisd.service > /dev/null << EOF
 [Unit]
-Description=${CHAIN_NAME} node service
+Description=osmosis node service
 After=network-online.target
 [Service]
 User=$USER
@@ -68,46 +74,46 @@ ExecStart=/usr/bin/cosmovisor run start
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
-Environment="DAEMON_HOME=$HOME/${CHAIN_DIR}"
-Environment="DAEMON_NAME=${CHAIN_APP}"
+Environment="DAEMON_HOME=$HOME/.osmosisd"
+Environment="DAEMON_NAME=osmosisd"
 Environment="UNSAFE_SKIP_BACKUP=true"
 [Install]
 WantedBy=multi-user.target
 EOF
 sudo systemctl daemon-reload
-sudo systemctl enable ${CHAIN_APP}
+sudo systemctl enable osmosisd
 ```
 
 ### Initialize the node
 
 ```bash
-ln -s $HOME/${CHAIN_DIR}/cosmovisor/${BINARY_CURRENT} $HOME/${CHAIN_DIR}/cosmovisor/current
-sudo ln -s $HOME/${CHAIN_DIR}/cosmovisor/current/bin/${CHAIN_APP} /usr/local/bin/${CHAIN_APP}
-${CHAIN_APP} config chain-id ${CHAIN_ID}
-${CHAIN_APP} config keyring-backend ${KEYRING_BACKEND}
-${CHAIN_APP} config node tcp://localhost:${CHAIN_PORT}657
-${CHAIN_APP} init $MONIKER --chain-id ${CHAIN_ID}
-curl -Ls https://snapshots.kjnodes.com/${CHAIN_NAME}/genesis.json > $HOME/${CHAIN_DIR}/config/genesis.json
-curl -Ls https://snapshots.kjnodes.com/${CHAIN_NAME}/addrbook.json > $HOME/${CHAIN_DIR}/config/addrbook.json
-sed -i -e "s|^seeds *=.*|seeds = \"${CHAIN_TENDERSEED_PEER}@${CHAIN_NAME}.rpc.kjnodes.com:${CHAIN_PORT}659\"|" $HOME/${CHAIN_DIR}/config/config.toml
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"${MIN_GAS_PRICE}\"|" $HOME/${CHAIN_DIR}/config/app.toml
-sed -i -e "s|^pruning *=.*|pruning = \"custom\"|" $HOME/${CHAIN_DIR}/config/app.toml
-sed -i -e "s|^pruning-keep-recent *=.*|pruning-keep-recent = \"100\"|" $HOME/${CHAIN_DIR}/config/app.toml
-sed -i -e "s|^pruning-keep-every *=.*|pruning-keep-every = \"0\"|" $HOME/${CHAIN_DIR}/config/app.toml
-sed -i -e "s|^pruning-interval *=.*|pruning-interval = \"19\"|" $HOME/${CHAIN_DIR}/config/app.toml
+ln -s $HOME/.osmosisd/cosmovisor/upgrades/v12 $HOME/.osmosisd/cosmovisor/current
+sudo ln -s $HOME/.osmosisd/cosmovisor/current/bin/osmosisd /usr/local/bin/osmosisd
+osmosisd config chain-id osmosis-1
+osmosisd config keyring-backend file
+osmosisd config node tcp://localhost:29657
+osmosisd init $MONIKER --chain-id osmosis-1
+curl -Ls https://snapshots.kjnodes.com/osmosis/genesis.json > $HOME/.osmosisd/config/genesis.json
+curl -Ls https://snapshots.kjnodes.com/osmosis/addrbook.json > $HOME/.osmosisd/config/addrbook.json
+sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@osmosis.rpc.kjnodes.com:29659\"|" $HOME/.osmosisd/config/config.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0uosmo\"|" $HOME/.osmosisd/config/app.toml
+sed -i -e "s|^pruning *=.*|pruning = \"custom\"|" $HOME/.osmosisd/config/app.toml
+sed -i -e "s|^pruning-keep-recent *=.*|pruning-keep-recent = \"100\"|" $HOME/.osmosisd/config/app.toml
+sed -i -e "s|^pruning-keep-every *=.*|pruning-keep-every = \"0\"|" $HOME/.osmosisd/config/app.toml
+sed -i -e "s|^pruning-interval *=.*|pruning-interval = \"19\"|" $HOME/.osmosisd/config/app.toml
 
-sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CHAIN_PORT}658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${CHAIN_PORT}657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CHAIN_PORT}060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CHAIN_PORT}656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CHAIN_PORT}660\"%" $HOME/${CHAIN_DIR}/config/config.toml
-sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${CHAIN_PORT}317\"%; s%^address = \":8080\"%address = \":${CHAIN_PORT}080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:${CHAIN_PORT}090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${CHAIN_PORT}091\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:${CHAIN_PORT}545\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:${CHAIN_PORT}546\"%" $HOME/${CHAIN_DIR}/config/app.toml
+sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:29658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:29657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:29060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:29656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":29660\"%" $HOME/.osmosisd/config/config.toml
+sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:29317\"%; s%^address = \":8080\"%address = \":29080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:29090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:29091\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:29545\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:29546\"%" $HOME/.osmosisd/config/app.toml
 ```
 
 ### Download latest chain snapshot
 
 ```bash
-curl -L https://snapshots.kjnodes.com/${CHAIN_NAME}/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/${CHAIN_DIR}
+curl -L https://snapshots.kjnodes.com/osmosis/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.osmosisd
 ```
 
 ### Start service and check the logs
 
 ```bash
-sudo systemctl start ${CHAIN_APP} && journalctl -u ${CHAIN_APP} -f --no-hostname -o cat
+sudo systemctl start osmosisd && journalctl -u osmosisd -f --no-hostname -o cat
 ```
