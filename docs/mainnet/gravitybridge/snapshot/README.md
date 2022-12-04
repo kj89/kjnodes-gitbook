@@ -16,7 +16,7 @@ snapshot server is periodically beeing state-synced.
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 4817187 | 7 hours ago | [snapshot (1.44 GB)](https://snapshots.kjnodes.com/gravitybridge/snapshot\_latest.tar.lz4) |
+| 4831047 | 14 hours ago | [snapshot (1.55 GB)](https://snapshots.kjnodes.com/gravitybridge/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

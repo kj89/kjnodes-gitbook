@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/jackal.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: lupulella-2 | **Latest Version Tag**: v1.2.0-alpha.4 | **Custom Port**: 37
+**Chain ID**: lupulella-2 | **Latest Version Tag**: v1.2.0-alpha.5 | **Custom Port**: 37
 
 ### Setup validator name
 
@@ -49,6 +49,12 @@ mkdir -p $HOME/.canine/cosmovisor/genesis/bin
 mv build/canined $HOME/.canine/cosmovisor/genesis/bin/
 rm -rf build
 
+# Compile latest version v1.2.0-alpha.5
+git checkout v1.2.0-alpha.5
+make build
+mkdir -p $HOME/.canine/cosmovisor/upgrades/infra%20%26%20storage%20deals/bin
+mv build/canined $HOME/.canine/cosmovisor/upgrades/infra%20%26%20storage%20deals/bin/
+rm build/canined -rf
 ```
 
 ### Install Cosmovisor and create a service
@@ -81,7 +87,7 @@ sudo systemctl enable canined
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.canine/cosmovisor/genesis $HOME/.canine/cosmovisor/current
+ln -s $HOME/.canine/cosmovisor/upgrades/infra%20%26%20storage%20deals $HOME/.canine/cosmovisor/current
 sudo ln -s $HOME/.canine/cosmovisor/current/bin/canined /usr/local/bin/canined
 canined config chain-id lupulella-2
 canined config keyring-backend test
