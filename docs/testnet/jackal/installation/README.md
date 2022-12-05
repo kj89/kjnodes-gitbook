@@ -52,8 +52,8 @@ rm -rf build
 # Compile latest version v1.2.0-alpha.5
 git checkout v1.2.0-alpha.5
 make build
-mkdir -p $HOME/.canine/cosmovisor/upgrades/infra%20%26%20storage%20deals/bin
-mv build/canined $HOME/.canine/cosmovisor/upgrades/infra%20%26%20storage%20deals/bin/
+mkdir -p $HOME/.canine/cosmovisor/upgrades/infra%20&%20storage%20deals/bin
+mv build/canined $HOME/.canine/cosmovisor/upgrades/infra%20&%20storage%20deals/bin/
 rm build/canined -rf
 ```
 
@@ -87,7 +87,7 @@ sudo systemctl enable canined
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.canine/cosmovisor/upgrades/infra%20%26%20storage%20deals $HOME/.canine/cosmovisor/current
+ln -s $HOME/.canine/cosmovisor/upgrades/infra%20&%20storage%20deals $HOME/.canine/cosmovisor/current
 sudo ln -s $HOME/.canine/cosmovisor/current/bin/canined /usr/local/bin/canined
 canined config chain-id lupulella-2
 canined config keyring-backend test

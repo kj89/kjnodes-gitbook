@@ -94,12 +94,6 @@
   * [State sync](testnet/haqq/state-sync/README.md)
   * [Useful commands](testnet/haqq/useful-commands/README.md)
 
-* [Jackal](testnet/jackal/README.md)
-  * [Installation](testnet/jackal/installation/README.md)
-  * [Snapshot](testnet/jackal/snapshot/README.md)
-  * [State sync](testnet/jackal/state-sync/README.md)
-  * [Useful commands](testnet/jackal/useful-commands/README.md)
-
 * [Nibiru](testnet/nibiru/README.md)
   * [Installation](testnet/nibiru/installation/README.md)
   * [Snapshot](testnet/nibiru/snapshot/README.md)
