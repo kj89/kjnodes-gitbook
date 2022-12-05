@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/stride.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: stride-1 | **Latest Version Tag**: v4.0.0 | **Custom Port**: 16
+**Chain ID**: stride-1 | **Latest Version Tag**: v4.0.2 | **Custom Port**: 16
 
 ### Setup validator name
 
@@ -49,8 +49,8 @@ mkdir -p $HOME/.stride/cosmovisor/genesis/bin
 mv build/strided $HOME/.stride/cosmovisor/genesis/bin/
 rm -rf build
 
-# Compile latest version v4.0.0
-git checkout v4.0.0
+# Compile latest version v4.0.2
+git checkout v4.0.2
 make build
 mkdir -p $HOME/.stride/cosmovisor/upgrades/v4/bin
 mv build/strided $HOME/.stride/cosmovisor/upgrades/v4/bin/
