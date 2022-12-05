@@ -38,7 +38,7 @@ source $HOME/.profile
 
 ```bash
 cd $HOME
-sudo wget -O /usr/bin/quicksilverd https://github.com/ingenuity-build/testnets/releases/download/v0.10.0/quicksilverd-v0.10.1-amd64
+sudo wget -O /usr/bin/quicksilverd https://github.com/ingenuity-build/testnets/releases/download/v0.10.0/quicksilverd-v0.10.4-amd64
 chmod +x /usr/bin/quicksilverd
 ```
 
