@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/osmosis.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: osmosis-1 | **Latest Version Tag**: v13.0.0 | **Custom Port**: 29
+**Chain ID**: osmosis-1 | **Latest Version Tag**: v13.1.0 | **Custom Port**: 29
 
 ### Setup validator name
 
@@ -49,8 +49,8 @@ mkdir -p $HOME/.osmosisd/cosmovisor/genesis/bin
 mv build/osmosisd $HOME/.osmosisd/cosmovisor/genesis/bin/
 rm -rf build
 
-# Compile latest version v13.0.0
-git checkout v13.0.0
+# Compile latest version v13.1.0
+git checkout v13.1.0
 make build
 mkdir -p $HOME/.osmosisd/cosmovisor/upgrades/v13/bin
 mv build/osmosisd $HOME/.osmosisd/cosmovisor/upgrades/v13/bin/
