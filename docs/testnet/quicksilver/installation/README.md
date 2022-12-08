@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/quicksilver.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: innuendo-3 | **Latest Binary Version**: v0.10.4 | **Custom Port**: 11
+**Chain ID**: innuendo-3 | **Latest Binary Version**: v0.10.5 | **Custom Port**: 11
 
 ### Setup validator name
 
@@ -38,7 +38,7 @@ source $HOME/.profile
 
 ```bash
 cd $HOME
-sudo wget -O /usr/bin/quicksilverd https://github.com/ingenuity-build/testnets/releases/download/v0.10.0/quicksilverd-v0.10.4-amd64
+sudo wget -O /usr/bin/quicksilverd https://github.com/ingenuity-build/testnets/releases/download/v0.10.0/quicksilverd-v0.10.5-amd64
 chmod +x /usr/bin/quicksilverd
 ```
 
