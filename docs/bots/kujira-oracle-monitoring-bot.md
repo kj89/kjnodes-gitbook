@@ -30,7 +30,7 @@ To start using the bot type `/start` command and choose one of the commands:
 <figure><img src="../.gitbook/assets/kujira_oracle_bot_menu_list_all.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-To reduce spam alerts with each status change, you will be notified only if your validator exceeds threshold that is set to: **8** missed oracle votes per **5** minutes (That's about **86%** fail ratio)
+To reduce spam alerts with each status change, you will be notified only if your validator exceeds threshold that is set to: **16** missed oracle votes per **10** minutes (That's about **86%** fail ratio)
 {% endhint %}
 
 That's it! You are all set! Here is some example of the notification from the bot.
