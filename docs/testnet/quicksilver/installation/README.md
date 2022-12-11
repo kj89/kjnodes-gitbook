@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/quicksilver.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: innuendo-3 | **Latest Binary Version**: v0.10.5 | **Custom Port**: 11
+**Chain ID**: innuendo-4 | **Latest Binary Version**: v0.10.8 | **Custom Port**: 11
 
 ### Setup validator name
 
@@ -38,7 +38,7 @@ source $HOME/.profile
 
 ```bash
 cd $HOME
-sudo wget -O /usr/bin/quicksilverd https://github.com/ingenuity-build/testnets/releases/download/v0.10.0/quicksilverd-v0.10.5-amd64
+sudo wget -O /usr/bin/quicksilverd https://github.com/ingenuity-build/testnets/releases/download/v0.10.5/quicksilverd-v0.10.8-amd64
 chmod +x /usr/bin/quicksilverd
 ```
 
@@ -67,10 +67,10 @@ sudo systemctl enable quicksilverd
 ### Initialize the node
 
 ```bash
-quicksilverd config chain-id innuendo-3
+quicksilverd config chain-id innuendo-4
 quicksilverd config keyring-backend test
 quicksilverd config node tcp://localhost:11657
-quicksilverd init $MONIKER --chain-id innuendo-3
+quicksilverd init $MONIKER --chain-id innuendo-4
 curl -Ls https://snapshots.kjnodes.com/quicksilver-testnet/genesis.json > $HOME/.quicksilverd/config/genesis.json
 curl -Ls https://snapshots.kjnodes.com/quicksilver-testnet/addrbook.json > $HOME/.quicksilverd/config/addrbook.json
 sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@quicksilver-testnet.rpc.kjnodes.com:11659\"|" $HOME/.quicksilverd/config/config.toml
