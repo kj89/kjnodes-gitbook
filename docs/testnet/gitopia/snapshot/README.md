@@ -12,11 +12,13 @@ Snapshot contains compressed copy of chain data directory. To keep backup files 
 snapshot server is periodically beeing state-synced.
 {% endhint %}
 
+Snapshots are taken automatically each day at **1:0 UTC**
+
 **pruning**: 100/0/19 | **indexer**: null | **version tag**: v1.2.0
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 1677930 | 5 hours ago | [snapshot (4.77 GB)](https://snapshots.kjnodes.com/gitopia-testnet/snapshot\_latest.tar.lz4) |
+| 1677930 | 6 hours ago | [snapshot (4.77 GB)](https://snapshots.kjnodes.com/gitopia-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

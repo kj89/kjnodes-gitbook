@@ -12,11 +12,13 @@ Snapshot contains compressed copy of chain data directory. To keep backup files 
 snapshot server is periodically beeing state-synced.
 {% endhint %}
 
+Snapshots are taken automatically each day at **6:0 UTC**
+
 **pruning**: 100/0/19 | **indexer**: null | **version tag**: alpha7
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 131941 | 37 minutes ago | [snapshot (0.78 GB)](https://snapshots.kjnodes.com/jackal-testnet/snapshot\_latest.tar.lz4) |
+| 131941 | 1 hour ago | [snapshot (0.78 GB)](https://snapshots.kjnodes.com/jackal-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

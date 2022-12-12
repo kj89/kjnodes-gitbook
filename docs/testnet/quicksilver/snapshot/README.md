@@ -12,11 +12,13 @@ Snapshot contains compressed copy of chain data directory. To keep backup files 
 snapshot server is periodically beeing state-synced.
 {% endhint %}
 
+Snapshots are taken automatically each day at **5:0 UTC**
+
 **pruning**: 100/0/19 | **indexer**: null | **version tag**: v0.10.8
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 54002 | 1 hour ago | [snapshot (0.29 GB)](https://snapshots.kjnodes.com/quicksilver-testnet/snapshot\_latest.tar.lz4) |
+| 54002 | 2 hours ago | [snapshot (0.29 GB)](https://snapshots.kjnodes.com/quicksilver-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

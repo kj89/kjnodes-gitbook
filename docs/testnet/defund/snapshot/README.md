@@ -12,11 +12,13 @@ Snapshot contains compressed copy of chain data directory. To keep backup files 
 snapshot server is periodically beeing state-synced.
 {% endhint %}
 
+Snapshots are taken automatically each day at **3:0 UTC**
+
 **pruning**: 100/0/19 | **indexer**: null | **version tag**: v0.1.0
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 4850111 | 3 hours ago | [snapshot (14.3 GB)](https://snapshots.kjnodes.com/defund-testnet/snapshot\_latest.tar.lz4) |
+| 4850111 | 4 hours ago | [snapshot (14.3 GB)](https://snapshots.kjnodes.com/defund-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

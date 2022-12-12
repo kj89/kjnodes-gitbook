@@ -12,11 +12,13 @@ Snapshot contains compressed copy of chain data directory. To keep backup files 
 snapshot server is periodically beeing state-synced.
 {% endhint %}
 
+Snapshots are taken automatically each day at **4:0 UTC**
+
 **pruning**: 100/0/19 | **indexer**: null | **version tag**: 1.2.2beta-postfix
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 13881053 | 2 hours ago | [snapshot (13.06 GB)](https://snapshots.kjnodes.com/sei-testnet/snapshot\_latest.tar.lz4) |
+| 13881053 | 3 hours ago | [snapshot (13.06 GB)](https://snapshots.kjnodes.com/sei-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

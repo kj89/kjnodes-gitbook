@@ -51,6 +51,7 @@ def get_replacement_params(chain, chain_environment):
         chain_binary_src = data['chain_binary_src']
         chain_website = data['chain_website']
         chain_short_description = data['chain_short_description']
+        chain_snapshot_time = f"{data['chain_snapshot_cron_hour']}:{data['chain_snapshot_cron_minute']} UTC"
 
         if 'chain_dirs' in data:
             chain_dir = data['chain_dirs'][0]
@@ -87,6 +88,7 @@ def get_replacement_params(chain, chain_environment):
         replacements['${MIN_GAS_PRICE}'] = chain_min_gas_price
         replacements['${CHAIN_WEBSITE}'] = chain_website
         replacements['${CHAIN_SHORT_DESCRIPTION}'] = chain_short_description
+        replacements['${CHAIN_SNAPSHOT_TIME}'] = chain_snapshot_time
 
         latest_version_name = data['chain_upgrades'][-1]['name']
         replacements['${LATEST_VERSION_NAME}'] = latest_version_name
