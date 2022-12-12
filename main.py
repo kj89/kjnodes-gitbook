@@ -51,7 +51,13 @@ def get_replacement_params(chain, chain_environment):
         chain_binary_src = data['chain_binary_src']
         chain_website = data['chain_website']
         chain_short_description = data['chain_short_description']
-        chain_snapshot_time = f"{data['chain_snapshot_cron_hour']}:{data['chain_snapshot_cron_minute']} UTC"
+        chain_snapshot_hour = data['chain_snapshot_cron_hour']
+        chain_snapshot_minute = data['chain_snapshot_cron_minute']
+        if len(str(chain_snapshot_hour)) == 1:
+            chain_snapshot_hour = f"0{chain_snapshot_hour}"
+        if len(str(chain_snapshot_minute)) == 1:
+            chain_snapshot_minute = f"0{chain_snapshot_minute}"
+        chain_snapshot_time = f"{chain_snapshot_hour}:{chain_snapshot_minute} UTC"
 
         if 'chain_dirs' in data:
             chain_dir = data['chain_dirs'][0]

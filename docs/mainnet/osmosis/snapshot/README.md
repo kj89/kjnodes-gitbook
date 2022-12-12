@@ -12,13 +12,13 @@ Snapshot contains compressed copy of chain data directory. To keep backup files 
 snapshot server is periodically beeing state-synced.
 {% endhint %}
 
-Snapshots are taken automatically each day at **7:0 UTC**
+Snapshots are taken automatically each day at **07:00 UTC**
 
 **pruning**: 100/0/19 | **indexer**: null | **version tag**: v13
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 7281634 | 1 day ago | [snapshot (20.09 GB)](https://snapshots.kjnodes.com/osmosis/snapshot\_latest.tar.lz4) |
+| 7296547 | 19 minutes ago | [snapshot (20.1 GB)](https://snapshots.kjnodes.com/osmosis/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

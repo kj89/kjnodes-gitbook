@@ -12,13 +12,13 @@ Snapshot contains compressed copy of chain data directory. To keep backup files 
 snapshot server is periodically beeing state-synced.
 {% endhint %}
 
-Snapshots are taken automatically each day at **6:30 UTC**
+Snapshots are taken automatically each day at **06:30 UTC**
 
 **pruning**: 100/0/19 | **indexer**: null | **version tag**: v0.2.4
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 1129774 | 44 minutes ago | [snapshot (1.42 GB)](https://snapshots.kjnodes.com/uptick-testnet/snapshot\_latest.tar.lz4) |
+| 1129774 | 50 minutes ago | [snapshot (1.42 GB)](https://snapshots.kjnodes.com/uptick-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
