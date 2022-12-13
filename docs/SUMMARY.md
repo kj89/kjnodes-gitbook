@@ -13,6 +13,12 @@
   * [State sync](mainnet/agoric/state-sync/README.md)
   * [Useful commands](mainnet/agoric/useful-commands/README.md)
 
+* [Bitcanna](mainnet/bitcanna/README.md)
+  * [Installation](mainnet/bitcanna/installation/README.md)
+  * [Snapshot](mainnet/bitcanna/snapshot/README.md)
+  * [State sync](mainnet/bitcanna/state-sync/README.md)
+  * [Useful commands](mainnet/bitcanna/useful-commands/README.md)
+
 * [Cosmos Hub](mainnet/cosmoshub/README.md)
   * [Installation](mainnet/cosmoshub/installation/README.md)
   * [Snapshot](mainnet/cosmoshub/snapshot/README.md)
