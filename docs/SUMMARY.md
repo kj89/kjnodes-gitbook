@@ -112,12 +112,6 @@
   * [State sync](testnet/nibiru/state-sync/README.md)
   * [Useful commands](testnet/nibiru/useful-commands/README.md)
 
-* [Okp4](testnet/okp4/README.md)
-  * [Installation](testnet/okp4/installation/README.md)
-  * [Snapshot](testnet/okp4/snapshot/README.md)
-  * [State sync](testnet/okp4/state-sync/README.md)
-  * [Useful commands](testnet/okp4/useful-commands/README.md)
-
 * [Ollo](testnet/ollo/README.md)
   * [Installation](testnet/ollo/installation/README.md)
   * [Snapshot](testnet/ollo/snapshot/README.md)
