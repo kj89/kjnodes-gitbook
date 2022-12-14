@@ -33,8 +33,8 @@ d5519e378247dfb61dfe90652d1fe3e2b3005a5b@okp4-testnet.rpc.kjnodes.com:36656
 curl -Ls https://snapshots.kjnodes.com/okp4-testnet/addrbook.json > $HOME/.okp4d/config/addrbook.json
 ```
 
-**live-peers** (1)
+**live-peers** (5)
 ```
-peers="d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:36656"
+peers="d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:36656,540e0e9b33b2d87315fdf7089404671581d36e94@95.217.203.43:26656,ed52ad66f7c30b322c1e58d226791f1402883db3@23.88.72.246:36656,e755eb8016c2f6f5303b2f8d503d9126d235e80f@138.201.35.56:26656,82bb185819e5cf2bb6a9896447672efca27f28cb@65.109.15.202:26656"
 sed -i 's|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.okp4d/config/config.toml
 ```
