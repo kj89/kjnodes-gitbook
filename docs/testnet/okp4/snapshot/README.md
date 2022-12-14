@@ -18,7 +18,7 @@ Snapshots are taken automatically each day at **09:30 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 156 | 2 minutes ago | [snapshot (0.03 GB)](https://snapshots.kjnodes.com/okp4-testnet/snapshot\_latest.tar.lz4) |
+| 156 | 8 minutes ago | [snapshot (0.03 GB)](https://snapshots.kjnodes.com/okp4-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

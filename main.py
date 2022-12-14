@@ -8,7 +8,7 @@ import os
 
 environments = {
     'mainnet': ['agoric', 'bitcanna', 'cosmoshub', 'gravitybridge', 'jackal', 'kujira', 'stride', 'teritori', 'rebus', 'osmosis'],
-    'testnet': ['agoric', 'aura', 'defund', 'gitopia', 'haqq', 'jackal', 'nibiru', 'ollo', 'quicksilver', 'sei',
+    'testnet': ['agoric', 'aura', 'defund', 'gitopia', 'haqq', 'jackal', 'nibiru', 'okp4', 'ollo', 'quicksilver', 'sei',
                 'teritori', 'uptick']
 }
 
