@@ -220,7 +220,7 @@ def main():
                 for src, dst in replace_list.items():
                     inplace_change(f, src, dst)
 
-    # git_push()
+    git_push()
 
 
 if __name__ == '__main__':
