@@ -112,6 +112,12 @@
   * [State sync](testnet/nibiru/state-sync/README.md)
   * [Useful commands](testnet/nibiru/useful-commands/README.md)
 
+* [Nolus](testnet/nolus/README.md)
+  * [Installation](testnet/nolus/installation/README.md)
+  * [Snapshot](testnet/nolus/snapshot/README.md)
+  * [State sync](testnet/nolus/state-sync/README.md)
+  * [Useful commands](testnet/nolus/useful-commands/README.md)
+
 * [Okp4](testnet/okp4/README.md)
   * [Installation](testnet/okp4/installation/README.md)
   * [Snapshot](testnet/okp4/snapshot/README.md)

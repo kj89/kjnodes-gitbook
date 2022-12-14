@@ -43,6 +43,8 @@ description: Discover base tools contributed to the projects by kjnodes team.
 
 <img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/nibiru.png" alt="" data-size="line"> [Nibiru](testnet/nibiru/)
 
+<img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/nolus.png" alt="" data-size="line"> [Nolus](testnet/nolus/)
+
 <img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/okp4.png" alt="" data-size="line"> [Okp4](testnet/okp4/)
 
 <img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/ollo.png" alt="" data-size="line"> [Ollo](testnet/ollo/)

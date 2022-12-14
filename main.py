@@ -7,9 +7,10 @@ import shutil
 import os
 
 environments = {
-    'mainnet': ['agoric', 'bitcanna', 'cosmoshub', 'gravitybridge', 'jackal', 'kujira', 'stride', 'teritori', 'rebus', 'osmosis'],
-    'testnet': ['agoric', 'aura', 'defund', 'gitopia', 'haqq', 'jackal', 'nibiru', 'okp4', 'ollo', 'quicksilver', 'sei',
-                'teritori', 'uptick']
+    'mainnet': ['agoric', 'bitcanna', 'cosmoshub', 'gravitybridge', 'jackal', 'kujira', 'stride', 'teritori', 'rebus',
+                'osmosis'],
+    'testnet': ['agoric', 'aura', 'defund', 'gitopia', 'haqq', 'jackal', 'nibiru', 'nolus', 'okp4', 'ollo',
+                'quicksilver', 'sei', 'teritori', 'uptick']
 }
 
 
@@ -220,7 +221,7 @@ def main():
                 for src, dst in replace_list.items():
                     inplace_change(f, src, dst)
 
-    git_push()
+    # git_push()
 
 
 if __name__ == '__main__':
