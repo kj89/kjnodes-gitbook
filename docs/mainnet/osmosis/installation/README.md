@@ -42,19 +42,11 @@ rm -rf osmosis
 git clone https://github.com/osmosis-labs/osmosis.git
 cd osmosis
 
-# Compile genesis version v1.0.0
-git checkout v1.0.0
+git checkout v13.1.0
 make build
 mkdir -p $HOME/.osmosisd/cosmovisor/genesis/bin
 mv build/osmosisd $HOME/.osmosisd/cosmovisor/genesis/bin/
 rm -rf build
-
-# Compile latest version v13.1.0
-git checkout v13.1.0
-make build
-mkdir -p $HOME/.osmosisd/cosmovisor/upgrades/v13/bin
-mv build/osmosisd $HOME/.osmosisd/cosmovisor/upgrades/v13/bin/
-rm build/osmosisd -rf
 ```
 
 ### Install Cosmovisor and create a service
@@ -87,7 +79,7 @@ sudo systemctl enable osmosisd
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.osmosisd/cosmovisor/upgrades/v13 $HOME/.osmosisd/cosmovisor/current
+ln -s $HOME/.osmosisd/cosmovisor/genesis $HOME/.osmosisd/cosmovisor/current
 sudo ln -s $HOME/.osmosisd/cosmovisor/current/bin/osmosisd /usr/local/bin/osmosisd
 osmosisd config chain-id osmosis-1
 osmosisd config keyring-backend file

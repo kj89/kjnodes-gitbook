@@ -42,13 +42,11 @@ rm -rf okp4d
 git clone https://github.com/okp4/okp4d.git
 cd okp4d
 
-# Compile genesis version v3.0.0
 git checkout v3.0.0
 make build
 mkdir -p $HOME/.okp4d/cosmovisor/genesis/bin
 mv target/dist/okp4d $HOME/.okp4d/cosmovisor/genesis/bin/
 rm -rf build
-
 ```
 
 ### Install Cosmovisor and create a service

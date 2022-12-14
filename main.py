@@ -102,26 +102,26 @@ def get_replacement_params(chain, chain_environment):
 
         print(data['chain_upgrades'])
         if 'tag' in data['chain_upgrades'][-1].keys():
-            genesis_version_name = 'genesis'
-            genesis_version_tag = data['chain_upgrades'][0]['tag']
+            # genesis_version_name = 'genesis'
+            # genesis_version_tag = data['chain_upgrades'][0]['tag']
             latest_version_name = data['chain_upgrades'][-1]['name']
             latest_version_tag = data['chain_upgrades'][-1]['tag']
-            replacements['${GENESIS_VERSION_NAME}'] = genesis_version_name
-            replacements['${GENESIS_VERSION_TAG}'] = genesis_version_tag
+            # replacements['${GENESIS_VERSION_NAME}'] = genesis_version_name
+            # replacements['${GENESIS_VERSION_TAG}'] = genesis_version_tag
             replacements['${LATEST_VERSION_NAME}'] = latest_version_name
             replacements['${LATEST_VERSION_TAG}'] = latest_version_tag
 
-            if latest_version_name == genesis_version_name:
-                replacements['${BINARY_CURRENT}'] = genesis_version_name
-                replacements['${COMPILE_LATEST_VERSION}'] = ''
-            else:
-                replacements['${BINARY_CURRENT}'] = f'upgrades/{latest_version_name}'
-                replacements['${COMPILE_LATEST_VERSION}'] = f"\n# Compile latest version {latest_version_tag}\n" \
-                                                            f"git checkout {latest_version_tag}\n" \
-                                                            f"make build\n" \
-                                                            f"mkdir -p $HOME/{chain_dir}/cosmovisor/upgrades/{latest_version_name}/bin\n" \
-                                                            f"mv {chain_binary_src} $HOME/{chain_dir}/cosmovisor/upgrades/{latest_version_name}/bin/\n" \
-                                                            f"rm {chain_binary_src} -rf"
+            # if latest_version_name == genesis_version_name:
+            #     replacements['${BINARY_CURRENT}'] = genesis_version_name
+            #     replacements['${COMPILE_LATEST_VERSION}'] = ''
+            # else:
+            #     replacements['${BINARY_CURRENT}'] = f'upgrades/{latest_version_name}'
+            #     replacements['${COMPILE_LATEST_VERSION}'] = f"\n# Compile latest version {latest_version_tag}\n" \
+            #                                                 f"git checkout {latest_version_tag}\n" \
+            #                                                 f"make build\n" \
+            #                                                 f"mkdir -p $HOME/{chain_dir}/cosmovisor/upgrades/{latest_version_name}/bin\n" \
+            #                                                 f"mv {chain_binary_src} $HOME/{chain_dir}/cosmovisor/upgrades/{latest_version_name}/bin/\n" \
+            #                                                 f"rm {chain_binary_src} -rf"
 
         # Get restake data
         restake_valoper, restake_run_time = get_restake_params(chain_name)
@@ -141,7 +141,7 @@ def get_replacement_params(chain, chain_environment):
         # Get snapshot metadata
         snapshot_size_gb, snapshot_block, snapshot_version, snapshot_age = get_snapshot_metadata(chain_name)
         if snapshot_version == 'genesis':
-            snapshot_version = genesis_version_tag
+            snapshot_version = latest_version_tag
         replacements['${SNAPSHOT_SIZE}'] = snapshot_size_gb
         replacements['${SNAPSHOT_BLOCK}'] = snapshot_block
         replacements['${SNAPSHOT_AGE}'] = snapshot_age

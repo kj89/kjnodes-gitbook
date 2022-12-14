@@ -42,13 +42,11 @@ rm -rf nolus-core
 git clone https://github.com/Nolus-Protocol/nolus-core.git
 cd nolus-core
 
-# Compile genesis version v0.1.39
 git checkout v0.1.39
 make build
 mkdir -p $HOME/.nolus/cosmovisor/genesis/bin
 mv target/release/nolusd $HOME/.nolus/cosmovisor/genesis/bin/
 rm -rf build
-
 ```
 
 ### Install Cosmovisor and create a service

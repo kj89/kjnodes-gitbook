@@ -42,13 +42,11 @@ rm -rf ollo
 git clone https://github.com/OLLO-Station/ollo.git
 cd ollo
 
-# Compile genesis version v0.0.1
 git checkout v0.0.1
 make build
 mkdir -p $HOME/.ollo/cosmovisor/genesis/bin
 mv bin/ollod $HOME/.ollo/cosmovisor/genesis/bin/
 rm -rf build
-
 ```
 
 ### Install Cosmovisor and create a service

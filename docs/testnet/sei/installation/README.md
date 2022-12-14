@@ -42,19 +42,11 @@ rm -rf sei-chain
 git clone https://github.com/sei-protocol/sei-chain.git
 cd sei-chain
 
-# Compile genesis version 1.0.6beta-val-count-fix
-git checkout 1.0.6beta-val-count-fix
+git checkout 1.2.2beta-postfix
 make build
 mkdir -p $HOME/.sei/cosmovisor/genesis/bin
 mv build/seid $HOME/.sei/cosmovisor/genesis/bin/
 rm -rf build
-
-# Compile latest version 1.2.2beta-postfix
-git checkout 1.2.2beta-postfix
-make build
-mkdir -p $HOME/.sei/cosmovisor/upgrades/1.2.2beta-postfix/bin
-mv build/seid $HOME/.sei/cosmovisor/upgrades/1.2.2beta-postfix/bin/
-rm build/seid -rf
 ```
 
 ### Install Cosmovisor and create a service
@@ -87,7 +79,7 @@ sudo systemctl enable seid
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.sei/cosmovisor/upgrades/1.2.2beta-postfix $HOME/.sei/cosmovisor/current
+ln -s $HOME/.sei/cosmovisor/genesis $HOME/.sei/cosmovisor/current
 sudo ln -s $HOME/.sei/cosmovisor/current/bin/seid /usr/local/bin/seid
 seid config chain-id atlantic-1
 seid config keyring-backend test

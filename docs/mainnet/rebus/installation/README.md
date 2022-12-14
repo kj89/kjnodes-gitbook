@@ -42,19 +42,11 @@ rm -rf rebus.core
 git clone https://github.com/rebuschain/rebus.core.git
 cd rebus.core
 
-# Compile genesis version v0.1.0
-git checkout v0.1.0
+git checkout v0.2.0
 make build
 mkdir -p $HOME/.rebusd/cosmovisor/genesis/bin
 mv build/rebusd $HOME/.rebusd/cosmovisor/genesis/bin/
 rm -rf build
-
-# Compile latest version v0.2.0
-git checkout v0.2.0
-make build
-mkdir -p $HOME/.rebusd/cosmovisor/upgrades/v0.2.0/bin
-mv build/rebusd $HOME/.rebusd/cosmovisor/upgrades/v0.2.0/bin/
-rm build/rebusd -rf
 ```
 
 ### Install Cosmovisor and create a service
@@ -87,7 +79,7 @@ sudo systemctl enable rebusd
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.rebusd/cosmovisor/upgrades/v0.2.0 $HOME/.rebusd/cosmovisor/current
+ln -s $HOME/.rebusd/cosmovisor/genesis $HOME/.rebusd/cosmovisor/current
 sudo ln -s $HOME/.rebusd/cosmovisor/current/bin/rebusd /usr/local/bin/rebusd
 rebusd config chain-id reb_1111-1
 rebusd config keyring-backend file

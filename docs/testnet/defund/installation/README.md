@@ -42,13 +42,11 @@ rm -rf defund
 git clone https://github.com/defund-labs/defund.git
 cd defund
 
-# Compile genesis version v0.1.0
 git checkout v0.1.0
 make build
 mkdir -p $HOME/.defund/cosmovisor/genesis/bin
 mv build/defundd $HOME/.defund/cosmovisor/genesis/bin/
 rm -rf build
-
 ```
 
 ### Install Cosmovisor and create a service

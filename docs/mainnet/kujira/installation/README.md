@@ -42,19 +42,11 @@ rm -rf core
 git clone https://github.com/Team-Kujira/core.git
 cd core
 
-# Compile genesis version v0.4.1
-git checkout v0.4.1
+git checkout v0.7.1
 make build
 mkdir -p $HOME/.kujira/cosmovisor/genesis/bin
 mv build/kujirad $HOME/.kujira/cosmovisor/genesis/bin/
 rm -rf build
-
-# Compile latest version v0.7.1
-git checkout v0.7.1
-make build
-mkdir -p $HOME/.kujira/cosmovisor/upgrades/v0.7.1/bin
-mv build/kujirad $HOME/.kujira/cosmovisor/upgrades/v0.7.1/bin/
-rm build/kujirad -rf
 ```
 
 ### Install Cosmovisor and create a service
@@ -87,7 +79,7 @@ sudo systemctl enable kujirad
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.kujira/cosmovisor/upgrades/v0.7.1 $HOME/.kujira/cosmovisor/current
+ln -s $HOME/.kujira/cosmovisor/genesis $HOME/.kujira/cosmovisor/current
 sudo ln -s $HOME/.kujira/cosmovisor/current/bin/kujirad /usr/local/bin/kujirad
 kujirad config chain-id kaiyo-1
 kujirad config keyring-backend file

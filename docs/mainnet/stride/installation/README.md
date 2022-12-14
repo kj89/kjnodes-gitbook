@@ -42,19 +42,11 @@ rm -rf stride
 git clone https://github.com/Stride-Labs/stride.git
 cd stride
 
-# Compile genesis version v1.0.2
-git checkout v1.0.2
+git checkout v4.0.2
 make build
 mkdir -p $HOME/.stride/cosmovisor/genesis/bin
 mv build/strided $HOME/.stride/cosmovisor/genesis/bin/
 rm -rf build
-
-# Compile latest version v4.0.2
-git checkout v4.0.2
-make build
-mkdir -p $HOME/.stride/cosmovisor/upgrades/v4/bin
-mv build/strided $HOME/.stride/cosmovisor/upgrades/v4/bin/
-rm build/strided -rf
 ```
 
 ### Install Cosmovisor and create a service
@@ -87,7 +79,7 @@ sudo systemctl enable strided
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.stride/cosmovisor/upgrades/v4 $HOME/.stride/cosmovisor/current
+ln -s $HOME/.stride/cosmovisor/genesis $HOME/.stride/cosmovisor/current
 sudo ln -s $HOME/.stride/cosmovisor/current/bin/strided /usr/local/bin/strided
 strided config chain-id stride-1
 strided config keyring-backend file

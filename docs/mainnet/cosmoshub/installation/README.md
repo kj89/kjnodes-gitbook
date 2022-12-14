@@ -42,19 +42,11 @@ rm -rf gaia
 git clone https://github.com/cosmos/gaia.git
 cd gaia
 
-# Compile genesis version v2.0.0
-git checkout v2.0.0
+git checkout v7.1.0
 make build
 mkdir -p $HOME/.gaia/cosmovisor/genesis/bin
 mv build/gaiad $HOME/.gaia/cosmovisor/genesis/bin/
 rm -rf build
-
-# Compile latest version v7.1.0
-git checkout v7.1.0
-make build
-mkdir -p $HOME/.gaia/cosmovisor/upgrades/v7-Theta/bin
-mv build/gaiad $HOME/.gaia/cosmovisor/upgrades/v7-Theta/bin/
-rm build/gaiad -rf
 ```
 
 ### Install Cosmovisor and create a service
@@ -87,7 +79,7 @@ sudo systemctl enable gaiad
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.gaia/cosmovisor/upgrades/v7-Theta $HOME/.gaia/cosmovisor/current
+ln -s $HOME/.gaia/cosmovisor/genesis $HOME/.gaia/cosmovisor/current
 sudo ln -s $HOME/.gaia/cosmovisor/current/bin/gaiad /usr/local/bin/gaiad
 gaiad config chain-id cosmoshub-4
 gaiad config keyring-backend file

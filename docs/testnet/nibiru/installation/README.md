@@ -42,13 +42,11 @@ rm -rf nibiru
 git clone https://github.com/NibiruChain/nibiru.git
 cd nibiru
 
-# Compile genesis version v0.15.0
 git checkout v0.15.0
 make build
 mkdir -p $HOME/.nibid/cosmovisor/genesis/bin
 mv build/nibid $HOME/.nibid/cosmovisor/genesis/bin/
 rm -rf build
-
 ```
 
 ### Install Cosmovisor and create a service

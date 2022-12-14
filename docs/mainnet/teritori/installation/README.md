@@ -42,19 +42,11 @@ rm -rf teritori-chain
 git clone https://github.com/TERITORI/teritori-chain.git
 cd teritori-chain
 
-# Compile genesis version v1.1.2
-git checkout v1.1.2
+git checkout v1.3.0
 make build
 mkdir -p $HOME/.teritorid/cosmovisor/genesis/bin
 mv build/teritorid $HOME/.teritorid/cosmovisor/genesis/bin/
 rm -rf build
-
-# Compile latest version v1.3.0
-git checkout v1.3.0
-make build
-mkdir -p $HOME/.teritorid/cosmovisor/upgrades/v1.3.0/bin
-mv build/teritorid $HOME/.teritorid/cosmovisor/upgrades/v1.3.0/bin/
-rm build/teritorid -rf
 ```
 
 ### Install Cosmovisor and create a service
@@ -87,7 +79,7 @@ sudo systemctl enable teritorid
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.teritorid/cosmovisor/upgrades/v1.3.0 $HOME/.teritorid/cosmovisor/current
+ln -s $HOME/.teritorid/cosmovisor/genesis $HOME/.teritorid/cosmovisor/current
 sudo ln -s $HOME/.teritorid/cosmovisor/current/bin/teritorid /usr/local/bin/teritorid
 teritorid config chain-id teritori-1
 teritorid config keyring-backend file

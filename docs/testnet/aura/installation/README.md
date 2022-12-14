@@ -42,19 +42,11 @@ rm -rf aura
 git clone https://github.com/aura-nw/aura.git
 cd aura
 
-# Compile genesis version euphoria_v0.4.1
-git checkout euphoria_v0.4.1
+git checkout euphoria_v0.4.2
 make build
 mkdir -p $HOME/.aura/cosmovisor/genesis/bin
 mv build/aurad $HOME/.aura/cosmovisor/genesis/bin/
 rm -rf build
-
-# Compile latest version euphoria_v0.4.2
-git checkout euphoria_v0.4.2
-make build
-mkdir -p $HOME/.aura/cosmovisor/upgrades/v0.4.2/bin
-mv build/aurad $HOME/.aura/cosmovisor/upgrades/v0.4.2/bin/
-rm build/aurad -rf
 ```
 
 ### Install Cosmovisor and create a service
@@ -87,7 +79,7 @@ sudo systemctl enable aurad
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.aura/cosmovisor/upgrades/v0.4.2 $HOME/.aura/cosmovisor/current
+ln -s $HOME/.aura/cosmovisor/genesis $HOME/.aura/cosmovisor/current
 sudo ln -s $HOME/.aura/cosmovisor/current/bin/aurad /usr/local/bin/aurad
 aurad config chain-id euphoria-2
 aurad config keyring-backend test

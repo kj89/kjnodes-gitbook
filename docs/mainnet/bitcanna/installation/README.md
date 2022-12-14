@@ -42,19 +42,11 @@ rm -rf bcna
 git clone https://github.com/BitCannaGlobal/bcna.git
 cd bcna
 
-# Compile genesis version v1.2
-git checkout v1.2
+git checkout v1.5.3
 make build
 mkdir -p $HOME/.bcna/cosmovisor/genesis/bin
 mv build/bcnad $HOME/.bcna/cosmovisor/genesis/bin/
 rm -rf build
-
-# Compile latest version v1.5.3
-git checkout v1.5.3
-make build
-mkdir -p $HOME/.bcna/cosmovisor/upgrades/trichomemonster-ica/bin
-mv build/bcnad $HOME/.bcna/cosmovisor/upgrades/trichomemonster-ica/bin/
-rm build/bcnad -rf
 ```
 
 ### Install Cosmovisor and create a service
@@ -87,7 +79,7 @@ sudo systemctl enable bcnad
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.bcna/cosmovisor/upgrades/trichomemonster-ica $HOME/.bcna/cosmovisor/current
+ln -s $HOME/.bcna/cosmovisor/genesis $HOME/.bcna/cosmovisor/current
 sudo ln -s $HOME/.bcna/cosmovisor/current/bin/bcnad /usr/local/bin/bcnad
 bcnad config chain-id bitcanna-1
 bcnad config keyring-backend file

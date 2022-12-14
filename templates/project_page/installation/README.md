@@ -42,13 +42,11 @@ rm -rf ${GIT_DIR}
 git clone ${GIT_URL}
 cd ${GIT_DIR}
 
-# Compile genesis version ${GENESIS_VERSION_TAG}
-git checkout ${GENESIS_VERSION_TAG}
+git checkout ${LATEST_VERSION_TAG}
 make build
 mkdir -p $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin
 mv ${CHAIN_BINARY_SRC} $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin/
 rm -rf build
-${COMPILE_LATEST_VERSION}
 ```
 
 ### Install Cosmovisor and create a service
@@ -81,7 +79,7 @@ sudo systemctl enable ${CHAIN_APP}
 ### Initialize the node
 
 ```bash
-ln -s $HOME/${CHAIN_DIR}/cosmovisor/${BINARY_CURRENT} $HOME/${CHAIN_DIR}/cosmovisor/current
+ln -s $HOME/${CHAIN_DIR}/cosmovisor/genesis $HOME/${CHAIN_DIR}/cosmovisor/current
 sudo ln -s $HOME/${CHAIN_DIR}/cosmovisor/current/bin/${CHAIN_APP} /usr/local/bin/${CHAIN_APP}
 ${CHAIN_APP} config chain-id ${CHAIN_ID}
 ${CHAIN_APP} config keyring-backend ${KEYRING_BACKEND}

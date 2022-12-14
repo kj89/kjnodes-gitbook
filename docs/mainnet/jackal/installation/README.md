@@ -42,19 +42,11 @@ rm -rf canine-chain
 git clone https://github.com/JackalLabs/canine-chain.git
 cd canine-chain
 
-# Compile genesis version v1.1.1
-git checkout v1.1.1
+git checkout v1.1.2-hotfix
 make build
 mkdir -p $HOME/.canine/cosmovisor/genesis/bin
 mv build/canined $HOME/.canine/cosmovisor/genesis/bin/
 rm -rf build
-
-# Compile latest version v1.1.2-hotfix
-git checkout v1.1.2-hotfix
-make build
-mkdir -p $HOME/.canine/cosmovisor/upgrades/v1.1.2-hotfix/bin
-mv build/canined $HOME/.canine/cosmovisor/upgrades/v1.1.2-hotfix/bin/
-rm build/canined -rf
 ```
 
 ### Install Cosmovisor and create a service
@@ -87,7 +79,7 @@ sudo systemctl enable canined
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.canine/cosmovisor/upgrades/v1.1.2-hotfix $HOME/.canine/cosmovisor/current
+ln -s $HOME/.canine/cosmovisor/genesis $HOME/.canine/cosmovisor/current
 sudo ln -s $HOME/.canine/cosmovisor/current/bin/canined /usr/local/bin/canined
 canined config chain-id jackal-1
 canined config keyring-backend file

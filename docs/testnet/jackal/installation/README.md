@@ -42,19 +42,11 @@ rm -rf canine-chain
 git clone https://github.com/JackalLabs/canine-chain.git
 cd canine-chain
 
-# Compile genesis version v1.2.0-alpha.4
-git checkout v1.2.0-alpha.4
+git checkout v1.2.0-alpha.7
 make build
 mkdir -p $HOME/.canine/cosmovisor/genesis/bin
 mv build/canined $HOME/.canine/cosmovisor/genesis/bin/
 rm -rf build
-
-# Compile latest version v1.2.0-alpha.7
-git checkout v1.2.0-alpha.7
-make build
-mkdir -p $HOME/.canine/cosmovisor/upgrades/alpha7/bin
-mv build/canined $HOME/.canine/cosmovisor/upgrades/alpha7/bin/
-rm build/canined -rf
 ```
 
 ### Install Cosmovisor and create a service
@@ -87,7 +79,7 @@ sudo systemctl enable canined
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.canine/cosmovisor/upgrades/alpha7 $HOME/.canine/cosmovisor/current
+ln -s $HOME/.canine/cosmovisor/genesis $HOME/.canine/cosmovisor/current
 sudo ln -s $HOME/.canine/cosmovisor/current/bin/canined /usr/local/bin/canined
 canined config chain-id lupulella-2
 canined config keyring-backend test

@@ -42,13 +42,11 @@ rm -rf uptick
 git clone https://github.com/UptickNetwork/uptick.git
 cd uptick
 
-# Compile genesis version v0.2.4
 git checkout v0.2.4
 make build
 mkdir -p $HOME/.uptickd/cosmovisor/genesis/bin
 mv build/uptickd $HOME/.uptickd/cosmovisor/genesis/bin/
 rm -rf build
-
 ```
 
 ### Install Cosmovisor and create a service

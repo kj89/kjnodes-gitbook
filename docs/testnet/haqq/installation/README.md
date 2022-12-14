@@ -42,19 +42,11 @@ rm -rf haqq
 git clone https://github.com/haqq-network/haqq.git
 cd haqq
 
-# Compile genesis version v1.0.0
-git checkout v1.0.0
+git checkout v1.2.1
 make build
 mkdir -p $HOME/.haqqd/cosmovisor/genesis/bin
 mv build/haqqd $HOME/.haqqd/cosmovisor/genesis/bin/
 rm -rf build
-
-# Compile latest version v1.2.1
-git checkout v1.2.1
-make build
-mkdir -p $HOME/.haqqd/cosmovisor/upgrades/v1.2.1/bin
-mv build/haqqd $HOME/.haqqd/cosmovisor/upgrades/v1.2.1/bin/
-rm build/haqqd -rf
 ```
 
 ### Install Cosmovisor and create a service
@@ -87,7 +79,7 @@ sudo systemctl enable haqqd
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.haqqd/cosmovisor/upgrades/v1.2.1 $HOME/.haqqd/cosmovisor/current
+ln -s $HOME/.haqqd/cosmovisor/genesis $HOME/.haqqd/cosmovisor/current
 sudo ln -s $HOME/.haqqd/cosmovisor/current/bin/haqqd /usr/local/bin/haqqd
 haqqd config chain-id haqq_54211-3
 haqqd config keyring-backend test
