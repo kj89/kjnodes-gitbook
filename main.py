@@ -9,7 +9,7 @@ import os
 environments = {
     'mainnet': ['agoric', 'bitcanna', 'cosmoshub', 'gravitybridge', 'jackal', 'kujira', 'stride', 'teritori', 'rebus',
                 'osmosis'],
-    'testnet': ['agoric', 'aura', 'defund', 'gitopia', 'haqq', 'jackal', 'nibiru', 'nolus', 'okp4', 'ollo',
+    'testnet': ['agoric', 'aura', 'celestia', 'defund', 'gitopia', 'haqq', 'jackal', 'nibiru', 'nolus', 'okp4', 'ollo',
                 'quicksilver', 'sei', 'teritori', 'uptick']
 }
 
@@ -102,26 +102,10 @@ def get_replacement_params(chain, chain_environment):
 
         print(data['chain_upgrades'])
         if 'tag' in data['chain_upgrades'][-1].keys():
-            # genesis_version_name = 'genesis'
-            # genesis_version_tag = data['chain_upgrades'][0]['tag']
             latest_version_name = data['chain_upgrades'][-1]['name']
             latest_version_tag = data['chain_upgrades'][-1]['tag']
-            # replacements['${GENESIS_VERSION_NAME}'] = genesis_version_name
-            # replacements['${GENESIS_VERSION_TAG}'] = genesis_version_tag
             replacements['${LATEST_VERSION_NAME}'] = latest_version_name
             replacements['${LATEST_VERSION_TAG}'] = latest_version_tag
-
-            # if latest_version_name == genesis_version_name:
-            #     replacements['${BINARY_CURRENT}'] = genesis_version_name
-            #     replacements['${COMPILE_LATEST_VERSION}'] = ''
-            # else:
-            #     replacements['${BINARY_CURRENT}'] = f'upgrades/{latest_version_name}'
-            #     replacements['${COMPILE_LATEST_VERSION}'] = f"\n# Compile latest version {latest_version_tag}\n" \
-            #                                                 f"git checkout {latest_version_tag}\n" \
-            #                                                 f"make build\n" \
-            #                                                 f"mkdir -p $HOME/{chain_dir}/cosmovisor/upgrades/{latest_version_name}/bin\n" \
-            #                                                 f"mv {chain_binary_src} $HOME/{chain_dir}/cosmovisor/upgrades/{latest_version_name}/bin/\n" \
-            #                                                 f"rm {chain_binary_src} -rf"
 
         # Get restake data
         restake_valoper, restake_run_time = get_restake_params(chain_name)
@@ -221,7 +205,7 @@ def main():
                 for src, dst in replace_list.items():
                     inplace_change(f, src, dst)
 
-    git_push()
+    # git_push()
 
 
 if __name__ == '__main__':

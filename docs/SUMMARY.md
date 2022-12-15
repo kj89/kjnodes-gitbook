@@ -82,6 +82,12 @@
   * [State sync](testnet/aura/state-sync/README.md)
   * [Useful commands](testnet/aura/useful-commands/README.md)
 
+* [Celestia](testnet/celestia/README.md)
+  * [Installation](testnet/celestia/installation/README.md)
+  * [Snapshot](testnet/celestia/snapshot/README.md)
+  * [State sync](testnet/celestia/state-sync/README.md)
+  * [Useful commands](testnet/celestia/useful-commands/README.md)
+
 * [Defund](testnet/defund/README.md)
   * [Installation](testnet/defund/installation/README.md)
   * [Snapshot](testnet/defund/snapshot/README.md)
