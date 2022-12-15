@@ -53,8 +53,12 @@ celestia-appd q bank balances $(celestia-appd keys show wallet -a)
 ## 👷 Validator management
 
 {% hint style="info" %}
-Please make sure you have adjusted **moniker**, **identity**, **details** and **website** to match your values.
+Please make sure you have adjusted **moniker**, **identity**, **details**, **website**, **evm-address** and **orchestrator-address** to match your values.
 {% endhint %}
+
+> `--evm-address`: This flag should contain a 0x EVM address. Here, you can add any Ethereum-based address to this flag. You can also modify it later if you decide to switch addresses.
+>
+> `--orchestrator-address`: This flag should contain a newly-generated celestia1 Celestia address. Validators certainly can use their existing Celestia addresses here but it is recommended to create a new one.
 
 #### Create new validator
 
@@ -66,6 +70,8 @@ celestia-appd tx staking create-validator \
 --identity="YOUR_KEYBASE_ID" \
 --details="YOUR_DETAILS" \
 --website="YOUR_WEBSITE_URL"
+--evm-address="YOUR_EVM_ADDRESS" \
+--orchestrator-address="YOUR_ORCHESTRATOR_ADDRESS" \
 --chain-id=mocha \
 --commission-rate=0.05 \
 --commission-max-rate=0.20 \
@@ -128,37 +134,37 @@ celestia-appd q staking validator $(celestia-appd keys show wallet --bech val -a
 #### Withdraw rewards from all validators
 
 ```bash
-celestia-appd tx distribution withdraw-all-rewards --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto -y
+celestia-appd tx distribution withdraw-all-rewards --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto --fees 1000utia -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-celestia-appd tx distribution withdraw-rewards $(celestia-appd keys show wallet --bech val -a) --commission --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto -y
+celestia-appd tx distribution withdraw-rewards $(celestia-appd keys show wallet --bech val -a) --commission --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto --fees 1000utia -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-celestia-appd tx staking delegate $(celestia-appd keys show wallet --bech val -a) 1000000utia --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto -y
+celestia-appd tx staking delegate $(celestia-appd keys show wallet --bech val -a) 1000000utia --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto --fees 1000utia -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-celestia-appd tx staking delegate <TO_VALOPER_ADDRESS> 1000000utia --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto -y
+celestia-appd tx staking delegate <TO_VALOPER_ADDRESS> 1000000utia --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto --fees 1000utia -y
 ```
 
 Redelegate tokens to another validator
 
 ```bash
-celestia-appd tx staking redelegate $(celestia-appd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000utia --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto -y
+celestia-appd tx staking redelegate $(celestia-appd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000utia --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto --fees 1000utia -y
 ```
 
 Unbond tokens from your validator
 
 ```bash
-celestia-appd tx staking unbond $(celestia-appd keys show wallet --bech val -a) 1000000utia --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto -y
+celestia-appd tx staking unbond $(celestia-appd keys show wallet --bech val -a) 1000000utia --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto --fees 1000utia -y
 ```
 
 Send tokens to the wallet
@@ -184,25 +190,25 @@ celestia-appd query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-celestia-appd tx gov vote 1 yes --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto -y
+celestia-appd tx gov vote 1 yes --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto --fees 1000utia -y
 ```
 
 #### Vote 'No'
 
 ```bash
-celestia-appd tx gov vote 1 no --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto -y
+celestia-appd tx gov vote 1 no --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto --fees 1000utia -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-celestia-appd tx gov vote 1 abstain --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto -y
+celestia-appd tx gov vote 1 abstain --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto --fees 1000utia -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-celestia-appd tx gov vote 1 nowithveto --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto -y
+celestia-appd tx gov vote 1 nowithveto --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto --fees 1000utia -y
 ```
 
 ## ⚡️ Utility
