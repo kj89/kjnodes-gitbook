@@ -37,11 +37,13 @@ source $HOME/.profile
 ### Download and build binaries
 
 ```bash
+# Clone project repository
 cd $HOME
 rm -rf ollo
 git clone https://github.com/OLLO-Station/ollo.git
 cd ollo
 
+# Build binaries
 git checkout v0.0.1
 make build
 mkdir -p $HOME/.ollo/cosmovisor/genesis/bin

@@ -37,11 +37,13 @@ source $HOME/.profile
 ### Download and build binaries
 
 ```bash
+# Clone project repository
 cd $HOME
 rm -rf ${GIT_DIR}
 git clone ${GIT_URL}
 cd ${GIT_DIR}
 
+# Build binaries
 git checkout ${LATEST_VERSION_TAG}
 make build
 mkdir -p $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin

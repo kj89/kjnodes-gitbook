@@ -37,11 +37,13 @@ source $HOME/.profile
 ### Download and build binaries
 
 ```bash
+# Clone project repository
 cd $HOME
 rm -rf bcna
 git clone https://github.com/BitCannaGlobal/bcna.git
 cd bcna
 
+# Build binaries
 git checkout v1.5.3
 make build
 mkdir -p $HOME/.bcna/cosmovisor/genesis/bin

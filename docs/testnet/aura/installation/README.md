@@ -37,11 +37,13 @@ source $HOME/.profile
 ### Download and build binaries
 
 ```bash
+# Clone project repository
 cd $HOME
 rm -rf aura
 git clone https://github.com/aura-nw/aura.git
 cd aura
 
+# Build binaries
 git checkout euphoria_v0.4.2
 make build
 mkdir -p $HOME/.aura/cosmovisor/genesis/bin

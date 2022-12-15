@@ -37,11 +37,13 @@ source $HOME/.profile
 ### Download and build binaries
 
 ```bash
+# Clone project repository
 cd $HOME
 rm -rf okp4d
 git clone https://github.com/okp4/okp4d.git
 cd okp4d
 
+# Build binaries
 git checkout v3.0.0
 make build
 mkdir -p $HOME/.okp4d/cosmovisor/genesis/bin

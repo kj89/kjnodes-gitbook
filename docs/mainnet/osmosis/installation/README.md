@@ -37,11 +37,13 @@ source $HOME/.profile
 ### Download and build binaries
 
 ```bash
+# Clone project repository
 cd $HOME
 rm -rf osmosis
 git clone https://github.com/osmosis-labs/osmosis.git
 cd osmosis
 
+# Build binaries
 git checkout v13.1.0
 make build
 mkdir -p $HOME/.osmosisd/cosmovisor/genesis/bin

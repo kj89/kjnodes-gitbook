@@ -37,11 +37,13 @@ source $HOME/.profile
 ### Download and build binaries
 
 ```bash
+# Clone project repository
 cd $HOME
 rm -rf teritori-chain
 git clone https://github.com/TERITORI/teritori-chain.git
 cd teritori-chain
 
+# Build binaries
 git checkout v1.3.0
 make build
 mkdir -p $HOME/.teritorid/cosmovisor/genesis/bin

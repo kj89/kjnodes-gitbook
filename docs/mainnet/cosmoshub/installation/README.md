@@ -37,11 +37,13 @@ source $HOME/.profile
 ### Download and build binaries
 
 ```bash
+# Clone project repository
 cd $HOME
 rm -rf gaia
 git clone https://github.com/cosmos/gaia.git
 cd gaia
 
+# Build binaries
 git checkout v7.1.0
 make build
 mkdir -p $HOME/.gaia/cosmovisor/genesis/bin

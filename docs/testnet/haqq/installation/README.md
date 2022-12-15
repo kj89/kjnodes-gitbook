@@ -37,11 +37,13 @@ source $HOME/.profile
 ### Download and build binaries
 
 ```bash
+# Clone project repository
 cd $HOME
 rm -rf haqq
 git clone https://github.com/haqq-network/haqq.git
 cd haqq
 
+# Build binaries
 git checkout v1.2.1
 make build
 mkdir -p $HOME/.haqqd/cosmovisor/genesis/bin

@@ -37,11 +37,13 @@ source $HOME/.profile
 ### Download and build binaries
 
 ```bash
+# Clone project repository
 cd $HOME
 rm -rf defund
 git clone https://github.com/defund-labs/defund.git
 cd defund
 
+# Build binaries
 git checkout v0.1.0
 make build
 mkdir -p $HOME/.defund/cosmovisor/genesis/bin

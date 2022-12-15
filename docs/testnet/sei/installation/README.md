@@ -37,11 +37,13 @@ source $HOME/.profile
 ### Download and build binaries
 
 ```bash
+# Clone project repository
 cd $HOME
 rm -rf sei-chain
 git clone https://github.com/sei-protocol/sei-chain.git
 cd sei-chain
 
+# Build binaries
 git checkout 1.2.2beta-postfix
 make build
 mkdir -p $HOME/.sei/cosmovisor/genesis/bin

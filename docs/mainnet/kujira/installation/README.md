@@ -37,11 +37,13 @@ source $HOME/.profile
 ### Download and build binaries
 
 ```bash
+# Clone project repository
 cd $HOME
 rm -rf core
 git clone https://github.com/Team-Kujira/core.git
 cd core
 
+# Build binaries
 git checkout v0.7.1
 make build
 mkdir -p $HOME/.kujira/cosmovisor/genesis/bin

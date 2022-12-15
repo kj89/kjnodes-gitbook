@@ -37,11 +37,13 @@ source $HOME/.profile
 ### Download and build binaries
 
 ```bash
+# Clone project repository
 cd $HOME
 rm -rf rebus.core
 git clone https://github.com/rebuschain/rebus.core.git
 cd rebus.core
 
+# Build binaries
 git checkout v0.2.0
 make build
 mkdir -p $HOME/.rebusd/cosmovisor/genesis/bin

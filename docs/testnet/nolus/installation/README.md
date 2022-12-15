@@ -37,11 +37,13 @@ source $HOME/.profile
 ### Download and build binaries
 
 ```bash
+# Clone project repository
 cd $HOME
 rm -rf nolus-core
 git clone https://github.com/Nolus-Protocol/nolus-core.git
 cd nolus-core
 
+# Build binaries
 git checkout v0.1.39
 make build
 mkdir -p $HOME/.nolus/cosmovisor/genesis/bin

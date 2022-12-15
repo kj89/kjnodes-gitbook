@@ -37,11 +37,13 @@ source $HOME/.profile
 ### Download and build binaries
 
 ```bash
+# Clone project repository
 cd $HOME
 rm -rf nibiru
 git clone https://github.com/NibiruChain/nibiru.git
 cd nibiru
 
+# Build binaries
 git checkout v0.15.0
 make build
 mkdir -p $HOME/.nibid/cosmovisor/genesis/bin

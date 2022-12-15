@@ -37,11 +37,13 @@ source $HOME/.profile
 ### Download and build binaries
 
 ```bash
+# Clone project repository
 cd $HOME
 rm -rf stride
 git clone https://github.com/Stride-Labs/stride.git
 cd stride
 
+# Build binaries
 git checkout v4.0.2
 make build
 mkdir -p $HOME/.stride/cosmovisor/genesis/bin

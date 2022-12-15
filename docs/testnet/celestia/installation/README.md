@@ -37,11 +37,13 @@ source $HOME/.profile
 ### Download and build binaries
 
 ```bash
+# Clone project repository
 cd $HOME
 rm -rf celestia-app
 git clone https://github.com/celestiaorg/celestia-app.git
 cd celestia-app
 
+# Build binaries
 git checkout v0.11.0
 make build
 mkdir -p $HOME/.celestia-app/cosmovisor/genesis/bin

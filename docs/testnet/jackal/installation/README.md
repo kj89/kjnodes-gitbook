@@ -37,11 +37,13 @@ source $HOME/.profile
 ### Download and build binaries
 
 ```bash
+# Clone project repository
 cd $HOME
 rm -rf canine-chain
 git clone https://github.com/JackalLabs/canine-chain.git
 cd canine-chain
 
+# Build binaries
 git checkout v1.2.0-alpha.7
 make build
 mkdir -p $HOME/.canine/cosmovisor/genesis/bin

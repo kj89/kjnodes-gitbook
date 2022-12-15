@@ -37,11 +37,13 @@ source $HOME/.profile
 ### Download and build binaries
 
 ```bash
+# Clone project repository
 cd $HOME
 rm -rf uptick
 git clone https://github.com/UptickNetwork/uptick.git
 cd uptick
 
+# Build binaries
 git checkout v0.2.4
 make build
 mkdir -p $HOME/.uptickd/cosmovisor/genesis/bin
