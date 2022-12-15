@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/haqq.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: haqq_54211-3 | **Latest Version Tag**: v1.2.1 | **Custom Port**: 35
+**Chain ID**: haqq_54211-3 | **Latest Version Tag**: v1.3.0 | **Custom Port**: 35
 
 ### Setup validator name
 
@@ -44,7 +44,7 @@ git clone https://github.com/haqq-network/haqq.git
 cd haqq
 
 # Build binaries
-git checkout v1.2.1
+git checkout v1.3.0
 make build
 mkdir -p $HOME/.haqqd/cosmovisor/genesis/bin
 mv build/haqqd $HOME/.haqqd/cosmovisor/genesis/bin/
