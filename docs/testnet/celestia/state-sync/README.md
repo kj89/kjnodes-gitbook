@@ -13,41 +13,6 @@ application state is generally much smaller than the blocks, and restoring it is
 faster than replaying blocks, this can reduce the time to sync with the network from days to minutes.
 {% endhint %}
 
-## Instructions
-
-### Stop the service and reset the data
-
-```bash
-sudo systemctl stop celestia-appd
-cp $HOME/.celestia-app/data/priv_validator_state.json $HOME/.celestia-app/priv_validator_state.json.backup
-celestia-appd tendermint unsafe-reset-all --home $HOME/.celestia-app
-```
-
-### Get and configure the state sync information
-
-```bash
-STATE_SYNC_RPC=https://celestia-testnet.rpc.kjnodes.com:443
-STATE_SYNC_PEER=d5519e378247dfb61dfe90652d1fe3e2b3005a5b@celestia-testnet.rpc.kjnodes.com:20656
-LATEST_HEIGHT=$(curl -s $STATE_SYNC_RPC/block | jq -r .result.block.header.height)
-SYNC_BLOCK_HEIGHT=$(($LATEST_HEIGHT - 2000))
-SYNC_BLOCK_HASH=$(curl -s "$STATE_SYNC_RPC/block?height=$SYNC_BLOCK_HEIGHT" | jq -r .result.block_id.hash)
-
-sed -i.bak -e "s|^enable *=.*|enable = true|" $HOME/.celestia-app/config/config.toml
-sed -i.bak -e "s|^rpc_servers *=.*|rpc_servers = \"$STATE_SYNC_RPC,$STATE_SYNC_RPC\"|" \
-  $HOME/.celestia-app/config/config.toml
-sed -i.bak -e "s|^trust_height *=.*|trust_height = $SYNC_BLOCK_HEIGHT|" \
-  $HOME/.celestia-app/config/config.toml
-sed -i.bak -e "s|^trust_hash *=.*|trust_hash = \"$SYNC_BLOCK_HASH\"|" \
-  $HOME/.celestia-app/config/config.toml
-sed -i.bak -e "s|^persistent_peers *=.*|persistent_peers = \"$STATE_SYNC_PEER\"|" \
-  $HOME/.celestia-app/config/config.toml
-mv $HOME/.celestia-app/priv_validator_state.json.backup $HOME/.celestia-app/data/priv_validator_state.json
-```
-
-
-
-### Restart the service and check the log
-
-```bash
-sudo systemctl start celestia-appd && journalctl -u celestia-appd -f --no-hostname -o cat
-```
+{% hint style='warning' %}
+Currently celestia does not support State sync 😢
+{% endhint %}
