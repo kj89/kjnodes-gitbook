@@ -80,6 +80,7 @@ ${CHAIN_APP} tx staking create-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
+--fees=1000utia \
 -y
 ```
 
@@ -96,13 +97,14 @@ ${CHAIN_APP} tx staking edit-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
+--fees=1000utia \
 -y
 ```
 
 #### Unjail validator
 
 ```bash
-${CHAIN_APP} tx slashing unjail --from wallet --chain-id ${CHAIN_ID} --gas auto --gas-adjustment 1.4 -y
+${CHAIN_APP} tx slashing unjail --from wallet --chain-id ${CHAIN_ID} --gas auto --gas-adjustment 1.4 --fees 1000utia -y
 ```
 
 #### Jail reason

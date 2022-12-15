@@ -80,6 +80,7 @@ celestia-appd tx staking create-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
+--fees=1000utia \
 -y
 ```
 
@@ -96,13 +97,14 @@ celestia-appd tx staking edit-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
+--fees=1000utia \
 -y
 ```
 
 #### Unjail validator
 
 ```bash
-celestia-appd tx slashing unjail --from wallet --chain-id mocha --gas auto --gas-adjustment 1.4 -y
+celestia-appd tx slashing unjail --from wallet --chain-id mocha --gas auto --gas-adjustment 1.4 --fees 1000utia -y
 ```
 
 #### Jail reason
