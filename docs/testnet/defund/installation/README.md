@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/defund.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: defund-private-3 | **Latest Version Tag**: v0.2.0 | **Custom Port**: 40
+**Chain ID**: defund-private-3 | **Latest Version Tag**: v0.2.1 | **Custom Port**: 40
 
 ### Setup validator name
 
@@ -48,7 +48,7 @@ git clone https://github.com/defund-labs/defund.git
 cd defund
 
 # Build binaries
-git checkout v0.2.0
+git checkout v0.2.1
 make build
 mkdir -p $HOME/.defund/cosmovisor/genesis/bin
 mv build/defundd $HOME/.defund/cosmovisor/genesis/bin/
