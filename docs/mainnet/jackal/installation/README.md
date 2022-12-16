@@ -10,6 +10,10 @@ description: Setting up your validator node has never been so easy. Get your val
 
 ### Setup validator name
 
+{% hint style='info' %}
+Replace **YOUR_MONIKER_GOES_HERE** with your validator name
+{% endhint %}
+
 ```bash
 MONIKER="YOUR_MONIKER_GOES_HERE"
 ```
