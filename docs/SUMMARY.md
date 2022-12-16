@@ -67,6 +67,12 @@
   * [State sync](mainnet/osmosis/state-sync/README.md)
   * [Useful commands](mainnet/osmosis/useful-commands/README.md)
 
+* [Quicksilver](mainnet/quicksilver/README.md)
+  * [Installation](mainnet/quicksilver/installation/README.md)
+  * [Snapshot](mainnet/quicksilver/snapshot/README.md)
+  * [State sync](mainnet/quicksilver/state-sync/README.md)
+  * [Useful commands](mainnet/quicksilver/useful-commands/README.md)
+
 
 ## TESTNET
 

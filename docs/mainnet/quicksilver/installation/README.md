@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/quicksilver.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: innuendo-4 | **Latest Version Tag**: ${LATEST_VERSION_TAG} | **Custom Port**: 11
+**Chain ID**: quicksilver-1 | **Latest Version Tag**: v1.0.0 | **Custom Port**: 11
 
 ### Setup validator name
 
@@ -48,7 +48,7 @@ git clone https://github.com/ingenuity-build/quicksilver.git
 cd quicksilver
 
 # Build binaries
-git checkout ${LATEST_VERSION_TAG}
+git checkout v1.0.0
 make build
 mkdir -p $HOME/.quicksilverd/cosmovisor/genesis/bin
 mv build/quicksilverd $HOME/.quicksilverd/cosmovisor/genesis/bin/
@@ -66,7 +66,7 @@ sudo mv cosmovisor /usr/bin/cosmovisor
 # Create service
 sudo tee /etc/systemd/system/quicksilverd.service > /dev/null << EOF
 [Unit]
-Description=quicksilver-testnet node service
+Description=quicksilver node service
 After=network-online.target
 [Service]
 User=$USER
@@ -92,19 +92,19 @@ sudo ln -s $HOME/.quicksilverd/cosmovisor/current/bin/quicksilverd /usr/local/bi
 
 ```bash
 # Set node configuration
-quicksilverd config chain-id innuendo-4
-quicksilverd config keyring-backend test
+quicksilverd config chain-id quicksilver-1
+quicksilverd config keyring-backend file
 quicksilverd config node tcp://localhost:11657
 
 # Initialize the node
-quicksilverd init $MONIKER --chain-id innuendo-4
+quicksilverd init $MONIKER --chain-id quicksilver-1
 
 # Download genesis and addrbook
-curl -Ls https://snapshots.kjnodes.com/quicksilver-testnet/genesis.json > $HOME/.quicksilverd/config/genesis.json
-curl -Ls https://snapshots.kjnodes.com/quicksilver-testnet/addrbook.json > $HOME/.quicksilverd/config/addrbook.json
+curl -Ls https://snapshots.kjnodes.com/quicksilver/genesis.json > $HOME/.quicksilverd/config/genesis.json
+curl -Ls https://snapshots.kjnodes.com/quicksilver/addrbook.json > $HOME/.quicksilverd/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@quicksilver-testnet.rpc.kjnodes.com:11659\"|" $HOME/.quicksilverd/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@quicksilver.rpc.kjnodes.com:11659\"|" $HOME/.quicksilverd/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.0001uqck\"|" $HOME/.quicksilverd/config/app.toml
@@ -123,7 +123,7 @@ sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:113
 ### Download latest chain snapshot
 
 ```bash
-curl -L https://snapshots.kjnodes.com/quicksilver-testnet/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.quicksilverd
+curl -L https://snapshots.kjnodes.com/quicksilver/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.quicksilverd
 ```
 
 ### Start service and check the logs
