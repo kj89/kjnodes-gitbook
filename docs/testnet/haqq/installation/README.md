@@ -54,10 +54,12 @@ rm -rf build
 ### Install Cosmovisor and create a service
 
 ```bash
+# Download and install Cosmovisor
 curl -Ls https://github.com/cosmos/cosmos-sdk/releases/download/cosmovisor%2Fv1.3.0/cosmovisor-v1.3.0-linux-amd64.tar.gz | tar xz
 chmod 755 cosmovisor
 sudo mv cosmovisor /usr/bin/cosmovisor
 
+# Create service
 sudo tee /etc/systemd/system/haqqd.service > /dev/null << EOF
 [Unit]
 Description=haqq-testnet node service
@@ -76,26 +78,40 @@ WantedBy=multi-user.target
 EOF
 sudo systemctl daemon-reload
 sudo systemctl enable haqqd
+
+# Create application symlinks
+ln -s $HOME/.haqqd/cosmovisor/genesis $HOME/.haqqd/cosmovisor/current
+sudo ln -s $HOME/.haqqd/cosmovisor/current/bin/haqqd /usr/local/bin/haqqd
 ```
 
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.haqqd/cosmovisor/genesis $HOME/.haqqd/cosmovisor/current
-sudo ln -s $HOME/.haqqd/cosmovisor/current/bin/haqqd /usr/local/bin/haqqd
+# Set node configuration
 haqqd config chain-id haqq_54211-3
 haqqd config keyring-backend test
 haqqd config node tcp://localhost:35657
+
+# Initialize the node
 haqqd init $MONIKER --chain-id haqq_54211-3
+
+# Download genesis and addrbook
 curl -Ls https://snapshots.kjnodes.com/haqq-testnet/genesis.json > $HOME/.haqqd/config/genesis.json
 curl -Ls https://snapshots.kjnodes.com/haqq-testnet/addrbook.json > $HOME/.haqqd/config/addrbook.json
+
+# Add seeds
 sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@haqq-testnet.rpc.kjnodes.com:35659\"|" $HOME/.haqqd/config/config.toml
+
+# Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0aISLM\"|" $HOME/.haqqd/config/app.toml
+
+# Set pruning
 sed -i -e "s|^pruning *=.*|pruning = \"custom\"|" $HOME/.haqqd/config/app.toml
 sed -i -e "s|^pruning-keep-recent *=.*|pruning-keep-recent = \"100\"|" $HOME/.haqqd/config/app.toml
 sed -i -e "s|^pruning-keep-every *=.*|pruning-keep-every = \"0\"|" $HOME/.haqqd/config/app.toml
 sed -i -e "s|^pruning-interval *=.*|pruning-interval = \"19\"|" $HOME/.haqqd/config/app.toml
 
+# Set custom ports
 sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:35658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:35657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:35060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:35656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":35660\"%" $HOME/.haqqd/config/config.toml
 sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:35317\"%; s%^address = \":8080\"%address = \":35080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:35090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:35091\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:35545\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:35546\"%" $HOME/.haqqd/config/app.toml
 ```

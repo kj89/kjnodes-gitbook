@@ -54,10 +54,12 @@ rm -rf build
 ### Install Cosmovisor and create a service
 
 ```bash
+# Download and install Cosmovisor
 curl -Ls https://github.com/cosmos/cosmos-sdk/releases/download/cosmovisor%2Fv1.3.0/cosmovisor-v1.3.0-linux-amd64.tar.gz | tar xz
 chmod 755 cosmovisor
 sudo mv cosmovisor /usr/bin/cosmovisor
 
+# Create service
 sudo tee /etc/systemd/system/rebusd.service > /dev/null << EOF
 [Unit]
 Description=rebus node service
@@ -76,26 +78,40 @@ WantedBy=multi-user.target
 EOF
 sudo systemctl daemon-reload
 sudo systemctl enable rebusd
+
+# Create application symlinks
+ln -s $HOME/.rebusd/cosmovisor/genesis $HOME/.rebusd/cosmovisor/current
+sudo ln -s $HOME/.rebusd/cosmovisor/current/bin/rebusd /usr/local/bin/rebusd
 ```
 
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.rebusd/cosmovisor/genesis $HOME/.rebusd/cosmovisor/current
-sudo ln -s $HOME/.rebusd/cosmovisor/current/bin/rebusd /usr/local/bin/rebusd
+# Set node configuration
 rebusd config chain-id reb_1111-1
 rebusd config keyring-backend file
 rebusd config node tcp://localhost:21657
+
+# Initialize the node
 rebusd init $MONIKER --chain-id reb_1111-1
+
+# Download genesis and addrbook
 curl -Ls https://snapshots.kjnodes.com/rebus/genesis.json > $HOME/.rebusd/config/genesis.json
 curl -Ls https://snapshots.kjnodes.com/rebus/addrbook.json > $HOME/.rebusd/config/addrbook.json
+
+# Add seeds
 sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@rebus.rpc.kjnodes.com:21659\"|" $HOME/.rebusd/config/config.toml
+
+# Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0arebus\"|" $HOME/.rebusd/config/app.toml
+
+# Set pruning
 sed -i -e "s|^pruning *=.*|pruning = \"custom\"|" $HOME/.rebusd/config/app.toml
 sed -i -e "s|^pruning-keep-recent *=.*|pruning-keep-recent = \"100\"|" $HOME/.rebusd/config/app.toml
 sed -i -e "s|^pruning-keep-every *=.*|pruning-keep-every = \"0\"|" $HOME/.rebusd/config/app.toml
 sed -i -e "s|^pruning-interval *=.*|pruning-interval = \"19\"|" $HOME/.rebusd/config/app.toml
 
+# Set custom ports
 sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:21658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:21657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:21060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:21656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":21660\"%" $HOME/.rebusd/config/config.toml
 sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:21317\"%; s%^address = \":8080\"%address = \":21080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:21090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:21091\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:21545\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:21546\"%" $HOME/.rebusd/config/app.toml
 ```

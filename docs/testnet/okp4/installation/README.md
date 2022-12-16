@@ -54,10 +54,12 @@ rm -rf build
 ### Install Cosmovisor and create a service
 
 ```bash
+# Download and install Cosmovisor
 curl -Ls https://github.com/cosmos/cosmos-sdk/releases/download/cosmovisor%2Fv1.3.0/cosmovisor-v1.3.0-linux-amd64.tar.gz | tar xz
 chmod 755 cosmovisor
 sudo mv cosmovisor /usr/bin/cosmovisor
 
+# Create service
 sudo tee /etc/systemd/system/okp4d.service > /dev/null << EOF
 [Unit]
 Description=okp4-testnet node service
@@ -76,26 +78,40 @@ WantedBy=multi-user.target
 EOF
 sudo systemctl daemon-reload
 sudo systemctl enable okp4d
+
+# Create application symlinks
+ln -s $HOME/.okp4d/cosmovisor/genesis $HOME/.okp4d/cosmovisor/current
+sudo ln -s $HOME/.okp4d/cosmovisor/current/bin/okp4d /usr/local/bin/okp4d
 ```
 
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.okp4d/cosmovisor/genesis $HOME/.okp4d/cosmovisor/current
-sudo ln -s $HOME/.okp4d/cosmovisor/current/bin/okp4d /usr/local/bin/okp4d
+# Set node configuration
 okp4d config chain-id okp4-nemeton-1
 okp4d config keyring-backend test
 okp4d config node tcp://localhost:36657
+
+# Initialize the node
 okp4d init $MONIKER --chain-id okp4-nemeton-1
+
+# Download genesis and addrbook
 curl -Ls https://snapshots.kjnodes.com/okp4-testnet/genesis.json > $HOME/.okp4d/config/genesis.json
 curl -Ls https://snapshots.kjnodes.com/okp4-testnet/addrbook.json > $HOME/.okp4d/config/addrbook.json
+
+# Add seeds
 sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@okp4-testnet.rpc.kjnodes.com:36659\"|" $HOME/.okp4d/config/config.toml
+
+# Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0uknow\"|" $HOME/.okp4d/config/app.toml
+
+# Set pruning
 sed -i -e "s|^pruning *=.*|pruning = \"custom\"|" $HOME/.okp4d/config/app.toml
 sed -i -e "s|^pruning-keep-recent *=.*|pruning-keep-recent = \"100\"|" $HOME/.okp4d/config/app.toml
 sed -i -e "s|^pruning-keep-every *=.*|pruning-keep-every = \"0\"|" $HOME/.okp4d/config/app.toml
 sed -i -e "s|^pruning-interval *=.*|pruning-interval = \"19\"|" $HOME/.okp4d/config/app.toml
 
+# Set custom ports
 sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:36658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:36657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:36060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:36656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":36660\"%" $HOME/.okp4d/config/config.toml
 sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:36317\"%; s%^address = \":8080\"%address = \":36080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:36090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:36091\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:36545\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:36546\"%" $HOME/.okp4d/config/app.toml
 ```

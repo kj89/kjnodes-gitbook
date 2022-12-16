@@ -54,10 +54,12 @@ rm -rf build
 ### Install Cosmovisor and create a service
 
 ```bash
+# Download and install Cosmovisor
 curl -Ls https://github.com/cosmos/cosmos-sdk/releases/download/cosmovisor%2Fv1.3.0/cosmovisor-v1.3.0-linux-amd64.tar.gz | tar xz
 chmod 755 cosmovisor
 sudo mv cosmovisor /usr/bin/cosmovisor
 
+# Create service
 sudo tee /etc/systemd/system/ollod.service > /dev/null << EOF
 [Unit]
 Description=ollo-testnet node service
@@ -76,26 +78,40 @@ WantedBy=multi-user.target
 EOF
 sudo systemctl daemon-reload
 sudo systemctl enable ollod
+
+# Create application symlinks
+ln -s $HOME/.ollo/cosmovisor/genesis $HOME/.ollo/cosmovisor/current
+sudo ln -s $HOME/.ollo/cosmovisor/current/bin/ollod /usr/local/bin/ollod
 ```
 
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.ollo/cosmovisor/genesis $HOME/.ollo/cosmovisor/current
-sudo ln -s $HOME/.ollo/cosmovisor/current/bin/ollod /usr/local/bin/ollod
+# Set node configuration
 ollod config chain-id ollo-testnet-1
 ollod config keyring-backend test
 ollod config node tcp://localhost:32657
+
+# Initialize the node
 ollod init $MONIKER --chain-id ollo-testnet-1
+
+# Download genesis and addrbook
 curl -Ls https://snapshots.kjnodes.com/ollo-testnet/genesis.json > $HOME/.ollo/config/genesis.json
 curl -Ls https://snapshots.kjnodes.com/ollo-testnet/addrbook.json > $HOME/.ollo/config/addrbook.json
+
+# Add seeds
 sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@ollo-testnet.rpc.kjnodes.com:32659\"|" $HOME/.ollo/config/config.toml
+
+# Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0utollo\"|" $HOME/.ollo/config/app.toml
+
+# Set pruning
 sed -i -e "s|^pruning *=.*|pruning = \"custom\"|" $HOME/.ollo/config/app.toml
 sed -i -e "s|^pruning-keep-recent *=.*|pruning-keep-recent = \"100\"|" $HOME/.ollo/config/app.toml
 sed -i -e "s|^pruning-keep-every *=.*|pruning-keep-every = \"0\"|" $HOME/.ollo/config/app.toml
 sed -i -e "s|^pruning-interval *=.*|pruning-interval = \"19\"|" $HOME/.ollo/config/app.toml
 
+# Set custom ports
 sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:32658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:32657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:32060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:32656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":32660\"%" $HOME/.ollo/config/config.toml
 sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:32317\"%; s%^address = \":8080\"%address = \":32080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:32090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:32091\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:32545\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:32546\"%" $HOME/.ollo/config/app.toml
 ```

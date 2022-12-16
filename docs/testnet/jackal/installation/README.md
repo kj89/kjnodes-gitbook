@@ -54,10 +54,12 @@ rm -rf build
 ### Install Cosmovisor and create a service
 
 ```bash
+# Download and install Cosmovisor
 curl -Ls https://github.com/cosmos/cosmos-sdk/releases/download/cosmovisor%2Fv1.3.0/cosmovisor-v1.3.0-linux-amd64.tar.gz | tar xz
 chmod 755 cosmovisor
 sudo mv cosmovisor /usr/bin/cosmovisor
 
+# Create service
 sudo tee /etc/systemd/system/canined.service > /dev/null << EOF
 [Unit]
 Description=jackal-testnet node service
@@ -76,26 +78,40 @@ WantedBy=multi-user.target
 EOF
 sudo systemctl daemon-reload
 sudo systemctl enable canined
+
+# Create application symlinks
+ln -s $HOME/.canine/cosmovisor/genesis $HOME/.canine/cosmovisor/current
+sudo ln -s $HOME/.canine/cosmovisor/current/bin/canined /usr/local/bin/canined
 ```
 
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.canine/cosmovisor/genesis $HOME/.canine/cosmovisor/current
-sudo ln -s $HOME/.canine/cosmovisor/current/bin/canined /usr/local/bin/canined
+# Set node configuration
 canined config chain-id lupulella-2
 canined config keyring-backend test
 canined config node tcp://localhost:37657
+
+# Initialize the node
 canined init $MONIKER --chain-id lupulella-2
+
+# Download genesis and addrbook
 curl -Ls https://snapshots.kjnodes.com/jackal-testnet/genesis.json > $HOME/.canine/config/genesis.json
 curl -Ls https://snapshots.kjnodes.com/jackal-testnet/addrbook.json > $HOME/.canine/config/addrbook.json
+
+# Add seeds
 sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@jackal-testnet.rpc.kjnodes.com:37659\"|" $HOME/.canine/config/config.toml
+
+# Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.002ujkl\"|" $HOME/.canine/config/app.toml
+
+# Set pruning
 sed -i -e "s|^pruning *=.*|pruning = \"custom\"|" $HOME/.canine/config/app.toml
 sed -i -e "s|^pruning-keep-recent *=.*|pruning-keep-recent = \"100\"|" $HOME/.canine/config/app.toml
 sed -i -e "s|^pruning-keep-every *=.*|pruning-keep-every = \"0\"|" $HOME/.canine/config/app.toml
 sed -i -e "s|^pruning-interval *=.*|pruning-interval = \"19\"|" $HOME/.canine/config/app.toml
 
+# Set custom ports
 sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:37658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:37657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:37060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:37656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":37660\"%" $HOME/.canine/config/config.toml
 sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:37317\"%; s%^address = \":8080\"%address = \":37080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:37090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:37091\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:37545\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:37546\"%" $HOME/.canine/config/app.toml
 ```

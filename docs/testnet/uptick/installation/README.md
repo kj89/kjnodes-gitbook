@@ -54,10 +54,12 @@ rm -rf build
 ### Install Cosmovisor and create a service
 
 ```bash
+# Download and install Cosmovisor
 curl -Ls https://github.com/cosmos/cosmos-sdk/releases/download/cosmovisor%2Fv1.3.0/cosmovisor-v1.3.0-linux-amd64.tar.gz | tar xz
 chmod 755 cosmovisor
 sudo mv cosmovisor /usr/bin/cosmovisor
 
+# Create service
 sudo tee /etc/systemd/system/uptickd.service > /dev/null << EOF
 [Unit]
 Description=uptick-testnet node service
@@ -76,26 +78,40 @@ WantedBy=multi-user.target
 EOF
 sudo systemctl daemon-reload
 sudo systemctl enable uptickd
+
+# Create application symlinks
+ln -s $HOME/.uptickd/cosmovisor/genesis $HOME/.uptickd/cosmovisor/current
+sudo ln -s $HOME/.uptickd/cosmovisor/current/bin/uptickd /usr/local/bin/uptickd
 ```
 
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.uptickd/cosmovisor/genesis $HOME/.uptickd/cosmovisor/current
-sudo ln -s $HOME/.uptickd/cosmovisor/current/bin/uptickd /usr/local/bin/uptickd
+# Set node configuration
 uptickd config chain-id uptick_7000-2
 uptickd config keyring-backend test
 uptickd config node tcp://localhost:15657
+
+# Initialize the node
 uptickd init $MONIKER --chain-id uptick_7000-2
+
+# Download genesis and addrbook
 curl -Ls https://snapshots.kjnodes.com/uptick-testnet/genesis.json > $HOME/.uptickd/config/genesis.json
 curl -Ls https://snapshots.kjnodes.com/uptick-testnet/addrbook.json > $HOME/.uptickd/config/addrbook.json
+
+# Add seeds
 sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@uptick-testnet.rpc.kjnodes.com:15659\"|" $HOME/.uptickd/config/config.toml
+
+# Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0auptick\"|" $HOME/.uptickd/config/app.toml
+
+# Set pruning
 sed -i -e "s|^pruning *=.*|pruning = \"custom\"|" $HOME/.uptickd/config/app.toml
 sed -i -e "s|^pruning-keep-recent *=.*|pruning-keep-recent = \"100\"|" $HOME/.uptickd/config/app.toml
 sed -i -e "s|^pruning-keep-every *=.*|pruning-keep-every = \"0\"|" $HOME/.uptickd/config/app.toml
 sed -i -e "s|^pruning-interval *=.*|pruning-interval = \"19\"|" $HOME/.uptickd/config/app.toml
 
+# Set custom ports
 sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:15658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:15657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:15060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:15656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":15660\"%" $HOME/.uptickd/config/config.toml
 sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:15317\"%; s%^address = \":8080\"%address = \":15080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:15090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:15091\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:15545\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:15546\"%" $HOME/.uptickd/config/app.toml
 ```

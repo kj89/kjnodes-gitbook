@@ -54,10 +54,12 @@ rm -rf build
 ### Install Cosmovisor and create a service
 
 ```bash
+# Download and install Cosmovisor
 curl -Ls https://github.com/cosmos/cosmos-sdk/releases/download/cosmovisor%2Fv1.3.0/cosmovisor-v1.3.0-linux-amd64.tar.gz | tar xz
 chmod 755 cosmovisor
 sudo mv cosmovisor /usr/bin/cosmovisor
 
+# Create service
 sudo tee /etc/systemd/system/seid.service > /dev/null << EOF
 [Unit]
 Description=sei-testnet node service
@@ -76,26 +78,40 @@ WantedBy=multi-user.target
 EOF
 sudo systemctl daemon-reload
 sudo systemctl enable seid
+
+# Create application symlinks
+ln -s $HOME/.sei/cosmovisor/genesis $HOME/.sei/cosmovisor/current
+sudo ln -s $HOME/.sei/cosmovisor/current/bin/seid /usr/local/bin/seid
 ```
 
 ### Initialize the node
 
 ```bash
-ln -s $HOME/.sei/cosmovisor/genesis $HOME/.sei/cosmovisor/current
-sudo ln -s $HOME/.sei/cosmovisor/current/bin/seid /usr/local/bin/seid
+# Set node configuration
 seid config chain-id atlantic-1
 seid config keyring-backend test
 seid config node tcp://localhost:12657
+
+# Initialize the node
 seid init $MONIKER --chain-id atlantic-1
+
+# Download genesis and addrbook
 curl -Ls https://snapshots.kjnodes.com/sei-testnet/genesis.json > $HOME/.sei/config/genesis.json
 curl -Ls https://snapshots.kjnodes.com/sei-testnet/addrbook.json > $HOME/.sei/config/addrbook.json
+
+# Add seeds
 sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@sei-testnet.rpc.kjnodes.com:12659\"|" $HOME/.sei/config/config.toml
+
+# Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0usei\"|" $HOME/.sei/config/app.toml
+
+# Set pruning
 sed -i -e "s|^pruning *=.*|pruning = \"custom\"|" $HOME/.sei/config/app.toml
 sed -i -e "s|^pruning-keep-recent *=.*|pruning-keep-recent = \"100\"|" $HOME/.sei/config/app.toml
 sed -i -e "s|^pruning-keep-every *=.*|pruning-keep-every = \"0\"|" $HOME/.sei/config/app.toml
 sed -i -e "s|^pruning-interval *=.*|pruning-interval = \"19\"|" $HOME/.sei/config/app.toml
 
+# Set custom ports
 sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:12658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:12657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:12060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:12656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":12660\"%" $HOME/.sei/config/config.toml
 sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:12317\"%; s%^address = \":8080\"%address = \":12080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:12090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:12091\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:12545\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:12546\"%" $HOME/.sei/config/app.toml
 ```
