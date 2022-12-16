@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically each day at **08:30 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: v1.2.1
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v1.3.0
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 1406325 | 13 hours ago | [snapshot (3.9 GB)](https://snapshots.kjnodes.com/haqq-testnet/snapshot\_latest.tar.lz4) |
+| 1420685 | 57 seconds ago | [snapshot (0.42 GB)](https://snapshots.kjnodes.com/haqq-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
