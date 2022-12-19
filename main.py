@@ -1,7 +1,7 @@
 import yaml
 from env import GITHUB_USER, GITHUB_TOKEN
 import requests
-from misc import copy_and_overwrite, inplace_change, git_push, get_snapshot_metadata, get_restake_params, get_live_peers, get_dependency_versions
+from misc import copy_and_overwrite, inplace_change, git_push, get_snapshot_metadata, get_restake_params, get_live_peers, get_dependency_versions, get_latest_version_name
 import glob
 import shutil
 import os
@@ -199,6 +199,11 @@ def main():
             dst_dir = f'./docs/{environment}/{chain}'
             copy_and_overwrite(src_dir, dst_dir)
 
+            # Override chain upgrades to out of order page if no upgrade found
+            if get_latest_version_name(chain, environment) == 'genesis':
+                shutil.copyfile(f'./templates/out_of_order/upgrade/README.md',
+                                f'./docs/{environment}/{chain}/upgrade/README.md')
+
             # Override chain specific pages if there are any
             if os.path.isdir(f'./templates/{chain}'):
                 shutil.copytree(f'./templates/{chain}', dst_dir, dirs_exist_ok=True)
@@ -211,7 +216,7 @@ def main():
                 for src, dst in replace_list.items():
                     inplace_change(f, src, dst)
 
-    git_push()
+    # git_push()
 
 
 if __name__ == '__main__':

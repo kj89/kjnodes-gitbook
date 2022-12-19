@@ -13,21 +13,6 @@ Since we are using Cosmovisor, it makes it very easy to prepare for upcomming up
 You just have to build new binaries and move it into cosmovisor upgrades directory.
 {% endhint %}
 
-## Download and build upgrade binaries
-
-```bash
-# Clone project repository
-cd $HOME
-rm -rf uptick
-git clone https://github.com/UptickNetwork/uptick.git
-cd uptick
-
-# Build binaries
-git checkout v0.2.4
-make build
-mkdir -p $HOME/.uptickd/cosmovisor/upgrades/genesis/bin
-mv build/uptickd $HOME/.uptickd/cosmovisor/upgrades/genesis/bin/
-rm -rf build
-```
-
-*Thats it! Now when upgrade block height is reached, Cosmovisor will handle it automatically!*
+{% hint style='warning' %}
+Currently uptick does not have any upgrades!
+{% endhint %}

@@ -13,21 +13,6 @@ Since we are using Cosmovisor, it makes it very easy to prepare for upcomming up
 You just have to build new binaries and move it into cosmovisor upgrades directory.
 {% endhint %}
 
-## Download and build upgrade binaries
-
-```bash
-# Clone project repository
-cd $HOME
-rm -rf nibiru
-git clone https://github.com/NibiruChain/nibiru.git
-cd nibiru
-
-# Build binaries
-git checkout v0.15.0
-make build
-mkdir -p $HOME/.nibid/cosmovisor/upgrades/genesis/bin
-mv build/nibid $HOME/.nibid/cosmovisor/upgrades/genesis/bin/
-rm -rf build
-```
-
-*Thats it! Now when upgrade block height is reached, Cosmovisor will handle it automatically!*
+{% hint style='warning' %}
+Currently nibiru does not have any upgrades!
+{% endhint %}

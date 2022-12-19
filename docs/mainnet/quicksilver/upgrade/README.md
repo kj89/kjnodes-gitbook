@@ -13,21 +13,6 @@ Since we are using Cosmovisor, it makes it very easy to prepare for upcomming up
 You just have to build new binaries and move it into cosmovisor upgrades directory.
 {% endhint %}
 
-## Download and build upgrade binaries
-
-```bash
-# Clone project repository
-cd $HOME
-rm -rf quicksilver
-git clone https://github.com/ingenuity-build/quicksilver.git
-cd quicksilver
-
-# Build binaries
-git checkout v1.0.0
-make build
-mkdir -p $HOME/.quicksilverd/cosmovisor/upgrades/genesis/bin
-mv build/quicksilverd $HOME/.quicksilverd/cosmovisor/upgrades/genesis/bin/
-rm -rf build
-```
-
-*Thats it! Now when upgrade block height is reached, Cosmovisor will handle it automatically!*
+{% hint style='warning' %}
+Currently quicksilver does not have any upgrades!
+{% endhint %}

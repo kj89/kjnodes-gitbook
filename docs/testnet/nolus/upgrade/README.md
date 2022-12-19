@@ -13,21 +13,6 @@ Since we are using Cosmovisor, it makes it very easy to prepare for upcomming up
 You just have to build new binaries and move it into cosmovisor upgrades directory.
 {% endhint %}
 
-## Download and build upgrade binaries
-
-```bash
-# Clone project repository
-cd $HOME
-rm -rf nolus-core
-git clone https://github.com/Nolus-Protocol/nolus-core.git
-cd nolus-core
-
-# Build binaries
-git checkout v0.1.39
-make build
-mkdir -p $HOME/.nolus/cosmovisor/upgrades/genesis/bin
-mv target/release/nolusd $HOME/.nolus/cosmovisor/upgrades/genesis/bin/
-rm -rf build
-```
-
-*Thats it! Now when upgrade block height is reached, Cosmovisor will handle it automatically!*
+{% hint style='warning' %}
+Currently nolus does not have any upgrades!
+{% endhint %}

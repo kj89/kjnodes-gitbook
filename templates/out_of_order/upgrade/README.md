@@ -4,9 +4,9 @@ description: Prepare for and the upcomming chain upgrade using Cosmovisor.
 
 # Upgrade
 
-<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/celestia.png" width="150" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/${PROJECT_NAME}.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: mocha | **Latest Version Tag**: v0.11.0 | **Custom Port**: 20
+**Chain ID**: ${CHAIN_ID} | **Latest Version Tag**: ${LATEST_VERSION_TAG} | **Custom Port**: ${CHAIN_PORT}
 
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.
@@ -14,5 +14,5 @@ You just have to build new binaries and move it into cosmovisor upgrades directo
 {% endhint %}
 
 {% hint style='warning' %}
-Currently celestia does not have any upgrades!
+Currently ${PROJECT_NAME} does not have any upgrades!
 {% endhint %}
