@@ -1,0 +1,35 @@
+---
+description: Setting up your validator node has never been so easy. Get your validator running in minutes by following step by step instructions.
+---
+
+# Upgrade
+
+<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/rebus.png" width="150" alt=""><figcaption></figcaption></figure>
+
+**Chain ID**: reb_1111-1 | **Latest Version Tag**: v0.2.0 | **Custom Port**: 21
+
+<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/rebus.png" width="150" alt=""><figcaption></figcaption></figure>
+
+{% hint style='info' %}
+Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.
+You just have to build new binaries and move it into cosmovisor upgrades directory.
+{% endhint %}
+
+## Download and build upgrade binaries
+
+```bash
+# Clone project repository
+cd $HOME
+rm -rf rebus.core
+git clone https://github.com/rebuschain/rebus.core.git
+cd rebus.core
+
+# Build binaries
+git checkout v0.2.0
+make build
+mkdir -p $HOME/.rebusd/cosmovisor/upgrades/v0.2.0/bin
+mv build/rebusd $HOME/.rebusd/cosmovisor/upgrades/v0.2.0/bin/
+rm -rf build
+```
+
+*Thats it! Now when upgrade block height is reached, Cosmovisor will handle it automatically!*
