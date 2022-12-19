@@ -31,7 +31,7 @@ sudo apt install curl git jq lz4 build-essential -y
 
 ```bash
 sudo rm -rf /usr/local/go
-sudo curl -Ls https://go.dev/dl/go1.19.linux-amd64.tar.gz | sudo tar -C /usr/local -xz
+sudo curl -Ls https://golang.org/dl/go1.19.4.linux-amd64.tar.gz | sudo tar -C /usr/local -xz
 tee -a $HOME/.profile > /dev/null << EOF
 export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 EOF
@@ -59,9 +59,7 @@ rm -rf build
 
 ```bash
 # Download and install Cosmovisor
-curl -Ls https://github.com/cosmos/cosmos-sdk/releases/download/cosmovisor%2Fv1.3.0/cosmovisor-v1.3.0-linux-amd64.tar.gz | tar xz
-chmod 755 cosmovisor
-sudo mv cosmovisor /usr/bin/cosmovisor
+go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@1.4.0
 
 # Create service
 sudo tee /etc/systemd/system/quicksilverd.service > /dev/null << EOF

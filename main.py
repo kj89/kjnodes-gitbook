@@ -1,7 +1,7 @@
 import yaml
 from env import GITHUB_USER, GITHUB_TOKEN
 import requests
-from misc import copy_and_overwrite, inplace_change, git_push, get_snapshot_metadata, get_restake_params, get_live_peers
+from misc import copy_and_overwrite, inplace_change, git_push, get_snapshot_metadata, get_restake_params, get_live_peers, get_dependency_versions
 import glob
 import shutil
 import os
@@ -14,7 +14,7 @@ environments = {
 }
 
 
-def get_replacement_params(chain, chain_environment):
+def get_replacement_params(chain, chain_environment, go_ver, cosmovisor_ver):
     print(chain, chain_environment)
     replacements = {'${PROJECT_NAME}': chain}
 
@@ -29,6 +29,9 @@ def get_replacement_params(chain, chain_environment):
     if resp.status_code == 200:
         data = yaml.safe_load(resp.content)
         print(f"*************{data['chain_git_repos']}*******************")
+
+        replacements['${GO_VERSION}'] = go_ver
+        replacements['${COSMOVISOR_VERSION}'] = cosmovisor_ver
 
         # workaround for gravity-bridge
         if data['chain_git_repos']:
@@ -177,6 +180,8 @@ def generate_home_page(environment):
 
 
 def main():
+    go_version, cosmovisor_version = get_dependency_versions()
+
     shutil.copyfile('./templates/SUMMARY.md', './docs/SUMMARY.md')
     shutil.copyfile('./templates/README.md', './docs/README.md')
     for environment in environments:
@@ -198,7 +203,7 @@ def main():
             if os.path.isdir(f'./templates/{chain}'):
                 shutil.copytree(f'./templates/{chain}', dst_dir, dirs_exist_ok=True)
 
-            replace_list = get_replacement_params(chain, environment)
+            replace_list = get_replacement_params(chain, environment, go_version, cosmovisor_version)
             print(replace_list)
             files = [f for f in glob.glob(f'{dst_dir}/**/*[.md]', recursive=True)]
             for f in files:
@@ -206,7 +211,7 @@ def main():
                 for src, dst in replace_list.items():
                     inplace_change(f, src, dst)
 
-    # git_push()
+    git_push()
 
 
 if __name__ == '__main__':
