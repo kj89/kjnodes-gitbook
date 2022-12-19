@@ -42,13 +42,10 @@ source $HOME/.profile
 
 ```bash
 # Download project binaries
-cd $HOME
-mkdir gravity-bin && cd gravity-bin
-wget -O gravityd https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/v1.7.2/gravity-linux-amd64
-wget -O gbt https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/v1.7.2/gbt
-chmod +x *
 mkdir -p $HOME/.gravity/cosmovisor/genesis/bin
-mv * $HOME/.gravity/cosmovisor/genesis/bin/
+wget -O $HOME/.gravity/cosmovisor/genesis/bin/gravityd https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/v1.7.2/gravity-linux-amd64
+wget -O $HOME/.gravity/cosmovisor/genesis/bin/gbt https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/v1.7.2/gbt
+chmod +x $HOME/.gravity/cosmovisor/genesis/bin/*
 ```
 
 ### Install Cosmovisor and create a service
@@ -87,11 +84,6 @@ sudo ln -s $HOME/.gravity/cosmovisor/current/bin/gravityd /usr/local/bin/gravity
 ### Initialize the node
 
 ```bash
-# Set node configuration
-gravityd config chain-id gravity-bridge-3
-gravityd config keyring-backend file
-gravityd config node tcp://localhost:26657
-
 # Initialize the node
 gravityd init $MONIKER --chain-id gravity-bridge-3
 

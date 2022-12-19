@@ -42,13 +42,10 @@ source $HOME/.profile
 
 ```bash
 # Download project binaries
-cd $HOME
-mkdir gravity-bin && cd gravity-bin
-wget -O gravityd https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/${LATEST_BINARY_VERSION}/gravity-linux-amd64
-wget -O gbt https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/${LATEST_BINARY_VERSION}/gbt
-chmod +x *
 mkdir -p $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin
-mv * $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin/
+wget -O $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin/gravityd https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/${LATEST_BINARY_VERSION}/gravity-linux-amd64
+wget -O $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin/gbt https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/${LATEST_BINARY_VERSION}/gbt
+chmod +x $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin/*
 ```
 
 ### Install Cosmovisor and create a service
@@ -87,11 +84,6 @@ sudo ln -s $HOME/${CHAIN_DIR}/cosmovisor/current/bin/${CHAIN_APP} /usr/local/bin
 ### Initialize the node
 
 ```bash
-# Set node configuration
-${CHAIN_APP} config chain-id ${CHAIN_ID}
-${CHAIN_APP} config keyring-backend ${KEYRING_BACKEND}
-${CHAIN_APP} config node tcp://localhost:${CHAIN_PORT}657
-
 # Initialize the node
 ${CHAIN_APP} init $MONIKER --chain-id ${CHAIN_ID}
 
