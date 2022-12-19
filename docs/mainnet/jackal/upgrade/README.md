@@ -1,5 +1,5 @@
 ---
-description: Setting up your validator node has never been so easy. Get your validator running in minutes by following step by step instructions.
+description: Prepare for and the upcomming chain upgrade using Cosmovisor.
 ---
 
 # Upgrade
