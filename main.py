@@ -154,6 +154,7 @@ def generate_summary_page(environment):
 
         result.append(f'* [{chain_prettyname}]({environment}/{chain}/README.md)\n'
                       f'  * [Installation]({environment}/{chain}/installation/README.md)\n'
+                      f'  * [Upgrade]({environment}/{chain}/upgrade/README.md)\n'
                       f'  * [Snapshot]({environment}/{chain}/snapshot/README.md)\n'
                       f'  * [State sync]({environment}/{chain}/state-sync/README.md)\n'
                       f'  * [Useful commands]({environment}/{chain}/useful-commands/README.md)\n\n')
