@@ -8,8 +8,6 @@ description: Setting up your validator node has never been so easy. Get your val
 
 **Chain ID**: lupulella-2 | **Latest Version Tag**: v1.2.0-alpha.7 | **Custom Port**: 37
 
-<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/jackal.png" width="150" alt=""><figcaption></figcaption></figure>
-
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.
 You just have to build new binaries and move it into cosmovisor upgrades directory.

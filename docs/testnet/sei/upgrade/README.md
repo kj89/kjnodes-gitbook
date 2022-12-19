@@ -8,8 +8,6 @@ description: Setting up your validator node has never been so easy. Get your val
 
 **Chain ID**: atlantic-1 | **Latest Version Tag**: 1.2.2beta-postfix | **Custom Port**: 12
 
-<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/sei.png" width="150" alt=""><figcaption></figcaption></figure>
-
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.
 You just have to build new binaries and move it into cosmovisor upgrades directory.

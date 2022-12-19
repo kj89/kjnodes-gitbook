@@ -8,8 +8,6 @@ description: Setting up your validator node has never been so easy. Get your val
 
 **Chain ID**: stride-1 | **Latest Version Tag**: v4.0.2 | **Custom Port**: 16
 
-<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/stride.png" width="150" alt=""><figcaption></figcaption></figure>
-
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.
 You just have to build new binaries and move it into cosmovisor upgrades directory.
