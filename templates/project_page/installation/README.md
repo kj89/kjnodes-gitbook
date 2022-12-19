@@ -59,7 +59,7 @@ rm -rf build
 
 ```bash
 # Download and install Cosmovisor
-go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@${COSMOVISOR_VERSION}
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v${COSMOVISOR_VERSION}
 
 # Create service
 sudo tee /etc/systemd/system/${CHAIN_APP}.service > /dev/null << EOF

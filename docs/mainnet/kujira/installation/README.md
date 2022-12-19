@@ -59,7 +59,7 @@ rm -rf build
 
 ```bash
 # Download and install Cosmovisor
-go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@1.4.0
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.4.0
 
 # Create service
 sudo tee /etc/systemd/system/kujirad.service > /dev/null << EOF
