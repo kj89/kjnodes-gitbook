@@ -18,7 +18,7 @@ Snapshots are taken automatically each day at **04:00 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 14779419 | 3 hours ago | [snapshot (2.91 GB)](https://snapshots.kjnodes.com/sei-testnet/snapshot\_latest.tar.lz4) |
+| 14779419 | 4 hours ago | [snapshot (2.91 GB)](https://snapshots.kjnodes.com/sei-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

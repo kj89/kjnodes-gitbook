@@ -18,7 +18,7 @@ Snapshots are taken automatically each day at **10:00 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 126770 | 21 hours ago | [snapshot (0.64 GB)](https://snapshots.kjnodes.com/nolus-testnet/snapshot\_latest.tar.lz4) |
+| 126770 | 22 hours ago | [snapshot (0.64 GB)](https://snapshots.kjnodes.com/nolus-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
