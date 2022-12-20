@@ -129,6 +129,13 @@
   * [State sync](testnet/haqq/state-sync/README.md)
   * [Useful commands](testnet/haqq/useful-commands/README.md)
 
+* [Hypersign](testnet/hypersign/README.md)
+  * [Installation](testnet/hypersign/installation/README.md)
+  * [Upgrade](testnet/hypersign/upgrade/README.md)
+  * [Snapshot](testnet/hypersign/snapshot/README.md)
+  * [State sync](testnet/hypersign/state-sync/README.md)
+  * [Useful commands](testnet/hypersign/useful-commands/README.md)
+
 * [Jackal](testnet/jackal/README.md)
   * [Installation](testnet/jackal/installation/README.md)
   * [Upgrade](testnet/jackal/upgrade/README.md)
