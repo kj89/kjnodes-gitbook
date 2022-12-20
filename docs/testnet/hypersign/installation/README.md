@@ -89,11 +89,6 @@ sudo ln -s $HOME/.hid-node/cosmovisor/current/bin/hid-noded /usr/local/bin/hid-n
 ### Initialize the node
 
 ```bash
-# Set node configuration
-hid-noded config chain-id jagrat
-hid-noded config keyring-backend test
-hid-noded config node tcp://localhost:31657
-
 # Initialize the node
 hid-noded init $MONIKER --chain-id jagrat
 
