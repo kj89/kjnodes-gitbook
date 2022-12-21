@@ -6,7 +6,7 @@ Agoric is an interoperable Proof-of-Stake chain in the Cosmos ecosystem.  Agoric
 
 **Chain ID**: agoric-3 | **Latest Version Tag**: pismoA | **Wasm**: OFF
 
-Website: [https://agoric.com](https://agoric.com)
+Website: [https://agoric.com](https://agoric.com) | [Discord](https://discord.com/invite/qDW8DRes4s) | [Twitter](https://twitter.com/agoric)
 
 ## Restake
 

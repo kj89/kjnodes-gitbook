@@ -54,6 +54,8 @@ def get_replacement_params(chain, chain_environment, go_ver, cosmovisor_ver):
         chain_service = data['chain_service']
         chain_binary_src = data['chain_binary_src']
         chain_website = data['chain_website']
+        chain_discord = data['chain_discord']
+        chain_twitter = data['chain_twitter']
         chain_short_description = data['chain_short_description']
         chain_snapshot_hour = data['chain_snapshot_cron_hour']
         chain_snapshot_minute = data['chain_snapshot_cron_minute']
@@ -97,6 +99,8 @@ def get_replacement_params(chain, chain_environment, go_ver, cosmovisor_ver):
         replacements['${CHAIN_TENDERSEED_PEER}'] = chain_tendeseed_peer
         replacements['${MIN_GAS_PRICE}'] = chain_min_gas_price
         replacements['${CHAIN_WEBSITE}'] = chain_website
+        replacements['${CHAIN_DISCORD}'] = chain_discord
+        replacements['${CHAIN_TWITTER}'] = chain_twitter
         replacements['${CHAIN_SHORT_DESCRIPTION}'] = chain_short_description
         replacements['${CHAIN_SNAPSHOT_TIME}'] = chain_snapshot_time
 

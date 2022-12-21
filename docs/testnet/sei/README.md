@@ -6,7 +6,7 @@ Sei is a Layer 1 blockchain on Cosmos with orderbook-focused infrastructure at i
 
 **Chain ID**: atlantic-1 | **Latest Version Tag**: 1.2.2beta-postfix | **Wasm**: ON
 
-Website: [https://www.seinetwork.io](https://www.seinetwork.io)
+Website: [https://www.seinetwork.io](https://www.seinetwork.io) | [Discord](https://discord.gg/sei) | [Twitter](https://twitter.com/SeiNetwork)
 
 
 ## Public endpoints

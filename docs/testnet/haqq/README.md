@@ -6,7 +6,7 @@ Haqq is the blockchain network that issues Islamic Coin,  its native cryptocurre
 
 **Chain ID**: haqq_54211-3 | **Latest Version Tag**: v1.3.0 | **Wasm**: OFF
 
-Website: [https://islamiccoin.net](https://islamiccoin.net)
+Website: [https://islamiccoin.net](https://islamiccoin.net) | [Discord](https://discord.gg/hU9MHG5kZq) | [Twitter](https://twitter.com/Islamic_Coin)
 
 
 ## Public endpoints
@@ -35,6 +35,6 @@ curl -Ls https://snapshots.kjnodes.com/haqq-testnet/addrbook.json > $HOME/.haqqd
 
 **live-peers** (10)
 ```
-peers="23a1176c9911eac442d6d1bf15f92eeabb3981d5@34.91.81.33:26656,c932600aa633bb17e07dcb53ae982c834ba1b734@185.225.232.148:26656,5c11c697aaf2dabf96e3eb7e7e621c200bd309ee@65.21.225.58:26656,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:35656,927a323649e7dd8d4c75da6e5edaee439652b46f@65.109.92.241:20116,ba56c564a5430632e59e2b08fc348735bc56b32f@154.12.232.140:26656,fed6ab9973f224f3b2334fd48fa835512d6311da@185.244.183.200:26656,47a269c3e30f70d8234a2afd8e9055e74129fde0@65.108.129.29:36656,6ce864d853904ebef9400528f129d8fefa6f1827@91.211.251.232:36656,9eb507f9365313dbe7f426050fec9648298f58ee@109.205.183.51:26656"
+peers="23a1176c9911eac442d6d1bf15f92eeabb3981d5@34.91.81.33:26656,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:35656,064fe9fe19fe5552b2d4922d659466e583f42b22@95.216.2.219:26658,927a323649e7dd8d4c75da6e5edaee439652b46f@65.109.92.241:20116,de231cd155362b2687dca190a744bf839ce4ce63@23.88.112.123:26656,ce080696d69228597caf0e80920dfe1bae2dcd54@95.217.12.131:26656,6ce864d853904ebef9400528f129d8fefa6f1827@91.211.251.232:36656,62bf004201a90ce00df6f69390378c3d90f6dd7e@34.90.129.213:26656,0760b7526738dac0af14b5e3d3b62e49c63dd490@185.154.14.142:26656,f57fae1bdea281392b563a58978a2d8c0a37725f@95.217.233.234:26656"
 sed -i 's|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.haqqd/config/config.toml
 ```

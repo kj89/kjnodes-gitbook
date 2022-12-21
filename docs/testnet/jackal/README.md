@@ -6,7 +6,7 @@ The Jackal Protocol is a fast, scalable, and secure blockchain that empowers  in
 
 **Chain ID**: lupulella-2 | **Latest Version Tag**: v1.2.0-alpha.7 | **Wasm**: ON
 
-Website: [https://jackalprotocol.com](https://jackalprotocol.com)
+Website: [https://jackalprotocol.com](https://jackalprotocol.com) | [Discord](https://discord.com/invite/5GKym3p6rj) | [Twitter](https://twitter.com/Jackal_Protocol)
 
 
 ## Public endpoints

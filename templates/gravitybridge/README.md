@@ -5,7 +5,7 @@
 ${CHAIN_SHORT_DESCRIPTION}
 **Chain ID**: ${CHAIN_ID} | **Latest Binary Version**: ${LATEST_BINARY_VERSION} | **Wasm**: ${CHAIN_WASM}
 
-Website: [${CHAIN_WEBSITE}](${CHAIN_WEBSITE})
+Website: [${CHAIN_WEBSITE}](${CHAIN_WEBSITE}) | [Discord](${CHAIN_DISCORD}) | [Twitter](${CHAIN_TWITTER})
 
 ${RESTAKE}
 ## Public endpoints

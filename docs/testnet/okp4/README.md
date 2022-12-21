@@ -6,7 +6,7 @@ OKP4 is a revolutionary public blockchain protocol where communities are incenti
 
 **Chain ID**: okp4-nemeton-1 | **Latest Version Tag**: v3.0.0 | **Wasm**: OFF
 
-Website: [https://okp4.network](https://okp4.network)
+Website: [https://okp4.network](https://okp4.network) | [Discord](https://discord.gg/okp4) | [Twitter](https://twitter.com/OKP4_Protocol)
 
 
 ## Public endpoints

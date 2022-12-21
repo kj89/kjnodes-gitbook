@@ -6,7 +6,7 @@ The Cosmos Hub is the blockchain protocol underlying an  increasingly large numb
 
 **Chain ID**: cosmoshub-4 | **Latest Version Tag**: v7.1.0 | **Wasm**: OFF
 
-Website: [https://hub.cosmos.network](https://hub.cosmos.network)
+Website: [https://hub.cosmos.network](https://hub.cosmos.network) | [Discord](https://discord.gg/cosmosnetwork) | [Twitter](https://twitter.com/cosmoshub)
 
 
 ## Public endpoints

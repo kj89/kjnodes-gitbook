@@ -6,7 +6,7 @@ Osmosis is a DEX protocol, which means it uses smart contracts  to determine the
 
 **Chain ID**: osmosis-1 | **Latest Version Tag**: v13.1.0 | **Wasm**: ON
 
-Website: [https://osmosis.zone](https://osmosis.zone)
+Website: [https://osmosis.zone](https://osmosis.zone) | [Discord](https://discord.gg/osmosis) | [Twitter](https://twitter.com/osmosiszone)
 
 
 ## Public endpoints
