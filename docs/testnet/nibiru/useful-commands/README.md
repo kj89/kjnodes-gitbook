@@ -66,7 +66,7 @@ nibid tx staking create-validator \
 --identity="YOUR_KEYBASE_ID" \
 --details="YOUR_DETAILS" \
 --website="YOUR_WEBSITE_URL"
---chain-id=nibiru-testnet-1 \
+--chain-id=nibiru-testnet-2 \
 --commission-rate=0.05 \
 --commission-max-rate=0.20 \
 --commission-max-change-rate=0.01 \
@@ -85,7 +85,7 @@ nibid tx staking edit-validator \
 --identity="YOUR_KEYBASE_ID" \
 --details="YOUR_DETAILS" \
 --website="YOUR_WEBSITE_URL"
---chain-id=nibiru-testnet-1 \
+--chain-id=nibiru-testnet-2 \
 --commission-rate=0.05 \
 --from=wallet \
 --gas-adjustment=1.4 \
@@ -96,7 +96,7 @@ nibid tx staking edit-validator \
 #### Unjail validator
 
 ```bash
-nibid tx slashing unjail --from wallet --chain-id nibiru-testnet-1 --gas auto --gas-adjustment 1.4 -y
+nibid tx slashing unjail --from wallet --chain-id nibiru-testnet-2 --gas auto --gas-adjustment 1.4 -y
 ```
 
 #### Jail reason
@@ -128,43 +128,43 @@ nibid q staking validator $(nibid keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-nibid tx distribution withdraw-all-rewards --from wallet --chain-id nibiru-testnet-1 --gas-adjustment 1.4 --gas auto -y
+nibid tx distribution withdraw-all-rewards --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-nibid tx distribution withdraw-rewards $(nibid keys show wallet --bech val -a) --commission --from wallet --chain-id nibiru-testnet-1 --gas-adjustment 1.4 --gas auto -y
+nibid tx distribution withdraw-rewards $(nibid keys show wallet --bech val -a) --commission --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-nibid tx staking delegate $(nibid keys show wallet --bech val -a) 1000000unibi --from wallet --chain-id nibiru-testnet-1 --gas-adjustment 1.4 --gas auto -y
+nibid tx staking delegate $(nibid keys show wallet --bech val -a) 1000000unibi --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-nibid tx staking delegate <TO_VALOPER_ADDRESS> 1000000unibi --from wallet --chain-id nibiru-testnet-1 --gas-adjustment 1.4 --gas auto -y
+nibid tx staking delegate <TO_VALOPER_ADDRESS> 1000000unibi --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto -y
 ```
 
 Redelegate tokens to another validator
 
 ```bash
-nibid tx staking redelegate $(nibid keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000unibi --from wallet --chain-id nibiru-testnet-1 --gas-adjustment 1.4 --gas auto -y
+nibid tx staking redelegate $(nibid keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000unibi --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto -y
 ```
 
 Unbond tokens from your validator
 
 ```bash
-nibid tx staking unbond $(nibid keys show wallet --bech val -a) 1000000unibi --from wallet --chain-id nibiru-testnet-1 --gas-adjustment 1.4 --gas auto -y
+nibid tx staking unbond $(nibid keys show wallet --bech val -a) 1000000unibi --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto -y
 ```
 
 Send tokens to the wallet
 
 ```bash
-nibid tx bank send wallet <TO_WALLET_ADDRESS> 1000000unibi --from wallet --chain-id nibiru-testnet-1
+nibid tx bank send wallet <TO_WALLET_ADDRESS> 1000000unibi --from wallet --chain-id nibiru-testnet-2
 ```
 
 ## 🗳 Governance
@@ -184,25 +184,25 @@ nibid query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-nibid tx gov vote 1 yes --from wallet --chain-id nibiru-testnet-1 --gas-adjustment 1.4 --gas auto -y
+nibid tx gov vote 1 yes --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto -y
 ```
 
 #### Vote 'No'
 
 ```bash
-nibid tx gov vote 1 no --from wallet --chain-id nibiru-testnet-1 --gas-adjustment 1.4 --gas auto -y
+nibid tx gov vote 1 no --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-nibid tx gov vote 1 abstain --from wallet --chain-id nibiru-testnet-1 --gas-adjustment 1.4 --gas auto -y
+nibid tx gov vote 1 abstain --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-nibid tx gov vote 1 nowithveto --from wallet --chain-id nibiru-testnet-1 --gas-adjustment 1.4 --gas auto -y
+nibid tx gov vote 1 nowithveto --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto -y
 ```
 
 ## ⚡️ Utility
