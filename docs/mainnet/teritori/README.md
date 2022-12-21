@@ -6,7 +6,7 @@ Teritori is a multi-chain hub designed to allow IBC and non IBC communities  to 
 
 **Chain ID**: teritori-1 | **Latest Version Tag**: v1.3.0 | **Wasm**: ON
 
-Website: [https://teritori.com](https://teritori.com) | [Discord](https://discord.gg/teritori) | [Twitter](https://twitter.com/TeritoriNetwork)
+[Website](https://teritori.com) | [Discord](https://discord.gg/teritori) | [Twitter](https://twitter.com/TeritoriNetwork)
 
 ## Restake
 

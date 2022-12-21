@@ -6,7 +6,7 @@ Gitopia is the next-generation Code Collaboration Platform fuelled by  a decentr
 
 **Chain ID**: gitopia-janus-testnet-2 | **Latest Version Tag**: v1.2.0 | **Wasm**: OFF
 
-Website: [https://gitopia.com/](https://gitopia.com/) | [Discord](https://discord.gg/hFTXCGNYDZ) | [Twitter](https://twitter.com/gitopiaDAO)
+[Website](https://gitopia.com/) | [Discord](https://discord.gg/hFTXCGNYDZ) | [Twitter](https://twitter.com/gitopiaDAO)
 
 
 ## Public endpoints

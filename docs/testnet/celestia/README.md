@@ -6,7 +6,7 @@ Celestia is a minimal blockchain that only orders and publishes transactions and
 
 **Chain ID**: mocha | **Latest Version Tag**: v0.11.0 | **Wasm**: OFF
 
-Website: [https://celestia.org](https://celestia.org) | [Discord](https://discord.gg/celestiacommunity) | [Twitter](https://twitter.com/CelestiaOrg)
+[Website](https://celestia.org) | [Discord](https://discord.gg/celestiacommunity) | [Twitter](https://twitter.com/CelestiaOrg)
 
 
 ## Public endpoints

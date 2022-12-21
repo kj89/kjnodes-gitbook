@@ -6,7 +6,7 @@ The Business Grade Multi-Chain NFT Infrastructure for Web 3.0
 
 **Chain ID**: uptick_7000-2 | **Latest Version Tag**: v0.2.4 | **Wasm**: OFF
 
-Website: [https://uptick.network](https://uptick.network) | [Discord](https://discord.gg/UzeHS7fu5H) | [Twitter](https://twitter.com/uptickproject)
+[Website](https://uptick.network) | [Discord](https://discord.gg/UzeHS7fu5H) | [Twitter](https://twitter.com/uptickproject)
 
 
 ## Public endpoints

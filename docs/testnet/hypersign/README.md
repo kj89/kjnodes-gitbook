@@ -6,7 +6,7 @@ Hypersign is a decentralized identity layer for the internet, giving  users cont
 
 **Chain ID**: jagrat | **Latest Version Tag**: v0.1.5 | **Wasm**: OFF
 
-Website: [https://hypersign.id](https://hypersign.id) | [Discord](https://discord.gg/DmuUjMrHVw) | [Twitter](https://twitter.com/hypersignchain)
+[Website](https://hypersign.id) | [Discord](https://discord.gg/DmuUjMrHVw) | [Twitter](https://twitter.com/hypersignchain)
 
 
 ## Public endpoints

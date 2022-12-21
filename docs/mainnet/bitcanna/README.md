@@ -6,7 +6,7 @@ BitCanna is a proof-of-stake (POS) decentralized payment network designed exclus
 
 **Chain ID**: bitcanna-1 | **Latest Version Tag**: v1.5.3 | **Wasm**: OFF
 
-Website: [https://www.bitcanna.io](https://www.bitcanna.io) | [Discord](https://discord.gg/9AVrzaVQvs) | [Twitter](https://twitter.com/BitCannaGlobal)
+[Website](https://www.bitcanna.io) | [Discord](https://discord.gg/9AVrzaVQvs) | [Twitter](https://twitter.com/BitCannaGlobal)
 
 
 ## Public endpoints
@@ -35,6 +35,6 @@ curl -Ls https://snapshots.kjnodes.com/bitcanna/addrbook.json > $HOME/.bcna/conf
 
 **live-peers** (10)
 ```
-peers="d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:42656,b7295f18b7150cc128d47c0546e2225179fc5427@202.61.194.254:60856,577e5457c1e1fc8e0958432e902ad8c86cef2336@169.155.168.54:26656,0a658df9d9fab096983a12e6f878e87281a15ce6@194.163.172.37:27656,881b4ec9a1d37587c44476a22c0864b08b1c88fe@195.3.221.21:13056,c38a5912b4b0f827732862594671c65ad0059932@172.105.196.25:26656,a9f839c6e24221fb093f13ee41a0af842378fec5@94.130.12.22:26642,88c6b1fa1c7fef98b4449b769eb2705476586664@65.109.92.241:21326,36a17684dc4809eb0c722aa4b5bd829b0429e8a1@207.246.84.132:26656,7c00beb4956bc40cd33ced6e2c2ffe07d4fa32e7@95.216.242.82:36656"
+peers="88c6b1fa1c7fef98b4449b769eb2705476586664@65.109.92.241:21326,6cceba286b498d4a1931f85e35ea0fa433373057@78.47.208.97:26656,c124ce0b508e8b9ed1c5b6957f362225659b5343@144.76.177.185:26656,90ee680b1738344354c48c23ba1e1fd68e071d80@142.132.248.138:26696,a66bce0ddb49dcf60a5b83fd94a7bd4d0878f127@154.53.40.9:26656,a1ceb81a5498642753f8600a5c3b9ca056af3051@67.222.144.195:16656,b2010fecba7153f5ad3aa4e7aad08fd94ed826c9@52.9.185.28:26656,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:42656,afb45e7806c2578f3bd8e13f845a8f9859af161d@138.201.8.248:50656,a7a358efdbe72da953e73a628924e6336e4364c4@24.158.14.212:36656"
 sed -i 's|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.bcna/config/config.toml
 ```

@@ -6,7 +6,7 @@ OLLO is a sovereign L1 chain built on the Cosmos network providing  next-gen tra
 
 **Chain ID**: ollo-testnet-1 | **Latest Version Tag**: v0.0.1 | **Wasm**: OFF
 
-Website: [https://www.ollostation.zone](https://www.ollostation.zone) | [Discord](https://discord.com/invite/GxBqZ9mSSm) | [Twitter](https://twitter.com/OLLOStation)
+[Website](https://www.ollostation.zone) | [Discord](https://discord.com/invite/GxBqZ9mSSm) | [Twitter](https://twitter.com/OLLOStation)
 
 
 ## Public endpoints

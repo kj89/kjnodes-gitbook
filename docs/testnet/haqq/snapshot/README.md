@@ -18,7 +18,7 @@ Snapshots are taken automatically each day at **08:30 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 1495081 | 17 minutes ago | [snapshot (0.91 GB)](https://snapshots.kjnodes.com/haqq-testnet/snapshot\_latest.tar.lz4) |
+| 1495081 | 38 minutes ago | [snapshot (0.91 GB)](https://snapshots.kjnodes.com/haqq-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

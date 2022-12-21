@@ -6,7 +6,7 @@ An open, decentralized bridge that unlocks the power of  interoperability & liqu
 
 **Chain ID**: gravity-bridge-3 | **Latest Binary Version**: v1.7.2 | **Wasm**: OFF
 
-Website: [https://www.gravitybridge.net](https://www.gravitybridge.net) | [Discord](https://discord.gg/ARV8dTSjAk) | [Twitter](https://twitter.com/gravity_bridge)
+[Website](https://www.gravitybridge.net) | [Discord](https://discord.gg/ARV8dTSjAk) | [Twitter](https://twitter.com/gravity_bridge)
 
 ## Restake
 

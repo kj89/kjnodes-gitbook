@@ -6,7 +6,7 @@ Stride is a blockchain ("zone") that provides liquidity for staked assets.  Usin
 
 **Chain ID**: stride-1 | **Latest Version Tag**: v4.0.2 | **Wasm**: OFF
 
-Website: [https://stride.zone](https://stride.zone) | [Discord](https://discord.gg/mzQZ8dAE7u) | [Twitter](https://twitter.com/stride_zone)
+[Website](https://stride.zone) | [Discord](https://discord.gg/mzQZ8dAE7u) | [Twitter](https://twitter.com/stride_zone)
 
 ## Restake
 
