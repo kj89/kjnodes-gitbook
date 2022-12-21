@@ -105,7 +105,7 @@ curl -Ls https://snapshots.kjnodes.com/nibiru-testnet/addrbook.json > $HOME/.nib
 sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@nibiru-testnet.rpc.kjnodes.com:39659\"|" $HOME/.nibid/config/config.toml
 
 # Set minimum gas price
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0unibi\"|" $HOME/.nibid/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.025unibi\"|" $HOME/.nibid/config/app.toml
 
 # Set pruning
 sed -i -e "s|^pruning *=.*|pruning = \"custom\"|" $HOME/.nibid/config/app.toml
