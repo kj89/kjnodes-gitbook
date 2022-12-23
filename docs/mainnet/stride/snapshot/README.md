@@ -18,7 +18,7 @@ Snapshots are taken automatically each day at **02:30 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 1589967 | 5 hours ago | [snapshot (8.17 GB)](https://snapshots.kjnodes.com/stride/snapshot\_latest.tar.lz4) |
+| 1593630 | 41 minutes ago | [snapshot (4.72 GB)](https://snapshots.kjnodes.com/stride/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
