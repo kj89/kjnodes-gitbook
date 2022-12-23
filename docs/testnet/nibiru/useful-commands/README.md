@@ -74,7 +74,7 @@ nibid tx staking create-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
---gas-prices 0.025unibi \
+--gas-prices=0.025unibi \
 -y
 ```
 
@@ -91,7 +91,7 @@ nibid tx staking edit-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
---gas-prices 0.025unibi \
+--gas-prices=0.025unibi \
 -y
 ```
 
@@ -130,37 +130,37 @@ nibid q staking validator $(nibid keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-nibid tx distribution withdraw-all-rewards --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.025unibi -y
+nibid tx distribution withdraw-all-rewards --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices=0.025unibi -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-nibid tx distribution withdraw-rewards $(nibid keys show wallet --bech val -a) --commission --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.025unibi -y
+nibid tx distribution withdraw-rewards $(nibid keys show wallet --bech val -a) --commission --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices=0.025unibi -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-nibid tx staking delegate $(nibid keys show wallet --bech val -a) 1000000unibi --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.025unibi -y
+nibid tx staking delegate $(nibid keys show wallet --bech val -a) 1000000unibi --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices=0.025unibi -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-nibid tx staking delegate <TO_VALOPER_ADDRESS> 1000000unibi --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.025unibi -y
+nibid tx staking delegate <TO_VALOPER_ADDRESS> 1000000unibi --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices=0.025unibi -y
 ```
 
 Redelegate tokens to another validator
 
 ```bash
-nibid tx staking redelegate $(nibid keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000unibi --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.025unibi -y
+nibid tx staking redelegate $(nibid keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000unibi --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices=0.025unibi -y
 ```
 
 Unbond tokens from your validator
 
 ```bash
-nibid tx staking unbond $(nibid keys show wallet --bech val -a) 1000000unibi --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.025unibi -y
+nibid tx staking unbond $(nibid keys show wallet --bech val -a) 1000000unibi --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices=0.025unibi -y
 ```
 
 Send tokens to the wallet
@@ -186,25 +186,25 @@ nibid query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-nibid tx gov vote 1 yes --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.025unibi -y
+nibid tx gov vote 1 yes --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices=0.025unibi -y
 ```
 
 #### Vote 'No'
 
 ```bash
-nibid tx gov vote 1 no --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.025unibi -y
+nibid tx gov vote 1 no --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices=0.025unibi -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-nibid tx gov vote 1 abstain --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.025unibi -y
+nibid tx gov vote 1 abstain --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices=0.025unibi -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-nibid tx gov vote 1 nowithveto --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.025unibi -y
+nibid tx gov vote 1 nowithveto --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices=0.025unibi -y
 ```
 
 ## ⚡️ Utility

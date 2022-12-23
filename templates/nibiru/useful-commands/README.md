@@ -74,7 +74,7 @@ ${CHAIN_APP} tx staking create-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
---gas-prices ${MIN_GAS_PRICE} \
+--gas-prices=${MIN_GAS_PRICE} \
 -y
 ```
 
@@ -91,7 +91,7 @@ ${CHAIN_APP} tx staking edit-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
---gas-prices ${MIN_GAS_PRICE} \
+--gas-prices=${MIN_GAS_PRICE} \
 -y
 ```
 
@@ -130,37 +130,37 @@ ${CHAIN_APP} q staking validator $(${CHAIN_APP} keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-${CHAIN_APP} tx distribution withdraw-all-rewards --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
+${CHAIN_APP} tx distribution withdraw-all-rewards --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices=${MIN_GAS_PRICE} -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-${CHAIN_APP} tx distribution withdraw-rewards $(${CHAIN_APP} keys show wallet --bech val -a) --commission --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
+${CHAIN_APP} tx distribution withdraw-rewards $(${CHAIN_APP} keys show wallet --bech val -a) --commission --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices=${MIN_GAS_PRICE} -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-${CHAIN_APP} tx staking delegate $(${CHAIN_APP} keys show wallet --bech val -a) 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
+${CHAIN_APP} tx staking delegate $(${CHAIN_APP} keys show wallet --bech val -a) 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices=${MIN_GAS_PRICE} -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-${CHAIN_APP} tx staking delegate <TO_VALOPER_ADDRESS> 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
+${CHAIN_APP} tx staking delegate <TO_VALOPER_ADDRESS> 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices=${MIN_GAS_PRICE} -y
 ```
 
 Redelegate tokens to another validator
 
 ```bash
-${CHAIN_APP} tx staking redelegate $(${CHAIN_APP} keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
+${CHAIN_APP} tx staking redelegate $(${CHAIN_APP} keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices=${MIN_GAS_PRICE} -y
 ```
 
 Unbond tokens from your validator
 
 ```bash
-${CHAIN_APP} tx staking unbond $(${CHAIN_APP} keys show wallet --bech val -a) 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
+${CHAIN_APP} tx staking unbond $(${CHAIN_APP} keys show wallet --bech val -a) 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices=${MIN_GAS_PRICE} -y
 ```
 
 Send tokens to the wallet
@@ -186,25 +186,25 @@ ${CHAIN_APP} query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-${CHAIN_APP} tx gov vote 1 yes --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
+${CHAIN_APP} tx gov vote 1 yes --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices=${MIN_GAS_PRICE} -y
 ```
 
 #### Vote 'No'
 
 ```bash
-${CHAIN_APP} tx gov vote 1 no --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
+${CHAIN_APP} tx gov vote 1 no --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices=${MIN_GAS_PRICE} -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-${CHAIN_APP} tx gov vote 1 abstain --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
+${CHAIN_APP} tx gov vote 1 abstain --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices=${MIN_GAS_PRICE} -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-${CHAIN_APP} tx gov vote 1 nowithveto --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
+${CHAIN_APP} tx gov vote 1 nowithveto --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices=${MIN_GAS_PRICE} -y
 ```
 
 ## ⚡️ Utility
