@@ -12,13 +12,13 @@ Snapshot contains compressed copy of chain data directory. To keep backup files 
 snapshot server is periodically beeing state-synced.
 {% endhint %}
 
-Snapshots are taken automatically each day at **08:30 UTC**
+Snapshots are taken automatically every 6 hours starting at **03:30 UTC**
 
 **pruning**: 100/0/19 | **indexer**: null | **version tag**: v1.3.0
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 1524295 | 23 hours ago | [snapshot (1.14 GB)](https://snapshots.kjnodes.com/haqq-testnet/snapshot\_latest.tar.lz4) |
+| 1538666 | 16 minutes ago | [snapshot (0.86 GB)](https://snapshots.kjnodes.com/haqq-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

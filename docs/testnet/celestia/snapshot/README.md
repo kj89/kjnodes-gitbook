@@ -12,13 +12,13 @@ Snapshot contains compressed copy of chain data directory. To keep backup files 
 snapshot server is periodically beeing state-synced.
 {% endhint %}
 
-Snapshots are taken automatically each day at **10:30 UTC**
+Snapshots are taken automatically every 6 hours starting at **05:00 UTC**
 
 **pruning**: 100/0/19 | **indexer**: null | **version tag**: v0.11.0
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 89762 | 9 hours ago | [snapshot (0.51 GB)](https://snapshots.kjnodes.com/celestia-testnet/snapshot\_latest.tar.lz4) |
+| 89762 | 10 hours ago | [snapshot (0.51 GB)](https://snapshots.kjnodes.com/celestia-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

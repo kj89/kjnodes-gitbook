@@ -12,13 +12,13 @@ Snapshot contains compressed copy of chain data directory. To keep backup files 
 snapshot server is periodically beeing state-synced.
 {% endhint %}
 
-Snapshots are taken automatically each day at **07:30 UTC**
+Snapshots are taken automatically every 6 hours starting at **04:45 UTC**
 
 **pruning**: 100/0/19 | **indexer**: null | **version tag**: v7-Theta
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 13378384 | 44 minutes ago | [snapshot (3.41 GB)](https://snapshots.kjnodes.com/cosmoshub/snapshot\_latest.tar.lz4) |
+| 13378384 | 1 hour ago | [snapshot (3.41 GB)](https://snapshots.kjnodes.com/cosmoshub/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

@@ -12,13 +12,13 @@ Snapshot contains compressed copy of chain data directory. To keep backup files 
 snapshot server is periodically beeing state-synced.
 {% endhint %}
 
-Snapshots are taken automatically each day at **08:00 UTC**
+Snapshots are taken automatically every 6 hours starting at **03:45 UTC**
 
 **pruning**: 100/0/19 | **indexer**: null | **version tag**: pleiades
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 5107321 | 19 minutes ago | [snapshot (0.91 GB)](https://snapshots.kjnodes.com/gravitybridge/snapshot\_latest.tar.lz4) |
+| 5107321 | 47 minutes ago | [snapshot (0.91 GB)](https://snapshots.kjnodes.com/gravitybridge/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

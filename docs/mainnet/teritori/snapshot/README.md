@@ -12,13 +12,13 @@ Snapshot contains compressed copy of chain data directory. To keep backup files 
 snapshot server is periodically beeing state-synced.
 {% endhint %}
 
-Snapshots are taken automatically each day at **00:30 UTC**
+Snapshots are taken automatically every 6 hours starting at **01:15 UTC**
 
 **pruning**: 100/0/19 | **indexer**: null | **version tag**: v1.3.0
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 1226784 | 1 hour ago | [snapshot (0.67 GB)](https://snapshots.kjnodes.com/teritori/snapshot\_latest.tar.lz4) |
+| 1226784 | 2 hours ago | [snapshot (0.67 GB)](https://snapshots.kjnodes.com/teritori/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

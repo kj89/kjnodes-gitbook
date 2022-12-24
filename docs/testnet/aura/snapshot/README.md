@@ -12,13 +12,13 @@ Snapshot contains compressed copy of chain data directory. To keep backup files 
 snapshot server is periodically beeing state-synced.
 {% endhint %}
 
-Snapshots are taken automatically each day at **02:30 UTC**
+Snapshots are taken automatically every 6 hours starting at **05:30 UTC**
 
 **pruning**: 100/0/19 | **indexer**: null | **version tag**: v0.4.2
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 2442323 | 5 hours ago | [snapshot (0.92 GB)](https://snapshots.kjnodes.com/aura-testnet/snapshot\_latest.tar.lz4) |
+| 2446150 | 17 minutes ago | [snapshot (0.92 GB)](https://snapshots.kjnodes.com/aura-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

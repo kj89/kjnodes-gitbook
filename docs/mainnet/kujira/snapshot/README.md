@@ -12,13 +12,13 @@ Snapshot contains compressed copy of chain data directory. To keep backup files 
 snapshot server is periodically beeing state-synced.
 {% endhint %}
 
-Snapshots are taken automatically each day at **01:30 UTC**
+Snapshots are taken automatically every 6 hours starting at **00:15 UTC**
 
 **pruning**: 100/0/19 | **indexer**: null | **version tag**: v0.7.1
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 6480323 | 47 minutes ago | [snapshot (1.07 GB)](https://snapshots.kjnodes.com/kujira/snapshot\_latest.tar.lz4) |
+| 6480323 | 1 hour ago | [snapshot (1.07 GB)](https://snapshots.kjnodes.com/kujira/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

@@ -12,13 +12,13 @@ Snapshot contains compressed copy of chain data directory. To keep backup files 
 snapshot server is periodically beeing state-synced.
 {% endhint %}
 
-Snapshots are taken automatically each day at **02:30 UTC**
+Snapshots are taken automatically every 6 hours starting at **01:30 UTC**
 
 **pruning**: 100/0/19 | **indexer**: null | **version tag**: v4
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 1604550 | 5 hours ago | [snapshot (2.58 GB)](https://snapshots.kjnodes.com/stride/snapshot\_latest.tar.lz4) |
+| 1608204 | 15 minutes ago | [snapshot (3.25 GB)](https://snapshots.kjnodes.com/stride/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

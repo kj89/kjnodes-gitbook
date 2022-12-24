@@ -12,13 +12,13 @@ Snapshot contains compressed copy of chain data directory. To keep backup files 
 snapshot server is periodically beeing state-synced.
 {% endhint %}
 
-Snapshots are taken automatically each day at **04:30 UTC**
+Snapshots are taken automatically every 6 hours starting at **04:15 UTC**
 
 **pruning**: 100/0/19 | **indexer**: null | **version tag**: agoric-upgrade-8
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 7960861 | 3 hours ago | [snapshot (5.47 GB)](https://snapshots.kjnodes.com/agoric/snapshot\_latest.tar.lz4) |
+| 7960861 | 4 hours ago | [snapshot (5.47 GB)](https://snapshots.kjnodes.com/agoric/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
