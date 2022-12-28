@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **00:00 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: v0.16.2
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v0.16.3
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 694109 | 4 hours ago | [snapshot (1.14 GB)](https://snapshots.kjnodes.com/nibiru-testnet/snapshot\_latest.tar.lz4) |
+| 694109 | 5 hours ago | [snapshot (1.14 GB)](https://snapshots.kjnodes.com/nibiru-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
