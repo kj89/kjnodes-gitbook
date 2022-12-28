@@ -211,5 +211,5 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-# Project variables
+# Python
 *.py
