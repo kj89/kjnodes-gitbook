@@ -74,6 +74,7 @@ okp4d tx staking create-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
+--gas-prices=0uknow \
 -y
 ```
 
@@ -90,13 +91,14 @@ okp4d tx staking edit-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
+--gas-prices=0uknow \
 -y
 ```
 
 #### Unjail validator
 
 ```bash
-okp4d tx slashing unjail --from wallet --chain-id okp4-nemeton-1 --gas auto --gas-adjustment 1.4 -y
+okp4d tx slashing unjail --from wallet --chain-id okp4-nemeton-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uknow -y
 ```
 
 #### Jail reason
@@ -128,37 +130,37 @@ okp4d q staking validator $(okp4d keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-okp4d tx distribution withdraw-all-rewards --from wallet --chain-id okp4-nemeton-1 --gas-adjustment 1.4 --gas auto -y
+okp4d tx distribution withdraw-all-rewards --from wallet --chain-id okp4-nemeton-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uknow -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-okp4d tx distribution withdraw-rewards $(okp4d keys show wallet --bech val -a) --commission --from wallet --chain-id okp4-nemeton-1 --gas-adjustment 1.4 --gas auto -y
+okp4d tx distribution withdraw-rewards $(okp4d keys show wallet --bech val -a) --commission --from wallet --chain-id okp4-nemeton-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uknow -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-okp4d tx staking delegate $(okp4d keys show wallet --bech val -a) 1000000uknow --from wallet --chain-id okp4-nemeton-1 --gas-adjustment 1.4 --gas auto -y
+okp4d tx staking delegate $(okp4d keys show wallet --bech val -a) 1000000uknow --from wallet --chain-id okp4-nemeton-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uknow -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-okp4d tx staking delegate <TO_VALOPER_ADDRESS> 1000000uknow --from wallet --chain-id okp4-nemeton-1 --gas-adjustment 1.4 --gas auto -y
+okp4d tx staking delegate <TO_VALOPER_ADDRESS> 1000000uknow --from wallet --chain-id okp4-nemeton-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uknow -y
 ```
 
 Redelegate tokens to another validator
 
 ```bash
-okp4d tx staking redelegate $(okp4d keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000uknow --from wallet --chain-id okp4-nemeton-1 --gas-adjustment 1.4 --gas auto -y
+okp4d tx staking redelegate $(okp4d keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000uknow --from wallet --chain-id okp4-nemeton-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uknow -y
 ```
 
 Unbond tokens from your validator
 
 ```bash
-okp4d tx staking unbond $(okp4d keys show wallet --bech val -a) 1000000uknow --from wallet --chain-id okp4-nemeton-1 --gas-adjustment 1.4 --gas auto -y
+okp4d tx staking unbond $(okp4d keys show wallet --bech val -a) 1000000uknow --from wallet --chain-id okp4-nemeton-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uknow -y
 ```
 
 Send tokens to the wallet
@@ -184,25 +186,25 @@ okp4d query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-okp4d tx gov vote 1 yes --from wallet --chain-id okp4-nemeton-1 --gas-adjustment 1.4 --gas auto -y
+okp4d tx gov vote 1 yes --from wallet --chain-id okp4-nemeton-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uknow -y
 ```
 
 #### Vote 'No'
 
 ```bash
-okp4d tx gov vote 1 no --from wallet --chain-id okp4-nemeton-1 --gas-adjustment 1.4 --gas auto -y
+okp4d tx gov vote 1 no --from wallet --chain-id okp4-nemeton-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uknow -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-okp4d tx gov vote 1 abstain --from wallet --chain-id okp4-nemeton-1 --gas-adjustment 1.4 --gas auto -y
+okp4d tx gov vote 1 abstain --from wallet --chain-id okp4-nemeton-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uknow -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-okp4d tx gov vote 1 nowithveto --from wallet --chain-id okp4-nemeton-1 --gas-adjustment 1.4 --gas auto -y
+okp4d tx gov vote 1 nowithveto --from wallet --chain-id okp4-nemeton-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uknow -y
 ```
 
 ## ⚡️ Utility

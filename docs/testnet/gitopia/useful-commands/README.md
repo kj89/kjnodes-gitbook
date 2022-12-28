@@ -74,6 +74,7 @@ gitopiad tx staking create-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
+--gas-prices=0.001utlore \
 -y
 ```
 
@@ -90,13 +91,14 @@ gitopiad tx staking edit-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
+--gas-prices=0.001utlore \
 -y
 ```
 
 #### Unjail validator
 
 ```bash
-gitopiad tx slashing unjail --from wallet --chain-id gitopia-janus-testnet-2 --gas auto --gas-adjustment 1.4 -y
+gitopiad tx slashing unjail --from wallet --chain-id gitopia-janus-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.001utlore -y
 ```
 
 #### Jail reason
@@ -128,37 +130,37 @@ gitopiad q staking validator $(gitopiad keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-gitopiad tx distribution withdraw-all-rewards --from wallet --chain-id gitopia-janus-testnet-2 --gas-adjustment 1.4 --gas auto -y
+gitopiad tx distribution withdraw-all-rewards --from wallet --chain-id gitopia-janus-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.001utlore -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-gitopiad tx distribution withdraw-rewards $(gitopiad keys show wallet --bech val -a) --commission --from wallet --chain-id gitopia-janus-testnet-2 --gas-adjustment 1.4 --gas auto -y
+gitopiad tx distribution withdraw-rewards $(gitopiad keys show wallet --bech val -a) --commission --from wallet --chain-id gitopia-janus-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.001utlore -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-gitopiad tx staking delegate $(gitopiad keys show wallet --bech val -a) 1000000utlore --from wallet --chain-id gitopia-janus-testnet-2 --gas-adjustment 1.4 --gas auto -y
+gitopiad tx staking delegate $(gitopiad keys show wallet --bech val -a) 1000000utlore --from wallet --chain-id gitopia-janus-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.001utlore -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-gitopiad tx staking delegate <TO_VALOPER_ADDRESS> 1000000utlore --from wallet --chain-id gitopia-janus-testnet-2 --gas-adjustment 1.4 --gas auto -y
+gitopiad tx staking delegate <TO_VALOPER_ADDRESS> 1000000utlore --from wallet --chain-id gitopia-janus-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.001utlore -y
 ```
 
 Redelegate tokens to another validator
 
 ```bash
-gitopiad tx staking redelegate $(gitopiad keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000utlore --from wallet --chain-id gitopia-janus-testnet-2 --gas-adjustment 1.4 --gas auto -y
+gitopiad tx staking redelegate $(gitopiad keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000utlore --from wallet --chain-id gitopia-janus-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.001utlore -y
 ```
 
 Unbond tokens from your validator
 
 ```bash
-gitopiad tx staking unbond $(gitopiad keys show wallet --bech val -a) 1000000utlore --from wallet --chain-id gitopia-janus-testnet-2 --gas-adjustment 1.4 --gas auto -y
+gitopiad tx staking unbond $(gitopiad keys show wallet --bech val -a) 1000000utlore --from wallet --chain-id gitopia-janus-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.001utlore -y
 ```
 
 Send tokens to the wallet
@@ -184,25 +186,25 @@ gitopiad query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-gitopiad tx gov vote 1 yes --from wallet --chain-id gitopia-janus-testnet-2 --gas-adjustment 1.4 --gas auto -y
+gitopiad tx gov vote 1 yes --from wallet --chain-id gitopia-janus-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.001utlore -y
 ```
 
 #### Vote 'No'
 
 ```bash
-gitopiad tx gov vote 1 no --from wallet --chain-id gitopia-janus-testnet-2 --gas-adjustment 1.4 --gas auto -y
+gitopiad tx gov vote 1 no --from wallet --chain-id gitopia-janus-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.001utlore -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-gitopiad tx gov vote 1 abstain --from wallet --chain-id gitopia-janus-testnet-2 --gas-adjustment 1.4 --gas auto -y
+gitopiad tx gov vote 1 abstain --from wallet --chain-id gitopia-janus-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.001utlore -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-gitopiad tx gov vote 1 nowithveto --from wallet --chain-id gitopia-janus-testnet-2 --gas-adjustment 1.4 --gas auto -y
+gitopiad tx gov vote 1 nowithveto --from wallet --chain-id gitopia-janus-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.001utlore -y
 ```
 
 ## ⚡️ Utility

@@ -74,6 +74,7 @@ rebusd tx staking create-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
+--gas-prices=0arebus \
 -y
 ```
 
@@ -90,13 +91,14 @@ rebusd tx staking edit-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
+--gas-prices=0arebus \
 -y
 ```
 
 #### Unjail validator
 
 ```bash
-rebusd tx slashing unjail --from wallet --chain-id reb_1111-1 --gas auto --gas-adjustment 1.4 -y
+rebusd tx slashing unjail --from wallet --chain-id reb_1111-1 --gas-adjustment 1.4 --gas auto --gas-prices 0arebus -y
 ```
 
 #### Jail reason
@@ -128,37 +130,37 @@ rebusd q staking validator $(rebusd keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-rebusd tx distribution withdraw-all-rewards --from wallet --chain-id reb_1111-1 --gas-adjustment 1.4 --gas auto -y
+rebusd tx distribution withdraw-all-rewards --from wallet --chain-id reb_1111-1 --gas-adjustment 1.4 --gas auto --gas-prices 0arebus -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-rebusd tx distribution withdraw-rewards $(rebusd keys show wallet --bech val -a) --commission --from wallet --chain-id reb_1111-1 --gas-adjustment 1.4 --gas auto -y
+rebusd tx distribution withdraw-rewards $(rebusd keys show wallet --bech val -a) --commission --from wallet --chain-id reb_1111-1 --gas-adjustment 1.4 --gas auto --gas-prices 0arebus -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-rebusd tx staking delegate $(rebusd keys show wallet --bech val -a) 1000000arebus --from wallet --chain-id reb_1111-1 --gas-adjustment 1.4 --gas auto -y
+rebusd tx staking delegate $(rebusd keys show wallet --bech val -a) 1000000arebus --from wallet --chain-id reb_1111-1 --gas-adjustment 1.4 --gas auto --gas-prices 0arebus -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-rebusd tx staking delegate <TO_VALOPER_ADDRESS> 1000000arebus --from wallet --chain-id reb_1111-1 --gas-adjustment 1.4 --gas auto -y
+rebusd tx staking delegate <TO_VALOPER_ADDRESS> 1000000arebus --from wallet --chain-id reb_1111-1 --gas-adjustment 1.4 --gas auto --gas-prices 0arebus -y
 ```
 
 Redelegate tokens to another validator
 
 ```bash
-rebusd tx staking redelegate $(rebusd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000arebus --from wallet --chain-id reb_1111-1 --gas-adjustment 1.4 --gas auto -y
+rebusd tx staking redelegate $(rebusd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000arebus --from wallet --chain-id reb_1111-1 --gas-adjustment 1.4 --gas auto --gas-prices 0arebus -y
 ```
 
 Unbond tokens from your validator
 
 ```bash
-rebusd tx staking unbond $(rebusd keys show wallet --bech val -a) 1000000arebus --from wallet --chain-id reb_1111-1 --gas-adjustment 1.4 --gas auto -y
+rebusd tx staking unbond $(rebusd keys show wallet --bech val -a) 1000000arebus --from wallet --chain-id reb_1111-1 --gas-adjustment 1.4 --gas auto --gas-prices 0arebus -y
 ```
 
 Send tokens to the wallet
@@ -184,25 +186,25 @@ rebusd query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-rebusd tx gov vote 1 yes --from wallet --chain-id reb_1111-1 --gas-adjustment 1.4 --gas auto -y
+rebusd tx gov vote 1 yes --from wallet --chain-id reb_1111-1 --gas-adjustment 1.4 --gas auto --gas-prices 0arebus -y
 ```
 
 #### Vote 'No'
 
 ```bash
-rebusd tx gov vote 1 no --from wallet --chain-id reb_1111-1 --gas-adjustment 1.4 --gas auto -y
+rebusd tx gov vote 1 no --from wallet --chain-id reb_1111-1 --gas-adjustment 1.4 --gas auto --gas-prices 0arebus -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-rebusd tx gov vote 1 abstain --from wallet --chain-id reb_1111-1 --gas-adjustment 1.4 --gas auto -y
+rebusd tx gov vote 1 abstain --from wallet --chain-id reb_1111-1 --gas-adjustment 1.4 --gas auto --gas-prices 0arebus -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-rebusd tx gov vote 1 nowithveto --from wallet --chain-id reb_1111-1 --gas-adjustment 1.4 --gas auto -y
+rebusd tx gov vote 1 nowithveto --from wallet --chain-id reb_1111-1 --gas-adjustment 1.4 --gas auto --gas-prices 0arebus -y
 ```
 
 ## ⚡️ Utility

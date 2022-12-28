@@ -74,6 +74,7 @@ canined tx staking create-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
+--gas-prices=0.002ujkl \
 -y
 ```
 
@@ -90,13 +91,14 @@ canined tx staking edit-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
+--gas-prices=0.002ujkl \
 -y
 ```
 
 #### Unjail validator
 
 ```bash
-canined tx slashing unjail --from wallet --chain-id lupulella-2 --gas auto --gas-adjustment 1.4 -y
+canined tx slashing unjail --from wallet --chain-id lupulella-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.002ujkl -y
 ```
 
 #### Jail reason
@@ -128,37 +130,37 @@ canined q staking validator $(canined keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-canined tx distribution withdraw-all-rewards --from wallet --chain-id lupulella-2 --gas-adjustment 1.4 --gas auto -y
+canined tx distribution withdraw-all-rewards --from wallet --chain-id lupulella-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.002ujkl -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-canined tx distribution withdraw-rewards $(canined keys show wallet --bech val -a) --commission --from wallet --chain-id lupulella-2 --gas-adjustment 1.4 --gas auto -y
+canined tx distribution withdraw-rewards $(canined keys show wallet --bech val -a) --commission --from wallet --chain-id lupulella-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.002ujkl -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-canined tx staking delegate $(canined keys show wallet --bech val -a) 1000000ujkl --from wallet --chain-id lupulella-2 --gas-adjustment 1.4 --gas auto -y
+canined tx staking delegate $(canined keys show wallet --bech val -a) 1000000ujkl --from wallet --chain-id lupulella-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.002ujkl -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-canined tx staking delegate <TO_VALOPER_ADDRESS> 1000000ujkl --from wallet --chain-id lupulella-2 --gas-adjustment 1.4 --gas auto -y
+canined tx staking delegate <TO_VALOPER_ADDRESS> 1000000ujkl --from wallet --chain-id lupulella-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.002ujkl -y
 ```
 
 Redelegate tokens to another validator
 
 ```bash
-canined tx staking redelegate $(canined keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000ujkl --from wallet --chain-id lupulella-2 --gas-adjustment 1.4 --gas auto -y
+canined tx staking redelegate $(canined keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000ujkl --from wallet --chain-id lupulella-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.002ujkl -y
 ```
 
 Unbond tokens from your validator
 
 ```bash
-canined tx staking unbond $(canined keys show wallet --bech val -a) 1000000ujkl --from wallet --chain-id lupulella-2 --gas-adjustment 1.4 --gas auto -y
+canined tx staking unbond $(canined keys show wallet --bech val -a) 1000000ujkl --from wallet --chain-id lupulella-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.002ujkl -y
 ```
 
 Send tokens to the wallet
@@ -184,25 +186,25 @@ canined query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-canined tx gov vote 1 yes --from wallet --chain-id lupulella-2 --gas-adjustment 1.4 --gas auto -y
+canined tx gov vote 1 yes --from wallet --chain-id lupulella-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.002ujkl -y
 ```
 
 #### Vote 'No'
 
 ```bash
-canined tx gov vote 1 no --from wallet --chain-id lupulella-2 --gas-adjustment 1.4 --gas auto -y
+canined tx gov vote 1 no --from wallet --chain-id lupulella-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.002ujkl -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-canined tx gov vote 1 abstain --from wallet --chain-id lupulella-2 --gas-adjustment 1.4 --gas auto -y
+canined tx gov vote 1 abstain --from wallet --chain-id lupulella-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.002ujkl -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-canined tx gov vote 1 nowithveto --from wallet --chain-id lupulella-2 --gas-adjustment 1.4 --gas auto -y
+canined tx gov vote 1 nowithveto --from wallet --chain-id lupulella-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.002ujkl -y
 ```
 
 ## ⚡️ Utility

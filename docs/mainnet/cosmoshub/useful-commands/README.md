@@ -74,6 +74,7 @@ gaiad tx staking create-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
+--gas-prices=0uatom \
 -y
 ```
 
@@ -90,13 +91,14 @@ gaiad tx staking edit-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
+--gas-prices=0uatom \
 -y
 ```
 
 #### Unjail validator
 
 ```bash
-gaiad tx slashing unjail --from wallet --chain-id cosmoshub-4 --gas auto --gas-adjustment 1.4 -y
+gaiad tx slashing unjail --from wallet --chain-id cosmoshub-4 --gas-adjustment 1.4 --gas auto --gas-prices 0uatom -y
 ```
 
 #### Jail reason
@@ -128,37 +130,37 @@ gaiad q staking validator $(gaiad keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-gaiad tx distribution withdraw-all-rewards --from wallet --chain-id cosmoshub-4 --gas-adjustment 1.4 --gas auto -y
+gaiad tx distribution withdraw-all-rewards --from wallet --chain-id cosmoshub-4 --gas-adjustment 1.4 --gas auto --gas-prices 0uatom -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-gaiad tx distribution withdraw-rewards $(gaiad keys show wallet --bech val -a) --commission --from wallet --chain-id cosmoshub-4 --gas-adjustment 1.4 --gas auto -y
+gaiad tx distribution withdraw-rewards $(gaiad keys show wallet --bech val -a) --commission --from wallet --chain-id cosmoshub-4 --gas-adjustment 1.4 --gas auto --gas-prices 0uatom -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-gaiad tx staking delegate $(gaiad keys show wallet --bech val -a) 1000000uatom --from wallet --chain-id cosmoshub-4 --gas-adjustment 1.4 --gas auto -y
+gaiad tx staking delegate $(gaiad keys show wallet --bech val -a) 1000000uatom --from wallet --chain-id cosmoshub-4 --gas-adjustment 1.4 --gas auto --gas-prices 0uatom -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-gaiad tx staking delegate <TO_VALOPER_ADDRESS> 1000000uatom --from wallet --chain-id cosmoshub-4 --gas-adjustment 1.4 --gas auto -y
+gaiad tx staking delegate <TO_VALOPER_ADDRESS> 1000000uatom --from wallet --chain-id cosmoshub-4 --gas-adjustment 1.4 --gas auto --gas-prices 0uatom -y
 ```
 
 Redelegate tokens to another validator
 
 ```bash
-gaiad tx staking redelegate $(gaiad keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000uatom --from wallet --chain-id cosmoshub-4 --gas-adjustment 1.4 --gas auto -y
+gaiad tx staking redelegate $(gaiad keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000uatom --from wallet --chain-id cosmoshub-4 --gas-adjustment 1.4 --gas auto --gas-prices 0uatom -y
 ```
 
 Unbond tokens from your validator
 
 ```bash
-gaiad tx staking unbond $(gaiad keys show wallet --bech val -a) 1000000uatom --from wallet --chain-id cosmoshub-4 --gas-adjustment 1.4 --gas auto -y
+gaiad tx staking unbond $(gaiad keys show wallet --bech val -a) 1000000uatom --from wallet --chain-id cosmoshub-4 --gas-adjustment 1.4 --gas auto --gas-prices 0uatom -y
 ```
 
 Send tokens to the wallet
@@ -184,25 +186,25 @@ gaiad query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-gaiad tx gov vote 1 yes --from wallet --chain-id cosmoshub-4 --gas-adjustment 1.4 --gas auto -y
+gaiad tx gov vote 1 yes --from wallet --chain-id cosmoshub-4 --gas-adjustment 1.4 --gas auto --gas-prices 0uatom -y
 ```
 
 #### Vote 'No'
 
 ```bash
-gaiad tx gov vote 1 no --from wallet --chain-id cosmoshub-4 --gas-adjustment 1.4 --gas auto -y
+gaiad tx gov vote 1 no --from wallet --chain-id cosmoshub-4 --gas-adjustment 1.4 --gas auto --gas-prices 0uatom -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-gaiad tx gov vote 1 abstain --from wallet --chain-id cosmoshub-4 --gas-adjustment 1.4 --gas auto -y
+gaiad tx gov vote 1 abstain --from wallet --chain-id cosmoshub-4 --gas-adjustment 1.4 --gas auto --gas-prices 0uatom -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-gaiad tx gov vote 1 nowithveto --from wallet --chain-id cosmoshub-4 --gas-adjustment 1.4 --gas auto -y
+gaiad tx gov vote 1 nowithveto --from wallet --chain-id cosmoshub-4 --gas-adjustment 1.4 --gas auto --gas-prices 0uatom -y
 ```
 
 ## ⚡️ Utility

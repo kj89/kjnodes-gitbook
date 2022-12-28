@@ -74,6 +74,7 @@ ollod tx staking create-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
+--gas-prices=0utollo \
 -y
 ```
 
@@ -90,13 +91,14 @@ ollod tx staking edit-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
+--gas-prices=0utollo \
 -y
 ```
 
 #### Unjail validator
 
 ```bash
-ollod tx slashing unjail --from wallet --chain-id ollo-testnet-1 --gas auto --gas-adjustment 1.4 -y
+ollod tx slashing unjail --from wallet --chain-id ollo-testnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0utollo -y
 ```
 
 #### Jail reason
@@ -128,37 +130,37 @@ ollod q staking validator $(ollod keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-ollod tx distribution withdraw-all-rewards --from wallet --chain-id ollo-testnet-1 --gas-adjustment 1.4 --gas auto -y
+ollod tx distribution withdraw-all-rewards --from wallet --chain-id ollo-testnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0utollo -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-ollod tx distribution withdraw-rewards $(ollod keys show wallet --bech val -a) --commission --from wallet --chain-id ollo-testnet-1 --gas-adjustment 1.4 --gas auto -y
+ollod tx distribution withdraw-rewards $(ollod keys show wallet --bech val -a) --commission --from wallet --chain-id ollo-testnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0utollo -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-ollod tx staking delegate $(ollod keys show wallet --bech val -a) 1000000utollo --from wallet --chain-id ollo-testnet-1 --gas-adjustment 1.4 --gas auto -y
+ollod tx staking delegate $(ollod keys show wallet --bech val -a) 1000000utollo --from wallet --chain-id ollo-testnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0utollo -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-ollod tx staking delegate <TO_VALOPER_ADDRESS> 1000000utollo --from wallet --chain-id ollo-testnet-1 --gas-adjustment 1.4 --gas auto -y
+ollod tx staking delegate <TO_VALOPER_ADDRESS> 1000000utollo --from wallet --chain-id ollo-testnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0utollo -y
 ```
 
 Redelegate tokens to another validator
 
 ```bash
-ollod tx staking redelegate $(ollod keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000utollo --from wallet --chain-id ollo-testnet-1 --gas-adjustment 1.4 --gas auto -y
+ollod tx staking redelegate $(ollod keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000utollo --from wallet --chain-id ollo-testnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0utollo -y
 ```
 
 Unbond tokens from your validator
 
 ```bash
-ollod tx staking unbond $(ollod keys show wallet --bech val -a) 1000000utollo --from wallet --chain-id ollo-testnet-1 --gas-adjustment 1.4 --gas auto -y
+ollod tx staking unbond $(ollod keys show wallet --bech val -a) 1000000utollo --from wallet --chain-id ollo-testnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0utollo -y
 ```
 
 Send tokens to the wallet
@@ -184,25 +186,25 @@ ollod query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-ollod tx gov vote 1 yes --from wallet --chain-id ollo-testnet-1 --gas-adjustment 1.4 --gas auto -y
+ollod tx gov vote 1 yes --from wallet --chain-id ollo-testnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0utollo -y
 ```
 
 #### Vote 'No'
 
 ```bash
-ollod tx gov vote 1 no --from wallet --chain-id ollo-testnet-1 --gas-adjustment 1.4 --gas auto -y
+ollod tx gov vote 1 no --from wallet --chain-id ollo-testnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0utollo -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-ollod tx gov vote 1 abstain --from wallet --chain-id ollo-testnet-1 --gas-adjustment 1.4 --gas auto -y
+ollod tx gov vote 1 abstain --from wallet --chain-id ollo-testnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0utollo -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-ollod tx gov vote 1 nowithveto --from wallet --chain-id ollo-testnet-1 --gas-adjustment 1.4 --gas auto -y
+ollod tx gov vote 1 nowithveto --from wallet --chain-id ollo-testnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0utollo -y
 ```
 
 ## ⚡️ Utility

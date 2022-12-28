@@ -74,6 +74,7 @@ haqqd tx staking create-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
+--gas-prices=0aISLM \
 -y
 ```
 
@@ -90,13 +91,14 @@ haqqd tx staking edit-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
+--gas-prices=0aISLM \
 -y
 ```
 
 #### Unjail validator
 
 ```bash
-haqqd tx slashing unjail --from wallet --chain-id haqq_54211-3 --gas auto --gas-adjustment 1.4 -y
+haqqd tx slashing unjail --from wallet --chain-id haqq_54211-3 --gas-adjustment 1.4 --gas auto --gas-prices 0aISLM -y
 ```
 
 #### Jail reason
@@ -128,37 +130,37 @@ haqqd q staking validator $(haqqd keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-haqqd tx distribution withdraw-all-rewards --from wallet --chain-id haqq_54211-3 --gas-adjustment 1.4 --gas auto -y
+haqqd tx distribution withdraw-all-rewards --from wallet --chain-id haqq_54211-3 --gas-adjustment 1.4 --gas auto --gas-prices 0aISLM -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-haqqd tx distribution withdraw-rewards $(haqqd keys show wallet --bech val -a) --commission --from wallet --chain-id haqq_54211-3 --gas-adjustment 1.4 --gas auto -y
+haqqd tx distribution withdraw-rewards $(haqqd keys show wallet --bech val -a) --commission --from wallet --chain-id haqq_54211-3 --gas-adjustment 1.4 --gas auto --gas-prices 0aISLM -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-haqqd tx staking delegate $(haqqd keys show wallet --bech val -a) 1000000aISLM --from wallet --chain-id haqq_54211-3 --gas-adjustment 1.4 --gas auto -y
+haqqd tx staking delegate $(haqqd keys show wallet --bech val -a) 1000000aISLM --from wallet --chain-id haqq_54211-3 --gas-adjustment 1.4 --gas auto --gas-prices 0aISLM -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-haqqd tx staking delegate <TO_VALOPER_ADDRESS> 1000000aISLM --from wallet --chain-id haqq_54211-3 --gas-adjustment 1.4 --gas auto -y
+haqqd tx staking delegate <TO_VALOPER_ADDRESS> 1000000aISLM --from wallet --chain-id haqq_54211-3 --gas-adjustment 1.4 --gas auto --gas-prices 0aISLM -y
 ```
 
 Redelegate tokens to another validator
 
 ```bash
-haqqd tx staking redelegate $(haqqd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000aISLM --from wallet --chain-id haqq_54211-3 --gas-adjustment 1.4 --gas auto -y
+haqqd tx staking redelegate $(haqqd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000aISLM --from wallet --chain-id haqq_54211-3 --gas-adjustment 1.4 --gas auto --gas-prices 0aISLM -y
 ```
 
 Unbond tokens from your validator
 
 ```bash
-haqqd tx staking unbond $(haqqd keys show wallet --bech val -a) 1000000aISLM --from wallet --chain-id haqq_54211-3 --gas-adjustment 1.4 --gas auto -y
+haqqd tx staking unbond $(haqqd keys show wallet --bech val -a) 1000000aISLM --from wallet --chain-id haqq_54211-3 --gas-adjustment 1.4 --gas auto --gas-prices 0aISLM -y
 ```
 
 Send tokens to the wallet
@@ -184,25 +186,25 @@ haqqd query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-haqqd tx gov vote 1 yes --from wallet --chain-id haqq_54211-3 --gas-adjustment 1.4 --gas auto -y
+haqqd tx gov vote 1 yes --from wallet --chain-id haqq_54211-3 --gas-adjustment 1.4 --gas auto --gas-prices 0aISLM -y
 ```
 
 #### Vote 'No'
 
 ```bash
-haqqd tx gov vote 1 no --from wallet --chain-id haqq_54211-3 --gas-adjustment 1.4 --gas auto -y
+haqqd tx gov vote 1 no --from wallet --chain-id haqq_54211-3 --gas-adjustment 1.4 --gas auto --gas-prices 0aISLM -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-haqqd tx gov vote 1 abstain --from wallet --chain-id haqq_54211-3 --gas-adjustment 1.4 --gas auto -y
+haqqd tx gov vote 1 abstain --from wallet --chain-id haqq_54211-3 --gas-adjustment 1.4 --gas auto --gas-prices 0aISLM -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-haqqd tx gov vote 1 nowithveto --from wallet --chain-id haqq_54211-3 --gas-adjustment 1.4 --gas auto -y
+haqqd tx gov vote 1 nowithveto --from wallet --chain-id haqq_54211-3 --gas-adjustment 1.4 --gas auto --gas-prices 0aISLM -y
 ```
 
 ## ⚡️ Utility

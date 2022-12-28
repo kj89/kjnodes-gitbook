@@ -74,6 +74,7 @@ osmosisd tx staking create-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
+--gas-prices=0uosmo \
 -y
 ```
 
@@ -90,13 +91,14 @@ osmosisd tx staking edit-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
+--gas-prices=0uosmo \
 -y
 ```
 
 #### Unjail validator
 
 ```bash
-osmosisd tx slashing unjail --from wallet --chain-id osmosis-1 --gas auto --gas-adjustment 1.4 -y
+osmosisd tx slashing unjail --from wallet --chain-id osmosis-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uosmo -y
 ```
 
 #### Jail reason
@@ -128,37 +130,37 @@ osmosisd q staking validator $(osmosisd keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-osmosisd tx distribution withdraw-all-rewards --from wallet --chain-id osmosis-1 --gas-adjustment 1.4 --gas auto -y
+osmosisd tx distribution withdraw-all-rewards --from wallet --chain-id osmosis-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uosmo -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-osmosisd tx distribution withdraw-rewards $(osmosisd keys show wallet --bech val -a) --commission --from wallet --chain-id osmosis-1 --gas-adjustment 1.4 --gas auto -y
+osmosisd tx distribution withdraw-rewards $(osmosisd keys show wallet --bech val -a) --commission --from wallet --chain-id osmosis-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uosmo -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-osmosisd tx staking delegate $(osmosisd keys show wallet --bech val -a) 1000000uosmo --from wallet --chain-id osmosis-1 --gas-adjustment 1.4 --gas auto -y
+osmosisd tx staking delegate $(osmosisd keys show wallet --bech val -a) 1000000uosmo --from wallet --chain-id osmosis-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uosmo -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-osmosisd tx staking delegate <TO_VALOPER_ADDRESS> 1000000uosmo --from wallet --chain-id osmosis-1 --gas-adjustment 1.4 --gas auto -y
+osmosisd tx staking delegate <TO_VALOPER_ADDRESS> 1000000uosmo --from wallet --chain-id osmosis-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uosmo -y
 ```
 
 Redelegate tokens to another validator
 
 ```bash
-osmosisd tx staking redelegate $(osmosisd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000uosmo --from wallet --chain-id osmosis-1 --gas-adjustment 1.4 --gas auto -y
+osmosisd tx staking redelegate $(osmosisd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000uosmo --from wallet --chain-id osmosis-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uosmo -y
 ```
 
 Unbond tokens from your validator
 
 ```bash
-osmosisd tx staking unbond $(osmosisd keys show wallet --bech val -a) 1000000uosmo --from wallet --chain-id osmosis-1 --gas-adjustment 1.4 --gas auto -y
+osmosisd tx staking unbond $(osmosisd keys show wallet --bech val -a) 1000000uosmo --from wallet --chain-id osmosis-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uosmo -y
 ```
 
 Send tokens to the wallet
@@ -184,25 +186,25 @@ osmosisd query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-osmosisd tx gov vote 1 yes --from wallet --chain-id osmosis-1 --gas-adjustment 1.4 --gas auto -y
+osmosisd tx gov vote 1 yes --from wallet --chain-id osmosis-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uosmo -y
 ```
 
 #### Vote 'No'
 
 ```bash
-osmosisd tx gov vote 1 no --from wallet --chain-id osmosis-1 --gas-adjustment 1.4 --gas auto -y
+osmosisd tx gov vote 1 no --from wallet --chain-id osmosis-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uosmo -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-osmosisd tx gov vote 1 abstain --from wallet --chain-id osmosis-1 --gas-adjustment 1.4 --gas auto -y
+osmosisd tx gov vote 1 abstain --from wallet --chain-id osmosis-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uosmo -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-osmosisd tx gov vote 1 nowithveto --from wallet --chain-id osmosis-1 --gas-adjustment 1.4 --gas auto -y
+osmosisd tx gov vote 1 nowithveto --from wallet --chain-id osmosis-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uosmo -y
 ```
 
 ## ⚡️ Utility

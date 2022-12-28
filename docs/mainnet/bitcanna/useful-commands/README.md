@@ -74,6 +74,7 @@ bcnad tx staking create-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
+--gas-prices=0ubcna \
 -y
 ```
 
@@ -90,13 +91,14 @@ bcnad tx staking edit-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
+--gas-prices=0ubcna \
 -y
 ```
 
 #### Unjail validator
 
 ```bash
-bcnad tx slashing unjail --from wallet --chain-id bitcanna-1 --gas auto --gas-adjustment 1.4 -y
+bcnad tx slashing unjail --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubcna -y
 ```
 
 #### Jail reason
@@ -128,37 +130,37 @@ bcnad q staking validator $(bcnad keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-bcnad tx distribution withdraw-all-rewards --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto -y
+bcnad tx distribution withdraw-all-rewards --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubcna -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-bcnad tx distribution withdraw-rewards $(bcnad keys show wallet --bech val -a) --commission --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto -y
+bcnad tx distribution withdraw-rewards $(bcnad keys show wallet --bech val -a) --commission --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubcna -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-bcnad tx staking delegate $(bcnad keys show wallet --bech val -a) 1000000ubcna --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto -y
+bcnad tx staking delegate $(bcnad keys show wallet --bech val -a) 1000000ubcna --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubcna -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-bcnad tx staking delegate <TO_VALOPER_ADDRESS> 1000000ubcna --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto -y
+bcnad tx staking delegate <TO_VALOPER_ADDRESS> 1000000ubcna --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubcna -y
 ```
 
 Redelegate tokens to another validator
 
 ```bash
-bcnad tx staking redelegate $(bcnad keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000ubcna --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto -y
+bcnad tx staking redelegate $(bcnad keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000ubcna --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubcna -y
 ```
 
 Unbond tokens from your validator
 
 ```bash
-bcnad tx staking unbond $(bcnad keys show wallet --bech val -a) 1000000ubcna --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto -y
+bcnad tx staking unbond $(bcnad keys show wallet --bech val -a) 1000000ubcna --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubcna -y
 ```
 
 Send tokens to the wallet
@@ -184,25 +186,25 @@ bcnad query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-bcnad tx gov vote 1 yes --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto -y
+bcnad tx gov vote 1 yes --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubcna -y
 ```
 
 #### Vote 'No'
 
 ```bash
-bcnad tx gov vote 1 no --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto -y
+bcnad tx gov vote 1 no --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubcna -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-bcnad tx gov vote 1 abstain --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto -y
+bcnad tx gov vote 1 abstain --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubcna -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-bcnad tx gov vote 1 nowithveto --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto -y
+bcnad tx gov vote 1 nowithveto --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubcna -y
 ```
 
 ## ⚡️ Utility

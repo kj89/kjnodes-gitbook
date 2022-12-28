@@ -74,6 +74,7 @@ defundd tx staking create-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
+--gas-prices=0ufetf \
 -y
 ```
 
@@ -90,13 +91,14 @@ defundd tx staking edit-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
+--gas-prices=0ufetf \
 -y
 ```
 
 #### Unjail validator
 
 ```bash
-defundd tx slashing unjail --from wallet --chain-id defund-private-3 --gas auto --gas-adjustment 1.4 -y
+defundd tx slashing unjail --from wallet --chain-id defund-private-3 --gas-adjustment 1.4 --gas auto --gas-prices 0ufetf -y
 ```
 
 #### Jail reason
@@ -128,37 +130,37 @@ defundd q staking validator $(defundd keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-defundd tx distribution withdraw-all-rewards --from wallet --chain-id defund-private-3 --gas-adjustment 1.4 --gas auto -y
+defundd tx distribution withdraw-all-rewards --from wallet --chain-id defund-private-3 --gas-adjustment 1.4 --gas auto --gas-prices 0ufetf -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-defundd tx distribution withdraw-rewards $(defundd keys show wallet --bech val -a) --commission --from wallet --chain-id defund-private-3 --gas-adjustment 1.4 --gas auto -y
+defundd tx distribution withdraw-rewards $(defundd keys show wallet --bech val -a) --commission --from wallet --chain-id defund-private-3 --gas-adjustment 1.4 --gas auto --gas-prices 0ufetf -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-defundd tx staking delegate $(defundd keys show wallet --bech val -a) 1000000ufetf --from wallet --chain-id defund-private-3 --gas-adjustment 1.4 --gas auto -y
+defundd tx staking delegate $(defundd keys show wallet --bech val -a) 1000000ufetf --from wallet --chain-id defund-private-3 --gas-adjustment 1.4 --gas auto --gas-prices 0ufetf -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-defundd tx staking delegate <TO_VALOPER_ADDRESS> 1000000ufetf --from wallet --chain-id defund-private-3 --gas-adjustment 1.4 --gas auto -y
+defundd tx staking delegate <TO_VALOPER_ADDRESS> 1000000ufetf --from wallet --chain-id defund-private-3 --gas-adjustment 1.4 --gas auto --gas-prices 0ufetf -y
 ```
 
 Redelegate tokens to another validator
 
 ```bash
-defundd tx staking redelegate $(defundd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000ufetf --from wallet --chain-id defund-private-3 --gas-adjustment 1.4 --gas auto -y
+defundd tx staking redelegate $(defundd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000ufetf --from wallet --chain-id defund-private-3 --gas-adjustment 1.4 --gas auto --gas-prices 0ufetf -y
 ```
 
 Unbond tokens from your validator
 
 ```bash
-defundd tx staking unbond $(defundd keys show wallet --bech val -a) 1000000ufetf --from wallet --chain-id defund-private-3 --gas-adjustment 1.4 --gas auto -y
+defundd tx staking unbond $(defundd keys show wallet --bech val -a) 1000000ufetf --from wallet --chain-id defund-private-3 --gas-adjustment 1.4 --gas auto --gas-prices 0ufetf -y
 ```
 
 Send tokens to the wallet
@@ -184,25 +186,25 @@ defundd query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-defundd tx gov vote 1 yes --from wallet --chain-id defund-private-3 --gas-adjustment 1.4 --gas auto -y
+defundd tx gov vote 1 yes --from wallet --chain-id defund-private-3 --gas-adjustment 1.4 --gas auto --gas-prices 0ufetf -y
 ```
 
 #### Vote 'No'
 
 ```bash
-defundd tx gov vote 1 no --from wallet --chain-id defund-private-3 --gas-adjustment 1.4 --gas auto -y
+defundd tx gov vote 1 no --from wallet --chain-id defund-private-3 --gas-adjustment 1.4 --gas auto --gas-prices 0ufetf -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-defundd tx gov vote 1 abstain --from wallet --chain-id defund-private-3 --gas-adjustment 1.4 --gas auto -y
+defundd tx gov vote 1 abstain --from wallet --chain-id defund-private-3 --gas-adjustment 1.4 --gas auto --gas-prices 0ufetf -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-defundd tx gov vote 1 nowithveto --from wallet --chain-id defund-private-3 --gas-adjustment 1.4 --gas auto -y
+defundd tx gov vote 1 nowithveto --from wallet --chain-id defund-private-3 --gas-adjustment 1.4 --gas auto --gas-prices 0ufetf -y
 ```
 
 ## ⚡️ Utility

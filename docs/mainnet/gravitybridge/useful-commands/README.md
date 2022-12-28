@@ -74,6 +74,7 @@ gravityd tx staking create-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
+--gas-prices=0ugraviton \
 -y
 ```
 
@@ -90,13 +91,14 @@ gravityd tx staking edit-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
+--gas-prices=0ugraviton \
 -y
 ```
 
 #### Unjail validator
 
 ```bash
-gravityd tx slashing unjail --from wallet --chain-id gravity-bridge-3 --gas auto --gas-adjustment 1.4 -y
+gravityd tx slashing unjail --from wallet --chain-id gravity-bridge-3 --gas-adjustment 1.4 --gas auto --gas-prices 0ugraviton -y
 ```
 
 #### Jail reason
@@ -128,37 +130,37 @@ gravityd q staking validator $(gravityd keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-gravityd tx distribution withdraw-all-rewards --from wallet --chain-id gravity-bridge-3 --gas-adjustment 1.4 --gas auto -y
+gravityd tx distribution withdraw-all-rewards --from wallet --chain-id gravity-bridge-3 --gas-adjustment 1.4 --gas auto --gas-prices 0ugraviton -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-gravityd tx distribution withdraw-rewards $(gravityd keys show wallet --bech val -a) --commission --from wallet --chain-id gravity-bridge-3 --gas-adjustment 1.4 --gas auto -y
+gravityd tx distribution withdraw-rewards $(gravityd keys show wallet --bech val -a) --commission --from wallet --chain-id gravity-bridge-3 --gas-adjustment 1.4 --gas auto --gas-prices 0ugraviton -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-gravityd tx staking delegate $(gravityd keys show wallet --bech val -a) 1000000ugraviton --from wallet --chain-id gravity-bridge-3 --gas-adjustment 1.4 --gas auto -y
+gravityd tx staking delegate $(gravityd keys show wallet --bech val -a) 1000000ugraviton --from wallet --chain-id gravity-bridge-3 --gas-adjustment 1.4 --gas auto --gas-prices 0ugraviton -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-gravityd tx staking delegate <TO_VALOPER_ADDRESS> 1000000ugraviton --from wallet --chain-id gravity-bridge-3 --gas-adjustment 1.4 --gas auto -y
+gravityd tx staking delegate <TO_VALOPER_ADDRESS> 1000000ugraviton --from wallet --chain-id gravity-bridge-3 --gas-adjustment 1.4 --gas auto --gas-prices 0ugraviton -y
 ```
 
 Redelegate tokens to another validator
 
 ```bash
-gravityd tx staking redelegate $(gravityd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000ugraviton --from wallet --chain-id gravity-bridge-3 --gas-adjustment 1.4 --gas auto -y
+gravityd tx staking redelegate $(gravityd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000ugraviton --from wallet --chain-id gravity-bridge-3 --gas-adjustment 1.4 --gas auto --gas-prices 0ugraviton -y
 ```
 
 Unbond tokens from your validator
 
 ```bash
-gravityd tx staking unbond $(gravityd keys show wallet --bech val -a) 1000000ugraviton --from wallet --chain-id gravity-bridge-3 --gas-adjustment 1.4 --gas auto -y
+gravityd tx staking unbond $(gravityd keys show wallet --bech val -a) 1000000ugraviton --from wallet --chain-id gravity-bridge-3 --gas-adjustment 1.4 --gas auto --gas-prices 0ugraviton -y
 ```
 
 Send tokens to the wallet
@@ -184,25 +186,25 @@ gravityd query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-gravityd tx gov vote 1 yes --from wallet --chain-id gravity-bridge-3 --gas-adjustment 1.4 --gas auto -y
+gravityd tx gov vote 1 yes --from wallet --chain-id gravity-bridge-3 --gas-adjustment 1.4 --gas auto --gas-prices 0ugraviton -y
 ```
 
 #### Vote 'No'
 
 ```bash
-gravityd tx gov vote 1 no --from wallet --chain-id gravity-bridge-3 --gas-adjustment 1.4 --gas auto -y
+gravityd tx gov vote 1 no --from wallet --chain-id gravity-bridge-3 --gas-adjustment 1.4 --gas auto --gas-prices 0ugraviton -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-gravityd tx gov vote 1 abstain --from wallet --chain-id gravity-bridge-3 --gas-adjustment 1.4 --gas auto -y
+gravityd tx gov vote 1 abstain --from wallet --chain-id gravity-bridge-3 --gas-adjustment 1.4 --gas auto --gas-prices 0ugraviton -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-gravityd tx gov vote 1 nowithveto --from wallet --chain-id gravity-bridge-3 --gas-adjustment 1.4 --gas auto -y
+gravityd tx gov vote 1 nowithveto --from wallet --chain-id gravity-bridge-3 --gas-adjustment 1.4 --gas auto --gas-prices 0ugraviton -y
 ```
 
 ## ⚡️ Utility
