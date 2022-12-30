@@ -21,9 +21,9 @@ cd $HOME
 rm -rf ${GIT_DIR}
 git clone ${GIT_URL}
 cd ${GIT_DIR}
+git checkout ${LATEST_VERSION_TAG}
 
 # Build binaries
-git checkout ${LATEST_VERSION_TAG}
 make build
 mkdir -p $HOME/${CHAIN_DIR}/cosmovisor/upgrades/${LATEST_VERSION_NAME}/bin
 mv ${CHAIN_BINARY_SRC} $HOME/${CHAIN_DIR}/cosmovisor/upgrades/${LATEST_VERSION_NAME}/bin/
