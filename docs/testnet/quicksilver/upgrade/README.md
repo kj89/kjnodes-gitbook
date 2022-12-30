@@ -25,8 +25,8 @@ cd quicksilver
 # Build binaries
 git checkout ${LATEST_VERSION_TAG}
 make build
-mkdir -p $HOME/.quicksilverd/cosmovisor/upgrades/v0.10.8/bin
-mv build/quicksilverd $HOME/.quicksilverd/cosmovisor/upgrades/v0.10.8/bin/
+mkdir -p $HOME/.quicksilverd/cosmovisor/upgrades/v1.0.0-innuendo/bin
+mv build/quicksilverd $HOME/.quicksilverd/cosmovisor/upgrades/v1.0.0-innuendo/bin/
 rm -rf build
 ```
 
