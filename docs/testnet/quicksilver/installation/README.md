@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/quicksilver.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: innuendo-4 | **Latest Version Tag**: ${LATEST_VERSION_TAG} | **Custom Port**: 11
+**Chain ID**: innuendo-4 | **Latest Version Tag**: v1.1.0-innuendo | **Custom Port**: 11
 
 ### Setup validator name
 
@@ -48,7 +48,7 @@ git clone https://github.com/ingenuity-build/quicksilver.git
 cd quicksilver
 
 # Build binaries
-git checkout ${LATEST_VERSION_TAG}
+git checkout v1.1.0-innuendo
 make build
 mkdir -p $HOME/.quicksilverd/cosmovisor/genesis/bin
 mv build/quicksilverd $HOME/.quicksilverd/cosmovisor/genesis/bin/
