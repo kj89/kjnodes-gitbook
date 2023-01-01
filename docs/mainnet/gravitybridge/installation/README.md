@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/gravitybridge.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: gravity-bridge-3 | **Latest Binary Version**: ${LATEST_BINARY_VERSION} | **Custom Port**: 26
+**Chain ID**: gravity-bridge-3 | **Latest Version Tag**: ${LATEST_VERSION_TAG} | **Custom Port**: 26
 
 ### Setup validator name
 
@@ -43,8 +43,8 @@ source $HOME/.profile
 ```bash
 # Download project binaries
 mkdir -p $HOME/.gravity/cosmovisor/genesis/bin
-wget -O $HOME/.gravity/cosmovisor/genesis/bin/gravityd https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/${LATEST_BINARY_VERSION}/gravity-linux-amd64
-wget -O $HOME/.gravity/cosmovisor/genesis/bin/gbt https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/${LATEST_BINARY_VERSION}/gbt
+wget -O $HOME/.gravity/cosmovisor/genesis/bin/gravityd https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/${LATEST_VERSION_TAG}/gravity-linux-amd64
+wget -O $HOME/.gravity/cosmovisor/genesis/bin/gbt https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/${LATEST_VERSION_TAG}/gbt
 chmod +x $HOME/.gravity/cosmovisor/genesis/bin/*
 ```
 

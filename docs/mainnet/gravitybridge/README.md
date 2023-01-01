@@ -4,7 +4,7 @@
 
 An open, decentralized bridge that unlocks the power of  interoperability & liquidity between blockchain ecosystems.
 
-**Chain ID**: gravity-bridge-3 | **Latest Binary Version**: ${LATEST_BINARY_VERSION} | **Wasm**: OFF
+**Chain ID**: gravity-bridge-3 | **Latest Version Tag**: ${LATEST_VERSION_TAG} | **Wasm**: OFF
 
 [Website](https://www.gravitybridge.net) | [Discord](https://discord.gg/ARV8dTSjAk) | [Twitter](https://twitter.com/gravity_bridge)
 
