@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/quicksilver.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: quicksilver-1 | **Latest Version Tag**: v1.0.0 | **Custom Port**: 11
+**Chain ID**: quicksilver-2 | **Latest Version Tag**: v1.2.0 | **Custom Port**: 11
 
 ### Setup validator name
 
@@ -48,7 +48,7 @@ git clone https://github.com/ingenuity-build/quicksilver.git
 cd quicksilver
 
 # Build binaries
-git checkout v1.0.0
+git checkout v1.2.0
 make build
 mkdir -p $HOME/.quicksilverd/cosmovisor/genesis/bin
 mv build/quicksilverd $HOME/.quicksilverd/cosmovisor/genesis/bin/
@@ -90,12 +90,12 @@ sudo ln -s $HOME/.quicksilverd/cosmovisor/current/bin/quicksilverd /usr/local/bi
 
 ```bash
 # Set node configuration
-quicksilverd config chain-id quicksilver-1
+quicksilverd config chain-id quicksilver-2
 quicksilverd config keyring-backend file
 quicksilverd config node tcp://localhost:11657
 
 # Initialize the node
-quicksilverd init $MONIKER --chain-id quicksilver-1
+quicksilverd init $MONIKER --chain-id quicksilver-2
 
 # Download genesis and addrbook
 curl -Ls https://snapshots.kjnodes.com/quicksilver/genesis.json > $HOME/.quicksilverd/config/genesis.json

@@ -4,7 +4,7 @@
 
 An open, decentralized bridge that unlocks the power of  interoperability & liquidity between blockchain ecosystems.
 
-**Chain ID**: gravity-bridge-3 | **Latest Version Tag**: ${LATEST_VERSION_TAG} | **Wasm**: OFF
+**Chain ID**: gravity-bridge-3 | **Latest Version Tag**: v1.7.2 | **Wasm**: OFF
 
 [Website](https://www.gravitybridge.net) | [Discord](https://discord.gg/ARV8dTSjAk) | [Twitter](https://twitter.com/gravity_bridge)
 
@@ -37,6 +37,6 @@ curl -Ls https://snapshots.kjnodes.com/gravitybridge/addrbook.json > $HOME/.grav
 
 **live-peers** (10)
 ```
-peers="1e221fa93295bd528ca5ba46f81c1be0df150415@167.235.1.241:26656,1f43c723cb26092e20263905cbd71609d87a9c00@172.104.202.149:26656,5568cb9d7585c9b9d8b1685510c3ce6d2a465e8c@15.235.44.50:26656,8bc91ffabd860b6b54766ac3788d7c284e45b964@174.138.30.240:26656,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:26656,0087e4801051e620f18493e9927eb9c63171aec3@95.217.121.178:26656,77367b424f624c4f9f423267dd8d4d559b289b62@167.235.9.250:26656,32ec6bad2b67212d2cde5e01554cd2d22940ce03@142.132.154.176:26656,9a8c4af7574a5d1fcd5e89f755348c7b6df3b4be@142.132.158.93:14256,e5a11a1a8a36f0910755d0fc3546e8e3198283da@18.156.199.4:26656"
+peers="3eae7c785e7038b3c1376dc2fc8e6cff9d0ad709@65.108.121.110:14656,bfd8af9f3af0d9d48d5eb53eacb6862e6eca932b@195.201.202.39:26656,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:26656,5568cb9d7585c9b9d8b1685510c3ce6d2a465e8c@15.235.44.50:26656,774406f9e2c9c65e084effc8d823c470b82de6d0@146.19.24.186:26656,5eac126c1b13eb220f8deb1239d9bcf713338ea3@15.235.13.145:26656,ef05d5aca4398f4b217b9bbf08729a1338c67eeb@142.132.193.186:36656,0087e4801051e620f18493e9927eb9c63171aec3@95.217.121.178:26656,930f874c17eff988acd8eb761fea8d4873ea6eb3@185.249.227.231:29656,381c0aabfa183467858bd4e1f2071b1b0a77e94c@142.132.154.39:26656"
 sed -i 's|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.gravity/config/config.toml
 ```
