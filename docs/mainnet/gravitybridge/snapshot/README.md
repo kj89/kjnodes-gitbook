@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **03:45 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: pleiades
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: pleiades2
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 5249746 | 2 hours | [snapshot (1.14 GB)](https://snapshots.kjnodes.com/gravitybridge/snapshot\_latest.tar.lz4) |
+| 5264005 | 54 seconds | [snapshot (1.16 GB)](https://snapshots.kjnodes.com/gravitybridge/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
