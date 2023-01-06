@@ -64,7 +64,7 @@ git checkout ${LATEST_VERSION_TAG}
 yarn install && yarn build
 
 # Install and build Agoric Cosmos SDK support
-pushd packages/cosmic-swingset && (make; popd)
+(cd packages/cosmic-swingset && make)
 
 # Prepare binaries for Cosmovisor
 mkdir -p $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin
