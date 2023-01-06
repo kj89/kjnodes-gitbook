@@ -34,7 +34,6 @@ rm -rf $HOME/.okp4d/data
 
 ```bash
 curl -L https://snapshots.kjnodes.com/okp4-testnet/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.okp4d
-[[ -f $HOME/.okp4d/data/upgrade-info.json ]] && cp $HOME/.okp4d/data/upgrade-info.json $HOME/.okp4d/cosmovisor/genesis/upgrade-info.json
 mv $HOME/.okp4d/priv_validator_state.json.backup $HOME/.okp4d/data/priv_validator_state.json
 ```
 

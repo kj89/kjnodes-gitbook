@@ -34,7 +34,6 @@ rm -rf $HOME/.kujira/data
 
 ```bash
 curl -L https://snapshots.kjnodes.com/kujira/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.kujira
-[[ -f $HOME/.kujira/data/upgrade-info.json ]] && cp $HOME/.kujira/data/upgrade-info.json $HOME/.kujira/cosmovisor/genesis/upgrade-info.json
 mv $HOME/.kujira/priv_validator_state.json.backup $HOME/.kujira/data/priv_validator_state.json
 ```
 

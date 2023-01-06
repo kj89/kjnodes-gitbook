@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **02:45 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 924213 | 1 hours | [snapshot (0.64 GB)](https://snapshots.kjnodes.com/ollo-testnet/snapshot\_latest.tar.lz4) |
+| 924213 | 2 hours | [snapshot (0.64 GB)](https://snapshots.kjnodes.com/ollo-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
@@ -34,7 +34,6 @@ rm -rf $HOME/.ollo/data
 
 ```bash
 curl -L https://snapshots.kjnodes.com/ollo-testnet/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.ollo
-[[ -f $HOME/.ollo/data/upgrade-info.json ]] && cp $HOME/.ollo/data/upgrade-info.json $HOME/.ollo/cosmovisor/genesis/upgrade-info.json
 mv $HOME/.ollo/priv_validator_state.json.backup $HOME/.ollo/data/priv_validator_state.json
 ```
 

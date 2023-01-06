@@ -127,6 +127,7 @@ sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:32317\"
 
 ```bash
 curl -L https://snapshots.kjnodes.com/ollo-testnet/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.ollo
+[[ -f $HOME/.ollo/data/upgrade-info.json ]] && cp $HOME/.ollo/data/upgrade-info.json $HOME/.ollo/cosmovisor/genesis/upgrade-info.json
 ```
 
 ### Start service and check the logs

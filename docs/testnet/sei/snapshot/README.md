@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **01:45 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 16727649 | 2 hours | [snapshot (4.76 GB)](https://snapshots.kjnodes.com/sei-testnet/snapshot\_latest.tar.lz4) |
+| 16727649 | 3 hours | [snapshot (4.76 GB)](https://snapshots.kjnodes.com/sei-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
@@ -34,7 +34,6 @@ rm -rf $HOME/.sei/data
 
 ```bash
 curl -L https://snapshots.kjnodes.com/sei-testnet/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.sei
-[[ -f $HOME/.sei/data/upgrade-info.json ]] && cp $HOME/.sei/data/upgrade-info.json $HOME/.sei/cosmovisor/genesis/upgrade-info.json
 mv $HOME/.sei/priv_validator_state.json.backup $HOME/.sei/data/priv_validator_state.json
 ```
 

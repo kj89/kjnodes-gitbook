@@ -34,7 +34,6 @@ rm -rf $HOME/.hid-node/data
 
 ```bash
 curl -L https://snapshots.kjnodes.com/hypersign-testnet/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.hid-node
-[[ -f $HOME/.hid-node/data/upgrade-info.json ]] && cp $HOME/.hid-node/data/upgrade-info.json $HOME/.hid-node/cosmovisor/genesis/upgrade-info.json
 mv $HOME/.hid-node/priv_validator_state.json.backup $HOME/.hid-node/data/priv_validator_state.json
 ```
 

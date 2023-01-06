@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **04:00 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 2985039 | 42 minutes | [snapshot (1.72 GB)](https://snapshots.kjnodes.com/gitopia-testnet/snapshot\_latest.tar.lz4) |
+| 2985039 | 51 minutes | [snapshot (1.72 GB)](https://snapshots.kjnodes.com/gitopia-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
@@ -34,7 +34,6 @@ rm -rf $HOME/.gitopia/data
 
 ```bash
 curl -L https://snapshots.kjnodes.com/gitopia-testnet/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.gitopia
-[[ -f $HOME/.gitopia/data/upgrade-info.json ]] && cp $HOME/.gitopia/data/upgrade-info.json $HOME/.gitopia/cosmovisor/genesis/upgrade-info.json
 mv $HOME/.gitopia/priv_validator_state.json.backup $HOME/.gitopia/data/priv_validator_state.json
 ```
 

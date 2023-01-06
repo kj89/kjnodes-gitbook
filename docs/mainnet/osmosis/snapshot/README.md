@@ -34,7 +34,6 @@ rm -rf $HOME/.osmosisd/data
 
 ```bash
 curl -L https://snapshots.kjnodes.com/osmosis/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.osmosisd
-[[ -f $HOME/.osmosisd/data/upgrade-info.json ]] && cp $HOME/.osmosisd/data/upgrade-info.json $HOME/.osmosisd/cosmovisor/genesis/upgrade-info.json
 mv $HOME/.osmosisd/priv_validator_state.json.backup $HOME/.osmosisd/data/priv_validator_state.json
 ```
 

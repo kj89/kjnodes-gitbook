@@ -34,7 +34,6 @@ rm -rf $HOME/.uptickd/data
 
 ```bash
 curl -L https://snapshots.kjnodes.com/uptick-testnet/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.uptickd
-[[ -f $HOME/.uptickd/data/upgrade-info.json ]] && cp $HOME/.uptickd/data/upgrade-info.json $HOME/.uptickd/cosmovisor/genesis/upgrade-info.json
 mv $HOME/.uptickd/priv_validator_state.json.backup $HOME/.uptickd/data/priv_validator_state.json
 ```
 

@@ -127,6 +127,7 @@ sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:12317\"
 
 ```bash
 curl -L https://snapshots.kjnodes.com/sei-testnet/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.sei
+[[ -f $HOME/.sei/data/upgrade-info.json ]] && cp $HOME/.sei/data/upgrade-info.json $HOME/.sei/cosmovisor/genesis/upgrade-info.json
 ```
 
 ### Start service and check the logs
