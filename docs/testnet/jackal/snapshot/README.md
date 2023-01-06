@@ -34,6 +34,7 @@ rm -rf $HOME/.canine/data
 
 ```bash
 curl -L https://snapshots.kjnodes.com/jackal-testnet/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.canine
+[[ -f $HOME/.canine/data/upgrade-info.json ]] && cp $HOME/.canine/data/upgrade-info.json $HOME/.canine/cosmovisor/genesis/upgrade-info.json
 mv $HOME/.canine/priv_validator_state.json.backup $HOME/.canine/data/priv_validator_state.json
 ```
 

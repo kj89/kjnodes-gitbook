@@ -49,6 +49,8 @@ git checkout 1.2.2beta-postfix
 
 # Build binaries
 make build
+
+# Prepare binaries for Cosmovisor
 mkdir -p $HOME/.sei/cosmovisor/genesis/bin
 mv build/seid $HOME/.sei/cosmovisor/genesis/bin/
 rm -rf build

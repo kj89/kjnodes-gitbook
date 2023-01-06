@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **05:15 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 6662666 | 4 hours | [snapshot (0.69 GB)](https://snapshots.kjnodes.com/bitcanna/snapshot\_latest.tar.lz4) |
+| 6662666 | 5 hours | [snapshot (0.69 GB)](https://snapshots.kjnodes.com/bitcanna/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
@@ -34,6 +34,7 @@ rm -rf $HOME/.bcna/data
 
 ```bash
 curl -L https://snapshots.kjnodes.com/bitcanna/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.bcna
+[[ -f $HOME/.bcna/data/upgrade-info.json ]] && cp $HOME/.bcna/data/upgrade-info.json $HOME/.bcna/cosmovisor/genesis/upgrade-info.json
 mv $HOME/.bcna/priv_validator_state.json.backup $HOME/.bcna/data/priv_validator_state.json
 ```
 

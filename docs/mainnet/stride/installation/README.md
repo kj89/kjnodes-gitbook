@@ -49,6 +49,8 @@ git checkout v4.0.2
 
 # Build binaries
 make build
+
+# Prepare binaries for Cosmovisor
 mkdir -p $HOME/.stride/cosmovisor/genesis/bin
 mv build/strided $HOME/.stride/cosmovisor/genesis/bin/
 rm -rf build

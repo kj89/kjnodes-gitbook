@@ -49,6 +49,8 @@ git checkout v0.1.39
 
 # Build binaries
 make build
+
+# Prepare binaries for Cosmovisor
 mkdir -p $HOME/.nolus/cosmovisor/genesis/bin
 mv target/release/nolusd $HOME/.nolus/cosmovisor/genesis/bin/
 rm -rf build

@@ -25,6 +25,8 @@ git checkout v1.5.3
 
 # Build binaries
 make build
+
+# Prepare binaries for Cosmovisor
 mkdir -p $HOME/.bcna/cosmovisor/upgrades/trichomemonster-ica/bin
 mv build/bcnad $HOME/.bcna/cosmovisor/upgrades/trichomemonster-ica/bin/
 rm -rf build

@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **03:45 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 5289910 | 2 minutes | [snapshot (0.91 GB)](https://snapshots.kjnodes.com/gravitybridge/snapshot\_latest.tar.lz4) |
+| 5289910 | 57 minutes | [snapshot (0.91 GB)](https://snapshots.kjnodes.com/gravitybridge/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
@@ -34,6 +34,7 @@ rm -rf $HOME/.gravity/data
 
 ```bash
 curl -L https://snapshots.kjnodes.com/gravitybridge/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.gravity
+[[ -f $HOME/.gravity/data/upgrade-info.json ]] && cp $HOME/.gravity/data/upgrade-info.json $HOME/.gravity/cosmovisor/genesis/upgrade-info.json
 mv $HOME/.gravity/priv_validator_state.json.backup $HOME/.gravity/data/priv_validator_state.json
 ```
 

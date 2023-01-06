@@ -49,6 +49,8 @@ git checkout ${LATEST_VERSION_TAG}
 
 # Build binaries
 make build
+
+# Prepare binaries for Cosmovisor
 mkdir -p $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin
 mv ${CHAIN_BINARY_SRC} $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin/
 rm -rf build

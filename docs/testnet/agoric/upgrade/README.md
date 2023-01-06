@@ -29,6 +29,7 @@ yarn install && yarn build
 # Install and build Agoric Cosmos SDK support
 pushd packages/cosmic-swingset && (make; popd)
 
+# Prepare binaries for Cosmovisor
 mkdir -p $HOME/.agoric/cosmovisor/upgrades/agorictest-upgrade-8/bin
 ln -s $HOME/pismoA/packages/cosmic-swingset/bin/ag-chain-cosmos $HOME/.agoric/cosmovisor/upgrades/agorictest-upgrade-8/bin/ag-chain-cosmos
 ln -s $HOME/pismoA/packages/cosmic-swingset/bin/ag-nchainz $HOME/.agoric/cosmovisor/upgrades/agorictest-upgrade-8/bin/ag-nchainz

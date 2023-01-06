@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **01:00 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 1504625 | 2 hours | [snapshot (0.81 GB)](https://snapshots.kjnodes.com/uptick-testnet/snapshot\_latest.tar.lz4) |
+| 1504625 | 3 hours | [snapshot (0.81 GB)](https://snapshots.kjnodes.com/uptick-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
@@ -34,6 +34,7 @@ rm -rf $HOME/.uptickd/data
 
 ```bash
 curl -L https://snapshots.kjnodes.com/uptick-testnet/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.uptickd
+[[ -f $HOME/.uptickd/data/upgrade-info.json ]] && cp $HOME/.uptickd/data/upgrade-info.json $HOME/.uptickd/cosmovisor/genesis/upgrade-info.json
 mv $HOME/.uptickd/priv_validator_state.json.backup $HOME/.uptickd/data/priv_validator_state.json
 ```
 

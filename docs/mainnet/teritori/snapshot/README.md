@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **01:15 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 1425936 | 2 hours | [snapshot (0.74 GB)](https://snapshots.kjnodes.com/teritori/snapshot\_latest.tar.lz4) |
+| 1425936 | 3 hours | [snapshot (0.74 GB)](https://snapshots.kjnodes.com/teritori/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
@@ -34,6 +34,7 @@ rm -rf $HOME/.teritorid/data
 
 ```bash
 curl -L https://snapshots.kjnodes.com/teritori/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.teritorid
+[[ -f $HOME/.teritorid/data/upgrade-info.json ]] && cp $HOME/.teritorid/data/upgrade-info.json $HOME/.teritorid/cosmovisor/genesis/upgrade-info.json
 mv $HOME/.teritorid/priv_validator_state.json.backup $HOME/.teritorid/data/priv_validator_state.json
 ```
 

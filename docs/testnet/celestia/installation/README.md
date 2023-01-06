@@ -49,6 +49,8 @@ git checkout v0.11.0
 
 # Build binaries
 make build
+
+# Prepare binaries for Cosmovisor
 mkdir -p $HOME/.celestia-app/cosmovisor/genesis/bin
 mv build/celestia-appd $HOME/.celestia-app/cosmovisor/genesis/bin/
 rm -rf build

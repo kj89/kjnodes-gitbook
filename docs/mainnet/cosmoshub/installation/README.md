@@ -49,6 +49,8 @@ git checkout v7.1.0
 
 # Build binaries
 make build
+
+# Prepare binaries for Cosmovisor
 mkdir -p $HOME/.gaia/cosmovisor/genesis/bin
 mv build/gaiad $HOME/.gaia/cosmovisor/genesis/bin/
 rm -rf build

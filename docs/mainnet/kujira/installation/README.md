@@ -49,6 +49,8 @@ git checkout v0.7.1
 
 # Build binaries
 make build
+
+# Prepare binaries for Cosmovisor
 mkdir -p $HOME/.kujira/cosmovisor/genesis/bin
 mv build/kujirad $HOME/.kujira/cosmovisor/genesis/bin/
 rm -rf build

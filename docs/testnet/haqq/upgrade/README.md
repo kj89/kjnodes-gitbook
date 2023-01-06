@@ -25,6 +25,8 @@ git checkout v1.3.0
 
 # Build binaries
 make build
+
+# Prepare binaries for Cosmovisor
 mkdir -p $HOME/.haqqd/cosmovisor/upgrades/v1.3.0/bin
 mv build/haqqd $HOME/.haqqd/cosmovisor/upgrades/v1.3.0/bin/
 rm -rf build
