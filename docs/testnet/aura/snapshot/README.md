@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **05:30 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 2647465 | 47 minutes | [snapshot (1.01 GB)](https://snapshots.kjnodes.com/aura-testnet/snapshot\_latest.tar.lz4) |
+| 2647465 | 4 hours | [snapshot (1.01 GB)](https://snapshots.kjnodes.com/aura-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
@@ -33,12 +33,12 @@ rm -rf $HOME/.aura/data
 ### Download latest snapshot
 
 ```bash
-curl -L https://snapshots.kjnodes.com/aura-testnet/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.aura
+curl -L https://snapshots.kjnodes.com/aura-testnet/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.aura
 mv $HOME/.aura/priv_validator_state.json.backup $HOME/.aura/data/priv_validator_state.json
 ```
 
 ### Restart the service and check the log
 
 ```bash
-sudo systemctl start aurad && journalctl -u aurad -f --no-hostname -o cat
+sudo systemctl start aurad && sudo journalctl -u aurad -f --no-hostname -o cat
 ```

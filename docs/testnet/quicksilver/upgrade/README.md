@@ -21,9 +21,9 @@ cd $HOME
 rm -rf quicksilver
 git clone https://github.com/ingenuity-build/quicksilver.git
 cd quicksilver
+git checkout v1.1.0-innuendo
 
 # Build binaries
-git checkout v1.1.0-innuendo
 make build
 mkdir -p $HOME/.quicksilverd/cosmovisor/upgrades/v1.0.0-innuendo/bin
 mv build/quicksilverd $HOME/.quicksilverd/cosmovisor/upgrades/v1.0.0-innuendo/bin/

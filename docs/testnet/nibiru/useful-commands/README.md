@@ -151,19 +151,19 @@ nibid tx staking delegate $(nibid keys show wallet --bech val -a) 1000000unibi -
 nibid tx staking delegate <TO_VALOPER_ADDRESS> 1000000unibi --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.025unibi -y
 ```
 
-Redelegate tokens to another validator
+#### Redelegate tokens to another validator
 
 ```bash
 nibid tx staking redelegate $(nibid keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000unibi --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.025unibi -y
 ```
 
-Unbond tokens from your validator
+#### Unbond tokens from your validator
 
 ```bash
 nibid tx staking unbond $(nibid keys show wallet --bech val -a) 1000000unibi --from wallet --chain-id nibiru-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.025unibi -y
 ```
 
-Send tokens to the wallet
+#### Send tokens to the wallet
 
 ```bash
 nibid tx bank send wallet <TO_WALLET_ADDRESS> 1000000unibi --from wallet --chain-id nibiru-testnet-2
@@ -213,28 +213,33 @@ nibid tx gov vote 1 nowithveto --from wallet --chain-id nibiru-testnet-2 --gas-a
 
 ```bash
 CUSTOM_PORT=10
-sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CUSTOM_PORT}658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${CUSTOM_PORT}657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CUSTOM_PORT}060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CUSTOM_PORT}656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CUSTOM_PORT}660\"%" $HOME/.nibid/config/config.toml
-sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${CUSTOM_PORT}317\"%; s%^address = \":8080\"%address = \":${CUSTOM_PORT}080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:${CUSTOM_PORT}090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${CUSTOM_PORT}091\"%" $HOME/.nibid/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CUSTOM_PORT}658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${CUSTOM_PORT}657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CUSTOM_PORT}060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CUSTOM_PORT}656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CUSTOM_PORT}660\"%" $HOME/.nibid/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${CUSTOM_PORT}317\"%; s%^address = \":8080\"%address = \":${CUSTOM_PORT}080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:${CUSTOM_PORT}090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${CUSTOM_PORT}091\"%" $HOME/.nibid/config/app.toml
 ```
 
 #### Update Indexer
 
-Disable indexer
+##### Disable indexer
 
 ```bash
-sed -i 's|^indexer *=.*|indexer = "null"|' $HOME/.nibid/config/config.toml
+sed -i -e 's|^indexer *=.*|indexer = "null"|' $HOME/.nibid/config/config.toml
 ```
 
-Enable indexer
+##### Enable indexer
 
 ```bash
-sed -i 's|^indexer *=.*|indexer = "kv"|' $HOME/.nibid/config/config.toml
+sed -i -e 's|^indexer *=.*|indexer = "kv"|' $HOME/.nibid/config/config.toml
 ```
 
 #### Update pruning
 
 ```bash
-sed -i.bak -e 's|^pruning *=.*|pruning = "custom"|; s|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|; s|^pruning-keep-every *=.*|pruning-keep-every = "0"|; s|^pruning-interval *=.*|pruning-interval = "10"|' $HOME/.nibid/config/app.toml
+sed -i \
+  -e 's|^pruning *=.*|pruning = "custom"|' \
+  -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
+  -e 's|^pruning-keep-every *=.*|pruning-keep-every = "0"|' \
+  -e 's|^pruning-interval *=.*|pruning-interval = "19"|' \
+  $HOME/.nibid/config/app.toml
 ```
 
 ## 🚨 Maintenance
@@ -271,13 +276,13 @@ curl -sS http://localhost:39657/net_info | jq -r '.result.peers[] | "\(.node_inf
 
 #### Set minimum gas price
 
-```
+```bash
 sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0unibi\"/" $HOME/.nibid/config/app.toml
 ```
 
 #### Enable prometheus
 
-```
+```bash
 sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.nibid/config/config.toml
 ```
 
@@ -299,7 +304,7 @@ sudo systemctl stop nibid
 sudo systemctl disable nibid
 sudo rm /etc/systemd/system/nibid.service
 sudo systemctl daemon-reload
-rm -rf $(which nibid) 
+rm -f $(which nibid)
 rm -rf $HOME/.nibid
 rm -rf $HOME/nibiru
 ```

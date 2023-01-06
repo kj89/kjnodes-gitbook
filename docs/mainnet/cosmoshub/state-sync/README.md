@@ -32,15 +32,14 @@ LATEST_HEIGHT=$(curl -s $STATE_SYNC_RPC/block | jq -r .result.block.header.heigh
 SYNC_BLOCK_HEIGHT=$(($LATEST_HEIGHT - 2000))
 SYNC_BLOCK_HASH=$(curl -s "$STATE_SYNC_RPC/block?height=$SYNC_BLOCK_HEIGHT" | jq -r .result.block_id.hash)
 
-sed -i.bak -e "s|^enable *=.*|enable = true|" $HOME/.gaia/config/config.toml
-sed -i.bak -e "s|^rpc_servers *=.*|rpc_servers = \"$STATE_SYNC_RPC,$STATE_SYNC_RPC\"|" \
+sed -i \
+  -e "s|^enable *=.*|enable = true|" \
+  -e "s|^rpc_servers *=.*|rpc_servers = \"$STATE_SYNC_RPC,$STATE_SYNC_RPC\"|" \
+  -e "s|^trust_height *=.*|trust_height = $SYNC_BLOCK_HEIGHT|" \
+  -e "s|^trust_hash *=.*|trust_hash = \"$SYNC_BLOCK_HASH\"|" \
+  -e "s|^persistent_peers *=.*|persistent_peers = \"$STATE_SYNC_PEER\"|" \
   $HOME/.gaia/config/config.toml
-sed -i.bak -e "s|^trust_height *=.*|trust_height = $SYNC_BLOCK_HEIGHT|" \
-  $HOME/.gaia/config/config.toml
-sed -i.bak -e "s|^trust_hash *=.*|trust_hash = \"$SYNC_BLOCK_HASH\"|" \
-  $HOME/.gaia/config/config.toml
-sed -i.bak -e "s|^persistent_peers *=.*|persistent_peers = \"$STATE_SYNC_PEER\"|" \
-  $HOME/.gaia/config/config.toml
+
 mv $HOME/.gaia/priv_validator_state.json.backup $HOME/.gaia/data/priv_validator_state.json
 ```
 
@@ -49,5 +48,5 @@ mv $HOME/.gaia/priv_validator_state.json.backup $HOME/.gaia/data/priv_validator_
 ### Restart the service and check the log
 
 ```bash
-sudo systemctl start gaiad && journalctl -u gaiad -f --no-hostname -o cat
+sudo systemctl start gaiad && sudo journalctl -u gaiad -f --no-hostname -o cat
 ```

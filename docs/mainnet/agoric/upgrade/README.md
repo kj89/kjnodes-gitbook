@@ -18,16 +18,22 @@ You just have to build new binaries and move it into cosmovisor upgrades directo
 ```bash
 # Clone project repository
 cd $HOME
-rm -rf agoric-sdk
-git clone https://github.com/Agoric/agoric-sdk.git
-cd agoric-sdk
-
-# Build binaries
+rm -rf pismoA
+git clone https://github.com/Agoric/agoric-sdk.git pismoA
+cd pismoA
 git checkout pismoA
-make build
+
+# Install and build Agoric Javascript packages
+yarn install && yarn build
+
+# Install and build Agoric Cosmos SDK support
+pushd packages/cosmic-swingset && (make; popd)
+
 mkdir -p $HOME/.agoric/cosmovisor/upgrades/agoric-upgrade-8/bin
-mv golang/cosmos/build/agd $HOME/.agoric/cosmovisor/upgrades/agoric-upgrade-8/bin/
-rm -rf build
+ln -s $HOME/pismoA/packages/cosmic-swingset/bin/ag-chain-cosmos $HOME/.agoric/cosmovisor/upgrades/agoric-upgrade-8/bin/ag-chain-cosmos
+ln -s $HOME/pismoA/packages/cosmic-swingset/bin/ag-nchainz $HOME/.agoric/cosmovisor/upgrades/agoric-upgrade-8/bin/ag-nchainz
+cp golang/cosmos/build/agd $HOME/.agoric/cosmovisor/upgrades/agoric-upgrade-8/bin/
+cp golang/cosmos/build/ag-cosmos-helper $HOME/.agoric/cosmovisor/upgrades/agoric-upgrade-8/bin/
 ```
 
 *Thats it! Now when upgrade block height is reached, Cosmovisor will handle it automatically!*

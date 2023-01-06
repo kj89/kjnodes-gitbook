@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **05:00 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 147145 | 1 hours | [snapshot (0.47 GB)](https://snapshots.kjnodes.com/celestia-testnet/snapshot\_latest.tar.lz4) |
+| 147145 | 4 hours | [snapshot (0.47 GB)](https://snapshots.kjnodes.com/celestia-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
@@ -33,12 +33,12 @@ rm -rf $HOME/.celestia-app/data
 ### Download latest snapshot
 
 ```bash
-curl -L https://snapshots.kjnodes.com/celestia-testnet/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.celestia-app
+curl -L https://snapshots.kjnodes.com/celestia-testnet/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.celestia-app
 mv $HOME/.celestia-app/priv_validator_state.json.backup $HOME/.celestia-app/data/priv_validator_state.json
 ```
 
 ### Restart the service and check the log
 
 ```bash
-sudo systemctl start celestia-appd && journalctl -u celestia-appd -f --no-hostname -o cat
+sudo systemctl start celestia-appd && sudo journalctl -u celestia-appd -f --no-hostname -o cat
 ```

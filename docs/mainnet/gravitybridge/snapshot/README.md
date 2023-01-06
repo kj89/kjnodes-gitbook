@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **03:45 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 5286558 | 2 hours | [snapshot (0.94 GB)](https://snapshots.kjnodes.com/gravitybridge/snapshot\_latest.tar.lz4) |
+| 5289910 | 2 minutes | [snapshot (0.91 GB)](https://snapshots.kjnodes.com/gravitybridge/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
@@ -33,12 +33,12 @@ rm -rf $HOME/.gravity/data
 ### Download latest snapshot
 
 ```bash
-curl -L https://snapshots.kjnodes.com/gravitybridge/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.gravity
+curl -L https://snapshots.kjnodes.com/gravitybridge/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.gravity
 mv $HOME/.gravity/priv_validator_state.json.backup $HOME/.gravity/data/priv_validator_state.json
 ```
 
 ### Restart the service and check the log
 
 ```bash
-sudo systemctl start gravityd && journalctl -u gravityd -f --no-hostname -o cat
+sudo systemctl start gravityd && sudo journalctl -u gravityd -f --no-hostname -o cat
 ```

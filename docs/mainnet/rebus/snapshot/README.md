@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **02:00 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 3419045 | 4 hours | [snapshot (1.13 GB)](https://snapshots.kjnodes.com/rebus/snapshot\_latest.tar.lz4) |
+| 3425673 | 1 hours | [snapshot (1.15 GB)](https://snapshots.kjnodes.com/rebus/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
@@ -33,12 +33,12 @@ rm -rf $HOME/.rebusd/data
 ### Download latest snapshot
 
 ```bash
-curl -L https://snapshots.kjnodes.com/rebus/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.rebusd
+curl -L https://snapshots.kjnodes.com/rebus/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.rebusd
 mv $HOME/.rebusd/priv_validator_state.json.backup $HOME/.rebusd/data/priv_validator_state.json
 ```
 
 ### Restart the service and check the log
 
 ```bash
-sudo systemctl start rebusd && journalctl -u rebusd -f --no-hostname -o cat
+sudo systemctl start rebusd && sudo journalctl -u rebusd -f --no-hostname -o cat
 ```

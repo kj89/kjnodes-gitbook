@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **04:45 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 13556914 | 1 hours | [snapshot (3.51 GB)](https://snapshots.kjnodes.com/cosmoshub/snapshot\_latest.tar.lz4) |
+| 13556914 | 5 hours | [snapshot (3.51 GB)](https://snapshots.kjnodes.com/cosmoshub/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
@@ -33,12 +33,12 @@ rm -rf $HOME/.gaia/data
 ### Download latest snapshot
 
 ```bash
-curl -L https://snapshots.kjnodes.com/cosmoshub/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.gaia
+curl -L https://snapshots.kjnodes.com/cosmoshub/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.gaia
 mv $HOME/.gaia/priv_validator_state.json.backup $HOME/.gaia/data/priv_validator_state.json
 ```
 
 ### Restart the service and check the log
 
 ```bash
-sudo systemctl start gaiad && journalctl -u gaiad -f --no-hostname -o cat
+sudo systemctl start gaiad && sudo journalctl -u gaiad -f --no-hostname -o cat
 ```

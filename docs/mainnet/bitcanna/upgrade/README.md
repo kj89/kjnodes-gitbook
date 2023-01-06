@@ -21,9 +21,9 @@ cd $HOME
 rm -rf bcna
 git clone https://github.com/BitCannaGlobal/bcna.git
 cd bcna
+git checkout v1.5.3
 
 # Build binaries
-git checkout v1.5.3
 make build
 mkdir -p $HOME/.bcna/cosmovisor/upgrades/trichomemonster-ica/bin
 mv build/bcnad $HOME/.bcna/cosmovisor/upgrades/trichomemonster-ica/bin/

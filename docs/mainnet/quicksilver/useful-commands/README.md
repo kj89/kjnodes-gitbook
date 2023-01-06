@@ -66,7 +66,7 @@ quicksilverd tx staking create-validator \
 --identity="YOUR_KEYBASE_ID" \
 --details="YOUR_DETAILS" \
 --website="YOUR_WEBSITE_URL"
---chain-id=quicksilver-2 \
+--chain-id=quicksilver-1 \
 --commission-rate=0.05 \
 --commission-max-rate=0.20 \
 --commission-max-change-rate=0.01 \
@@ -86,7 +86,7 @@ quicksilverd tx staking edit-validator \
 --identity="YOUR_KEYBASE_ID" \
 --details="YOUR_DETAILS" \
 --website="YOUR_WEBSITE_URL"
---chain-id=quicksilver-2 \
+--chain-id=quicksilver-1 \
 --commission-rate=0.05 \
 --from=wallet \
 --gas-adjustment=1.4 \
@@ -98,7 +98,7 @@ quicksilverd tx staking edit-validator \
 #### Unjail validator
 
 ```bash
-quicksilverd tx slashing unjail --from wallet --chain-id quicksilver-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
+quicksilverd tx slashing unjail --from wallet --chain-id quicksilver-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
 ```
 
 #### Jail reason
@@ -130,43 +130,43 @@ quicksilverd q staking validator $(quicksilverd keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-quicksilverd tx distribution withdraw-all-rewards --from wallet --chain-id quicksilver-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
+quicksilverd tx distribution withdraw-all-rewards --from wallet --chain-id quicksilver-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-quicksilverd tx distribution withdraw-rewards $(quicksilverd keys show wallet --bech val -a) --commission --from wallet --chain-id quicksilver-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
+quicksilverd tx distribution withdraw-rewards $(quicksilverd keys show wallet --bech val -a) --commission --from wallet --chain-id quicksilver-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-quicksilverd tx staking delegate $(quicksilverd keys show wallet --bech val -a) 1000000uqck --from wallet --chain-id quicksilver-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
+quicksilverd tx staking delegate $(quicksilverd keys show wallet --bech val -a) 1000000uqck --from wallet --chain-id quicksilver-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-quicksilverd tx staking delegate <TO_VALOPER_ADDRESS> 1000000uqck --from wallet --chain-id quicksilver-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
+quicksilverd tx staking delegate <TO_VALOPER_ADDRESS> 1000000uqck --from wallet --chain-id quicksilver-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
 ```
 
-Redelegate tokens to another validator
+#### Redelegate tokens to another validator
 
 ```bash
-quicksilverd tx staking redelegate $(quicksilverd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000uqck --from wallet --chain-id quicksilver-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
+quicksilverd tx staking redelegate $(quicksilverd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000uqck --from wallet --chain-id quicksilver-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
 ```
 
-Unbond tokens from your validator
+#### Unbond tokens from your validator
 
 ```bash
-quicksilverd tx staking unbond $(quicksilverd keys show wallet --bech val -a) 1000000uqck --from wallet --chain-id quicksilver-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
+quicksilverd tx staking unbond $(quicksilverd keys show wallet --bech val -a) 1000000uqck --from wallet --chain-id quicksilver-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
 ```
 
-Send tokens to the wallet
+#### Send tokens to the wallet
 
 ```bash
-quicksilverd tx bank send wallet <TO_WALLET_ADDRESS> 1000000uqck --from wallet --chain-id quicksilver-2
+quicksilverd tx bank send wallet <TO_WALLET_ADDRESS> 1000000uqck --from wallet --chain-id quicksilver-1
 ```
 
 ## 🗳 Governance
@@ -186,25 +186,25 @@ quicksilverd query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-quicksilverd tx gov vote 1 yes --from wallet --chain-id quicksilver-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
+quicksilverd tx gov vote 1 yes --from wallet --chain-id quicksilver-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
 ```
 
 #### Vote 'No'
 
 ```bash
-quicksilverd tx gov vote 1 no --from wallet --chain-id quicksilver-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
+quicksilverd tx gov vote 1 no --from wallet --chain-id quicksilver-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-quicksilverd tx gov vote 1 abstain --from wallet --chain-id quicksilver-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
+quicksilverd tx gov vote 1 abstain --from wallet --chain-id quicksilver-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-quicksilverd tx gov vote 1 nowithveto --from wallet --chain-id quicksilver-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
+quicksilverd tx gov vote 1 nowithveto --from wallet --chain-id quicksilver-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
 ```
 
 ## ⚡️ Utility
@@ -213,28 +213,33 @@ quicksilverd tx gov vote 1 nowithveto --from wallet --chain-id quicksilver-2 --g
 
 ```bash
 CUSTOM_PORT=10
-sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CUSTOM_PORT}658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${CUSTOM_PORT}657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CUSTOM_PORT}060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CUSTOM_PORT}656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CUSTOM_PORT}660\"%" $HOME/.quicksilverd/config/config.toml
-sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${CUSTOM_PORT}317\"%; s%^address = \":8080\"%address = \":${CUSTOM_PORT}080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:${CUSTOM_PORT}090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${CUSTOM_PORT}091\"%" $HOME/.quicksilverd/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CUSTOM_PORT}658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${CUSTOM_PORT}657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CUSTOM_PORT}060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CUSTOM_PORT}656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CUSTOM_PORT}660\"%" $HOME/.quicksilverd/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${CUSTOM_PORT}317\"%; s%^address = \":8080\"%address = \":${CUSTOM_PORT}080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:${CUSTOM_PORT}090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${CUSTOM_PORT}091\"%" $HOME/.quicksilverd/config/app.toml
 ```
 
 #### Update Indexer
 
-Disable indexer
+##### Disable indexer
 
 ```bash
-sed -i 's|^indexer *=.*|indexer = "null"|' $HOME/.quicksilverd/config/config.toml
+sed -i -e 's|^indexer *=.*|indexer = "null"|' $HOME/.quicksilverd/config/config.toml
 ```
 
-Enable indexer
+##### Enable indexer
 
 ```bash
-sed -i 's|^indexer *=.*|indexer = "kv"|' $HOME/.quicksilverd/config/config.toml
+sed -i -e 's|^indexer *=.*|indexer = "kv"|' $HOME/.quicksilverd/config/config.toml
 ```
 
 #### Update pruning
 
 ```bash
-sed -i.bak -e 's|^pruning *=.*|pruning = "custom"|; s|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|; s|^pruning-keep-every *=.*|pruning-keep-every = "0"|; s|^pruning-interval *=.*|pruning-interval = "10"|' $HOME/.quicksilverd/config/app.toml
+sed -i \
+  -e 's|^pruning *=.*|pruning = "custom"|' \
+  -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
+  -e 's|^pruning-keep-every *=.*|pruning-keep-every = "0"|' \
+  -e 's|^pruning-interval *=.*|pruning-interval = "19"|' \
+  $HOME/.quicksilverd/config/app.toml
 ```
 
 ## 🚨 Maintenance
@@ -271,13 +276,13 @@ curl -sS http://localhost:11657/net_info | jq -r '.result.peers[] | "\(.node_inf
 
 #### Set minimum gas price
 
-```
+```bash
 sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0uqck\"/" $HOME/.quicksilverd/config/app.toml
 ```
 
 #### Enable prometheus
 
-```
+```bash
 sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.quicksilverd/config/config.toml
 ```
 
@@ -299,7 +304,7 @@ sudo systemctl stop quicksilverd
 sudo systemctl disable quicksilverd
 sudo rm /etc/systemd/system/quicksilverd.service
 sudo systemctl daemon-reload
-rm -rf $(which quicksilverd) 
+rm -f $(which quicksilverd)
 rm -rf $HOME/.quicksilverd
 rm -rf $HOME/quicksilver
 ```

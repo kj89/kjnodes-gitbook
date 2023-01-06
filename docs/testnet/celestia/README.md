@@ -18,23 +18,23 @@ Celestia is a minimal blockchain that only orders and publishes transactions and
 
 **state-sync**
 
-```
+```text
 d5519e378247dfb61dfe90652d1fe3e2b3005a5b@celestia-testnet.rpc.kjnodes.com:20656
 ```
 
 **seed-node**
 
-```
+```text
 3f472746f46493309650e5a033076689996c8881@celestia-testnet.rpc.kjnodes.com:20659
 ```
 
 **addrbook**
-```
+```bash
 curl -Ls https://snapshots.kjnodes.com/celestia-testnet/addrbook.json > $HOME/.celestia-app/config/addrbook.json
 ```
 
 **live-peers** (3)
-```
+```bash
 peers="d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:20656,cb0db7a1fb8897c8eec9b09285e39d1756ed87b7@65.109.88.254:26656,77fe717fc70370c5b1782c136a5bf7ef1e1e7b5d@167.235.233.34:26656"
-sed -i 's|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.celestia-app/config/config.toml
+sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.celestia-app/config/config.toml
 ```

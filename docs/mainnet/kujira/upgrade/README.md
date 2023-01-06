@@ -21,9 +21,9 @@ cd $HOME
 rm -rf core
 git clone https://github.com/Team-Kujira/core.git
 cd core
+git checkout v0.7.1
 
 # Build binaries
-git checkout v0.7.1
 make build
 mkdir -p $HOME/.kujira/cosmovisor/upgrades/v0.7.1/bin
 mv build/kujirad $HOME/.kujira/cosmovisor/upgrades/v0.7.1/bin/

@@ -17,15 +17,23 @@ You just have to build new binaries and move it into cosmovisor upgrades directo
 
 ```bash
 # Clone project repository
-cd $HOME && rm -rf gitopia
-git clone -b ${LATEST_VERSION_TAG} gitopia://gitopia/gitopia && cd gitopia
-
-# Build binaries
+cd $HOME
+rm -rf ${LATEST_VERSION_TAG}
+git clone ${GIT_URL} ${LATEST_VERSION_TAG}
+cd ${LATEST_VERSION_TAG}
 git checkout ${LATEST_VERSION_TAG}
-make build
+
+# Install and build Agoric Javascript packages
+yarn install && yarn build
+
+# Install and build Agoric Cosmos SDK support
+pushd packages/cosmic-swingset && (make; popd)
+
 mkdir -p $HOME/${CHAIN_DIR}/cosmovisor/upgrades/${LATEST_VERSION_NAME}/bin
-mv ${CHAIN_BINARY_SRC} $HOME/${CHAIN_DIR}/cosmovisor/upgrades/${LATEST_VERSION_NAME}/bin/
-rm -rf build
+ln -s $HOME/${LATEST_VERSION_TAG}/packages/cosmic-swingset/bin/ag-chain-cosmos $HOME/${CHAIN_DIR}/cosmovisor/upgrades/${LATEST_VERSION_NAME}/bin/ag-chain-cosmos
+ln -s $HOME/${LATEST_VERSION_TAG}/packages/cosmic-swingset/bin/ag-nchainz $HOME/${CHAIN_DIR}/cosmovisor/upgrades/${LATEST_VERSION_NAME}/bin/ag-nchainz
+cp golang/cosmos/build/agd $HOME/${CHAIN_DIR}/cosmovisor/upgrades/${LATEST_VERSION_NAME}/bin/
+cp golang/cosmos/build/ag-cosmos-helper $HOME/${CHAIN_DIR}/cosmovisor/upgrades/${LATEST_VERSION_NAME}/bin/
 ```
 
 *Thats it! Now when upgrade block height is reached, Cosmovisor will handle it automatically!*

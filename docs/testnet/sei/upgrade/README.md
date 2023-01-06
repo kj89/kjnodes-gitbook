@@ -21,9 +21,9 @@ cd $HOME
 rm -rf sei-chain
 git clone https://github.com/sei-protocol/sei-chain.git
 cd sei-chain
+git checkout 1.2.2beta-postfix
 
 # Build binaries
-git checkout 1.2.2beta-postfix
 make build
 mkdir -p $HOME/.sei/cosmovisor/upgrades/1.2.2beta-postfix/bin
 mv build/seid $HOME/.sei/cosmovisor/upgrades/1.2.2beta-postfix/bin/

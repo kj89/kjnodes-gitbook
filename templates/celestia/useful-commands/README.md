@@ -80,7 +80,7 @@ ${CHAIN_APP} tx staking create-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
---fees=1000utia \
+--gas-prices=${MIN_GAS_PRICE} \
 -y
 ```
 
@@ -97,14 +97,14 @@ ${CHAIN_APP} tx staking edit-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
---fees=1000utia \
+--gas-prices=${MIN_GAS_PRICE} \
 -y
 ```
 
 #### Unjail validator
 
 ```bash
-${CHAIN_APP} tx slashing unjail --from wallet --chain-id ${CHAIN_ID} --gas auto --gas-adjustment 1.4 --fees 1000utia -y
+${CHAIN_APP} tx slashing unjail --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
 ```
 
 #### Jail reason
@@ -136,40 +136,40 @@ ${CHAIN_APP} q staking validator $(${CHAIN_APP} keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-${CHAIN_APP} tx distribution withdraw-all-rewards --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --fees 1000utia -y
+${CHAIN_APP} tx distribution withdraw-all-rewards --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-${CHAIN_APP} tx distribution withdraw-rewards $(${CHAIN_APP} keys show wallet --bech val -a) --commission --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --fees 1000utia -y
+${CHAIN_APP} tx distribution withdraw-rewards $(${CHAIN_APP} keys show wallet --bech val -a) --commission --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-${CHAIN_APP} tx staking delegate $(${CHAIN_APP} keys show wallet --bech val -a) 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --fees 1000utia -y
+${CHAIN_APP} tx staking delegate $(${CHAIN_APP} keys show wallet --bech val -a) 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-${CHAIN_APP} tx staking delegate <TO_VALOPER_ADDRESS> 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --fees 1000utia -y
+${CHAIN_APP} tx staking delegate <TO_VALOPER_ADDRESS> 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
 ```
 
-Redelegate tokens to another validator
+#### Redelegate tokens to another validator
 
 ```bash
-${CHAIN_APP} tx staking redelegate $(${CHAIN_APP} keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --fees 1000utia -y
+${CHAIN_APP} tx staking redelegate $(${CHAIN_APP} keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
 ```
 
-Unbond tokens from your validator
+#### Unbond tokens from your validator
 
 ```bash
-${CHAIN_APP} tx staking unbond $(${CHAIN_APP} keys show wallet --bech val -a) 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --fees 1000utia -y
+${CHAIN_APP} tx staking unbond $(${CHAIN_APP} keys show wallet --bech val -a) 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
 ```
 
-Send tokens to the wallet
+#### Send tokens to the wallet
 
 ```bash
 ${CHAIN_APP} tx bank send wallet <TO_WALLET_ADDRESS> 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID}
@@ -192,25 +192,25 @@ ${CHAIN_APP} query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-${CHAIN_APP} tx gov vote 1 yes --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --fees 1000utia -y
+${CHAIN_APP} tx gov vote 1 yes --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
 ```
 
 #### Vote 'No'
 
 ```bash
-${CHAIN_APP} tx gov vote 1 no --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --fees 1000utia -y
+${CHAIN_APP} tx gov vote 1 no --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-${CHAIN_APP} tx gov vote 1 abstain --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --fees 1000utia -y
+${CHAIN_APP} tx gov vote 1 abstain --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-${CHAIN_APP} tx gov vote 1 nowithveto --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --fees 1000utia -y
+${CHAIN_APP} tx gov vote 1 nowithveto --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
 ```
 
 ## ⚡️ Utility
@@ -219,28 +219,33 @@ ${CHAIN_APP} tx gov vote 1 nowithveto --from wallet --chain-id ${CHAIN_ID} --gas
 
 ```bash
 CUSTOM_PORT=10
-sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CUSTOM_PORT}658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${CUSTOM_PORT}657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CUSTOM_PORT}060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CUSTOM_PORT}656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CUSTOM_PORT}660\"%" $HOME/${CHAIN_DIR}/config/config.toml
-sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${CUSTOM_PORT}317\"%; s%^address = \":8080\"%address = \":${CUSTOM_PORT}080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:${CUSTOM_PORT}090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${CUSTOM_PORT}091\"%" $HOME/${CHAIN_DIR}/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CUSTOM_PORT}658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${CUSTOM_PORT}657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CUSTOM_PORT}060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CUSTOM_PORT}656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CUSTOM_PORT}660\"%" $HOME/${CHAIN_DIR}/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${CUSTOM_PORT}317\"%; s%^address = \":8080\"%address = \":${CUSTOM_PORT}080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:${CUSTOM_PORT}090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${CUSTOM_PORT}091\"%" $HOME/${CHAIN_DIR}/config/app.toml
 ```
 
 #### Update Indexer
 
-Disable indexer
+##### Disable indexer
 
 ```bash
-sed -i 's|^indexer *=.*|indexer = "null"|' $HOME/${CHAIN_DIR}/config/config.toml
+sed -i -e 's|^indexer *=.*|indexer = "null"|' $HOME/${CHAIN_DIR}/config/config.toml
 ```
 
-Enable indexer
+##### Enable indexer
 
 ```bash
-sed -i 's|^indexer *=.*|indexer = "kv"|' $HOME/${CHAIN_DIR}/config/config.toml
+sed -i -e 's|^indexer *=.*|indexer = "kv"|' $HOME/${CHAIN_DIR}/config/config.toml
 ```
 
 #### Update pruning
 
 ```bash
-sed -i.bak -e 's|^pruning *=.*|pruning = "custom"|; s|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|; s|^pruning-keep-every *=.*|pruning-keep-every = "0"|; s|^pruning-interval *=.*|pruning-interval = "10"|' $HOME/${CHAIN_DIR}/config/app.toml
+sed -i \
+  -e 's|^pruning *=.*|pruning = "custom"|' \
+  -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
+  -e 's|^pruning-keep-every *=.*|pruning-keep-every = "0"|' \
+  -e 's|^pruning-interval *=.*|pruning-interval = "19"|' \
+  $HOME/${CHAIN_DIR}/config/app.toml
 ```
 
 ## 🚨 Maintenance
@@ -277,13 +282,13 @@ curl -sS http://localhost:${CHAIN_PORT}657/net_info | jq -r '.result.peers[] | "
 
 #### Set minimum gas price
 
-```
+```bash
 sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0${CHAIN_DENOM}\"/" $HOME/${CHAIN_DIR}/config/app.toml
 ```
 
 #### Enable prometheus
 
-```
+```bash
 sed -i -e "s/prometheus = false/prometheus = true/" $HOME/${CHAIN_DIR}/config/config.toml
 ```
 
@@ -305,7 +310,7 @@ sudo systemctl stop ${CHAIN_APP}
 sudo systemctl disable ${CHAIN_APP}
 sudo rm /etc/systemd/system/${CHAIN_APP}.service
 sudo systemctl daemon-reload
-rm -rf $(which ${CHAIN_APP}) 
+rm -f $(which ${CHAIN_APP})
 rm -rf $HOME/${CHAIN_DIR}
 rm -rf $HOME/${GIT_DIR}
 ```

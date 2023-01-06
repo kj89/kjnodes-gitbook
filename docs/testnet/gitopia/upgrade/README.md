@@ -13,19 +13,6 @@ Since we are using Cosmovisor, it makes it very easy to prepare for upcomming up
 You just have to build new binaries and move it into cosmovisor upgrades directory.
 {% endhint %}
 
-## Download and build upgrade binaries
-
-```bash
-# Clone project repository
-cd $HOME && rm -rf gitopia
-git clone -b v1.2.0 gitopia://gitopia/gitopia && cd gitopia
-
-# Build binaries
-git checkout v1.2.0
-make build
-mkdir -p $HOME/.gitopia/cosmovisor/upgrades/genesis/bin
-mv build/gitopiad $HOME/.gitopia/cosmovisor/upgrades/genesis/bin/
-rm -rf build
-```
-
-*Thats it! Now when upgrade block height is reached, Cosmovisor will handle it automatically!*
+{% hint style='warning' %}
+Currently gitopia does not have any upgrades!
+{% endhint %}

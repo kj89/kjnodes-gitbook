@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **00:30 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 1434212 | 5 hours | [snapshot (0.41 GB)](https://snapshots.kjnodes.com/hypersign-testnet/snapshot\_latest.tar.lz4) |
+| 1437974 | 3 hours | [snapshot (0.47 GB)](https://snapshots.kjnodes.com/hypersign-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
@@ -33,12 +33,12 @@ rm -rf $HOME/.hid-node/data
 ### Download latest snapshot
 
 ```bash
-curl -L https://snapshots.kjnodes.com/hypersign-testnet/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.hid-node
+curl -L https://snapshots.kjnodes.com/hypersign-testnet/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.hid-node
 mv $HOME/.hid-node/priv_validator_state.json.backup $HOME/.hid-node/data/priv_validator_state.json
 ```
 
 ### Restart the service and check the log
 
 ```bash
-sudo systemctl start hid-noded && journalctl -u hid-noded -f --no-hostname -o cat
+sudo systemctl start hid-noded && sudo journalctl -u hid-noded -f --no-hostname -o cat
 ```
