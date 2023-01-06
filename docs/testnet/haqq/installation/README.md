@@ -127,6 +127,7 @@ sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:35317\"
 
 ```bash
 curl -L https://snapshots.kjnodes.com/haqq-testnet/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.haqqd
+[[ -f $HOME/.haqqd/data/upgrade-info.json ]] && cp $HOME/.haqqd/data/upgrade-info.json $HOME/.haqqd/cosmovisor/genesis/upgrade-info.json
 ```
 
 ### Start service and check the logs

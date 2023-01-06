@@ -127,6 +127,7 @@ sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:19317\"
 
 ```bash
 curl -L https://snapshots.kjnodes.com/teritori/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.teritorid
+[[ -f $HOME/.teritorid/data/upgrade-info.json ]] && cp $HOME/.teritorid/data/upgrade-info.json $HOME/.teritorid/cosmovisor/genesis/upgrade-info.json
 ```
 
 ### Start service and check the logs

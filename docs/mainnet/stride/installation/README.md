@@ -127,6 +127,7 @@ sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:16317\"
 
 ```bash
 curl -L https://snapshots.kjnodes.com/stride/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.stride
+[[ -f $HOME/.stride/data/upgrade-info.json ]] && cp $HOME/.stride/data/upgrade-info.json $HOME/.stride/cosmovisor/genesis/upgrade-info.json
 ```
 
 ### Start service and check the logs

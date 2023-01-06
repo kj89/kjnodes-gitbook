@@ -34,7 +34,6 @@ rm -rf $HOME/.rebusd/data
 
 ```bash
 curl -L https://snapshots.kjnodes.com/rebus/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.rebusd
-[[ -f $HOME/.rebusd/data/upgrade-info.json ]] && cp $HOME/.rebusd/data/upgrade-info.json $HOME/.rebusd/cosmovisor/genesis/upgrade-info.json
 mv $HOME/.rebusd/priv_validator_state.json.backup $HOME/.rebusd/data/priv_validator_state.json
 ```
 

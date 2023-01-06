@@ -127,6 +127,7 @@ sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:21317\"
 
 ```bash
 curl -L https://snapshots.kjnodes.com/rebus/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.rebusd
+[[ -f $HOME/.rebusd/data/upgrade-info.json ]] && cp $HOME/.rebusd/data/upgrade-info.json $HOME/.rebusd/cosmovisor/genesis/upgrade-info.json
 ```
 
 ### Start service and check the logs

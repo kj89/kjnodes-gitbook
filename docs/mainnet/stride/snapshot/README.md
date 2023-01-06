@@ -34,7 +34,6 @@ rm -rf $HOME/.stride/data
 
 ```bash
 curl -L https://snapshots.kjnodes.com/stride/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.stride
-[[ -f $HOME/.stride/data/upgrade-info.json ]] && cp $HOME/.stride/data/upgrade-info.json $HOME/.stride/cosmovisor/genesis/upgrade-info.json
 mv $HOME/.stride/priv_validator_state.json.backup $HOME/.stride/data/priv_validator_state.json
 ```
 

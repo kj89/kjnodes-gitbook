@@ -127,6 +127,7 @@ sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:13317\"
 
 ```bash
 curl -L https://snapshots.kjnodes.com/kujira/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.kujira
+[[ -f $HOME/.kujira/data/upgrade-info.json ]] && cp $HOME/.kujira/data/upgrade-info.json $HOME/.kujira/cosmovisor/genesis/upgrade-info.json
 ```
 
 ### Start service and check the logs

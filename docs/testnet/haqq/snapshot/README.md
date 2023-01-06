@@ -34,7 +34,6 @@ rm -rf $HOME/.haqqd/data
 
 ```bash
 curl -L https://snapshots.kjnodes.com/haqq-testnet/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.haqqd
-[[ -f $HOME/.haqqd/data/upgrade-info.json ]] && cp $HOME/.haqqd/data/upgrade-info.json $HOME/.haqqd/cosmovisor/genesis/upgrade-info.json
 mv $HOME/.haqqd/priv_validator_state.json.backup $HOME/.haqqd/data/priv_validator_state.json
 ```
 

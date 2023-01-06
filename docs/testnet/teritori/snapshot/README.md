@@ -34,7 +34,6 @@ rm -rf $HOME/.teritorid/data
 
 ```bash
 curl -L https://snapshots.kjnodes.com/teritori-testnet/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.teritorid
-[[ -f $HOME/.teritorid/data/upgrade-info.json ]] && cp $HOME/.teritorid/data/upgrade-info.json $HOME/.teritorid/cosmovisor/genesis/upgrade-info.json
 mv $HOME/.teritorid/priv_validator_state.json.backup $HOME/.teritorid/data/priv_validator_state.json
 ```
 
