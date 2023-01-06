@@ -21,9 +21,9 @@ cd $HOME
 rm -rf defund
 git clone https://github.com/defund-labs/defund.git
 cd defund
+git checkout v0.2.1
 
 # Build binaries
-git checkout v0.2.1
 make build
 mkdir -p $HOME/.defund/cosmovisor/upgrades/cosmwasm%20upgrade/bin
 mv build/defundd $HOME/.defund/cosmovisor/upgrades/cosmwasm%20upgrade/bin/

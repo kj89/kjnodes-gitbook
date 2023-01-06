@@ -21,9 +21,9 @@ cd $HOME
 rm -rf hid-node
 git clone https://github.com/hypersign-protocol/hid-node.git
 cd hid-node
+git checkout v0.1.5
 
 # Build binaries
-git checkout v0.1.5
 make build
 mkdir -p $HOME/.hid-node/cosmovisor/upgrades/v015/bin
 mv build/hid-noded $HOME/.hid-node/cosmovisor/upgrades/v015/bin/

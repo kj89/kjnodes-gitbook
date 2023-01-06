@@ -21,9 +21,9 @@ cd $HOME
 rm -rf stride
 git clone https://github.com/Stride-Labs/stride.git
 cd stride
+git checkout v4.0.2
 
 # Build binaries
-git checkout v4.0.2
 make build
 mkdir -p $HOME/.stride/cosmovisor/upgrades/v4/bin
 mv build/strided $HOME/.stride/cosmovisor/upgrades/v4/bin/

@@ -21,9 +21,9 @@ cd $HOME
 rm -rf gaia
 git clone https://github.com/cosmos/gaia.git
 cd gaia
+git checkout v7.1.0
 
 # Build binaries
-git checkout v7.1.0
 make build
 mkdir -p $HOME/.gaia/cosmovisor/upgrades/v7-Theta/bin
 mv build/gaiad $HOME/.gaia/cosmovisor/upgrades/v7-Theta/bin/

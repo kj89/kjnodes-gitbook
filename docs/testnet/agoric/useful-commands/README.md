@@ -151,19 +151,19 @@ agd tx staking delegate $(agd keys show wallet --bech val -a) 1000000ubld --from
 agd tx staking delegate <TO_VALOPER_ADDRESS> 1000000ubld --from wallet --chain-id agoric-emerynet-5 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ubld -y
 ```
 
-Redelegate tokens to another validator
+#### Redelegate tokens to another validator
 
 ```bash
 agd tx staking redelegate $(agd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000ubld --from wallet --chain-id agoric-emerynet-5 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ubld -y
 ```
 
-Unbond tokens from your validator
+#### Unbond tokens from your validator
 
 ```bash
 agd tx staking unbond $(agd keys show wallet --bech val -a) 1000000ubld --from wallet --chain-id agoric-emerynet-5 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ubld -y
 ```
 
-Send tokens to the wallet
+#### Send tokens to the wallet
 
 ```bash
 agd tx bank send wallet <TO_WALLET_ADDRESS> 1000000ubld --from wallet --chain-id agoric-emerynet-5
@@ -213,28 +213,33 @@ agd tx gov vote 1 nowithveto --from wallet --chain-id agoric-emerynet-5 --gas-ad
 
 ```bash
 CUSTOM_PORT=10
-sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CUSTOM_PORT}658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${CUSTOM_PORT}657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CUSTOM_PORT}060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CUSTOM_PORT}656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CUSTOM_PORT}660\"%" $HOME/.agoric/config/config.toml
-sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${CUSTOM_PORT}317\"%; s%^address = \":8080\"%address = \":${CUSTOM_PORT}080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:${CUSTOM_PORT}090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${CUSTOM_PORT}091\"%" $HOME/.agoric/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CUSTOM_PORT}658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${CUSTOM_PORT}657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CUSTOM_PORT}060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CUSTOM_PORT}656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CUSTOM_PORT}660\"%" $HOME/.agoric/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${CUSTOM_PORT}317\"%; s%^address = \":8080\"%address = \":${CUSTOM_PORT}080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:${CUSTOM_PORT}090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${CUSTOM_PORT}091\"%" $HOME/.agoric/config/app.toml
 ```
 
 #### Update Indexer
 
-Disable indexer
+##### Disable indexer
 
 ```bash
-sed -i 's|^indexer *=.*|indexer = "null"|' $HOME/.agoric/config/config.toml
+sed -i -e 's|^indexer *=.*|indexer = "null"|' $HOME/.agoric/config/config.toml
 ```
 
-Enable indexer
+##### Enable indexer
 
 ```bash
-sed -i 's|^indexer *=.*|indexer = "kv"|' $HOME/.agoric/config/config.toml
+sed -i -e 's|^indexer *=.*|indexer = "kv"|' $HOME/.agoric/config/config.toml
 ```
 
 #### Update pruning
 
 ```bash
-sed -i.bak -e 's|^pruning *=.*|pruning = "custom"|; s|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|; s|^pruning-keep-every *=.*|pruning-keep-every = "0"|; s|^pruning-interval *=.*|pruning-interval = "10"|' $HOME/.agoric/config/app.toml
+sed -i \
+  -e 's|^pruning *=.*|pruning = "custom"|' \
+  -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
+  -e 's|^pruning-keep-every *=.*|pruning-keep-every = "0"|' \
+  -e 's|^pruning-interval *=.*|pruning-interval = "19"|' \
+  $HOME/.agoric/config/app.toml
 ```
 
 ## 🚨 Maintenance
@@ -271,13 +276,13 @@ curl -sS http://localhost:27657/net_info | jq -r '.result.peers[] | "\(.node_inf
 
 #### Set minimum gas price
 
-```
+```bash
 sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0ubld\"/" $HOME/.agoric/config/app.toml
 ```
 
 #### Enable prometheus
 
-```
+```bash
 sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.agoric/config/config.toml
 ```
 
@@ -299,7 +304,7 @@ sudo systemctl stop agd
 sudo systemctl disable agd
 sudo rm /etc/systemd/system/agd.service
 sudo systemctl daemon-reload
-rm -rf $(which agd) 
+rm -f $(which agd)
 rm -rf $HOME/.agoric
 rm -rf $HOME/agoric-sdk
 ```

@@ -21,9 +21,9 @@ cd $HOME
 rm -rf aura
 git clone https://github.com/aura-nw/aura.git
 cd aura
+git checkout euphoria_v0.4.2
 
 # Build binaries
-git checkout euphoria_v0.4.2
 make build
 mkdir -p $HOME/.aura/cosmovisor/upgrades/v0.4.2/bin
 mv build/aurad $HOME/.aura/cosmovisor/upgrades/v0.4.2/bin/

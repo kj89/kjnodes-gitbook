@@ -21,9 +21,9 @@ cd $HOME
 rm -rf rebus.core
 git clone https://github.com/rebuschain/rebus.core.git
 cd rebus.core
+git checkout v0.2.0
 
 # Build binaries
-git checkout v0.2.0
 make build
 mkdir -p $HOME/.rebusd/cosmovisor/upgrades/v0.2.0/bin
 mv build/rebusd $HOME/.rebusd/cosmovisor/upgrades/v0.2.0/bin/

@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **02:30 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 7674811 | 3 hours | [snapshot (10.58 GB)](https://snapshots.kjnodes.com/osmosis/snapshot\_latest.tar.lz4) |
+| 7678638 | 1 hours | [snapshot (10.61 GB)](https://snapshots.kjnodes.com/osmosis/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
@@ -33,12 +33,12 @@ rm -rf $HOME/.osmosisd/data
 ### Download latest snapshot
 
 ```bash
-curl -L https://snapshots.kjnodes.com/osmosis/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.osmosisd
+curl -L https://snapshots.kjnodes.com/osmosis/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.osmosisd
 mv $HOME/.osmosisd/priv_validator_state.json.backup $HOME/.osmosisd/data/priv_validator_state.json
 ```
 
 ### Restart the service and check the log
 
 ```bash
-sudo systemctl start osmosisd && journalctl -u osmosisd -f --no-hostname -o cat
+sudo systemctl start osmosisd && sudo journalctl -u osmosisd -f --no-hostname -o cat
 ```

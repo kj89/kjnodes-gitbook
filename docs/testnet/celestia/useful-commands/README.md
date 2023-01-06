@@ -80,7 +80,7 @@ celestia-appd tx staking create-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
---fees=1000utia \
+--gas-prices=0.005utia \
 -y
 ```
 
@@ -97,14 +97,14 @@ celestia-appd tx staking edit-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
---fees=1000utia \
+--gas-prices=0.005utia \
 -y
 ```
 
 #### Unjail validator
 
 ```bash
-celestia-appd tx slashing unjail --from wallet --chain-id mocha --gas auto --gas-adjustment 1.4 --fees 1000utia -y
+celestia-appd tx slashing unjail --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto --gas-prices 0.005utia -y
 ```
 
 #### Jail reason
@@ -136,40 +136,40 @@ celestia-appd q staking validator $(celestia-appd keys show wallet --bech val -a
 #### Withdraw rewards from all validators
 
 ```bash
-celestia-appd tx distribution withdraw-all-rewards --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto --fees 1000utia -y
+celestia-appd tx distribution withdraw-all-rewards --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto --gas-prices 0.005utia -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-celestia-appd tx distribution withdraw-rewards $(celestia-appd keys show wallet --bech val -a) --commission --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto --fees 1000utia -y
+celestia-appd tx distribution withdraw-rewards $(celestia-appd keys show wallet --bech val -a) --commission --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto --gas-prices 0.005utia -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-celestia-appd tx staking delegate $(celestia-appd keys show wallet --bech val -a) 1000000utia --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto --fees 1000utia -y
+celestia-appd tx staking delegate $(celestia-appd keys show wallet --bech val -a) 1000000utia --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto --gas-prices 0.005utia -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-celestia-appd tx staking delegate <TO_VALOPER_ADDRESS> 1000000utia --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto --fees 1000utia -y
+celestia-appd tx staking delegate <TO_VALOPER_ADDRESS> 1000000utia --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto --gas-prices 0.005utia -y
 ```
 
-Redelegate tokens to another validator
+#### Redelegate tokens to another validator
 
 ```bash
-celestia-appd tx staking redelegate $(celestia-appd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000utia --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto --fees 1000utia -y
+celestia-appd tx staking redelegate $(celestia-appd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000utia --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto --gas-prices 0.005utia -y
 ```
 
-Unbond tokens from your validator
+#### Unbond tokens from your validator
 
 ```bash
-celestia-appd tx staking unbond $(celestia-appd keys show wallet --bech val -a) 1000000utia --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto --fees 1000utia -y
+celestia-appd tx staking unbond $(celestia-appd keys show wallet --bech val -a) 1000000utia --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto --gas-prices 0.005utia -y
 ```
 
-Send tokens to the wallet
+#### Send tokens to the wallet
 
 ```bash
 celestia-appd tx bank send wallet <TO_WALLET_ADDRESS> 1000000utia --from wallet --chain-id mocha
@@ -192,25 +192,25 @@ celestia-appd query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-celestia-appd tx gov vote 1 yes --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto --fees 1000utia -y
+celestia-appd tx gov vote 1 yes --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto --gas-prices 0.005utia -y
 ```
 
 #### Vote 'No'
 
 ```bash
-celestia-appd tx gov vote 1 no --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto --fees 1000utia -y
+celestia-appd tx gov vote 1 no --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto --gas-prices 0.005utia -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-celestia-appd tx gov vote 1 abstain --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto --fees 1000utia -y
+celestia-appd tx gov vote 1 abstain --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto --gas-prices 0.005utia -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-celestia-appd tx gov vote 1 nowithveto --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto --fees 1000utia -y
+celestia-appd tx gov vote 1 nowithveto --from wallet --chain-id mocha --gas-adjustment 1.4 --gas auto --gas-prices 0.005utia -y
 ```
 
 ## ⚡️ Utility
@@ -219,28 +219,33 @@ celestia-appd tx gov vote 1 nowithveto --from wallet --chain-id mocha --gas-adju
 
 ```bash
 CUSTOM_PORT=10
-sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CUSTOM_PORT}658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${CUSTOM_PORT}657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CUSTOM_PORT}060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CUSTOM_PORT}656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CUSTOM_PORT}660\"%" $HOME/.celestia-app/config/config.toml
-sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${CUSTOM_PORT}317\"%; s%^address = \":8080\"%address = \":${CUSTOM_PORT}080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:${CUSTOM_PORT}090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${CUSTOM_PORT}091\"%" $HOME/.celestia-app/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CUSTOM_PORT}658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${CUSTOM_PORT}657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CUSTOM_PORT}060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CUSTOM_PORT}656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CUSTOM_PORT}660\"%" $HOME/.celestia-app/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${CUSTOM_PORT}317\"%; s%^address = \":8080\"%address = \":${CUSTOM_PORT}080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:${CUSTOM_PORT}090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${CUSTOM_PORT}091\"%" $HOME/.celestia-app/config/app.toml
 ```
 
 #### Update Indexer
 
-Disable indexer
+##### Disable indexer
 
 ```bash
-sed -i 's|^indexer *=.*|indexer = "null"|' $HOME/.celestia-app/config/config.toml
+sed -i -e 's|^indexer *=.*|indexer = "null"|' $HOME/.celestia-app/config/config.toml
 ```
 
-Enable indexer
+##### Enable indexer
 
 ```bash
-sed -i 's|^indexer *=.*|indexer = "kv"|' $HOME/.celestia-app/config/config.toml
+sed -i -e 's|^indexer *=.*|indexer = "kv"|' $HOME/.celestia-app/config/config.toml
 ```
 
 #### Update pruning
 
 ```bash
-sed -i.bak -e 's|^pruning *=.*|pruning = "custom"|; s|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|; s|^pruning-keep-every *=.*|pruning-keep-every = "0"|; s|^pruning-interval *=.*|pruning-interval = "10"|' $HOME/.celestia-app/config/app.toml
+sed -i \
+  -e 's|^pruning *=.*|pruning = "custom"|' \
+  -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
+  -e 's|^pruning-keep-every *=.*|pruning-keep-every = "0"|' \
+  -e 's|^pruning-interval *=.*|pruning-interval = "19"|' \
+  $HOME/.celestia-app/config/app.toml
 ```
 
 ## 🚨 Maintenance
@@ -277,13 +282,13 @@ curl -sS http://localhost:20657/net_info | jq -r '.result.peers[] | "\(.node_inf
 
 #### Set minimum gas price
 
-```
+```bash
 sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0utia\"/" $HOME/.celestia-app/config/app.toml
 ```
 
 #### Enable prometheus
 
-```
+```bash
 sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.celestia-app/config/config.toml
 ```
 
@@ -305,7 +310,7 @@ sudo systemctl stop celestia-appd
 sudo systemctl disable celestia-appd
 sudo rm /etc/systemd/system/celestia-appd.service
 sudo systemctl daemon-reload
-rm -rf $(which celestia-appd) 
+rm -f $(which celestia-appd)
 rm -rf $HOME/.celestia-app
 rm -rf $HOME/celestia-app
 ```

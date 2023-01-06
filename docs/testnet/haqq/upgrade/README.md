@@ -21,9 +21,9 @@ cd $HOME
 rm -rf haqq
 git clone https://github.com/haqq-network/haqq.git
 cd haqq
+git checkout v1.3.0
 
 # Build binaries
-git checkout v1.3.0
 make build
 mkdir -p $HOME/.haqqd/cosmovisor/upgrades/v1.3.0/bin
 mv build/haqqd $HOME/.haqqd/cosmovisor/upgrades/v1.3.0/bin/

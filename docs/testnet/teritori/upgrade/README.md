@@ -21,9 +21,9 @@ cd $HOME
 rm -rf teritori-chain
 git clone https://github.com/TERITORI/teritori-chain.git
 cd teritori-chain
+git checkout v1.3.0
 
 # Build binaries
-git checkout v1.3.0
 make build
 mkdir -p $HOME/.teritorid/cosmovisor/upgrades/v1.3.0/bin
 mv build/teritorid $HOME/.teritorid/cosmovisor/upgrades/v1.3.0/bin/

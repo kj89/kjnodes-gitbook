@@ -21,9 +21,9 @@ cd $HOME
 rm -rf canine-chain
 git clone https://github.com/JackalLabs/canine-chain.git
 cd canine-chain
+git checkout v1.1.2-hotfix
 
 # Build binaries
-git checkout v1.1.2-hotfix
 make build
 mkdir -p $HOME/.canine/cosmovisor/upgrades/v1.1.2-hotfix/bin
 mv build/canined $HOME/.canine/cosmovisor/upgrades/v1.1.2-hotfix/bin/

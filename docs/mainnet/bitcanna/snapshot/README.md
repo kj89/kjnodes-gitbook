@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **05:15 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 6662666 | 1 hours | [snapshot (0.69 GB)](https://snapshots.kjnodes.com/bitcanna/snapshot\_latest.tar.lz4) |
+| 6662666 | 4 hours | [snapshot (0.69 GB)](https://snapshots.kjnodes.com/bitcanna/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
@@ -33,12 +33,12 @@ rm -rf $HOME/.bcna/data
 ### Download latest snapshot
 
 ```bash
-curl -L https://snapshots.kjnodes.com/bitcanna/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.bcna
+curl -L https://snapshots.kjnodes.com/bitcanna/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.bcna
 mv $HOME/.bcna/priv_validator_state.json.backup $HOME/.bcna/data/priv_validator_state.json
 ```
 
 ### Restart the service and check the log
 
 ```bash
-sudo systemctl start bcnad && journalctl -u bcnad -f --no-hostname -o cat
+sudo systemctl start bcnad && sudo journalctl -u bcnad -f --no-hostname -o cat
 ```

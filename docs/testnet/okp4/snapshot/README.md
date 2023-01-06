@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **03:00 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 336996 | 3 hours | [snapshot (0.67 GB)](https://snapshots.kjnodes.com/okp4-testnet/snapshot\_latest.tar.lz4) |
+| 340687 | 48 minutes | [snapshot (0.75 GB)](https://snapshots.kjnodes.com/okp4-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
@@ -33,12 +33,12 @@ rm -rf $HOME/.okp4d/data
 ### Download latest snapshot
 
 ```bash
-curl -L https://snapshots.kjnodes.com/okp4-testnet/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.okp4d
+curl -L https://snapshots.kjnodes.com/okp4-testnet/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.okp4d
 mv $HOME/.okp4d/priv_validator_state.json.backup $HOME/.okp4d/data/priv_validator_state.json
 ```
 
 ### Restart the service and check the log
 
 ```bash
-sudo systemctl start okp4d && journalctl -u okp4d -f --no-hostname -o cat
+sudo systemctl start okp4d && sudo journalctl -u okp4d -f --no-hostname -o cat
 ```

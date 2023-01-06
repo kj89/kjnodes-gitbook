@@ -10,61 +10,80 @@ description: Setting up your validator node has never been so easy. Get your val
 
 ### Setup validator name
 
+{% hint style='info' %}
+Replace **YOUR_MONIKER_GOES_HERE** with your validator name
+{% endhint %}
+
 ```bash
 MONIKER="YOUR_MONIKER_GOES_HERE"
 ```
 
 ### Install dependencies
 
-#### Download the nodesource PPA for Node.js
-```
-curl https://deb.nodesource.com/setup_16.x | sudo bash
+#### Add package repository for Node.js
+
+```bash
+curl -Ls https://deb.nodesource.com/setup_16.x | sudo bash
 ```
 
-#### Install the Yarn package manager
-```
-curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/yarnkey.gpg >/dev/null
+#### Add package repository for Yarn
+
+```bash
+curl -Ls https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/yarnkey.gpg >/dev/null
 echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 ```
 
 #### Update system and install build tools
 
 ```bash
-sudo apt update
-sudo apt install curl git jq lz4 build-essential nodejs=16.* yarn -y
+sudo apt -q update
+sudo apt -qy install curl git jq lz4 build-essential nodejs=16.* yarn
+sudo apt -qy upgrade
 ```
 
-#### Install GO
+#### Install Go
 
 ```bash
 sudo rm -rf /usr/local/go
-sudo curl -Ls https://go.dev/dl/go1.19.linux-amd64.tar.gz | sudo tar -C /usr/local -xz
-tee -a $HOME/.profile > /dev/null << EOF
-export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
-EOF
-source $HOME/.profile
+curl -Ls https://go.dev/dl/go1.19.4.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
+eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/golang.sh)
+eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
 
 ### Download and build binaries
 
 ```bash
-# Clone git repository
+# Clone project repository
 cd $HOME
-rm -rf agoric-sdk
-git clone https://github.com/Agoric/agoric-sdk.git
-cd agoric-sdk
+rm -rf pismoA
+git clone https://github.com/Agoric/agoric-sdk.git pismoA
+cd pismoA
 git checkout pismoA
 
 # Install and build Agoric Javascript packages
 yarn install && yarn build
 
 # Install and build Agoric Cosmos SDK support
-(cd packages/cosmic-swingset && make)
+pushd packages/cosmic-swingset && (make; popd)
+
+mkdir -p $HOME/.agoric/cosmovisor/genesis/bin
+ln -s $HOME/pismoA/packages/cosmic-swingset/bin/ag-chain-cosmos $HOME/.agoric/cosmovisor/genesis/bin/ag-chain-cosmos
+ln -s $HOME/pismoA/packages/cosmic-swingset/bin/ag-nchainz $HOME/.agoric/cosmovisor/genesis/bin/ag-nchainz
+cp golang/cosmos/build/agd $HOME/.agoric/cosmovisor/genesis/bin/
+cp golang/cosmos/build/ag-cosmos-helper $HOME/.agoric/cosmovisor/genesis/bin/
+
+# Create application symlinks
+ln -s $HOME/.agoric/cosmovisor/genesis $HOME/.agoric/cosmovisor/current
+sudo ln -s $HOME/.agoric/cosmovisor/current/bin/agd /usr/local/bin/agd
 ```
 
-### Create a service
+### Install Cosmovisor and create a service
 
 ```bash
+# Download and install Cosmovisor
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.4.0
+
+# Create service
 sudo tee /etc/systemd/system/agd.service > /dev/null << EOF
 [Unit]
 Description=agoric-testnet node service
@@ -72,10 +91,13 @@ After=network-online.target
 
 [Service]
 User=$USER
-ExecStart=$(which agd) start --home $HOME/.agoric
+ExecStart=$(which cosmovisor) run start
 Restart=on-failure
-RestartSec=3
+RestartSec=10
 LimitNOFILE=65535
+Environment="DAEMON_HOME=$HOME/.agoric"
+Environment="DAEMON_NAME=agd"
+Environment="UNSAFE_SKIP_BACKUP=true"
 
 [Install]
 WantedBy=multi-user.target
@@ -87,30 +109,45 @@ sudo systemctl enable agd
 ### Initialize the node
 
 ```bash
+# Set node configuration
 agd config chain-id agoric-emerynet-5
+agd config keyring-backend test
 agd config node tcp://localhost:27657
+
+# Initialize the node
 agd init $MONIKER --chain-id agoric-emerynet-5
+
+# Download genesis and addrbook
 curl -Ls https://snapshots.kjnodes.com/agoric-testnet/genesis.json > $HOME/.agoric/config/genesis.json
 curl -Ls https://snapshots.kjnodes.com/agoric-testnet/addrbook.json > $HOME/.agoric/config/addrbook.json
-sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@agoric-testnet.rpc.kjnodes.com:27659\"|" $HOME/.agoric/config/config.toml
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.025ubld\"|" $HOME/.agoric/config/app.toml
-sed -i -e "s|^pruning *=.*|pruning = \"custom\"|" $HOME/.agoric/config/app.toml
-sed -i -e "s|^pruning-keep-recent *=.*|pruning-keep-recent = \"100\"|" $HOME/.agoric/config/app.toml
-sed -i -e "s|^pruning-keep-every *=.*|pruning-keep-every = \"0\"|" $HOME/.agoric/config/app.toml
-sed -i -e "s|^pruning-interval *=.*|pruning-interval = \"19\"|" $HOME/.agoric/config/app.toml
 
-sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:27658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:27657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:27060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:27656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":27660\"%" $HOME/.agoric/config/config.toml
-sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:27317\"%; s%^address = \":8080\"%address = \":27080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:27090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:27091\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:27545\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:27546\"%" $HOME/.agoric/config/app.toml
+# Add seeds
+sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@agoric-testnet.rpc.kjnodes.com:27659\"|" $HOME/.agoric/config/config.toml
+
+# Set minimum gas price
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.025ubld\"|" $HOME/.agoric/config/app.toml
+
+# Set pruning
+sed -i \
+  -e 's|^pruning *=.*|pruning = "custom"|' \
+  -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
+  -e 's|^pruning-keep-every *=.*|pruning-keep-every = "0"|' \
+  -e 's|^pruning-interval *=.*|pruning-interval = "19"|' \
+  $HOME/.agoric/config/app.toml
+
+# Set custom ports
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:27658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:27657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:27060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:27656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":27660\"%" $HOME/.agoric/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:27317\"%; s%^address = \":8080\"%address = \":27080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:27090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:27091\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:27545\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:27546\"%" $HOME/.agoric/config/app.toml
 ```
 
 ### Download latest chain snapshot
 
 ```bash
-curl -L https://snapshots.kjnodes.com/agoric-testnet/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.agoric
+curl -L https://snapshots.kjnodes.com/agoric-testnet/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.agoric
 ```
 
 ### Start service and check the logs
 
 ```bash
-sudo systemctl start agd && journalctl -u agd -f --no-hostname -o cat
+sudo systemctl start agd && sudo journalctl -u agd -f --no-hostname -o cat
 ```

@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **04:15 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 2257455 | 2 hours | [snapshot (1.55 GB)](https://snapshots.kjnodes.com/agoric-testnet/snapshot\_latest.tar.lz4) |
+| 2257455 | 5 hours | [snapshot (1.55 GB)](https://snapshots.kjnodes.com/agoric-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
@@ -33,12 +33,12 @@ rm -rf $HOME/.agoric/data
 ### Download latest snapshot
 
 ```bash
-curl -L https://snapshots.kjnodes.com/agoric-testnet/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.agoric
+curl -L https://snapshots.kjnodes.com/agoric-testnet/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.agoric
 mv $HOME/.agoric/priv_validator_state.json.backup $HOME/.agoric/data/priv_validator_state.json
 ```
 
 ### Restart the service and check the log
 
 ```bash
-sudo systemctl start agd && journalctl -u agd -f --no-hostname -o cat
+sudo systemctl start agd && sudo journalctl -u agd -f --no-hostname -o cat
 ```

@@ -21,9 +21,9 @@ cd $HOME
 rm -rf osmosis
 git clone https://github.com/osmosis-labs/osmosis.git
 cd osmosis
+git checkout v13.1.0
 
 # Build binaries
-git checkout v13.1.0
 make build
 mkdir -p $HOME/.osmosisd/cosmovisor/upgrades/v13/bin
 mv build/osmosisd $HOME/.osmosisd/cosmovisor/upgrades/v13/bin/

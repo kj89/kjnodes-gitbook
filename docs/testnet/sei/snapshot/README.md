@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **01:45 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 16699736 | 4 hours | [snapshot (4.5 GB)](https://snapshots.kjnodes.com/sei-testnet/snapshot\_latest.tar.lz4) |
+| 16727649 | 2 hours | [snapshot (4.76 GB)](https://snapshots.kjnodes.com/sei-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
@@ -33,12 +33,12 @@ rm -rf $HOME/.sei/data
 ### Download latest snapshot
 
 ```bash
-curl -L https://snapshots.kjnodes.com/sei-testnet/snapshot_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.sei
+curl -L https://snapshots.kjnodes.com/sei-testnet/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.sei
 mv $HOME/.sei/priv_validator_state.json.backup $HOME/.sei/data/priv_validator_state.json
 ```
 
 ### Restart the service and check the log
 
 ```bash
-sudo systemctl start seid && journalctl -u seid -f --no-hostname -o cat
+sudo systemctl start seid && sudo journalctl -u seid -f --no-hostname -o cat
 ```
