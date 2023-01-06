@@ -34,6 +34,7 @@ rm -rf $HOME/.ollo/data
 
 ```bash
 curl -L https://snapshots.kjnodes.com/ollo-testnet/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.ollo
+[[ -f $HOME/.ollo/data/upgrade-info.json ]] && cp $HOME/.ollo/data/upgrade-info.json $HOME/.ollo/cosmovisor/genesis/upgrade-info.json
 mv $HOME/.ollo/priv_validator_state.json.backup $HOME/.ollo/data/priv_validator_state.json
 ```
 

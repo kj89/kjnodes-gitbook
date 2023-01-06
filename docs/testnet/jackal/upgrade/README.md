@@ -25,6 +25,8 @@ git checkout v1.2.0-alpha.7
 
 # Build binaries
 make build
+
+# Prepare binaries for Cosmovisor
 mkdir -p $HOME/.canine/cosmovisor/upgrades/alpha7/bin
 mv build/canined $HOME/.canine/cosmovisor/upgrades/alpha7/bin/
 rm -rf build

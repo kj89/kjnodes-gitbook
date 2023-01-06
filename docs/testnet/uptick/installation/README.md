@@ -49,6 +49,8 @@ git checkout v0.2.4
 
 # Build binaries
 make build
+
+# Prepare binaries for Cosmovisor
 mkdir -p $HOME/.uptickd/cosmovisor/genesis/bin
 mv build/uptickd $HOME/.uptickd/cosmovisor/genesis/bin/
 rm -rf build

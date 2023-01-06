@@ -25,6 +25,8 @@ git checkout v1.1.0-innuendo
 
 # Build binaries
 make build
+
+# Prepare binaries for Cosmovisor
 mkdir -p $HOME/.quicksilverd/cosmovisor/upgrades/v1.0.0-innuendo/bin
 mv build/quicksilverd $HOME/.quicksilverd/cosmovisor/upgrades/v1.0.0-innuendo/bin/
 rm -rf build

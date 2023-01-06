@@ -25,6 +25,8 @@ git checkout v0.1.5
 
 # Build binaries
 make build
+
+# Prepare binaries for Cosmovisor
 mkdir -p $HOME/.hid-node/cosmovisor/upgrades/v015/bin
 mv build/hid-noded $HOME/.hid-node/cosmovisor/upgrades/v015/bin/
 rm -rf build

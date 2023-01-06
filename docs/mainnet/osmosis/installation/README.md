@@ -49,6 +49,8 @@ git checkout v13.1.0
 
 # Build binaries
 make build
+
+# Prepare binaries for Cosmovisor
 mkdir -p $HOME/.osmosisd/cosmovisor/genesis/bin
 mv build/osmosisd $HOME/.osmosisd/cosmovisor/genesis/bin/
 rm -rf build

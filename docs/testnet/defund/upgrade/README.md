@@ -25,6 +25,8 @@ git checkout v0.2.1
 
 # Build binaries
 make build
+
+# Prepare binaries for Cosmovisor
 mkdir -p $HOME/.defund/cosmovisor/upgrades/cosmwasm%20upgrade/bin
 mv build/defundd $HOME/.defund/cosmovisor/upgrades/cosmwasm%20upgrade/bin/
 rm -rf build

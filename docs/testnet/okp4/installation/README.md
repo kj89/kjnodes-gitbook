@@ -49,6 +49,8 @@ git checkout v3.0.0
 
 # Build binaries
 make build
+
+# Prepare binaries for Cosmovisor
 mkdir -p $HOME/.okp4d/cosmovisor/genesis/bin
 mv target/dist/okp4d $HOME/.okp4d/cosmovisor/genesis/bin/
 rm -rf build

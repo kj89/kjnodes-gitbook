@@ -49,6 +49,8 @@ git checkout euphoria_v0.4.2
 
 # Build binaries
 make build
+
+# Prepare binaries for Cosmovisor
 mkdir -p $HOME/.aura/cosmovisor/genesis/bin
 mv build/aurad $HOME/.aura/cosmovisor/genesis/bin/
 rm -rf build

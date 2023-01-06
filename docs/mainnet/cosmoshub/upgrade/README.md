@@ -25,6 +25,8 @@ git checkout v7.1.0
 
 # Build binaries
 make build
+
+# Prepare binaries for Cosmovisor
 mkdir -p $HOME/.gaia/cosmovisor/upgrades/v7-Theta/bin
 mv build/gaiad $HOME/.gaia/cosmovisor/upgrades/v7-Theta/bin/
 rm -rf build

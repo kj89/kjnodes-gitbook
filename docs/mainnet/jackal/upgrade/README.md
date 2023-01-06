@@ -25,6 +25,8 @@ git checkout v1.1.2-hotfix
 
 # Build binaries
 make build
+
+# Prepare binaries for Cosmovisor
 mkdir -p $HOME/.canine/cosmovisor/upgrades/v1.1.2-hotfix/bin
 mv build/canined $HOME/.canine/cosmovisor/upgrades/v1.1.2-hotfix/bin/
 rm -rf build

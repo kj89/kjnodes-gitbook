@@ -56,6 +56,8 @@ git checkout v1.2.0
 
 # Build binaries
 make build
+
+# Prepare binaries for Cosmovisor
 mkdir -p $HOME/.gitopia/cosmovisor/genesis/bin
 mv build/gitopiad $HOME/.gitopia/cosmovisor/genesis/bin/
 rm -rf build

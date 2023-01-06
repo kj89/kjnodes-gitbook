@@ -49,6 +49,8 @@ git checkout v1.3.0
 
 # Build binaries
 make build
+
+# Prepare binaries for Cosmovisor
 mkdir -p $HOME/.teritorid/cosmovisor/genesis/bin
 mv build/teritorid $HOME/.teritorid/cosmovisor/genesis/bin/
 rm -rf build

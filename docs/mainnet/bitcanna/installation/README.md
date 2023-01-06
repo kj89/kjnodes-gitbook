@@ -49,6 +49,8 @@ git checkout v1.5.3
 
 # Build binaries
 make build
+
+# Prepare binaries for Cosmovisor
 mkdir -p $HOME/.bcna/cosmovisor/genesis/bin
 mv build/bcnad $HOME/.bcna/cosmovisor/genesis/bin/
 rm -rf build

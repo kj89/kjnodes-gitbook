@@ -49,6 +49,8 @@ git checkout v0.2.0
 
 # Build binaries
 make build
+
+# Prepare binaries for Cosmovisor
 mkdir -p $HOME/.rebusd/cosmovisor/genesis/bin
 mv build/rebusd $HOME/.rebusd/cosmovisor/genesis/bin/
 rm -rf build
