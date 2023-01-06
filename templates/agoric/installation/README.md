@@ -69,8 +69,8 @@ pushd packages/cosmic-swingset && (make; popd)
 mkdir -p $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin
 ln -s $HOME/${LATEST_VERSION_TAG}/packages/cosmic-swingset/bin/ag-chain-cosmos $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin/ag-chain-cosmos
 ln -s $HOME/${LATEST_VERSION_TAG}/packages/cosmic-swingset/bin/ag-nchainz $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin/ag-nchainz
-cp golang/cosmos/build/agd $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin/agd
-cp golang/cosmos/build/ag-cosmos-helper $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin/ag-cosmos-helper
+cp golang/cosmos/build/agd $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin/
+cp golang/cosmos/build/ag-cosmos-helper $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin/
 
 # Create application symlinks
 ln -s $HOME/${CHAIN_DIR}/cosmovisor/genesis $HOME/${CHAIN_DIR}/cosmovisor/current
@@ -111,6 +111,7 @@ sudo systemctl enable ${CHAIN_APP}
 ```bash
 # Set node configuration
 ${CHAIN_APP} config chain-id ${CHAIN_ID}
+${CHAIN_APP} config keyring-backend ${KEYRING_BACKEND}
 ${CHAIN_APP} config node tcp://localhost:${CHAIN_PORT}657
 
 # Initialize the node
