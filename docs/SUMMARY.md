@@ -143,13 +143,6 @@
   * [State sync](testnet/jackal/state-sync/README.md)
   * [Useful commands](testnet/jackal/useful-commands/README.md)
 
-* [Lava](testnet/lava/README.md)
-  * [Installation](testnet/lava/installation/README.md)
-  * [Upgrade](testnet/lava/upgrade/README.md)
-  * [Snapshot](testnet/lava/snapshot/README.md)
-  * [State sync](testnet/lava/state-sync/README.md)
-  * [Useful commands](testnet/lava/useful-commands/README.md)
-
 * [Nibiru](testnet/nibiru/README.md)
   * [Installation](testnet/nibiru/installation/README.md)
   * [Upgrade](testnet/nibiru/upgrade/README.md)
