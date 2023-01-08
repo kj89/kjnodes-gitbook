@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/gravitybridge.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: gravity-bridge-3 | **Latest Version Tag**: v1.7.2 | **Custom Port**: 26
+**Chain ID**: gravity-bridge-3 | **Latest Version Tag**: v1.8.1 | **Custom Port**: 26
 
 ### Setup validator name
 
@@ -42,8 +42,8 @@ eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```bash
 # Download project binaries
 mkdir -p $HOME/.gravity/cosmovisor/genesis/bin
-wget -O $HOME/.gravity/cosmovisor/genesis/bin/gravityd https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/v1.7.2/gravity-linux-amd64
-wget -O $HOME/.gravity/cosmovisor/genesis/bin/gbt https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/v1.7.2/gbt
+wget -O $HOME/.gravity/cosmovisor/genesis/bin/gravityd https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/v1.8.1/gravity-linux-amd64
+wget -O $HOME/.gravity/cosmovisor/genesis/bin/gbt https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/v1.8.1/gbt
 chmod +x $HOME/.gravity/cosmovisor/genesis/bin/*
 
 # Create application symlinks
