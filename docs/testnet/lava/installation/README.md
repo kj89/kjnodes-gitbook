@@ -46,6 +46,7 @@ rm -rf lava
 git clone https://github.com/lavanet/lava.git
 cd lava
 git checkout v0.4.0
+sed -i -E -e 's/^whitespace \+= \$\(whitespace\)$/whitespace := $(whitespace) $(whitespace)/' Makefile
 
 # Build binaries
 make build
