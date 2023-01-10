@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **03:45 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 5343219 | 1 hours | [snapshot (0.96 GB)](https://snapshots.kjnodes.com/gravitybridge/snapshot\_latest.tar.lz4) |
+| 5346533 | 1 hours | [snapshot (0.93 GB)](https://snapshots.kjnodes.com/gravitybridge/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
