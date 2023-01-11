@@ -4,9 +4,9 @@ description: Prepare for and the upcomming chain upgrade using Cosmovisor.
 
 # Upgrade
 
-<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/${PROJECT_NAME}.png" width="150" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/bitcanna.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: ${CHAIN_ID} | **Latest Version Tag**: ${LATEST_VERSION_TAG} | **Custom Port**: ${CHAIN_PORT}
+**Chain ID**: bitcanna-1 | **Latest Version Tag**: v1.5.3 | **Custom Port**: 42
 
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.
@@ -18,17 +18,17 @@ You just have to build new binaries and move it into cosmovisor upgrades directo
 ```bash
 # Clone project repository
 cd $HOME
-rm -rf ${GIT_DIR}
-git clone ${GIT_URL}
-cd ${GIT_DIR}
-git checkout ${LATEST_VERSION_TAG}
+rm -rf bcna
+git clone https://github.com/BitCannaGlobal/bcna.git
+cd bcna
+git checkout v1.5.3
 
 # Build binaries
 make build
 
 # Prepare binaries for Cosmovisor
-mkdir -p $HOME/${CHAIN_DIR}/cosmovisor/upgrades/${LATEST_VERSION_NAME}/bin
-mv ${CHAIN_BINARY_SRC} $HOME/${CHAIN_DIR}/cosmovisor/upgrades/${LATEST_VERSION_NAME}/bin/
+mkdir -p $HOME/.bcna/cosmovisor/upgrades/trichomemonster-ica/bin
+mv build/bcnad $HOME/.bcna/cosmovisor/upgrades/trichomemonster-ica/bin/
 rm -rf build
 ```
 
