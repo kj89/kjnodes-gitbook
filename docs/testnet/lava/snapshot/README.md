@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **05:45 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: v0.4.0
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v0.4.3
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 21833 | 7 minutes | [snapshot (0.2 GB)](https://snapshots.kjnodes.com/lava-testnet/snapshot\_latest.tar.lz4) |
+| 22734 | 5 minutes | [snapshot (0.65 GB)](https://snapshots.kjnodes.com/lava-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
