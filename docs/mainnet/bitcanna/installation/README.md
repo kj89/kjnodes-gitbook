@@ -4,9 +4,9 @@ description: Setting up your validator node has never been so easy. Get your val
 
 # Installation
 
-<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/bitcanna.png" width="150" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/${PROJECT_NAME}.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: bitcanna-1 | **Latest Version Tag**: v1.5.3 | **Custom Port**: 42
+**Chain ID**: ${CHAIN_ID} | **Latest Version Tag**: ${LATEST_VERSION_TAG} | **Custom Port**: ${CHAIN_PORT}
 
 ### Setup validator name
 
@@ -32,7 +32,7 @@ sudo apt -qy upgrade
 
 ```bash
 sudo rm -rf /usr/local/go
-curl -Ls https://go.dev/dl/go1.19.4.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
+curl -Ls https://go.dev/dl/go${GO_VERSION}.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
 eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/golang.sh)
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
@@ -42,34 +42,34 @@ eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```bash
 # Clone project repository
 cd $HOME
-rm -rf bcna
-git clone https://github.com/BitCannaGlobal/bcna.git
-cd bcna
-git checkout v1.5.3
+rm -rf ${GIT_DIR}
+git clone ${GIT_URL}
+cd ${GIT_DIR}
+git checkout ${LATEST_VERSION_TAG}
 
 # Build binaries
 make build
 
 # Prepare binaries for Cosmovisor
-mkdir -p $HOME/.bcna/cosmovisor/genesis/bin
-mv build/bcnad $HOME/.bcna/cosmovisor/genesis/bin/
+mkdir -p $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin
+mv ${CHAIN_BINARY_SRC} $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.bcna/cosmovisor/genesis $HOME/.bcna/cosmovisor/current
-sudo ln -s $HOME/.bcna/cosmovisor/current/bin/bcnad /usr/local/bin/bcnad
+ln -s $HOME/${CHAIN_DIR}/cosmovisor/genesis $HOME/${CHAIN_DIR}/cosmovisor/current
+sudo ln -s $HOME/${CHAIN_DIR}/cosmovisor/current/bin/${CHAIN_APP} /usr/local/bin/${CHAIN_APP}
 ```
 
 ### Install Cosmovisor and create a service
 
 ```bash
 # Download and install Cosmovisor
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.4.0
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v${COSMOVISOR_VERSION}
 
 # Create service
-sudo tee /etc/systemd/system/bcnad.service > /dev/null << EOF
+sudo tee /etc/systemd/system/${CHAIN_APP}.service > /dev/null << EOF
 [Unit]
-Description=bitcanna node service
+Description=${CHAIN_NAME} node service
 After=network-online.target
 
 [Service]
@@ -78,37 +78,37 @@ ExecStart=$(which cosmovisor) run start
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
-Environment="DAEMON_HOME=$HOME/.bcna"
-Environment="DAEMON_NAME=bcnad"
+Environment="DAEMON_HOME=$HOME/${CHAIN_DIR}"
+Environment="DAEMON_NAME=${CHAIN_APP}"
 Environment="UNSAFE_SKIP_BACKUP=true"
 
 [Install]
 WantedBy=multi-user.target
 EOF
 sudo systemctl daemon-reload
-sudo systemctl enable bcnad
+sudo systemctl enable ${CHAIN_APP}
 ```
 
 ### Initialize the node
 
 ```bash
 # Set node configuration
-bcnad config chain-id bitcanna-1
-bcnad config keyring-backend file
-bcnad config node tcp://localhost:42657
+${CHAIN_APP} config chain-id ${CHAIN_ID}
+${CHAIN_APP} config keyring-backend ${KEYRING_BACKEND}
+${CHAIN_APP} config node tcp://localhost:${CHAIN_PORT}657
 
 # Initialize the node
-bcnad init $MONIKER --chain-id bitcanna-1
+${CHAIN_APP} init $MONIKER --chain-id ${CHAIN_ID}
 
 # Download genesis and addrbook
-curl -Ls https://snapshots.kjnodes.com/bitcanna/genesis.json > $HOME/.bcna/config/genesis.json
-curl -Ls https://snapshots.kjnodes.com/bitcanna/addrbook.json > $HOME/.bcna/config/addrbook.json
+curl -Ls https://snapshots.kjnodes.com/${CHAIN_NAME}/genesis.json > $HOME/${CHAIN_DIR}/config/genesis.json
+curl -Ls https://snapshots.kjnodes.com/${CHAIN_NAME}/addrbook.json > $HOME/${CHAIN_DIR}/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@bitcanna.rpc.kjnodes.com:42659\"|" $HOME/.bcna/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"${CHAIN_TENDERSEED_PEER}@${CHAIN_NAME}.rpc.kjnodes.com:${CHAIN_PORT}659\"|" $HOME/${CHAIN_DIR}/config/config.toml
 
 # Set minimum gas price
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0ubcna\"|" $HOME/.bcna/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"${MIN_GAS_PRICE}\"|" $HOME/${CHAIN_DIR}/config/app.toml
 
 # Set pruning
 sed -i \
@@ -116,22 +116,22 @@ sed -i \
   -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
   -e 's|^pruning-keep-every *=.*|pruning-keep-every = "0"|' \
   -e 's|^pruning-interval *=.*|pruning-interval = "19"|' \
-  $HOME/.bcna/config/app.toml
+  $HOME/${CHAIN_DIR}/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:42658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:42657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:42060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:42656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":42660\"%" $HOME/.bcna/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:42317\"%; s%^address = \":8080\"%address = \":42080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:42090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:42091\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:42545\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:42546\"%" $HOME/.bcna/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CHAIN_PORT}658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${CHAIN_PORT}657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CHAIN_PORT}060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CHAIN_PORT}656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CHAIN_PORT}660\"%" $HOME/${CHAIN_DIR}/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${CHAIN_PORT}317\"%; s%^address = \":8080\"%address = \":${CHAIN_PORT}080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:${CHAIN_PORT}090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${CHAIN_PORT}091\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:${CHAIN_PORT}545\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:${CHAIN_PORT}546\"%" $HOME/${CHAIN_DIR}/config/app.toml
 ```
 
 ### Download latest chain snapshot
 
 ```bash
-curl -L https://snapshots.kjnodes.com/bitcanna/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.bcna
-[[ -f $HOME/.bcna/data/upgrade-info.json ]] && cp $HOME/.bcna/data/upgrade-info.json $HOME/.bcna/cosmovisor/genesis/upgrade-info.json
+curl -L https://snapshots.kjnodes.com/${CHAIN_NAME}/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/${CHAIN_DIR}
+[[ -f $HOME/${CHAIN_DIR}/data/upgrade-info.json ]] && cp $HOME/${CHAIN_DIR}/data/upgrade-info.json $HOME/${CHAIN_DIR}/cosmovisor/genesis/upgrade-info.json
 ```
 
 ### Start service and check the logs
 
 ```bash
-sudo systemctl start bcnad && sudo journalctl -u bcnad -f --no-hostname -o cat
+sudo systemctl start ${CHAIN_APP} && sudo journalctl -u ${CHAIN_APP} -f --no-hostname -o cat
 ```

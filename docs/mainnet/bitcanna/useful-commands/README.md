@@ -4,50 +4,50 @@ description: Useful set of commands for node operators. From key management to c
 
 # Useful commands
 
-<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/bitcanna.png" width="150" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/${PROJECT_NAME}.png" width="150" alt=""><figcaption></figcaption></figure>
 
 ## 🔑 Key management
 
 #### Add new key
 
 ```bash
-bcnad keys add wallet
+${CHAIN_APP} keys add wallet
 ```
 
 #### Recover existing key
 
 ```bash
-bcnad keys add wallet --recover
+${CHAIN_APP} keys add wallet --recover
 ```
 
 #### List all keys
 
 ```bash
-bcnad keys list
+${CHAIN_APP} keys list
 ```
 
 #### Delete key
 
 ```bash
-bcnad keys delete wallet
+${CHAIN_APP} keys delete wallet
 ```
 
 #### Export key to the file
 
 ```bash
-bcnad keys export wallet
+${CHAIN_APP} keys export wallet
 ```
 
 #### Import key from the file
 
 ```bash
-bcnad keys import wallet wallet.backup
+${CHAIN_APP} keys import wallet wallet.backup
 ```
 
 #### Query wallet balance
 
 ```bash
-bcnad q bank balances $(bcnad keys show wallet -a)
+${CHAIN_APP} q bank balances $(${CHAIN_APP} keys show wallet -a)
 ```
 
 ## 👷 Validator management
@@ -59,14 +59,14 @@ Please make sure you have adjusted **moniker**, **identity**, **details** and **
 #### Create new validator
 
 ```bash
-bcnad tx staking create-validator \
---amount=1000000ubcna \
---pubkey=$(bcnad tendermint show-validator) \
+${CHAIN_APP} tx staking create-validator \
+--amount=1000000${CHAIN_DENOM} \
+--pubkey=$(${CHAIN_APP} tendermint show-validator) \
 --moniker="YOUR_MONIKER_NAME" \
 --identity="YOUR_KEYBASE_ID" \
 --details="YOUR_DETAILS" \
 --website="YOUR_WEBSITE_URL"
---chain-id=bitcanna-1 \
+--chain-id=${CHAIN_ID} \
 --commission-rate=0.05 \
 --commission-max-rate=0.20 \
 --commission-max-change-rate=0.01 \
@@ -74,55 +74,55 @@ bcnad tx staking create-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
---gas-prices=0ubcna \
+--gas-prices=${MIN_GAS_PRICE} \
 -y
 ```
 
 #### Edit existing validator
 
 ```bash
-bcnad tx staking edit-validator \
+${CHAIN_APP} tx staking edit-validator \
 --moniker="YOUR_MONIKER_NAME" \
 --identity="YOUR_KEYBASE_ID" \
 --details="YOUR_DETAILS" \
 --website="YOUR_WEBSITE_URL"
---chain-id=bitcanna-1 \
+--chain-id=${CHAIN_ID} \
 --commission-rate=0.05 \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
---gas-prices=0ubcna \
+--gas-prices=${MIN_GAS_PRICE} \
 -y
 ```
 
 #### Unjail validator
 
 ```bash
-bcnad tx slashing unjail --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubcna -y
+${CHAIN_APP} tx slashing unjail --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
 ```
 
 #### Jail reason
 
 ```bash
-bcnad query slashing signing-info $(bcnad tendermint show-validator)
+${CHAIN_APP} query slashing signing-info $(${CHAIN_APP} tendermint show-validator)
 ```
 
 #### List all active validators
 
 ```bash
-bcnad q staking validators -oj --limit=3000 | jq '.validators[] | select(.status=="BOND_STATUS_BONDED")' | jq -r '(.tokens|tonumber/pow(10; 6)|floor|tostring) + " \t " + .description.moniker' | sort -gr | nl
+${CHAIN_APP} q staking validators -oj --limit=3000 | jq '.validators[] | select(.status=="BOND_STATUS_BONDED")' | jq -r '(.tokens|tonumber/pow(10; 6)|floor|tostring) + " \t " + .description.moniker' | sort -gr | nl
 ```
 
 #### List all inactive validators
 
 ```bash
-bcnad q staking validators -oj --limit=3000 | jq '.validators[] | select(.status=="BOND_STATUS_UNBONDED")' | jq -r '(.tokens|tonumber/pow(10; 6)|floor|tostring) + " \t " + .description.moniker' | sort -gr | nl
+${CHAIN_APP} q staking validators -oj --limit=3000 | jq '.validators[] | select(.status=="BOND_STATUS_UNBONDED")' | jq -r '(.tokens|tonumber/pow(10; 6)|floor|tostring) + " \t " + .description.moniker' | sort -gr | nl
 ```
 
 #### View validator details
 
 ```bash
-bcnad q staking validator $(bcnad keys show wallet --bech val -a)
+${CHAIN_APP} q staking validator $(${CHAIN_APP} keys show wallet --bech val -a)
 ```
 
 ## 💲 Token management
@@ -130,43 +130,43 @@ bcnad q staking validator $(bcnad keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-bcnad tx distribution withdraw-all-rewards --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubcna -y
+${CHAIN_APP} tx distribution withdraw-all-rewards --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-bcnad tx distribution withdraw-rewards $(bcnad keys show wallet --bech val -a) --commission --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubcna -y
+${CHAIN_APP} tx distribution withdraw-rewards $(${CHAIN_APP} keys show wallet --bech val -a) --commission --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-bcnad tx staking delegate $(bcnad keys show wallet --bech val -a) 1000000ubcna --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubcna -y
+${CHAIN_APP} tx staking delegate $(${CHAIN_APP} keys show wallet --bech val -a) 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-bcnad tx staking delegate <TO_VALOPER_ADDRESS> 1000000ubcna --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubcna -y
+${CHAIN_APP} tx staking delegate <TO_VALOPER_ADDRESS> 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
 ```
 
 #### Redelegate tokens to another validator
 
 ```bash
-bcnad tx staking redelegate $(bcnad keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000ubcna --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubcna -y
+${CHAIN_APP} tx staking redelegate $(${CHAIN_APP} keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
 ```
 
 #### Unbond tokens from your validator
 
 ```bash
-bcnad tx staking unbond $(bcnad keys show wallet --bech val -a) 1000000ubcna --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubcna -y
+${CHAIN_APP} tx staking unbond $(${CHAIN_APP} keys show wallet --bech val -a) 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
 ```
 
 #### Send tokens to the wallet
 
 ```bash
-bcnad tx bank send wallet <TO_WALLET_ADDRESS> 1000000ubcna --from wallet --chain-id bitcanna-1
+${CHAIN_APP} tx bank send wallet <TO_WALLET_ADDRESS> 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID}
 ```
 
 ## 🗳 Governance
@@ -174,37 +174,37 @@ bcnad tx bank send wallet <TO_WALLET_ADDRESS> 1000000ubcna --from wallet --chain
 #### List all proposals
 
 ```bash
-bcnad query gov proposals
+${CHAIN_APP} query gov proposals
 ```
 
 #### View proposal by id
 
 ```bash
-bcnad query gov proposal 1
+${CHAIN_APP} query gov proposal 1
 ```
 
 #### Vote 'Yes'
 
 ```bash
-bcnad tx gov vote 1 yes --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubcna -y
+${CHAIN_APP} tx gov vote 1 yes --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
 ```
 
 #### Vote 'No'
 
 ```bash
-bcnad tx gov vote 1 no --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubcna -y
+${CHAIN_APP} tx gov vote 1 no --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-bcnad tx gov vote 1 abstain --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubcna -y
+${CHAIN_APP} tx gov vote 1 abstain --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-bcnad tx gov vote 1 nowithveto --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubcna -y
+${CHAIN_APP} tx gov vote 1 nowithveto --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
 ```
 
 ## ⚡️ Utility
@@ -213,8 +213,8 @@ bcnad tx gov vote 1 nowithveto --from wallet --chain-id bitcanna-1 --gas-adjustm
 
 ```bash
 CUSTOM_PORT=10
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CUSTOM_PORT}658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${CUSTOM_PORT}657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CUSTOM_PORT}060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CUSTOM_PORT}656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CUSTOM_PORT}660\"%" $HOME/.bcna/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${CUSTOM_PORT}317\"%; s%^address = \":8080\"%address = \":${CUSTOM_PORT}080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:${CUSTOM_PORT}090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${CUSTOM_PORT}091\"%" $HOME/.bcna/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CUSTOM_PORT}658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${CUSTOM_PORT}657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CUSTOM_PORT}060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CUSTOM_PORT}656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CUSTOM_PORT}660\"%" $HOME/${CHAIN_DIR}/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${CUSTOM_PORT}317\"%; s%^address = \":8080\"%address = \":${CUSTOM_PORT}080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:${CUSTOM_PORT}090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${CUSTOM_PORT}091\"%" $HOME/${CHAIN_DIR}/config/app.toml
 ```
 
 #### Update Indexer
@@ -222,13 +222,13 @@ sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${CUSTO
 ##### Disable indexer
 
 ```bash
-sed -i -e 's|^indexer *=.*|indexer = "null"|' $HOME/.bcna/config/config.toml
+sed -i -e 's|^indexer *=.*|indexer = "null"|' $HOME/${CHAIN_DIR}/config/config.toml
 ```
 
 ##### Enable indexer
 
 ```bash
-sed -i -e 's|^indexer *=.*|indexer = "kv"|' $HOME/.bcna/config/config.toml
+sed -i -e 's|^indexer *=.*|indexer = "kv"|' $HOME/${CHAIN_DIR}/config/config.toml
 ```
 
 #### Update pruning
@@ -239,7 +239,7 @@ sed -i \
   -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
   -e 's|^pruning-keep-every *=.*|pruning-keep-every = "0"|' \
   -e 's|^pruning-interval *=.*|pruning-interval = "19"|' \
-  $HOME/.bcna/config/app.toml
+  $HOME/${CHAIN_DIR}/config/app.toml
 ```
 
 ## 🚨 Maintenance
@@ -247,49 +247,49 @@ sed -i \
 #### Get validator info
 
 ```bash
-bcnad status 2>&1 | jq .ValidatorInfo
+${CHAIN_APP} status 2>&1 | jq .ValidatorInfo
 ```
 
 #### Get sync info
 
 ```bash
-bcnad status 2>&1 | jq .SyncInfo
+${CHAIN_APP} status 2>&1 | jq .SyncInfo
 ```
 
 #### Get node peer
 
 ```bash
-echo $(bcnad tendermint show-node-id)'@'$(curl -s ifconfig.me)':'$(cat $HOME/.bcna/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
+echo $(${CHAIN_APP} tendermint show-node-id)'@'$(curl -s ifconfig.me)':'$(cat $HOME/${CHAIN_DIR}/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
 ```
 
 #### Check if validator key is correct
 
 ```bash
-[[ $(bcnad q staking validator $(bcnad keys show wallet --bech val -a) -oj | jq -r .consensus_pubkey.key) = $(bcnad status | jq -r .ValidatorInfo.PubKey.value) ]] && echo -e "\n\e[1m\e[32mTrue\e[0m\n" || echo -e "\n\e[1m\e[31mFalse\e[0m\n"
+[[ $(${CHAIN_APP} q staking validator $(${CHAIN_APP} keys show wallet --bech val -a) -oj | jq -r .consensus_pubkey.key) = $(${CHAIN_APP} status | jq -r .ValidatorInfo.PubKey.value) ]] && echo -e "\n\e[1m\e[32mTrue\e[0m\n" || echo -e "\n\e[1m\e[31mFalse\e[0m\n"
 ```
 
 #### Get live peers
 
 ```bash
-curl -sS http://localhost:42657/net_info | jq -r '.result.peers[] | "\(.node_info.id)@\(.remote_ip):\(.node_info.listen_addr)"' | awk -F ':' '{print $1":"$(NF)}'
+curl -sS http://localhost:${CHAIN_PORT}657/net_info | jq -r '.result.peers[] | "\(.node_info.id)@\(.remote_ip):\(.node_info.listen_addr)"' | awk -F ':' '{print $1":"$(NF)}'
 ```
 
 #### Set minimum gas price
 
 ```bash
-sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0ubcna\"/" $HOME/.bcna/config/app.toml
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0${CHAIN_DENOM}\"/" $HOME/${CHAIN_DIR}/config/app.toml
 ```
 
 #### Enable prometheus
 
 ```bash
-sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.bcna/config/config.toml
+sed -i -e "s/prometheus = false/prometheus = true/" $HOME/${CHAIN_DIR}/config/config.toml
 ```
 
 #### Reset chain data
 
 ```bash
-bcnad tendermint unsafe-reset-all --home $HOME/.bcna --keep-addr-book
+${CHAIN_APP} tendermint unsafe-reset-all --home $HOME/${CHAIN_DIR} --keep-addr-book
 ```
 
 #### Remove node
@@ -300,13 +300,13 @@ Please, before proceeding with the next step! All chain data will be lost! Make 
 
 ```bash
 cd $HOME
-sudo systemctl stop bcnad
-sudo systemctl disable bcnad
-sudo rm /etc/systemd/system/bcnad.service
+sudo systemctl stop ${CHAIN_APP}
+sudo systemctl disable ${CHAIN_APP}
+sudo rm /etc/systemd/system/${CHAIN_APP}.service
 sudo systemctl daemon-reload
-rm -f $(which bcnad)
-rm -rf $HOME/.bcna
-rm -rf $HOME/bcna
+rm -f $(which ${CHAIN_APP})
+rm -rf $HOME/${CHAIN_DIR}
+rm -rf $HOME/${GIT_DIR}
 ```
 
 ## ⚙️ Service Management
@@ -320,41 +320,41 @@ sudo systemctl daemon-reload
 #### Enable service
 
 ```bash
-sudo systemctl enable bcnad
+sudo systemctl enable ${CHAIN_APP}
 ```
 
 #### Disable service
 
 ```bash
-sudo systemctl disable bcnad
+sudo systemctl disable ${CHAIN_APP}
 ```
 
 #### Start service
 
 ```bash
-sudo systemctl start bcnad
+sudo systemctl start ${CHAIN_APP}
 ```
 
 #### Stop service
 
 ```bash
-sudo systemctl stop bcnad
+sudo systemctl stop ${CHAIN_APP}
 ```
 
 #### Restart service
 
 ```bash
-sudo systemctl restart bcnad
+sudo systemctl restart ${CHAIN_APP}
 ```
 
 #### Check service status
 
 ```bash
-sudo systemctl status bcnad
+sudo systemctl status ${CHAIN_APP}
 ```
 
 #### Check service logs
 
 ```bash
-sudo journalctl -u bcnad -f --no-hostname -o cat
+sudo journalctl -u ${CHAIN_APP} -f --no-hostname -o cat
 ```
