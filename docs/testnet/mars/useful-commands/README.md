@@ -306,7 +306,7 @@ sudo rm /etc/systemd/system/marsd.service
 sudo systemctl daemon-reload
 rm -f $(which marsd)
 rm -rf $HOME/.mars
-rm -rf $HOME/mars
+rm -rf $HOME/hub
 ```
 
 ## ⚙️ Service Management

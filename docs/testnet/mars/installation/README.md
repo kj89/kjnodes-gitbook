@@ -42,9 +42,9 @@ eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```bash
 # Clone project repository
 cd $HOME
-rm -rf mars
+rm -rf hub
 git clone https://github.com/mars-protocol/hub.git
-cd mars
+cd hub
 git checkout v1.0.0-rc7
 
 # Build binaries
