@@ -11,8 +11,9 @@ Agoric is an interoperable Proof-of-Stake chain in the Cosmos ecosystem.  Agoric
 
 ## Public endpoints
 
-* rpc: [https://agoric-testnet.rpc.kjnodes.com](https://agoric-testnet.rpc.kjnodes.com)
 * api: [https://agoric-testnet.api.kjnodes.com](https://agoric-testnet.api.kjnodes.com)
+* rpc: [https://agoric-testnet.rpc.kjnodes.com](https://agoric-testnet.rpc.kjnodes.com)
+* grpc: [https://agoric-testnet.grpc.kjnodes.com](https://agoric-testnet.grpc.kjnodes.com)
 
 ## Peering
 

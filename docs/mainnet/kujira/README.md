@@ -13,8 +13,9 @@ Kujira is a Layer 1 protocol built on Cosmos, which can be used for  hosting com
 [Restake with kjnodes](https://restake.app/kujira/kujiravaloper1tnuqj73jfn3724lqz34c27tuv80nv336sadqym) (every day at 08:00, 20:00)
 ## Public endpoints
 
-* rpc: [https://kujira.rpc.kjnodes.com](https://kujira.rpc.kjnodes.com)
 * api: [https://kujira.api.kjnodes.com](https://kujira.api.kjnodes.com)
+* rpc: [https://kujira.rpc.kjnodes.com](https://kujira.rpc.kjnodes.com)
+* grpc: [https://kujira.grpc.kjnodes.com](https://kujira.grpc.kjnodes.com)
 
 ## Peering
 

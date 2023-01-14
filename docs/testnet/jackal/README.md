@@ -11,8 +11,9 @@ The Jackal Protocol is a fast, scalable, and secure blockchain that empowers  in
 
 ## Public endpoints
 
-* rpc: [https://jackal-testnet.rpc.kjnodes.com](https://jackal-testnet.rpc.kjnodes.com)
 * api: [https://jackal-testnet.api.kjnodes.com](https://jackal-testnet.api.kjnodes.com)
+* rpc: [https://jackal-testnet.rpc.kjnodes.com](https://jackal-testnet.rpc.kjnodes.com)
+* grpc: [https://jackal-testnet.grpc.kjnodes.com](https://jackal-testnet.grpc.kjnodes.com)
 
 ## Peering
 

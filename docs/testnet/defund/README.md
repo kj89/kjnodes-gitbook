@@ -11,8 +11,9 @@ DeFund is an L1 blockchain built for building decentralized permissionless,  on-
 
 ## Public endpoints
 
-* rpc: [https://defund-testnet.rpc.kjnodes.com](https://defund-testnet.rpc.kjnodes.com)
 * api: [https://defund-testnet.api.kjnodes.com](https://defund-testnet.api.kjnodes.com)
+* rpc: [https://defund-testnet.rpc.kjnodes.com](https://defund-testnet.rpc.kjnodes.com)
+* grpc: [https://defund-testnet.grpc.kjnodes.com](https://defund-testnet.grpc.kjnodes.com)
 
 ## Peering
 

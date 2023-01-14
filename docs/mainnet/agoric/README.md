@@ -13,8 +13,9 @@ Agoric is an interoperable Proof-of-Stake chain in the Cosmos ecosystem.  Agoric
 [Restake with kjnodes](https://restake.app/agoric/agoricvaloper1ku5sm2twlsywdrp4wz3kfwgyrtqtp0lpr3nvk8) (every day at 08:00, 20:00)
 ## Public endpoints
 
-* rpc: [https://agoric.rpc.kjnodes.com](https://agoric.rpc.kjnodes.com)
 * api: [https://agoric.api.kjnodes.com](https://agoric.api.kjnodes.com)
+* rpc: [https://agoric.rpc.kjnodes.com](https://agoric.rpc.kjnodes.com)
+* grpc: [https://agoric.grpc.kjnodes.com](https://agoric.grpc.kjnodes.com)
 
 ## Peering
 

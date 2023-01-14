@@ -13,8 +13,9 @@ Stride is a blockchain ("zone") that provides liquidity for staked assets.  Usin
 [Restake with kjnodes](https://restake.app/stride/stridevaloper1j8gkhtllnp252l6g6zwzea30e7pvzqttr9768n) (every day at 08:00, 20:00)
 ## Public endpoints
 
-* rpc: [https://stride.rpc.kjnodes.com](https://stride.rpc.kjnodes.com)
 * api: [https://stride.api.kjnodes.com](https://stride.api.kjnodes.com)
+* rpc: [https://stride.rpc.kjnodes.com](https://stride.rpc.kjnodes.com)
+* grpc: [https://stride.grpc.kjnodes.com](https://stride.grpc.kjnodes.com)
 
 ## Peering
 

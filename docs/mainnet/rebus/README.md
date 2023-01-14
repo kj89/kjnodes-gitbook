@@ -13,8 +13,9 @@ Rebuschain is a platform that will provide DeFi (Decentralized Finance)  investm
 [Restake with kjnodes](https://restake.app/rebus/rebusvaloper1vndzy8y55ylgpmmsc34uy8rm6kqlml6ffs9lrv) (every day at 08:00, 20:00)
 ## Public endpoints
 
-* rpc: [https://rebus.rpc.kjnodes.com](https://rebus.rpc.kjnodes.com)
 * api: [https://rebus.api.kjnodes.com](https://rebus.api.kjnodes.com)
+* rpc: [https://rebus.rpc.kjnodes.com](https://rebus.rpc.kjnodes.com)
+* grpc: [https://rebus.grpc.kjnodes.com](https://rebus.grpc.kjnodes.com)
 
 ## Peering
 

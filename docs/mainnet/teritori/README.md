@@ -13,8 +13,9 @@ Teritori is a multi-chain hub designed to allow IBC and non IBC communities  to 
 [Restake with kjnodes](https://restake.app/teritori/torivaloper184ln03hkpt75uhrrr26f66kvcqvf4yn4nc2xjm) (every day at 08:00, 20:00)
 ## Public endpoints
 
-* rpc: [https://teritori.rpc.kjnodes.com](https://teritori.rpc.kjnodes.com)
 * api: [https://teritori.api.kjnodes.com](https://teritori.api.kjnodes.com)
+* rpc: [https://teritori.rpc.kjnodes.com](https://teritori.rpc.kjnodes.com)
+* grpc: [https://teritori.grpc.kjnodes.com](https://teritori.grpc.kjnodes.com)
 
 ## Peering
 

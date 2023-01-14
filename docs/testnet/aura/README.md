@@ -11,8 +11,9 @@ The Aura Network protocol allows users to mint, rate, track data,  or trade NFT 
 
 ## Public endpoints
 
-* rpc: [https://aura-testnet.rpc.kjnodes.com](https://aura-testnet.rpc.kjnodes.com)
 * api: [https://aura-testnet.api.kjnodes.com](https://aura-testnet.api.kjnodes.com)
+* rpc: [https://aura-testnet.rpc.kjnodes.com](https://aura-testnet.rpc.kjnodes.com)
+* grpc: [https://aura-testnet.grpc.kjnodes.com](https://aura-testnet.grpc.kjnodes.com)
 
 ## Peering
 

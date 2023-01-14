@@ -11,8 +11,9 @@ Lava powers a trustless market for RPC data access. The protocol  governs over p
 
 ## Public endpoints
 
-* rpc: [https://lava-testnet.rpc.kjnodes.com](https://lava-testnet.rpc.kjnodes.com)
 * api: [https://lava-testnet.api.kjnodes.com](https://lava-testnet.api.kjnodes.com)
+* rpc: [https://lava-testnet.rpc.kjnodes.com](https://lava-testnet.rpc.kjnodes.com)
+* grpc: [https://lava-testnet.grpc.kjnodes.com](https://lava-testnet.grpc.kjnodes.com)
 
 ## Peering
 

@@ -10,8 +10,9 @@ ${CHAIN_SHORT_DESCRIPTION}
 ${RESTAKE}
 ## Public endpoints
 
-* rpc: [https://${CHAIN_NAME}.rpc.kjnodes.com](https://${CHAIN_NAME}.rpc.kjnodes.com)
 * api: [https://${CHAIN_NAME}.api.kjnodes.com](https://${CHAIN_NAME}.api.kjnodes.com)
+* rpc: [https://${CHAIN_NAME}.rpc.kjnodes.com](https://${CHAIN_NAME}.rpc.kjnodes.com)
+* grpc: [https://${CHAIN_NAME}.grpc.kjnodes.com](https://${CHAIN_NAME}.grpc.kjnodes.com)
 
 ## Peering
 

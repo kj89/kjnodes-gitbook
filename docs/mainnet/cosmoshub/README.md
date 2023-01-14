@@ -11,8 +11,9 @@ The Cosmos Hub is the blockchain protocol underlying an  increasingly large numb
 
 ## Public endpoints
 
-* rpc: [https://cosmoshub.rpc.kjnodes.com](https://cosmoshub.rpc.kjnodes.com)
 * api: [https://cosmoshub.api.kjnodes.com](https://cosmoshub.api.kjnodes.com)
+* rpc: [https://cosmoshub.rpc.kjnodes.com](https://cosmoshub.rpc.kjnodes.com)
+* grpc: [https://cosmoshub.grpc.kjnodes.com](https://cosmoshub.grpc.kjnodes.com)
 
 ## Peering
 

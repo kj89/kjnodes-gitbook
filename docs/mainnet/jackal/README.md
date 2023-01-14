@@ -13,8 +13,9 @@ The Jackal Protocol is a fast, scalable, and secure blockchain that empowers  in
 [Restake with kjnodes](https://restake.app/jackal/jklvaloper1tr3wm3mdkz0tda6t7vavqnn7fe2g4un0f67xmt) (every day at 08:00, 20:00)
 ## Public endpoints
 
-* rpc: [https://jackal.rpc.kjnodes.com](https://jackal.rpc.kjnodes.com)
 * api: [https://jackal.api.kjnodes.com](https://jackal.api.kjnodes.com)
+* rpc: [https://jackal.rpc.kjnodes.com](https://jackal.rpc.kjnodes.com)
+* grpc: [https://jackal.grpc.kjnodes.com](https://jackal.grpc.kjnodes.com)
 
 ## Peering
 

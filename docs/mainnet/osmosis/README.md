@@ -11,8 +11,9 @@ Osmosis is a DEX protocol, which means it uses smart contracts  to determine the
 
 ## Public endpoints
 
-* rpc: [https://osmosis.rpc.kjnodes.com](https://osmosis.rpc.kjnodes.com)
 * api: [https://osmosis.api.kjnodes.com](https://osmosis.api.kjnodes.com)
+* rpc: [https://osmosis.rpc.kjnodes.com](https://osmosis.rpc.kjnodes.com)
+* grpc: [https://osmosis.grpc.kjnodes.com](https://osmosis.grpc.kjnodes.com)
 
 ## Peering
 
