@@ -13,7 +13,7 @@ Celestia is a minimal blockchain that only orders and publishes transactions and
 
 * api: [https://celestia-testnet.api.kjnodes.com](https://celestia-testnet.api.kjnodes.com)
 * rpc: [https://celestia-testnet.rpc.kjnodes.com](https://celestia-testnet.rpc.kjnodes.com)
-* grpc: [https://celestia-testnet.grpc.kjnodes.com](https://celestia-testnet.grpc.kjnodes.com)
+* grpc: https://celestia-testnet.grpc.kjnodes.com:443
 
 ## Peering
 

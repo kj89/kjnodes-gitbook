@@ -13,7 +13,7 @@ Haqq is the blockchain network that issues Islamic Coin,  its native cryptocurre
 
 * api: [https://haqq-testnet.api.kjnodes.com](https://haqq-testnet.api.kjnodes.com)
 * rpc: [https://haqq-testnet.rpc.kjnodes.com](https://haqq-testnet.rpc.kjnodes.com)
-* grpc: [https://haqq-testnet.grpc.kjnodes.com](https://haqq-testnet.grpc.kjnodes.com)
+* grpc: https://haqq-testnet.grpc.kjnodes.com:443
 
 ## Peering
 

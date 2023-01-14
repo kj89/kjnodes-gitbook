@@ -15,7 +15,7 @@ Teritori is a multi-chain hub designed to allow IBC and non IBC communities  to 
 
 * api: [https://teritori.api.kjnodes.com](https://teritori.api.kjnodes.com)
 * rpc: [https://teritori.rpc.kjnodes.com](https://teritori.rpc.kjnodes.com)
-* grpc: [https://teritori.grpc.kjnodes.com](https://teritori.grpc.kjnodes.com)
+* grpc: https://teritori.grpc.kjnodes.com:443
 
 ## Peering
 

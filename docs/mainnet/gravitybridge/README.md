@@ -15,7 +15,7 @@ An open, decentralized bridge that unlocks the power of  interoperability & liqu
 
 * api: [https://gravitybridge.api.kjnodes.com](https://gravitybridge.api.kjnodes.com)
 * rpc: [https://gravitybridge.rpc.kjnodes.com](https://gravitybridge.rpc.kjnodes.com)
-* grpc: [https://gravitybridge.grpc.kjnodes.com](https://gravitybridge.grpc.kjnodes.com)
+* grpc: https://gravitybridge.grpc.kjnodes.com:443
 
 ## Peering
 

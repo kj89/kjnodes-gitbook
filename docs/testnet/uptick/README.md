@@ -13,7 +13,7 @@ The Business Grade Multi-Chain NFT Infrastructure for Web 3.0
 
 * api: [https://uptick-testnet.api.kjnodes.com](https://uptick-testnet.api.kjnodes.com)
 * rpc: [https://uptick-testnet.rpc.kjnodes.com](https://uptick-testnet.rpc.kjnodes.com)
-* grpc: [https://uptick-testnet.grpc.kjnodes.com](https://uptick-testnet.grpc.kjnodes.com)
+* grpc: https://uptick-testnet.grpc.kjnodes.com:443
 
 ## Peering
 
