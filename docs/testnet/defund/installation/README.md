@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/defund.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: defund-private-3 | **Latest Version Tag**: v0.2.1 | **Custom Port**: 40
+**Chain ID**: defund-private-4 | **Latest Version Tag**: v0.2.2 | **Custom Port**: 40
 
 ### Setup validator name
 
@@ -32,7 +32,7 @@ sudo apt -qy upgrade
 
 ```bash
 sudo rm -rf /usr/local/go
-curl -Ls https://go.dev/dl/go1.19.4.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
+curl -Ls https://go.dev/dl/go1.19.5.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
 eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/golang.sh)
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf defund
 git clone https://github.com/defund-labs/defund.git
 cd defund
-git checkout v0.2.1
+git checkout v0.2.2
 
 # Build binaries
 make build
@@ -93,12 +93,12 @@ sudo systemctl enable defundd
 
 ```bash
 # Set node configuration
-defundd config chain-id defund-private-3
+defundd config chain-id defund-private-4
 defundd config keyring-backend test
 defundd config node tcp://localhost:40657
 
 # Initialize the node
-defundd init $MONIKER --chain-id defund-private-3
+defundd init $MONIKER --chain-id defund-private-4
 
 # Download genesis and addrbook
 curl -Ls https://snapshots.kjnodes.com/defund-testnet/genesis.json > $HOME/.defund/config/genesis.json

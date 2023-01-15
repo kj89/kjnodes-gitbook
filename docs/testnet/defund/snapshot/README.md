@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **04:30 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: cosmwasm20upgrade
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v0.2.2
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 9324319 | 1 hours | [snapshot (8.53 GB)](https://snapshots.kjnodes.com/defund-testnet/snapshot\_latest.tar.lz4) |
+| 10550 | 1 minutes | [snapshot (0.04 GB)](https://snapshots.kjnodes.com/defund-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
