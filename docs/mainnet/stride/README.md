@@ -15,7 +15,7 @@ Stride is a blockchain ("zone") that provides liquidity for staked assets.  Usin
 
 * api: [https://stride.api.kjnodes.com](https://stride.api.kjnodes.com)
 * rpc: [https://stride.rpc.kjnodes.com](https://stride.rpc.kjnodes.com)
-* grpc: https://stride.grpc.kjnodes.com:443
+* grpc: [https://stride.grpc.kjnodes.com](https://stride.grpc.kjnodes.com)
 
 ## Peering
 

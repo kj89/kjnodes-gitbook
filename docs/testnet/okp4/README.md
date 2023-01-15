@@ -13,7 +13,7 @@ OKP4 is a revolutionary public blockchain protocol where communities are incenti
 
 * api: [https://okp4-testnet.api.kjnodes.com](https://okp4-testnet.api.kjnodes.com)
 * rpc: [https://okp4-testnet.rpc.kjnodes.com](https://okp4-testnet.rpc.kjnodes.com)
-* grpc: https://okp4-testnet.grpc.kjnodes.com:443
+* grpc: [https://okp4-testnet.grpc.kjnodes.com](https://okp4-testnet.grpc.kjnodes.com)
 
 ## Peering
 

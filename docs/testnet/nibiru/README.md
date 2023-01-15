@@ -13,7 +13,7 @@ Nibiru is a sovereign proof-of-stake blockchain, open-source platform,  and memb
 
 * api: [https://nibiru-testnet.api.kjnodes.com](https://nibiru-testnet.api.kjnodes.com)
 * rpc: [https://nibiru-testnet.rpc.kjnodes.com](https://nibiru-testnet.rpc.kjnodes.com)
-* grpc: https://nibiru-testnet.grpc.kjnodes.com:443
+* grpc: [https://nibiru-testnet.grpc.kjnodes.com](https://nibiru-testnet.grpc.kjnodes.com)
 
 ## Peering
 

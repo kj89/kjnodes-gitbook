@@ -15,7 +15,7 @@ The Jackal Protocol is a fast, scalable, and secure blockchain that empowers  in
 
 * api: [https://jackal.api.kjnodes.com](https://jackal.api.kjnodes.com)
 * rpc: [https://jackal.rpc.kjnodes.com](https://jackal.rpc.kjnodes.com)
-* grpc: https://jackal.grpc.kjnodes.com:443
+* grpc: [https://jackal.grpc.kjnodes.com](https://jackal.grpc.kjnodes.com)
 
 ## Peering
 

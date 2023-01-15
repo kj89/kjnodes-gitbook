@@ -15,7 +15,7 @@ Rebuschain is a platform that will provide DeFi (Decentralized Finance)  investm
 
 * api: [https://rebus.api.kjnodes.com](https://rebus.api.kjnodes.com)
 * rpc: [https://rebus.rpc.kjnodes.com](https://rebus.rpc.kjnodes.com)
-* grpc: https://rebus.grpc.kjnodes.com:443
+* grpc: [https://rebus.grpc.kjnodes.com](https://rebus.grpc.kjnodes.com)
 
 ## Peering
 

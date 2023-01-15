@@ -13,7 +13,7 @@ Gitopia is the next-generation Code Collaboration Platform fuelled by  a decentr
 
 * api: [https://gitopia-testnet.api.kjnodes.com](https://gitopia-testnet.api.kjnodes.com)
 * rpc: [https://gitopia-testnet.rpc.kjnodes.com](https://gitopia-testnet.rpc.kjnodes.com)
-* grpc: https://gitopia-testnet.grpc.kjnodes.com:443
+* grpc: [https://gitopia-testnet.grpc.kjnodes.com](https://gitopia-testnet.grpc.kjnodes.com)
 
 ## Peering
 
