@@ -14,5 +14,5 @@ You just have to build new binaries and move it into cosmovisor upgrades directo
 {% endhint %}
 
 {% hint style='warning' %}
-Currently nibiru does not have any upgrades!
+Currently there are no upgrades available for nibiru-testnet-2!
 {% endhint %}
