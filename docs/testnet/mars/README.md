@@ -4,7 +4,7 @@
 
 Mars is a credit protocol for the future: non-custodial,  open-source, transparent, algorithmic and community-governed.
 
-**Chain ID**: ares-1 | **Latest Version Tag**: v1.0.0-rc7 | **Wasm**: OFF
+**Chain ID**: ares-1 | **Latest Version Tag**: v1.0.0-rc7 | **Wasm**: ON
 
 [Website](https://marsprotocol.io) | [Discord](https://discord.gg/marsprotocol) | [Twitter](https://twitter.com/mars_protocol)
 
@@ -36,6 +36,6 @@ curl -Ls https://snapshots.kjnodes.com/mars-testnet/addrbook.json > $HOME/.mars/
 
 **live-peers** (10)
 ```bash
-peers="d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:45656,0dd41dec3dcbaeddb2a17813abb7bbb83c85c7b8@65.109.92.48:58656,931d82351a5b96a1e9838008636b98c6e6b530bc@65.108.225.158:18556,4b66ccb20f36e46b980b54f7cd96ee8c4b603a90@65.108.72.233:12656,3f83067376eec1d4f97a585b76266cc5b951d02d@144.76.90.130:33656,fe8d614aa5899a97c11d0601ef50c3e7ce17d57b@65.108.233.109:18556,958433deb6f5c3a5d299705a2371f456a6f377f0@5.189.149.37:26656,3986b72739988aff6fbba4c2792f185d42779f2e@194.163.160.1:18556,00b62bc5966baeefface817ce7c7185d7ffc2ea4@65.108.221.37:26656,7810d82538ad81e2dde14996643f02b5b048eec9@194.163.155.84:44656"
+peers="b36f90fb7763876c5a5999fa3e993f6ef8063969@144.91.66.143:28656,4e58d31ab802dfc20beb398cf86efede5c7faf08@65.108.231.238:36656,e5577ecbf793ce92ce5993c4841a340a4c9db64b@65.108.204.119:46656,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:45656,e6f449525b92a02a8ec882869bc27364a3e2a705@37.187.143.4:45656,8e25b81c1eef854e46f85101d3607c8774323098@104.131.0.19:20656,140249a417f4fc3e0c94726bbb4a58d2beaf3ebc@65.108.75.107:29656,aea09eb8f366e388ca74e3f3ffe6909d5c89d1b9@95.214.55.155:22656,92c3c938d39362d743c3d621619642fc81d5eb0e@91.230.110.200:45656,b3ce16f4a93365cd665801faaa1e43efe1994975@65.109.106.91:25656"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.mars/config/config.toml
 ```
