@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/osmosis.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: osmosis-1 | **Latest Version Tag**: v13.1.0 | **Custom Port**: 29
+**Chain ID**: osmosis-1 | **Latest Version Tag**: v14.0.0 | **Custom Port**: 29
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf osmosis
 git clone https://github.com/osmosis-labs/osmosis.git
 cd osmosis
-git checkout v13.1.0
+git checkout v14.0.0
 
 # Build binaries
 make build
