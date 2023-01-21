@@ -8,6 +8,8 @@ Kujira is a Layer 1 protocol built on Cosmos, which can be used for  hosting com
 
 [Website](https://kujira.app) | [Discord](https://discord.gg/teamkujira) | [Twitter](https://twitter.com/TeamKujira)
 
+[Explorer](https://explorer.kjnodes.com/kujira)
+
 ## Restake
 
 [Restake with kjnodes](https://restake.app/kujira/kujiravaloper1tnuqj73jfn3724lqz34c27tuv80nv336sadqym) (every day at 08:00, 20:00)

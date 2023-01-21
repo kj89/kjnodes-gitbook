@@ -7,6 +7,8 @@ ${CHAIN_SHORT_DESCRIPTION}
 
 [Website](${CHAIN_WEBSITE}) | [Discord](${CHAIN_DISCORD}) | [Twitter](${CHAIN_TWITTER})
 
+[Explorer](https://explorer.kjnodes.com/${CHAIN_SERVICE})
+
 ${RESTAKE}
 ## Public endpoints
 

@@ -8,6 +8,8 @@ Nibiru is a sovereign proof-of-stake blockchain, open-source platform,  and memb
 
 [Website](https://nibiru.fi) | [Discord](https://discord.gg/nibiru) | [Twitter](https://twitter.com/NibiruChain)
 
+[Explorer](https://explorer.kjnodes.com/nibiru-testnet)
+
 
 ## Public endpoints
 

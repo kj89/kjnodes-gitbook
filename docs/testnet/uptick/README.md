@@ -8,6 +8,8 @@ The Business Grade Multi-Chain NFT Infrastructure for Web 3.0
 
 [Website](https://uptick.network) | [Discord](https://discord.gg/UzeHS7fu5H) | [Twitter](https://twitter.com/uptickproject)
 
+[Explorer](https://explorer.kjnodes.com/uptick-testnet)
+
 
 ## Public endpoints
 

@@ -8,6 +8,8 @@ The Aura Network protocol allows users to mint, rate, track data,  or trade NFT 
 
 [Website](https://aura.network) | [Discord](https://discord.gg/hpvF5QcWRf) | [Twitter](https://twitter.com/AuraNetworkHQ)
 
+[Explorer](https://explorer.kjnodes.com/aura-testnet)
+
 
 ## Public endpoints
 

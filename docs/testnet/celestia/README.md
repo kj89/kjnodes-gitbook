@@ -8,6 +8,8 @@ Celestia is a minimal blockchain that only orders and publishes transactions and
 
 [Website](https://celestia.org) | [Discord](https://discord.gg/celestiacommunity) | [Twitter](https://twitter.com/CelestiaOrg)
 
+[Explorer](https://explorer.kjnodes.com/celestia-testnet)
+
 
 ## Public endpoints
 

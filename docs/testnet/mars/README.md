@@ -8,6 +8,8 @@ Mars is a credit protocol for the future: non-custodial,  open-source, transpare
 
 [Website](https://marsprotocol.io) | [Discord](https://discord.gg/marsprotocol) | [Twitter](https://twitter.com/mars_protocol)
 
+[Explorer](https://explorer.kjnodes.com/mars-testnet)
+
 
 ## Public endpoints
 

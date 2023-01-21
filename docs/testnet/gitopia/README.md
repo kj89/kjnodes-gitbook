@@ -8,6 +8,8 @@ Gitopia is the next-generation Code Collaboration Platform fuelled by  a decentr
 
 [Website](https://gitopia.com/) | [Discord](https://discord.gg/hFTXCGNYDZ) | [Twitter](https://twitter.com/gitopiaDAO)
 
+[Explorer](https://explorer.kjnodes.com/gitopia-testnet)
+
 
 ## Public endpoints
 
