@@ -8,8 +8,9 @@ The Cosmos Hub is the blockchain protocol underlying an  increasingly large numb
 
 [Website](https://hub.cosmos.network) | [Discord](https://discord.gg/cosmosnetwork) | [Twitter](https://twitter.com/cosmoshub)
 
-[Explorer](https://explorer.kjnodes.com/cosmoshub)
 
+## Chain explorer
+[https://explorer.kjnodes.com/cosmoshub](https://explorer.kjnodes.com/cosmoshub)
 
 ## Public endpoints
 

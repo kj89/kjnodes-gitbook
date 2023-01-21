@@ -8,11 +8,12 @@ Agoric is an interoperable Proof-of-Stake chain in the Cosmos ecosystem.  Agoric
 
 [Website](https://agoric.com) | [Discord](https://discord.com/invite/qDW8DRes4s) | [Twitter](https://twitter.com/agoric)
 
-[Explorer](https://explorer.kjnodes.com/agoric)
-
 ## Restake
 
 [Restake with kjnodes](https://restake.app/agoric/agoricvaloper1ku5sm2twlsywdrp4wz3kfwgyrtqtp0lpr3nvk8) (every day at 08:00, 20:00)
+## Chain explorer
+[https://explorer.kjnodes.com/agoric](https://explorer.kjnodes.com/agoric)
+
 ## Public endpoints
 
 * api: [https://agoric.api.kjnodes.com](https://agoric.api.kjnodes.com)

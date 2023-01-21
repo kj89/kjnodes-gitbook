@@ -8,11 +8,12 @@ The Jackal Protocol is a fast, scalable, and secure blockchain that empowers  in
 
 [Website](https://jackalprotocol.com) | [Discord](https://discord.com/invite/5GKym3p6rj) | [Twitter](https://twitter.com/Jackal_Protocol)
 
-[Explorer](https://explorer.kjnodes.com/jackal)
-
 ## Restake
 
 [Restake with kjnodes](https://restake.app/jackal/jklvaloper1tr3wm3mdkz0tda6t7vavqnn7fe2g4un0f67xmt) (every day at 08:00, 20:00)
+## Chain explorer
+[https://explorer.kjnodes.com/jackal](https://explorer.kjnodes.com/jackal)
+
 ## Public endpoints
 
 * api: [https://jackal.api.kjnodes.com](https://jackal.api.kjnodes.com)

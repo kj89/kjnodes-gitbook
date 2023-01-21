@@ -8,8 +8,9 @@ OKP4 is a revolutionary public blockchain protocol where communities are incenti
 
 [Website](https://okp4.network) | [Discord](https://discord.gg/okp4) | [Twitter](https://twitter.com/OKP4_Protocol)
 
-[Explorer](https://explorer.kjnodes.com/okp4-testnet)
 
+## Chain explorer
+[https://explorer.kjnodes.com/okp4-testnet](https://explorer.kjnodes.com/okp4-testnet)
 
 ## Public endpoints
 

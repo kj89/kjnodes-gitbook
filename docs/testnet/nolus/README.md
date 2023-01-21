@@ -8,8 +8,9 @@ Nolus aims to be the leading DeFi Lease platform. The protocol  intends to becom
 
 [Website](https://www.nolus.io) | [Discord](https://discord.gg/nolus-protocol) | [Twitter](https://twitter.com/NolusProtocol)
 
-[Explorer](https://explorer.kjnodes.com/nolus-testnet)
 
+## Chain explorer
+[https://explorer.kjnodes.com/nolus-testnet](https://explorer.kjnodes.com/nolus-testnet)
 
 ## Public endpoints
 

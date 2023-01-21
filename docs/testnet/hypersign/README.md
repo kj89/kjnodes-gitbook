@@ -8,8 +8,9 @@ Hypersign is a decentralized identity layer for the internet, giving  users cont
 
 [Website](https://hypersign.id) | [Discord](https://discord.gg/DmuUjMrHVw) | [Twitter](https://twitter.com/hypersignchain)
 
-[Explorer](https://explorer.kjnodes.com/hypersign-testnet)
 
+## Chain explorer
+[https://explorer.kjnodes.com/hypersign-testnet](https://explorer.kjnodes.com/hypersign-testnet)
 
 ## Public endpoints
 

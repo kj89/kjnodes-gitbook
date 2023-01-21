@@ -8,11 +8,12 @@ An open, decentralized bridge that unlocks the power of  interoperability & liqu
 
 [Website](https://www.gravitybridge.net) | [Discord](https://discord.gg/ARV8dTSjAk) | [Twitter](https://twitter.com/gravity_bridge)
 
-[Explorer](https://explorer.kjnodes.com/gravitybridge)
-
 ## Restake
 
 [Restake with kjnodes](https://restake.app/gravitybridge/gravityvaloper1nw3uavthnjwsgrrjzav2wdg9m0pw7k4fc7hvlz) (every day at 08:00, 20:00)
+## Chain explorer
+[https://explorer.kjnodes.com/gravitybridge](https://explorer.kjnodes.com/gravitybridge)
+
 ## Public endpoints
 
 * api: [https://gravitybridge.api.kjnodes.com](https://gravitybridge.api.kjnodes.com)

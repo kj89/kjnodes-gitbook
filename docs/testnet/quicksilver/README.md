@@ -8,8 +8,9 @@ Quicksilver is a permissionless, sovereign Cosmos SDK zone providing liquid stak
 
 [Website](https://quicksilver.zone) | [Discord](https://discord.gg/quicksilverprotocol) | [Twitter](https://twitter.com/quicksilverzone)
 
-[Explorer](https://explorer.kjnodes.com/quicksilver-testnet)
 
+## Chain explorer
+[https://explorer.kjnodes.com/quicksilver-testnet](https://explorer.kjnodes.com/quicksilver-testnet)
 
 ## Public endpoints
 

@@ -7,9 +7,10 @@ ${CHAIN_SHORT_DESCRIPTION}
 
 [Website](${CHAIN_WEBSITE}) | [Discord](${CHAIN_DISCORD}) | [Twitter](${CHAIN_TWITTER})
 
-[Explorer](https://explorer.kjnodes.com/${CHAIN_SERVICE})
-
 ${RESTAKE}
+## Chain explorer
+[https://explorer.kjnodes.com/${CHAIN_SERVICE}](https://explorer.kjnodes.com/${CHAIN_SERVICE})
+
 ## Public endpoints
 
 * api: [https://${CHAIN_NAME}.api.kjnodes.com](https://${CHAIN_NAME}.api.kjnodes.com)

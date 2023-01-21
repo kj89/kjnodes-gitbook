@@ -8,8 +8,9 @@ Teritori is a multi-chain hub designed to allow IBC and non IBC communities  to 
 
 [Website](https://teritori.com) | [Discord](https://discord.gg/teritori) | [Twitter](https://twitter.com/TeritoriNetwork)
 
-[Explorer](https://explorer.kjnodes.com/teritori-testnet)
 
+## Chain explorer
+[https://explorer.kjnodes.com/teritori-testnet](https://explorer.kjnodes.com/teritori-testnet)
 
 ## Public endpoints
 

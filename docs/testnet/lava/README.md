@@ -8,8 +8,9 @@ Lava powers a trustless market for RPC data access. The protocol  governs over p
 
 [Website](https://lavanet.xyz) | [Discord](https://discord.com/invite/Tbk5NxTCdA) | [Twitter](https://twitter.com/lavanetxyz)
 
-[Explorer](https://explorer.kjnodes.com/lava-testnet)
 
+## Chain explorer
+[https://explorer.kjnodes.com/lava-testnet](https://explorer.kjnodes.com/lava-testnet)
 
 ## Public endpoints
 

@@ -8,8 +8,9 @@ BitCanna is a proof-of-stake (POS) decentralized payment network designed exclus
 
 [Website](https://www.bitcanna.io) | [Discord](https://discord.gg/9AVrzaVQvs) | [Twitter](https://twitter.com/BitCannaGlobal)
 
-[Explorer](https://explorer.kjnodes.com/bitcanna)
 
+## Chain explorer
+[https://explorer.kjnodes.com/bitcanna](https://explorer.kjnodes.com/bitcanna)
 
 ## Public endpoints
 
