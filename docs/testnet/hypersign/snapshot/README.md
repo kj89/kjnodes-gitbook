@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **00:30 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 1698487 | 20 minutes | [snapshot (0.53 GB)](https://snapshots.kjnodes.com/hypersign-testnet/snapshot\_latest.tar.lz4) |
+| 1698487 | 58 minutes | [snapshot (0.53 GB)](https://snapshots.kjnodes.com/hypersign-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
