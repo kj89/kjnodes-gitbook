@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/lava.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: lava-testnet-1 | **Latest Version Tag**: v0.4.3 | **Custom Port**: 44
+**Chain ID**: lava-testnet-1 | **Latest Version Tag**: v0.4.4 | **Custom Port**: 44
 
 ### Setup validator name
 
