@@ -4,7 +4,7 @@
 
 Lava powers a trustless market for RPC data access. The protocol  governs over peer to peer and private Provider-Application pairings,  ensuring high quality RPC service while creating consensus around data served.
 
-**Chain ID**: lava-testnet-1 | **Latest Version Tag**: v0.4.3 | **Wasm**: OFF
+**Chain ID**: lava-testnet-1 | **Latest Version Tag**: v0.4.4 | **Wasm**: OFF
 
 [Website](https://lavanet.xyz) | [Discord](https://discord.com/invite/Tbk5NxTCdA) | [Twitter](https://twitter.com/lavanetxyz)
 
@@ -37,8 +37,8 @@ d5519e378247dfb61dfe90652d1fe3e2b3005a5b@lava-testnet.rpc.kjnodes.com:44656
 curl -Ls https://snapshots.kjnodes.com/lava-testnet/addrbook.json > $HOME/.lava/config/addrbook.json
 ```
 
-**live-peers** (2)
+**live-peers** (7)
 ```bash
-peers="3c47fd1662bcb17a4713c23e41d7b25e34478b8e@103.19.25.157:26672,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:44656"
+peers="e95a721d63c1ba35911bc8c0a2cbdaeed410062d@185.219.142.94:26656,b3e6075c58755b4cd317353389106be5457296e2@185.196.20.246:26656,e61d0d5eb484e778d842da903cc49dd74a802a57@5.180.151.155:26656,8a089094624f27698f365402a059b8b810532805@207.180.229.129:26656,4e84acb55f6a222b31e92b0a00738ee8c46c0770@86.48.31.235:26656,ce67e9671e7212695a0a7ba27fb0c723ea6ccff0@35.225.146.131:26656,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:44656"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.lava/config/config.toml
 ```
