@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **02:30 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: v13
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v14
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 7936741 | 5 hours | [snapshot (11.1 GB)](https://snapshots.kjnodes.com/osmosis/snapshot\_latest.tar.lz4) |
+| 7947705 | 1 hours | [snapshot (11.06 GB)](https://snapshots.kjnodes.com/osmosis/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
