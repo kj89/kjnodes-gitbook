@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/stride.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: stride-1 | **Latest Version Tag**: v5.0.0 | **Custom Port**: 16
+**Chain ID**: stride-1 | **Latest Version Tag**: v5.1.1 | **Custom Port**: 16
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf stride
 git clone https://github.com/Stride-Labs/stride.git
 cd stride
-git checkout v5.0.0
+git checkout v5.1.1
 
 # Build binaries
 make build
