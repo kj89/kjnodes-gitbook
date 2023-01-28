@@ -37,8 +37,8 @@ d5519e378247dfb61dfe90652d1fe3e2b3005a5b@celestia-testnet.rpc.kjnodes.com:20656
 curl -Ls https://snapshots.kjnodes.com/celestia-testnet/addrbook.json > $HOME/.celestia-app/config/addrbook.json
 ```
 
-**live-peers** (7)
+**live-peers** (3)
 ```bash
-peers="e286b562eddc6fea1b2635f6623430225666fb2f@147.135.144.58:26656,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:20656,e6c28bd7cb4be3651942a9d93368651c97ee4733@65.108.65.36:20656,0d8b40858dcdf1e4370b2ed66b632bddf13a150d@75.119.143.147:26656,e7dc98812ba79276f045ed080a6910540ce37e2a@159.69.241.155:20656,eec289755259106bf29266c401bace003289c6be@35.234.94.146:26656,e0c364f5bd46d111ab17c370203f784140fd0466@116.203.35.82:25656"
+peers="3ad7f2d36f5e15d902c7aff7a305bea40f03f95c@163.172.111.148:26656,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:20656,1f243a32a4c741e6838f247350f0aa7655ea264e@173.249.40.87:26656"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.celestia-app/config/config.toml
 ```
