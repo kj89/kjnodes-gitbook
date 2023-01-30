@@ -74,7 +74,7 @@ strided tx staking create-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
---gas-prices=0ustrd \
+--gas-prices=0.001ustrd \
 -y
 ```
 
@@ -91,14 +91,14 @@ strided tx staking edit-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
---gas-prices=0ustrd \
+--gas-prices=0.001ustrd \
 -y
 ```
 
 #### Unjail validator
 
 ```bash
-strided tx slashing unjail --from wallet --chain-id stride-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ustrd -y
+strided tx slashing unjail --from wallet --chain-id stride-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.001ustrd -y
 ```
 
 #### Jail reason
@@ -130,37 +130,37 @@ strided q staking validator $(strided keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-strided tx distribution withdraw-all-rewards --from wallet --chain-id stride-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ustrd -y
+strided tx distribution withdraw-all-rewards --from wallet --chain-id stride-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.001ustrd -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-strided tx distribution withdraw-rewards $(strided keys show wallet --bech val -a) --commission --from wallet --chain-id stride-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ustrd -y
+strided tx distribution withdraw-rewards $(strided keys show wallet --bech val -a) --commission --from wallet --chain-id stride-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.001ustrd -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-strided tx staking delegate $(strided keys show wallet --bech val -a) 1000000ustrd --from wallet --chain-id stride-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ustrd -y
+strided tx staking delegate $(strided keys show wallet --bech val -a) 1000000ustrd --from wallet --chain-id stride-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.001ustrd -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-strided tx staking delegate <TO_VALOPER_ADDRESS> 1000000ustrd --from wallet --chain-id stride-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ustrd -y
+strided tx staking delegate <TO_VALOPER_ADDRESS> 1000000ustrd --from wallet --chain-id stride-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.001ustrd -y
 ```
 
 #### Redelegate tokens to another validator
 
 ```bash
-strided tx staking redelegate $(strided keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000ustrd --from wallet --chain-id stride-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ustrd -y
+strided tx staking redelegate $(strided keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000ustrd --from wallet --chain-id stride-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.001ustrd -y
 ```
 
 #### Unbond tokens from your validator
 
 ```bash
-strided tx staking unbond $(strided keys show wallet --bech val -a) 1000000ustrd --from wallet --chain-id stride-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ustrd -y
+strided tx staking unbond $(strided keys show wallet --bech val -a) 1000000ustrd --from wallet --chain-id stride-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.001ustrd -y
 ```
 
 #### Send tokens to the wallet
@@ -186,25 +186,25 @@ strided query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-strided tx gov vote 1 yes --from wallet --chain-id stride-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ustrd -y
+strided tx gov vote 1 yes --from wallet --chain-id stride-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.001ustrd -y
 ```
 
 #### Vote 'No'
 
 ```bash
-strided tx gov vote 1 no --from wallet --chain-id stride-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ustrd -y
+strided tx gov vote 1 no --from wallet --chain-id stride-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.001ustrd -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-strided tx gov vote 1 abstain --from wallet --chain-id stride-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ustrd -y
+strided tx gov vote 1 abstain --from wallet --chain-id stride-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.001ustrd -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-strided tx gov vote 1 nowithveto --from wallet --chain-id stride-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ustrd -y
+strided tx gov vote 1 nowithveto --from wallet --chain-id stride-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.001ustrd -y
 ```
 
 ## ⚡️ Utility

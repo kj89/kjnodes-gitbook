@@ -108,7 +108,7 @@ curl -Ls https://snapshots.kjnodes.com/stride/addrbook.json > $HOME/.stride/conf
 sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@stride.rpc.kjnodes.com:16659\"|" $HOME/.stride/config/config.toml
 
 # Set minimum gas price
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0ustrd\"|" $HOME/.stride/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001ustrd\"|" $HOME/.stride/config/app.toml
 
 # Set pruning
 sed -i \
