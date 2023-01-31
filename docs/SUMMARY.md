@@ -50,6 +50,13 @@
   * [State sync](mainnet/kujira/state-sync/README.md)
   * [Useful commands](mainnet/kujira/useful-commands/README.md)
 
+* [Mars](mainnet/mars/README.md)
+  * [Installation](mainnet/mars/installation/README.md)
+  * [Upgrade](mainnet/mars/upgrade/README.md)
+  * [Snapshot](mainnet/mars/snapshot/README.md)
+  * [State sync](mainnet/mars/state-sync/README.md)
+  * [Useful commands](mainnet/mars/useful-commands/README.md)
+
 * [Stride](mainnet/stride/README.md)
   * [Installation](mainnet/stride/installation/README.md)
   * [Upgrade](mainnet/stride/upgrade/README.md)
