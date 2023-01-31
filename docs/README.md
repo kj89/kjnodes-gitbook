@@ -18,8 +18,6 @@ description: Discover base tools contributed to the projects by kjnodes team.
 
 <img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/kujira.png" alt="" data-size="line"> [Kujira](mainnet/kujira/)
 
-<img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/mars.png" alt="" data-size="line"> [Mars](mainnet/mars/)
-
 <img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/stride.png" alt="" data-size="line"> [Stride](mainnet/stride/)
 
 <img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/teritori.png" alt="" data-size="line"> [Teritori](mainnet/teritori/)
