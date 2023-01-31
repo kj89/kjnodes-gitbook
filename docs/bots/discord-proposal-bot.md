@@ -18,7 +18,7 @@ Bot checks the proposals on chain every minute using our RPC node, if new propos
 
 ## How to use
 
-If you are interested and want us to implement bot into your Discord server please reach out at admin@kjnodes.com
+If you are interested and want us to implement bot into your Discord server please reach out at [admin@kjnodes.com](mailto:admin@kjnodes.com)
 
 {% hint style="info" %}
 As we fully manage current service our bot support chains where we operate our own RPC endpoints.
