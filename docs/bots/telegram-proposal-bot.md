@@ -4,11 +4,11 @@ description: >-
   notify its subscribers every time when new proposal kicks in.
 ---
 
-# Proposal Bot
+# Telegram Proposal Bot
 
 ## Intro
 
-Kjnodes team have created bots to keep validators notified when there is a new proposal on the chain. To distinguish mainnet from testnet we have created two separate bots that can be found by following links provided below.
+Kjnodes team have built bots to keep validators notified when there is a new proposal on the chain. To distinguish mainnet from testnet we have created two separate bots that can be found by following links provided below.
 
 [🤖 Proposal Bot | kjnodes](https://t.me/kjnodes\_proposal\_bot)
 
