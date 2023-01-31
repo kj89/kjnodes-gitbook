@@ -26,6 +26,6 @@ Currently bots support chains where we operate our own RPC endpoints. List of su
 
 That's it! You are all set! Here is some example of the notification from the bot.
 
-<figure><img src="../.gitbook/assets/proposal_bot.png" alt=""><figcaption><p>Bot notification message</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Bot notification message</p></figcaption></figure>
 
 From kjnodes with :heart:
