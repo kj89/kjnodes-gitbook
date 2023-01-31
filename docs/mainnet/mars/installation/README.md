@@ -101,11 +101,10 @@ marsd config node tcp://localhost:45657
 marsd init $MONIKER --chain-id mars-1
 
 # Download genesis and addrbook
-curl -Ls https://snapshots.kjnodes.com/mars/genesis.json > $HOME/.mars/config/genesis.json
-curl -Ls https://snapshots.kjnodes.com/mars/addrbook.json > $HOME/.mars/config/addrbook.json
+curl -Ls https://raw.githubusercontent.com/mars-protocol/networks/main/mars-1/genesis.json > $HOME/.mars/config/genesis.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@mars.rpc.kjnodes.com:45659\"|" $HOME/.mars/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"91911acca20b84850e3317cd3a0ae1cf31e9ac3c@65.108.142.160:26656\"|" $HOME/.mars/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0umars\"|" $HOME/.mars/config/app.toml
@@ -121,13 +120,6 @@ sed -i \
 # Set custom ports
 sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:45658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:45657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:45060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:45656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":45660\"%" $HOME/.mars/config/config.toml
 sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:45317\"%; s%^address = \":8080\"%address = \":45080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:45090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:45091\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:45545\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:45546\"%" $HOME/.mars/config/app.toml
-```
-
-### Download latest chain snapshot
-
-```bash
-curl -L https://snapshots.kjnodes.com/mars/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.mars
-[[ -f $HOME/.mars/data/upgrade-info.json ]] && cp $HOME/.mars/data/upgrade-info.json $HOME/.mars/cosmovisor/genesis/upgrade-info.json
 ```
 
 ### Start service and check the logs
