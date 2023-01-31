@@ -8,7 +8,7 @@ description: >-
 
 ## Intro
 
-As a contribution to all Cosmos ecosystem our team has built this bot to keep chain governance participants notified when there is a new proposal on chain.
+As a contribution to Cosmos ecosystem our team has built this bot to keep chain governance participants notified when there is a new proposal on chain.
 
 ## How it works
 
