@@ -8,7 +8,7 @@ Sei is a Layer 1 blockchain on Cosmos with orderbook-focused infrastructure at i
 
 [Website](https://www.seinetwork.io) | [Discord](https://discord.gg/sei) | [Twitter](https://twitter.com/SeiNetwork)
 
-[![Stake with kjnodes](https://i.ibb.co/cr44Q8j/button-stake-with-kjnodes.png)](https://restake.app/sei-testnet/None)
+
 
 
 ## Chain explorer

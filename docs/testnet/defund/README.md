@@ -8,7 +8,7 @@ DeFund is an L1 blockchain built for building decentralized permissionless,  on-
 
 [Website](https://www.defund.app) | [Discord](https://discord.gg/FV26pRPZ3P) | [Twitter](https://twitter.com/defund_finance)
 
-[![Stake with kjnodes](https://i.ibb.co/cr44Q8j/button-stake-with-kjnodes.png)](https://restake.app/defund-testnet/None)
+
 
 
 ## Chain explorer

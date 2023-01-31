@@ -8,7 +8,7 @@ Haqq is the blockchain network that issues Islamic Coin,  its native cryptocurre
 
 [Website](https://islamiccoin.net) | [Discord](https://discord.gg/hU9MHG5kZq) | [Twitter](https://twitter.com/Islamic_Coin)
 
-[![Stake with kjnodes](https://i.ibb.co/cr44Q8j/button-stake-with-kjnodes.png)](https://restake.app/haqq-testnet/None)
+
 
 
 ## Chain explorer

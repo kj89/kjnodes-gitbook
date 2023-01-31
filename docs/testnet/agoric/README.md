@@ -8,7 +8,7 @@ Agoric is an interoperable Proof-of-Stake chain in the Cosmos ecosystem.  Agoric
 
 [Website](https://agoric.com) | [Discord](https://discord.com/invite/qDW8DRes4s) | [Twitter](https://twitter.com/agoric)
 
-[![Stake with kjnodes](https://i.ibb.co/cr44Q8j/button-stake-with-kjnodes.png)](https://restake.app/agoric-testnet/None)
+
 
 
 ## Chain explorer
