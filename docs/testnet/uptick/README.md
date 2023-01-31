@@ -8,6 +8,8 @@ The Business Grade Multi-Chain NFT Infrastructure for Web 3.0
 
 [Website](https://uptick.network) | [Discord](https://discord.gg/UzeHS7fu5H) | [Twitter](https://twitter.com/uptickproject)
 
+[![Stake with kjnodes](https://i.ibb.co/cr44Q8j/button-stake-with-kjnodes.png)](https://restake.app/uptick-testnet/None)
+
 
 ## Chain explorer
 [https://explorer.kjnodes.com/uptick-testnet](https://explorer.kjnodes.com/uptick-testnet)

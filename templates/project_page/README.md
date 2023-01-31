@@ -7,6 +7,8 @@ ${CHAIN_SHORT_DESCRIPTION}
 
 [Website](${CHAIN_WEBSITE}) | [Discord](${CHAIN_DISCORD}) | [Twitter](${CHAIN_TWITTER})
 
+${STAKE_BUTTON}
+
 ${RESTAKE}
 ## Chain explorer
 [https://explorer.kjnodes.com/${CHAIN_SERVICE}](https://explorer.kjnodes.com/${CHAIN_SERVICE})

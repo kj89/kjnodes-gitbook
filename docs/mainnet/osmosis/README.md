@@ -8,6 +8,8 @@ Osmosis is a DEX protocol, which means it uses smart contracts  to determine the
 
 [Website](https://osmosis.zone) | [Discord](https://discord.gg/osmosis) | [Twitter](https://twitter.com/osmosiszone)
 
+[![Stake with kjnodes](https://i.ibb.co/cr44Q8j/button-stake-with-kjnodes.png)](https://restake.app/osmosis/None)
+
 
 ## Chain explorer
 [https://explorer.kjnodes.com/osmosis](https://explorer.kjnodes.com/osmosis)

@@ -8,6 +8,8 @@ Hypersign is a decentralized identity layer for the internet, giving  users cont
 
 [Website](https://hypersign.id) | [Discord](https://discord.gg/DmuUjMrHVw) | [Twitter](https://twitter.com/hypersignchain)
 
+[![Stake with kjnodes](https://i.ibb.co/cr44Q8j/button-stake-with-kjnodes.png)](https://restake.app/hypersign-testnet/None)
+
 
 ## Chain explorer
 [https://explorer.kjnodes.com/hypersign-testnet](https://explorer.kjnodes.com/hypersign-testnet)
@@ -39,6 +41,6 @@ curl -Ls https://snapshots.kjnodes.com/hypersign-testnet/addrbook.json > $HOME/.
 
 **live-peers** (10)
 ```bash
-peers="55b3cf307182091e60b774712733231a8cc7f448@89.163.132.156:31656,1e3f0aeb6f2a2017b122af2461a75c9695790954@65.108.233.109:10956,c1b6d86f46eab9d0aa2e4399cddb9cf05d13621a@65.108.206.118:60556,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:31656,5e4fc955b23ab00f6a07cb6d56e89aafac0c85ff@167.86.85.122:26656,91089c0911b59f59fe2ec79fdae017f9beefbbfd@65.108.101.158:26656,d7c9b9a3c3a6c5f4ccdfb37a8358755b277271c1@3.110.226.164:26656,3a9defcd334cefd6b8143ec1ecd8be5e51f1c1c5@95.214.53.46:46656,ca474a224fe7eaaefa6d336a205459b33fb30654@3.90.236.173:26656,610843eda2f0388cb8e75917e8c1f63350bd3bd1@154.26.131.130:16656"
+peers="1de2abae74a4c5fd7d96d9869ef02187f81498f0@134.209.238.66:26656,1e3f0aeb6f2a2017b122af2461a75c9695790954@65.108.233.109:10956,1380864bb38481fef4b2358026a5ed53fc027679@95.214.52.206:26656,56615e02aa90e35a20a1fc4c46e78bb00956f07b@192.118.76.199:26681,7b67ef0b793f09bc1bc76d29aa1503aab8a224ad@88.99.161.162:15656,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:31656,bd2ae9f1c42183104719f7c44be078bb7d282a61@65.109.92.241:11056,d7c9b9a3c3a6c5f4ccdfb37a8358755b277271c1@3.110.226.164:26656,c20f2216b56cb24921b688a6cffc7fe09799a069@162.55.103.44:26656,ce6686036f6554deb0490103dcc201172e7c3f2f@81.0.220.131:26656"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.hid-node/config/config.toml
 ```

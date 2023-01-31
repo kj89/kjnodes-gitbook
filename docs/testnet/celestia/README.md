@@ -8,6 +8,8 @@ Celestia is a minimal blockchain that only orders and publishes transactions and
 
 [Website](https://celestia.org) | [Discord](https://discord.gg/celestiacommunity) | [Twitter](https://twitter.com/CelestiaOrg)
 
+[![Stake with kjnodes](https://i.ibb.co/cr44Q8j/button-stake-with-kjnodes.png)](https://restake.app/celestia-testnet/None)
+
 
 ## Chain explorer
 [https://explorer.kjnodes.com/celestia-testnet](https://explorer.kjnodes.com/celestia-testnet)
@@ -37,8 +39,8 @@ d5519e378247dfb61dfe90652d1fe3e2b3005a5b@celestia-testnet.rpc.kjnodes.com:20656
 curl -Ls https://snapshots.kjnodes.com/celestia-testnet/addrbook.json > $HOME/.celestia-app/config/addrbook.json
 ```
 
-**live-peers** (7)
+**live-peers** (6)
 ```bash
-peers="e6c28bd7cb4be3651942a9d93368651c97ee4733@65.108.65.36:20656,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:20656,78091973241d5638259f518f3b19f6320b7fb451@135.181.119.59:20656,1472a4f4bdfd5933c68399f6b47943fc2b24cf9f@185.196.20.114:26656,f98ee535cea1baf4a8fa438d1cd4e69ac836791f@65.21.234.47:26826,3ad7f2d36f5e15d902c7aff7a305bea40f03f95c@163.172.111.148:26656,40e062988c54671aa7a55c6efaa73d3c0ae4920a@34.133.218.0:26656"
+peers="6a03b088a9e183e7faa897afcc6b50c6971a4cd5@159.69.5.164:26656,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:20656,e6c28bd7cb4be3651942a9d93368651c97ee4733@65.108.65.36:20656,3ad7f2d36f5e15d902c7aff7a305bea40f03f95c@163.172.111.148:26656,e8906342e657ace92e1ed8599f0949da8dd75fbd@146.19.24.52:20656,eec289755259106bf29266c401bace003289c6be@35.234.94.146:26656"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.celestia-app/config/config.toml
 ```

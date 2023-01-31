@@ -8,6 +8,8 @@ OLLO is a sovereign L1 chain built on the Cosmos network providing  next-gen tra
 
 [Website](https://www.ollostation.zone) | [Discord](https://discord.com/invite/GxBqZ9mSSm) | [Twitter](https://twitter.com/OLLOStation)
 
+[![Stake with kjnodes](https://i.ibb.co/cr44Q8j/button-stake-with-kjnodes.png)](https://restake.app/ollo-testnet/None)
+
 
 ## Chain explorer
 [https://explorer.kjnodes.com/ollo-testnet](https://explorer.kjnodes.com/ollo-testnet)
