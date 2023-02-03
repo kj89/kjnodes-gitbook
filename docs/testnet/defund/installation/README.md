@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/defund.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: defund-private-4 | **Latest Version Tag**: v0.2.3 | **Custom Port**: 40
+**Chain ID**: defund-private-4 | **Latest Version Tag**: v0.2.4 | **Custom Port**: 40
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf defund
 git clone https://github.com/defund-labs/defund.git
 cd defund
-git checkout v0.2.3
+git checkout v0.2.4
 
 # Build binaries
 make build
