@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/rebus.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: reb_1111-1 | **Latest Version Tag**: v0.2.0 | **Custom Port**: 21
+**Chain ID**: reb_1111-1 | **Latest Version Tag**: v0.3.0 | **Custom Port**: 21
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf rebus.core
 git clone https://github.com/rebuschain/rebus.core.git
 cd rebus.core
-git checkout v0.2.0
+git checkout v0.3.0
 
 # Build binaries
 make build
