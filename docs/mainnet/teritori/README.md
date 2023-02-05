@@ -12,7 +12,7 @@ Teritori is a multi-chain hub designed to allow IBC and non IBC communities  to 
 
 ## Restake
 
-[Restake with kjnodes](https://restake.app/teritori/torivaloper184ln03hkpt75uhrrr26f66kvcqvf4yn4nc2xjm) (every day at every 5 minutes)
+[Restake with kjnodes](https://restake.app/teritori/torivaloper184ln03hkpt75uhrrr26f66kvcqvf4yn4nc2xjm) (every 5 minutes)
 ## Chain explorer
 [https://explorer.kjnodes.com/teritori](https://explorer.kjnodes.com/teritori)
 

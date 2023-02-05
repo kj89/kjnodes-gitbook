@@ -12,7 +12,7 @@ An open, decentralized bridge that unlocks the power of  interoperability & liqu
 
 ## Restake
 
-[Restake with kjnodes](https://restake.app/gravitybridge/gravityvaloper1nw3uavthnjwsgrrjzav2wdg9m0pw7k4fc7hvlz) (every day at every 5 minutes)
+[Restake with kjnodes](https://restake.app/gravitybridge/gravityvaloper1nw3uavthnjwsgrrjzav2wdg9m0pw7k4fc7hvlz) (every 5 minutes)
 ## Chain explorer
 [https://explorer.kjnodes.com/gravitybridge](https://explorer.kjnodes.com/gravitybridge)
 
