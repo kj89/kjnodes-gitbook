@@ -12,7 +12,7 @@ An open, decentralized bridge that unlocks the power of  interoperability & liqu
 
 ## Restake
 
-[Restake with kjnodes](https://restake.app/gravitybridge/gravityvaloper1nw3uavthnjwsgrrjzav2wdg9m0pw7k4fc7hvlz) (every day at 08:00, 20:00)
+[Restake with kjnodes](https://restake.app/gravitybridge/gravityvaloper1nw3uavthnjwsgrrjzav2wdg9m0pw7k4fc7hvlz) (every day at every 5 minutes)
 ## Chain explorer
 [https://explorer.kjnodes.com/gravitybridge](https://explorer.kjnodes.com/gravitybridge)
 
@@ -41,8 +41,8 @@ d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@gravitybridge.rpc.kjnodes.com:26656
 curl -Ls https://snapshots.kjnodes.com/gravitybridge/addrbook.json > $HOME/.gravity/config/addrbook.json
 ```
 
-**live-peers** (9)
+**live-peers** (8)
 ```bash
-peers="930f874c17eff988acd8eb761fea8d4873ea6eb3@185.249.227.231:29656,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:26656,e5a11a1a8a36f0910755d0fc3546e8e3198283da@18.156.199.4:26656,0b0f045fb385118c3a8f32138748922ac6358103@66.172.36.133:12656,b19d431eeaf02ffb3d0a633ae936894c4c0353c7@173.249.41.78:26656,c4385ec685f08dfd635df6d21be9dfbdfdb52896@161.97.182.71:26656,328f1a98dd30612a51f265c931187b4c9ced6270@167.86.99.6:26656,4bebde6a1b2907bd3cc167d2802b909770cbfda1@137.184.197.230:26656,5eac126c1b13eb220f8deb1239d9bcf713338ea3@15.235.13.145:26656"
+peers="ca4270ebed73b4d0982450aac16fe08860410fac@142.132.248.138:26626,dc840076d50cf601da3ca708bc3665c7d480ff98@65.108.13.74:26656,4e1ea298ef66eec3ec320171f90336a1e4bb13ea@51.81.107.95:10256,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:26656,7a05c69e10c76348e4fadeda5e0803ff4804e183@188.34.180.92:26656,a23523a46e1c6beefde15210f419407c59c5f6f2@31.7.207.16:26656,c4385ec685f08dfd635df6d21be9dfbdfdb52896@161.97.182.71:26656,82bf13b3c0af8cd0ea69c64ff43e61a5b7dbae7f@176.126.87.56:26656"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.gravity/config/config.toml
 ```

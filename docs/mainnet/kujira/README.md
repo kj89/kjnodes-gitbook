@@ -12,7 +12,7 @@ Kujira is a Layer 1 protocol built on Cosmos, which can be used for  hosting com
 
 ## Restake
 
-[Restake with kjnodes](https://restake.app/kujira/kujiravaloper1tnuqj73jfn3724lqz34c27tuv80nv336sadqym) (every day at 08:00, 20:00)
+[Restake with kjnodes](https://restake.app/kujira/kujiravaloper1tnuqj73jfn3724lqz34c27tuv80nv336sadqym) (every day at every 5 minutes)
 ## Chain explorer
 [https://explorer.kjnodes.com/kujira](https://explorer.kjnodes.com/kujira)
 
@@ -43,6 +43,6 @@ curl -Ls https://snapshots.kjnodes.com/kujira/addrbook.json > $HOME/.kujira/conf
 
 **live-peers** (10)
 ```bash
-peers="8a210f1bcfc9015a7bc18dcc5add29c0dce3f2dc@95.217.70.62:26656,bed81e8d4243382da745f3e33c1a0d749bfe7ade@185.217.127.128:26656,66c551ebcb68fe343c7e2720593dc47426813a68@93.189.30.101:26656,d6f2eee997d108d4fde5683e31d678427376dfce@77.68.27.75:26656,4ae125f9c9b8e2f1ac83749c2209e26056b97851@65.108.238.103:11856,d3427d444b6909529d73025fe32a73dfea7b90d1@148.251.85.115:26656,a7d96dc929824613315dcc1c90fee119f28cc51f@134.65.193.158:26656,6cceba286b498d4a1931f85e35ea0fa433373057@88.198.128.174:26656,4e1c2471efb89239fb04a4b75f9f87177fd91d00@95.217.82.78:26656,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:13656"
+peers="4ae125f9c9b8e2f1ac83749c2209e26056b97851@65.108.238.103:11856,a7d96dc929824613315dcc1c90fee119f28cc51f@134.65.193.158:26656,82588f011491c6100d922d133f52fc23460b9231@95.217.91.238:26656,b29969a2384159db8f8052bc118066bd067157c4@85.215.105.19:15602,213dbb8301ce1c0f5662a9b723bd613f15e1dd4e@75.119.157.167:30656,bba10290da32f3cb41e15c3a192413666ce05cee@5.9.208.14:26656,d6d14f99ef25c8ffee6fa4afca40fece0c1ab9fe@107.181.229.154:20656,eb9742d81b436b95e324816794229a9efdaf8ea8@142.132.155.170:26656,8d59c2958dfb2f852b201cbaa60743c771ce338b@147.135.45.32:26656,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:13656"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.kujira/config/config.toml
 ```
