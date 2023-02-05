@@ -12,7 +12,7 @@ Mars is a credit protocol for the future: non-custodial,  open-source, transpare
 
 ## Restake
 
-[Restake with kjnodes](https://restake.app/mars/marsvaloper1p9t4gr40rnpdwqacxgcqp7ffrfw908nu020g4n) (every 5 minutes | Minimum rewards: 1 token)
+[Restake with kjnodes](https://restake.app/mars/marsvaloper1p9t4gr40rnpdwqacxgcqp7ffrfw908nu020g4n) (every 5 minutes)
 ## Chain explorer
 [https://explorer.kjnodes.com/mars](https://explorer.kjnodes.com/mars)
 

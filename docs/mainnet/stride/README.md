@@ -12,7 +12,7 @@ Stride is a blockchain ("zone") that provides liquidity for staked assets.  Usin
 
 ## Restake
 
-[Restake with kjnodes](https://restake.app/stride/stridevaloper1j8gkhtllnp252l6g6zwzea30e7pvzqttr9768n) (every 5 minutes | Minimum rewards: 1 token)
+[Restake with kjnodes](https://restake.app/stride/stridevaloper1j8gkhtllnp252l6g6zwzea30e7pvzqttr9768n) (every 5 minutes)
 ## Chain explorer
 [https://explorer.kjnodes.com/stride](https://explorer.kjnodes.com/stride)
 

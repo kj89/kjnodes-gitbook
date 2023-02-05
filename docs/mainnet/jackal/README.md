@@ -12,7 +12,7 @@ The Jackal Protocol is a fast, scalable, and secure blockchain that empowers  in
 
 ## Restake
 
-[Restake with kjnodes](https://restake.app/jackal/jklvaloper1tr3wm3mdkz0tda6t7vavqnn7fe2g4un0f67xmt) (every 5 minutes | Minimum rewards: 1 token)
+[Restake with kjnodes](https://restake.app/jackal/jklvaloper1tr3wm3mdkz0tda6t7vavqnn7fe2g4un0f67xmt) (every 5 minutes)
 ## Chain explorer
 [https://explorer.kjnodes.com/jackal](https://explorer.kjnodes.com/jackal)
 

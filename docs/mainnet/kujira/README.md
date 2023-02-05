@@ -12,7 +12,7 @@ Kujira is a Layer 1 protocol built on Cosmos, which can be used for  hosting com
 
 ## Restake
 
-[Restake with kjnodes](https://restake.app/kujira/kujiravaloper1tnuqj73jfn3724lqz34c27tuv80nv336sadqym) (every 5 minutes | Minimum rewards: 1 token)
+[Restake with kjnodes](https://restake.app/kujira/kujiravaloper1tnuqj73jfn3724lqz34c27tuv80nv336sadqym) (every 5 minutes)
 ## Chain explorer
 [https://explorer.kjnodes.com/kujira](https://explorer.kjnodes.com/kujira)
 
