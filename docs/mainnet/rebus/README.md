@@ -12,7 +12,7 @@ Rebuschain is a platform that will provide DeFi (Decentralized Finance)  investm
 
 ## Restake
 
-[Restake with kjnodes](https://restake.app/rebus/rebusvaloper1vndzy8y55ylgpmmsc34uy8rm6kqlml6ffs9lrv) (every 5 minutes)
+[Restake with kjnodes](https://restake.app/rebus/rebusvaloper1vndzy8y55ylgpmmsc34uy8rm6kqlml6ffs9lrv) (every 5 minutes | Minimum rewards: 1 token)
 ## Chain explorer
 [https://explorer.kjnodes.com/rebus](https://explorer.kjnodes.com/rebus)
 

@@ -12,7 +12,7 @@ Agoric is an interoperable Proof-of-Stake chain in the Cosmos ecosystem.  Agoric
 
 ## Restake
 
-[Restake with kjnodes](https://restake.app/agoric/agoricvaloper1ku5sm2twlsywdrp4wz3kfwgyrtqtp0lpr3nvk8) (every 5 minutes)
+[Restake with kjnodes](https://restake.app/agoric/agoricvaloper1ku5sm2twlsywdrp4wz3kfwgyrtqtp0lpr3nvk8) (every 5 minutes | Minimum rewards: 1 token)
 ## Chain explorer
 [https://explorer.kjnodes.com/agoric](https://explorer.kjnodes.com/agoric)
 
