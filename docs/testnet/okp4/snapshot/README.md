@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **03:00 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: v3.0.0
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v4.0.0
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 783682 | 48 minutes | [snapshot (0.83 GB)](https://snapshots.kjnodes.com/okp4-testnet/snapshot\_latest.tar.lz4) |
+| 794747 | 5 hours | [snapshot (0.72 GB)](https://snapshots.kjnodes.com/okp4-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

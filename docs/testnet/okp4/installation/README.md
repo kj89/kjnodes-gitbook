@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/okp4.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: okp4-nemeton-1 | **Latest Version Tag**: v3.0.0 | **Custom Port**: 36
+**Chain ID**: okp4-nemeton-1 | **Latest Version Tag**: v4.0.0 | **Custom Port**: 36
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf okp4d
 git clone https://github.com/okp4/okp4d.git
 cd okp4d
-git checkout v3.0.0
+git checkout v4.0.0
 
 # Build binaries
 make build
