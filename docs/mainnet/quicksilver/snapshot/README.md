@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **02:15 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 498738 | 34 minutes | [snapshot (0.65 GB)](https://snapshots.kjnodes.com/quicksilver/snapshot\_latest.tar.lz4) |
+| 509847 | 1 hours | [snapshot (0.72 GB)](https://snapshots.kjnodes.com/quicksilver/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
