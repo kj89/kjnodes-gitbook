@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **02:45 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 1396126 | 3 hours | [snapshot (0.71 GB)](https://snapshots.kjnodes.com/ollo-testnet/snapshot\_latest.tar.lz4) |
+| 1410924 | 4 hours | [snapshot (0.72 GB)](https://snapshots.kjnodes.com/ollo-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
