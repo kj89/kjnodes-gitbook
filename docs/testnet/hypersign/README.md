@@ -4,7 +4,7 @@
 
 Hypersign is a decentralized identity layer for the internet, giving  users control of their personal data and identity whilst digital  enabling trust for businesses.
 
-**Chain ID**: jagrat | **Latest Version Tag**: v0.1.5 | **Wasm**: OFF
+**Chain ID**: jagrat | **Latest Version Tag**: v0.1.6 | **Wasm**: OFF
 
 [Website](https://hypersign.id) | [Discord](https://discord.gg/DmuUjMrHVw) | [Twitter](https://twitter.com/hypersignchain)
 
@@ -41,6 +41,6 @@ curl -Ls https://snapshots.kjnodes.com/hypersign-testnet/addrbook.json > $HOME/.
 
 **live-peers** (10)
 ```bash
-peers="5b4482bfe02384184470070c3d3a4465cf0c18d4@144.91.82.61:31656,620478e35ba6740f0afb2a0dd6ca9b34765bc60e@65.109.30.12:60856,ce6686036f6554deb0490103dcc201172e7c3f2f@81.0.220.131:26656,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:31656,15d2f1bc2bfaa143388465ea115c59e5ce6e77dc@65.109.39.223:26656,efcb16ec33d8e6233d1068fff679c6fd64bf5802@65.108.225.158:10956,9876d1b1e5b5968c1c729559325dd909f93c1d34@65.108.238.61:56656,84408be4e3f13dcd976568d6370e1c50e9eb614d@185.252.232.110:46656,cf94099349980f9593a3f0362c85fe7c6eda8b14@8.219.48.59:26656,56615e02aa90e35a20a1fc4c46e78bb00956f07b@192.118.76.199:26681"
+peers="7d85caec437cc8c0a504d6ab3b18fd07c173b2fb@94.130.219.37:26001,2c0379f78b655e8a386cb477e3cf3cae700c4a7f@213.239.207.175:34656,620478e35ba6740f0afb2a0dd6ca9b34765bc60e@65.109.30.12:60856,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:31656,d92268c246e02a54103f7098b901b876c88f006e@5.161.130.108:26656,efcb16ec33d8e6233d1068fff679c6fd64bf5802@65.108.225.158:10956,a275d8018f683f279bf5167a72d294bfacafa839@178.63.102.172:41656,610843eda2f0388cb8e75917e8c1f63350bd3bd1@154.26.131.130:16656,bd2ae9f1c42183104719f7c44be078bb7d282a61@65.109.92.241:11056,1de2abae74a4c5fd7d96d9869ef02187f81498f0@134.209.238.66:26656"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.hid-node/config/config.toml
 ```
