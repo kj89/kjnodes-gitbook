@@ -4,9 +4,9 @@ description: Setting up your validator node has never been so easy. Get your val
 
 # Installation
 
-<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/${PROJECT_NAME}.png" width="150" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/hypersign.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: ${CHAIN_ID} | **Latest Version Tag**: ${LATEST_VERSION_TAG} | **Custom Port**: ${CHAIN_PORT}
+**Chain ID**: jagrat | **Latest Version Tag**: v0.1.6 | **Custom Port**: 31
 
 ### Setup validator name
 
@@ -32,7 +32,7 @@ sudo apt -qy upgrade
 
 ```bash
 sudo rm -rf /usr/local/go
-curl -Ls https://go.dev/dl/go${GO_VERSION}.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
+curl -Ls https://go.dev/dl/go1.18.10.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
 eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/golang.sh)
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
@@ -42,34 +42,34 @@ eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```bash
 # Clone project repository
 cd $HOME
-rm -rf ${GIT_DIR}
-git clone ${GIT_URL}
-cd ${GIT_DIR}
-git checkout ${LATEST_VERSION_TAG}
+rm -rf hid-node
+git clone https://github.com/hypersign-protocol/hid-node.git
+cd hid-node
+git checkout v0.1.6
 
 # Build binaries
 make build
 
 # Prepare binaries for Cosmovisor
-mkdir -p $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin
-mv ${CHAIN_BINARY_SRC} $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin/
+mkdir -p $HOME/.hid-node/cosmovisor/genesis/bin
+mv build/hid-noded $HOME/.hid-node/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/${CHAIN_DIR}/cosmovisor/genesis $HOME/${CHAIN_DIR}/cosmovisor/current
-sudo ln -s $HOME/${CHAIN_DIR}/cosmovisor/current/bin/${CHAIN_APP} /usr/local/bin/${CHAIN_APP}
+ln -s $HOME/.hid-node/cosmovisor/genesis $HOME/.hid-node/cosmovisor/current
+sudo ln -s $HOME/.hid-node/cosmovisor/current/bin/hid-noded /usr/local/bin/hid-noded
 ```
 
 ### Install Cosmovisor and create a service
 
 ```bash
 # Download and install Cosmovisor
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v${COSMOVISOR_VERSION}
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.4.0
 
 # Create service
-sudo tee /etc/systemd/system/${CHAIN_APP}.service > /dev/null << EOF
+sudo tee /etc/systemd/system/hid-noded.service > /dev/null << EOF
 [Unit]
-Description=${CHAIN_NAME} node service
+Description=hypersign-testnet node service
 After=network-online.target
 
 [Service]
@@ -78,32 +78,32 @@ ExecStart=$(which cosmovisor) run start
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
-Environment="DAEMON_HOME=$HOME/${CHAIN_DIR}"
-Environment="DAEMON_NAME=${CHAIN_APP}"
+Environment="DAEMON_HOME=$HOME/.hid-node"
+Environment="DAEMON_NAME=hid-noded"
 Environment="UNSAFE_SKIP_BACKUP=true"
 
 [Install]
 WantedBy=multi-user.target
 EOF
 sudo systemctl daemon-reload
-sudo systemctl enable ${CHAIN_APP}
+sudo systemctl enable hid-noded
 ```
 
 ### Initialize the node
 
 ```bash
 # Initialize the node
-${CHAIN_APP} init $MONIKER --chain-id ${CHAIN_ID}
+hid-noded init $MONIKER --chain-id jagrat
 
 # Download genesis and addrbook
-curl -Ls https://snapshots.kjnodes.com/${CHAIN_NAME}/genesis.json > $HOME/${CHAIN_DIR}/config/genesis.json
-curl -Ls https://snapshots.kjnodes.com/${CHAIN_NAME}/addrbook.json > $HOME/${CHAIN_DIR}/config/addrbook.json
+curl -Ls https://snapshots.kjnodes.com/hypersign-testnet/genesis.json > $HOME/.hid-node/config/genesis.json
+curl -Ls https://snapshots.kjnodes.com/hypersign-testnet/addrbook.json > $HOME/.hid-node/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"${CHAIN_TENDERSEED_PEER}@${CHAIN_NAME}.rpc.kjnodes.com:${CHAIN_PORT}659\"|" $HOME/${CHAIN_DIR}/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@hypersign-testnet.rpc.kjnodes.com:31659\"|" $HOME/.hid-node/config/config.toml
 
 # Set minimum gas price
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"${MIN_GAS_PRICE}\"|" $HOME/${CHAIN_DIR}/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0uhid\"|" $HOME/.hid-node/config/app.toml
 
 # Set pruning
 sed -i \
@@ -111,22 +111,22 @@ sed -i \
   -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
   -e 's|^pruning-keep-every *=.*|pruning-keep-every = "0"|' \
   -e 's|^pruning-interval *=.*|pruning-interval = "19"|' \
-  $HOME/${CHAIN_DIR}/config/app.toml
+  $HOME/.hid-node/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CHAIN_PORT}658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${CHAIN_PORT}657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CHAIN_PORT}060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CHAIN_PORT}656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CHAIN_PORT}660\"%" $HOME/${CHAIN_DIR}/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${CHAIN_PORT}317\"%; s%^address = \":8080\"%address = \":${CHAIN_PORT}080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:${CHAIN_PORT}090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${CHAIN_PORT}091\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:${CHAIN_PORT}545\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:${CHAIN_PORT}546\"%" $HOME/${CHAIN_DIR}/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:31658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:31657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:31060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:31656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":31660\"%" $HOME/.hid-node/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:31317\"%; s%^address = \":8080\"%address = \":31080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:31090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:31091\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:31545\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:31546\"%" $HOME/.hid-node/config/app.toml
 ```
 
 ### Download latest chain snapshot
 
 ```bash
-curl -L https://snapshots.kjnodes.com/${CHAIN_NAME}/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/${CHAIN_DIR}
-[[ -f $HOME/${CHAIN_DIR}/data/upgrade-info.json ]] && cp $HOME/${CHAIN_DIR}/data/upgrade-info.json $HOME/${CHAIN_DIR}/cosmovisor/genesis/upgrade-info.json
+curl -L https://snapshots.kjnodes.com/hypersign-testnet/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.hid-node
+[[ -f $HOME/.hid-node/data/upgrade-info.json ]] && cp $HOME/.hid-node/data/upgrade-info.json $HOME/.hid-node/cosmovisor/genesis/upgrade-info.json
 ```
 
 ### Start service and check the logs
 
 ```bash
-sudo systemctl start ${CHAIN_APP} && sudo journalctl -u ${CHAIN_APP} -f --no-hostname -o cat
+sudo systemctl start hid-noded && sudo journalctl -u hid-noded -f --no-hostname -o cat
 ```
