@@ -85,19 +85,19 @@
   * [State sync](mainnet/osmosis/state-sync/README.md)
   * [Useful commands](mainnet/osmosis/useful-commands/README.md)
 
-* [Quicksilver](mainnet/quicksilver/README.md)
-  * [Installation](mainnet/quicksilver/installation/README.md)
-  * [Upgrade](mainnet/quicksilver/upgrade/README.md)
-  * [Snapshot](mainnet/quicksilver/snapshot/README.md)
-  * [State sync](mainnet/quicksilver/state-sync/README.md)
-  * [Useful commands](mainnet/quicksilver/useful-commands/README.md)
-
 * [Paloma](mainnet/paloma/README.md)
   * [Installation](mainnet/paloma/installation/README.md)
   * [Upgrade](mainnet/paloma/upgrade/README.md)
   * [Snapshot](mainnet/paloma/snapshot/README.md)
   * [State sync](mainnet/paloma/state-sync/README.md)
   * [Useful commands](mainnet/paloma/useful-commands/README.md)
+
+* [Quicksilver](mainnet/quicksilver/README.md)
+  * [Installation](mainnet/quicksilver/installation/README.md)
+  * [Upgrade](mainnet/quicksilver/upgrade/README.md)
+  * [Snapshot](mainnet/quicksilver/snapshot/README.md)
+  * [State sync](mainnet/quicksilver/state-sync/README.md)
+  * [Useful commands](mainnet/quicksilver/useful-commands/README.md)
 
 
 ## TESTNET
