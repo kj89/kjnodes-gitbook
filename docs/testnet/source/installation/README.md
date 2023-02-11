@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/source.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: sourcechain-testnet | **Latest Version Tag**: v1.0.0 | **Custom Port**: 28
+**Chain ID**: sourcechain-testnet | **Latest Version Tag**: e06b810e842e57ec8f5432c9cdd57883a69b3cee | **Custom Port**: 28
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf source
 git clone https://github.com/Source-Protocol-Cosmos/source.git
 cd source
-git checkout v1.0.0
+git checkout e06b810e842e57ec8f5432c9cdd57883a69b3cee
 
 # Build binaries
 make build

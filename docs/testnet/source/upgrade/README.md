@@ -6,7 +6,7 @@ description: Prepare for and the upcomming chain upgrade using Cosmovisor.
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/source.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: sourcechain-testnet | **Latest Version Tag**: v1.0.0 | **Custom Port**: 28
+**Chain ID**: sourcechain-testnet | **Latest Version Tag**: e06b810e842e57ec8f5432c9cdd57883a69b3cee | **Custom Port**: 28
 
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.
