@@ -47,6 +47,9 @@ git clone https://github.com/palomachain/paloma.git
 cd paloma
 git checkout v0.11.6
 
+# Fix version handling: https://github.com/palomachain/paloma/commit/d0f1746754041cd39d2dbd96cd8dd44f5e6ba2c5
+sed -i -r -e 's/^  VERSION := \$\(shell git describe --exact-match 2>\/dev\/null\)$/  VERSION := $(shell git describe --exact-match --tags 2>\/dev\/null | sed '"'"'s\/^v\/\/'"'"')/' Makefile
+
 # Build binaries
 make build
 
