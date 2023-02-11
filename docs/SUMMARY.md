@@ -214,6 +214,13 @@
   * [State sync](testnet/sei/state-sync/README.md)
   * [Useful commands](testnet/sei/useful-commands/README.md)
 
+* [Source](testnet/source/README.md)
+  * [Installation](testnet/source/installation/README.md)
+  * [Upgrade](testnet/source/upgrade/README.md)
+  * [Snapshot](testnet/source/snapshot/README.md)
+  * [State sync](testnet/source/state-sync/README.md)
+  * [Useful commands](testnet/source/useful-commands/README.md)
+
 * [Teritori](testnet/teritori/README.md)
   * [Installation](testnet/teritori/installation/README.md)
   * [Upgrade](testnet/teritori/upgrade/README.md)
