@@ -84,6 +84,7 @@ LimitNOFILE=65535
 Environment="DAEMON_HOME=$HOME/.paloma"
 Environment="DAEMON_NAME=palomad"
 Environment="UNSAFE_SKIP_BACKUP=true"
+Environment="PIGEON_HEALTHCHECK_PORT=5757"
 
 [Install]
 WantedBy=multi-user.target
