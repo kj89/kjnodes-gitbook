@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **00:30 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: v015
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v016
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 2010583 | 5 hours | [snapshot (0.6 GB)](https://snapshots.kjnodes.com/hypersign-testnet/snapshot\_latest.tar.lz4) |
+| 2013559 | 7 minutes | [snapshot (0.66 GB)](https://snapshots.kjnodes.com/hypersign-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
