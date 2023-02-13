@@ -130,6 +130,13 @@
   * [State sync](testnet/defund/state-sync/README.md)
   * [Useful commands](testnet/defund/useful-commands/README.md)
 
+* [Dymension](testnet/dymension/README.md)
+  * [Installation](testnet/dymension/installation/README.md)
+  * [Upgrade](testnet/dymension/upgrade/README.md)
+  * [Snapshot](testnet/dymension/snapshot/README.md)
+  * [State sync](testnet/dymension/state-sync/README.md)
+  * [Useful commands](testnet/dymension/useful-commands/README.md)
+
 * [Gitopia](testnet/gitopia/README.md)
   * [Installation](testnet/gitopia/installation/README.md)
   * [Upgrade](testnet/gitopia/upgrade/README.md)
