@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **04:15 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 8659798 | 3 hours | [snapshot (2.72 GB)](https://snapshots.kjnodes.com/agoric/snapshot\_latest.tar.lz4) |
+| 8686657 | 2 hours | [snapshot (2.74 GB)](https://snapshots.kjnodes.com/agoric/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **06:45 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: 
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v0.2.0-beta
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-|  |  | [snapshot ()](https://snapshots.kjnodes.com/dymension-testnet/snapshot\_latest.tar.lz4) |
+| 3022 | 1 minutes | [snapshot (0.26 GB)](https://snapshots.kjnodes.com/dymension-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
