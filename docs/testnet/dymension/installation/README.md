@@ -100,11 +100,12 @@ dymd config node tcp://localhost:46657
 # Initialize the node
 dymd init $MONIKER --chain-id 35-C
 
-# Download genesis
-curl -Ls https://raw.githubusercontent.com/dymensionxyz/testnets/main/dymension-hub/35-C/genesis.json > $HOME/.dymension/config/genesis.json
+# Download genesis and addrbook
+curl -Ls https://snapshots.kjnodes.com/dymension-testnet/genesis.json > $HOME/.dymension/config/genesis.json
+curl -Ls https://snapshots.kjnodes.com/dymension-testnet/addrbook.json > $HOME/.dymension/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"c6cdcc7f8e1a33f864956a8201c304741411f219@3.214.163.125:26656 \"|" $HOME/.dymension/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@dymension-testnet.rpc.kjnodes.com:46659\"|" $HOME/.dymension/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.025udym,0.025uatom\"|" $HOME/.dymension/config/app.toml
@@ -120,6 +121,13 @@ sed -i \
 # Set custom ports
 sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:46658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:46657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:46060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:46656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":46660\"%" $HOME/.dymension/config/config.toml
 sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:46317\"%; s%^address = \":8080\"%address = \":46080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:46090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:46091\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:46545\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:46546\"%" $HOME/.dymension/config/app.toml
+```
+
+### Download latest chain snapshot
+
+```bash
+curl -L https://snapshots.kjnodes.com/dymension-testnet/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.dymension
+[[ -f $HOME/.dymension/data/upgrade-info.json ]] && cp $HOME/.dymension/data/upgrade-info.json $HOME/.dymension/cosmovisor/genesis/upgrade-info.json
 ```
 
 ### Start service and check the logs
