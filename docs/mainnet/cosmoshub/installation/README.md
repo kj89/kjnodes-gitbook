@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/cosmoshub.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: cosmoshub-4 | **Latest Version Tag**: v7.1.0 | **Custom Port**: 34
+**Chain ID**: cosmoshub-4 | **Latest Version Tag**: v8.0.0 | **Custom Port**: 34
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf gaia
 git clone https://github.com/cosmos/gaia.git
 cd gaia
-git checkout v7.1.0
+git checkout v8.0.0
 
 # Build binaries
 make build

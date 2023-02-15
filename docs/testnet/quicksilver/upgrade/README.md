@@ -6,7 +6,7 @@ description: Prepare for and the upcomming chain upgrade using Cosmovisor.
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/quicksilver.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: innuendo-5 | **Latest Version Tag**: v1.4.0-rc4 | **Custom Port**: 11
+**Chain ID**: innuendo-5 | **Latest Version Tag**: v1.4.0-rc6 | **Custom Port**: 11
 
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.
@@ -21,14 +21,14 @@ cd $HOME
 rm -rf quicksilver
 git clone https://github.com/ingenuity-build/quicksilver.git
 cd quicksilver
-git checkout v1.4.0-rc4
+git checkout v1.4.0-rc6
 
 # Build binaries
 make build
 
 # Prepare binaries for Cosmovisor
-mkdir -p $HOME/.quicksilverd/cosmovisor/upgrades/v1.4.0/bin
-mv build/quicksilverd $HOME/.quicksilverd/cosmovisor/upgrades/v1.4.0/bin/
+mkdir -p $HOME/.quicksilverd/cosmovisor/upgrades/v1.4.0-rc6/bin
+mv build/quicksilverd $HOME/.quicksilverd/cosmovisor/upgrades/v1.4.0-rc6/bin/
 rm -rf build
 ```
 
