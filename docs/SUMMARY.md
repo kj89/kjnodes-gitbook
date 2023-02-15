@@ -109,6 +109,13 @@
   * [State sync](testnet/agoric/state-sync/README.md)
   * [Useful commands](testnet/agoric/useful-commands/README.md)
 
+* [Andromeda](testnet/andromeda/README.md)
+  * [Installation](testnet/andromeda/installation/README.md)
+  * [Upgrade](testnet/andromeda/upgrade/README.md)
+  * [Snapshot](testnet/andromeda/snapshot/README.md)
+  * [State sync](testnet/andromeda/state-sync/README.md)
+  * [Useful commands](testnet/andromeda/useful-commands/README.md)
+
 * [Aura](testnet/aura/README.md)
   * [Installation](testnet/aura/installation/README.md)
   * [Upgrade](testnet/aura/upgrade/README.md)
