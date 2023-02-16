@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **04:45 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: v7-Theta
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v8-rho
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 14095235 | 3 hours | [snapshot (3.84 GB)](https://snapshots.kjnodes.com/cosmoshub/snapshot\_latest.tar.lz4) |
+| 14100653 | 17 minutes | [snapshot (3.84 GB)](https://snapshots.kjnodes.com/cosmoshub/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

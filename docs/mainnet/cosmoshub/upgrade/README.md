@@ -27,8 +27,8 @@ git checkout v8.0.0
 make build
 
 # Prepare binaries for Cosmovisor
-mkdir -p $HOME/.gaia/cosmovisor/upgrades/v8-Rho/bin
-mv build/gaiad $HOME/.gaia/cosmovisor/upgrades/v8-Rho/bin/
+mkdir -p $HOME/.gaia/cosmovisor/upgrades/v8-rho/bin
+mv build/gaiad $HOME/.gaia/cosmovisor/upgrades/v8-rho/bin/
 rm -rf build
 ```
 
