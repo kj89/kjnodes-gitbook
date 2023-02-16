@@ -40,20 +40,10 @@ eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ### Download and build binaries
 
 ```bash
-# Clone project repository
-cd $HOME
-rm -rf gravity-bin
-git clone 
-cd gravity-bin
-git checkout v0.0.2-alpha-11
-
-# Build binaries
-make build
-
-# Prepare binaries for Cosmovisor
+# Download project binaries
 mkdir -p $HOME/.quasarnode/cosmovisor/genesis/bin
-mv build/quasard $HOME/.quasarnode/cosmovisor/genesis/bin/
-rm -rf build
+wget -O $HOME/.quasarnode/cosmovisor/genesis/bin/quasard https://github.com/quasar-finance/binary-release/raw/main/v0.0.2-alpha-11/quasarnoded-linux-amd64
+chmod +x $HOME/.quasarnode/cosmovisor/genesis/bin/*
 
 # Create application symlinks
 ln -s $HOME/.quasarnode/cosmovisor/genesis $HOME/.quasarnode/cosmovisor/current

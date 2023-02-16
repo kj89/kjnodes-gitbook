@@ -43,8 +43,7 @@ eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 # Download project binaries
 mkdir -p $HOME/.quasarnode/cosmovisor/genesis/bin
 wget -O $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin/quasard https://github.com/quasar-finance/binary-release/raw/main/v0.0.2-alpha-11/quasarnoded-linux-amd64
-mv build/quasard $HOME/.quasarnode/cosmovisor/genesis/bin/
-rm -rf build
+chmod +x $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin/*
 
 # Create application symlinks
 ln -s $HOME/.quasarnode/cosmovisor/genesis $HOME/.quasarnode/cosmovisor/current
