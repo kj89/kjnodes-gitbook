@@ -67,6 +67,8 @@ description: Discover base tools contributed to the projects by kjnodes team.
 
 <img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/ollo.png" alt="" data-size="line"> [Ollo](testnet/ollo/)
 
+<img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/quasar.png" alt="" data-size="line"> [Quasar](testnet/quasar/)
+
 <img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/quicksilver.png" alt="" data-size="line"> [Quicksilver](testnet/quicksilver/)
 
 <img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/sei.png" alt="" data-size="line"> [Sei](testnet/sei/)
