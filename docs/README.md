@@ -32,6 +32,8 @@ description: Discover base tools contributed to the projects by kjnodes team.
 
 <img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/quicksilver.png" alt="" data-size="line"> [Quicksilver](mainnet/quicksilver/)
 
+<img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/whitewhale.png" alt="" data-size="line"> [Whitewhale](mainnet/whitewhale/)
+
 
 ## TESTNET
 

@@ -99,6 +99,13 @@
   * [State sync](mainnet/quicksilver/state-sync/README.md)
   * [Useful commands](mainnet/quicksilver/useful-commands/README.md)
 
+* [Whitewhale](mainnet/whitewhale/README.md)
+  * [Installation](mainnet/whitewhale/installation/README.md)
+  * [Upgrade](mainnet/whitewhale/upgrade/README.md)
+  * [Snapshot](mainnet/whitewhale/snapshot/README.md)
+  * [State sync](mainnet/whitewhale/state-sync/README.md)
+  * [Useful commands](mainnet/whitewhale/useful-commands/README.md)
+
 
 ## TESTNET
 
