@@ -4,7 +4,7 @@
 
 Whitewhale is a Tendermint-based Interchain Liquidity.
 
-**Chain ID**: migaloo-1 | **Latest Version Tag**: v1.0.0 | **Wasm**: OFF
+**Chain ID**: migaloo-1 | **Latest Version Tag**: v1.0.0 | **Wasm**: ON
 
 [Website](https://whitewhale.money) | [Discord](https://discord.gg/AyvcgD4jy3) | [Twitter](https://twitter.com/WhiteWhaleDefi)
 

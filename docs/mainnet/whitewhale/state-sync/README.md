@@ -43,7 +43,15 @@ sed -i \
 mv $HOME/.migalood/priv_validator_state.json.backup $HOME/.migalood/data/priv_validator_state.json
 ```
 
+### Download latest wasm
 
+{% hint style='info' %}
+Currently state sync does not support copy of the `wasm` folder. Therefore, you will have to download it manually.
+{% endhint %}
+
+```bash
+curl -L https://snapshots.kjnodes.com/whitewhale/wasm_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.migalood
+```
 
 ### Restart the service and check the log
 
