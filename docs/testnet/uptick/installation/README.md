@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/uptick.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: uptick_7000-2 | **Latest Version Tag**: v0.2.4 | **Custom Port**: 15
+**Chain ID**: uptick_7000-2 | **Latest Version Tag**: v0.2.5 | **Custom Port**: 15
 
 ### Setup validator name
 
@@ -32,7 +32,7 @@ sudo apt -qy upgrade
 
 ```bash
 sudo rm -rf /usr/local/go
-curl -Ls https://go.dev/dl/go1.19.5.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
+curl -Ls https://go.dev/dl/go1.19.6.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
 eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/golang.sh)
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf uptick
 git clone https://github.com/UptickNetwork/uptick.git
 cd uptick
-git checkout v0.2.4
+git checkout v0.2.5
 
 # Build binaries
 make build

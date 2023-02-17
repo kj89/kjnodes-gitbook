@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **01:00 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: v0.2.4
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v0.2.5
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 2108725 | 5 hours | [snapshot (0.97 GB)](https://snapshots.kjnodes.com/uptick-testnet/snapshot\_latest.tar.lz4) |
+| 2116032 | 5 hours | [snapshot (0.97 GB)](https://snapshots.kjnodes.com/uptick-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

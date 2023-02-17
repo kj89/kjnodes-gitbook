@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/jackal.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: lupulella-2 | **Latest Version Tag**: v1.2.0-beta.5 | **Custom Port**: 37
+**Chain ID**: lupulella-2 | **Latest Version Tag**: v1.2.0-beta.6 | **Custom Port**: 37
 
 ### Setup validator name
 
@@ -32,7 +32,7 @@ sudo apt -qy upgrade
 
 ```bash
 sudo rm -rf /usr/local/go
-curl -Ls https://go.dev/dl/go1.19.5.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
+curl -Ls https://go.dev/dl/go1.19.6.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
 eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/golang.sh)
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf canine-chain
 git clone https://github.com/JackalLabs/canine-chain.git
 cd canine-chain
-git checkout v1.2.0-beta.5
+git checkout v1.2.0-beta.6
 
 # Build binaries
 make build
