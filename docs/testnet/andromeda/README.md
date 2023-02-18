@@ -6,7 +6,7 @@ Andromeda is an application platform layer that connects all  public blockchains
 
 **Chain ID**: galileo-3 | **Latest Version Tag**: galileo-3-v1.1.0-beta1 | **Wasm**: ON
 
-[Website](https://www.andromedaprotocol.io) | [Discord](https://discord.gg/andromeda) | [Twitter](https://twitter.com/andromedaprot)
+[Website](https://www.andromedaprotocol.io) | [Discord](https://discord.gg/wzM3kSN3sE) | [Twitter](https://twitter.com/andromedaprot)
 
 
 
@@ -41,6 +41,6 @@ curl -Ls https://snapshots.kjnodes.com/andromeda-testnet/addrbook.json > $HOME/.
 
 **live-peers** (10)
 ```bash
-peers="749114faeb62649d94b8ed496efbdcd4a08b2e3e@136.243.93.134:20095,72bba2142c9cada7e4b8e861fb79e8a66e345d99@95.217.236.79:50656,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:47656,f3d598517ea86c08236b53882338b0b5e1d0f0e8@213.239.207.175:42656,e1ca2c14c007cc23e280b191d32b6a3da2389672@65.21.183.66:26656,29a9c5bfb54343d25c89d7119fade8b18201c503@209.34.206.32:26656,bcdd1b337504f2d3523f6d63a7de1a2641187908@154.26.130.175:26656,a9d237b5070c7790a57318aa2bbe9b4f4f04cce2@194.163.175.163:30656,cd529600bb3aa20795a18c384c0edae2eb2da614@161.97.148.146:60656,bcef415d908dfc5c7caff3325eefd51a730695b4@65.21.92.46:30656"
+peers="dff203d0633c98eea4a228c5e913f22236043d89@23.88.69.101:16656,749114faeb62649d94b8ed496efbdcd4a08b2e3e@136.243.93.134:20095,117bf8ca700de022d9c87cd7cc7155958dc0ba23@185.188.249.18:02656,5b5438c8e0dbf7783c47b8cd41ca4eb8a4caa006@185.209.31.45:46656,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:47656,bd323d2c7ce260b831d20923d390e4a1623f32c4@213.239.215.195:20095,704e605f9bd65912d8c65a58f955601c31188548@65.21.203.204:19656,99cebda3a65a35b9a6a8bef774c8b92c1e548aa5@65.108.226.26:36656,334a842f175c2c24c6b11e8bce39c9d3443471ae@38.242.213.79:26656,e2efe3e1d7e0ed2e5b6a1b384c47f745e9f205ac@65.108.141.109:31656"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.andromedad/config/config.toml
 ```
