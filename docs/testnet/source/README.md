@@ -39,8 +39,8 @@ d5519e378247dfb61dfe90652d1fe3e2b3005a5b@source-testnet.rpc.kjnodes.com:28656
 curl -Ls https://snapshots.kjnodes.com/source-testnet/addrbook.json > $HOME/.source/config/addrbook.json
 ```
 
-**live-peers** (6)
+**live-peers** (4)
 ```bash
-peers="5755422056c55063f76e4dd0c4245904640ec34b@135.181.149.90:26656,9260303a16969bbf4360b462d80ce12f77c4d3a1@43.131.35.28:26656,4675f239ef3bd4cef7fa2770232b2eeea0008260@212.118.38.133:26656,c749b47c438842d9874b515de130dfb11431360f@147.182.211.27:26656,b7ac13fa32c668611408a3dc9c15b092cea98db1@185.250.37.203:26656,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:28656"
+peers="d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:28656,5fb7f75e3a97fa0f936020b62daf1e67281f7f16@65.109.92.240:20056,383a0684aadfe507e097c36b34d6243da59d9ed5@207.180.232.91:26656,fae907ab505bfd41fc2499bd002fd58adc6fc68a@173.249.26.69:26656"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.source/config/config.toml
 ```
