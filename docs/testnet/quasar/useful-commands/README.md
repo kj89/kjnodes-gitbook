@@ -306,7 +306,6 @@ sudo rm /etc/systemd/system/quasard.service
 sudo systemctl daemon-reload
 rm -f $(which quasard)
 rm -rf $HOME/.quasarnode
-rm -rf $HOME/gravity-bin
 ```
 
 ## ⚙️ Service Management
