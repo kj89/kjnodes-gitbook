@@ -4,7 +4,7 @@
 
 Lava powers a trustless market for RPC data access. The protocol  governs over peer to peer and private Provider-Application pairings,  ensuring high quality RPC service while creating consensus around data served.
 
-**Chain ID**: lava-testnet-1 | **Latest Version Tag**: v0.5.2 | **Wasm**: OFF
+**Chain ID**: lava-testnet-1 | **Latest Version Tag**: v0.6.0-RC3 | **Wasm**: OFF
 
 [Website](https://lavanet.xyz) | [Discord](https://discord.com/invite/Tbk5NxTCdA) | [Twitter](https://twitter.com/lavanetxyz)
 
