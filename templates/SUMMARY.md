@@ -1,6 +1,7 @@
 # Table of contents
 
 * [🖤 Supported chains](README.md)
+* [🚍 Supported IBC relayers](RELAYERS.md)
 * [🤖 Bots](bots/README.md)
   * [Telegram Proposal Bot](bots/telegram-proposal-bot.md)
   * [Discord Proposal Bot](bots/discord-proposal-bot.md)
