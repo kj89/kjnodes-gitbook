@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **04:45 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 14185906 | 3 hours | [snapshot (3.9 GB)](https://snapshots.kjnodes.com/cosmoshub/snapshot\_latest.tar.lz4) |
+| 14185906 | 4 hours | [snapshot (3.9 GB)](https://snapshots.kjnodes.com/cosmoshub/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
