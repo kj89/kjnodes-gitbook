@@ -60,21 +60,21 @@ Please make sure you have adjusted **moniker**, **identity**, **details** and **
 
 ```bash
 nibid tx staking create-validator \
---amount=1000000unibi \
---pubkey=$(nibid tendermint show-validator) \
---moniker="YOUR_MONIKER_NAME" \
---identity="YOUR_KEYBASE_ID" \
---details="YOUR_DETAILS" \
---website="YOUR_WEBSITE_URL" \
---chain-id=nibiru-testnet-2 \
---commission-rate=0.05 \
---commission-max-rate=0.20 \
---commission-max-change-rate=0.01 \
---min-self-delegation=1 \
---from=wallet \
---gas-adjustment=1.4 \
---gas=auto \
---gas-prices=0.025unibi \
+--amount 1000000unibi \
+--pubkey $(nibid tendermint show-validator) \
+--moniker "YOUR_MONIKER_NAME" \
+--identity "YOUR_KEYBASE_ID" \
+--details "YOUR_DETAILS" \
+--website "YOUR_WEBSITE_URL" \
+--chain-id nibiru-testnet-2 \
+--commission-rate 0.05 \
+--commission-max-rate 0.20 \
+--commission-max-change-rate 0.01 \
+--min-self-delegation 1 \
+--from wallet \
+--gas-adjustment 1.4 \
+--gas auto \
+--gas-prices 0.025unibi \
 -y
 ```
 
@@ -82,16 +82,16 @@ nibid tx staking create-validator \
 
 ```bash
 nibid tx staking edit-validator \
---moniker="YOUR_MONIKER_NAME" \
---identity="YOUR_KEYBASE_ID" \
---details="YOUR_DETAILS" \
---website="YOUR_WEBSITE_URL"
---chain-id=nibiru-testnet-2 \
---commission-rate=0.05 \
---from=wallet \
---gas-adjustment=1.4 \
---gas=auto \
---gas-prices=0.025unibi \
+--moniker "YOUR_MONIKER_NAME" \
+--identity "YOUR_KEYBASE_ID" \
+--details "YOUR_DETAILS" \
+--website "YOUR_WEBSITE_URL"
+--chain-id nibiru-testnet-2 \
+--commission-rate 0.05 \
+--from wallet \
+--gas-adjustment 1.4 \
+--gas auto \
+--gas-prices 0.025unibi \
 -y
 ```
 
@@ -277,7 +277,7 @@ curl -sS http://localhost:39657/net_info | jq -r '.result.peers[] | "\(.node_inf
 #### Set minimum gas price
 
 ```bash
-sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0unibi\"/" $HOME/.nibid/config/app.toml
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.025unibi\"/" $HOME/.nibid/config/app.toml
 ```
 
 #### Enable prometheus

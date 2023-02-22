@@ -60,21 +60,21 @@ Please make sure you have adjusted **moniker**, **identity**, **details** and **
 
 ```bash
 lavad tx staking create-validator \
---amount=1000000ulava \
---pubkey=$(lavad tendermint show-validator) \
---moniker="YOUR_MONIKER_NAME" \
---identity="YOUR_KEYBASE_ID" \
---details="YOUR_DETAILS" \
---website="YOUR_WEBSITE_URL" \
---chain-id=lava-testnet-1 \
---commission-rate=0.05 \
---commission-max-rate=0.20 \
---commission-max-change-rate=0.01 \
---min-self-delegation=1 \
---from=wallet \
---gas-adjustment=1.4 \
---gas=auto \
---gas-prices=0ulava \
+--amount 1000000ulava \
+--pubkey $(lavad tendermint show-validator) \
+--moniker "YOUR_MONIKER_NAME" \
+--identity "YOUR_KEYBASE_ID" \
+--details "YOUR_DETAILS" \
+--website "YOUR_WEBSITE_URL" \
+--chain-id lava-testnet-1 \
+--commission-rate 0.05 \
+--commission-max-rate 0.20 \
+--commission-max-change-rate 0.01 \
+--min-self-delegation 1 \
+--from wallet \
+--gas-adjustment 1.4 \
+--gas auto \
+--gas-prices 0ulava \
 -y
 ```
 
@@ -82,16 +82,16 @@ lavad tx staking create-validator \
 
 ```bash
 lavad tx staking edit-validator \
---moniker="YOUR_MONIKER_NAME" \
---identity="YOUR_KEYBASE_ID" \
---details="YOUR_DETAILS" \
---website="YOUR_WEBSITE_URL"
---chain-id=lava-testnet-1 \
---commission-rate=0.05 \
---from=wallet \
---gas-adjustment=1.4 \
---gas=auto \
---gas-prices=0ulava \
+--moniker "YOUR_MONIKER_NAME" \
+--identity "YOUR_KEYBASE_ID" \
+--details "YOUR_DETAILS" \
+--website "YOUR_WEBSITE_URL"
+--chain-id lava-testnet-1 \
+--commission-rate 0.05 \
+--from wallet \
+--gas-adjustment 1.4 \
+--gas auto \
+--gas-prices 0ulava \
 -y
 ```
 

@@ -60,21 +60,21 @@ Please make sure you have adjusted **moniker**, **identity**, **details** and **
 
 ```bash
 dymd tx staking create-validator \
---amount=1000000udym \
---pubkey=$(dymd tendermint show-validator) \
---moniker="YOUR_MONIKER_NAME" \
---identity="YOUR_KEYBASE_ID" \
---details="YOUR_DETAILS" \
---website="YOUR_WEBSITE_URL" \
---chain-id=35-C \
---commission-rate=0.05 \
---commission-max-rate=0.20 \
---commission-max-change-rate=0.01 \
---min-self-delegation=1 \
---from=wallet \
---gas-adjustment=1.4 \
---gas=auto \
---gas-prices=0.025udym \
+--amount 1000000udym \
+--pubkey $(dymd tendermint show-validator) \
+--moniker "YOUR_MONIKER_NAME" \
+--identity "YOUR_KEYBASE_ID" \
+--details "YOUR_DETAILS" \
+--website "YOUR_WEBSITE_URL" \
+--chain-id 35-C \
+--commission-rate 0.05 \
+--commission-max-rate 0.20 \
+--commission-max-change-rate 0.01 \
+--min-self-delegation 1 \
+--from wallet \
+--gas-adjustment 1.4 \
+--gas auto \
+--gas-prices 0.025udym \
 -y
 ```
 
@@ -82,16 +82,16 @@ dymd tx staking create-validator \
 
 ```bash
 dymd tx staking edit-validator \
---moniker="YOUR_MONIKER_NAME" \
---identity="YOUR_KEYBASE_ID" \
---details="YOUR_DETAILS" \
---website="YOUR_WEBSITE_URL"
---chain-id=35-C \
---commission-rate=0.05 \
---from=wallet \
---gas-adjustment=1.4 \
---gas=auto \
---gas-prices=0.025udym \
+--moniker "YOUR_MONIKER_NAME" \
+--identity "YOUR_KEYBASE_ID" \
+--details "YOUR_DETAILS" \
+--website "YOUR_WEBSITE_URL"
+--chain-id 35-C \
+--commission-rate 0.05 \
+--from wallet \
+--gas-adjustment 1.4 \
+--gas auto \
+--gas-prices 0.025udym \
 -y
 ```
 
@@ -277,7 +277,7 @@ curl -sS http://localhost:46657/net_info | jq -r '.result.peers[] | "\(.node_inf
 #### Set minimum gas price
 
 ```bash
-sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0udym\"/" $HOME/.dymension/config/app.toml
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.025udym,0.025uatom\"/" $HOME/.dymension/config/app.toml
 ```
 
 #### Enable prometheus

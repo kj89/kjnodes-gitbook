@@ -60,21 +60,21 @@ Please make sure you have adjusted **moniker**, **identity**, **details** and **
 
 ```bash
 ${CHAIN_APP} tx staking create-validator \
---amount=1000000${CHAIN_DENOM} \
---pubkey=$(${CHAIN_APP} tendermint show-validator) \
---moniker="YOUR_MONIKER_NAME" \
---identity="YOUR_KEYBASE_ID" \
---details="YOUR_DETAILS" \
---website="YOUR_WEBSITE_URL" \
---chain-id=${CHAIN_ID} \
---commission-rate=0.05 \
---commission-max-rate=0.20 \
---commission-max-change-rate=0.01 \
---min-self-delegation=1 \
---from=wallet \
---gas-adjustment=1.4 \
---gas=auto \
---gas-prices=${TX_MIN_GAS_PRICE} \
+--amount 1000000${CHAIN_DENOM} \
+--pubkey $(${CHAIN_APP} tendermint show-validator) \
+--moniker "YOUR_MONIKER_NAME" \
+--identity "YOUR_KEYBASE_ID" \
+--details "YOUR_DETAILS" \
+--website "YOUR_WEBSITE_URL" \
+--chain-id ${CHAIN_ID} \
+--commission-rate 0.05 \
+--commission-max-rate 0.20 \
+--commission-max-change-rate 0.01 \
+--min-self-delegation 1 \
+--from wallet \
+--gas-adjustment 1.4 \
+--gas auto \
+--gas-prices ${TX_MIN_GAS_PRICE} \
 -y
 ```
 
@@ -82,16 +82,16 @@ ${CHAIN_APP} tx staking create-validator \
 
 ```bash
 ${CHAIN_APP} tx staking edit-validator \
---moniker="YOUR_MONIKER_NAME" \
---identity="YOUR_KEYBASE_ID" \
---details="YOUR_DETAILS" \
---website="YOUR_WEBSITE_URL"
---chain-id=${CHAIN_ID} \
---commission-rate=0.05 \
---from=wallet \
---gas-adjustment=1.4 \
---gas=auto \
---gas-prices=${TX_MIN_GAS_PRICE} \
+--moniker "YOUR_MONIKER_NAME" \
+--identity "YOUR_KEYBASE_ID" \
+--details "YOUR_DETAILS" \
+--website "YOUR_WEBSITE_URL"
+--chain-id ${CHAIN_ID} \
+--commission-rate 0.05 \
+--from wallet \
+--gas-adjustment 1.4 \
+--gas auto \
+--gas-prices ${TX_MIN_GAS_PRICE} \
 -y
 ```
 
@@ -277,7 +277,7 @@ curl -sS http://localhost:${CHAIN_PORT}657/net_info | jq -r '.result.peers[] | "
 #### Set minimum gas price
 
 ```bash
-sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0${CHAIN_DENOM}\"/" $HOME/${CHAIN_DIR}/config/app.toml
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"${MIN_GAS_PRICE}\"/" $HOME/${CHAIN_DIR}/config/app.toml
 ```
 
 #### Enable prometheus
