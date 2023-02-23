@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/agoric.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: agoric-emerynet-5 | **Latest Version Tag**: pismoA | **Custom Port**: 27
+**Chain ID**: agoric-emerynet-5 | **Latest Version Tag**: pismoC | **Custom Port**: 27
 
 ### Setup validator name
 
@@ -55,10 +55,10 @@ eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```bash
 # Clone project repository
 cd $HOME
-rm -rf pismoA
-git clone https://github.com/Agoric/agoric-sdk.git pismoA
-cd pismoA
-git checkout pismoA
+rm -rf pismoC
+git clone https://github.com/Agoric/agoric-sdk.git pismoC
+cd pismoC
+git checkout pismoC
 
 # Install and build Agoric Javascript packages
 yarn install && yarn build
@@ -68,8 +68,8 @@ yarn install && yarn build
 
 # Prepare binaries for Cosmovisor
 mkdir -p $HOME/.agoric/cosmovisor/genesis/bin
-ln -s $HOME/pismoA/packages/cosmic-swingset/bin/ag-chain-cosmos $HOME/.agoric/cosmovisor/genesis/bin/ag-chain-cosmos
-ln -s $HOME/pismoA/packages/cosmic-swingset/bin/ag-nchainz $HOME/.agoric/cosmovisor/genesis/bin/ag-nchainz
+ln -s $HOME/pismoC/packages/cosmic-swingset/bin/ag-chain-cosmos $HOME/.agoric/cosmovisor/genesis/bin/ag-chain-cosmos
+ln -s $HOME/pismoC/packages/cosmic-swingset/bin/ag-nchainz $HOME/.agoric/cosmovisor/genesis/bin/ag-nchainz
 cp golang/cosmos/build/agd $HOME/.agoric/cosmovisor/genesis/bin/
 cp golang/cosmos/build/ag-cosmos-helper $HOME/.agoric/cosmovisor/genesis/bin/
 
