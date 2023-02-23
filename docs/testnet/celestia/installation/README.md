@@ -81,7 +81,7 @@ LimitNOFILE=65535
 Environment="DAEMON_HOME=$HOME/.celestia-app"
 Environment="DAEMON_NAME=celestia-appd"
 Environment="UNSAFE_SKIP_BACKUP=true"
-Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:$HOME/.agoric/cosmovisor/current/bin"
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:$HOME/.celestia-app/cosmovisor/current/bin"
 
 [Install]
 WantedBy=multi-user.target

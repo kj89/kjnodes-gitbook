@@ -81,7 +81,7 @@ LimitNOFILE=65535
 Environment="DAEMON_HOME=$HOME/.ollo"
 Environment="DAEMON_NAME=ollod"
 Environment="UNSAFE_SKIP_BACKUP=true"
-Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:$HOME/.agoric/cosmovisor/current/bin"
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:$HOME/.ollo/cosmovisor/current/bin"
 
 [Install]
 WantedBy=multi-user.target
