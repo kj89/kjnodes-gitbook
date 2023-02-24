@@ -82,7 +82,7 @@ agd tx staking create-validator \
 
 ```bash
 agd tx staking edit-validator \
---moniker "YOUR_MONIKER_NAME" \
+--new-moniker "YOUR_MONIKER_NAME" \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL"

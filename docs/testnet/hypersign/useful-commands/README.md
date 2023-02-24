@@ -82,7 +82,7 @@ hid-noded tx staking create-validator \
 
 ```bash
 hid-noded tx staking edit-validator \
---moniker="YOUR_MONIKER_NAME" \
+--new-moniker="YOUR_MONIKER_NAME" \
 --identity="YOUR_KEYBASE_ID" \
 --details="YOUR_DETAILS" \
 --website="YOUR_WEBSITE_URL"
