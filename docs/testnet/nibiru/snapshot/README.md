@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **00:00 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 3292098 | 2 hours | [snapshot (5.0 GB)](https://snapshots.kjnodes.com/nibiru-testnet/snapshot\_latest.tar.lz4) |
+| 3367054 | 3 hours | [snapshot (5.11 GB)](https://snapshots.kjnodes.com/nibiru-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
