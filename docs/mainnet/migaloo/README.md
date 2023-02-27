@@ -1,46 +1,45 @@
 # Services
 
-<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/migaloo.png" width="150" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/${PROJECT_NAME}.png" width="150" alt=""><figcaption></figcaption></figure>
 
-The Migaloo chain is a permissionless Cosmos SDK chain on which  projects are encouraged to build their applications. Migaloo chain  is the home of the White Whale dApp, Interchain Command Center.
+${CHAIN_SHORT_DESCRIPTION}
+**Chain ID**: ${CHAIN_ID} | **Latest Version Tag**: ${LATEST_VERSION_TAG} | **Wasm**: ${CHAIN_WASM}
 
-**Chain ID**: migaloo-1 | **Latest Version Tag**: v1.0.0 | **Wasm**: ON
+[Website](${CHAIN_WEBSITE}) | [Discord](${CHAIN_DISCORD}) | [Twitter](${CHAIN_TWITTER})
 
-[Website](https://whitewhale.money) | [Discord](https://discord.gg/AyvcgD4jy3) | [Twitter](https://twitter.com/WhiteWhaleDefi)
+${STAKE_BUTTON}
 
-
-
-
+${RESTAKE}
 ## Chain explorer
-[https://explorer.kjnodes.com/migaloo](https://explorer.kjnodes.com/migaloo)
+[https://explorer.kjnodes.com/${CHAIN_SERVICE}](https://explorer.kjnodes.com/${CHAIN_SERVICE})
 
 ## Public endpoints
 
-* api: [https://migaloo.api.kjnodes.com](https://migaloo.api.kjnodes.com)
-* rpc: [https://migaloo.rpc.kjnodes.com](https://migaloo.rpc.kjnodes.com)
-* grpc: [https://migaloo.grpc.kjnodes.com](https://migaloo.grpc.kjnodes.com)
+* api: [https://${CHAIN_NAME}.api.kjnodes.com](https://${CHAIN_NAME}.api.kjnodes.com)
+* rpc: [https://${CHAIN_NAME}.rpc.kjnodes.com](https://${CHAIN_NAME}.rpc.kjnodes.com)
+* grpc: [https://${CHAIN_NAME}.grpc.kjnodes.com](https://${CHAIN_NAME}.grpc.kjnodes.com)
 
 ## Peering
 
 **state-sync**
 
 ```text
-d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@migaloo.rpc.kjnodes.com:49656
+${CHAIN_PEER}@${CHAIN_NAME}.rpc.kjnodes.com:${CHAIN_PORT}656
 ```
 
 **seed-node**
 
 ```text
-400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@migaloo.rpc.kjnodes.com:49659
+${CHAIN_TENDERSEED_PEER}@${CHAIN_NAME}.rpc.kjnodes.com:${CHAIN_PORT}659
 ```
 
 **addrbook**
 ```bash
-curl -Ls https://snapshots.kjnodes.com/migaloo/addrbook.json > $HOME/.migalood/config/addrbook.json
+curl -Ls https://snapshots.kjnodes.com/${CHAIN_NAME}/addrbook.json > $HOME/${CHAIN_DIR}/config/addrbook.json
 ```
 
-**live-peers** (0)
+**live-peers** (${CHAIN_LIVE_PEERS_COUNT})
 ```bash
-peers=""
-sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.migalood/config/config.toml
+peers="${CHAIN_LIVE_PEERS}"
+sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/${CHAIN_DIR}/config/config.toml
 ```
