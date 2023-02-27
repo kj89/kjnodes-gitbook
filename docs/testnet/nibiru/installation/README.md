@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/nibiru.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: nibiru-testnet-2 | **Latest Version Tag**: v0.16.3 | **Custom Port**: 39
+**Chain ID**: nibiru-itn-1 | **Latest Version Tag**: v0.19.2 | **Custom Port**: 39
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf nibiru
 git clone https://github.com/NibiruChain/nibiru.git
 cd nibiru
-git checkout v0.16.3
+git checkout v0.19.2
 
 # Build binaries
 make build
@@ -94,12 +94,12 @@ sudo systemctl enable nibid
 
 ```bash
 # Set node configuration
-nibid config chain-id nibiru-testnet-2
+nibid config chain-id nibiru-itn-1
 nibid config keyring-backend test
 nibid config node tcp://localhost:39657
 
 # Initialize the node
-nibid init $MONIKER --chain-id nibiru-testnet-2
+nibid init $MONIKER --chain-id nibiru-itn-1
 
 # Download genesis and addrbook
 curl -Ls https://snapshots.kjnodes.com/nibiru-testnet/genesis.json > $HOME/.nibid/config/genesis.json
