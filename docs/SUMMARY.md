@@ -100,13 +100,6 @@
   * [State sync](mainnet/quicksilver/state-sync/README.md)
   * [Useful commands](mainnet/quicksilver/useful-commands/README.md)
 
-* [Migaloo](mainnet/migaloo/README.md)
-  * [Installation](mainnet/migaloo/installation/README.md)
-  * [Upgrade](mainnet/migaloo/upgrade/README.md)
-  * [Snapshot](mainnet/migaloo/snapshot/README.md)
-  * [State sync](mainnet/migaloo/state-sync/README.md)
-  * [Useful commands](mainnet/migaloo/useful-commands/README.md)
-
 
 ## TESTNET
 
