@@ -149,12 +149,17 @@ curl -s https://get.nibiru.fi/pricefeeder! | bash
 nibid keys add pricefeeder-wallet
 ```
 
-3. Export pricefeeder mnemonic into environment variable
+3. Top up the pricefeeder-wallet going to [Nibiru Discord](https://discord.gg/nibiru) #faucet channel.
+{% hint style="info" %}
+In order to make pricefeeder work, it needs some testnet tokens to pay for transaction fees
+{% endhint %}
+
+4. Export pricefeeder mnemonic into environment variable
 ```bash
 export FEEDER_MNEMONIC="my pricefeeder 24 word mnemonic phrase goes here ..."
 ```
 
-4. Setup the systemd service
+5. Setup the systemd service
 ```bash
 export CHAIN_ID="nibiru-itn-1"
 export GRPC_ENDPOINT="localhost:39090"
@@ -190,7 +195,7 @@ WantedBy=multi-user.target
 EOF
 ```
 
-5. Delegate pricefeeder responsibility
+6. Delegate pricefeeder responsibility
 
 {% hint style="info" %}
 As a validator, if you'd like another account to post prices on your behalf (i.e. you don't want your validator mnemonic sending txs), you can delegate pricefeeder responsibilities to another nibi address.
@@ -200,14 +205,14 @@ As a validator, if you'd like another account to post prices on your behalf (i.e
 nibid tx oracle set-feeder $(nibid keys show pricefeeder-wallet -a) --from wallet
 ```
 
-6. Register and start the systemd service
+7. Register and start the systemd service
 ```bash
 sudo systemctl daemon-reload && \
 sudo systemctl enable pricefeeder && \
 sudo systemctl start pricefeeder
 ```
 
-7. View pricefeeder logs
+8. View pricefeeder logs
 ```bash
 journalctl -fu pricefeeder
 ```
