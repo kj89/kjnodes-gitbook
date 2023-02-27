@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **05:00 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 374837 | 38 minutes | [snapshot (0.79 GB)](https://snapshots.kjnodes.com/celestia-testnet/snapshot\_latest.tar.lz4) |
+| 374837 | 45 minutes | [snapshot (0.79 GB)](https://snapshots.kjnodes.com/celestia-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

@@ -227,4 +227,4 @@ Feb 27 19:10:23 pricefeeder[3632198]: {"level":"info","voting-period-height":405
 ```
 
 Also you can check that your pricefeeder-wallet is doing transactions on chain at [Chain Explorer](https://explorer.kjnodes.com/nibiru-testnet)
-<figure><img src="https://i.ibb.co/grx55Cw/2023-02-27-20h11-56.png" alt=""><figcaption><p>Transactions Explorer</p></figcaption></figure>
+<figure><img src="https://i.ibb.co/748MW95/pricefeeder-transactions.png" alt=""><figcaption><p>Price Feeder Transactions</p></figcaption></figure>
