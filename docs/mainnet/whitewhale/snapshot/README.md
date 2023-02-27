@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **07:30 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 186667 | 2 hours | [snapshot (1.58 GB)](https://snapshots.kjnodes.com/whitewhale/snapshot\_latest.tar.lz4) |
+| 201640 | 7 minutes | [snapshot (1.79 GB)](https://snapshots.kjnodes.com/whitewhale/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
