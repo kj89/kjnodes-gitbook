@@ -166,7 +166,7 @@ uptickd tx staking unbond $(uptickd keys show wallet --bech val -a) 1000000aupti
 #### Send tokens to the wallet
 
 ```bash
-uptickd tx bank send wallet <TO_WALLET_ADDRESS> 1000000auptick --from wallet --chain-id uptick_7000-2
+uptickd tx bank send wallet <TO_WALLET_ADDRESS> 1000000auptick --from wallet --chain-id uptick_7000-2 --gas-adjustment 1.4 --gas auto --gas-prices 0auptick -y
 ```
 
 ## 🗳 Governance

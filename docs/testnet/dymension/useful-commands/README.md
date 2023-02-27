@@ -166,7 +166,7 @@ dymd tx staking unbond $(dymd keys show wallet --bech val -a) 1000000udym --from
 #### Send tokens to the wallet
 
 ```bash
-dymd tx bank send wallet <TO_WALLET_ADDRESS> 1000000udym --from wallet --chain-id 35-C
+dymd tx bank send wallet <TO_WALLET_ADDRESS> 1000000udym --from wallet --chain-id 35-C --gas-adjustment 1.4 --gas auto --gas-prices 0.025udym -y
 ```
 
 ## 🗳 Governance

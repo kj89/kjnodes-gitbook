@@ -166,7 +166,7 @@ sourced tx staking unbond $(sourced keys show wallet --bech val -a) 1000000usour
 #### Send tokens to the wallet
 
 ```bash
-sourced tx bank send wallet <TO_WALLET_ADDRESS> 1000000usource --from wallet --chain-id sourcechain-testnet
+sourced tx bank send wallet <TO_WALLET_ADDRESS> 1000000usource --from wallet --chain-id sourcechain-testnet --gas-adjustment 1.4 --gas auto --gas-prices 0usource -y
 ```
 
 ## 🗳 Governance

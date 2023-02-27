@@ -166,7 +166,7 @@ gaiad tx staking unbond $(gaiad keys show wallet --bech val -a) 1000000uatom --f
 #### Send tokens to the wallet
 
 ```bash
-gaiad tx bank send wallet <TO_WALLET_ADDRESS> 1000000uatom --from wallet --chain-id cosmoshub-4
+gaiad tx bank send wallet <TO_WALLET_ADDRESS> 1000000uatom --from wallet --chain-id cosmoshub-4 --gas-adjustment 1.4 --gas auto --gas-prices 0uatom -y
 ```
 
 ## 🗳 Governance

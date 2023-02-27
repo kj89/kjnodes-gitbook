@@ -166,7 +166,7 @@ quicksilverd tx staking unbond $(quicksilverd keys show wallet --bech val -a) 10
 #### Send tokens to the wallet
 
 ```bash
-quicksilverd tx bank send wallet <TO_WALLET_ADDRESS> 1000000uqck --from wallet --chain-id quicksilver-2
+quicksilverd tx bank send wallet <TO_WALLET_ADDRESS> 1000000uqck --from wallet --chain-id quicksilver-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
 ```
 
 ## 🗳 Governance

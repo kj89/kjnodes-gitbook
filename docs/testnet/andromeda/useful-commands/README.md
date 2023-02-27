@@ -166,7 +166,7 @@ andromedad tx staking unbond $(andromedad keys show wallet --bech val -a) 100000
 #### Send tokens to the wallet
 
 ```bash
-andromedad tx bank send wallet <TO_WALLET_ADDRESS> 1000000uandr --from wallet --chain-id galileo-3
+andromedad tx bank send wallet <TO_WALLET_ADDRESS> 1000000uandr --from wallet --chain-id galileo-3 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uandr -y
 ```
 
 ## 🗳 Governance

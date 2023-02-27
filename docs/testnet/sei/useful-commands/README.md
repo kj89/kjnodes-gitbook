@@ -166,7 +166,7 @@ seid tx staking unbond $(seid keys show wallet --bech val -a) 1000000usei --from
 #### Send tokens to the wallet
 
 ```bash
-seid tx bank send wallet <TO_WALLET_ADDRESS> 1000000usei --from wallet --chain-id atlantic-1
+seid tx bank send wallet <TO_WALLET_ADDRESS> 1000000usei --from wallet --chain-id atlantic-1 --gas-adjustment 1.4 --gas auto --gas-prices 0usei -y
 ```
 
 ## 🗳 Governance

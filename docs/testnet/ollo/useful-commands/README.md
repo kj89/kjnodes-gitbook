@@ -166,7 +166,7 @@ ollod tx staking unbond $(ollod keys show wallet --bech val -a) 1000000utollo --
 #### Send tokens to the wallet
 
 ```bash
-ollod tx bank send wallet <TO_WALLET_ADDRESS> 1000000utollo --from wallet --chain-id ollo-testnet-1
+ollod tx bank send wallet <TO_WALLET_ADDRESS> 1000000utollo --from wallet --chain-id ollo-testnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0utollo -y
 ```
 
 ## 🗳 Governance

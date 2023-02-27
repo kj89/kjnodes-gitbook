@@ -166,7 +166,7 @@ bcnad tx staking unbond $(bcnad keys show wallet --bech val -a) 1000000ubcna --f
 #### Send tokens to the wallet
 
 ```bash
-bcnad tx bank send wallet <TO_WALLET_ADDRESS> 1000000ubcna --from wallet --chain-id bitcanna-1
+bcnad tx bank send wallet <TO_WALLET_ADDRESS> 1000000ubcna --from wallet --chain-id bitcanna-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubcna -y
 ```
 
 ## 🗳 Governance

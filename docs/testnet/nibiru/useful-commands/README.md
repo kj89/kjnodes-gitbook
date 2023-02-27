@@ -166,7 +166,7 @@ nibid tx staking unbond $(nibid keys show wallet --bech val -a) 1000000unibi --f
 #### Send tokens to the wallet
 
 ```bash
-nibid tx bank send wallet <TO_WALLET_ADDRESS> 1000000unibi --from wallet --chain-id nibiru-itn-1
+nibid tx bank send wallet <TO_WALLET_ADDRESS> 1000000unibi --from wallet --chain-id nibiru-itn-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.025unibi -y
 ```
 
 ## 🗳 Governance

@@ -166,7 +166,7 @@ aurad tx staking unbond $(aurad keys show wallet --bech val -a) 1000000ueaura --
 #### Send tokens to the wallet
 
 ```bash
-aurad tx bank send wallet <TO_WALLET_ADDRESS> 1000000ueaura --from wallet --chain-id euphoria-2
+aurad tx bank send wallet <TO_WALLET_ADDRESS> 1000000ueaura --from wallet --chain-id euphoria-2 --gas-adjustment 1.4 --gas auto --gas-prices 0ueaura -y
 ```
 
 ## 🗳 Governance

@@ -166,7 +166,7 @@ rebusd tx staking unbond $(rebusd keys show wallet --bech val -a) 1000000arebus 
 #### Send tokens to the wallet
 
 ```bash
-rebusd tx bank send wallet <TO_WALLET_ADDRESS> 1000000arebus --from wallet --chain-id reb_1111-1
+rebusd tx bank send wallet <TO_WALLET_ADDRESS> 1000000arebus --from wallet --chain-id reb_1111-1 --gas-adjustment 1.4 --gas auto --gas-prices 0arebus -y
 ```
 
 ## 🗳 Governance

@@ -166,7 +166,7 @@ gitopiad tx staking unbond $(gitopiad keys show wallet --bech val -a) 1000000utl
 #### Send tokens to the wallet
 
 ```bash
-gitopiad tx bank send wallet <TO_WALLET_ADDRESS> 1000000utlore --from wallet --chain-id gitopia-janus-testnet-2
+gitopiad tx bank send wallet <TO_WALLET_ADDRESS> 1000000utlore --from wallet --chain-id gitopia-janus-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.001utlore -y
 ```
 
 ## 🗳 Governance

@@ -166,7 +166,7 @@ marsd tx staking unbond $(marsd keys show wallet --bech val -a) 1000000umars --f
 #### Send tokens to the wallet
 
 ```bash
-marsd tx bank send wallet <TO_WALLET_ADDRESS> 1000000umars --from wallet --chain-id ares-1
+marsd tx bank send wallet <TO_WALLET_ADDRESS> 1000000umars --from wallet --chain-id ares-1 --gas-adjustment 1.4 --gas auto --gas-prices 0umars -y
 ```
 
 ## 🗳 Governance

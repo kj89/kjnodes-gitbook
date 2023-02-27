@@ -166,7 +166,7 @@ teritorid tx staking unbond $(teritorid keys show wallet --bech val -a) 1000000u
 #### Send tokens to the wallet
 
 ```bash
-teritorid tx bank send wallet <TO_WALLET_ADDRESS> 1000000utori --from wallet --chain-id teritori-testnet-v3
+teritorid tx bank send wallet <TO_WALLET_ADDRESS> 1000000utori --from wallet --chain-id teritori-testnet-v3 --gas-adjustment 1.4 --gas auto --gas-prices 0utori -y
 ```
 
 ## 🗳 Governance

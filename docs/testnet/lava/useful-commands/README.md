@@ -166,7 +166,7 @@ lavad tx staking unbond $(lavad keys show wallet --bech val -a) 1000000ulava --f
 #### Send tokens to the wallet
 
 ```bash
-lavad tx bank send wallet <TO_WALLET_ADDRESS> 1000000ulava --from wallet --chain-id lava-testnet-1
+lavad tx bank send wallet <TO_WALLET_ADDRESS> 1000000ulava --from wallet --chain-id lava-testnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ulava -y
 ```
 
 ## 🗳 Governance

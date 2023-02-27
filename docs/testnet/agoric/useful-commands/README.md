@@ -166,7 +166,7 @@ agd tx staking unbond $(agd keys show wallet --bech val -a) 1000000ubld --from w
 #### Send tokens to the wallet
 
 ```bash
-agd tx bank send wallet <TO_WALLET_ADDRESS> 1000000ubld --from wallet --chain-id agoric-emerynet-5
+agd tx bank send wallet <TO_WALLET_ADDRESS> 1000000ubld --from wallet --chain-id agoric-emerynet-5 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ubld -y
 ```
 
 ## 🗳 Governance

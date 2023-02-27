@@ -166,7 +166,7 @@ palomad tx staking unbond $(palomad keys show wallet --bech val -a) 1000000ugrai
 #### Send tokens to the wallet
 
 ```bash
-palomad tx bank send wallet <TO_WALLET_ADDRESS> 1000000ugrain --from wallet --chain-id messenger
+palomad tx bank send wallet <TO_WALLET_ADDRESS> 1000000ugrain --from wallet --chain-id messenger --gas-adjustment 1.4 --gas auto --gas-prices 0ugrain -y
 ```
 
 ## 🗳 Governance

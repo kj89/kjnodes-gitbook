@@ -166,7 +166,7 @@ gravityd tx staking unbond $(gravityd keys show wallet --bech val -a) 1000000ugr
 #### Send tokens to the wallet
 
 ```bash
-gravityd tx bank send wallet <TO_WALLET_ADDRESS> 1000000ugraviton --from wallet --chain-id gravity-bridge-3
+gravityd tx bank send wallet <TO_WALLET_ADDRESS> 1000000ugraviton --from wallet --chain-id gravity-bridge-3 --gas-adjustment 1.4 --gas auto --gas-prices 0ugraviton -y
 ```
 
 ## 🗳 Governance

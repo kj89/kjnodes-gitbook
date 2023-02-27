@@ -166,7 +166,7 @@ okp4d tx staking unbond $(okp4d keys show wallet --bech val -a) 1000000uknow --f
 #### Send tokens to the wallet
 
 ```bash
-okp4d tx bank send wallet <TO_WALLET_ADDRESS> 1000000uknow --from wallet --chain-id okp4-nemeton-1
+okp4d tx bank send wallet <TO_WALLET_ADDRESS> 1000000uknow --from wallet --chain-id okp4-nemeton-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uknow -y
 ```
 
 ## 🗳 Governance

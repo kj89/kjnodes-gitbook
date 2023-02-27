@@ -166,7 +166,7 @@ canined tx staking unbond $(canined keys show wallet --bech val -a) 1000000ujkl 
 #### Send tokens to the wallet
 
 ```bash
-canined tx bank send wallet <TO_WALLET_ADDRESS> 1000000ujkl --from wallet --chain-id lupulella-2
+canined tx bank send wallet <TO_WALLET_ADDRESS> 1000000ujkl --from wallet --chain-id lupulella-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.002ujkl -y
 ```
 
 ## 🗳 Governance

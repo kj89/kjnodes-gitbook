@@ -166,7 +166,7 @@ defundd tx staking unbond $(defundd keys show wallet --bech val -a) 1000000ufetf
 #### Send tokens to the wallet
 
 ```bash
-defundd tx bank send wallet <TO_WALLET_ADDRESS> 1000000ufetf --from wallet --chain-id defund-private-4
+defundd tx bank send wallet <TO_WALLET_ADDRESS> 1000000ufetf --from wallet --chain-id defund-private-4 --gas-adjustment 1.4 --gas auto --gas-prices 0ufetf -y
 ```
 
 ## 🗳 Governance

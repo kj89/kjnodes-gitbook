@@ -166,7 +166,7 @@ migalood tx staking unbond $(migalood keys show wallet --bech val -a) 1000000uwh
 #### Send tokens to the wallet
 
 ```bash
-migalood tx bank send wallet <TO_WALLET_ADDRESS> 1000000uwhale --from wallet --chain-id migaloo-1
+migalood tx bank send wallet <TO_WALLET_ADDRESS> 1000000uwhale --from wallet --chain-id migaloo-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uwhale -y
 ```
 
 ## 🗳 Governance

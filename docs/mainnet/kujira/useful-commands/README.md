@@ -166,7 +166,7 @@ kujirad tx staking unbond $(kujirad keys show wallet --bech val -a) 1000000ukuji
 #### Send tokens to the wallet
 
 ```bash
-kujirad tx bank send wallet <TO_WALLET_ADDRESS> 1000000ukuji --from wallet --chain-id kaiyo-1
+kujirad tx bank send wallet <TO_WALLET_ADDRESS> 1000000ukuji --from wallet --chain-id kaiyo-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.00119ukuji -y
 ```
 
 ## 🗳 Governance

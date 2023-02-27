@@ -166,7 +166,7 @@ ${CHAIN_APP} tx staking unbond $(${CHAIN_APP} keys show wallet --bech val -a) 10
 #### Send tokens to the wallet
 
 ```bash
-${CHAIN_APP} tx bank send wallet <TO_WALLET_ADDRESS> 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID}
+${CHAIN_APP} tx bank send wallet <TO_WALLET_ADDRESS> 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${TX_MIN_GAS_PRICE} -y
 ```
 
 ## 🗳 Governance

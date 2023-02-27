@@ -166,7 +166,7 @@ strided tx staking unbond $(strided keys show wallet --bech val -a) 1000000ustrd
 #### Send tokens to the wallet
 
 ```bash
-strided tx bank send wallet <TO_WALLET_ADDRESS> 1000000ustrd --from wallet --chain-id stride-1
+strided tx bank send wallet <TO_WALLET_ADDRESS> 1000000ustrd --from wallet --chain-id stride-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.001ustrd -y
 ```
 
 ## 🗳 Governance
