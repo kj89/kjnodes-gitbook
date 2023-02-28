@@ -138,7 +138,9 @@ sudo systemctl start ${CHAIN_APP} && sudo journalctl -u ${CHAIN_APP} -f --no-hos
 ```
 
 # Set up a pricefeeder
+{% hint style="warning" %}
 To run pricefeeder you validator should be in active set. Otherwise price feeder will not vote on periods.
+{% endhint %}
 
 1. Install the pricefeeder binary
 ```bash
