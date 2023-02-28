@@ -39,8 +39,8 @@ d5519e378247dfb61dfe90652d1fe3e2b3005a5b@nibiru-testnet.rpc.kjnodes.com:39656
 curl -Ls https://snapshots.kjnodes.com/nibiru-testnet/addrbook.json > $HOME/.nibid/config/addrbook.json
 ```
 
-**live-peers** (7)
+**live-peers** (4)
 ```bash
-peers="d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:39656,d3bacf8624684354d0676320bc5556e1e893bdfa@65.21.91.50:26656,c1b40d056e4260a9fa9d1142af1adbeec5039599@142.132.202.50:46656,afe1a8d392b2caaa02c51165dd2b37e0181dacf9@65.108.72.233:21656,6c679a2b8397b1d04a33de37828e3b67e9e6b9c0@65.109.6.21:27656,d3ddfe8ad75847df085262b9cdbc49b29ce30ba6@35.229.110.80:26656,80030d5945eef7519407d047479d40a2f2bf1fe6@65.109.92.241:11036"
+peers="d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:39656,6c679a2b8397b1d04a33de37828e3b67e9e6b9c0@65.109.6.21:27656,d3ddfe8ad75847df085262b9cdbc49b29ce30ba6@35.229.110.80:26656,769b35816998e91918569c3bbebb6e016ddd74b5@35.243.210.205:26656"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.nibid/config/config.toml
 ```

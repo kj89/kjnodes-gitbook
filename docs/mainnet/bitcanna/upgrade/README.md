@@ -6,7 +6,7 @@ description: Prepare for and the upcomming chain upgrade using Cosmovisor.
 
 <figure><img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/logos/bitcanna.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: bitcanna-1 | **Latest Version Tag**: v1.5.3 | **Custom Port**: 42
+**Chain ID**: bitcanna-1 | **Latest Version Tag**: v1.6.0-fix | **Custom Port**: 42
 
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.
@@ -21,14 +21,14 @@ cd $HOME
 rm -rf bcna
 git clone https://github.com/BitCannaGlobal/bcna.git
 cd bcna
-git checkout v1.5.3
+git checkout v1.6.0-fix
 
 # Build binaries
 make build
 
 # Prepare binaries for Cosmovisor
-mkdir -p $HOME/.bcna/cosmovisor/upgrades/trichomemonster-ica/bin
-mv build/bcnad $HOME/.bcna/cosmovisor/upgrades/trichomemonster-ica/bin/
+mkdir -p $HOME/.bcna/cosmovisor/upgrades/vigorous-grow/bin
+mv build/bcnad $HOME/.bcna/cosmovisor/upgrades/vigorous-grow/bin/
 rm -rf build
 ```
 
