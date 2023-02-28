@@ -138,6 +138,7 @@ sudo systemctl start nibid && sudo journalctl -u nibid -f --no-hostname -o cat
 ```
 
 # Set up a pricefeeder
+To run pricefeeder you validator should be in active set. Otherwise price feeder will not vote on periods.
 
 1. Install the pricefeeder binary
 ```bash
