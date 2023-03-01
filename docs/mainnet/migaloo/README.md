@@ -8,9 +8,11 @@ The Migaloo chain is a permissionless Cosmos SDK chain on which  projects are en
 
 [Website](https://whitewhale.money) | [Discord](https://discord.gg/AyvcgD4jy3) | [Twitter](https://twitter.com/WhiteWhaleDefi)
 
+[![Stake with kjnodes](https://i.ibb.co/cr44Q8j/button-stake-with-kjnodes.png)](https://restake.app/migaloo/migaloovaloper1jxtgnfw3tatfh90ju9j76dfrt3yea0zw2vnr8v)
 
+## Restake
 
-
+[Restake with kjnodes](https://restake.app/migaloo/migaloovaloper1jxtgnfw3tatfh90ju9j76dfrt3yea0zw2vnr8v) (every 5 minutes)
 ## Chain explorer
 [https://explorer.kjnodes.com/migaloo](https://explorer.kjnodes.com/migaloo)
 
