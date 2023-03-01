@@ -187,13 +187,6 @@
   * [State sync](testnet/lava/state-sync/README.md)
   * [Useful commands](testnet/lava/useful-commands/README.md)
 
-* [Mars](testnet/mars/README.md)
-  * [Installation](testnet/mars/installation/README.md)
-  * [Upgrade](testnet/mars/upgrade/README.md)
-  * [Snapshot](testnet/mars/snapshot/README.md)
-  * [State sync](testnet/mars/state-sync/README.md)
-  * [Useful commands](testnet/mars/useful-commands/README.md)
-
 * [Nibiru](testnet/nibiru/README.md)
   * [Installation](testnet/nibiru/installation/README.md)
   * [Upgrade](testnet/nibiru/upgrade/README.md)

@@ -59,8 +59,6 @@ description: Discover base tools contributed to the projects by kjnodes team.
 
 <img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/icons/lava.png" alt="" data-size="line"> [Lava](testnet/lava/)
 
-<img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/icons/mars.png" alt="" data-size="line"> [Mars](testnet/mars/)
-
 <img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/icons/nibiru.png" alt="" data-size="line"> [Nibiru](testnet/nibiru/)
 
 <img src="https://raw.githubusercontent.com/kj89/testnet_manuals/main/pingpub/icons/nolus.png" alt="" data-size="line"> [Nolus](testnet/nolus/)
