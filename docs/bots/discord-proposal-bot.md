@@ -24,7 +24,7 @@ Our bot supports three workflows giving the projects oportunity to choose workfl
 
 <figure><img src="../.gitbook/assets/threaded_proposals.gif" alt=""><figcaption><p>Simple Proposal example</p></figcaption></figure>
 
-3. **Proposal notifications with threads** - more advanded worflow where bot is invited to the server with set of permissions. Bot creates forum posts with proposal cards and sends out notification in announcement channel (this feature can be enabled/disabled based on client needs) This workflow is very similar to governance solution used in [Osmosis Discord Server](https://discord.gg/osmosis).
+3. **Forum proposals** - more advanded worflow where bot is invited to the server with set of permissions. Bot creates forum posts with proposal cards and sends out notification in announcement channel (this feature can be enabled/disabled based on client needs) This workflow is very similar to governance solution used in [Osmosis Discord Server](https://discord.gg/osmosis).
 
 <figure><img src="../.gitbook/assets/forum_proposals.gif" alt=""><figcaption><p>Simple Proposal example</p></figcaption></figure>
 
