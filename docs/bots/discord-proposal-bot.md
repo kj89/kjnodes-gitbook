@@ -14,7 +14,19 @@ As a contribution to Cosmos ecosystem our team has built this bot to keep chain 
 
 Bot checks the proposals on chain every minute using our RPC node, if new proposal is found - bot post it in a Discord using a Webhook.
 
-<figure><img src="../.gitbook/assets/discord_proposal_example.png" alt=""><figcaption><p>Proposal example</p></figcaption></figure>
+Our bot supports three workflows giving the projects oportunity to choose workflow they like the most.
+
+1. **Simple proposal notifications** - this workflow is very simple. Bot connects to dedicated channel using WebHook. Proposal cards are being sent to dedicated channel notifying the relevant user groups. 
+
+<figure><img src="../.gitbook/assets/simple_proposals.png" alt=""><figcaption><p>Simple Proposal example</p></figcaption></figure>
+
+2. **Proposal notifications with threads** - more advanded worflow where bot is invited to the server with set of permissions. This workflow is similar to first one, but it also adds reactions ✅  and 🧵 threads to the posts where validators can do discussions.
+
+<figure><img src="../.gitbook/assets/threaded_proposals.gif" alt=""><figcaption><p>Simple Proposal example</p></figcaption></figure>
+
+3. **Proposal notifications with threads** - more advanded worflow where bot is invited to the server with set of permissions. Bot creates forum posts with proposal cards and sends out notification in announcement channel (this feature can be enabled/disabled based on client needs) This workflow is very similar to governance solution used in [Osmosis Discord Server](https://discord.gg/osmosis).
+
+<figure><img src="../.gitbook/assets/forum_proposals.gif" alt=""><figcaption><p>Simple Proposal example</p></figcaption></figure>
 
 ## How to use
 
