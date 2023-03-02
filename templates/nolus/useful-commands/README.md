@@ -166,7 +166,7 @@ nolusd tx staking unbond $(nolusd keys show wallet --bech val -a) 1000000unls --
 #### Send tokens to the wallet
 
 ```bash
-nolusd tx bank send wallet <TO_WALLET_ADDRESS> 1000000unls --from wallet --chain-id nolus-rila
+nolusd tx bank send wallet <TO_WALLET_ADDRESS> 1000000unls --from wallet --chain-id nolus-rila --gas-adjustment 1.4 --gas auto --fees 500unls -y
 ```
 
 ## 🗳 Governance
