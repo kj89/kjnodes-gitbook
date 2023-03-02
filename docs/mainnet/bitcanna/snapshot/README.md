@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **05:15 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: trichomemonster-ica
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: vigorous-grow
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 7464913 | 5 hours | [snapshot (0.9 GB)](https://snapshots.kjnodes.com/bitcanna/snapshot\_latest.tar.lz4) |
+| 7468441 | 34 minutes | [snapshot (0.9 GB)](https://snapshots.kjnodes.com/bitcanna/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
