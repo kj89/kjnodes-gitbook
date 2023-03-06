@@ -65,6 +65,8 @@ description: Discover base tools contributed to the projects by kjnodes team.
 
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/okp4.png" alt="" data-size="line"> [Okp4](testnet/okp4/)
 
+<img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/ojo.png" alt="" data-size="line"> [Ojo](testnet/ojo/)
+
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/ollo.png" alt="" data-size="line"> [Ollo](testnet/ollo/)
 
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/quasar.png" alt="" data-size="line"> [Quasar](testnet/quasar/)

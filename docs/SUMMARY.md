@@ -208,6 +208,13 @@
   * [State sync](testnet/okp4/state-sync/README.md)
   * [Useful commands](testnet/okp4/useful-commands/README.md)
 
+* [Ojo](testnet/ojo/README.md)
+  * [Installation](testnet/ojo/installation/README.md)
+  * [Upgrade](testnet/ojo/upgrade/README.md)
+  * [Snapshot](testnet/ojo/snapshot/README.md)
+  * [State sync](testnet/ojo/state-sync/README.md)
+  * [Useful commands](testnet/ojo/useful-commands/README.md)
+
 * [Ollo](testnet/ollo/README.md)
   * [Installation](testnet/ollo/installation/README.md)
   * [Upgrade](testnet/ollo/upgrade/README.md)
