@@ -45,7 +45,7 @@ cd $HOME
 rm -rf sao-consensus
 git clone https://github.com/SaoNetwork/sao-consensus.git
 cd sao-consensus
-git checkout v0.0.9
+git checkout testnet0
 
 # Build binaries
 make build
