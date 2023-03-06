@@ -42,9 +42,9 @@ eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```bash
 # Clone project repository
 cd $HOME
-rm -rf saod
+rm -rf sao-consensus
 git clone https://github.com/SaoNetwork/sao-consensus.git
-cd saod
+cd sao-consensus
 git checkout v0.0.9
 
 # Build binaries

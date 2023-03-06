@@ -306,7 +306,7 @@ sudo rm /etc/systemd/system/saod.service
 sudo systemctl daemon-reload
 rm -f $(which saod)
 rm -rf $HOME/.sao
-rm -rf $HOME/saod
+rm -rf $HOME/sao-consensus
 ```
 
 ## ⚙️ Service Management
