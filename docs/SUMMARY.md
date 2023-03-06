@@ -229,13 +229,6 @@
   * [State sync](testnet/quicksilver/state-sync/README.md)
   * [Useful commands](testnet/quicksilver/useful-commands/README.md)
 
-* [Sao](testnet/sao/README.md)
-  * [Installation](testnet/sao/installation/README.md)
-  * [Upgrade](testnet/sao/upgrade/README.md)
-  * [Snapshot](testnet/sao/snapshot/README.md)
-  * [State sync](testnet/sao/state-sync/README.md)
-  * [Useful commands](testnet/sao/useful-commands/README.md)
-
 * [Sei](testnet/sei/README.md)
   * [Installation](testnet/sei/installation/README.md)
   * [Upgrade](testnet/sei/upgrade/README.md)
