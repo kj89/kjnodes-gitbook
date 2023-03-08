@@ -282,3 +282,5 @@ Check missed oracle votes per slashing window
 ```
 ojod q oracle miss-counter $VALIDATOR_ADDRESS
 ```
+
+Special thanks to `mzonder#5844` and `zoia queen#7436`
