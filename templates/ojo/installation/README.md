@@ -169,18 +169,18 @@ go: go1.19.5 linux/amd64
 
 3. Create new wallet for pricefeeder and save `24 word mnemonic phrase`
 ```bash
-ojod keys add pricefeeder-wallet
+ojod keys add pricefeeder-wallet --keyring-backend os
 ```
 
 4. Set up variables
 ```
-export KEYRING="test"
-export KEYRING_PASSWORD="dummy_password"
+export KEYRING="os"
+export KEYRING_PASSWORD="PRICE_FEEDER_KEY_PASSWORD_GOES_HERE"
 export RPC_PORT=${CHAIN_PORT}657
 export GRPC_PORT=${CHAIN_PORT}090
 export VALIDATOR_ADDRESS=$(ojod keys show wallet --bech val -a)
 export MAIN_WALLET_ADDRESS=$(ojod keys show wallet -a)
-export PRICEFEEDER_ADDRESS=$(ojod keys show pricefeeder-wallet -a)
+export PRICEFEEDER_ADDRESS=$(echo -e $KEYRING_PASSWORD | ojod keys show pricefeeder-wallet --keyring-backend os -a)
 ```
 
 4. Fund the pricefeeder-wallet with some testnet tokens.
