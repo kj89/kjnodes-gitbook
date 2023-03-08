@@ -172,10 +172,15 @@ go: go1.19.5 linux/amd64
 ojod keys add pricefeeder-wallet --keyring-backend os
 ```
 
-4. Set up variables
+4. Export keyring password
+```
+ export KEYRING_PASSWORD="PRICE_FEEDER_KEY_PASSWORD_GOES_HERE"
+```
+
+5. Set up variables
 ```
 export KEYRING="os"
-export KEYRING_PASSWORD="PRICE_FEEDER_KEY_PASSWORD_GOES_HERE"
+export LISTEN_PORT=7172
 export RPC_PORT=${CHAIN_PORT}657
 export GRPC_PORT=${CHAIN_PORT}090
 export VALIDATOR_ADDRESS=$(ojod keys show wallet --bech val -a)
@@ -183,7 +188,7 @@ export MAIN_WALLET_ADDRESS=$(ojod keys show wallet -a)
 export PRICEFEEDER_ADDRESS=$(echo -e $KEYRING_PASSWORD | ojod keys show pricefeeder-wallet --keyring-backend os -a)
 ```
 
-4. Fund the pricefeeder-wallet with some testnet tokens.
+6. Fund the pricefeeder-wallet with some testnet tokens.
 {% hint style="info" %}
 In order to make pricefeeder work, it needs some testnet tokens to pay for transaction fees
 {% endhint %}
@@ -198,7 +203,7 @@ Check the balance
 ojod q bank balances $PRICEFEEDER_ADDRESS
 ```
 
-5. Delegate pricefeeder responsibility
+7. Delegate pricefeeder responsibility
 
 {% hint style="info" %}
 As a validator, if you'd like another account to post prices on your behalf (i.e. you don't want your validator mnemonic sending txs), you can delegate pricefeeder responsibilities to another nibi address.
@@ -213,9 +218,10 @@ Check linked pricefeeder address
 ojod q oracle feeder-delegation $VALIDATOR_ADDRESS
 ```
 
-5. Set pricefeeder configuration values
+8. Set pricefeeder configuration values
 ```
-sed -i "s/^address *=.*/address = \"$PRICEFEEDER_ADDRESS\"/;\
+sed -i "s/^listen_addr *=.*/listen_addr = \"0.0.0.0:${LISTEN_PORT}\"/;\
+s/^address *=.*/address = \"$PRICEFEEDER_ADDRESS\"/;\
 s/^chain_id *=.*/chain_id = \"${CHAIN_ID}\"/;\
 s/^validator *=.*/validator = \"$VALIDATOR_ADDRESS\"/;\
 s/^backend *=.*/backend = \"$KEYRING\"/;\
@@ -226,7 +232,7 @@ s|^global-labels *=.*|global-labels = [[\"chain_id\", \"${CHAIN_ID}\"]]|;\
 s|^service-name *=.*|service-name = \"ojo-price-feeder\"|;" $HOME/.ojo-price-feeder/config.toml
 ```
 
-5. Setup the systemd service
+9. Setup the systemd service
 ```bash
 sudo tee /etc/systemd/system/ojo-price-feeder.service > /dev/null <<EOF
 [Unit]
@@ -246,14 +252,14 @@ WantedBy=multi-user.target
 EOF
 ```
 
-7. Register and start the systemd service
+10. Register and start the systemd service
 ```bash
 sudo systemctl daemon-reload
 sudo systemctl enable ojo-price-feeder
 sudo systemctl start ojo-price-feeder
 ```
 
-8. View pricefeeder logs
+11. View pricefeeder logs
 ```bash
 journalctl -fu ojo-price-feeder -o cat
 ```
