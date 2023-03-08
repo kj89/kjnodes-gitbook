@@ -147,6 +147,7 @@ To run pricefeeder you validator should be in active set. Otherwise price feeder
 cd $HOME && rm price-feeder -rf
 git clone https://github.com/ojo-network/price-feeder
 cd price-feeder
+git checkout v0.1.1
 make build
 sudo mv ./build/price-feeder /usr/local/bin
 rm $HOME/.ojo-price-feeder -rf
@@ -157,14 +158,8 @@ mv price-feeder.example.toml $HOME/.ojo-price-feeder/config.toml
 2. Check price-feeder version
 ```bash
 price-feeder version
-```
-
-Check the output
-```
-version: main-5ce6bf5328f798c452f0173018486f8c5a9a3e86
-commit: 5ce6bf5328f798c452f0173018486f8c5a9a3e86
-sdk: v0.46.7
-go: go1.19.5 linux/amd64
+# version: main-5ce6bf5328f798c452f0173018486f8c5a9a3e86
+# commit: 5ce6bf5328f798c452f0173018486f8c5a9a3e86
 ```
 
 3. Create new wallet for pricefeeder and save `24 word mnemonic phrase`
@@ -276,3 +271,14 @@ Successfull Log examples:
 
 Also you can check that your pricefeeder-wallet is doing transactions on chain at [Chain Explorer](https://explorer.kjnodes.com/ojo-testnet)
 <figure><img src="https://i.ibb.co/748MW95/pricefeeder-transactions.png" alt=""><figcaption><p>Price Feeder Transactions</p></figcaption></figure>
+
+## Useful commands
+Check current voting windows progress
+```
+ojod q oracle slash-window
+```
+
+Check missed oracle votes per slashing window
+```
+ojod q oracle miss-counter $VALIDATOR_ADDRESS
+```
