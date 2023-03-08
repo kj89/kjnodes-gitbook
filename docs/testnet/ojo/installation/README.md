@@ -222,7 +222,7 @@ s/^backend *=.*/backend = \"$KEYRING\"/;\
 s|^dir *=.*|dir = \"$HOME/.ojo\"|;\
 s|^grpc_endpoint *=.*|grpc_endpoint = \"localhost:${GRPC_PORT}\"|;\
 s|^tmrpc_endpoint *=.*|tmrpc_endpoint = \"http://localhost:${RPC_PORT}\"|;\
-s|^global-labels *=.*|global-labels = \"[["chain_id", "ojo-devnet"]]\"|;\
+s|^global-labels *=.*|global-labels = [[\"chain_id\", \"ojo-devnet\"]]|;\
 s|^service-name *=.*|service-name = \"ojo-price-feeder\"|;" $HOME/.ojo-price-feeder/config.toml
 ```
 
@@ -248,14 +248,14 @@ EOF
 
 7. Register and start the systemd service
 ```bash
-sudo systemctl daemon-reload && \
-sudo systemctl enable ojo-price-feeder && \
+sudo systemctl daemon-reload
+sudo systemctl enable ojo-price-feeder
 sudo systemctl start ojo-price-feeder
 ```
 
 8. View pricefeeder logs
 ```bash
-journalctl -fu ojo-price-feeder
+journalctl -fu ojo-price-feeder -o cat
 ```
 
 Successfull Log examples:
