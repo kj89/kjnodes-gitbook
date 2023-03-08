@@ -137,12 +137,12 @@ curl -L https://snapshots.kjnodes.com/ojo-testnet/snapshot_latest.tar.lz4 | tar 
 sudo systemctl start ojod && sudo journalctl -u ojod -f --no-hostname -o cat
 ```
 
-# Set up a pricefeeder
+# Set up Price Feeder
 {% hint style="warning" %}
 To run pricefeeder you validator should be in active set. Otherwise price feeder will not vote on periods.
 {% endhint %}
 
-1. Install the pricefeeder binary and create directory for pricefeeder configuration 
+## Install the pricefeeder binary and create directory for pricefeeder configuration 
 ```bash
 cd $HOME && rm price-feeder -rf
 git clone https://github.com/ojo-network/price-feeder
@@ -155,24 +155,24 @@ mkdir $HOME/.ojo-price-feeder
 mv price-feeder.example.toml $HOME/.ojo-price-feeder/config.toml
 ```
 
-2. Check price-feeder version
+## Check price-feeder version
 ```bash
 price-feeder version
-# version: main-5ce6bf5328f798c452f0173018486f8c5a9a3e86
-# commit: 5ce6bf5328f798c452f0173018486f8c5a9a3e86
+# version: HEAD-5d46ed438d33d7904c0d947ebc6a3dd48ce0de59
+# commit: 5d46ed438d33d7904c0d947ebc6a3dd48ce0de59
 ```
 
-3. Create new wallet for pricefeeder and save `24 word mnemonic phrase`
+## Create new wallet for pricefeeder and save `24 word mnemonic phrase`
 ```bash
 ojod keys add pricefeeder-wallet --keyring-backend os
 ```
 
-4. Export keyring password
+## Export keyring password
 ```
  export KEYRING_PASSWORD="PRICE_FEEDER_KEY_PASSWORD_GOES_HERE"
 ```
 
-5. Set up variables
+## Set up variables
 ```
 export KEYRING="os"
 export LISTEN_PORT=7172
@@ -183,7 +183,7 @@ export MAIN_WALLET_ADDRESS=$(ojod keys show wallet -a)
 export PRICEFEEDER_ADDRESS=$(echo -e $KEYRING_PASSWORD | ojod keys show pricefeeder-wallet --keyring-backend os -a)
 ```
 
-6. Fund the pricefeeder-wallet with some testnet tokens.
+## Fund the pricefeeder-wallet with some testnet tokens.
 {% hint style="info" %}
 In order to make pricefeeder work, it needs some testnet tokens to pay for transaction fees
 {% endhint %}
@@ -198,7 +198,7 @@ Check the balance
 ojod q bank balances $PRICEFEEDER_ADDRESS
 ```
 
-7. Delegate pricefeeder responsibility
+## Delegate pricefeeder responsibility
 
 {% hint style="info" %}
 As a validator, if you'd like another account to post prices on your behalf (i.e. you don't want your validator mnemonic sending txs), you can delegate pricefeeder responsibilities to another nibi address.
@@ -213,7 +213,7 @@ Check linked pricefeeder address
 ojod q oracle feeder-delegation $VALIDATOR_ADDRESS
 ```
 
-8. Set pricefeeder configuration values
+## Set pricefeeder configuration values
 ```
 sed -i "s/^listen_addr *=.*/listen_addr = \"0.0.0.0:${LISTEN_PORT}\"/;\
 s/^address *=.*/address = \"$PRICEFEEDER_ADDRESS\"/;\
@@ -227,7 +227,7 @@ s|^global-labels *=.*|global-labels = [[\"chain_id\", \"ojo-devnet\"]]|;\
 s|^service-name *=.*|service-name = \"ojo-price-feeder\"|;" $HOME/.ojo-price-feeder/config.toml
 ```
 
-9. Setup the systemd service
+## Setup the systemd service
 ```bash
 sudo tee /etc/systemd/system/ojo-price-feeder.service > /dev/null <<EOF
 [Unit]
@@ -247,14 +247,14 @@ WantedBy=multi-user.target
 EOF
 ```
 
-10. Register and start the systemd service
+## Register and start the systemd service
 ```bash
 sudo systemctl daemon-reload
 sudo systemctl enable ojo-price-feeder
 sudo systemctl start ojo-price-feeder
 ```
 
-11. View pricefeeder logs
+## View pricefeeder logs
 ```bash
 journalctl -fu ojo-price-feeder -o cat
 ```
