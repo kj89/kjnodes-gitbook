@@ -208,9 +208,9 @@ As a validator, if you'd like another account to post prices on your behalf (i.e
 ojod tx oracle delegate-feed-consent $MAIN_WALLET_ADDRESS $PRICEFEEDER_ADDRESS --from wallet --gas-adjustment 1.4 --gas auto --gas-prices 0uojo -y
 ```
 
-Check linked pricefeeder
+Check linked pricefeeder address
 ```
-ojod q oracle feeder-delegation $MAIN_WALLET_ADDRESS
+ojod q oracle feeder-delegation $VALIDATOR_ADDRESS
 ```
 
 5. Set pricefeeder configuration values
