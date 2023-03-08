@@ -136,3 +136,135 @@ curl -L https://snapshots.kjnodes.com/ojo-testnet/snapshot_latest.tar.lz4 | tar 
 ```bash
 sudo systemctl start ojod && sudo journalctl -u ojod -f --no-hostname -o cat
 ```
+
+# Set up a pricefeeder
+{% hint style="warning" %}
+To run pricefeeder you validator should be in active set. Otherwise price feeder will not vote on periods.
+{% endhint %}
+
+1. Install the pricefeeder binary and create directory for pricefeeder configuration 
+```bash
+cd $HOME && rm price-feeder -rf
+git clone https://github.com/ojo-network/price-feeder
+cd price-feeder
+make build
+sudo mv ./build/price-feeder /usr/local/bin
+rm $HOME/.ojo-price-feeder -rf
+mkdir $HOME/.ojo-price-feeder
+mv price-feeder.example.toml $HOME/.ojo-price-feeder/config.toml
+```
+
+2. Check price-feeder version
+```bash
+price-feeder version
+```
+
+Check the output
+```
+version: main-5ce6bf5328f798c452f0173018486f8c5a9a3e86
+commit: 5ce6bf5328f798c452f0173018486f8c5a9a3e86
+sdk: v0.46.7
+go: go1.19.5 linux/amd64
+```
+
+3. Create new wallet for pricefeeder and save `24 word mnemonic phrase`
+```bash
+ojod keys add pricefeeder-wallet
+```
+
+4. Set up variables
+```
+export KEYRING="test"
+export KEYRING_PASSWORD="dummy_password"
+export RPC_PORT=50657
+export GRPC_PORT=50090
+export VALIDATOR_ADDRESS=$(ojod keys show wallet --bech val -a)
+export MAIN_WALLET_ADDRESS=$(ojod keys show wallet -a)
+export PRICEFEEDER_ADDRESS=$(ojod keys show pricefeeder-wallet -a)
+```
+
+4. Fund the pricefeeder-wallet with some testnet tokens.
+{% hint style="info" %}
+In order to make pricefeeder work, it needs some testnet tokens to pay for transaction fees
+{% endhint %}
+
+This command will send 1 OJO to pricefeeder-wallet from you main wallet
+```
+ojod tx bank send wallet $PRICEFEEDER_ADDRESS 1000000uojo --from wallet --chain-id ojo-devnet --gas-adjustment 1.4 --gas auto --gas-prices 0uojo -y
+```
+
+Check the balance
+```
+ojod q bank balances $PRICEFEEDER_ADDRESS
+```
+
+5. Delegate pricefeeder responsibility
+
+{% hint style="info" %}
+As a validator, if you'd like another account to post prices on your behalf (i.e. you don't want your validator mnemonic sending txs), you can delegate pricefeeder responsibilities to another nibi address.
+{% endhint %}
+
+```bash
+ojod tx oracle delegate-feed-consent $MAIN_WALLET_ADDRESS $PRICEFEEDER_ADDRESS --from wallet --gas-adjustment 1.4 --gas auto --gas-prices 0uojo -y
+```
+
+Check linked pricefeeder
+```
+ojod q oracle feeder-delegation $MAIN_WALLET_ADDRESS
+```
+
+5. Set pricefeeder configuration values
+```
+sed -i "s/^address *=.*/address = \"$PRICEFEEDER_ADDRESS\"/;\
+s/^chain_id *=.*/chain_id = \"ojo-devnet\"/;\
+s/^validator *=.*/validator = \"$VALIDATOR_ADDRESS\"/;\
+s/^backend *=.*/backend = \"$KEYRING\"/;\
+s|^dir *=.*|dir = \"$HOME/.ojo\"|;\
+s|^grpc_endpoint *=.*|grpc_endpoint = \"localhost:${GRPC_PORT}\"|;\
+s|^tmrpc_endpoint *=.*|tmrpc_endpoint = \"http://localhost:${RPC_PORT}\"|;" $HOME/.ojo-price-feeder/config.toml
+```
+
+5. Setup the systemd service
+```bash
+sudo tee /etc/systemd/system/ojo-price-feeder.service > /dev/null <<EOF
+[Unit]
+Description=Ojo Price Feeder
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=$(which price-feeder) $HOME/.ojo-price-feeder/config.toml
+Restart=on-failure
+RestartSec=30
+LimitNOFILE=65535
+Environment="PRICE_FEEDER_PASS=$KEYRING_PASSWORD"
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+
+7. Register and start the systemd service
+```bash
+sudo systemctl daemon-reload && \
+sudo systemctl enable ojo-price-feeder && \
+sudo systemctl start ojo-price-feeder
+```
+
+8. View pricefeeder logs
+```bash
+journalctl -fu ojo-price-feeder
+```
+
+Successfull Log examples:
+```
+10:30AM INF broadcasting vote exchange_rates=ATOM:11.449658317452328488,BNB:286.505174071110084991,CRO:0.069718618570227407,DAI:0.999872679370903845,ETH:1552.960176513619371601,IST:1.013970239583170325,OSMO:0.826831324620249729,UMEE:0.007902144939292575,USDC:0.999873169363824893,USDT:0.999851633546200939,WBTC:22001.354045277520185398,stATOM:12.378471944671440576,stOSMO:0.869546768297473244 feeder=ojo1akr5mgltsde7lke3cgxwf2pcug3rnyfy67dl6p module=oracle validator=ojovaloper1mfasrshu4k0wlksvgjyvahe7hz67sw4z0pst3f
+10:30AM INF successfully broadcasted tx module=oracle_client tx_code=0 tx_hash=354B62AC58F370F6E866F019A7C14E93E456F6A1355AFE92B915DABCF4C89C86 tx_height=0
+10:30AM INF broadcasting pre-vote feeder=ojo1akr5mgltsde7lke3cgxwf2pcug3rnyfy67dl6p hash=9fefb35d3499ce13339c37b65e5fa79b898c1d09 module=oracle validator=ojovaloper1mfasrshu4k0wlksvgjyvahe7hz67sw4z0pst3f
+10:30AM INF successfully broadcasted tx module=oracle_client tx_code=0 tx_hash=8E918F16931972681A5CC8C1E0F3E082561D8899DD672D5FA6D943FC81E8179A tx_height=0
+10:31AM INF skipping until next voting period current_vote_period=64750 module=oracle previous_vote_period=64750 vote_period=5
+10:31AM INF skipping until next voting period current_vote_period=64750 module=oracle previous_vote_period=64750 vote_period=5
+```
+
+Also you can check that your pricefeeder-wallet is doing transactions on chain at [Chain Explorer](https://explorer.kjnodes.com/ojo-testnet)
+<figure><img src="https://i.ibb.co/748MW95/pricefeeder-transactions.png" alt=""><figcaption><p>Price Feeder Transactions</p></figcaption></figure>
