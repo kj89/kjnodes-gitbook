@@ -137,7 +137,7 @@ curl -L https://snapshots.kjnodes.com/${CHAIN_NAME}/snapshot_latest.tar.lz4 | ta
 sudo systemctl start ${CHAIN_APP} && sudo journalctl -u ${CHAIN_APP} -f --no-hostname -o cat
 ```
 
-## Set up Price Feeder
+# Set up Price Feeder
 {% hint style="warning" %}
 To run pricefeeder you validator should be in active set. Otherwise price feeder will not vote on periods.
 {% endhint %}
@@ -251,7 +251,7 @@ EOF
 ```bash
 sudo systemctl daemon-reload
 sudo systemctl enable ojo-price-feeder
-sudo systemctl start ojo-price-feeder
+sudo systemctl restart ojo-price-feeder
 ```
 
 ### View pricefeeder logs
