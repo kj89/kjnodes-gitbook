@@ -14,7 +14,9 @@ As a contribution to Cosmos ecosystem our team has built this bot to keep chain 
 
 Bot checks the proposals on chain every minute using our RPC node, if new proposal is found - bot post it in a Discord using a Webhook.
 
-Our bot supports three workflows giving the projects oportunity to choose workflow they like the most.
+<figure><img src="../.gitbook/assets/simple_proposals.png" alt=""><figcaption><p>Simple Proposal example</p></figcaption></figure>
+
+### Our bot supports three workflows giving the projects oportunity to choose workflow they like the most.
 
 1. **Simple proposal notifications** - this workflow is very simple. Bot connects to dedicated channel using WebHook. Proposal cards are being sent to dedicated channel notifying the relevant user groups. 
 
