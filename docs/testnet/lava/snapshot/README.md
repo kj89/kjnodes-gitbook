@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **05:45 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 104424 | 4 hours | [snapshot (5.96 GB)](https://snapshots.kjnodes.com/lava-testnet/snapshot\_latest.tar.lz4) |
+| 105147 | 5 hours | [snapshot (6.08 GB)](https://snapshots.kjnodes.com/lava-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

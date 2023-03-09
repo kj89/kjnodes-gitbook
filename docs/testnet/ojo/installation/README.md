@@ -185,10 +185,10 @@ export PRICEFEEDER_ADDRESS=$(echo -e $KEYRING_PASSWORD | ojod keys show pricefee
 
 ### Fund the pricefeeder-wallet with some testnet tokens.
 {% hint style="info" %}
-In order to make pricefeeder work, it needs some testnet tokens to pay for transaction fees
+In order to make pricefeeder work, it needs some tokens to pay for transaction fees
 {% endhint %}
 
-This command will send 1 OJO to pricefeeder-wallet from you main wallet
+This command will send `1 OJO` to `pricefeeder-wallet` from you main `wallet`
 ```
 ojod tx bank send wallet $PRICEFEEDER_ADDRESS 1000000uojo --from wallet --chain-id ojo-devnet --gas-adjustment 1.4 --gas auto --gas-prices 0uojo -y
 ```
@@ -201,7 +201,7 @@ ojod q bank balances $PRICEFEEDER_ADDRESS
 ### Delegate pricefeeder responsibility
 
 {% hint style="info" %}
-As a validator, if you'd like another account to post prices on your behalf (i.e. you don't want your validator mnemonic sending txs), you can delegate pricefeeder responsibilities to another nibi address.
+As a validator, if you'd like another account to post prices on your behalf (i.e. you don't want your validator mnemonic sending txs), you can delegate pricefeeder responsibilities to another address.
 {% endhint %}
 
 ```bash
