@@ -204,7 +204,7 @@ palomad tx gov vote 1 abstain --from wallet --chain-id messenger --gas-adjustmen
 #### Vote 'NoWithVeto'
 
 ```bash
-palomad tx gov vote 1 nowithveto --from wallet --chain-id messenger --gas-adjustment 1.4 --gas auto --gas-prices 0ugrain -y
+palomad tx gov vote 1 NoWithVeto --from wallet --chain-id messenger --gas-adjustment 1.4 --gas auto --gas-prices 0ugrain -y
 ```
 
 ## ⚡️ Utility

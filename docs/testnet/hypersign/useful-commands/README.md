@@ -204,7 +204,7 @@ hid-noded tx gov vote 1 abstain --from wallet --chain-id jagrat --gas-adjustment
 #### Vote 'NoWithVeto'
 
 ```bash
-hid-noded tx gov vote 1 nowithveto --from wallet --chain-id jagrat --gas-adjustment 1.4 --gas auto --node=tcp://localhost:31657 -y
+hid-noded tx gov vote 1 NoWithVeto --from wallet --chain-id jagrat --gas-adjustment 1.4 --gas auto --node=tcp://localhost:31657 -y
 ```
 
 ## ⚡️ Utility

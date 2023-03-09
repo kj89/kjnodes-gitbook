@@ -204,7 +204,7 @@ kujirad tx gov vote 1 abstain --from wallet --chain-id kaiyo-1 --gas-adjustment 
 #### Vote 'NoWithVeto'
 
 ```bash
-kujirad tx gov vote 1 nowithveto --from wallet --chain-id kaiyo-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.00119ukuji -y
+kujirad tx gov vote 1 NoWithVeto --from wallet --chain-id kaiyo-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.00119ukuji -y
 ```
 
 ## ⚡️ Utility

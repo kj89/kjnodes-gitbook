@@ -204,7 +204,7 @@ seid tx gov vote 1 abstain --from wallet --chain-id atlantic-1 --gas-adjustment 
 #### Vote 'NoWithVeto'
 
 ```bash
-seid tx gov vote 1 nowithveto --from wallet --chain-id atlantic-1 --gas-adjustment 1.4 --gas auto --gas-prices 0usei -y
+seid tx gov vote 1 NoWithVeto --from wallet --chain-id atlantic-1 --gas-adjustment 1.4 --gas auto --gas-prices 0usei -y
 ```
 
 ## ⚡️ Utility

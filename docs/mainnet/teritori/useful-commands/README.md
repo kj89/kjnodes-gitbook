@@ -204,7 +204,7 @@ teritorid tx gov vote 1 abstain --from wallet --chain-id teritori-1 --gas-adjust
 #### Vote 'NoWithVeto'
 
 ```bash
-teritorid tx gov vote 1 nowithveto --from wallet --chain-id teritori-1 --gas-adjustment 1.4 --gas auto --gas-prices 0utori -y
+teritorid tx gov vote 1 NoWithVeto --from wallet --chain-id teritori-1 --gas-adjustment 1.4 --gas auto --gas-prices 0utori -y
 ```
 
 ## ⚡️ Utility

@@ -204,7 +204,7 @@ migalood tx gov vote 1 abstain --from wallet --chain-id migaloo-1 --gas-adjustme
 #### Vote 'NoWithVeto'
 
 ```bash
-migalood tx gov vote 1 nowithveto --from wallet --chain-id migaloo-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uwhale -y
+migalood tx gov vote 1 NoWithVeto --from wallet --chain-id migaloo-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uwhale -y
 ```
 
 ## ⚡️ Utility

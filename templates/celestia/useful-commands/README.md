@@ -210,7 +210,7 @@ ${CHAIN_APP} tx gov vote 1 abstain --from wallet --chain-id ${CHAIN_ID} --gas-ad
 #### Vote 'NoWithVeto'
 
 ```bash
-${CHAIN_APP} tx gov vote 1 nowithveto --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
+${CHAIN_APP} tx gov vote 1 NoWithVeto --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --gas-prices ${MIN_GAS_PRICE} -y
 ```
 
 ## ⚡️ Utility

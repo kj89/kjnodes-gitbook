@@ -204,7 +204,7 @@ ${CHAIN_APP} tx gov vote 1 abstain --from wallet --chain-id ${CHAIN_ID} --gas-ad
 #### Vote 'NoWithVeto'
 
 ```bash
-${CHAIN_APP} tx gov vote 1 nowithveto --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --node=tcp://localhost:${CHAIN_PORT}657 -y
+${CHAIN_APP} tx gov vote 1 NoWithVeto --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --node=tcp://localhost:${CHAIN_PORT}657 -y
 ```
 
 ## ⚡️ Utility

@@ -204,7 +204,7 @@ defundd tx gov vote 1 abstain --from wallet --chain-id defund-private-4 --gas-ad
 #### Vote 'NoWithVeto'
 
 ```bash
-defundd tx gov vote 1 nowithveto --from wallet --chain-id defund-private-4 --gas-adjustment 1.4 --gas auto --gas-prices 0ufetf -y
+defundd tx gov vote 1 NoWithVeto --from wallet --chain-id defund-private-4 --gas-adjustment 1.4 --gas auto --gas-prices 0ufetf -y
 ```
 
 ## ⚡️ Utility

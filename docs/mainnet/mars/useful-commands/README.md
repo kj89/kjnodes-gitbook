@@ -204,7 +204,7 @@ marsd tx gov vote 1 abstain --from wallet --chain-id mars-1 --gas-adjustment 1.4
 #### Vote 'NoWithVeto'
 
 ```bash
-marsd tx gov vote 1 nowithveto --from wallet --chain-id mars-1 --gas-adjustment 1.4 --gas auto --gas-prices 0umars -y
+marsd tx gov vote 1 NoWithVeto --from wallet --chain-id mars-1 --gas-adjustment 1.4 --gas auto --gas-prices 0umars -y
 ```
 
 ## ⚡️ Utility

@@ -204,7 +204,7 @@ canined tx gov vote 1 abstain --from wallet --chain-id lupulella-2 --gas-adjustm
 #### Vote 'NoWithVeto'
 
 ```bash
-canined tx gov vote 1 nowithveto --from wallet --chain-id lupulella-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.002ujkl -y
+canined tx gov vote 1 NoWithVeto --from wallet --chain-id lupulella-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.002ujkl -y
 ```
 
 ## ⚡️ Utility

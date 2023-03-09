@@ -204,7 +204,7 @@ saod tx gov vote 1 abstain --from wallet --chain-id sao-testnet0 --gas-adjustmen
 #### Vote 'NoWithVeto'
 
 ```bash
-saod tx gov vote 1 nowithveto --from wallet --chain-id sao-testnet0 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001sao -y
+saod tx gov vote 1 NoWithVeto --from wallet --chain-id sao-testnet0 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001sao -y
 ```
 
 ## ⚡️ Utility

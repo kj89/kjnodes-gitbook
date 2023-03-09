@@ -204,7 +204,7 @@ quicksilverd tx gov vote 1 abstain --from wallet --chain-id innuendo-5 --gas-adj
 #### Vote 'NoWithVeto'
 
 ```bash
-quicksilverd tx gov vote 1 nowithveto --from wallet --chain-id innuendo-5 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
+quicksilverd tx gov vote 1 NoWithVeto --from wallet --chain-id innuendo-5 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
 ```
 
 ## ⚡️ Utility

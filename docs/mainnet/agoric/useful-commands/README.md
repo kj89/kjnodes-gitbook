@@ -204,7 +204,7 @@ agd tx gov vote 1 abstain --from wallet --chain-id agoric-3 --gas-adjustment 1.4
 #### Vote 'NoWithVeto'
 
 ```bash
-agd tx gov vote 1 nowithveto --from wallet --chain-id agoric-3 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ubld -y
+agd tx gov vote 1 NoWithVeto --from wallet --chain-id agoric-3 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ubld -y
 ```
 
 ## ⚡️ Utility

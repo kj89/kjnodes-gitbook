@@ -204,7 +204,7 @@ rebusd tx gov vote 1 abstain --from wallet --chain-id reb_1111-1 --gas-adjustmen
 #### Vote 'NoWithVeto'
 
 ```bash
-rebusd tx gov vote 1 nowithveto --from wallet --chain-id reb_1111-1 --gas-adjustment 1.4 --gas auto --gas-prices 0arebus -y
+rebusd tx gov vote 1 NoWithVeto --from wallet --chain-id reb_1111-1 --gas-adjustment 1.4 --gas auto --gas-prices 0arebus -y
 ```
 
 ## ⚡️ Utility

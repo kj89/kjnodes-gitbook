@@ -204,7 +204,7 @@ osmosisd tx gov vote 1 abstain --from wallet --chain-id osmosis-1 --gas-adjustme
 #### Vote 'NoWithVeto'
 
 ```bash
-osmosisd tx gov vote 1 nowithveto --from wallet --chain-id osmosis-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uosmo -y
+osmosisd tx gov vote 1 NoWithVeto --from wallet --chain-id osmosis-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uosmo -y
 ```
 
 ## ⚡️ Utility

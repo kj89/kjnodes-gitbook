@@ -204,7 +204,7 @@ strided tx gov vote 1 abstain --from wallet --chain-id stride-1 --gas-adjustment
 #### Vote 'NoWithVeto'
 
 ```bash
-strided tx gov vote 1 nowithveto --from wallet --chain-id stride-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.001ustrd -y
+strided tx gov vote 1 NoWithVeto --from wallet --chain-id stride-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.001ustrd -y
 ```
 
 ## ⚡️ Utility

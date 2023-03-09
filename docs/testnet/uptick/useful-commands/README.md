@@ -204,7 +204,7 @@ uptickd tx gov vote 1 abstain --from wallet --chain-id uptick_7000-2 --gas-adjus
 #### Vote 'NoWithVeto'
 
 ```bash
-uptickd tx gov vote 1 nowithveto --from wallet --chain-id uptick_7000-2 --gas-adjustment 1.4 --gas auto --gas-prices 0auptick -y
+uptickd tx gov vote 1 NoWithVeto --from wallet --chain-id uptick_7000-2 --gas-adjustment 1.4 --gas auto --gas-prices 0auptick -y
 ```
 
 ## ⚡️ Utility

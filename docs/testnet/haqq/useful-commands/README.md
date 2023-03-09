@@ -204,7 +204,7 @@ haqqd tx gov vote 1 abstain --from wallet --chain-id haqq_54211-3 --gas-adjustme
 #### Vote 'NoWithVeto'
 
 ```bash
-haqqd tx gov vote 1 nowithveto --from wallet --chain-id haqq_54211-3 --gas-adjustment 1.4 --gas auto --gas-prices 0aISLM -y
+haqqd tx gov vote 1 NoWithVeto --from wallet --chain-id haqq_54211-3 --gas-adjustment 1.4 --gas auto --gas-prices 0aISLM -y
 ```
 
 ## ⚡️ Utility

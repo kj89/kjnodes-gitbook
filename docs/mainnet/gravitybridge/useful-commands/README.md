@@ -204,7 +204,7 @@ gravityd tx gov vote 1 abstain --from wallet --chain-id gravity-bridge-3 --gas-a
 #### Vote 'NoWithVeto'
 
 ```bash
-gravityd tx gov vote 1 nowithveto --from wallet --chain-id gravity-bridge-3 --gas-adjustment 1.4 --gas auto --gas-prices 0ugraviton -y
+gravityd tx gov vote 1 NoWithVeto --from wallet --chain-id gravity-bridge-3 --gas-adjustment 1.4 --gas auto --gas-prices 0ugraviton -y
 ```
 
 ## ⚡️ Utility

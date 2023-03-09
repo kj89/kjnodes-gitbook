@@ -204,7 +204,7 @@ gitopiad tx gov vote 1 abstain --from wallet --chain-id gitopia-janus-testnet-2 
 #### Vote 'NoWithVeto'
 
 ```bash
-gitopiad tx gov vote 1 nowithveto --from wallet --chain-id gitopia-janus-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.001utlore -y
+gitopiad tx gov vote 1 NoWithVeto --from wallet --chain-id gitopia-janus-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.001utlore -y
 ```
 
 ## ⚡️ Utility

@@ -204,7 +204,7 @@ andromedad tx gov vote 1 abstain --from wallet --chain-id galileo-3 --gas-adjust
 #### Vote 'NoWithVeto'
 
 ```bash
-andromedad tx gov vote 1 nowithveto --from wallet --chain-id galileo-3 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uandr -y
+andromedad tx gov vote 1 NoWithVeto --from wallet --chain-id galileo-3 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uandr -y
 ```
 
 ## ⚡️ Utility

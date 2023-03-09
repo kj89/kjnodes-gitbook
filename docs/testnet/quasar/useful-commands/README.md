@@ -204,7 +204,7 @@ quasard tx gov vote 1 abstain --from wallet --chain-id qsr-questnet-04 --gas-adj
 #### Vote 'NoWithVeto'
 
 ```bash
-quasard tx gov vote 1 nowithveto --from wallet --chain-id qsr-questnet-04 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
+quasard tx gov vote 1 NoWithVeto --from wallet --chain-id qsr-questnet-04 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
 ```
 
 ## ⚡️ Utility

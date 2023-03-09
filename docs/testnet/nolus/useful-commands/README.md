@@ -204,7 +204,7 @@ nolusd tx gov vote 1 abstain --from wallet --chain-id nolus-rila --gas-adjustmen
 #### Vote 'NoWithVeto'
 
 ```bash
-nolusd tx gov vote 1 nowithveto --from wallet --chain-id nolus-rila --gas-adjustment 1.4 --gas auto --fees 500unls -y
+nolusd tx gov vote 1 NoWithVeto --from wallet --chain-id nolus-rila --gas-adjustment 1.4 --gas auto --fees 500unls -y
 ```
 
 ## ⚡️ Utility

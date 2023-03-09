@@ -204,7 +204,7 @@ dymd tx gov vote 1 abstain --from wallet --chain-id 35-C --gas-adjustment 1.4 --
 #### Vote 'NoWithVeto'
 
 ```bash
-dymd tx gov vote 1 nowithveto --from wallet --chain-id 35-C --gas-adjustment 1.4 --gas auto --gas-prices 0.025udym -y
+dymd tx gov vote 1 NoWithVeto --from wallet --chain-id 35-C --gas-adjustment 1.4 --gas auto --gas-prices 0.025udym -y
 ```
 
 ## ⚡️ Utility

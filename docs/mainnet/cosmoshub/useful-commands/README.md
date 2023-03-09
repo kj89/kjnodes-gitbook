@@ -204,7 +204,7 @@ gaiad tx gov vote 1 abstain --from wallet --chain-id cosmoshub-4 --gas-adjustmen
 #### Vote 'NoWithVeto'
 
 ```bash
-gaiad tx gov vote 1 nowithveto --from wallet --chain-id cosmoshub-4 --gas-adjustment 1.4 --gas auto --gas-prices 0uatom -y
+gaiad tx gov vote 1 NoWithVeto --from wallet --chain-id cosmoshub-4 --gas-adjustment 1.4 --gas auto --gas-prices 0uatom -y
 ```
 
 ## ⚡️ Utility
