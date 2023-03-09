@@ -26,7 +26,7 @@ Bot checks the proposals on chain every minute using our RPC node, if new propos
 
 <figure><img src="../.gitbook/assets/threaded_proposals.gif" alt=""><figcaption><p>Threaded Proposals example</p></figcaption></figure>
 
-3. **Forum proposals** - more advanded worflow where bot is invited to the server with set of permissions. Bot creates forum posts with proposal cards and sends out notification in announcement channel (this feature can be enabled/disabled based on client needs) This workflow is very similar to governance solution used in [Osmosis Discord Server](https://discord.gg/osmosis).
+3. **Forum proposals** - more advanced worflow where bot is invited to the server with set of permissions. Bot creates forum posts with proposal cards and sends out notification in announcement channel (this feature can be enabled/disabled based on client needs) This workflow is very similar to governance solution used in [Osmosis Discord Server](https://discord.gg/osmosis).
 
 <figure><img src="../.gitbook/assets/forum_proposals.gif" alt=""><figcaption><p>Forum Proposals example</p></figcaption></figure>
 
