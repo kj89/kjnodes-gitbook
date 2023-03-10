@@ -6,7 +6,7 @@ description: Prepare for and the upcomming chain upgrade using Cosmovisor.
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/nolus.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: nolus-rila | **Latest Version Tag**: v0.1.43 | **Custom Port**: 43
+**Chain ID**: nolus-rila | **Latest Version Tag**: v0.2.1-testnet | **Custom Port**: 43
 
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.
@@ -21,14 +21,14 @@ cd $HOME
 rm -rf nolus-core
 git clone https://github.com/Nolus-Protocol/nolus-core.git
 cd nolus-core
-git checkout v0.1.43
+git checkout v0.2.1-testnet
 
 # Build binaries
 make build
 
 # Prepare binaries for Cosmovisor
-mkdir -p $HOME/.nolus/cosmovisor/upgrades/v0.1.43/bin
-mv target/release/nolusd $HOME/.nolus/cosmovisor/upgrades/v0.1.43/bin/
+mkdir -p $HOME/.nolus/cosmovisor/upgrades/v0.2.1/bin
+mv target/release/nolusd $HOME/.nolus/cosmovisor/upgrades/v0.2.1/bin/
 rm -rf build
 ```
 

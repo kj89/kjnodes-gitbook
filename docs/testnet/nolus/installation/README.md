@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/nolus.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: nolus-rila | **Latest Version Tag**: v0.1.43 | **Custom Port**: 43
+**Chain ID**: nolus-rila | **Latest Version Tag**: v0.2.1-testnet | **Custom Port**: 43
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf nolus-core
 git clone https://github.com/Nolus-Protocol/nolus-core.git
 cd nolus-core
-git checkout v0.1.43
+git checkout v0.2.1-testnet
 
 # Build binaries
 make build
