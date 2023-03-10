@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **01:15 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 2374019 | 34 minutes | [snapshot (1.11 GB)](https://snapshots.kjnodes.com/teritori/snapshot\_latest.tar.lz4) |
+| 2374019 | 54 minutes | [snapshot (1.11 GB)](https://snapshots.kjnodes.com/teritori/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

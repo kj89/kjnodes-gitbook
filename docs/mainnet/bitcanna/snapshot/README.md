@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **05:15 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: vigorous-grow
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: vigorous-grow-fix
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 7496264 | 2 hours | [snapshot (2.42 GB)](https://snapshots.kjnodes.com/bitcanna/snapshot\_latest.tar.lz4) |
+| 7586411 | 35 seconds | [snapshot (0.27 GB)](https://snapshots.kjnodes.com/bitcanna/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
