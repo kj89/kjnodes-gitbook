@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **07:15 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 458701 | 41 minutes | [snapshot (0.63 GB)](https://snapshots.kjnodes.com/quasar-testnet/snapshot\_latest.tar.lz4) |
+| 462456 | 34 minutes | [snapshot (0.66 GB)](https://snapshots.kjnodes.com/quasar-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
