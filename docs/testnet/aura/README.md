@@ -4,7 +4,7 @@
 
 The Aura Network protocol allows users to mint, rate, track data,  or trade NFT for the goal of constructing a strong platform to  support all trading assets on the crypto market in a simpler and easier way
 
-**Chain ID**: euphoria-2 | **Latest Version Tag**: euphoria_v0.4.2 | **Wasm**: ON
+**Chain ID**: euphoria-2 | **Latest Version Tag**: euphoria_v0.4.4 | **Wasm**: ON
 
 [Website](https://aura.network) | [Discord](https://discord.gg/hpvF5QcWRf) | [Twitter](https://twitter.com/AuraNetworkHQ)
 

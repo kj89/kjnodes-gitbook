@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/aura.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: euphoria-2 | **Latest Version Tag**: euphoria_v0.4.2 | **Custom Port**: 17
+**Chain ID**: euphoria-2 | **Latest Version Tag**: euphoria_v0.4.4 | **Custom Port**: 17
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf aura
 git clone https://github.com/aura-nw/aura.git
 cd aura
-git checkout euphoria_v0.4.2
+git checkout euphoria_v0.4.4
 
 # Build binaries
 make build
