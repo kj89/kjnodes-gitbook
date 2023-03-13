@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/celestia.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: mocha | **Latest Version Tag**: v0.11.0 | **Custom Port**: 20
+**Chain ID**: blockspacerace-0 | **Latest Version Tag**: v0.12.0 | **Custom Port**: 20
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf celestia-app
 git clone https://github.com/celestiaorg/celestia-app.git
 cd celestia-app
-git checkout v0.11.0
+git checkout v0.12.0
 
 # Build binaries
 make build
@@ -94,12 +94,12 @@ sudo systemctl enable celestia-appd
 
 ```bash
 # Set node configuration
-celestia-appd config chain-id mocha
+celestia-appd config chain-id blockspacerace-0
 celestia-appd config keyring-backend test
 celestia-appd config node tcp://localhost:20657
 
 # Initialize the node
-celestia-appd init $MONIKER --chain-id mocha
+celestia-appd init $MONIKER --chain-id blockspacerace-0
 
 # Download genesis and addrbook
 curl -Ls https://snapshots.kjnodes.com/celestia-testnet/genesis.json > $HOME/.celestia-app/config/genesis.json
