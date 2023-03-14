@@ -6,7 +6,7 @@ description: Prepare for and the upcomming chain upgrade using Cosmovisor.
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/stride.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: stride-1 | **Latest Version Tag**: v6.0.0 | **Custom Port**: 16
+**Chain ID**: stride-1 | **Latest Version Tag**: v7.0.0 | **Custom Port**: 16
 
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.
@@ -21,14 +21,14 @@ cd $HOME
 rm -rf stride
 git clone https://github.com/Stride-Labs/stride.git
 cd stride
-git checkout v6.0.0
+git checkout v7.0.0
 
 # Build binaries
 make build
 
 # Prepare binaries for Cosmovisor
-mkdir -p $HOME/.stride/cosmovisor/upgrades/v6/bin
-mv build/strided $HOME/.stride/cosmovisor/upgrades/v6/bin/
+mkdir -p $HOME/.stride/cosmovisor/upgrades/v7/bin
+mv build/strided $HOME/.stride/cosmovisor/upgrades/v7/bin/
 rm -rf build
 ```
 
