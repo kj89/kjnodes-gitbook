@@ -219,9 +219,7 @@ journalctl -fu celestia-bridge -o cat
 
 ### Get Bridge Node ID
 ```bash
-NODE_TYPE=bridge
-AUTH_TOKEN=$(celestia $NODE_TYPE auth admin --p2p.network blockspacerace)
-
+AUTH_TOKEN=$(celestia bridge auth admin --p2p.network blockspacerace)
 curl -s -X POST -H "Authorization: Bearer $AUTH_TOKEN" -H 'Content-Type: application/json' -d '{"jsonrpc":"2.0","id":0,"method":"p2p.Info","params":[]}' http://localhost:${CHAIN_PORT}658 | jq -r .result.ID
 ```
 
