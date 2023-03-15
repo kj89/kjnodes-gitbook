@@ -20,7 +20,7 @@ The Migaloo chain is a permissionless Cosmos SDK chain on which  projects are en
 
 * api: [https://migaloo.api.kjnodes.com](https://migaloo.api.kjnodes.com)
 * rpc: [https://migaloo.rpc.kjnodes.com](https://migaloo.rpc.kjnodes.com)
-* grpc: [https://migaloo.grpc.kjnodes.com](https://migaloo.grpc.kjnodes.com)
+* grpc: migaloo.grpc.kjnodes.com:49090
 
 ## Peering
 

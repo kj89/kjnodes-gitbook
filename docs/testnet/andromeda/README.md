@@ -18,7 +18,7 @@ Andromeda is an application platform layer that connects all  public blockchains
 
 * api: [https://andromeda-testnet.api.kjnodes.com](https://andromeda-testnet.api.kjnodes.com)
 * rpc: [https://andromeda-testnet.rpc.kjnodes.com](https://andromeda-testnet.rpc.kjnodes.com)
-* grpc: [https://andromeda-testnet.grpc.kjnodes.com](https://andromeda-testnet.grpc.kjnodes.com)
+* grpc: andromeda-testnet.grpc.kjnodes.com:47090
 
 ## Peering
 

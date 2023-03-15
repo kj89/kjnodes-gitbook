@@ -18,7 +18,7 @@ Quasar (pronounced QWAY-ZAR) is a decentralized  appchain enabling interchain di
 
 * api: [https://quasar-testnet.api.kjnodes.com](https://quasar-testnet.api.kjnodes.com)
 * rpc: [https://quasar-testnet.rpc.kjnodes.com](https://quasar-testnet.rpc.kjnodes.com)
-* grpc: [https://quasar-testnet.grpc.kjnodes.com](https://quasar-testnet.grpc.kjnodes.com)
+* grpc: quasar-testnet.grpc.kjnodes.com:48090
 
 ## Peering
 

@@ -18,7 +18,7 @@ Nolus aims to be the leading DeFi Lease platform. The protocol  intends to becom
 
 * api: [https://nolus-testnet.api.kjnodes.com](https://nolus-testnet.api.kjnodes.com)
 * rpc: [https://nolus-testnet.rpc.kjnodes.com](https://nolus-testnet.rpc.kjnodes.com)
-* grpc: [https://nolus-testnet.grpc.kjnodes.com](https://nolus-testnet.grpc.kjnodes.com)
+* grpc: nolus-testnet.grpc.kjnodes.com:43090
 
 ## Peering
 

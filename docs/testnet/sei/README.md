@@ -18,7 +18,7 @@ Sei is a Layer 1 blockchain on Cosmos with orderbook-focused infrastructure at i
 
 * api: [https://sei-testnet.api.kjnodes.com](https://sei-testnet.api.kjnodes.com)
 * rpc: [https://sei-testnet.rpc.kjnodes.com](https://sei-testnet.rpc.kjnodes.com)
-* grpc: [https://sei-testnet.grpc.kjnodes.com](https://sei-testnet.grpc.kjnodes.com)
+* grpc: sei-testnet.grpc.kjnodes.com:12090
 
 ## Peering
 

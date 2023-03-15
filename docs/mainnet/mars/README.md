@@ -20,7 +20,7 @@ Mars is a credit protocol for the future: non-custodial,  open-source, transpare
 
 * api: [https://mars.api.kjnodes.com](https://mars.api.kjnodes.com)
 * rpc: [https://mars.rpc.kjnodes.com](https://mars.rpc.kjnodes.com)
-* grpc: [https://mars.grpc.kjnodes.com](https://mars.grpc.kjnodes.com)
+* grpc: mars.grpc.kjnodes.com:45090
 
 ## Peering
 

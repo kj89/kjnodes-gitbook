@@ -20,7 +20,7 @@ An open, decentralized bridge that unlocks the power of  interoperability & liqu
 
 * api: [https://gravitybridge.api.kjnodes.com](https://gravitybridge.api.kjnodes.com)
 * rpc: [https://gravitybridge.rpc.kjnodes.com](https://gravitybridge.rpc.kjnodes.com)
-* grpc: [https://gravitybridge.grpc.kjnodes.com](https://gravitybridge.grpc.kjnodes.com)
+* grpc: gravitybridge.grpc.kjnodes.com:26090
 
 ## Peering
 
@@ -41,8 +41,8 @@ d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@gravitybridge.rpc.kjnodes.com:26656
 curl -Ls https://snapshots.kjnodes.com/gravitybridge/addrbook.json > $HOME/.gravity/config/addrbook.json
 ```
 
-**live-peers** (11)
+**live-peers** (10)
 ```bash
-peers="d20fb90c25dcd447fc574d20c3511a05b19aa9a5@35.215.12.41:26656,4d82b4d1851982b6eb81e67cb3b5bd040eda7cdc@136.244.29.116:26666,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:26656,ca4270ebed73b4d0982450aac16fe08860410fac@142.132.248.138:26626,d0af949fc3940dcab036ba0948aa21fc7ac020a1@65.21.237.170:10156,07e2da0edb0facd81dab948a128330cc1250b24c@193.70.47.90:14256,4d94ca2877c879e016620681fde7c22bc23bbc6d@185.119.118.113:3000,5eac126c1b13eb220f8deb1239d9bcf713338ea3@15.235.13.145:26656,a460c9af789a48396a2f5ee62e3f7e79a6b84d4f@46.38.243.16:26656,56a8349703e8f5c97c452c7e45f5bcaac966ccbf@207.180.204.110:26656,c4666a5c897463492246983fdc78ab20f32dc0c0@50.21.167.179:26656"
+peers="ef05d5aca4398f4b217b9bbf08729a1338c67eeb@142.132.193.186:36656,4d82b4d1851982b6eb81e67cb3b5bd040eda7cdc@136.244.29.116:26666,7e5b7671f0ec3729124102f23c50d8cdd0faa583@192.26.37.56:36656,ca9d9d0605f178fbba3bdf92e13719ab9dce0fc7@23.88.59.82:26656,84fb0a9180b2b67b4901330a13f1dee4226ce3ac@65.108.9.169:26656,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:26656,1cab2a9034532b5a83a6469537da9c296c2ea09d@65.108.73.25:46656,e5362a93c6e7f686d72c8d6d98be2c7bceeb5cc3@49.12.23.149:27010,67f95dbac6fe6bed8dfb24a5f92d9beb6b7b4ac6@97.113.90.102:27656,572d417e11368f588d110efdeb7102a6a3c0752d@161.35.224.108:26656"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.gravity/config/config.toml
 ```

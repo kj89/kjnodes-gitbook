@@ -18,7 +18,7 @@ Paloma is a fast, permissionless, Cosmos-SDK blockchain that  moves messages sec
 
 * api: [https://paloma.api.kjnodes.com](https://paloma.api.kjnodes.com)
 * rpc: [https://paloma.rpc.kjnodes.com](https://paloma.rpc.kjnodes.com)
-* grpc: [https://paloma.grpc.kjnodes.com](https://paloma.grpc.kjnodes.com)
+* grpc: paloma.grpc.kjnodes.com:10090
 
 ## Peering
 

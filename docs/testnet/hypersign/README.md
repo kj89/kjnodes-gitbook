@@ -18,7 +18,7 @@ Hypersign is a decentralized identity layer for the internet, giving  users cont
 
 * api: [https://hypersign-testnet.api.kjnodes.com](https://hypersign-testnet.api.kjnodes.com)
 * rpc: [https://hypersign-testnet.rpc.kjnodes.com](https://hypersign-testnet.rpc.kjnodes.com)
-* grpc: [https://hypersign-testnet.grpc.kjnodes.com](https://hypersign-testnet.grpc.kjnodes.com)
+* grpc: hypersign-testnet.grpc.kjnodes.com:31090
 
 ## Peering
 

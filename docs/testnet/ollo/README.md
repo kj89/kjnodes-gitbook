@@ -18,7 +18,7 @@ OLLO is a sovereign L1 chain built on the Cosmos network providing  next-gen tra
 
 * api: [https://ollo-testnet.api.kjnodes.com](https://ollo-testnet.api.kjnodes.com)
 * rpc: [https://ollo-testnet.rpc.kjnodes.com](https://ollo-testnet.rpc.kjnodes.com)
-* grpc: [https://ollo-testnet.grpc.kjnodes.com](https://ollo-testnet.grpc.kjnodes.com)
+* grpc: ollo-testnet.grpc.kjnodes.com:32090
 
 ## Peering
 

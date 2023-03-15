@@ -20,7 +20,7 @@ BitCanna is a proof-of-stake (POS) decentralized payment network designed exclus
 
 * api: [https://bitcanna.api.kjnodes.com](https://bitcanna.api.kjnodes.com)
 * rpc: [https://bitcanna.rpc.kjnodes.com](https://bitcanna.rpc.kjnodes.com)
-* grpc: [https://bitcanna.grpc.kjnodes.com](https://bitcanna.grpc.kjnodes.com)
+* grpc: bitcanna.grpc.kjnodes.com:42090
 
 ## Peering
 

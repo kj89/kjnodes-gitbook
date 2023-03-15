@@ -18,7 +18,7 @@ Ojo is a decentralized security-first oracle network built  to support the Cosmo
 
 * api: [https://ojo-testnet.api.kjnodes.com](https://ojo-testnet.api.kjnodes.com)
 * rpc: [https://ojo-testnet.rpc.kjnodes.com](https://ojo-testnet.rpc.kjnodes.com)
-* grpc: [https://ojo-testnet.grpc.kjnodes.com](https://ojo-testnet.grpc.kjnodes.com)
+* grpc: ojo-testnet.grpc.kjnodes.com:50090
 
 ## Peering
 

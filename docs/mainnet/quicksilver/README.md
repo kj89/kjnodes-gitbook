@@ -18,7 +18,7 @@ Quicksilver is a permissionless, sovereign Cosmos SDK zone providing liquid stak
 
 * api: [https://quicksilver.api.kjnodes.com](https://quicksilver.api.kjnodes.com)
 * rpc: [https://quicksilver.rpc.kjnodes.com](https://quicksilver.rpc.kjnodes.com)
-* grpc: [https://quicksilver.grpc.kjnodes.com](https://quicksilver.grpc.kjnodes.com)
+* grpc: quicksilver.grpc.kjnodes.com:11090
 
 ## Peering
 

@@ -20,7 +20,7 @@ Kujira is a Layer 1 protocol built on Cosmos, which can be used for  hosting com
 
 * api: [https://kujira.api.kjnodes.com](https://kujira.api.kjnodes.com)
 * rpc: [https://kujira.rpc.kjnodes.com](https://kujira.rpc.kjnodes.com)
-* grpc: [https://kujira.grpc.kjnodes.com](https://kujira.grpc.kjnodes.com)
+* grpc: kujira.grpc.kjnodes.com:13090
 
 ## Peering
 

@@ -18,7 +18,7 @@ Source is a decentralized, permissionless, and censorship resistant layer 1 proo
 
 * api: [https://source-testnet.api.kjnodes.com](https://source-testnet.api.kjnodes.com)
 * rpc: [https://source-testnet.rpc.kjnodes.com](https://source-testnet.rpc.kjnodes.com)
-* grpc: [https://source-testnet.grpc.kjnodes.com](https://source-testnet.grpc.kjnodes.com)
+* grpc: source-testnet.grpc.kjnodes.com:28090
 
 ## Peering
 

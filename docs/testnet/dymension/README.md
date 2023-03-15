@@ -18,7 +18,7 @@ Dymension is a network of modular blockchains called RollApps  and at the center
 
 * api: [https://dymension-testnet.api.kjnodes.com](https://dymension-testnet.api.kjnodes.com)
 * rpc: [https://dymension-testnet.rpc.kjnodes.com](https://dymension-testnet.rpc.kjnodes.com)
-* grpc: [https://dymension-testnet.grpc.kjnodes.com](https://dymension-testnet.grpc.kjnodes.com)
+* grpc: dymension-testnet.grpc.kjnodes.com:46090
 
 ## Peering
 
