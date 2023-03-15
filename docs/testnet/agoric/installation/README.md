@@ -46,8 +46,8 @@ sudo apt -qy upgrade
 ```bash
 sudo rm -rf /usr/local/go
 curl -Ls https://go.dev/dl/go1.19.7.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
-eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/golang.sh)
-eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
+eval $(echo "export PATH=$PATH:/usr/local/go/bin" | sudo tee /etc/profile.d/golang.sh)
+eval $(echo "export PATH=$PATH:$HOME/go/bin" | tee -a $HOME/.profile)
 ```
 
 ### Download and build binaries
