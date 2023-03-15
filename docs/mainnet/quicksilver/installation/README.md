@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/quicksilver.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: quicksilver-2 | **Latest Version Tag**: v1.2.5 | **Custom Port**: 11
+**Chain ID**: quicksilver-2 | **Latest Version Tag**: v1.2.7 | **Custom Port**: 11
 
 ### Setup validator name
 
@@ -33,8 +33,8 @@ sudo apt -qy upgrade
 ```bash
 sudo rm -rf /usr/local/go
 curl -Ls https://go.dev/dl/go1.19.7.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
-eval $(echo "export PATH=$PATH:/usr/local/go/bin" | sudo tee /etc/profile.d/golang.sh)
-eval $(echo "export PATH=$PATH:$HOME/go/bin" | tee -a $HOME/.profile)
+eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/golang.sh)
+eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
 
 ### Download and build binaries
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf quicksilver
 git clone https://github.com/ingenuity-build/quicksilver.git
 cd quicksilver
-git checkout v1.2.5
+git checkout v1.2.7
 
 # Build binaries
 make build
