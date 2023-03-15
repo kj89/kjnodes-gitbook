@@ -172,7 +172,7 @@ celestia-appd tx staking unbond $(celestia-appd keys show wallet --bech val -a) 
 #### Send tokens to the wallet
 
 ```bash
-celestia-appd tx bank send wallet <TO_WALLET_ADDRESS> 1000000utia --from wallet --chain-id blockspacerace-0
+celestia-appd tx bank send wallet <TO_WALLET_ADDRESS> 1000000utia --from wallet --chain-id blockspacerace-0 --gas-adjustment 1.4 --gas auto --gas-prices 0.005utia -y
 ```
 
 ## 🗳 Governance

@@ -136,3 +136,101 @@ curl -L https://snapshots.kjnodes.com/celestia-testnet/snapshot_latest.tar.lz4 |
 ```bash
 sudo systemctl start celestia-appd && sudo journalctl -u celestia-appd -f --no-hostname -o cat
 ```
+
+# Install Bridge Node
+
+### Download and build binaries
+```bash
+cd $HOME 
+rm -rf celestia-node 
+git clone https://github.com/celestiaorg/celestia-node.git 
+cd celestia-node
+git checkout v0.7.0 
+make build
+sudo mv build/celestia /usr/local/bin
+make cel-key
+sudo mv cel-key /usr/local/bin
+```
+
+### Add Bridge wallet
+```bash
+cel-key add bridge-wallet --node.type bridge --p2p.network blockspacerace
+```
+
+### Fund the wallet with testnet tokens
+{% hint style='info' %}
+Once you start the Bridge Node, a wallet key will be generated for you. You will need to fund that address with Testnet tokens to pay for PayForBlob transactions
+{% endhint %}
+
+### Initialize Bridge node
+```bash
+celestia bridge init \
+  --keyring.accname bridge-wallet \
+  --core.ip localhost \
+  --core.rpc.port 20657 \
+  --core.grpc.port 20090 \
+  --p2p.network blockspacerace \
+  --rpc.port 20658 \
+  --gateway.port 20659
+```
+
+### Create service
+```bash
+sudo tee /etc/systemd/system/celestia-bridge.service > /dev/null << EOF
+[Unit]
+Description=Celestia Bridge Node service
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=$(which celestia) bridge start \\
+--keyring.accname bridge-wallet \\
+--core.ip localhost \\
+--core.rpc.port 20657 \\
+--core.grpc.port 20090 \\
+--p2p.network blockspacerace \\
+--rpc.port 20658 \\
+--gateway.port 20659 \\
+--metrics.tls=false \\
+--metrics \\
+--metrics.endpoint otel.celestia.tools:4318 
+Restart=on-failure
+RestartSec=10
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
+EOF
+sudo systemctl daemon-reload
+sudo systemctl enable celestia-bridge
+```
+
+### Start Bridge node
+```bash
+systemctl restart celestia
+```
+
+### Check Bridge node logs
+```bash
+journalctl -fu celestia-bridge -o cat
+```
+
+## Useful commands
+
+### Get Bridge Node ID
+```bash
+NODE_TYPE=bridge
+AUTH_TOKEN=$(celestia $NODE_TYPE auth admin --p2p.network blockspacerace)
+
+curl -s -X POST -H "Authorization: Bearer $AUTH_TOKEN" -H 'Content-Type: application/json' -d '{"jsonrpc":"2.0","id":0,"method":"p2p.Info","params":[]}' http://localhost:20658 | jq -r .result.ID
+```
+
+### Get Bridge node key
+```bash
+cel-key show bridge-wallet --node.type bridge --p2p.network blockspacerace -a | tail -1
+```
+
+### Check Bridge node wallet balance
+```bash
+celestia-appd q bank balances $(cel-key show bridge-wallet --node.type bridge --p2p.network blockspacerace -a | tail -1)
+```
