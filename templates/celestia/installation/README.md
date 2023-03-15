@@ -207,7 +207,7 @@ sudo systemctl enable celestia-bridge
 
 ### Start Bridge node
 ```bash
-systemctl restart celestia
+systemctl restart celestia-bridge
 ```
 
 ### Check Bridge node logs
