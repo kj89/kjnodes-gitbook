@@ -131,6 +131,13 @@
   * [State sync](testnet/aura/state-sync/README.md)
   * [Useful commands](testnet/aura/useful-commands/README.md)
 
+* [Bitcanna](testnet/bitcanna/README.md)
+  * [Installation](testnet/bitcanna/installation/README.md)
+  * [Upgrade](testnet/bitcanna/upgrade/README.md)
+  * [Snapshot](testnet/bitcanna/snapshot/README.md)
+  * [State sync](testnet/bitcanna/state-sync/README.md)
+  * [Useful commands](testnet/bitcanna/useful-commands/README.md)
+
 * [Celestia](testnet/celestia/README.md)
   * [Installation](testnet/celestia/installation/README.md)
   * [Upgrade](testnet/celestia/upgrade/README.md)
