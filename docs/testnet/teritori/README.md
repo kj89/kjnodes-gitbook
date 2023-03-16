@@ -10,6 +10,8 @@ Teritori is a multi-chain hub designed to allow IBC and non IBC communities  to 
 
 
 
+Subscribe to our free [🤖 Testnet Proposal Bot](https://t.me/kjnodes_testnet_proposal_bot) to never miss upcoming proposals
+
 
 ## Chain explorer
 [https://explorer.kjnodes.com/teritori-testnet](https://explorer.kjnodes.com/teritori-testnet)

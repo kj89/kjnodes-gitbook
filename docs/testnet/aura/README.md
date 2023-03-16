@@ -10,6 +10,8 @@ The Aura Network protocol allows users to mint, rate, track data,  or trade NFT 
 
 
 
+Subscribe to our free [🤖 Testnet Proposal Bot](https://t.me/kjnodes_testnet_proposal_bot) to never miss upcoming proposals
+
 
 ## Chain explorer
 [https://explorer.kjnodes.com/aura-testnet](https://explorer.kjnodes.com/aura-testnet)

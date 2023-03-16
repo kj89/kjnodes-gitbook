@@ -10,6 +10,8 @@ The Cosmos Hub is the blockchain protocol underlying an  increasingly large numb
 
 
 
+Subscribe to our free [🤖 Mainnet Proposal Bot](https://t.me/kjnodes_proposal_bot) to never miss upcoming proposals
+
 
 ## Chain explorer
 [https://explorer.kjnodes.com/cosmoshub](https://explorer.kjnodes.com/cosmoshub)

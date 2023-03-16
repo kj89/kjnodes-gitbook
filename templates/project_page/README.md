@@ -9,6 +9,8 @@ ${CHAIN_SHORT_DESCRIPTION}
 
 ${STAKE_BUTTON}
 
+${PROPOSAL_BOT}
+
 ${RESTAKE}
 ## Chain explorer
 [https://explorer.kjnodes.com/${CHAIN_SERVICE}](https://explorer.kjnodes.com/${CHAIN_SERVICE})

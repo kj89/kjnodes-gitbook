@@ -10,6 +10,8 @@ Celestia is a minimal blockchain that only orders and publishes transactions and
 
 
 
+Subscribe to our free [🤖 Testnet Proposal Bot](https://t.me/kjnodes_testnet_proposal_bot) to never miss upcoming proposals
+
 
 ## Chain explorer
 [https://explorer.kjnodes.com/celestia-testnet](https://explorer.kjnodes.com/celestia-testnet)

@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **06:00 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 642816 | 3 hours | [snapshot (0.54 GB)](https://snapshots.kjnodes.com/mars/snapshot\_latest.tar.lz4) |
+| 642816 | 4 hours | [snapshot (0.54 GB)](https://snapshots.kjnodes.com/mars/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

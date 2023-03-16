@@ -10,6 +10,8 @@ OLLO is a sovereign L1 chain built on the Cosmos network providing  next-gen tra
 
 
 
+Subscribe to our free [🤖 Testnet Proposal Bot](https://t.me/kjnodes_testnet_proposal_bot) to never miss upcoming proposals
+
 
 ## Chain explorer
 [https://explorer.kjnodes.com/ollo-testnet](https://explorer.kjnodes.com/ollo-testnet)

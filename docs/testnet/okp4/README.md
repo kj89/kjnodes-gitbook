@@ -10,6 +10,8 @@ OKP4 is a revolutionary public blockchain protocol where communities are incenti
 
 
 
+Subscribe to our free [🤖 Testnet Proposal Bot](https://t.me/kjnodes_testnet_proposal_bot) to never miss upcoming proposals
+
 
 ## Chain explorer
 [https://explorer.kjnodes.com/okp4-testnet](https://explorer.kjnodes.com/okp4-testnet)

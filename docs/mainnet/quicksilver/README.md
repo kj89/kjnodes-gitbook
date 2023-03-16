@@ -10,6 +10,8 @@ Quicksilver is a permissionless, sovereign Cosmos SDK zone providing liquid stak
 
 
 
+Subscribe to our free [🤖 Mainnet Proposal Bot](https://t.me/kjnodes_proposal_bot) to never miss upcoming proposals
+
 
 ## Chain explorer
 [https://explorer.kjnodes.com/quicksilver](https://explorer.kjnodes.com/quicksilver)

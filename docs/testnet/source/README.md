@@ -10,6 +10,8 @@ Source is a decentralized, permissionless, and censorship resistant layer 1 proo
 
 
 
+Subscribe to our free [🤖 Testnet Proposal Bot](https://t.me/kjnodes_testnet_proposal_bot) to never miss upcoming proposals
+
 
 ## Chain explorer
 [https://explorer.kjnodes.com/source-testnet](https://explorer.kjnodes.com/source-testnet)

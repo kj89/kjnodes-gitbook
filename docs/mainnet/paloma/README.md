@@ -10,6 +10,8 @@ Paloma is a fast, permissionless, Cosmos-SDK blockchain that  moves messages sec
 
 
 
+Subscribe to our free [🤖 Mainnet Proposal Bot](https://t.me/kjnodes_proposal_bot) to never miss upcoming proposals
+
 
 ## Chain explorer
 [https://explorer.kjnodes.com/paloma](https://explorer.kjnodes.com/paloma)

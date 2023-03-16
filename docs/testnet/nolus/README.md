@@ -10,6 +10,8 @@ Nolus aims to be the leading DeFi Lease platform. The protocol  intends to becom
 
 
 
+Subscribe to our free [🤖 Testnet Proposal Bot](https://t.me/kjnodes_testnet_proposal_bot) to never miss upcoming proposals
+
 
 ## Chain explorer
 [https://explorer.kjnodes.com/nolus-testnet](https://explorer.kjnodes.com/nolus-testnet)

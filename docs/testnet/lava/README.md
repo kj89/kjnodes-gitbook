@@ -10,6 +10,8 @@ Lava powers a trustless market for RPC data access. The protocol  governs over p
 
 
 
+Subscribe to our free [🤖 Testnet Proposal Bot](https://t.me/kjnodes_testnet_proposal_bot) to never miss upcoming proposals
+
 
 ## Chain explorer
 [https://explorer.kjnodes.com/lava-testnet](https://explorer.kjnodes.com/lava-testnet)

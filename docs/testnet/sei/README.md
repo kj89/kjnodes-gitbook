@@ -10,6 +10,8 @@ Sei is a Layer 1 blockchain on Cosmos with orderbook-focused infrastructure at i
 
 
 
+Subscribe to our free [🤖 Testnet Proposal Bot](https://t.me/kjnodes_testnet_proposal_bot) to never miss upcoming proposals
+
 
 ## Chain explorer
 [https://explorer.kjnodes.com/sei-testnet](https://explorer.kjnodes.com/sei-testnet)
