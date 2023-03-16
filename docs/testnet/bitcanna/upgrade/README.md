@@ -27,8 +27,8 @@ git checkout v1.6.2
 make build
 
 # Prepare binaries for Cosmovisor
-mkdir -p $HOME/.bcna/cosmovisor/upgrades/vigorous-grow/bin
-mv build/bcnad $HOME/.bcna/cosmovisor/upgrades/vigorous-grow/bin/
+mkdir -p $HOME/.bcna/cosmovisor/upgrades/vigorous-grow-fix/bin
+mv build/bcnad $HOME/.bcna/cosmovisor/upgrades/vigorous-grow-fix/bin/
 rm -rf build
 ```
 
