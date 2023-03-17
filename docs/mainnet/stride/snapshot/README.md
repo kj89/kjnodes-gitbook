@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **01:30 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: v6
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v7
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 2816243 | 1 hours | [snapshot (4.71 GB)](https://snapshots.kjnodes.com/stride/snapshot\_latest.tar.lz4) |
+| 2819222 | 11 minutes | [snapshot (5.11 GB)](https://snapshots.kjnodes.com/stride/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

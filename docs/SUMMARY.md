@@ -16,6 +16,13 @@
   * [State sync](mainnet/agoric/state-sync/README.md)
   * [Useful commands](mainnet/agoric/useful-commands/README.md)
 
+* [Aura](mainnet/aura/README.md)
+  * [Installation](mainnet/aura/installation/README.md)
+  * [Upgrade](mainnet/aura/upgrade/README.md)
+  * [Snapshot](mainnet/aura/snapshot/README.md)
+  * [State sync](mainnet/aura/state-sync/README.md)
+  * [Useful commands](mainnet/aura/useful-commands/README.md)
+
 * [Bitcanna](mainnet/bitcanna/README.md)
   * [Installation](mainnet/bitcanna/installation/README.md)
   * [Upgrade](mainnet/bitcanna/upgrade/README.md)
