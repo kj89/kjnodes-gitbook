@@ -1,0 +1,138 @@
+---
+description: Setting up your validator node has never been so easy. Get your validator running in minutes by following step by step instructions.
+---
+
+# Installation
+
+<figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/aura.png" width="150" alt=""><figcaption></figcaption></figure>
+
+**Chain ID**: xstaxy-1 | **Latest Version Tag**: aura_v0.4.4 | **Custom Port**: 17
+
+### Setup validator name
+
+{% hint style='info' %}
+Replace **YOUR_MONIKER_GOES_HERE** with your validator name
+{% endhint %}
+
+```bash
+MONIKER="YOUR_MONIKER_GOES_HERE"
+```
+
+### Install dependencies
+
+#### Update system and install build tools
+
+```bash
+sudo apt -q update
+sudo apt -qy install curl git jq lz4 build-essential
+sudo apt -qy upgrade
+```
+
+#### Install Go
+
+```bash
+sudo rm -rf /usr/local/go
+curl -Ls https://go.dev/dl/go1.19.7.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
+eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/golang.sh)
+eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
+```
+
+### Download and build binaries
+
+```bash
+# Clone project repository
+cd $HOME
+rm -rf aura
+git clone https://github.com/aura-nw/aura.git
+cd aura
+git checkout aura_v0.4.4
+
+# Build binaries
+make build
+
+# Prepare binaries for Cosmovisor
+mkdir -p $HOME/.aura/cosmovisor/genesis/bin
+mv build/aurad $HOME/.aura/cosmovisor/genesis/bin/
+rm -rf build
+
+# Create application symlinks
+ln -s $HOME/.aura/cosmovisor/genesis $HOME/.aura/cosmovisor/current
+sudo ln -s $HOME/.aura/cosmovisor/current/bin/aurad /usr/local/bin/aurad
+```
+
+### Install Cosmovisor and create a service
+
+```bash
+# Download and install Cosmovisor
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.4.0
+
+# Create service
+sudo tee /etc/systemd/system/aurad.service > /dev/null << EOF
+[Unit]
+Description=aura node service
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=$(which cosmovisor) run start
+Restart=on-failure
+RestartSec=10
+LimitNOFILE=65535
+Environment="DAEMON_HOME=$HOME/.aura"
+Environment="DAEMON_NAME=aurad"
+Environment="UNSAFE_SKIP_BACKUP=true"
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:$HOME/.aura/cosmovisor/current/bin"
+
+[Install]
+WantedBy=multi-user.target
+EOF
+sudo systemctl daemon-reload
+sudo systemctl enable aurad
+```
+
+### Initialize the node
+
+```bash
+# Set node configuration
+aurad config chain-id xstaxy-1
+aurad config keyring-backend file
+aurad config node tcp://localhost:17657
+
+# Initialize the node
+aurad init $MONIKER --chain-id xstaxy-1
+
+# Download genesis and addrbook
+curl -Ls https://snapshots.kjnodes.com/aura/genesis.json > $HOME/.aura/config/genesis.json
+curl -Ls https://snapshots.kjnodes.com/aura/addrbook.json > $HOME/.aura/config/addrbook.json
+
+# Add seeds
+sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@aura.rpc.kjnodes.com:17659\"|" $HOME/.aura/config/config.toml
+
+# Set minimum gas price
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001uaura\"|" $HOME/.aura/config/app.toml
+
+# Set pruning
+sed -i \
+  -e 's|^pruning *=.*|pruning = "custom"|' \
+  -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
+  -e 's|^pruning-keep-every *=.*|pruning-keep-every = "0"|' \
+  -e 's|^pruning-interval *=.*|pruning-interval = "19"|' \
+  $HOME/.aura/config/app.toml
+
+# Set custom ports
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:17658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:17657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:17060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:17656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":17660\"%" $HOME/.aura/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:17317\"%; s%^address = \":8080\"%address = \":17080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:17090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:17091\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:17545\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:17546\"%" $HOME/.aura/config/app.toml
+```
+
+### Download latest chain snapshot
+
+```bash
+curl -L https://snapshots.kjnodes.com/aura/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.aura
+[[ -f $HOME/.aura/data/upgrade-info.json ]] && cp $HOME/.aura/data/upgrade-info.json $HOME/.aura/cosmovisor/genesis/upgrade-info.json
+```
+
+### Start service and check the logs
+
+```bash
+sudo systemctl start aurad && sudo journalctl -u aurad -f --no-hostname -o cat
+```
