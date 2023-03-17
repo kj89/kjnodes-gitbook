@@ -6,7 +6,7 @@ description: Prepare for and the upcomming chain upgrade using Cosmovisor.
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/sei.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: atlantic-1 | **Latest Version Tag**: 1.2.2beta-postfix | **Custom Port**: 12
+**Chain ID**: atlantic-2 | **Latest Version Tag**: 2.0.40beta | **Custom Port**: 12
 
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.
@@ -21,14 +21,14 @@ cd $HOME
 rm -rf sei-chain
 git clone https://github.com/sei-protocol/sei-chain.git
 cd sei-chain
-git checkout 1.2.2beta-postfix
+git checkout 2.0.40beta
 
 # Build binaries
 make build
 
 # Prepare binaries for Cosmovisor
-mkdir -p $HOME/.sei/cosmovisor/upgrades/1.2.2beta-postfix/bin
-mv build/seid $HOME/.sei/cosmovisor/upgrades/1.2.2beta-postfix/bin/
+mkdir -p $HOME/.sei/cosmovisor/upgrades/2.0.40beta/bin
+mv build/seid $HOME/.sei/cosmovisor/upgrades/2.0.40beta/bin/
 rm -rf build
 ```
 

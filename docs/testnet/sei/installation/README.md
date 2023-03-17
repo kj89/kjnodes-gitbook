@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/sei.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: atlantic-1 | **Latest Version Tag**: 1.2.2beta-postfix | **Custom Port**: 12
+**Chain ID**: atlantic-2 | **Latest Version Tag**: 2.0.40beta | **Custom Port**: 12
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf sei-chain
 git clone https://github.com/sei-protocol/sei-chain.git
 cd sei-chain
-git checkout 1.2.2beta-postfix
+git checkout 2.0.40beta
 
 # Build binaries
 make build
@@ -94,12 +94,12 @@ sudo systemctl enable seid
 
 ```bash
 # Set node configuration
-seid config chain-id atlantic-1
+seid config chain-id atlantic-2
 seid config keyring-backend test
 seid config node tcp://localhost:12657
 
 # Initialize the node
-seid init $MONIKER --chain-id atlantic-1
+seid init $MONIKER --chain-id atlantic-2
 
 # Download genesis and addrbook
 curl -Ls https://snapshots.kjnodes.com/sei-testnet/genesis.json > $HOME/.sei/config/genesis.json
@@ -109,7 +109,7 @@ curl -Ls https://snapshots.kjnodes.com/sei-testnet/addrbook.json > $HOME/.sei/co
 sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@sei-testnet.rpc.kjnodes.com:12659\"|" $HOME/.sei/config/config.toml
 
 # Set minimum gas price
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0usei\"|" $HOME/.sei/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.0001usei\"|" $HOME/.sei/config/app.toml
 
 # Set pruning
 sed -i \

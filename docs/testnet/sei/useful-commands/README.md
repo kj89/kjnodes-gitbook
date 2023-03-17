@@ -66,7 +66,7 @@ seid tx staking create-validator \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL" \
---chain-id atlantic-1 \
+--chain-id atlantic-2 \
 --commission-rate 0.05 \
 --commission-max-rate 0.20 \
 --commission-max-change-rate 0.01 \
@@ -74,7 +74,7 @@ seid tx staking create-validator \
 --from wallet \
 --gas-adjustment 1.4 \
 --gas auto \
---gas-prices 0usei \
+--gas-prices 0.0001usei \
 -y
 ```
 
@@ -86,19 +86,19 @@ seid tx staking edit-validator \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL"
---chain-id atlantic-1 \
+--chain-id atlantic-2 \
 --commission-rate 0.05 \
 --from wallet \
 --gas-adjustment 1.4 \
 --gas auto \
---gas-prices 0usei \
+--gas-prices 0.0001usei \
 -y
 ```
 
 #### Unjail validator
 
 ```bash
-seid tx slashing unjail --from wallet --chain-id atlantic-1 --gas-adjustment 1.4 --gas auto --gas-prices 0usei -y
+seid tx slashing unjail --from wallet --chain-id atlantic-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001usei -y
 ```
 
 #### Jail reason
@@ -130,43 +130,43 @@ seid q staking validator $(seid keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-seid tx distribution withdraw-all-rewards --from wallet --chain-id atlantic-1 --gas-adjustment 1.4 --gas auto --gas-prices 0usei -y
+seid tx distribution withdraw-all-rewards --from wallet --chain-id atlantic-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001usei -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-seid tx distribution withdraw-rewards $(seid keys show wallet --bech val -a) --commission --from wallet --chain-id atlantic-1 --gas-adjustment 1.4 --gas auto --gas-prices 0usei -y
+seid tx distribution withdraw-rewards $(seid keys show wallet --bech val -a) --commission --from wallet --chain-id atlantic-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001usei -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-seid tx staking delegate $(seid keys show wallet --bech val -a) 1000000usei --from wallet --chain-id atlantic-1 --gas-adjustment 1.4 --gas auto --gas-prices 0usei -y
+seid tx staking delegate $(seid keys show wallet --bech val -a) 1000000usei --from wallet --chain-id atlantic-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001usei -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-seid tx staking delegate <TO_VALOPER_ADDRESS> 1000000usei --from wallet --chain-id atlantic-1 --gas-adjustment 1.4 --gas auto --gas-prices 0usei -y
+seid tx staking delegate <TO_VALOPER_ADDRESS> 1000000usei --from wallet --chain-id atlantic-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001usei -y
 ```
 
 #### Redelegate tokens to another validator
 
 ```bash
-seid tx staking redelegate $(seid keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000usei --from wallet --chain-id atlantic-1 --gas-adjustment 1.4 --gas auto --gas-prices 0usei -y
+seid tx staking redelegate $(seid keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000usei --from wallet --chain-id atlantic-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001usei -y
 ```
 
 #### Unbond tokens from your validator
 
 ```bash
-seid tx staking unbond $(seid keys show wallet --bech val -a) 1000000usei --from wallet --chain-id atlantic-1 --gas-adjustment 1.4 --gas auto --gas-prices 0usei -y
+seid tx staking unbond $(seid keys show wallet --bech val -a) 1000000usei --from wallet --chain-id atlantic-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001usei -y
 ```
 
 #### Send tokens to the wallet
 
 ```bash
-seid tx bank send wallet <TO_WALLET_ADDRESS> 1000000usei --from wallet --chain-id atlantic-1 --gas-adjustment 1.4 --gas auto --gas-prices 0usei -y
+seid tx bank send wallet <TO_WALLET_ADDRESS> 1000000usei --from wallet --chain-id atlantic-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001usei -y
 ```
 
 ## 🗳 Governance
@@ -186,25 +186,25 @@ seid query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-seid tx gov vote 1 yes --from wallet --chain-id atlantic-1 --gas-adjustment 1.4 --gas auto --gas-prices 0usei -y
+seid tx gov vote 1 yes --from wallet --chain-id atlantic-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001usei -y
 ```
 
 #### Vote 'No'
 
 ```bash
-seid tx gov vote 1 no --from wallet --chain-id atlantic-1 --gas-adjustment 1.4 --gas auto --gas-prices 0usei -y
+seid tx gov vote 1 no --from wallet --chain-id atlantic-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001usei -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-seid tx gov vote 1 abstain --from wallet --chain-id atlantic-1 --gas-adjustment 1.4 --gas auto --gas-prices 0usei -y
+seid tx gov vote 1 abstain --from wallet --chain-id atlantic-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001usei -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-seid tx gov vote 1 NoWithVeto --from wallet --chain-id atlantic-1 --gas-adjustment 1.4 --gas auto --gas-prices 0usei -y
+seid tx gov vote 1 NoWithVeto --from wallet --chain-id atlantic-2 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001usei -y
 ```
 
 ## ⚡️ Utility
@@ -277,7 +277,7 @@ curl -sS http://localhost:12657/net_info | jq -r '.result.peers[] | "\(.node_inf
 #### Set minimum gas price
 
 ```bash
-sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0usei\"/" $HOME/.sei/config/app.toml
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0001usei\"/" $HOME/.sei/config/app.toml
 ```
 
 #### Enable prometheus
