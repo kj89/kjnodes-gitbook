@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/defund.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: defund-private-4 | **Latest Version Tag**: v0.2.5 | **Custom Port**: 40
+**Chain ID**: orbit-alpha-1 | **Latest Version Tag**: v0.2.6 | **Custom Port**: 40
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf defund
 git clone https://github.com/defund-labs/defund.git
 cd defund
-git checkout v0.2.5
+git checkout v0.2.6
 
 # Build binaries
 make build
@@ -94,12 +94,12 @@ sudo systemctl enable defundd
 
 ```bash
 # Set node configuration
-defundd config chain-id defund-private-4
+defundd config chain-id orbit-alpha-1
 defundd config keyring-backend test
 defundd config node tcp://localhost:40657
 
 # Initialize the node
-defundd init $MONIKER --chain-id defund-private-4
+defundd init $MONIKER --chain-id orbit-alpha-1
 
 # Download genesis and addrbook
 curl -Ls https://snapshots.kjnodes.com/defund-testnet/genesis.json > $HOME/.defund/config/genesis.json
