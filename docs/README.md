@@ -4,7 +4,7 @@ description: Discover base tools contributed to the projects by kjnodes team.
 
 # 🖤 Supported chains
 
-**Chains supported**: 37 | **Assets staked**: $2,019,911 | **Clients**: 4119
+**Chains supported**: 37 | **Assets staked**: $2,010,237 | **Clients**: 4119
 
 ## MAINNET
 
@@ -24,19 +24,19 @@ description: Discover base tools contributed to the projects by kjnodes team.
 
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/mars.png" alt="" data-size="line"> [Mars](mainnet/mars/)
 
-<img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/stride.png" alt="" data-size="line"> [Stride](mainnet/stride/)
+<img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/migaloo.png" alt="" data-size="line"> [Migaloo](mainnet/migaloo/)
 
-<img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/teritori.png" alt="" data-size="line"> [Teritori](mainnet/teritori/)
-
-<img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/rebus.png" alt="" data-size="line"> [Rebus](mainnet/rebus/)
+<img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/quicksilver.png" alt="" data-size="line"> [Quicksilver](mainnet/quicksilver/)
 
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/osmosis.png" alt="" data-size="line"> [Osmosis](mainnet/osmosis/)
 
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/paloma.png" alt="" data-size="line"> [Paloma](mainnet/paloma/)
 
-<img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/quicksilver.png" alt="" data-size="line"> [Quicksilver](mainnet/quicksilver/)
+<img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/rebus.png" alt="" data-size="line"> [Rebus](mainnet/rebus/)
 
-<img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/migaloo.png" alt="" data-size="line"> [Migaloo](mainnet/migaloo/)
+<img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/stride.png" alt="" data-size="line"> [Stride](mainnet/stride/)
+
+<img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/teritori.png" alt="" data-size="line"> [Teritori](mainnet/teritori/)
 
 
 ## TESTNET
