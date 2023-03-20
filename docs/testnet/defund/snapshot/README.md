@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **04:30 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: v0.2.5
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v0.2.6
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 7398335 | 1 hours | [snapshot (4.84 GB)](https://snapshots.kjnodes.com/defund-testnet/snapshot\_latest.tar.lz4) |
+| 171758 | 4 minutes | [snapshot (0.31 GB)](https://snapshots.kjnodes.com/defund-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
