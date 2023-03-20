@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **05:30 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: 
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: aura_v0.4.4
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-|  |  | [snapshot ()](https://snapshots.kjnodes.com/aura/snapshot\_latest.tar.lz4) |
+| 188 | 21 seconds | [snapshot (0.04 GB)](https://snapshots.kjnodes.com/aura/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

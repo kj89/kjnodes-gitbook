@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **05:15 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 1359998 | 1 hours | [snapshot (0.17 GB)](https://snapshots.kjnodes.com/bitcanna-testnet/snapshot\_latest.tar.lz4) |
+| 1359998 | 2 hours | [snapshot (0.17 GB)](https://snapshots.kjnodes.com/bitcanna-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
