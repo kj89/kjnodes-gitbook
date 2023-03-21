@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/kujira.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: kaiyo-1 | **Latest Version Tag**: v0.7.1 | **Custom Port**: 13
+**Chain ID**: kaiyo-1 | **Latest Version Tag**: v0.8.4 | **Custom Port**: 13
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf core
 git clone https://github.com/Team-Kujira/core.git
 cd core
-git checkout v0.7.1
+git checkout v0.8.4
 
 # Build binaries
 make build

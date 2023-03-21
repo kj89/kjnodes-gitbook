@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **07:30 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: v1.0.0
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v2.0.0
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 520008 | 5 minutes | [snapshot (2.6 GB)](https://snapshots.kjnodes.com/migaloo/snapshot\_latest.tar.lz4) |
+| 531309 | 1 hours | [snapshot (2.17 GB)](https://snapshots.kjnodes.com/migaloo/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

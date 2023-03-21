@@ -6,7 +6,7 @@ description: Prepare for and the upcomming chain upgrade using Cosmovisor.
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/kujira.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: kaiyo-1 | **Latest Version Tag**: v0.7.1 | **Custom Port**: 13
+**Chain ID**: kaiyo-1 | **Latest Version Tag**: v0.8.4 | **Custom Port**: 13
 
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.
@@ -21,14 +21,14 @@ cd $HOME
 rm -rf core
 git clone https://github.com/Team-Kujira/core.git
 cd core
-git checkout v0.7.1
+git checkout v0.8.4
 
 # Build binaries
 make build
 
 # Prepare binaries for Cosmovisor
-mkdir -p $HOME/.kujira/cosmovisor/upgrades/v0.7.1/bin
-mv build/kujirad $HOME/.kujira/cosmovisor/upgrades/v0.7.1/bin/
+mkdir -p $HOME/.kujira/cosmovisor/upgrades/v0.8.4/bin
+mv build/kujirad $HOME/.kujira/cosmovisor/upgrades/v0.8.4/bin/
 rm -rf build
 ```
 
