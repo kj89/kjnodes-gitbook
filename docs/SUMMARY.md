@@ -72,6 +72,13 @@
   * [State sync](mainnet/migaloo/state-sync/README.md)
   * [Useful commands](mainnet/migaloo/useful-commands/README.md)
 
+* [Quasar](mainnet/quasar/README.md)
+  * [Installation](mainnet/quasar/installation/README.md)
+  * [Upgrade](mainnet/quasar/upgrade/README.md)
+  * [Snapshot](mainnet/quasar/snapshot/README.md)
+  * [State sync](mainnet/quasar/state-sync/README.md)
+  * [Useful commands](mainnet/quasar/useful-commands/README.md)
+
 * [Quicksilver](mainnet/quicksilver/README.md)
   * [Installation](mainnet/quicksilver/installation/README.md)
   * [Upgrade](mainnet/quicksilver/upgrade/README.md)
