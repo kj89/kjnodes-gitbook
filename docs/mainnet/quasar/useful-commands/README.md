@@ -11,43 +11,43 @@ description: Useful set of commands for node operators. From key management to c
 #### Add new key
 
 ```bash
-quasard keys add wallet
+quasarnoded keys add wallet
 ```
 
 #### Recover existing key
 
 ```bash
-quasard keys add wallet --recover
+quasarnoded keys add wallet --recover
 ```
 
 #### List all keys
 
 ```bash
-quasard keys list
+quasarnoded keys list
 ```
 
 #### Delete key
 
 ```bash
-quasard keys delete wallet
+quasarnoded keys delete wallet
 ```
 
 #### Export key to the file
 
 ```bash
-quasard keys export wallet
+quasarnoded keys export wallet
 ```
 
 #### Import key from the file
 
 ```bash
-quasard keys import wallet wallet.backup
+quasarnoded keys import wallet wallet.backup
 ```
 
 #### Query wallet balance
 
 ```bash
-quasard q bank balances $(quasard keys show wallet -a)
+quasarnoded q bank balances $(quasarnoded keys show wallet -a)
 ```
 
 ## 👷 Validator management
@@ -59,70 +59,70 @@ Please make sure you have adjusted **moniker**, **identity**, **details** and **
 #### Create new validator
 
 ```bash
-quasard tx staking create-validator \
---amount=1000000uqsr \
---pubkey=$(quasard tendermint show-validator) \
---moniker="YOUR_MONIKER_NAME" \
---identity="YOUR_KEYBASE_ID" \
---details="YOUR_DETAILS" \
---website="YOUR_WEBSITE_URL" \
---chain-id=qsr-questnet-04 \
---commission-rate=0.05 \
---commission-max-rate=0.20 \
---commission-max-change-rate=0.01 \
---min-self-delegation=1 \
---from=wallet \
---gas-adjustment=1.4 \
---gas=auto \
---gas-prices=0uqsr \
+quasarnoded tx staking create-validator \
+--amount 1000000uqsr \
+--pubkey $(quasarnoded tendermint show-validator) \
+--moniker "YOUR_MONIKER_NAME" \
+--identity "YOUR_KEYBASE_ID" \
+--details "YOUR_DETAILS" \
+--website "YOUR_WEBSITE_URL" \
+--chain-id quasar-1 \
+--commission-rate 0.05 \
+--commission-max-rate 0.20 \
+--commission-max-change-rate 0.01 \
+--min-self-delegation 1 \
+--from wallet \
+--gas-adjustment 1.4 \
+--gas auto \
+--gas-prices 0uqsr \
 -y
 ```
 
 #### Edit existing validator
 
 ```bash
-quasard tx staking edit-validator \
---new-moniker="YOUR_MONIKER_NAME" \
---identity="YOUR_KEYBASE_ID" \
---details="YOUR_DETAILS" \
---website="YOUR_WEBSITE_URL"
---chain-id=qsr-questnet-04 \
---commission-rate=0.05 \
---from=wallet \
---gas-adjustment=1.4 \
---gas=auto \
---gas-prices=0uqsr \
+quasarnoded tx staking edit-validator \
+--new-moniker "YOUR_MONIKER_NAME" \
+--identity "YOUR_KEYBASE_ID" \
+--details "YOUR_DETAILS" \
+--website "YOUR_WEBSITE_URL"
+--chain-id quasar-1 \
+--commission-rate 0.05 \
+--from wallet \
+--gas-adjustment 1.4 \
+--gas auto \
+--gas-prices 0uqsr \
 -y
 ```
 
 #### Unjail validator
 
 ```bash
-quasard tx slashing unjail --from wallet --chain-id qsr-questnet-04 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
+quasarnoded tx slashing unjail --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
 ```
 
 #### Jail reason
 
 ```bash
-quasard query slashing signing-info $(quasard tendermint show-validator)
+quasarnoded query slashing signing-info $(quasarnoded tendermint show-validator)
 ```
 
 #### List all active validators
 
 ```bash
-quasard q staking validators -oj --limit=3000 | jq '.validators[] | select(.status=="BOND_STATUS_BONDED")' | jq -r '(.tokens|tonumber/pow(10; 6)|floor|tostring) + " \t " + .description.moniker' | sort -gr | nl
+quasarnoded q staking validators -oj --limit=3000 | jq '.validators[] | select(.status=="BOND_STATUS_BONDED")' | jq -r '(.tokens|tonumber/pow(10; 6)|floor|tostring) + " \t " + .description.moniker' | sort -gr | nl
 ```
 
 #### List all inactive validators
 
 ```bash
-quasard q staking validators -oj --limit=3000 | jq '.validators[] | select(.status=="BOND_STATUS_UNBONDED")' | jq -r '(.tokens|tonumber/pow(10; 6)|floor|tostring) + " \t " + .description.moniker' | sort -gr | nl
+quasarnoded q staking validators -oj --limit=3000 | jq '.validators[] | select(.status=="BOND_STATUS_UNBONDED")' | jq -r '(.tokens|tonumber/pow(10; 6)|floor|tostring) + " \t " + .description.moniker' | sort -gr | nl
 ```
 
 #### View validator details
 
 ```bash
-quasard q staking validator $(quasard keys show wallet --bech val -a)
+quasarnoded q staking validator $(quasarnoded keys show wallet --bech val -a)
 ```
 
 ## 💲 Token management
@@ -130,43 +130,43 @@ quasard q staking validator $(quasard keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-quasard tx distribution withdraw-all-rewards --from wallet --chain-id qsr-questnet-04 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
+quasarnoded tx distribution withdraw-all-rewards --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-quasard tx distribution withdraw-rewards $(quasard keys show wallet --bech val -a) --commission --from wallet --chain-id qsr-questnet-04 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
+quasarnoded tx distribution withdraw-rewards $(quasarnoded keys show wallet --bech val -a) --commission --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-quasard tx staking delegate $(quasard keys show wallet --bech val -a) 1000000uqsr --from wallet --chain-id qsr-questnet-04 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
+quasarnoded tx staking delegate $(quasarnoded keys show wallet --bech val -a) 1000000uqsr --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-quasard tx staking delegate <TO_VALOPER_ADDRESS> 1000000uqsr --from wallet --chain-id qsr-questnet-04 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
+quasarnoded tx staking delegate <TO_VALOPER_ADDRESS> 1000000uqsr --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
 ```
 
 #### Redelegate tokens to another validator
 
 ```bash
-quasard tx staking redelegate $(quasard keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000uqsr --from wallet --chain-id qsr-questnet-04 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
+quasarnoded tx staking redelegate $(quasarnoded keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000uqsr --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
 ```
 
 #### Unbond tokens from your validator
 
 ```bash
-quasard tx staking unbond $(quasard keys show wallet --bech val -a) 1000000uqsr --from wallet --chain-id qsr-questnet-04 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
+quasarnoded tx staking unbond $(quasarnoded keys show wallet --bech val -a) 1000000uqsr --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
 ```
 
 #### Send tokens to the wallet
 
 ```bash
-quasard tx bank send wallet <TO_WALLET_ADDRESS> 1000000uqsr --from wallet --chain-id qsr-questnet-04
+quasarnoded tx bank send wallet <TO_WALLET_ADDRESS> 1000000uqsr --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
 ```
 
 ## 🗳 Governance
@@ -174,37 +174,37 @@ quasard tx bank send wallet <TO_WALLET_ADDRESS> 1000000uqsr --from wallet --chai
 #### List all proposals
 
 ```bash
-quasard query gov proposals
+quasarnoded query gov proposals
 ```
 
 #### View proposal by id
 
 ```bash
-quasard query gov proposal 1
+quasarnoded query gov proposal 1
 ```
 
 #### Vote 'Yes'
 
 ```bash
-quasard tx gov vote 1 yes --from wallet --chain-id qsr-questnet-04 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
+quasarnoded tx gov vote 1 yes --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
 ```
 
 #### Vote 'No'
 
 ```bash
-quasard tx gov vote 1 no --from wallet --chain-id qsr-questnet-04 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
+quasarnoded tx gov vote 1 no --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-quasard tx gov vote 1 abstain --from wallet --chain-id qsr-questnet-04 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
+quasarnoded tx gov vote 1 abstain --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-quasard tx gov vote 1 NoWithVeto --from wallet --chain-id qsr-questnet-04 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
+quasarnoded tx gov vote 1 NoWithVeto --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
 ```
 
 ## ⚡️ Utility
@@ -247,25 +247,25 @@ sed -i \
 #### Get validator info
 
 ```bash
-quasard status 2>&1 | jq .ValidatorInfo
+quasarnoded status 2>&1 | jq .ValidatorInfo
 ```
 
 #### Get sync info
 
 ```bash
-quasard status 2>&1 | jq .SyncInfo
+quasarnoded status 2>&1 | jq .SyncInfo
 ```
 
 #### Get node peer
 
 ```bash
-echo $(quasard tendermint show-node-id)'@'$(curl -s ifconfig.me)':'$(cat $HOME/.quasarnode/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
+echo $(quasarnoded tendermint show-node-id)'@'$(curl -s ifconfig.me)':'$(cat $HOME/.quasarnode/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
 ```
 
 #### Check if validator key is correct
 
 ```bash
-[[ $(quasard q staking validator $(quasard keys show wallet --bech val -a) -oj | jq -r .consensus_pubkey.key) = $(quasard status | jq -r .ValidatorInfo.PubKey.value) ]] && echo -e "\n\e[1m\e[32mTrue\e[0m\n" || echo -e "\n\e[1m\e[31mFalse\e[0m\n"
+[[ $(quasarnoded q staking validator $(quasarnoded keys show wallet --bech val -a) -oj | jq -r .consensus_pubkey.key) = $(quasarnoded status | jq -r .ValidatorInfo.PubKey.value) ]] && echo -e "\n\e[1m\e[32mTrue\e[0m\n" || echo -e "\n\e[1m\e[31mFalse\e[0m\n"
 ```
 
 #### Get live peers
@@ -289,7 +289,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.quasarnode/config/con
 #### Reset chain data
 
 ```bash
-quasard tendermint unsafe-reset-all --home $HOME/.quasarnode --keep-addr-book
+quasarnoded tendermint unsafe-reset-all --home $HOME/.quasarnode --keep-addr-book
 ```
 
 #### Remove node
@@ -300,12 +300,13 @@ Please, before proceeding with the next step! All chain data will be lost! Make 
 
 ```bash
 cd $HOME
-sudo systemctl stop quasard
-sudo systemctl disable quasard
-sudo rm /etc/systemd/system/quasard.service
+sudo systemctl stop quasarnoded
+sudo systemctl disable quasarnoded
+sudo rm /etc/systemd/system/quasarnoded.service
 sudo systemctl daemon-reload
-rm -f $(which quasard)
+rm -f $(which quasarnoded)
 rm -rf $HOME/.quasarnode
+rm -rf $HOME/quasar-preview
 ```
 
 ## ⚙️ Service Management
@@ -319,41 +320,41 @@ sudo systemctl daemon-reload
 #### Enable service
 
 ```bash
-sudo systemctl enable quasard
+sudo systemctl enable quasarnoded
 ```
 
 #### Disable service
 
 ```bash
-sudo systemctl disable quasard
+sudo systemctl disable quasarnoded
 ```
 
 #### Start service
 
 ```bash
-sudo systemctl start quasard
+sudo systemctl start quasarnoded
 ```
 
 #### Stop service
 
 ```bash
-sudo systemctl stop quasard
+sudo systemctl stop quasarnoded
 ```
 
 #### Restart service
 
 ```bash
-sudo systemctl restart quasard
+sudo systemctl restart quasarnoded
 ```
 
 #### Check service status
 
 ```bash
-sudo systemctl status quasard
+sudo systemctl status quasarnoded
 ```
 
 #### Check service logs
 
 ```bash
-sudo journalctl -u quasard -f --no-hostname -o cat
+sudo journalctl -u quasarnoded -f --no-hostname -o cat
 ```

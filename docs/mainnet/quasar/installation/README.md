@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/quasar.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: qsr-questnet-04 | **Latest Version Tag**: v0.0.2-alpha-11 | **Custom Port**: 48
+**Chain ID**: quasar-1 | **Latest Version Tag**: v0.1.0 | **Custom Port**: 48
 
 ### Setup validator name
 
@@ -32,7 +32,7 @@ sudo apt -qy upgrade
 
 ```bash
 sudo rm -rf /usr/local/go
-curl -Ls https://go.dev/dl/go1.19.5.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
+curl -Ls https://go.dev/dl/go1.19.7.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
 eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/golang.sh)
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
@@ -40,14 +40,24 @@ eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ### Download and build binaries
 
 ```bash
-# Download project binaries
+# Clone project repository
+cd $HOME
+rm -rf quasar-preview
+git clone https://github.com/quasar-finance/quasar-preview.git
+cd quasar-preview
+git checkout v0.1.0
+
+# Build binaries
+make build
+
+# Prepare binaries for Cosmovisor
 mkdir -p $HOME/.quasarnode/cosmovisor/genesis/bin
-wget -O $HOME/.quasarnode/cosmovisor/genesis/bin/quasard https://github.com/quasar-finance/binary-release/raw/main/v0.0.2-alpha-11/quasarnoded-linux-amd64
-chmod +x $HOME/.quasarnode/cosmovisor/genesis/bin/*
+mv build/quasarnoded $HOME/.quasarnode/cosmovisor/genesis/bin/
+rm -rf build
 
 # Create application symlinks
 ln -s $HOME/.quasarnode/cosmovisor/genesis $HOME/.quasarnode/cosmovisor/current
-sudo ln -s $HOME/.quasarnode/cosmovisor/current/bin/quasard /usr/local/bin/quasard
+sudo ln -s $HOME/.quasarnode/cosmovisor/current/bin/quasarnoded /usr/local/bin/quasarnoded
 ```
 
 ### Install Cosmovisor and create a service
@@ -57,9 +67,9 @@ sudo ln -s $HOME/.quasarnode/cosmovisor/current/bin/quasard /usr/local/bin/quasa
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.4.0
 
 # Create service
-sudo tee /etc/systemd/system/quasard.service > /dev/null << EOF
+sudo tee /etc/systemd/system/quasarnoded.service > /dev/null << EOF
 [Unit]
-Description=quasar-testnet node service
+Description=quasar node service
 After=network-online.target
 
 [Service]
@@ -69,33 +79,34 @@ Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
 Environment="DAEMON_HOME=$HOME/.quasarnode"
-Environment="DAEMON_NAME=quasard"
+Environment="DAEMON_NAME=quasarnoded"
 Environment="UNSAFE_SKIP_BACKUP=true"
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:$HOME/.quasarnode/cosmovisor/current/bin"
 
 [Install]
 WantedBy=multi-user.target
 EOF
 sudo systemctl daemon-reload
-sudo systemctl enable quasard
+sudo systemctl enable quasarnoded
 ```
 
 ### Initialize the node
 
 ```bash
 # Set node configuration
-quasard config chain-id qsr-questnet-04
-quasard config keyring-backend test
-quasard config node tcp://localhost:48657
+quasarnoded config chain-id quasar-1
+quasarnoded config keyring-backend file
+quasarnoded config node tcp://localhost:48657
 
 # Initialize the node
-quasard init $MONIKER --chain-id qsr-questnet-04
+quasarnoded init $MONIKER --chain-id quasar-1
 
 # Download genesis and addrbook
-curl -Ls https://snapshots.kjnodes.com/quasar-testnet/genesis.json > $HOME/.quasarnode/config/genesis.json
-curl -Ls https://snapshots.kjnodes.com/quasar-testnet/addrbook.json > $HOME/.quasarnode/config/addrbook.json
+curl -Ls https://snapshots.kjnodes.com/quasar/genesis.json > $HOME/.quasarnode/config/genesis.json
+curl -Ls https://snapshots.kjnodes.com/quasar/addrbook.json > $HOME/.quasarnode/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@quasar-testnet.rpc.kjnodes.com:48659\"|" $HOME/.quasarnode/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@quasar.rpc.kjnodes.com:48659\"|" $HOME/.quasarnode/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0uqsr\"|" $HOME/.quasarnode/config/app.toml
@@ -116,12 +127,12 @@ sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:48317\"
 ### Download latest chain snapshot
 
 ```bash
-curl -L https://snapshots.kjnodes.com/quasar-testnet/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.quasarnode
+curl -L https://snapshots.kjnodes.com/quasar/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.quasarnode
 [[ -f $HOME/.quasarnode/data/upgrade-info.json ]] && cp $HOME/.quasarnode/data/upgrade-info.json $HOME/.quasarnode/cosmovisor/genesis/upgrade-info.json
 ```
 
 ### Start service and check the logs
 
 ```bash
-sudo systemctl start quasard && sudo journalctl -u quasard -f --no-hostname -o cat
+sudo systemctl start quasarnoded && sudo journalctl -u quasarnoded -f --no-hostname -o cat
 ```

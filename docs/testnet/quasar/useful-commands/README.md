@@ -60,21 +60,21 @@ Please make sure you have adjusted **moniker**, **identity**, **details** and **
 
 ```bash
 quasard tx staking create-validator \
---amount=1000000uqsr \
---pubkey=$(quasard tendermint show-validator) \
---moniker="YOUR_MONIKER_NAME" \
---identity="YOUR_KEYBASE_ID" \
---details="YOUR_DETAILS" \
---website="YOUR_WEBSITE_URL" \
---chain-id=qsr-questnet-04 \
---commission-rate=0.05 \
---commission-max-rate=0.20 \
---commission-max-change-rate=0.01 \
---min-self-delegation=1 \
---from=wallet \
---gas-adjustment=1.4 \
---gas=auto \
---gas-prices=0uqsr \
+--amount 1000000uqsr \
+--pubkey $(quasard tendermint show-validator) \
+--moniker "YOUR_MONIKER_NAME" \
+--identity "YOUR_KEYBASE_ID" \
+--details "YOUR_DETAILS" \
+--website "YOUR_WEBSITE_URL" \
+--chain-id qsr-questnet-04 \
+--commission-rate 0.05 \
+--commission-max-rate 0.20 \
+--commission-max-change-rate 0.01 \
+--min-self-delegation 1 \
+--from wallet \
+--gas-adjustment 1.4 \
+--gas auto \
+--gas-prices 0uqsr \
 -y
 ```
 
@@ -82,16 +82,16 @@ quasard tx staking create-validator \
 
 ```bash
 quasard tx staking edit-validator \
---new-moniker="YOUR_MONIKER_NAME" \
---identity="YOUR_KEYBASE_ID" \
---details="YOUR_DETAILS" \
---website="YOUR_WEBSITE_URL"
---chain-id=qsr-questnet-04 \
---commission-rate=0.05 \
---from=wallet \
---gas-adjustment=1.4 \
---gas=auto \
---gas-prices=0uqsr \
+--new-moniker "YOUR_MONIKER_NAME" \
+--identity "YOUR_KEYBASE_ID" \
+--details "YOUR_DETAILS" \
+--website "YOUR_WEBSITE_URL"
+--chain-id qsr-questnet-04 \
+--commission-rate 0.05 \
+--from wallet \
+--gas-adjustment 1.4 \
+--gas auto \
+--gas-prices 0uqsr \
 -y
 ```
 
@@ -166,7 +166,7 @@ quasard tx staking unbond $(quasard keys show wallet --bech val -a) 1000000uqsr 
 #### Send tokens to the wallet
 
 ```bash
-quasard tx bank send wallet <TO_WALLET_ADDRESS> 1000000uqsr --from wallet --chain-id qsr-questnet-04
+quasard tx bank send wallet <TO_WALLET_ADDRESS> 1000000uqsr --from wallet --chain-id qsr-questnet-04 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
 ```
 
 ## 🗳 Governance
@@ -306,6 +306,7 @@ sudo rm /etc/systemd/system/quasard.service
 sudo systemctl daemon-reload
 rm -f $(which quasard)
 rm -rf $HOME/.quasarnode
+rm -rf $HOME/gravity-bin
 ```
 
 ## ⚙️ Service Management

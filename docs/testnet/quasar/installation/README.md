@@ -32,7 +32,7 @@ sudo apt -qy upgrade
 
 ```bash
 sudo rm -rf /usr/local/go
-curl -Ls https://go.dev/dl/go1.19.5.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
+curl -Ls https://go.dev/dl/go1.20.2.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
 eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/golang.sh)
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
@@ -40,10 +40,20 @@ eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ### Download and build binaries
 
 ```bash
-# Download project binaries
+# Clone project repository
+cd $HOME
+rm -rf gravity-bin
+git clone 
+cd gravity-bin
+git checkout v0.0.2-alpha-11
+
+# Build binaries
+make build
+
+# Prepare binaries for Cosmovisor
 mkdir -p $HOME/.quasarnode/cosmovisor/genesis/bin
-wget -O $HOME/.quasarnode/cosmovisor/genesis/bin/quasard https://github.com/quasar-finance/binary-release/raw/main/v0.0.2-alpha-11/quasarnoded-linux-amd64
-chmod +x $HOME/.quasarnode/cosmovisor/genesis/bin/*
+mv quasarnoded $HOME/.quasarnode/cosmovisor/genesis/bin/
+rm -rf build
 
 # Create application symlinks
 ln -s $HOME/.quasarnode/cosmovisor/genesis $HOME/.quasarnode/cosmovisor/current
@@ -71,6 +81,7 @@ LimitNOFILE=65535
 Environment="DAEMON_HOME=$HOME/.quasarnode"
 Environment="DAEMON_NAME=quasard"
 Environment="UNSAFE_SKIP_BACKUP=true"
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:$HOME/.quasarnode/cosmovisor/current/bin"
 
 [Install]
 WantedBy=multi-user.target
