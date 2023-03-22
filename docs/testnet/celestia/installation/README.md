@@ -145,7 +145,7 @@ cd $HOME
 rm -rf celestia-node 
 git clone https://github.com/celestiaorg/celestia-node.git 
 cd celestia-node
-git checkout v0.7.1
+git checkout v0.7.2
 make build
 sudo mv build/celestia /usr/local/bin
 make cel-key
@@ -153,8 +153,16 @@ sudo mv cel-key /usr/local/bin
 ```
 
 ### Add Bridge wallet
+
+#### Generate new wallet
+
 ```bash
 cel-key add bridge-wallet --node.type bridge --p2p.network blockspacerace
+```
+
+#### Recover existing wallet
+```bash
+cel-key add bridge-wallet --node.type bridge --p2p.network blockspacerace --recover
 ```
 
 ### Fund the wallet with testnet tokens
