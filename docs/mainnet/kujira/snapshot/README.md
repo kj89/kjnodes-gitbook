@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **00:15 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: v0.7.1
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v0.8.4
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 9217846 | 4 hours | [snapshot (2.46 GB)](https://snapshots.kjnodes.com/kujira/snapshot\_latest.tar.lz4) |
+| 9226201 | 4 minutes | [snapshot (2.86 GB)](https://snapshots.kjnodes.com/kujira/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
