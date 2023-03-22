@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **00:45 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: beta7
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v121
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 1649639 | 4 hours | [snapshot (2.12 GB)](https://snapshots.kjnodes.com/jackal-testnet/snapshot\_latest.tar.lz4) |
+| 1653072 | 4 hours | [snapshot (2.04 GB)](https://snapshots.kjnodes.com/jackal-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
