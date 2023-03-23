@@ -74,7 +74,7 @@ quasarnoded tx staking create-validator \
 --from wallet \
 --gas-adjustment 1.4 \
 --gas auto \
---gas-prices 0uqsr \
+--gas-prices 0.01ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B \
 -y
 ```
 
@@ -91,14 +91,14 @@ quasarnoded tx staking edit-validator \
 --from wallet \
 --gas-adjustment 1.4 \
 --gas auto \
---gas-prices 0uqsr \
+--gas-prices 0.01ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B \
 -y
 ```
 
 #### Unjail validator
 
 ```bash
-quasarnoded tx slashing unjail --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
+quasarnoded tx slashing unjail --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.01ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B -y
 ```
 
 #### Jail reason
@@ -130,43 +130,43 @@ quasarnoded q staking validator $(quasarnoded keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-quasarnoded tx distribution withdraw-all-rewards --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
+quasarnoded tx distribution withdraw-all-rewards --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.01ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-quasarnoded tx distribution withdraw-rewards $(quasarnoded keys show wallet --bech val -a) --commission --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
+quasarnoded tx distribution withdraw-rewards $(quasarnoded keys show wallet --bech val -a) --commission --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.01ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-quasarnoded tx staking delegate $(quasarnoded keys show wallet --bech val -a) 1000000uqsr --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
+quasarnoded tx staking delegate $(quasarnoded keys show wallet --bech val -a) 1000000uqsr --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.01ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-quasarnoded tx staking delegate <TO_VALOPER_ADDRESS> 1000000uqsr --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
+quasarnoded tx staking delegate <TO_VALOPER_ADDRESS> 1000000uqsr --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.01ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B -y
 ```
 
 #### Redelegate tokens to another validator
 
 ```bash
-quasarnoded tx staking redelegate $(quasarnoded keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000uqsr --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
+quasarnoded tx staking redelegate $(quasarnoded keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000uqsr --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.01ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B -y
 ```
 
 #### Unbond tokens from your validator
 
 ```bash
-quasarnoded tx staking unbond $(quasarnoded keys show wallet --bech val -a) 1000000uqsr --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
+quasarnoded tx staking unbond $(quasarnoded keys show wallet --bech val -a) 1000000uqsr --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.01ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B -y
 ```
 
 #### Send tokens to the wallet
 
 ```bash
-quasarnoded tx bank send wallet <TO_WALLET_ADDRESS> 1000000uqsr --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
+quasarnoded tx bank send wallet <TO_WALLET_ADDRESS> 1000000uqsr --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.01ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B -y
 ```
 
 ## 🗳 Governance
@@ -186,25 +186,25 @@ quasarnoded query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-quasarnoded tx gov vote 1 yes --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
+quasarnoded tx gov vote 1 yes --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.01ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B -y
 ```
 
 #### Vote 'No'
 
 ```bash
-quasarnoded tx gov vote 1 no --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
+quasarnoded tx gov vote 1 no --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.01ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-quasarnoded tx gov vote 1 abstain --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
+quasarnoded tx gov vote 1 abstain --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.01ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-quasarnoded tx gov vote 1 NoWithVeto --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uqsr -y
+quasarnoded tx gov vote 1 NoWithVeto --from wallet --chain-id quasar-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.01ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B -y
 ```
 
 ## ⚡️ Utility
@@ -277,7 +277,7 @@ curl -sS http://localhost:48657/net_info | jq -r '.result.peers[] | "\(.node_inf
 #### Set minimum gas price
 
 ```bash
-sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0uqsr\"/" $HOME/.quasarnode/config/app.toml
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.01ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B,0.01ibc/FA0006F056DB6719B8C16C551FC392B62F5729978FC0B125AC9A432DBB2AA1A5,0.01ibc/FA7775734CC73176B7425910DE001A1D2AD9B6D9E93129A5D0750EAD13E4E63A\"/" $HOME/.quasarnode/config/app.toml
 ```
 
 #### Enable prometheus
