@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **00:45 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: v1.1.2-hotfix
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: bouncybulldog
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 2078654 | 3 hours | [snapshot (1.24 GB)](https://snapshots.kjnodes.com/jackal/snapshot\_latest.tar.lz4) |
+| 2081047 | 1 hours | [snapshot (1.25 GB)](https://snapshots.kjnodes.com/jackal/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
