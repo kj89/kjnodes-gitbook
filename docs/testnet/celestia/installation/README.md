@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/celestia.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: blockspacerace-0 | **Latest Version Tag**: v0.12.0 | **Custom Port**: 20
+**Chain ID**: blockspacerace-0 | **Latest Version Tag**: v0.12.1 | **Custom Port**: 20
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf celestia-app
 git clone https://github.com/celestiaorg/celestia-app.git
 cd celestia-app
-git checkout v0.12.0
+git checkout v0.12.1
 
 # Build binaries
 make build

@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **05:00 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: v0.12.0
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v0.12.1
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 72836 | 4 hours | [snapshot (11.49 GB)](https://snapshots.kjnodes.com/celestia-testnet/snapshot\_latest.tar.lz4) |
+| 78879 | 5 hours | [snapshot (12.45 GB)](https://snapshots.kjnodes.com/celestia-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
