@@ -4,7 +4,7 @@ description: Discover base tools contributed to the projects by kjnodes team.
 
 # 🖤 Supported chains
 
-**Chains supported**: 38 | **Assets staked**: $2,099,214 | **Clients**: 4107
+**Chains supported**: 39 | **Assets staked**: $2,094,998 | **Clients**: 4106
 
 ## MAINNET
 
@@ -39,6 +39,8 @@ description: Discover base tools contributed to the projects by kjnodes team.
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/stride.png" alt="" data-size="line"> [Stride](mainnet/stride/)
 
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/teritori.png" alt="" data-size="line"> [Teritori](mainnet/teritori/)
+
+<img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/uptick.png" alt="" data-size="line"> [Uptick](mainnet/uptick/)
 
 
 ## TESTNET

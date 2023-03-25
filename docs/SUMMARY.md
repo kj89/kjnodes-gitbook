@@ -121,6 +121,13 @@
   * [State sync](mainnet/teritori/state-sync/README.md)
   * [Useful commands](mainnet/teritori/useful-commands/README.md)
 
+* [Uptick](mainnet/uptick/README.md)
+  * [Installation](mainnet/uptick/installation/README.md)
+  * [Upgrade](mainnet/uptick/upgrade/README.md)
+  * [Snapshot](mainnet/uptick/snapshot/README.md)
+  * [State sync](mainnet/uptick/state-sync/README.md)
+  * [Useful commands](mainnet/uptick/useful-commands/README.md)
+
 
 ## TESTNET
 
