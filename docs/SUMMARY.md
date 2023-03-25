@@ -250,13 +250,6 @@
   * [State sync](testnet/ollo/state-sync/README.md)
   * [Useful commands](testnet/ollo/useful-commands/README.md)
 
-* [Quasar](testnet/quasar/README.md)
-  * [Installation](testnet/quasar/installation/README.md)
-  * [Upgrade](testnet/quasar/upgrade/README.md)
-  * [Snapshot](testnet/quasar/snapshot/README.md)
-  * [State sync](testnet/quasar/state-sync/README.md)
-  * [Useful commands](testnet/quasar/useful-commands/README.md)
-
 * [Quicksilver](testnet/quicksilver/README.md)
   * [Installation](testnet/quicksilver/installation/README.md)
   * [Upgrade](testnet/quicksilver/upgrade/README.md)
