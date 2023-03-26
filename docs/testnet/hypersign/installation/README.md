@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/hypersign.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: jagrat | **Latest Version Tag**: v0.1.6 | **Custom Port**: 31
+**Chain ID**: jagrat | **Latest Version Tag**: v0.1.7 | **Custom Port**: 31
 
 ### Setup validator name
 
@@ -32,7 +32,7 @@ sudo apt -qy upgrade
 
 ```bash
 sudo rm -rf /usr/local/go
-curl -Ls https://go.dev/dl/go1.18.10.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
+curl -Ls https://go.dev/dl/go1.19.7.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
 eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/golang.sh)
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf hid-node
 git clone https://github.com/hypersign-protocol/hid-node.git
 cd hid-node
-git checkout v0.1.6
+git checkout v0.1.7
 
 # Build binaries
 make build
@@ -81,6 +81,7 @@ LimitNOFILE=65535
 Environment="DAEMON_HOME=$HOME/.hid-node"
 Environment="DAEMON_NAME=hid-noded"
 Environment="UNSAFE_SKIP_BACKUP=true"
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:$HOME/.hid-node/cosmovisor/current/bin"
 
 [Install]
 WantedBy=multi-user.target
@@ -92,6 +93,11 @@ sudo systemctl enable hid-noded
 ### Initialize the node
 
 ```bash
+# Set node configuration
+hid-noded config chain-id jagrat
+hid-noded config keyring-backend test
+hid-noded config node tcp://localhost:31657
+
 # Initialize the node
 hid-noded init $MONIKER --chain-id jagrat
 
