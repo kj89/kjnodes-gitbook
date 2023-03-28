@@ -65,6 +65,13 @@
   * [State sync](mainnet/mars/state-sync/README.md)
   * [Useful commands](mainnet/mars/useful-commands/README.md)
 
+* [Nois](mainnet/nois/README.md)
+  * [Installation](mainnet/nois/installation/README.md)
+  * [Upgrade](mainnet/nois/upgrade/README.md)
+  * [Snapshot](mainnet/nois/snapshot/README.md)
+  * [State sync](mainnet/nois/state-sync/README.md)
+  * [Useful commands](mainnet/nois/useful-commands/README.md)
+
 * [Migaloo](mainnet/migaloo/README.md)
   * [Installation](mainnet/migaloo/installation/README.md)
   * [Upgrade](mainnet/migaloo/upgrade/README.md)
