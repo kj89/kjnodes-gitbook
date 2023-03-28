@@ -6,7 +6,7 @@ Nois Network aims to bring randomness (or noise)  to the Cosmos ecosystem by pro
 
 **Chain ID**: nois-1 | **Latest Version Tag**: v1.0.0 | **Wasm**: ON
 
-[Website](https://nois.network) | [Discord](https://discord.gg/dHdpwtEb6F) | [Twitter](https://twitter.com/NoisNetwork)
+[Website](https://nois.network) | [Discord](https://discord.gg/dHdpwtEb6F) | [Twitter](https://twitter.com/NoisRNG)
 
 
 
