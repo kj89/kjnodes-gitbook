@@ -4,7 +4,7 @@ description: Discover base tools contributed to the projects by kjnodes team.
 
 # 🖤 Supported chains
 
-**Chains supported**: 40 | **Assets staked**: $2,084,553 | **Clients**: 4097
+**Chains supported**: 40 | **Assets staked**: $2,092,752 | **Clients**: 4096
 
 ## MAINNET
 
@@ -51,6 +51,8 @@ description: Discover base tools contributed to the projects by kjnodes team.
 
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/andromeda.png" alt="" data-size="line"> [Andromeda](testnet/andromeda/)
 
+<img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/althea.png" alt="" data-size="line"> [Althea](testnet/althea/)
+
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/aura.png" alt="" data-size="line"> [Aura](testnet/aura/)
 
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/bitcanna.png" alt="" data-size="line"> [Bitcanna](testnet/bitcanna/)
@@ -72,8 +74,6 @@ description: Discover base tools contributed to the projects by kjnodes team.
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/lava.png" alt="" data-size="line"> [Lava](testnet/lava/)
 
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/nibiru.png" alt="" data-size="line"> [Nibiru](testnet/nibiru/)
-
-<img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/nois.png" alt="" data-size="line"> [Nois](testnet/nois/)
 
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/nolus.png" alt="" data-size="line"> [Nolus](testnet/nolus/)
 
