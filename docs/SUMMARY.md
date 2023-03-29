@@ -236,6 +236,13 @@
   * [State sync](testnet/nibiru/state-sync/README.md)
   * [Useful commands](testnet/nibiru/useful-commands/README.md)
 
+* [Nois](testnet/nois/README.md)
+  * [Installation](testnet/nois/installation/README.md)
+  * [Upgrade](testnet/nois/upgrade/README.md)
+  * [Snapshot](testnet/nois/snapshot/README.md)
+  * [State sync](testnet/nois/state-sync/README.md)
+  * [Useful commands](testnet/nois/useful-commands/README.md)
+
 * [Nolus](testnet/nolus/README.md)
   * [Installation](testnet/nolus/installation/README.md)
   * [Upgrade](testnet/nolus/upgrade/README.md)

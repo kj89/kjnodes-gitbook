@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/nois.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: nois-testnet-004 | **Latest Version Tag**: v0.6.0 | **Custom Port**: 51
+**Chain ID**: nois-testnet-005 | **Latest Version Tag**: v1.0.0 | **Custom Port**: 51
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf noisd
 git clone https://github.com/noislabs/noisd.git
 cd noisd
-git checkout v0.6.0
+git checkout v1.0.0
 
 # Build binaries
 make build
@@ -94,12 +94,12 @@ sudo systemctl enable noisd
 
 ```bash
 # Set node configuration
-noisd config chain-id nois-testnet-004
+noisd config chain-id nois-testnet-005
 noisd config keyring-backend test
 noisd config node tcp://localhost:51657
 
 # Initialize the node
-noisd init $MONIKER --chain-id nois-testnet-004
+noisd init $MONIKER --chain-id nois-testnet-005
 
 # Download genesis and addrbook
 curl -Ls https://snapshots.kjnodes.com/nois-testnet/genesis.json > $HOME/.noisd/config/genesis.json
@@ -109,7 +109,7 @@ curl -Ls https://snapshots.kjnodes.com/nois-testnet/addrbook.json > $HOME/.noisd
 sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@nois-testnet.rpc.kjnodes.com:51659\"|" $HOME/.noisd/config/config.toml
 
 # Set minimum gas price
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0unois\"|" $HOME/.noisd/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.05unois\"|" $HOME/.noisd/config/app.toml
 
 # Set pruning
 sed -i \
