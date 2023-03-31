@@ -4,7 +4,7 @@ description: Discover base tools contributed to the projects by kjnodes team.
 
 # 🖤 Supported chains
 
-**Chains supported**: 41 | **Assets staked**: $2,173,050 | **Clients**: 4104
+**Chains supported**: 41 | **Assets staked**: $2,158,979 | **Clients**: 4106
 
 ## MAINNET
 
