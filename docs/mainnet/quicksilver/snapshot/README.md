@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **02:15 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: v1.2.7
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v1.2.9
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 1277536 | 3 hours | [snapshot (1.25 GB)](https://snapshots.kjnodes.com/quicksilver/snapshot\_latest.tar.lz4) |
+| 1312768 | 5 hours | [snapshot (1.27 GB)](https://snapshots.kjnodes.com/quicksilver/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
