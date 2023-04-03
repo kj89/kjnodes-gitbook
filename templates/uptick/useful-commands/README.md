@@ -72,9 +72,8 @@ ${CHAIN_APP} tx staking create-validator \
 --commission-max-change-rate 0.01 \
 --min-self-delegation 1 \
 --from wallet \
---gas-adjustment 1.4 \
---gas auto \
---fees=1000000000000000auptick \
+--gas 1000000 \
+--fees 1000000000000000auptick \
 -y
 ```
 
@@ -89,16 +88,15 @@ ${CHAIN_APP} tx staking edit-validator \
 --chain-id ${CHAIN_ID} \
 --commission-rate 0.05 \
 --from wallet \
---gas-adjustment 1.4 \
---gas auto \
---fees=1000000000000000auptick \
+--gas 1000000 \
+--fees 1000000000000000auptick \
 -y
 ```
 
 #### Unjail validator
 
 ```bash
-${CHAIN_APP} tx slashing unjail --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --fees=1000000000000000auptick -y
+${CHAIN_APP} tx slashing unjail --from wallet --chain-id ${CHAIN_ID} --gas 1000000  --fees 1000000000000000auptick -y
 ```
 
 #### Jail reason
@@ -130,43 +128,43 @@ ${CHAIN_APP} q staking validator $(${CHAIN_APP} keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-${CHAIN_APP} tx distribution withdraw-all-rewards --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --fees=1000000000000000auptick -y
+${CHAIN_APP} tx distribution withdraw-all-rewards --from wallet --chain-id ${CHAIN_ID} --gas 1000000  --fees 1000000000000000auptick -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-${CHAIN_APP} tx distribution withdraw-rewards $(${CHAIN_APP} keys show wallet --bech val -a) --commission --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --fees=1000000000000000auptick -y
+${CHAIN_APP} tx distribution withdraw-rewards $(${CHAIN_APP} keys show wallet --bech val -a) --commission --from wallet --chain-id ${CHAIN_ID} --gas 1000000  --fees 1000000000000000auptick -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-${CHAIN_APP} tx staking delegate $(${CHAIN_APP} keys show wallet --bech val -a) 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --fees=1000000000000000auptick -y
+${CHAIN_APP} tx staking delegate $(${CHAIN_APP} keys show wallet --bech val -a) 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID} --gas 1000000  --fees 1000000000000000auptick -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-${CHAIN_APP} tx staking delegate <TO_VALOPER_ADDRESS> 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --fees=1000000000000000auptick -y
+${CHAIN_APP} tx staking delegate <TO_VALOPER_ADDRESS> 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID} --gas 1000000  --fees 1000000000000000auptick -y
 ```
 
 #### Redelegate tokens to another validator
 
 ```bash
-${CHAIN_APP} tx staking redelegate $(${CHAIN_APP} keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --fees=1000000000000000auptick -y
+${CHAIN_APP} tx staking redelegate $(${CHAIN_APP} keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID} --gas 1000000  --fees 1000000000000000auptick -y
 ```
 
 #### Unbond tokens from your validator
 
 ```bash
-${CHAIN_APP} tx staking unbond $(${CHAIN_APP} keys show wallet --bech val -a) 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --fees=1000000000000000auptick -y
+${CHAIN_APP} tx staking unbond $(${CHAIN_APP} keys show wallet --bech val -a) 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID} --gas 1000000  --fees 1000000000000000auptick -y
 ```
 
 #### Send tokens to the wallet
 
 ```bash
-${CHAIN_APP} tx bank send wallet <TO_WALLET_ADDRESS> 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --fees=1000000000000000auptick -y
+${CHAIN_APP} tx bank send wallet <TO_WALLET_ADDRESS> 1000000${CHAIN_DENOM} --from wallet --chain-id ${CHAIN_ID} --gas 1000000  --fees 1000000000000000auptick -y
 ```
 
 ## 🗳 Governance
@@ -186,25 +184,25 @@ ${CHAIN_APP} query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-${CHAIN_APP} tx gov vote 1 yes --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --fees=1000000000000000auptick -y
+${CHAIN_APP} tx gov vote 1 yes --from wallet --chain-id ${CHAIN_ID} --gas 1000000  --fees 1000000000000000auptick -y
 ```
 
 #### Vote 'No'
 
 ```bash
-${CHAIN_APP} tx gov vote 1 no --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --fees=1000000000000000auptick -y
+${CHAIN_APP} tx gov vote 1 no --from wallet --chain-id ${CHAIN_ID} --gas 1000000  --fees 1000000000000000auptick -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-${CHAIN_APP} tx gov vote 1 abstain --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --fees=1000000000000000auptick -y
+${CHAIN_APP} tx gov vote 1 abstain --from wallet --chain-id ${CHAIN_ID} --gas 1000000  --fees 1000000000000000auptick -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-${CHAIN_APP} tx gov vote 1 NoWithVeto --from wallet --chain-id ${CHAIN_ID} --gas-adjustment 1.4 --gas auto --fees=1000000000000000auptick -y
+${CHAIN_APP} tx gov vote 1 NoWithVeto --from wallet --chain-id ${CHAIN_ID} --gas 1000000  --fees 1000000000000000auptick -y
 ```
 
 ## ⚡️ Utility
