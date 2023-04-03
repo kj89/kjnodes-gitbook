@@ -4,7 +4,7 @@
 
 Nolus aims to be the leading DeFi Lease platform. The protocol  intends to become a tool for empowering people, simple to use, and highly efficient.
 
-**Chain ID**: nolus-rila | **Latest Version Tag**: v0.2.1-testnet | **Wasm**: ON
+**Chain ID**: nolus-rila | **Latest Version Tag**: v0.2.2 | **Wasm**: ON
 
 [Website](https://www.nolus.io) | [Discord](https://discord.gg/nolus-protocol) | [Twitter](https://twitter.com/NolusProtocol)
 
