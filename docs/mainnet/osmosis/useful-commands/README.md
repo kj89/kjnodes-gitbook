@@ -85,7 +85,7 @@ osmosisd tx staking edit-validator \
 --new-moniker "YOUR_MONIKER_NAME" \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
---website "YOUR_WEBSITE_URL"
+--website "YOUR_WEBSITE_URL" \
 --chain-id osmosis-1 \
 --commission-rate 0.05 \
 --from wallet \
