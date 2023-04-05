@@ -240,3 +240,56 @@ cel-key show bridge-wallet --node.type bridge --p2p.network blockspacerace -a | 
 ```bash
 celestia-appd q bank balances $(cel-key show bridge-wallet --node.type bridge --p2p.network blockspacerace -a | tail -1)
 ```
+
+# Upgrade Bridge Node
+
+### Stop Bridge node
+```
+sudo systemctl stop celestia-bridge
+```
+
+### Download and build binaries
+```bash
+cd $HOME 
+rm -rf celestia-node 
+git clone https://github.com/celestiaorg/celestia-node.git 
+cd celestia-node
+git checkout v0.8.2
+make build
+sudo mv build/celestia /usr/local/bin
+make cel-key
+sudo mv cel-key /usr/local/bin
+```
+
+### Check Bridge node version
+```
+celestia version
+```
+
+### Clear data store
+```
+cd $HOME/.celestia-bridge-blockspacerace-0
+rm -rf config.toml blocks index data transients
+```
+
+### Initialize Bridge node
+```
+celestia bridge init \
+  --keyring.accname bridge-wallet \
+  --core.ip localhost \
+  --core.rpc.port 20657 \
+  --core.grpc.port 20090 \
+  --p2p.network blockspacerace \
+  --rpc.port 20658 \
+  --gateway.port 20659
+```
+
+### Start Bridge node
+```
+sudo systemctl start celestia-bridge
+```
+
+### Check Bridge node logs
+```bash
+journalctl -fu celestia-bridge -o cat
+```
