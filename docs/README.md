@@ -4,7 +4,7 @@ description: Discover base tools contributed to the projects by kjnodes team.
 
 # 🖤 Supported chains
 
-**Chains supported**: 41 | **Assets staked**: $2,169,680 | **Clients**: 4137
+**Chains supported**: 42 | **Assets staked**: $2,169,788 | **Clients**: 4135
 
 ## MAINNET
 
@@ -62,6 +62,8 @@ description: Discover base tools contributed to the projects by kjnodes team.
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/defund.png" alt="" data-size="line"> [Defund](testnet/defund/)
 
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/dymension.png" alt="" data-size="line"> [Dymension](testnet/dymension/)
+
+<img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/elys.png" alt="" data-size="line"> [Elys](testnet/elys/)
 
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/gitopia.png" alt="" data-size="line"> [Gitopia](testnet/gitopia/)
 

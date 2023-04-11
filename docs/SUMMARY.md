@@ -194,6 +194,13 @@
   * [State sync](testnet/dymension/state-sync/README.md)
   * [Useful commands](testnet/dymension/useful-commands/README.md)
 
+* [Elys](testnet/elys/README.md)
+  * [Installation](testnet/elys/installation/README.md)
+  * [Upgrade](testnet/elys/upgrade/README.md)
+  * [Snapshot](testnet/elys/snapshot/README.md)
+  * [State sync](testnet/elys/state-sync/README.md)
+  * [Useful commands](testnet/elys/useful-commands/README.md)
+
 * [Gitopia](testnet/gitopia/README.md)
   * [Installation](testnet/gitopia/installation/README.md)
   * [Upgrade](testnet/gitopia/upgrade/README.md)
