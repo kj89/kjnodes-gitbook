@@ -74,7 +74,7 @@ migalood tx staking create-validator \
 --from wallet \
 --gas-adjustment 1.4 \
 --gas auto \
---gas-prices 0uwhale \
+--gas-prices 0.25uwhale \
 -y
 ```
 
@@ -91,14 +91,14 @@ migalood tx staking edit-validator \
 --from wallet \
 --gas-adjustment 1.4 \
 --gas auto \
---gas-prices 0uwhale \
+--gas-prices 0.25uwhale \
 -y
 ```
 
 #### Unjail validator
 
 ```bash
-migalood tx slashing unjail --from wallet --chain-id migaloo-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uwhale -y
+migalood tx slashing unjail --from wallet --chain-id migaloo-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.25uwhale -y
 ```
 
 #### Jail reason
@@ -130,43 +130,43 @@ migalood q staking validator $(migalood keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-migalood tx distribution withdraw-all-rewards --from wallet --chain-id migaloo-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uwhale -y
+migalood tx distribution withdraw-all-rewards --from wallet --chain-id migaloo-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.25uwhale -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-migalood tx distribution withdraw-rewards $(migalood keys show wallet --bech val -a) --commission --from wallet --chain-id migaloo-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uwhale -y
+migalood tx distribution withdraw-rewards $(migalood keys show wallet --bech val -a) --commission --from wallet --chain-id migaloo-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.25uwhale -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-migalood tx staking delegate $(migalood keys show wallet --bech val -a) 1000000uwhale --from wallet --chain-id migaloo-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uwhale -y
+migalood tx staking delegate $(migalood keys show wallet --bech val -a) 1000000uwhale --from wallet --chain-id migaloo-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.25uwhale -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-migalood tx staking delegate <TO_VALOPER_ADDRESS> 1000000uwhale --from wallet --chain-id migaloo-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uwhale -y
+migalood tx staking delegate <TO_VALOPER_ADDRESS> 1000000uwhale --from wallet --chain-id migaloo-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.25uwhale -y
 ```
 
 #### Redelegate tokens to another validator
 
 ```bash
-migalood tx staking redelegate $(migalood keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000uwhale --from wallet --chain-id migaloo-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uwhale -y
+migalood tx staking redelegate $(migalood keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000uwhale --from wallet --chain-id migaloo-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.25uwhale -y
 ```
 
 #### Unbond tokens from your validator
 
 ```bash
-migalood tx staking unbond $(migalood keys show wallet --bech val -a) 1000000uwhale --from wallet --chain-id migaloo-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uwhale -y
+migalood tx staking unbond $(migalood keys show wallet --bech val -a) 1000000uwhale --from wallet --chain-id migaloo-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.25uwhale -y
 ```
 
 #### Send tokens to the wallet
 
 ```bash
-migalood tx bank send wallet <TO_WALLET_ADDRESS> 1000000uwhale --from wallet --chain-id migaloo-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uwhale -y
+migalood tx bank send wallet <TO_WALLET_ADDRESS> 1000000uwhale --from wallet --chain-id migaloo-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.25uwhale -y
 ```
 
 ## 🗳 Governance
@@ -186,25 +186,25 @@ migalood query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-migalood tx gov vote 1 yes --from wallet --chain-id migaloo-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uwhale -y
+migalood tx gov vote 1 yes --from wallet --chain-id migaloo-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.25uwhale -y
 ```
 
 #### Vote 'No'
 
 ```bash
-migalood tx gov vote 1 no --from wallet --chain-id migaloo-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uwhale -y
+migalood tx gov vote 1 no --from wallet --chain-id migaloo-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.25uwhale -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-migalood tx gov vote 1 abstain --from wallet --chain-id migaloo-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uwhale -y
+migalood tx gov vote 1 abstain --from wallet --chain-id migaloo-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.25uwhale -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-migalood tx gov vote 1 NoWithVeto --from wallet --chain-id migaloo-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uwhale -y
+migalood tx gov vote 1 NoWithVeto --from wallet --chain-id migaloo-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.25uwhale -y
 ```
 
 ## ⚡️ Utility
@@ -277,7 +277,7 @@ curl -sS http://localhost:49657/net_info | jq -r '.result.peers[] | "\(.node_inf
 #### Set minimum gas price
 
 ```bash
-sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0uwhale\"/" $HOME/.migalood/config/app.toml
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.25uwhale\"/" $HOME/.migalood/config/app.toml
 ```
 
 #### Enable prometheus
