@@ -60,7 +60,7 @@ Please make sure you have adjusted **moniker**, **identity**, **details** and **
 
 ```bash
 elysd tx staking create-validator \
---amount 1000000ueden \
+--amount 1000000uelys \
 --pubkey $(elysd tendermint show-validator) \
 --moniker "YOUR_MONIKER_NAME" \
 --identity "YOUR_KEYBASE_ID" \
@@ -74,7 +74,7 @@ elysd tx staking create-validator \
 --from wallet \
 --gas-adjustment 1.4 \
 --gas auto \
---gas-prices 0ueden \
+--gas-prices 0uelys \
 -y
 ```
 
@@ -91,14 +91,14 @@ elysd tx staking edit-validator \
 --from wallet \
 --gas-adjustment 1.4 \
 --gas auto \
---gas-prices 0ueden \
+--gas-prices 0uelys \
 -y
 ```
 
 #### Unjail validator
 
 ```bash
-elysd tx slashing unjail --from wallet --chain-id elystestnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ueden -y
+elysd tx slashing unjail --from wallet --chain-id elystestnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uelys -y
 ```
 
 #### Jail reason
@@ -130,43 +130,43 @@ elysd q staking validator $(elysd keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-elysd tx distribution withdraw-all-rewards --from wallet --chain-id elystestnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ueden -y
+elysd tx distribution withdraw-all-rewards --from wallet --chain-id elystestnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uelys -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-elysd tx distribution withdraw-rewards $(elysd keys show wallet --bech val -a) --commission --from wallet --chain-id elystestnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ueden -y
+elysd tx distribution withdraw-rewards $(elysd keys show wallet --bech val -a) --commission --from wallet --chain-id elystestnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uelys -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-elysd tx staking delegate $(elysd keys show wallet --bech val -a) 1000000ueden --from wallet --chain-id elystestnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ueden -y
+elysd tx staking delegate $(elysd keys show wallet --bech val -a) 1000000uelys --from wallet --chain-id elystestnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uelys -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-elysd tx staking delegate <TO_VALOPER_ADDRESS> 1000000ueden --from wallet --chain-id elystestnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ueden -y
+elysd tx staking delegate <TO_VALOPER_ADDRESS> 1000000uelys --from wallet --chain-id elystestnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uelys -y
 ```
 
 #### Redelegate tokens to another validator
 
 ```bash
-elysd tx staking redelegate $(elysd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000ueden --from wallet --chain-id elystestnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ueden -y
+elysd tx staking redelegate $(elysd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000uelys --from wallet --chain-id elystestnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uelys -y
 ```
 
 #### Unbond tokens from your validator
 
 ```bash
-elysd tx staking unbond $(elysd keys show wallet --bech val -a) 1000000ueden --from wallet --chain-id elystestnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ueden -y
+elysd tx staking unbond $(elysd keys show wallet --bech val -a) 1000000uelys --from wallet --chain-id elystestnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uelys -y
 ```
 
 #### Send tokens to the wallet
 
 ```bash
-elysd tx bank send wallet <TO_WALLET_ADDRESS> 1000000ueden --from wallet --chain-id elystestnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ueden -y
+elysd tx bank send wallet <TO_WALLET_ADDRESS> 1000000uelys --from wallet --chain-id elystestnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uelys -y
 ```
 
 ## 🗳 Governance
@@ -186,25 +186,25 @@ elysd query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-elysd tx gov vote 1 yes --from wallet --chain-id elystestnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ueden -y
+elysd tx gov vote 1 yes --from wallet --chain-id elystestnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uelys -y
 ```
 
 #### Vote 'No'
 
 ```bash
-elysd tx gov vote 1 no --from wallet --chain-id elystestnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ueden -y
+elysd tx gov vote 1 no --from wallet --chain-id elystestnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uelys -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-elysd tx gov vote 1 abstain --from wallet --chain-id elystestnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ueden -y
+elysd tx gov vote 1 abstain --from wallet --chain-id elystestnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uelys -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-elysd tx gov vote 1 NoWithVeto --from wallet --chain-id elystestnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ueden -y
+elysd tx gov vote 1 NoWithVeto --from wallet --chain-id elystestnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0uelys -y
 ```
 
 ## ⚡️ Utility
@@ -277,7 +277,7 @@ curl -sS http://localhost:53657/net_info | jq -r '.result.peers[] | "\(.node_inf
 #### Set minimum gas price
 
 ```bash
-sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0ueden\"/" $HOME/.elys/config/app.toml
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0uelys\"/" $HOME/.elys/config/app.toml
 ```
 
 #### Enable prometheus

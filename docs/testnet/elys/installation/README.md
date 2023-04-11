@@ -32,7 +32,7 @@ sudo apt -qy upgrade
 
 ```bash
 sudo rm -rf /usr/local/go
-curl -Ls https://go.dev/dl/go1.20.3.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
+curl -Ls https://go.dev/dl/go1.19.8.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
 eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/golang.sh)
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
@@ -109,7 +109,7 @@ curl -Ls https://snapshots.kjnodes.com/elys-testnet/addrbook.json > $HOME/.elys/
 sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@elys-testnet.rpc.kjnodes.com:53659\"|" $HOME/.elys/config/config.toml
 
 # Set minimum gas price
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0ueden\"|" $HOME/.elys/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0uelys\"|" $HOME/.elys/config/app.toml
 
 # Set pruning
 sed -i \

@@ -41,8 +41,8 @@ d5519e378247dfb61dfe90652d1fe3e2b3005a5b@elys-testnet.rpc.kjnodes.com:53656
 curl -Ls https://snapshots.kjnodes.com/elys-testnet/addrbook.json > $HOME/.elys/config/addrbook.json
 ```
 
-**live-peers** (0)
+**live-peers** (9)
 ```bash
-peers=""
+peers="15263a87a09f90ba71d35cbddf17ff5178e9b133@65.21.225.10:40656,9e456e22da0930be2761123b7036e386a3247647@57.128.110.141:26656,f29fe386022c463b3945955efe2b753e3bcad9a9@45.151.122.202:26656,0cbf883987ff0c8e72f6c75331b2af01c8074946@51.159.223.41:26656,3f75a8743a5b9242cfbb57652defe540a4c1a5d4@137.184.154.151:26656,701a382e03978c54f1176145460125516b6a4672@3.144.113.232:26656,ab4068efcb0e1401ff1b08f9269fa88151a640c0@154.12.229.78:26656,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:53656,f3480371baafae419bfef68a64ace00dd8944bd6@65.109.92.241:10126"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.elys/config/config.toml
 ```
