@@ -117,6 +117,9 @@ sed -i \
   -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
   -e 's|^pruning-keep-every *=.*|pruning-keep-every = "0"|' \
   -e 's|^pruning-interval *=.*|pruning-interval = "19"|' \
+  -e 's|^src-chain-id *=.*|src-chain-id = "5600"|' \
+  -e 's|^dest-chain-id *=.*|dest-chain-id = "5601"|' \
+  -e 's|^denom-to-suggest *=.*|denom-to-suggest = "BNB"|' \
   $HOME/.gnfd/config/app.toml
 
 # Set custom ports

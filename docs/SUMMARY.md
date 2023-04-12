@@ -208,7 +208,7 @@
   * [State sync](testnet/gitopia/state-sync/README.md)
   * [Useful commands](testnet/gitopia/useful-commands/README.md)
 
-* [Greenfield](testnet/greenfield/README.md)
+* [BNB Greenfield](testnet/greenfield/README.md)
   * [Installation](testnet/greenfield/installation/README.md)
   * [Upgrade](testnet/greenfield/upgrade/README.md)
   * [Snapshot](testnet/greenfield/snapshot/README.md)
