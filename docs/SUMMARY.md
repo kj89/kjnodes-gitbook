@@ -208,6 +208,13 @@
   * [State sync](testnet/gitopia/state-sync/README.md)
   * [Useful commands](testnet/gitopia/useful-commands/README.md)
 
+* [Greenfield](testnet/greenfield/README.md)
+  * [Installation](testnet/greenfield/installation/README.md)
+  * [Upgrade](testnet/greenfield/upgrade/README.md)
+  * [Snapshot](testnet/greenfield/snapshot/README.md)
+  * [State sync](testnet/greenfield/state-sync/README.md)
+  * [Useful commands](testnet/greenfield/useful-commands/README.md)
+
 * [Haqq](testnet/haqq/README.md)
   * [Installation](testnet/haqq/installation/README.md)
   * [Upgrade](testnet/haqq/upgrade/README.md)

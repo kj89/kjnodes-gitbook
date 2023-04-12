@@ -109,7 +109,7 @@ curl -Ls https://snapshots.kjnodes.com/greenfield-testnet/addrbook.json > $HOME/
 sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@greenfield-testnet.rpc.kjnodes.com:54659\"|" $HOME/.gnfd/config/config.toml
 
 # Set minimum gas price
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0BNB\"|" $HOME/.gnfd/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"5000000000BNB\"|" $HOME/.gnfd/config/app.toml
 
 # Set pruning
 sed -i \

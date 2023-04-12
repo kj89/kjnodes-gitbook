@@ -74,7 +74,7 @@ gnfd tx staking create-validator \
 --from wallet \
 --gas-adjustment 1.4 \
 --gas auto \
---gas-prices 0BNB \
+--gas-prices 5000000000BNB \
 -y
 ```
 
@@ -91,14 +91,14 @@ gnfd tx staking edit-validator \
 --from wallet \
 --gas-adjustment 1.4 \
 --gas auto \
---gas-prices 0BNB \
+--gas-prices 5000000000BNB \
 -y
 ```
 
 #### Unjail validator
 
 ```bash
-gnfd tx slashing unjail --from wallet --chain-id greenfield_5600-1 --gas-adjustment 1.4 --gas auto --gas-prices 0BNB -y
+gnfd tx slashing unjail --from wallet --chain-id greenfield_5600-1 --gas-adjustment 1.4 --gas auto --gas-prices 5000000000BNB -y
 ```
 
 #### Jail reason
@@ -130,43 +130,43 @@ gnfd q staking validator $(gnfd keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-gnfd tx distribution withdraw-all-rewards --from wallet --chain-id greenfield_5600-1 --gas-adjustment 1.4 --gas auto --gas-prices 0BNB -y
+gnfd tx distribution withdraw-all-rewards --from wallet --chain-id greenfield_5600-1 --gas-adjustment 1.4 --gas auto --gas-prices 5000000000BNB -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-gnfd tx distribution withdraw-rewards $(gnfd keys show wallet --bech val -a) --commission --from wallet --chain-id greenfield_5600-1 --gas-adjustment 1.4 --gas auto --gas-prices 0BNB -y
+gnfd tx distribution withdraw-rewards $(gnfd keys show wallet --bech val -a) --commission --from wallet --chain-id greenfield_5600-1 --gas-adjustment 1.4 --gas auto --gas-prices 5000000000BNB -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-gnfd tx staking delegate $(gnfd keys show wallet --bech val -a) 1000000BNB --from wallet --chain-id greenfield_5600-1 --gas-adjustment 1.4 --gas auto --gas-prices 0BNB -y
+gnfd tx staking delegate $(gnfd keys show wallet --bech val -a) 1000000BNB --from wallet --chain-id greenfield_5600-1 --gas-adjustment 1.4 --gas auto --gas-prices 5000000000BNB -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-gnfd tx staking delegate <TO_VALOPER_ADDRESS> 1000000BNB --from wallet --chain-id greenfield_5600-1 --gas-adjustment 1.4 --gas auto --gas-prices 0BNB -y
+gnfd tx staking delegate <TO_VALOPER_ADDRESS> 1000000BNB --from wallet --chain-id greenfield_5600-1 --gas-adjustment 1.4 --gas auto --gas-prices 5000000000BNB -y
 ```
 
 #### Redelegate tokens to another validator
 
 ```bash
-gnfd tx staking redelegate $(gnfd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000BNB --from wallet --chain-id greenfield_5600-1 --gas-adjustment 1.4 --gas auto --gas-prices 0BNB -y
+gnfd tx staking redelegate $(gnfd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000BNB --from wallet --chain-id greenfield_5600-1 --gas-adjustment 1.4 --gas auto --gas-prices 5000000000BNB -y
 ```
 
 #### Unbond tokens from your validator
 
 ```bash
-gnfd tx staking unbond $(gnfd keys show wallet --bech val -a) 1000000BNB --from wallet --chain-id greenfield_5600-1 --gas-adjustment 1.4 --gas auto --gas-prices 0BNB -y
+gnfd tx staking unbond $(gnfd keys show wallet --bech val -a) 1000000BNB --from wallet --chain-id greenfield_5600-1 --gas-adjustment 1.4 --gas auto --gas-prices 5000000000BNB -y
 ```
 
 #### Send tokens to the wallet
 
 ```bash
-gnfd tx bank send wallet <TO_WALLET_ADDRESS> 1000000BNB --from wallet --chain-id greenfield_5600-1 --gas-adjustment 1.4 --gas auto --gas-prices 0BNB -y
+gnfd tx bank send wallet <TO_WALLET_ADDRESS> 1000000BNB --from wallet --chain-id greenfield_5600-1 --gas-adjustment 1.4 --gas auto --gas-prices 5000000000BNB -y
 ```
 
 ## 🗳 Governance
@@ -186,25 +186,25 @@ gnfd query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-gnfd tx gov vote 1 yes --from wallet --chain-id greenfield_5600-1 --gas-adjustment 1.4 --gas auto --gas-prices 0BNB -y
+gnfd tx gov vote 1 yes --from wallet --chain-id greenfield_5600-1 --gas-adjustment 1.4 --gas auto --gas-prices 5000000000BNB -y
 ```
 
 #### Vote 'No'
 
 ```bash
-gnfd tx gov vote 1 no --from wallet --chain-id greenfield_5600-1 --gas-adjustment 1.4 --gas auto --gas-prices 0BNB -y
+gnfd tx gov vote 1 no --from wallet --chain-id greenfield_5600-1 --gas-adjustment 1.4 --gas auto --gas-prices 5000000000BNB -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-gnfd tx gov vote 1 abstain --from wallet --chain-id greenfield_5600-1 --gas-adjustment 1.4 --gas auto --gas-prices 0BNB -y
+gnfd tx gov vote 1 abstain --from wallet --chain-id greenfield_5600-1 --gas-adjustment 1.4 --gas auto --gas-prices 5000000000BNB -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-gnfd tx gov vote 1 NoWithVeto --from wallet --chain-id greenfield_5600-1 --gas-adjustment 1.4 --gas auto --gas-prices 0BNB -y
+gnfd tx gov vote 1 NoWithVeto --from wallet --chain-id greenfield_5600-1 --gas-adjustment 1.4 --gas auto --gas-prices 5000000000BNB -y
 ```
 
 ## ⚡️ Utility
@@ -277,7 +277,7 @@ curl -sS http://localhost:54657/net_info | jq -r '.result.peers[] | "\(.node_inf
 #### Set minimum gas price
 
 ```bash
-sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0BNB\"/" $HOME/.gnfd/config/app.toml
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"5000000000BNB\"/" $HOME/.gnfd/config/app.toml
 ```
 
 #### Enable prometheus
