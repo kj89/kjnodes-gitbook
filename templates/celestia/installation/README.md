@@ -269,7 +269,7 @@ celestia version
 ### Clear data store
 ```
 celestia bridge unsafe-reset-store --p2p.network blockspacerace
-rm -rf config.toml
+rm -rf $HOME/.celestia-bridge-blockspacerace-0/config.toml
 ```
 
 ### Initialize Bridge node
