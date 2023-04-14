@@ -225,13 +225,13 @@ sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${CUSTO
 
 #### Update Indexer
 
-##### Disable indexer
+**Disable indexer**
 
 ```bash
 sed -i -e 's|^indexer *=.*|indexer = "null"|' $HOME/.celestia-app/config/config.toml
 ```
 
-##### Enable indexer
+**Enable indexer**
 
 ```bash
 sed -i -e 's|^indexer *=.*|indexer = "kv"|' $HOME/.celestia-app/config/config.toml
