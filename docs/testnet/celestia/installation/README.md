@@ -32,7 +32,7 @@ sudo apt -qy upgrade
 
 ```bash
 sudo rm -rf /usr/local/go
-curl -Ls https://go.dev/dl/go1.19.8.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
+curl -Ls https://go.dev/dl/go1.20.3.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
 eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/golang.sh)
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
@@ -145,7 +145,7 @@ cd $HOME
 rm -rf celestia-node 
 git clone https://github.com/celestiaorg/celestia-node.git 
 cd celestia-node
-git checkout v0.8.2
+git checkout v0.9.0
 make build
 sudo mv build/celestia /usr/local/bin
 make cel-key
@@ -254,7 +254,7 @@ cd $HOME
 rm -rf celestia-node 
 git clone https://github.com/celestiaorg/celestia-node.git 
 cd celestia-node
-git checkout v0.8.2
+git checkout v0.9.0
 make build
 sudo mv build/celestia /usr/local/bin
 make cel-key
@@ -268,8 +268,8 @@ celestia version
 
 ### Clear data store
 ```
-cd $HOME/.celestia-bridge-blockspacerace-0
-rm -rf config.toml blocks index data transients
+celestia bridge unsafe-reset-store --p2p.network blockspacerace
+rm -rf config.toml
 ```
 
 ### Initialize Bridge node
