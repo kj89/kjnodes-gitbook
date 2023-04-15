@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **08:30 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: v0.2.3
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v0.3.1
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 60690 | 4 hours | [snapshot (0.22 GB)](https://snapshots.kjnodes.com/elys-testnet/snapshot\_latest.tar.lz4) |
+| 64657 | 5 hours | [snapshot (0.22 GB)](https://snapshots.kjnodes.com/elys-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

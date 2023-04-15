@@ -43,8 +43,8 @@ d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@gravitybridge.rpc.kjnodes.com:26656
 curl -Ls https://snapshots.kjnodes.com/gravitybridge/addrbook.json > $HOME/.gravity/config/addrbook.json
 ```
 
-**live-peers** (7)
+**live-peers** (4)
 ```bash
-peers="8c3aeb2e18a2f9ad141b89eb74a5340810b73a11@192.99.14.194:26656,4bebde6a1b2907bd3cc167d2802b909770cbfda1@137.184.197.230:26656,0b0f045fb385118c3a8f32138748922ac6358103@66.172.36.133:12656,c4666a5c897463492246983fdc78ab20f32dc0c0@50.21.167.179:26656,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:26656,db1e909b003e3d9d7565211db26295e84c4695a5@65.21.135.86:2000,2f6e2b60a840ea0cf93d004c5a15cdb628643071@35.177.66.60:26656"
+peers="8c3aeb2e18a2f9ad141b89eb74a5340810b73a11@192.99.14.194:26656,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:26656,c57dcf8e3af80236059194c86a6f81c1735903d6@162.19.89.8:10256,5ad3fe86b1214e1f5c897d23a2863fb46bdfc1f7@185.16.38.165:14256"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.gravity/config/config.toml
 ```
