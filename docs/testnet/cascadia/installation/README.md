@@ -109,7 +109,7 @@ curl -Ls https://snapshots.kjnodes.com/cascadia-testnet/addrbook.json > $HOME/.c
 sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@cascadia-testnet.rpc.kjnodes.com:55659\"|" $HOME/.cascadiad/config/config.toml
 
 # Set minimum gas price
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0aCC\"|" $HOME/.cascadiad/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"7aCC\"|" $HOME/.cascadiad/config/app.toml
 
 # Set pruning
 sed -i \
