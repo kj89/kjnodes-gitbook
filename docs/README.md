@@ -4,7 +4,7 @@ description: Discover base tools contributed to the projects by kjnodes team.
 
 # 🖤 Supported chains
 
-**Chains supported**: 43 | **Assets staked**: $2,886,692 | **Clients**: 4090
+**Chains supported**: 44 | **Assets staked**: $2,870,168 | **Clients**: 4089
 
 ## MAINNET
 
@@ -56,6 +56,8 @@ description: Discover base tools contributed to the projects by kjnodes team.
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/aura.png" alt="" data-size="line"> [Aura](testnet/aura/)
 
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/bitcanna.png" alt="" data-size="line"> [Bitcanna](testnet/bitcanna/)
+
+<img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/cascadia.png" alt="" data-size="line"> [Cascadia](testnet/cascadia/)
 
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/celestia.png" alt="" data-size="line"> [Celestia](testnet/celestia/)
 
