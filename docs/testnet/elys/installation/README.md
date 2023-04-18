@@ -113,7 +113,7 @@ sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0uelys\"|" $HOME/.e
 
 # Set pruning
 sed -i \
-  -e 's|^pruning *=.*|pruning = "custom"|' \
+  -e 's|^pruning *=.*|pruning = "nothing"|' \
   -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
   -e 's|^pruning-keep-every *=.*|pruning-keep-every = "0"|' \
   -e 's|^pruning-interval *=.*|pruning-interval = "19"|' \

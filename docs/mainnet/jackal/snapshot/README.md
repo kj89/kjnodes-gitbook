@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **00:45 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 2409148 | 4 hours | [snapshot (15.39 GB)](https://snapshots.kjnodes.com/jackal/snapshot\_latest.tar.lz4) |
+| 2412307 | 1 hours | [snapshot (17.28 GB)](https://snapshots.kjnodes.com/jackal/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
