@@ -57,6 +57,8 @@ $CHAINS_SUPPORTED | $ASSETS | $DELEGATIONS
 
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/bitcanna.png" alt="" data-size="line"> [Bitcanna](testnet/bitcanna/)
 
+<img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/cascadia.png" alt="" data-size="line"> [Cascadia](testnet/cascadia/)
+
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/celestia.png" alt="" data-size="line"> [Celestia](testnet/celestia/)
 
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/defund.png" alt="" data-size="line"> [Defund](testnet/defund/)
