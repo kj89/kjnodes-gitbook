@@ -173,13 +173,6 @@
   * [State sync](testnet/bitcanna/state-sync/README.md)
   * [Useful commands](testnet/bitcanna/useful-commands/README.md)
 
-* [Cascadia](testnet/cascadia/README.md)
-  * [Installation](testnet/cascadia/installation/README.md)
-  * [Upgrade](testnet/cascadia/upgrade/README.md)
-  * [Snapshot](testnet/cascadia/snapshot/README.md)
-  * [State sync](testnet/cascadia/state-sync/README.md)
-  * [Useful commands](testnet/cascadia/useful-commands/README.md)
-
 * [Celestia](testnet/celestia/README.md)
   * [Installation](testnet/celestia/installation/README.md)
   * [Upgrade](testnet/celestia/upgrade/README.md)
