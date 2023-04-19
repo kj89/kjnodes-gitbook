@@ -13,6 +13,40 @@ application state is generally much smaller than the blocks, and restoring it is
 faster than replaying blocks, this can reduce the time to sync with the network from days to minutes.
 {% endhint %}
 
-{% hint style='warning' %}
-Currently lava does not support State sync 😢
-{% endhint %}
+## Instructions
+
+### Stop the service and reset the data
+
+```bash
+sudo systemctl stop lavad
+cp $HOME/.lava/data/priv_validator_state.json $HOME/.lava/priv_validator_state.json.backup
+lavad tendermint unsafe-reset-all --home $HOME/.lava
+```
+
+### Get and configure the state sync information
+
+```bash
+STATE_SYNC_RPC=https://lava-testnet.rpc.kjnodes.com:443
+STATE_SYNC_PEER=d5519e378247dfb61dfe90652d1fe3e2b3005a5b@lava-testnet.rpc.kjnodes.com:44656
+LATEST_HEIGHT=$(curl -s $STATE_SYNC_RPC/block | jq -r .result.block.header.height)
+SYNC_BLOCK_HEIGHT=$(($LATEST_HEIGHT - 1000))
+SYNC_BLOCK_HASH=$(curl -s "$STATE_SYNC_RPC/block?height=$SYNC_BLOCK_HEIGHT" | jq -r .result.block_id.hash)
+
+sed -i \
+  -e "s|^enable *=.*|enable = true|" \
+  -e "s|^rpc_servers *=.*|rpc_servers = \"$STATE_SYNC_RPC,$STATE_SYNC_RPC\"|" \
+  -e "s|^trust_height *=.*|trust_height = $SYNC_BLOCK_HEIGHT|" \
+  -e "s|^trust_hash *=.*|trust_hash = \"$SYNC_BLOCK_HASH\"|" \
+  -e "s|^persistent_peers *=.*|persistent_peers = \"$STATE_SYNC_PEER\"|" \
+  $HOME/.lava/config/config.toml
+
+mv $HOME/.lava/priv_validator_state.json.backup $HOME/.lava/data/priv_validator_state.json
+```
+
+
+
+### Restart the service and check the log
+
+```bash
+sudo systemctl start lavad && sudo journalctl -u lavad -f --no-hostname -o cat
+```
