@@ -121,7 +121,7 @@ sed -i \
 
 # Set custom ports
 sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:17658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:17657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:17060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:17656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":17660\"%" $HOME/.aura/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:17317\"%; s%^address = \":8080\"%address = \":17080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:17090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:17091\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:17545\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:17546\"%" $HOME/.aura/config/app.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:17317\"%; s%^address = \":8080\"%address = \":17080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:17090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:17091\"%; s%:8545%:17545%; s%:8546%:17546%; s%:6065%:17065%" $HOME/.aura/config/app.toml
 ```
 
 ### Download latest chain snapshot

@@ -121,7 +121,7 @@ sed -i \
 
 # Set custom ports
 sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:32658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:32657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:32060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:32656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":32660\"%" $HOME/.ollo/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:32317\"%; s%^address = \":8080\"%address = \":32080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:32090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:32091\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:32545\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:32546\"%" $HOME/.ollo/config/app.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:32317\"%; s%^address = \":8080\"%address = \":32080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:32090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:32091\"%; s%:8545%:32545%; s%:8546%:32546%; s%:6065%:32065%" $HOME/.ollo/config/app.toml
 ```
 
 ### Download latest chain snapshot

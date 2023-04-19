@@ -121,7 +121,7 @@ sed -i \
 
 # Set custom ports
 sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:21658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:21657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:21060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:21656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":21660\"%" $HOME/.rebusd/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:21317\"%; s%^address = \":8080\"%address = \":21080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:21090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:21091\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:21545\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:21546\"%" $HOME/.rebusd/config/app.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:21317\"%; s%^address = \":8080\"%address = \":21080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:21090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:21091\"%; s%:8545%:21545%; s%:8546%:21546%; s%:6065%:21065%" $HOME/.rebusd/config/app.toml
 ```
 
 ### Download latest chain snapshot

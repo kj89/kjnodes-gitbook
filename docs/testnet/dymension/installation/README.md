@@ -121,7 +121,7 @@ sed -i \
 
 # Set custom ports
 sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:46658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:46657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:46060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:46656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":46660\"%" $HOME/.dymension/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:46317\"%; s%^address = \":8080\"%address = \":46080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:46090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:46091\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:46545\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:46546\"%" $HOME/.dymension/config/app.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:46317\"%; s%^address = \":8080\"%address = \":46080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:46090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:46091\"%; s%:8545%:46545%; s%:8546%:46546%; s%:6065%:46065%" $HOME/.dymension/config/app.toml
 ```
 
 ### Download latest chain snapshot

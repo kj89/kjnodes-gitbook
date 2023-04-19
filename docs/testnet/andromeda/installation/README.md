@@ -121,7 +121,7 @@ sed -i \
 
 # Set custom ports
 sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:47658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:47657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:47060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:47656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":47660\"%" $HOME/.andromedad/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:47317\"%; s%^address = \":8080\"%address = \":47080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:47090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:47091\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:47545\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:47546\"%" $HOME/.andromedad/config/app.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:47317\"%; s%^address = \":8080\"%address = \":47080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:47090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:47091\"%; s%:8545%:47545%; s%:8546%:47546%; s%:6065%:47065%" $HOME/.andromedad/config/app.toml
 ```
 
 ### Download latest chain snapshot

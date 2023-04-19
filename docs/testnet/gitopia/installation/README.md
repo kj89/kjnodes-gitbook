@@ -127,7 +127,7 @@ sed -i \
 
 # Set custom ports
 sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:41658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:41657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:41060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:41656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":41660\"%" $HOME/.gitopia/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:41317\"%; s%^address = \":8080\"%address = \":41080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:41090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:41091\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:41545\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:41546\"%" $HOME/.gitopia/config/app.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:41317\"%; s%^address = \":8080\"%address = \":41080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:41090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:41091\"%; s%:8545%:41545%; s%:8546%:41546%; s%:6065%:41065%" $HOME/.gitopia/config/app.toml
 ```
 
 ### Download latest chain snapshot

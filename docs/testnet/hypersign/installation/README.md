@@ -116,7 +116,7 @@ sed -i \
 
 # Set custom ports
 sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:31658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:31657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:31060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:31656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":31660\"%" $HOME/.hid-node/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:31317\"%; s%^address = \":8080\"%address = \":31080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:31090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:31091\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:31545\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:31546\"%" $HOME/.hid-node/config/app.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:31317\"%; s%^address = \":8080\"%address = \":31080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:31090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:31091\"%; s%:8545%:31545%; s%:8546%:31546%; s%:6065%:31065%" $HOME/.hid-node/config/app.toml
 ```
 
 ### Download latest chain snapshot

@@ -121,7 +121,7 @@ sed -i \
 
 # Set custom ports
 sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:52658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:52657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:52060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:52656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":52660\"%" $HOME/.althea/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:52317\"%; s%^address = \":8080\"%address = \":52080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:52090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:52091\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:52545\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:52546\"%" $HOME/.althea/config/app.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:52317\"%; s%^address = \":8080\"%address = \":52080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:52090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:52091\"%; s%:8545%:52545%; s%:8546%:52546%; s%:6065%:52065%" $HOME/.althea/config/app.toml
 ```
 
 ### Download latest chain snapshot
