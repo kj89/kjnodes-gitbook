@@ -159,6 +159,13 @@
   * [State sync](testnet/althea/state-sync/README.md)
   * [Useful commands](testnet/althea/useful-commands/README.md)
 
+* [Archway](testnet/archway/README.md)
+  * [Installation](testnet/archway/installation/README.md)
+  * [Upgrade](testnet/archway/upgrade/README.md)
+  * [Snapshot](testnet/archway/snapshot/README.md)
+  * [State sync](testnet/archway/state-sync/README.md)
+  * [Useful commands](testnet/archway/useful-commands/README.md)
+
 * [Aura](testnet/aura/README.md)
   * [Installation](testnet/aura/installation/README.md)
   * [Upgrade](testnet/aura/upgrade/README.md)
