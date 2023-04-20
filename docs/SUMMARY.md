@@ -51,6 +51,13 @@
   * [State sync](mainnet/jackal/state-sync/README.md)
   * [Useful commands](mainnet/jackal/useful-commands/README.md)
 
+* [Juno](mainnet/juno/README.md)
+  * [Installation](mainnet/juno/installation/README.md)
+  * [Upgrade](mainnet/juno/upgrade/README.md)
+  * [Snapshot](mainnet/juno/snapshot/README.md)
+  * [State sync](mainnet/juno/state-sync/README.md)
+  * [Useful commands](mainnet/juno/useful-commands/README.md)
+
 * [Kujira](mainnet/kujira/README.md)
   * [Installation](mainnet/kujira/installation/README.md)
   * [Upgrade](mainnet/kujira/upgrade/README.md)
@@ -113,6 +120,13 @@
   * [Snapshot](mainnet/rebus/snapshot/README.md)
   * [State sync](mainnet/rebus/state-sync/README.md)
   * [Useful commands](mainnet/rebus/useful-commands/README.md)
+
+* [Stargaze](mainnet/stargaze/README.md)
+  * [Installation](mainnet/stargaze/installation/README.md)
+  * [Upgrade](mainnet/stargaze/upgrade/README.md)
+  * [Snapshot](mainnet/stargaze/snapshot/README.md)
+  * [State sync](mainnet/stargaze/state-sync/README.md)
+  * [Useful commands](mainnet/stargaze/useful-commands/README.md)
 
 * [Stride](mainnet/stride/README.md)
   * [Installation](mainnet/stride/installation/README.md)
