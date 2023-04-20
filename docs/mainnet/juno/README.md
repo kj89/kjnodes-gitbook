@@ -41,8 +41,8 @@ d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@juno.rpc.kjnodes.com:57656
 curl -Ls https://snapshots.kjnodes.com/juno/addrbook.json > $HOME/.juno/config/addrbook.json
 ```
 
-**live-peers** (0)
+**live-peers** (9)
 ```bash
-peers=""
+peers="45f4da091b7f7536c3e0182083ff2326d0c3be6a@66.85.137.122:26656,d83892be2e6efc38e255943ce86ae8229d2aee90@178.128.220.188:26656,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:57656,89757803f40da51678451735445ad40d5b15e059@169.155.44.89:26656,82588f011491c6100d922d133f52fc23460b9231@95.217.91.232:26656,2832bdb0a1bdddb2b17d1229a799290222c085d0@135.125.189.131:33095,ca62ff6f732fcd391f1d9ef0630161cb595c7f4d@185.119.118.115:2000,ebc272824924ea1a27ea3183dd0b9ba713494f83@95.214.52.139:27136,a3bdae642a2ac5b7091a9b690eda8d59ad523795@167.99.128.187:26656"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.juno/config/config.toml
 ```

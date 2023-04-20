@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **09:45 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: 
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v9
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-|  |  | [snapshot ()](https://snapshots.kjnodes.com/stargaze/snapshot\_latest.tar.lz4) |
+| 7853613 | 44 minutes | [snapshot (2.0 GB)](https://snapshots.kjnodes.com/stargaze/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
