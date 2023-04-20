@@ -6,7 +6,7 @@ description: Prepare for and the upcomming chain upgrade using Cosmovisor.
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/archway.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: constantine-2 | **Latest Version Tag**: v0.3.1 | **Custom Port**: 56
+**Chain ID**: constantine-2 | **Latest Version Tag**: v0.4.0 | **Custom Port**: 56
 
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.
@@ -21,14 +21,14 @@ cd $HOME
 rm -rf archway
 git clone https://github.com/archway-network/archway.git
 cd archway
-git checkout v0.3.1
+git checkout v0.4.0
 
 # Build binaries
 make build
 
 # Prepare binaries for Cosmovisor
-mkdir -p $HOME/.archway/cosmovisor/upgrades/v0.3.1/bin
-mv build/archwayd $HOME/.archway/cosmovisor/upgrades/v0.3.1/bin/
+mkdir -p $HOME/.archway/cosmovisor/upgrades/v0.4.0/bin
+mv build/archwayd $HOME/.archway/cosmovisor/upgrades/v0.4.0/bin/
 rm -rf build
 ```
 

@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/archway.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: constantine-2 | **Latest Version Tag**: v0.3.1 | **Custom Port**: 56
+**Chain ID**: constantine-2 | **Latest Version Tag**: v0.4.0 | **Custom Port**: 56
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf archway
 git clone https://github.com/archway-network/archway.git
 cd archway
-git checkout v0.3.1
+git checkout v0.4.0
 
 # Build binaries
 make build
