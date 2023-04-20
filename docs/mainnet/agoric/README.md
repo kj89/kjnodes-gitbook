@@ -1,10 +1,10 @@
 # Agoric
 
-[![Installation](https://i.ibb.co/MSCjwH2/button-installation.png)](./installation)
-[![Upgrade](https://i.ibb.co/Jy6FZJv/button-upgrade.png)](./upgrade)
-[![Snapshot](https://i.ibb.co/rFcf4cB/button-snapshot.png)](./snapshot)
-[![State-sync](https://i.ibb.co/K0LzhCN/button-state-sync.png)](./state-sync)
-[![Useful-commands](https://i.ibb.co/mNdXB4R/button-useful-commands.png)](./useful-commands)
+[![Installation](https://i.ibb.co/xST2KF4/button-installation.png)](./installation)
+[![Upgrade](https://i.ibb.co/kckyydc/button-upgrade.png)](./upgrade)
+[![Snapshot](https://i.ibb.co/GMQbQ4s/button-snapshot.png)](./snapshot)
+[![State-sync](https://i.ibb.co/mDwTPGz/button-state-sync.png)](./state-sync)
+[![Useful-commands](https://i.ibb.co/QvGxq6G/button-useful-commands.png)](./useful-commands)
 
 Agoric is an interoperable Proof-of-Stake chain in the Cosmos ecosystem. Agoric JavaScript smart contract platform enables 15M+ developers across the globe to rapidly build and deploy dapps on-chain.
 
