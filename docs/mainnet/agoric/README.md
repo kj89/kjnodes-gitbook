@@ -1,25 +1,11 @@
 # Agoric
 
 <div>
-
-<figure><img src="../../.gitbook/assets/button_installation.png" alt=""><figcaption></figcaption></figure>
-
- 
-
-<figure><img src="../../.gitbook/assets/button_snapshot.png" alt=""><figcaption></figcaption></figure>
-
- 
-
-<figure><img src="../../.gitbook/assets/button_state-sync.png" alt=""><figcaption></figcaption></figure>
-
- 
-
-<figure><img src="../../.gitbook/assets/button_upgrade.png" alt=""><figcaption></figcaption></figure>
-
- 
-
-<figure><img src="../../.gitbook/assets/button_useful-commands.png" alt=""><figcaption></figcaption></figure>
-
+[![Stake with kjnodes](https://i.ibb.co/WkVHBXV/button-installation.png)](./installation)
+[![Stake with kjnodes](https://i.ibb.co/b18QzLy/button-upgrade.png)](./upgrade)
+[![Stake with kjnodes](https://i.ibb.co/8smdPQy/button-snapshot.png)](./snapshot)
+[![Stake with kjnodes](https://i.ibb.co/M8Bg4C6/button-state-sync.png)](./state-sync)
+[![Stake with kjnodes](https://i.ibb.co/fnSMw5K/button-useful-commands.png)](./useful-commands)
 </div>
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/agoric.png" alt=""><figcaption></figcaption></figure>
