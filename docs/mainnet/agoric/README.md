@@ -1,12 +1,10 @@
 # Agoric
 
-<div>
 [![Stake with kjnodes](https://i.ibb.co/WkVHBXV/button-installation.png)](./installation)
 [![Stake with kjnodes](https://i.ibb.co/b18QzLy/button-upgrade.png)](./upgrade)
 [![Stake with kjnodes](https://i.ibb.co/8smdPQy/button-snapshot.png)](./snapshot)
 [![Stake with kjnodes](https://i.ibb.co/M8Bg4C6/button-state-sync.png)](./state-sync)
 [![Stake with kjnodes](https://i.ibb.co/fnSMw5K/button-useful-commands.png)](./useful-commands)
-</div>
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/agoric.png" alt=""><figcaption></figcaption></figure>
 
