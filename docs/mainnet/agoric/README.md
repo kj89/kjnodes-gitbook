@@ -1,12 +1,6 @@
 # Agoric
 
-[![Stake with kjnodes](https://i.ibb.co/WkVHBXV/button-installation.png)](./installation)
-[![Stake with kjnodes](https://i.ibb.co/b18QzLy/button-upgrade.png)](./upgrade)
-[![Stake with kjnodes](https://i.ibb.co/8smdPQy/button-snapshot.png)](./snapshot)
-[![Stake with kjnodes](https://i.ibb.co/M8Bg4C6/button-state-sync.png)](./state-sync)
-[![Stake with kjnodes](https://i.ibb.co/fnSMw5K/button-useful-commands.png)](./useful-commands)
-
-<figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/agoric.png" alt=""><figcaption></figcaption></figure>
+[<img src="https://i.ibb.co/WkVHBXV/button-installation.png" alt="Stake with kjnodes" data-size="line">](installation/) [<img src="https://i.ibb.co/b18QzLy/button-upgrade.png" alt="Stake with kjnodes" data-size="line">](upgrade/) [<img src="https://i.ibb.co/8smdPQy/button-snapshot.png" alt="Stake with kjnodes" data-size="line">](snapshot/) [<img src="https://i.ibb.co/M8Bg4C6/button-state-sync.png" alt="Stake with kjnodes" data-size="line">](state-sync/) [<img src="https://i.ibb.co/fnSMw5K/button-useful-commands.png" alt="Stake with kjnodes" data-size="line">](useful-commands/)
 
 Agoric is an interoperable Proof-of-Stake chain in the Cosmos ecosystem. Agoric JavaScript smart contract platform enables 15M+ developers across the globe to rapidly build and deploy dapps on-chain.
 
