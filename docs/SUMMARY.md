@@ -159,13 +159,6 @@
   * [State sync](testnet/agoric/state-sync/README.md)
   * [Useful commands](testnet/agoric/useful-commands/README.md)
 
-* [Agoricdev](testnet/agoricdev/README.md)
-  * [Installation](testnet/agoricdev/installation/README.md)
-  * [Upgrade](testnet/agoricdev/upgrade/README.md)
-  * [Snapshot](testnet/agoricdev/snapshot/README.md)
-  * [State sync](testnet/agoricdev/state-sync/README.md)
-  * [Useful commands](testnet/agoricdev/useful-commands/README.md)
-
 * [Andromeda](testnet/andromeda/README.md)
   * [Installation](testnet/andromeda/installation/README.md)
   * [Upgrade](testnet/andromeda/upgrade/README.md)
