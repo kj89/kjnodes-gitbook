@@ -4,7 +4,7 @@
 
 The Jackal Protocol is a fast, scalable, and secure blockchain that empowers  individuals, developers, and enterprises to increase their data privacy and  cybersecurity posture without sacrificing ease of use. This protocol strives  to offer world-class applications to protect the planet's most important data–your data.
 
-**Chain ID**: jackal-1 | **Latest Version Tag**: v1.2.1 | **Wasm**: ON
+**Chain ID**: jackal-1 | **Latest Version Tag**: v1.2.2 | **Wasm**: ON
 
 [Website](https://jackalprotocol.com) | [Discord](https://discord.com/invite/5GKym3p6rj) | [Twitter](https://twitter.com/Jackal_Protocol)
 
