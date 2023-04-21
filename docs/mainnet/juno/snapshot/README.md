@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **09:30 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 7914919 | 6 minutes | [snapshot (5.12 GB)](https://snapshots.kjnodes.com/juno/snapshot\_latest.tar.lz4) |
+| 7920961 | 8 hours | [snapshot (4.96 GB)](https://snapshots.kjnodes.com/juno/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
