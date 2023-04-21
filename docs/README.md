@@ -4,7 +4,7 @@ description: Discover base tools contributed to the projects by kjnodes team.
 
 # 🖤 Supported chains
 
-**Chains supported**: 47 | **Assets staked**: $2,525,713 | **Clients**: 4085
+$CHAINS_SUPPORTED | $ASSETS | $DELEGATIONS
 
 ## MAINNET
 
@@ -52,6 +52,8 @@ description: Discover base tools contributed to the projects by kjnodes team.
 ## TESTNET
 
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/agoric.png" alt="" data-size="line"> [Agoric](testnet/agoric/)
+
+<img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/agoricdev.png" alt="" data-size="line"> [Agoricdev](testnet/agoricdev/)
 
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/andromeda.png" alt="" data-size="line"> [Andromeda](testnet/andromeda/)
 
