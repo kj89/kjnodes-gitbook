@@ -74,7 +74,7 @@ starsd tx staking create-validator \
 --from wallet \
 --gas-adjustment 1.4 \
 --gas auto \
---gas-prices 0.025ustars \
+--gas-prices 0ustars \
 -y
 ```
 
@@ -91,14 +91,14 @@ starsd tx staking edit-validator \
 --from wallet \
 --gas-adjustment 1.4 \
 --gas auto \
---gas-prices 0.025ustars \
+--gas-prices 0ustars \
 -y
 ```
 
 #### Unjail validator
 
 ```bash
-starsd tx slashing unjail --from wallet --chain-id stargaze-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ustars -y
+starsd tx slashing unjail --from wallet --chain-id stargaze-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ustars -y
 ```
 
 #### Jail reason
@@ -130,43 +130,43 @@ starsd q staking validator $(starsd keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-starsd tx distribution withdraw-all-rewards --from wallet --chain-id stargaze-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ustars -y
+starsd tx distribution withdraw-all-rewards --from wallet --chain-id stargaze-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ustars -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-starsd tx distribution withdraw-rewards $(starsd keys show wallet --bech val -a) --commission --from wallet --chain-id stargaze-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ustars -y
+starsd tx distribution withdraw-rewards $(starsd keys show wallet --bech val -a) --commission --from wallet --chain-id stargaze-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ustars -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-starsd tx staking delegate $(starsd keys show wallet --bech val -a) 1000000ustars --from wallet --chain-id stargaze-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ustars -y
+starsd tx staking delegate $(starsd keys show wallet --bech val -a) 1000000ustars --from wallet --chain-id stargaze-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ustars -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-starsd tx staking delegate <TO_VALOPER_ADDRESS> 1000000ustars --from wallet --chain-id stargaze-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ustars -y
+starsd tx staking delegate <TO_VALOPER_ADDRESS> 1000000ustars --from wallet --chain-id stargaze-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ustars -y
 ```
 
 #### Redelegate tokens to another validator
 
 ```bash
-starsd tx staking redelegate $(starsd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000ustars --from wallet --chain-id stargaze-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ustars -y
+starsd tx staking redelegate $(starsd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000ustars --from wallet --chain-id stargaze-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ustars -y
 ```
 
 #### Unbond tokens from your validator
 
 ```bash
-starsd tx staking unbond $(starsd keys show wallet --bech val -a) 1000000ustars --from wallet --chain-id stargaze-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ustars -y
+starsd tx staking unbond $(starsd keys show wallet --bech val -a) 1000000ustars --from wallet --chain-id stargaze-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ustars -y
 ```
 
 #### Send tokens to the wallet
 
 ```bash
-starsd tx bank send wallet <TO_WALLET_ADDRESS> 1000000ustars --from wallet --chain-id stargaze-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ustars -y
+starsd tx bank send wallet <TO_WALLET_ADDRESS> 1000000ustars --from wallet --chain-id stargaze-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ustars -y
 ```
 
 ## 🗳 Governance
@@ -186,25 +186,25 @@ starsd query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-starsd tx gov vote 1 yes --from wallet --chain-id stargaze-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ustars -y
+starsd tx gov vote 1 yes --from wallet --chain-id stargaze-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ustars -y
 ```
 
 #### Vote 'No'
 
 ```bash
-starsd tx gov vote 1 no --from wallet --chain-id stargaze-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ustars -y
+starsd tx gov vote 1 no --from wallet --chain-id stargaze-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ustars -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-starsd tx gov vote 1 abstain --from wallet --chain-id stargaze-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ustars -y
+starsd tx gov vote 1 abstain --from wallet --chain-id stargaze-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ustars -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-starsd tx gov vote 1 NoWithVeto --from wallet --chain-id stargaze-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ustars -y
+starsd tx gov vote 1 NoWithVeto --from wallet --chain-id stargaze-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ustars -y
 ```
 
 ## ⚡️ Utility
@@ -277,7 +277,7 @@ curl -sS http://localhost:58657/net_info | jq -r '.result.peers[] | "\(.node_inf
 #### Set minimum gas price
 
 ```bash
-sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.025ustars\"/" $HOME/.starsd/config/app.toml
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0ustars\"/" $HOME/.starsd/config/app.toml
 ```
 
 #### Enable prometheus

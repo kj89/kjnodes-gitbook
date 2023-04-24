@@ -109,7 +109,7 @@ curl -Ls https://snapshots.kjnodes.com/juno/addrbook.json > $HOME/.juno/config/a
 sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@juno.rpc.kjnodes.com:57659\"|" $HOME/.juno/config/config.toml
 
 # Set minimum gas price
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.0025ujuno\"|" $HOME/.juno/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0ujuno\"|" $HOME/.juno/config/app.toml
 
 # Set pruning
 sed -i \

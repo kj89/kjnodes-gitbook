@@ -74,7 +74,7 @@ junod tx staking create-validator \
 --from wallet \
 --gas-adjustment 1.4 \
 --gas auto \
---gas-prices 0.0025ujuno \
+--gas-prices 0ujuno \
 -y
 ```
 
@@ -91,14 +91,14 @@ junod tx staking edit-validator \
 --from wallet \
 --gas-adjustment 1.4 \
 --gas auto \
---gas-prices 0.0025ujuno \
+--gas-prices 0ujuno \
 -y
 ```
 
 #### Unjail validator
 
 ```bash
-junod tx slashing unjail --from wallet --chain-id juno-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0025ujuno -y
+junod tx slashing unjail --from wallet --chain-id juno-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ujuno -y
 ```
 
 #### Jail reason
@@ -130,43 +130,43 @@ junod q staking validator $(junod keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-junod tx distribution withdraw-all-rewards --from wallet --chain-id juno-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0025ujuno -y
+junod tx distribution withdraw-all-rewards --from wallet --chain-id juno-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ujuno -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-junod tx distribution withdraw-rewards $(junod keys show wallet --bech val -a) --commission --from wallet --chain-id juno-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0025ujuno -y
+junod tx distribution withdraw-rewards $(junod keys show wallet --bech val -a) --commission --from wallet --chain-id juno-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ujuno -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-junod tx staking delegate $(junod keys show wallet --bech val -a) 1000000ujuno --from wallet --chain-id juno-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0025ujuno -y
+junod tx staking delegate $(junod keys show wallet --bech val -a) 1000000ujuno --from wallet --chain-id juno-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ujuno -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-junod tx staking delegate <TO_VALOPER_ADDRESS> 1000000ujuno --from wallet --chain-id juno-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0025ujuno -y
+junod tx staking delegate <TO_VALOPER_ADDRESS> 1000000ujuno --from wallet --chain-id juno-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ujuno -y
 ```
 
 #### Redelegate tokens to another validator
 
 ```bash
-junod tx staking redelegate $(junod keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000ujuno --from wallet --chain-id juno-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0025ujuno -y
+junod tx staking redelegate $(junod keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000ujuno --from wallet --chain-id juno-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ujuno -y
 ```
 
 #### Unbond tokens from your validator
 
 ```bash
-junod tx staking unbond $(junod keys show wallet --bech val -a) 1000000ujuno --from wallet --chain-id juno-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0025ujuno -y
+junod tx staking unbond $(junod keys show wallet --bech val -a) 1000000ujuno --from wallet --chain-id juno-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ujuno -y
 ```
 
 #### Send tokens to the wallet
 
 ```bash
-junod tx bank send wallet <TO_WALLET_ADDRESS> 1000000ujuno --from wallet --chain-id juno-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0025ujuno -y
+junod tx bank send wallet <TO_WALLET_ADDRESS> 1000000ujuno --from wallet --chain-id juno-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ujuno -y
 ```
 
 ## 🗳 Governance
@@ -186,25 +186,25 @@ junod query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-junod tx gov vote 1 yes --from wallet --chain-id juno-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0025ujuno -y
+junod tx gov vote 1 yes --from wallet --chain-id juno-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ujuno -y
 ```
 
 #### Vote 'No'
 
 ```bash
-junod tx gov vote 1 no --from wallet --chain-id juno-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0025ujuno -y
+junod tx gov vote 1 no --from wallet --chain-id juno-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ujuno -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-junod tx gov vote 1 abstain --from wallet --chain-id juno-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0025ujuno -y
+junod tx gov vote 1 abstain --from wallet --chain-id juno-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ujuno -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-junod tx gov vote 1 NoWithVeto --from wallet --chain-id juno-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0025ujuno -y
+junod tx gov vote 1 NoWithVeto --from wallet --chain-id juno-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ujuno -y
 ```
 
 ## ⚡️ Utility
@@ -277,7 +277,7 @@ curl -sS http://localhost:57657/net_info | jq -r '.result.peers[] | "\(.node_inf
 #### Set minimum gas price
 
 ```bash
-sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0025ujuno\"/" $HOME/.juno/config/app.toml
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0ujuno\"/" $HOME/.juno/config/app.toml
 ```
 
 #### Enable prometheus

@@ -109,7 +109,7 @@ curl -Ls https://snapshots.kjnodes.com/stargaze/addrbook.json > $HOME/.starsd/co
 sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@stargaze.rpc.kjnodes.com:58659\"|" $HOME/.starsd/config/config.toml
 
 # Set minimum gas price
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.025ustars\"|" $HOME/.starsd/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0ustars\"|" $HOME/.starsd/config/app.toml
 
 # Set pruning
 sed -i \
