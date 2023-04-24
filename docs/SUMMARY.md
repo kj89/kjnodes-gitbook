@@ -37,13 +37,6 @@
   * [State sync](mainnet/cosmoshub/state-sync/README.md)
   * [Useful commands](mainnet/cosmoshub/useful-commands/README.md)
 
-* [Gravity Bridge](mainnet/gravitybridge/README.md)
-  * [Installation](mainnet/gravitybridge/installation/README.md)
-  * [Upgrade](mainnet/gravitybridge/upgrade/README.md)
-  * [Snapshot](mainnet/gravitybridge/snapshot/README.md)
-  * [State sync](mainnet/gravitybridge/state-sync/README.md)
-  * [Useful commands](mainnet/gravitybridge/useful-commands/README.md)
-
 * [Jackal](mainnet/jackal/README.md)
   * [Installation](mainnet/jackal/installation/README.md)
   * [Upgrade](mainnet/jackal/upgrade/README.md)
@@ -113,13 +106,6 @@
   * [Snapshot](mainnet/paloma/snapshot/README.md)
   * [State sync](mainnet/paloma/state-sync/README.md)
   * [Useful commands](mainnet/paloma/useful-commands/README.md)
-
-* [Rebus](mainnet/rebus/README.md)
-  * [Installation](mainnet/rebus/installation/README.md)
-  * [Upgrade](mainnet/rebus/upgrade/README.md)
-  * [Snapshot](mainnet/rebus/snapshot/README.md)
-  * [State sync](mainnet/rebus/state-sync/README.md)
-  * [Useful commands](mainnet/rebus/useful-commands/README.md)
 
 * [Stargaze](mainnet/stargaze/README.md)
   * [Installation](mainnet/stargaze/installation/README.md)
