@@ -6,7 +6,7 @@ description: Prepare for and the upcomming chain upgrade using Cosmovisor.
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/elys.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: elystestnet-1 | **Latest Version Tag**: v0.3.1 | **Custom Port**: 53
+**Chain ID**: elystestnet-1 | **Latest Version Tag**: v0.4.0 | **Custom Port**: 53
 
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.
@@ -21,14 +21,14 @@ cd $HOME
 rm -rf elys
 git clone https://github.com/elys-network/elys.git
 cd elys
-git checkout v0.3.1
+git checkout v0.4.0
 
 # Build binaries
 make build
 
 # Prepare binaries for Cosmovisor
-mkdir -p $HOME/.elys/cosmovisor/upgrades/0.3.1/bin
-mv build/elysd $HOME/.elys/cosmovisor/upgrades/0.3.1/bin/
+mkdir -p $HOME/.elys/cosmovisor/upgrades/v0.4.0/bin
+mv build/elysd $HOME/.elys/cosmovisor/upgrades/v0.4.0/bin/
 rm -rf build
 ```
 

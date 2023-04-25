@@ -6,7 +6,7 @@ description: Prepare for and the upcomming chain upgrade using Cosmovisor.
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/nolus.png" width="150" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: nolus-rila | **Latest Version Tag**: v0.2.2-store-fix | **Custom Port**: 43
+**Chain ID**: nolus-rila | **Latest Version Tag**: v0.2.2-equalize-store-heights | **Custom Port**: 43
 
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.
@@ -21,14 +21,14 @@ cd $HOME
 rm -rf nolus-core
 git clone https://github.com/Nolus-Protocol/nolus-core.git
 cd nolus-core
-git checkout v0.2.2-store-fix
+git checkout v0.2.2-equalize-store-heights
 
 # Build binaries
 make build
 
 # Prepare binaries for Cosmovisor
-mkdir -p $HOME/.nolus/cosmovisor/upgrades/v0.2.2-store-fix/bin
-mv target/release/nolusd $HOME/.nolus/cosmovisor/upgrades/v0.2.2-store-fix/bin/
+mkdir -p $HOME/.nolus/cosmovisor/upgrades/v0.2.2-equalize-store-heights/bin
+mv target/release/nolusd $HOME/.nolus/cosmovisor/upgrades/v0.2.2-equalize-store-heights/bin/
 rm -rf build
 ```
 

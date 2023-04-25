@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **09:45 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 7914346 | 1 hours | [snapshot (2.01 GB)](https://snapshots.kjnodes.com/stargaze/snapshot\_latest.tar.lz4) |
+| 7929018 | 42 minutes | [snapshot (2.03 GB)](https://snapshots.kjnodes.com/stargaze/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
