@@ -55,6 +55,12 @@ sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.agori
 
 <img src="../../.gitbook/assets/file.excalidraw (1).svg" alt="" class="gitbook-drawing">
 
-### [installation](installation/ "mention") [upgrade](upgrade/ "mention") [snapshot](snapshot/ "mention") [state-sync](state-sync/ "mention") [useful-commands](useful-commands/ "mention") 
+[installation](installation/ "mention")&#x20;
 
-<img src="../../.gitbook/assets/file.excalidraw.svg" alt="" class="gitbook-drawing">
+[upgrade](upgrade/ "mention")&#x20;
+
+[snapshot](snapshot/ "mention")&#x20;
+
+[state-sync](state-sync/ "mention")&#x20;
+
+[useful-commands](useful-commands/ "mention")
