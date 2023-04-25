@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **06:15 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 1161789 | 4 hours | [snapshot (0.58 GB)](https://snapshots.kjnodes.com/paloma/snapshot\_latest.tar.lz4) |
+| 1165621 | 3 hours | [snapshot (0.58 GB)](https://snapshots.kjnodes.com/paloma/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

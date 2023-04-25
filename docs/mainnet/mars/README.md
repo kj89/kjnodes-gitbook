@@ -1,5 +1,7 @@
 # Services
 
+[installation](./installation/ "mention") [upgrade](./upgrade/ "mention") [snapshot](./snapshot/ "mention") [state-sync](./state-sync/ "mention") [useful-commands](./useful-commands/ "mention")
+
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/mars.png" width="150" alt=""><figcaption></figcaption></figure>
 
 Mars is a credit protocol for the future: non-custodial,  open-source, transparent, algorithmic and community-governed.

@@ -1,5 +1,7 @@
 # Services
 
+[installation](./installation/ "mention") [upgrade](./upgrade/ "mention") [snapshot](./snapshot/ "mention") [state-sync](./state-sync/ "mention") [useful-commands](./useful-commands/ "mention")
+
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/bitcanna.png" width="150" alt=""><figcaption></figcaption></figure>
 
 BitCanna is a proof-of-stake (POS) decentralized payment network designed exclusively to serve the cannabis industry. 
@@ -45,6 +47,6 @@ curl -Ls https://snapshots.kjnodes.com/bitcanna/addrbook.json > $HOME/.bcna/conf
 
 **live-peers** (10)
 ```bash
-peers="4e1c2471efb89239fb04a4b75f9f87177fd91d00@95.217.151.241:26656,c124ce0b508e8b9ed1c5b6957f362225659b5343@144.76.177.185:26656,32b1cf90be5dc6a01dc2684f0bd97bf052690082@144.91.97.191:26656,0a658df9d9fab096983a12e6f878e87281a15ce6@5.189.128.119:27656,cb9741ce22ab5f615913ac11b211c3c7f58dee71@107.191.36.154:26656,d7322625044ad733bce4178dc397b2b9b5f68b41@43.153.27.130:26656,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:42656,b587bf827b5f680c417601b536ffbd505c88bb07@193.70.45.106:13056,65b12d58cc642eb8a1eb4e8344eaf26afce2e6d3@37.120.191.47:36656,a9f839c6e24221fb093f13ee41a0af842378fec5@94.130.12.22:26642"
+peers="8e4e1f1e087c76c71c64e477e95495833da82aa2@135.181.173.137:26656,88c6b1fa1c7fef98b4449b769eb2705476586664@65.109.92.241:21326,65b12d58cc642eb8a1eb4e8344eaf26afce2e6d3@37.120.191.47:36656,32b1cf90be5dc6a01dc2684f0bd97bf052690082@144.91.97.191:26656,23671067d0fd40aec523290585c7d8e91034a771@65.108.43.170:26656,5cfb82bd566ad3c5330c8326f0da5c7f048aca25@81.0.218.135:24356,cb9741ce22ab5f615913ac11b211c3c7f58dee71@107.191.36.154:26656,0a658df9d9fab096983a12e6f878e87281a15ce6@5.189.128.119:27656,4e1c2471efb89239fb04a4b75f9f87177fd91d00@95.217.151.241:26656,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:42656"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.bcna/config/config.toml
 ```

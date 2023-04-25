@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **03:15 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: v0.2.2-store-fix
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v0.2.2-equalize-store-heights
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 2013228 | 1 hours | [snapshot (3.98 GB)](https://snapshots.kjnodes.com/nolus-testnet/snapshot\_latest.tar.lz4) |
+| 2016532 | 51 minutes | [snapshot (5.2 GB)](https://snapshots.kjnodes.com/nolus-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

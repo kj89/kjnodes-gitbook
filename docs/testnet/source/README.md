@@ -1,5 +1,7 @@
 # Services
 
+[installation](./installation/ "mention") [upgrade](./upgrade/ "mention") [snapshot](./snapshot/ "mention") [state-sync](./state-sync/ "mention") [useful-commands](./useful-commands/ "mention")
+
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/source.png" width="150" alt=""><figcaption></figcaption></figure>
 
 Source is a decentralized, permissionless, and censorship resistant layer 1 proof-of-stake blockchain built in the Cosmos Zone ecosystem.
@@ -41,8 +43,8 @@ d5519e378247dfb61dfe90652d1fe3e2b3005a5b@source-testnet.rpc.kjnodes.com:28656
 curl -Ls https://snapshots.kjnodes.com/source-testnet/addrbook.json > $HOME/.source/config/addrbook.json
 ```
 
-**live-peers** (13)
+**live-peers** (14)
 ```bash
-peers="2c4a32763185e357c4a5e68a465bdc5375c7f413@136.243.88.91:3140,a9e8376ba9309bdcf5d6ed00e8960d70a03bb3f2@213.202.218.28:26656,e6a5db345775973982e32b24ba7f3bfa18337f66@65.108.124.219:33656,d960215e0788fcfc04b9e2e824e5751bf1efe7fc@65.108.82.152:26656,f2936d8f0ae99b9fa99d179f746faacc9c41a5c3@65.108.158.181:26656,071b2ba352b966e3af4f4fd0568beb923bf354d4@95.217.153.19:26656,b24ae5d099d5564a227aa7b1a8278293b8db0cfa@185.255.131.27:26656,80d48a1823db3c71f5e5babe89271156af6ceb89@194.163.156.184:26656,a03f76044c11ae4e6395413745f78ef2a39d5c07@165.232.42.205:26656,46ae715de3bcf284ff997b841e6e82f279e3654f@154.26.153.179:26656,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:28656,5fb7f75e3a97fa0f936020b62daf1e67281f7f16@65.109.92.240:20056,cb09ec2e5dc91beaa3d05c79a0a8d6c30fffcc59@65.108.78.101:26656"
+peers="b02e2bd359623aeee2d4fad94d37af8b064508f6@167.235.224.141:26656,1609741985ae89ab709311ed6b898f79c7ec0322@206.189.54.116:26656,db69700d8b0c277183ab1ec34d79a083c2578d32@65.21.145.209:26656,80d48a1823db3c71f5e5babe89271156af6ceb89@194.163.156.184:26656,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:28656,6d9cac37dfa58b8a13d59c85a8623f87138dd5ce@109.123.254.46:26656,2c4a32763185e357c4a5e68a465bdc5375c7f413@136.243.88.91:3140,4675f239ef3bd4cef7fa2770232b2eeea0008260@212.118.38.133:26656,cba9a7c35b554596577e9708d405eb83b1f2a6d2@65.21.248.172:26656,1450d99427abd81410c6f8032aec25961bf7bf89@80.82.215.19:36656,b24ae5d099d5564a227aa7b1a8278293b8db0cfa@185.255.131.27:26656,503ec9be5c5542700b7f93d65dfc68371d38e6e9@16.163.74.176:26656,cb09ec2e5dc91beaa3d05c79a0a8d6c30fffcc59@65.108.78.101:26656,5fb7f75e3a97fa0f936020b62daf1e67281f7f16@65.109.92.240:20056"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.source/config/config.toml
 ```

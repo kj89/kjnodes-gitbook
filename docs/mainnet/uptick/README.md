@@ -1,5 +1,7 @@
 # Services
 
+[installation](./installation/ "mention") [upgrade](./upgrade/ "mention") [snapshot](./snapshot/ "mention") [state-sync](./state-sync/ "mention") [useful-commands](./useful-commands/ "mention")
+
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/uptick.png" width="150" alt=""><figcaption></figcaption></figure>
 
 Uptick Network is building business-grade infrastructure and  ecosystems for non-fungible tokens (NFTs). The platform is  designed with a focus on multi-chain and cross-chain interoperability,  and includes three key components: the NFT infrastructure, an NFT  marketplace, and NFT ecosystem applications.
@@ -45,6 +47,6 @@ curl -Ls https://snapshots.kjnodes.com/uptick/addrbook.json > $HOME/.uptickd/con
 
 **live-peers** (10)
 ```bash
-peers="7d7842acc423e6799d32cf78d7072d77450b11a1@65.109.104.118:60956,90c0c03d27e5b4354bffb709d28340f2657ca1c7@138.201.121.185:26679,8ecd3260a19d2b112f6a84e0c091640744ec40c5@185.165.241.20:26656,b45ee634889abf61c7212b03dbddb853a8a3bc09@185.48.24.112:15656,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:15656,250c98d4975ae9a12ed7dfcd5a7cf76b470e49a6@65.21.108.180:26656,024a9c6eb41193e7fc76544572c0a8370e80e953@65.109.92.240:3156,632c2362378546ab77883077861f38405c378d06@104.194.8.68:60556,038aca614e49ec4e5e3a06c875976a94c478cb09@65.108.195.29:21656,ea83a93c2878af90d034138fc5026218fb89d0d2@69.197.19.36:21656"
+peers="a5408575fc327823f73c153d9f89c932ac30a335@141.94.141.144:28056,90c0c03d27e5b4354bffb709d28340f2657ca1c7@138.201.121.185:26679,ea83a93c2878af90d034138fc5026218fb89d0d2@69.197.19.36:21656,8ecd3260a19d2b112f6a84e0c091640744ec40c5@185.165.241.20:26656,34d86f3a8dfce7d8b615563c587433c65792f104@185.219.142.221:15656,8e924a598a06e29c9f84a0d68b6149f1524c1819@57.128.109.11:26656,81ccbba5cba98cf89bcca74f271380b53afed4c4@154.26.130.207:27656,ee045c74c0678f1122650a3a5223923977cae1b3@65.109.93.152:30656,632c2362378546ab77883077861f38405c378d06@104.194.8.68:60556,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:15656"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.uptickd/config/config.toml
 ```

@@ -1,5 +1,7 @@
 # Services
 
+[installation](./installation/ "mention") [upgrade](./upgrade/ "mention") [snapshot](./snapshot/ "mention") [state-sync](./state-sync/ "mention") [useful-commands](./useful-commands/ "mention")
+
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/${PROJECT_NAME}.png" width="150" alt=""><figcaption></figcaption></figure>
 
 ${CHAIN_SHORT_DESCRIPTION}
