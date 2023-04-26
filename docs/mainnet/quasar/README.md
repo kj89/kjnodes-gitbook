@@ -1,6 +1,6 @@
 # Services
 
-<figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/quasar.png" width="150" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/quasar.png" alt=""><figcaption></figcaption></figure>
 
 Quasar (pronounced QWAY-ZAR) is a decentralized  appchain enabling interchain digital asset management.
 

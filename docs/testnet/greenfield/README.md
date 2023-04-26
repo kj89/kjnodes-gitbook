@@ -1,6 +1,6 @@
 # Services
 
-<figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/greenfield.png" width="150" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/greenfield.png" alt=""><figcaption></figcaption></figure>
 
 BNB Greenfield is an innovative blockchain and storage  platform that seeks to unleash the power of decentralized  technology on data ownership and the data economy
 
