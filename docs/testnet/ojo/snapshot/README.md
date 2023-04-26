@@ -4,7 +4,7 @@ description: Catch the latest block faster by using our daily snapshots.
 
 # Snapshot
 
-<figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/ojo.png" width="150" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/ojo.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style='info' %}
 Snapshots allows a new node to join the network by recovering application state from a backup file. 

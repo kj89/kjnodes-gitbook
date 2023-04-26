@@ -4,7 +4,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 # Installation
 
-<figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/juno.png" width="150" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/juno.png" alt=""><figcaption></figcaption></figure>
 
 **Chain ID**: juno-1 | **Latest Version Tag**: v14.0.0 | **Custom Port**: 57
 

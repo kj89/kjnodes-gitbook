@@ -4,7 +4,7 @@ description: Catch the latest block faster by using our daily snapshots.
 
 # Snapshot
 
-<figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/defund.png" width="150" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/defund.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style='info' %}
 Snapshots allows a new node to join the network by recovering application state from a backup file. 
@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **04:30 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 4555775 | 22 minutes | [snapshot (4.13 GB)](https://snapshots.kjnodes.com/defund-testnet/snapshot\_latest.tar.lz4) |
+| 4555775 | 24 minutes | [snapshot (4.13 GB)](https://snapshots.kjnodes.com/defund-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

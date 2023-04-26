@@ -4,7 +4,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 # Installation
 
-<figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/nolus.png" width="150" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/nolus.png" alt=""><figcaption></figcaption></figure>
 
 **Chain ID**: nolus-rila | **Latest Version Tag**: v0.2.2-equalize-store-heights | **Custom Port**: 43
 

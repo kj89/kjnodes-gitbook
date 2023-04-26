@@ -4,7 +4,7 @@ description: Prepare for and the upcomming chain upgrade using Cosmovisor.
 
 # Upgrade
 
-<figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/aura.png" width="150" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/aura.png" alt=""><figcaption></figcaption></figure>
 
 **Chain ID**: xstaxy-1 | **Latest Version Tag**: aura_v0.4.4 | **Custom Port**: 17
 

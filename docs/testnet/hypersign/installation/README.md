@@ -4,7 +4,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 # Installation
 
-<figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/hypersign.png" width="150" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/hypersign.png" alt=""><figcaption></figcaption></figure>
 
 **Chain ID**: jagrat | **Latest Version Tag**: v0.1.7 | **Custom Port**: 31
 

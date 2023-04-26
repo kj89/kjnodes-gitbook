@@ -4,7 +4,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 # Installation
 
-<figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/sao.png" width="150" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/sao.png" alt=""><figcaption></figcaption></figure>
 
 **Chain ID**: sao-testnet0 | **Latest Version Tag**: v0.0.9 | **Custom Port**: 49
 

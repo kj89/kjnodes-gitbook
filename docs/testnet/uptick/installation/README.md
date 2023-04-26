@@ -4,7 +4,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 # Installation
 
-<figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/uptick.png" width="150" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/uptick.png" alt=""><figcaption></figcaption></figure>
 
 **Chain ID**: uptick_7000-2 | **Latest Version Tag**: v0.2.6 | **Custom Port**: 15
 

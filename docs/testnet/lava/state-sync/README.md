@@ -4,7 +4,7 @@ description: With our state sync services you will be able to catch up latest ch
 
 # State sync
 
-<figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/lava.png" width="150" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/lava.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style='info' %}
 State Sync allows a new node to join the network by fetching a snapshot of the application state 

@@ -4,7 +4,7 @@ description: Catch the latest block faster by using our daily snapshots.
 
 # Snapshot
 
-<figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/gitopia.png" width="150" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/gitopia.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style='info' %}
 Snapshots allows a new node to join the network by recovering application state from a backup file. 
@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **04:00 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 8832542 | 54 minutes | [snapshot (2.63 GB)](https://snapshots.kjnodes.com/gitopia-testnet/snapshot\_latest.tar.lz4) |
+| 8832542 | 57 minutes | [snapshot (2.63 GB)](https://snapshots.kjnodes.com/gitopia-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
