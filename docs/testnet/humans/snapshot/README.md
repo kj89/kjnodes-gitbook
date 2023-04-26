@@ -26,15 +26,15 @@ Snapshots are taken automatically every 6 hours starting at **10:00 UTC**
 
 ```bash
 sudo systemctl stop humansd
-cp $HOME/.humans/data/priv_validator_state.json $HOME/.humans/priv_validator_state.json.backup
-rm -rf $HOME/.humans/data
+cp $HOME/.humansd/data/priv_validator_state.json $HOME/.humansd/priv_validator_state.json.backup
+rm -rf $HOME/.humansd/data
 ```
 
 ### Download latest snapshot
 
 ```bash
-curl -L https://snapshots.kjnodes.com/humans-testnet/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.humans
-mv $HOME/.humans/priv_validator_state.json.backup $HOME/.humans/data/priv_validator_state.json
+curl -L https://snapshots.kjnodes.com/humans-testnet/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.humansd
+mv $HOME/.humansd/priv_validator_state.json.backup $HOME/.humansd/data/priv_validator_state.json
 ```
 
 ### Restart the service and check the log

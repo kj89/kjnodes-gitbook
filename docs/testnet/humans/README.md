@@ -38,11 +38,11 @@ d5519e378247dfb61dfe90652d1fe3e2b3005a5b@humans-testnet.rpc.kjnodes.com:22656
 
 **addrbook**
 ```bash
-curl -Ls https://snapshots.kjnodes.com/humans-testnet/addrbook.json > $HOME/.humans/config/addrbook.json
+curl -Ls https://snapshots.kjnodes.com/humans-testnet/addrbook.json > $HOME/.humansd/config/addrbook.json
 ```
 
 **live-peers** (0)
 ```bash
 peers=""
-sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.humans/config/config.toml
+sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.humansd/config/config.toml
 ```

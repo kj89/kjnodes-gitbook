@@ -19,8 +19,8 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 
 ```bash
 sudo systemctl stop humansd
-cp $HOME/.humans/data/priv_validator_state.json $HOME/.humans/priv_validator_state.json.backup
-humansd tendermint unsafe-reset-all --home $HOME/.humans
+cp $HOME/.humansd/data/priv_validator_state.json $HOME/.humansd/priv_validator_state.json.backup
+humansd tendermint unsafe-reset-all --home $HOME/.humansd
 ```
 
 ### Get and configure the state sync information
@@ -38,9 +38,9 @@ sed -i \
   -e "s|^trust_height *=.*|trust_height = $SYNC_BLOCK_HEIGHT|" \
   -e "s|^trust_hash *=.*|trust_hash = \"$SYNC_BLOCK_HASH\"|" \
   -e "s|^persistent_peers *=.*|persistent_peers = \"$STATE_SYNC_PEER\"|" \
-  $HOME/.humans/config/config.toml
+  $HOME/.humansd/config/config.toml
 
-mv $HOME/.humans/priv_validator_state.json.backup $HOME/.humans/data/priv_validator_state.json
+mv $HOME/.humansd/priv_validator_state.json.backup $HOME/.humansd/data/priv_validator_state.json
 ```
 
 

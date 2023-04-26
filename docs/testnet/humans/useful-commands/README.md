@@ -213,8 +213,8 @@ humansd tx gov vote 1 NoWithVeto --from wallet --chain-id humans_3000-1 --gas-ad
 
 ```bash
 CUSTOM_PORT=10
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CUSTOM_PORT}658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${CUSTOM_PORT}657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CUSTOM_PORT}060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CUSTOM_PORT}656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CUSTOM_PORT}660\"%" $HOME/.humans/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${CUSTOM_PORT}317\"%; s%^address = \":8080\"%address = \":${CUSTOM_PORT}080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:${CUSTOM_PORT}090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${CUSTOM_PORT}091\"%" $HOME/.humans/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CUSTOM_PORT}658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${CUSTOM_PORT}657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CUSTOM_PORT}060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CUSTOM_PORT}656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CUSTOM_PORT}660\"%" $HOME/.humansd/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${CUSTOM_PORT}317\"%; s%^address = \":8080\"%address = \":${CUSTOM_PORT}080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:${CUSTOM_PORT}090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${CUSTOM_PORT}091\"%" $HOME/.humansd/config/app.toml
 ```
 
 #### Update Indexer
@@ -222,13 +222,13 @@ sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${CUSTO
 **Disable indexer**
 
 ```bash
-sed -i -e 's|^indexer *=.*|indexer = "null"|' $HOME/.humans/config/config.toml
+sed -i -e 's|^indexer *=.*|indexer = "null"|' $HOME/.humansd/config/config.toml
 ```
 
 **Enable indexer**
 
 ```bash
-sed -i -e 's|^indexer *=.*|indexer = "kv"|' $HOME/.humans/config/config.toml
+sed -i -e 's|^indexer *=.*|indexer = "kv"|' $HOME/.humansd/config/config.toml
 ```
 
 #### Update pruning
@@ -239,7 +239,7 @@ sed -i \
   -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
   -e 's|^pruning-keep-every *=.*|pruning-keep-every = "0"|' \
   -e 's|^pruning-interval *=.*|pruning-interval = "19"|' \
-  $HOME/.humans/config/app.toml
+  $HOME/.humansd/config/app.toml
 ```
 
 ## 🚨 Maintenance
@@ -259,7 +259,7 @@ humansd status 2>&1 | jq .SyncInfo
 #### Get node peer
 
 ```bash
-echo $(humansd tendermint show-node-id)'@'$(curl -s ifconfig.me)':'$(cat $HOME/.humans/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
+echo $(humansd tendermint show-node-id)'@'$(curl -s ifconfig.me)':'$(cat $HOME/.humansd/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
 ```
 
 #### Check if validator key is correct
@@ -277,19 +277,19 @@ curl -sS http://localhost:22657/net_info | jq -r '.result.peers[] | "\(.node_inf
 #### Set minimum gas price
 
 ```bash
-sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0aheart\"/" $HOME/.humans/config/app.toml
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0aheart\"/" $HOME/.humansd/config/app.toml
 ```
 
 #### Enable prometheus
 
 ```bash
-sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.humans/config/config.toml
+sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.humansd/config/config.toml
 ```
 
 #### Reset chain data
 
 ```bash
-humansd tendermint unsafe-reset-all --home $HOME/.humans --keep-addr-book
+humansd tendermint unsafe-reset-all --home $HOME/.humansd --keep-addr-book
 ```
 
 #### Remove node
@@ -305,7 +305,7 @@ sudo systemctl disable humansd
 sudo rm /etc/systemd/system/humansd.service
 sudo systemctl daemon-reload
 rm -f $(which humansd)
-rm -rf $HOME/.humans
+rm -rf $HOME/.humansd
 rm -rf $HOME/humans
 ```
 
