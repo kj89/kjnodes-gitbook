@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **08:45 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 884702 | 3 hours | [snapshot (1.09 GB)](https://snapshots.kjnodes.com/greenfield-testnet/snapshot\_latest.tar.lz4) |
+| 884702 | 9 hours | [snapshot (1.09 GB)](https://snapshots.kjnodes.com/greenfield-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
