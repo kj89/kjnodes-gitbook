@@ -109,7 +109,7 @@ curl -Ls https://snapshots.kjnodes.com/migaloo/addrbook.json > $HOME/.migalood/c
 sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@migaloo.rpc.kjnodes.com:49659\"|" $HOME/.migalood/config/config.toml
 
 # Set minimum gas price
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0uwhale\"|" $HOME/.migalood/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.25uwhale\"|" $HOME/.migalood/config/app.toml
 
 # Set pruning
 sed -i \
