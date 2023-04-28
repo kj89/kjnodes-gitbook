@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **10:00 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: 
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v0.1.0
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-|  |  | [snapshot ()](https://snapshots.kjnodes.com/humans-testnet/snapshot\_latest.tar.lz4) |
+| 109 | 57 seconds | [snapshot (0.02 GB)](https://snapshots.kjnodes.com/humans-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
