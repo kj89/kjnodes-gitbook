@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **08:15 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 1147271 | 5 hours | [snapshot (15.6 GB)](https://snapshots.kjnodes.com/althea-testnet/snapshot\_latest.tar.lz4) |
+| 1150909 | 11 hours | [snapshot (15.72 GB)](https://snapshots.kjnodes.com/althea-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

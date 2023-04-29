@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **08:30 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 277409 | 4 hours | [snapshot (0.46 GB)](https://snapshots.kjnodes.com/elys-testnet/snapshot\_latest.tar.lz4) |
+| 281368 | 10 hours | [snapshot (1.04 GB)](https://snapshots.kjnodes.com/elys-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
