@@ -119,7 +119,7 @@ sed -i \
   $HOME/.source/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:28658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:28657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:28060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:28656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":28660\"%" $HOME/.source/config/config.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:28658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:28657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:28060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:28656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":28666\"%" $HOME/.source/config/config.toml
 sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:28317\"%; s%^address = \":8080\"%address = \":28080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:28090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:28091\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:28545\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:28546\"%" $HOME/.source/config/app.toml
 ```
 

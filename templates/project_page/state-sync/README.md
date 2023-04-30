@@ -27,7 +27,7 @@ ${CHAIN_APP} tendermint unsafe-reset-all --home $HOME/${CHAIN_DIR}
 
 ```bash
 STATE_SYNC_RPC=https://${CHAIN_NAME}.rpc.kjnodes.com:443
-STATE_SYNC_PEER=${CHAIN_PEER}@${CHAIN_NAME}.rpc.kjnodes.com:${CHAIN_PORT}656
+STATE_SYNC_PEER=${CHAIN_PEER}@${CHAIN_NAME}.rpc.kjnodes.com:${CHAIN_PORT}56
 LATEST_HEIGHT=$(curl -s $STATE_SYNC_RPC/block | jq -r .result.block.header.height)
 SYNC_BLOCK_HEIGHT=$(($LATEST_HEIGHT - 1000))
 SYNC_BLOCK_HASH=$(curl -s "$STATE_SYNC_RPC/block?height=$SYNC_BLOCK_HEIGHT" | jq -r .result.block_id.hash)

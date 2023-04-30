@@ -96,7 +96,7 @@ sudo systemctl enable ${CHAIN_APP}
 # Set node configuration
 ${CHAIN_APP} config chain-id ${CHAIN_ID}
 ${CHAIN_APP} config keyring-backend ${KEYRING_BACKEND}
-${CHAIN_APP} config node tcp://localhost:${CHAIN_PORT}657
+${CHAIN_APP} config node tcp://localhost:${CHAIN_PORT}57
 
 # Initialize the node
 ${CHAIN_APP} init $MONIKER --chain-id ${CHAIN_ID}
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/${CHAIN_NAME}/genesis.json > $HOME/${CHAI
 curl -Ls https://snapshots.kjnodes.com/${CHAIN_NAME}/addrbook.json > $HOME/${CHAIN_DIR}/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"${CHAIN_TENDERSEED_PEER}@${CHAIN_NAME}.rpc.kjnodes.com:${CHAIN_PORT}659\"|" $HOME/${CHAIN_DIR}/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"${CHAIN_TENDERSEED_PEER}@${CHAIN_NAME}.rpc.kjnodes.com:${CHAIN_PORT}59\"|" $HOME/${CHAIN_DIR}/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"${MIN_GAS_PRICE}\"|" $HOME/${CHAIN_DIR}/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/${CHAIN_DIR}/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CHAIN_PORT}658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${CHAIN_PORT}657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CHAIN_PORT}060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CHAIN_PORT}656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CHAIN_PORT}660\"%" $HOME/${CHAIN_DIR}/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${CHAIN_PORT}317\"%; s%^address = \":8080\"%address = \":${CHAIN_PORT}080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:${CHAIN_PORT}090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${CHAIN_PORT}091\"%; s%:8545%:${CHAIN_PORT}545%; s%:8546%:${CHAIN_PORT}546%; s%:6065%:${CHAIN_PORT}065%" $HOME/${CHAIN_DIR}/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CHAIN_PORT}58\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${CHAIN_PORT}57\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CHAIN_PORT}60\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CHAIN_PORT}56\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CHAIN_PORT}66\"%" $HOME/${CHAIN_DIR}/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${CHAIN_PORT}17\"%; s%^address = \":8080\"%address = \":${CHAIN_PORT}80\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:${CHAIN_PORT}90\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${CHAIN_PORT}91\"%; s%:8545%:${CHAIN_PORT}45%; s%:8546%:${CHAIN_PORT}46%; s%:6065%:${CHAIN_PORT}65%" $HOME/${CHAIN_DIR}/config/app.toml
 ```
 
 ### Download latest chain snapshot
@@ -176,8 +176,8 @@ ojod keys add pricefeeder-wallet --keyring-backend os
 ```
 export KEYRING="os"
 export LISTEN_PORT=7172
-export RPC_PORT=${CHAIN_PORT}657
-export GRPC_PORT=${CHAIN_PORT}090
+export RPC_PORT=${CHAIN_PORT}57
+export GRPC_PORT=${CHAIN_PORT}90
 export VALIDATOR_ADDRESS=$(ojod keys show wallet --bech val -a)
 export MAIN_WALLET_ADDRESS=$(ojod keys show wallet -a)
 export PRICEFEEDER_ADDRESS=$(echo -e $KEYRING_PASSWORD | ojod keys show pricefeeder-wallet --keyring-backend os -a)

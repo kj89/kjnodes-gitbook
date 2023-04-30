@@ -19,20 +19,20 @@ ${RESTAKE}
 
 * api: [https://${CHAIN_NAME}.api.kjnodes.com](https://${CHAIN_NAME}.api.kjnodes.com)
 * rpc: [https://${CHAIN_NAME}.rpc.kjnodes.com](https://${CHAIN_NAME}.rpc.kjnodes.com)
-* grpc: ${CHAIN_NAME}.grpc.kjnodes.com:${CHAIN_PORT}090
+* grpc: ${CHAIN_NAME}.grpc.kjnodes.com:${CHAIN_PORT}90
 
 ## Peering
 
 **state-sync**
 
 ```text
-${CHAIN_PEER}@${CHAIN_NAME}.rpc.kjnodes.com:${CHAIN_PORT}656
+${CHAIN_PEER}@${CHAIN_NAME}.rpc.kjnodes.com:${CHAIN_PORT}56
 ```
 
 **seed-node**
 
 ```text
-${CHAIN_TENDERSEED_PEER}@${CHAIN_NAME}.rpc.kjnodes.com:${CHAIN_PORT}659
+${CHAIN_TENDERSEED_PEER}@${CHAIN_NAME}.rpc.kjnodes.com:${CHAIN_PORT}59
 ```
 
 **addrbook**
