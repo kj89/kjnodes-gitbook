@@ -96,7 +96,7 @@ sudo systemctl enable strided
 # Set node configuration
 strided config chain-id stride-1
 strided config keyring-backend file
-strided config node tcp://localhost:116657
+strided config node tcp://localhost:11657
 
 # Initialize the node
 strided init $MONIKER --chain-id stride-1
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/stride/genesis.json > $HOME/.stride/confi
 curl -Ls https://snapshots.kjnodes.com/stride/addrbook.json > $HOME/.stride/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@stride.rpc.kjnodes.com:116659\"|" $HOME/.stride/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@stride.rpc.kjnodes.com:11659\"|" $HOME/.stride/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0ustrd\"|" $HOME/.stride/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/.stride/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:116658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:116657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:116060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:116656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":116660\"%" $HOME/.stride/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:116317\"%; s%^address = \":8080\"%address = \":116080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:116090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:116091\"%; s%:8545%:116545%; s%:8546%:116546%; s%:6065%:116065%" $HOME/.stride/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:11658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:11657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:11660\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:11656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":11666\"%" $HOME/.stride/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:11617\"%; s%^address = \":8080\"%address = \":11680\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:11690\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:11691\"%; s%:8545%:11645%; s%:8546%:11646%; s%:6065%:11665%" $HOME/.stride/config/app.toml
 ```
 
 ### Download latest chain snapshot

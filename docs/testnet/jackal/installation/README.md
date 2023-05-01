@@ -96,7 +96,7 @@ sudo systemctl enable canined
 # Set node configuration
 canined config chain-id lupulella-2
 canined config keyring-backend test
-canined config node tcp://localhost:137657
+canined config node tcp://localhost:13757
 
 # Initialize the node
 canined init $MONIKER --chain-id lupulella-2
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/jackal-testnet/genesis.json > $HOME/.cani
 curl -Ls https://snapshots.kjnodes.com/jackal-testnet/addrbook.json > $HOME/.canine/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@jackal-testnet.rpc.kjnodes.com:137659\"|" $HOME/.canine/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@jackal-testnet.rpc.kjnodes.com:13759\"|" $HOME/.canine/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.002ujkl\"|" $HOME/.canine/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/.canine/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:137658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:137657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:137060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:137656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":137660\"%" $HOME/.canine/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:137317\"%; s%^address = \":8080\"%address = \":137080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:137090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:137091\"%; s%:8545%:137545%; s%:8546%:137546%; s%:6065%:137065%" $HOME/.canine/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:13758\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:13757\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:13760\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:13756\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":13766\"%" $HOME/.canine/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:13717\"%; s%^address = \":8080\"%address = \":13780\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:13790\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:13791\"%; s%:8545%:13745%; s%:8546%:13746%; s%:6065%:13765%" $HOME/.canine/config/app.toml
 ```
 
 ### Download latest chain snapshot

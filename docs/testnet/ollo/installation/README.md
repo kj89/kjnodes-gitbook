@@ -96,7 +96,7 @@ sudo systemctl enable ollod
 # Set node configuration
 ollod config chain-id ollo-testnet-1
 ollod config keyring-backend test
-ollod config node tcp://localhost:132657
+ollod config node tcp://localhost:13257
 
 # Initialize the node
 ollod init $MONIKER --chain-id ollo-testnet-1
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/ollo-testnet/genesis.json > $HOME/.ollo/c
 curl -Ls https://snapshots.kjnodes.com/ollo-testnet/addrbook.json > $HOME/.ollo/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@ollo-testnet.rpc.kjnodes.com:132659\"|" $HOME/.ollo/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@ollo-testnet.rpc.kjnodes.com:13259\"|" $HOME/.ollo/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0utollo\"|" $HOME/.ollo/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/.ollo/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:132658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:132657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:132060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:132656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":132660\"%" $HOME/.ollo/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:132317\"%; s%^address = \":8080\"%address = \":132080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:132090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:132091\"%; s%:8545%:132545%; s%:8546%:132546%; s%:6065%:132065%" $HOME/.ollo/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:13258\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:13257\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:13260\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:13256\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":13266\"%" $HOME/.ollo/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:13217\"%; s%^address = \":8080\"%address = \":13280\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:13290\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:13291\"%; s%:8545%:13245%; s%:8546%:13246%; s%:6065%:13265%" $HOME/.ollo/config/app.toml
 ```
 
 ### Download latest chain snapshot

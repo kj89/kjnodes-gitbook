@@ -96,7 +96,7 @@ sudo systemctl enable elysd
 # Set node configuration
 elysd config chain-id elystestnet-1
 elysd config keyring-backend test
-elysd config node tcp://localhost:153657
+elysd config node tcp://localhost:15357
 
 # Initialize the node
 elysd init $MONIKER --chain-id elystestnet-1
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/elys-testnet/genesis.json > $HOME/.elys/c
 curl -Ls https://snapshots.kjnodes.com/elys-testnet/addrbook.json > $HOME/.elys/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@elys-testnet.rpc.kjnodes.com:153659\"|" $HOME/.elys/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@elys-testnet.rpc.kjnodes.com:15359\"|" $HOME/.elys/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0uelys\"|" $HOME/.elys/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/.elys/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:153658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:153657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:153060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:153656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":153660\"%" $HOME/.elys/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:153317\"%; s%^address = \":8080\"%address = \":153080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:153090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:153091\"%; s%:8545%:153545%; s%:8546%:153546%; s%:6065%:153065%" $HOME/.elys/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:15358\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:15357\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:15360\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:15356\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":15366\"%" $HOME/.elys/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:15317\"%; s%^address = \":8080\"%address = \":15380\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:15390\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:15391\"%; s%:8545%:15345%; s%:8546%:15346%; s%:6065%:15365%" $HOME/.elys/config/app.toml
 ```
 
 ### Download latest chain snapshot

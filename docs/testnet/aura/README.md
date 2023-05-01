@@ -20,20 +20,20 @@ Subscribe to our free [🤖 Testnet Proposal Bot](https://t.me/kjnodes_testnet_p
 
 * api: [https://aura-testnet.api.kjnodes.com](https://aura-testnet.api.kjnodes.com)
 * rpc: [https://aura-testnet.rpc.kjnodes.com](https://aura-testnet.rpc.kjnodes.com)
-* grpc: aura-testnet.grpc.kjnodes.com:117090
+* grpc: aura-testnet.grpc.kjnodes.com:11790
 
 ## Peering
 
 **state-sync**
 
 ```text
-d5519e378247dfb61dfe90652d1fe3e2b3005a5b@aura-testnet.rpc.kjnodes.com:117656
+d5519e378247dfb61dfe90652d1fe3e2b3005a5b@aura-testnet.rpc.kjnodes.com:11756
 ```
 
 **seed-node**
 
 ```text
-3f472746f46493309650e5a033076689996c8881@aura-testnet.rpc.kjnodes.com:117659
+3f472746f46493309650e5a033076689996c8881@aura-testnet.rpc.kjnodes.com:11759
 ```
 
 **addrbook**

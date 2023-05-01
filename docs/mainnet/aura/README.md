@@ -22,20 +22,20 @@ Subscribe to our free [🤖 Mainnet Proposal Bot](https://t.me/kjnodes_proposal_
 
 * api: [https://aura.api.kjnodes.com](https://aura.api.kjnodes.com)
 * rpc: [https://aura.rpc.kjnodes.com](https://aura.rpc.kjnodes.com)
-* grpc: aura.grpc.kjnodes.com:117090
+* grpc: aura.grpc.kjnodes.com:11790
 
 ## Peering
 
 **state-sync**
 
 ```text
-d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@aura.rpc.kjnodes.com:117656
+d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@aura.rpc.kjnodes.com:11756
 ```
 
 **seed-node**
 
 ```text
-400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@aura.rpc.kjnodes.com:117659
+400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@aura.rpc.kjnodes.com:11759
 ```
 
 **addrbook**

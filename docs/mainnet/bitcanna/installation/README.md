@@ -96,7 +96,7 @@ sudo systemctl enable bcnad
 # Set node configuration
 bcnad config chain-id bitcanna-1
 bcnad config keyring-backend file
-bcnad config node tcp://localhost:142657
+bcnad config node tcp://localhost:14257
 
 # Initialize the node
 bcnad init $MONIKER --chain-id bitcanna-1
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/bitcanna/genesis.json > $HOME/.bcna/confi
 curl -Ls https://snapshots.kjnodes.com/bitcanna/addrbook.json > $HOME/.bcna/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@bitcanna.rpc.kjnodes.com:142659\"|" $HOME/.bcna/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@bitcanna.rpc.kjnodes.com:14259\"|" $HOME/.bcna/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0ubcna\"|" $HOME/.bcna/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/.bcna/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:142658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:142657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:142060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:142656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":142660\"%" $HOME/.bcna/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:142317\"%; s%^address = \":8080\"%address = \":142080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:142090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:142091\"%; s%:8545%:142545%; s%:8546%:142546%; s%:6065%:142065%" $HOME/.bcna/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:14258\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:14257\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:14260\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:14256\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":14266\"%" $HOME/.bcna/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:14217\"%; s%^address = \":8080\"%address = \":14280\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:14290\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:14291\"%; s%:8545%:14245%; s%:8546%:14246%; s%:6065%:14265%" $HOME/.bcna/config/app.toml
 ```
 
 ### Download latest chain snapshot

@@ -20,20 +20,20 @@ Subscribe to our free [🤖 Testnet Proposal Bot](https://t.me/kjnodes_testnet_p
 
 * api: [https://ojo-testnet.api.kjnodes.com](https://ojo-testnet.api.kjnodes.com)
 * rpc: [https://ojo-testnet.rpc.kjnodes.com](https://ojo-testnet.rpc.kjnodes.com)
-* grpc: ojo-testnet.grpc.kjnodes.com:150090
+* grpc: ojo-testnet.grpc.kjnodes.com:15090
 
 ## Peering
 
 **state-sync**
 
 ```text
-d5519e378247dfb61dfe90652d1fe3e2b3005a5b@ojo-testnet.rpc.kjnodes.com:150656
+d5519e378247dfb61dfe90652d1fe3e2b3005a5b@ojo-testnet.rpc.kjnodes.com:15056
 ```
 
 **seed-node**
 
 ```text
-3f472746f46493309650e5a033076689996c8881@ojo-testnet.rpc.kjnodes.com:150659
+3f472746f46493309650e5a033076689996c8881@ojo-testnet.rpc.kjnodes.com:15059
 ```
 
 **addrbook**

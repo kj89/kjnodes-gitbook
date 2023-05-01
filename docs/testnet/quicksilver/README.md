@@ -20,20 +20,20 @@ Subscribe to our free [🤖 Testnet Proposal Bot](https://t.me/kjnodes_testnet_p
 
 * api: [https://quicksilver-testnet.api.kjnodes.com](https://quicksilver-testnet.api.kjnodes.com)
 * rpc: [https://quicksilver-testnet.rpc.kjnodes.com](https://quicksilver-testnet.rpc.kjnodes.com)
-* grpc: quicksilver-testnet.grpc.kjnodes.com:111090
+* grpc: quicksilver-testnet.grpc.kjnodes.com:11190
 
 ## Peering
 
 **state-sync**
 
 ```text
-d5519e378247dfb61dfe90652d1fe3e2b3005a5b@quicksilver-testnet.rpc.kjnodes.com:111656
+d5519e378247dfb61dfe90652d1fe3e2b3005a5b@quicksilver-testnet.rpc.kjnodes.com:11156
 ```
 
 **seed-node**
 
 ```text
-3f472746f46493309650e5a033076689996c8881@quicksilver-testnet.rpc.kjnodes.com:111659
+3f472746f46493309650e5a033076689996c8881@quicksilver-testnet.rpc.kjnodes.com:11159
 ```
 
 **addrbook**

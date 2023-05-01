@@ -96,7 +96,7 @@ sudo systemctl enable osmosisd
 # Set node configuration
 osmosisd config chain-id osmosis-1
 osmosisd config keyring-backend file
-osmosisd config node tcp://localhost:129657
+osmosisd config node tcp://localhost:12957
 
 # Initialize the node
 osmosisd init $MONIKER --chain-id osmosis-1
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/osmosis/genesis.json > $HOME/.osmosisd/co
 curl -Ls https://snapshots.kjnodes.com/osmosis/addrbook.json > $HOME/.osmosisd/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@osmosis.rpc.kjnodes.com:129659\"|" $HOME/.osmosisd/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@osmosis.rpc.kjnodes.com:12959\"|" $HOME/.osmosisd/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.0025uosmo\"|" $HOME/.osmosisd/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/.osmosisd/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:129658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:129657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:129060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:129656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":129660\"%" $HOME/.osmosisd/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:129317\"%; s%^address = \":8080\"%address = \":129080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:129090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:129091\"%; s%:8545%:129545%; s%:8546%:129546%; s%:6065%:129065%" $HOME/.osmosisd/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:12958\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:12957\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:12960\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:12956\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":12966\"%" $HOME/.osmosisd/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:12917\"%; s%^address = \":8080\"%address = \":12980\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:12990\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:12991\"%; s%:8545%:12945%; s%:8546%:12946%; s%:6065%:12965%" $HOME/.osmosisd/config/app.toml
 ```
 
 ### Download latest chain snapshot

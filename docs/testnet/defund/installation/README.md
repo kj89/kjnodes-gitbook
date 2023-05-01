@@ -96,7 +96,7 @@ sudo systemctl enable defundd
 # Set node configuration
 defundd config chain-id orbit-alpha-1
 defundd config keyring-backend test
-defundd config node tcp://localhost:140657
+defundd config node tcp://localhost:14057
 
 # Initialize the node
 defundd init $MONIKER --chain-id orbit-alpha-1
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/defund-testnet/genesis.json > $HOME/.defu
 curl -Ls https://snapshots.kjnodes.com/defund-testnet/addrbook.json > $HOME/.defund/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@defund-testnet.rpc.kjnodes.com:140659\"|" $HOME/.defund/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@defund-testnet.rpc.kjnodes.com:14059\"|" $HOME/.defund/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0ufetf\"|" $HOME/.defund/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/.defund/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:140658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:140657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:140060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:140656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":140660\"%" $HOME/.defund/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:140317\"%; s%^address = \":8080\"%address = \":140080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:140090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:140091\"%; s%:8545%:140545%; s%:8546%:140546%; s%:6065%:140065%" $HOME/.defund/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:14058\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:14057\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:14060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:14056\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":14066\"%" $HOME/.defund/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:14017\"%; s%^address = \":8080\"%address = \":14080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:14090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:14091\"%; s%:8545%:14045%; s%:8546%:14046%; s%:6065%:14065%" $HOME/.defund/config/app.toml
 ```
 
 ### Download latest chain snapshot

@@ -96,7 +96,7 @@ sudo systemctl enable starsd
 # Set node configuration
 starsd config chain-id stargaze-1
 starsd config keyring-backend file
-starsd config node tcp://localhost:158657
+starsd config node tcp://localhost:15857
 
 # Initialize the node
 starsd init $MONIKER --chain-id stargaze-1
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/stargaze/genesis.json > $HOME/.starsd/con
 curl -Ls https://snapshots.kjnodes.com/stargaze/addrbook.json > $HOME/.starsd/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@stargaze.rpc.kjnodes.com:158659\"|" $HOME/.starsd/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@stargaze.rpc.kjnodes.com:15859\"|" $HOME/.starsd/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0ustars\"|" $HOME/.starsd/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/.starsd/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:158658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:158657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:158060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:158656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":158660\"%" $HOME/.starsd/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:158317\"%; s%^address = \":8080\"%address = \":158080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:158090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:158091\"%; s%:8545%:158545%; s%:8546%:158546%; s%:6065%:158065%" $HOME/.starsd/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:15858\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:15857\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:15860\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:15856\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":15866\"%" $HOME/.starsd/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:15817\"%; s%^address = \":8080\"%address = \":15880\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:15890\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:15891\"%; s%:8545%:15845%; s%:8546%:15846%; s%:6065%:15865%" $HOME/.starsd/config/app.toml
 ```
 
 ### Download latest chain snapshot

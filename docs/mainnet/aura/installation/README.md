@@ -96,7 +96,7 @@ sudo systemctl enable aurad
 # Set node configuration
 aurad config chain-id xstaxy-1
 aurad config keyring-backend file
-aurad config node tcp://localhost:117657
+aurad config node tcp://localhost:11757
 
 # Initialize the node
 aurad init $MONIKER --chain-id xstaxy-1
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/aura/genesis.json > $HOME/.aura/config/ge
 curl -Ls https://snapshots.kjnodes.com/aura/addrbook.json > $HOME/.aura/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@aura.rpc.kjnodes.com:117659\"|" $HOME/.aura/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@aura.rpc.kjnodes.com:11759\"|" $HOME/.aura/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001uaura\"|" $HOME/.aura/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/.aura/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:117658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:117657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:117060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:117656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":117660\"%" $HOME/.aura/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:117317\"%; s%^address = \":8080\"%address = \":117080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:117090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:117091\"%; s%:8545%:117545%; s%:8546%:117546%; s%:6065%:117065%" $HOME/.aura/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:11758\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:11757\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:11760\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:11756\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":11766\"%" $HOME/.aura/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:11717\"%; s%^address = \":8080\"%address = \":11780\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:11790\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:11791\"%; s%:8545%:11745%; s%:8546%:11746%; s%:6065%:11765%" $HOME/.aura/config/app.toml
 ```
 
 ### Download latest chain snapshot

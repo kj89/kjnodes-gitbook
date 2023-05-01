@@ -96,7 +96,7 @@ sudo systemctl enable quicksilverd
 # Set node configuration
 quicksilverd config chain-id innuendo-5
 quicksilverd config keyring-backend test
-quicksilverd config node tcp://localhost:111657
+quicksilverd config node tcp://localhost:11157
 
 # Initialize the node
 quicksilverd init $MONIKER --chain-id innuendo-5
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/quicksilver-testnet/genesis.json > $HOME/
 curl -Ls https://snapshots.kjnodes.com/quicksilver-testnet/addrbook.json > $HOME/.quicksilverd/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@quicksilver-testnet.rpc.kjnodes.com:111659\"|" $HOME/.quicksilverd/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@quicksilver-testnet.rpc.kjnodes.com:11159\"|" $HOME/.quicksilverd/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.0001uqck\"|" $HOME/.quicksilverd/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/.quicksilverd/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:111658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:111657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:111060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:111656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":111660\"%" $HOME/.quicksilverd/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:111317\"%; s%^address = \":8080\"%address = \":111080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:111090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:111091\"%; s%:8545%:111545%; s%:8546%:111546%; s%:6065%:111065%" $HOME/.quicksilverd/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:11158\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:11157\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:11160\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:11156\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":11166\"%" $HOME/.quicksilverd/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:11117\"%; s%^address = \":8080\"%address = \":11180\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:11190\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:11191\"%; s%:8545%:11145%; s%:8546%:11146%; s%:6065%:11165%" $HOME/.quicksilverd/config/app.toml
 ```
 
 ### Download latest chain snapshot

@@ -20,20 +20,20 @@ Subscribe to our free [🤖 Testnet Proposal Bot](https://t.me/kjnodes_testnet_p
 
 * api: [https://nolus-testnet.api.kjnodes.com](https://nolus-testnet.api.kjnodes.com)
 * rpc: [https://nolus-testnet.rpc.kjnodes.com](https://nolus-testnet.rpc.kjnodes.com)
-* grpc: nolus-testnet.grpc.kjnodes.com:143090
+* grpc: nolus-testnet.grpc.kjnodes.com:14390
 
 ## Peering
 
 **state-sync**
 
 ```text
-d5519e378247dfb61dfe90652d1fe3e2b3005a5b@nolus-testnet.rpc.kjnodes.com:143656
+d5519e378247dfb61dfe90652d1fe3e2b3005a5b@nolus-testnet.rpc.kjnodes.com:14356
 ```
 
 **seed-node**
 
 ```text
-3f472746f46493309650e5a033076689996c8881@nolus-testnet.rpc.kjnodes.com:143659
+3f472746f46493309650e5a033076689996c8881@nolus-testnet.rpc.kjnodes.com:14359
 ```
 
 **addrbook**

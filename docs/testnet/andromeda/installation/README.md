@@ -96,7 +96,7 @@ sudo systemctl enable andromedad
 # Set node configuration
 andromedad config chain-id galileo-3
 andromedad config keyring-backend test
-andromedad config node tcp://localhost:147657
+andromedad config node tcp://localhost:14757
 
 # Initialize the node
 andromedad init $MONIKER --chain-id galileo-3
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/andromeda-testnet/genesis.json > $HOME/.a
 curl -Ls https://snapshots.kjnodes.com/andromeda-testnet/addrbook.json > $HOME/.andromedad/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@andromeda-testnet.rpc.kjnodes.com:147659\"|" $HOME/.andromedad/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@andromeda-testnet.rpc.kjnodes.com:14759\"|" $HOME/.andromedad/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.0001uandr\"|" $HOME/.andromedad/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/.andromedad/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:147658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:147657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:147060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:147656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":147660\"%" $HOME/.andromedad/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:147317\"%; s%^address = \":8080\"%address = \":147080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:147090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:147091\"%; s%:8545%:147545%; s%:8546%:147546%; s%:6065%:147065%" $HOME/.andromedad/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:14758\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:14757\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:14760\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:14756\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":14766\"%" $HOME/.andromedad/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:14717\"%; s%^address = \":8080\"%address = \":14780\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:14790\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:14791\"%; s%:8545%:14745%; s%:8546%:14746%; s%:6065%:14765%" $HOME/.andromedad/config/app.toml
 ```
 
 ### Download latest chain snapshot

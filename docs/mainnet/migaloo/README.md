@@ -22,20 +22,20 @@ Subscribe to our free [🤖 Mainnet Proposal Bot](https://t.me/kjnodes_proposal_
 
 * api: [https://migaloo.api.kjnodes.com](https://migaloo.api.kjnodes.com)
 * rpc: [https://migaloo.rpc.kjnodes.com](https://migaloo.rpc.kjnodes.com)
-* grpc: migaloo.grpc.kjnodes.com:149090
+* grpc: migaloo.grpc.kjnodes.com:14990
 
 ## Peering
 
 **state-sync**
 
 ```text
-d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@migaloo.rpc.kjnodes.com:149656
+d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@migaloo.rpc.kjnodes.com:14956
 ```
 
 **seed-node**
 
 ```text
-400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@migaloo.rpc.kjnodes.com:149659
+400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@migaloo.rpc.kjnodes.com:14959
 ```
 
 **addrbook**

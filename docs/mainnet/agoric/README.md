@@ -22,20 +22,20 @@ Subscribe to our free [🤖 Mainnet Proposal Bot](https://t.me/kjnodes_proposal_
 
 * api: [https://agoric.api.kjnodes.com](https://agoric.api.kjnodes.com)
 * rpc: [https://agoric.rpc.kjnodes.com](https://agoric.rpc.kjnodes.com)
-* grpc: agoric.grpc.kjnodes.com:127090
+* grpc: agoric.grpc.kjnodes.com:12790
 
 ## Peering
 
 **state-sync**
 
 ```text
-d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@agoric.rpc.kjnodes.com:127656
+d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@agoric.rpc.kjnodes.com:12756
 ```
 
 **seed-node**
 
 ```text
-400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@agoric.rpc.kjnodes.com:127659
+400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@agoric.rpc.kjnodes.com:12759
 ```
 
 **addrbook**

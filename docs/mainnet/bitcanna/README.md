@@ -22,20 +22,20 @@ Subscribe to our free [🤖 Mainnet Proposal Bot](https://t.me/kjnodes_proposal_
 
 * api: [https://bitcanna.api.kjnodes.com](https://bitcanna.api.kjnodes.com)
 * rpc: [https://bitcanna.rpc.kjnodes.com](https://bitcanna.rpc.kjnodes.com)
-* grpc: bitcanna.grpc.kjnodes.com:142090
+* grpc: bitcanna.grpc.kjnodes.com:14290
 
 ## Peering
 
 **state-sync**
 
 ```text
-d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@bitcanna.rpc.kjnodes.com:142656
+d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@bitcanna.rpc.kjnodes.com:14256
 ```
 
 **seed-node**
 
 ```text
-400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@bitcanna.rpc.kjnodes.com:142659
+400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@bitcanna.rpc.kjnodes.com:14259
 ```
 
 **addrbook**

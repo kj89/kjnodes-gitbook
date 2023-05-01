@@ -96,7 +96,7 @@ sudo systemctl enable haqqd
 # Set node configuration
 haqqd config chain-id haqq_54211-3
 haqqd config keyring-backend test
-haqqd config node tcp://localhost:135657
+haqqd config node tcp://localhost:13557
 
 # Initialize the node
 haqqd init $MONIKER --chain-id haqq_54211-3
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/haqq-testnet/genesis.json > $HOME/.haqqd/
 curl -Ls https://snapshots.kjnodes.com/haqq-testnet/addrbook.json > $HOME/.haqqd/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@haqq-testnet.rpc.kjnodes.com:135659\"|" $HOME/.haqqd/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@haqq-testnet.rpc.kjnodes.com:13559\"|" $HOME/.haqqd/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0aISLM\"|" $HOME/.haqqd/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/.haqqd/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:135658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:135657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:135060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:135656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":135660\"%" $HOME/.haqqd/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:135317\"%; s%^address = \":8080\"%address = \":135080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:135090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:135091\"%; s%:8545%:135545%; s%:8546%:135546%; s%:6065%:135065%" $HOME/.haqqd/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:13558\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:13557\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:13560\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:13556\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":13566\"%" $HOME/.haqqd/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:13517\"%; s%^address = \":8080\"%address = \":13580\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:13590\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:13591\"%; s%:8545%:13545%; s%:8546%:13546%; s%:6065%:13565%" $HOME/.haqqd/config/app.toml
 ```
 
 ### Download latest chain snapshot

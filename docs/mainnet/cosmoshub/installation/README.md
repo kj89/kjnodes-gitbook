@@ -96,7 +96,7 @@ sudo systemctl enable gaiad
 # Set node configuration
 gaiad config chain-id cosmoshub-4
 gaiad config keyring-backend file
-gaiad config node tcp://localhost:134657
+gaiad config node tcp://localhost:13457
 
 # Initialize the node
 gaiad init $MONIKER --chain-id cosmoshub-4
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/cosmoshub/genesis.json > $HOME/.gaia/conf
 curl -Ls https://snapshots.kjnodes.com/cosmoshub/addrbook.json > $HOME/.gaia/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@cosmoshub.rpc.kjnodes.com:134659\"|" $HOME/.gaia/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@cosmoshub.rpc.kjnodes.com:13459\"|" $HOME/.gaia/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0uatom\"|" $HOME/.gaia/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/.gaia/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:134658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:134657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:134060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:134656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":134660\"%" $HOME/.gaia/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:134317\"%; s%^address = \":8080\"%address = \":134080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:134090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:134091\"%; s%:8545%:134545%; s%:8546%:134546%; s%:6065%:134065%" $HOME/.gaia/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:13458\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:13457\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:13460\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:13456\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":13466\"%" $HOME/.gaia/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:13417\"%; s%^address = \":8080\"%address = \":13480\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:13490\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:13491\"%; s%:8545%:13445%; s%:8546%:13446%; s%:6065%:13465%" $HOME/.gaia/config/app.toml
 ```
 
 ### Download latest chain snapshot

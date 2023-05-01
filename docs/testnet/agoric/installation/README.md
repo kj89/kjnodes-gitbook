@@ -114,7 +114,7 @@ sudo systemctl enable agd
 # Set node configuration
 agd config chain-id agoric-emerynet-5
 agd config keyring-backend test
-agd config node tcp://localhost:127657
+agd config node tcp://localhost:12757
 
 # Initialize the node
 agd init $MONIKER --chain-id agoric-emerynet-5
@@ -124,7 +124,7 @@ curl -Ls https://snapshots.kjnodes.com/agoric-testnet/genesis.json > $HOME/.agor
 curl -Ls https://snapshots.kjnodes.com/agoric-testnet/addrbook.json > $HOME/.agoric/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@agoric-testnet.rpc.kjnodes.com:127659\"|" $HOME/.agoric/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@agoric-testnet.rpc.kjnodes.com:12759\"|" $HOME/.agoric/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.025ubld\"|" $HOME/.agoric/config/app.toml
@@ -138,8 +138,8 @@ sed -i \
   $HOME/.agoric/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:127658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:127657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:127060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:127656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":127660\"%" $HOME/.agoric/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:127317\"%; s%^address = \":8080\"%address = \":127080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:127090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:127091\"%; s%:8545%:127545%; s%:8546%:127546%; s%:6065%:127065%" $HOME/.agoric/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:12758\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:12757\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:12760\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:12756\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":12766\"%" $HOME/.agoric/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:12717\"%; s%^address = \":8080\"%address = \":12780\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:12790\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:12791\"%; s%:8545%:12745%; s%:8546%:12746%; s%:6065%:12765%" $HOME/.agoric/config/app.toml
 ```
 
 ### Download latest chain snapshot

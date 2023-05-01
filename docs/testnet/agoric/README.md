@@ -20,20 +20,20 @@ Subscribe to our free [🤖 Testnet Proposal Bot](https://t.me/kjnodes_testnet_p
 
 * api: [https://agoric-testnet.api.kjnodes.com](https://agoric-testnet.api.kjnodes.com)
 * rpc: [https://agoric-testnet.rpc.kjnodes.com](https://agoric-testnet.rpc.kjnodes.com)
-* grpc: agoric-testnet.grpc.kjnodes.com:127090
+* grpc: agoric-testnet.grpc.kjnodes.com:12790
 
 ## Peering
 
 **state-sync**
 
 ```text
-d5519e378247dfb61dfe90652d1fe3e2b3005a5b@agoric-testnet.rpc.kjnodes.com:127656
+d5519e378247dfb61dfe90652d1fe3e2b3005a5b@agoric-testnet.rpc.kjnodes.com:12756
 ```
 
 **seed-node**
 
 ```text
-3f472746f46493309650e5a033076689996c8881@agoric-testnet.rpc.kjnodes.com:127659
+3f472746f46493309650e5a033076689996c8881@agoric-testnet.rpc.kjnodes.com:12759
 ```
 
 **addrbook**

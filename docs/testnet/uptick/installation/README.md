@@ -96,7 +96,7 @@ sudo systemctl enable uptickd
 # Set node configuration
 uptickd config chain-id uptick_7000-2
 uptickd config keyring-backend test
-uptickd config node tcp://localhost:115657
+uptickd config node tcp://localhost:11557
 
 # Initialize the node
 uptickd init $MONIKER --chain-id uptick_7000-2
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/uptick-testnet/genesis.json > $HOME/.upti
 curl -Ls https://snapshots.kjnodes.com/uptick-testnet/addrbook.json > $HOME/.uptickd/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@uptick-testnet.rpc.kjnodes.com:115659\"|" $HOME/.uptickd/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@uptick-testnet.rpc.kjnodes.com:11559\"|" $HOME/.uptickd/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0auptick\"|" $HOME/.uptickd/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/.uptickd/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:115658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:115657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:115060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:115656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":115660\"%" $HOME/.uptickd/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:115317\"%; s%^address = \":8080\"%address = \":115080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:115090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:115091\"%; s%:8545%:115545%; s%:8546%:115546%; s%:6065%:115065%" $HOME/.uptickd/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:11558\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:11557\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:11560\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:11556\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":11566\"%" $HOME/.uptickd/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:11517\"%; s%^address = \":8080\"%address = \":11580\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:11590\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:11591\"%; s%:8545%:11545%; s%:8546%:11546%; s%:6065%:11565%" $HOME/.uptickd/config/app.toml
 ```
 
 ### Download latest chain snapshot

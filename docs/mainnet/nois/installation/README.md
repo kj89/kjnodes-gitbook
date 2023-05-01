@@ -96,7 +96,7 @@ sudo systemctl enable noisd
 # Set node configuration
 noisd config chain-id nois-1
 noisd config keyring-backend file
-noisd config node tcp://localhost:151657
+noisd config node tcp://localhost:15157
 
 # Initialize the node
 noisd init $MONIKER --chain-id nois-1
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/nois/genesis.json > $HOME/.noisd/config/g
 curl -Ls https://snapshots.kjnodes.com/nois/addrbook.json > $HOME/.noisd/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@nois.rpc.kjnodes.com:151659\"|" $HOME/.noisd/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@nois.rpc.kjnodes.com:15159\"|" $HOME/.noisd/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.05unois\"|" $HOME/.noisd/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/.noisd/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:151658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:151657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:151060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:151656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":151660\"%" $HOME/.noisd/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:151317\"%; s%^address = \":8080\"%address = \":151080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:151090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:151091\"%; s%:8545%:151545%; s%:8546%:151546%; s%:6065%:151065%" $HOME/.noisd/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:15158\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:15157\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:15160\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:15156\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":15166\"%" $HOME/.noisd/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:15117\"%; s%^address = \":8080\"%address = \":15180\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:15190\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:15191\"%; s%:8545%:15145%; s%:8546%:15146%; s%:6065%:15165%" $HOME/.noisd/config/app.toml
 ```
 
 ### Download latest chain snapshot

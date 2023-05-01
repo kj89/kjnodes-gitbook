@@ -96,7 +96,7 @@ sudo systemctl enable marsd
 # Set node configuration
 marsd config chain-id mars-1
 marsd config keyring-backend file
-marsd config node tcp://localhost:145657
+marsd config node tcp://localhost:14557
 
 # Initialize the node
 marsd init $MONIKER --chain-id mars-1
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/mars/genesis.json > $HOME/.mars/config/ge
 curl -Ls https://snapshots.kjnodes.com/mars/addrbook.json > $HOME/.mars/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@mars.rpc.kjnodes.com:145659\"|" $HOME/.mars/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@mars.rpc.kjnodes.com:14559\"|" $HOME/.mars/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0umars\"|" $HOME/.mars/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/.mars/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:145658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:145657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:145060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:145656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":145660\"%" $HOME/.mars/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:145317\"%; s%^address = \":8080\"%address = \":145080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:145090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:145091\"%; s%:8545%:145545%; s%:8546%:145546%; s%:6065%:145065%" $HOME/.mars/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:14558\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:14557\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:14560\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:14556\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":14566\"%" $HOME/.mars/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:14517\"%; s%^address = \":8080\"%address = \":14580\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:14590\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:14591\"%; s%:8545%:14545%; s%:8546%:14546%; s%:6065%:14565%" $HOME/.mars/config/app.toml
 ```
 
 ### Download latest chain snapshot

@@ -20,20 +20,20 @@ Subscribe to our free [🤖 Testnet Proposal Bot](https://t.me/kjnodes_testnet_p
 
 * api: [https://althea-testnet.api.kjnodes.com](https://althea-testnet.api.kjnodes.com)
 * rpc: [https://althea-testnet.rpc.kjnodes.com](https://althea-testnet.rpc.kjnodes.com)
-* grpc: althea-testnet.grpc.kjnodes.com:152090
+* grpc: althea-testnet.grpc.kjnodes.com:15290
 
 ## Peering
 
 **state-sync**
 
 ```text
-d5519e378247dfb61dfe90652d1fe3e2b3005a5b@althea-testnet.rpc.kjnodes.com:152656
+d5519e378247dfb61dfe90652d1fe3e2b3005a5b@althea-testnet.rpc.kjnodes.com:15256
 ```
 
 **seed-node**
 
 ```text
-3f472746f46493309650e5a033076689996c8881@althea-testnet.rpc.kjnodes.com:152659
+3f472746f46493309650e5a033076689996c8881@althea-testnet.rpc.kjnodes.com:15259
 ```
 
 **addrbook**

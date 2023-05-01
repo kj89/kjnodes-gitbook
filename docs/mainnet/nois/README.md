@@ -22,20 +22,20 @@ Subscribe to our free [🤖 Mainnet Proposal Bot](https://t.me/kjnodes_proposal_
 
 * api: [https://nois.api.kjnodes.com](https://nois.api.kjnodes.com)
 * rpc: [https://nois.rpc.kjnodes.com](https://nois.rpc.kjnodes.com)
-* grpc: nois.grpc.kjnodes.com:151090
+* grpc: nois.grpc.kjnodes.com:15190
 
 ## Peering
 
 **state-sync**
 
 ```text
-d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@nois.rpc.kjnodes.com:151656
+d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@nois.rpc.kjnodes.com:15156
 ```
 
 **seed-node**
 
 ```text
-400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@nois.rpc.kjnodes.com:151659
+400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@nois.rpc.kjnodes.com:15159
 ```
 
 **addrbook**

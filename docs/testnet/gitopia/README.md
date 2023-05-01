@@ -20,20 +20,20 @@ Subscribe to our free [🤖 Testnet Proposal Bot](https://t.me/kjnodes_testnet_p
 
 * api: [https://gitopia-testnet.api.kjnodes.com](https://gitopia-testnet.api.kjnodes.com)
 * rpc: [https://gitopia-testnet.rpc.kjnodes.com](https://gitopia-testnet.rpc.kjnodes.com)
-* grpc: gitopia-testnet.grpc.kjnodes.com:141090
+* grpc: gitopia-testnet.grpc.kjnodes.com:14190
 
 ## Peering
 
 **state-sync**
 
 ```text
-d5519e378247dfb61dfe90652d1fe3e2b3005a5b@gitopia-testnet.rpc.kjnodes.com:141656
+d5519e378247dfb61dfe90652d1fe3e2b3005a5b@gitopia-testnet.rpc.kjnodes.com:14156
 ```
 
 **seed-node**
 
 ```text
-3f472746f46493309650e5a033076689996c8881@gitopia-testnet.rpc.kjnodes.com:141659
+3f472746f46493309650e5a033076689996c8881@gitopia-testnet.rpc.kjnodes.com:14159
 ```
 
 **addrbook**

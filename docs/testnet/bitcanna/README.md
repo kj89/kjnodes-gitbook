@@ -20,20 +20,20 @@ Subscribe to our free [🤖 Testnet Proposal Bot](https://t.me/kjnodes_testnet_p
 
 * api: [https://bitcanna-testnet.api.kjnodes.com](https://bitcanna-testnet.api.kjnodes.com)
 * rpc: [https://bitcanna-testnet.rpc.kjnodes.com](https://bitcanna-testnet.rpc.kjnodes.com)
-* grpc: bitcanna-testnet.grpc.kjnodes.com:142090
+* grpc: bitcanna-testnet.grpc.kjnodes.com:14290
 
 ## Peering
 
 **state-sync**
 
 ```text
-d5519e378247dfb61dfe90652d1fe3e2b3005a5b@bitcanna-testnet.rpc.kjnodes.com:142656
+d5519e378247dfb61dfe90652d1fe3e2b3005a5b@bitcanna-testnet.rpc.kjnodes.com:14256
 ```
 
 **seed-node**
 
 ```text
-3f472746f46493309650e5a033076689996c8881@bitcanna-testnet.rpc.kjnodes.com:142659
+3f472746f46493309650e5a033076689996c8881@bitcanna-testnet.rpc.kjnodes.com:14259
 ```
 
 **addrbook**

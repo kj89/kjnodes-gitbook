@@ -20,20 +20,20 @@ Subscribe to our free [🤖 Mainnet Proposal Bot](https://t.me/kjnodes_proposal_
 
 * api: [https://quasar.api.kjnodes.com](https://quasar.api.kjnodes.com)
 * rpc: [https://quasar.rpc.kjnodes.com](https://quasar.rpc.kjnodes.com)
-* grpc: quasar.grpc.kjnodes.com:148090
+* grpc: quasar.grpc.kjnodes.com:14890
 
 ## Peering
 
 **state-sync**
 
 ```text
-d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@quasar.rpc.kjnodes.com:148656
+d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@quasar.rpc.kjnodes.com:14856
 ```
 
 **seed-node**
 
 ```text
-400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@quasar.rpc.kjnodes.com:148659
+400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@quasar.rpc.kjnodes.com:14859
 ```
 
 **addrbook**

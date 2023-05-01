@@ -96,7 +96,7 @@ sudo systemctl enable quasarnoded
 # Set node configuration
 quasarnoded config chain-id quasar-1
 quasarnoded config keyring-backend file
-quasarnoded config node tcp://localhost:148657
+quasarnoded config node tcp://localhost:14857
 
 # Initialize the node
 quasarnoded init $MONIKER --chain-id quasar-1
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/quasar/genesis.json > $HOME/.quasarnode/c
 curl -Ls https://snapshots.kjnodes.com/quasar/addrbook.json > $HOME/.quasarnode/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@quasar.rpc.kjnodes.com:148659\"|" $HOME/.quasarnode/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@quasar.rpc.kjnodes.com:14859\"|" $HOME/.quasarnode/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.01ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B,0.01ibc/FA0006F056DB6719B8C16C551FC392B62F5729978FC0B125AC9A432DBB2AA1A5,0.01ibc/FA7775734CC73176B7425910DE001A1D2AD9B6D9E93129A5D0750EAD13E4E63A\"|" $HOME/.quasarnode/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/.quasarnode/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:148658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:148657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:148060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:148656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":148660\"%" $HOME/.quasarnode/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:148317\"%; s%^address = \":8080\"%address = \":148080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:148090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:148091\"%; s%:8545%:148545%; s%:8546%:148546%; s%:6065%:148065%" $HOME/.quasarnode/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:14858\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:14857\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:14860\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:14856\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":14866\"%" $HOME/.quasarnode/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:14817\"%; s%^address = \":8080\"%address = \":14880\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:14890\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:14891\"%; s%:8545%:14845%; s%:8546%:14846%; s%:6065%:14865%" $HOME/.quasarnode/config/app.toml
 ```
 
 ### Download latest chain snapshot

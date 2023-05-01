@@ -95,7 +95,7 @@ sudo systemctl enable lavad
 # Set node configuration
 lavad config chain-id lava-testnet-1
 lavad config keyring-backend test
-lavad config node tcp://localhost:144657
+lavad config node tcp://localhost:14457
 
 # Initialize the node
 lavad init $MONIKER --chain-id lava-testnet-1
@@ -105,7 +105,7 @@ curl -Ls https://snapshots.kjnodes.com/lava-testnet/genesis.json > $HOME/.lava/c
 curl -Ls https://snapshots.kjnodes.com/lava-testnet/addrbook.json > $HOME/.lava/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@lava-testnet.rpc.kjnodes.com:144659\"|" $HOME/.lava/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@lava-testnet.rpc.kjnodes.com:14459\"|" $HOME/.lava/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0ulava\"|" $HOME/.lava/config/app.toml
@@ -119,8 +119,8 @@ sed -i \
   $HOME/.lava/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:144658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:144657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:144060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:144656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":144660\"%" $HOME/.lava/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:144317\"%; s%^address = \":8080\"%address = \":144080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:144090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:144091\"%; s%:8545%:144545%; s%:8546%:144546%; s%:6065%:144065%" $HOME/.lava/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:14458\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:14457\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:14460\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:14456\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":14466\"%" $HOME/.lava/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:14417\"%; s%^address = \":8080\"%address = \":14480\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:14490\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:14491\"%; s%:8545%:14445%; s%:8546%:14446%; s%:6065%:14465%" $HOME/.lava/config/app.toml
 ```
 
 ### Update chain specific configuration

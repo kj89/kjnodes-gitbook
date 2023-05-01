@@ -20,20 +20,20 @@ Subscribe to our free [🤖 Testnet Proposal Bot](https://t.me/kjnodes_testnet_p
 
 * api: [https://defund-testnet.api.kjnodes.com](https://defund-testnet.api.kjnodes.com)
 * rpc: [https://defund-testnet.rpc.kjnodes.com](https://defund-testnet.rpc.kjnodes.com)
-* grpc: defund-testnet.grpc.kjnodes.com:140090
+* grpc: defund-testnet.grpc.kjnodes.com:14090
 
 ## Peering
 
 **state-sync**
 
 ```text
-d5519e378247dfb61dfe90652d1fe3e2b3005a5b@defund-testnet.rpc.kjnodes.com:140656
+d5519e378247dfb61dfe90652d1fe3e2b3005a5b@defund-testnet.rpc.kjnodes.com:14056
 ```
 
 **seed-node**
 
 ```text
-3f472746f46493309650e5a033076689996c8881@defund-testnet.rpc.kjnodes.com:140659
+3f472746f46493309650e5a033076689996c8881@defund-testnet.rpc.kjnodes.com:14059
 ```
 
 **addrbook**

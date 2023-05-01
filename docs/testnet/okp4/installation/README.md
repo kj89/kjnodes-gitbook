@@ -96,7 +96,7 @@ sudo systemctl enable okp4d
 # Set node configuration
 okp4d config chain-id okp4-nemeton-1
 okp4d config keyring-backend test
-okp4d config node tcp://localhost:136657
+okp4d config node tcp://localhost:13657
 
 # Initialize the node
 okp4d init $MONIKER --chain-id okp4-nemeton-1
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/okp4-testnet/genesis.json > $HOME/.okp4d/
 curl -Ls https://snapshots.kjnodes.com/okp4-testnet/addrbook.json > $HOME/.okp4d/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@okp4-testnet.rpc.kjnodes.com:136659\"|" $HOME/.okp4d/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@okp4-testnet.rpc.kjnodes.com:13659\"|" $HOME/.okp4d/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0uknow\"|" $HOME/.okp4d/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/.okp4d/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:136658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:136657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:136060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:136656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":136660\"%" $HOME/.okp4d/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:136317\"%; s%^address = \":8080\"%address = \":136080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:136090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:136091\"%; s%:8545%:136545%; s%:8546%:136546%; s%:6065%:136065%" $HOME/.okp4d/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:13658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:13657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:13660\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:13656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":13666\"%" $HOME/.okp4d/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:13617\"%; s%^address = \":8080\"%address = \":13680\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:13690\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:13691\"%; s%:8545%:13645%; s%:8546%:13646%; s%:6065%:13665%" $HOME/.okp4d/config/app.toml
 ```
 
 ### Download latest chain snapshot

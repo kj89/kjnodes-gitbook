@@ -96,7 +96,7 @@ sudo systemctl enable teritorid
 # Set node configuration
 teritorid config chain-id teritori-1
 teritorid config keyring-backend file
-teritorid config node tcp://localhost:119657
+teritorid config node tcp://localhost:11957
 
 # Initialize the node
 teritorid init $MONIKER --chain-id teritori-1
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/teritori/genesis.json > $HOME/.teritorid/
 curl -Ls https://snapshots.kjnodes.com/teritori/addrbook.json > $HOME/.teritorid/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@teritori.rpc.kjnodes.com:119659\"|" $HOME/.teritorid/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@teritori.rpc.kjnodes.com:11959\"|" $HOME/.teritorid/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0utori\"|" $HOME/.teritorid/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/.teritorid/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:119658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:119657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:119060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:119656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":119660\"%" $HOME/.teritorid/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:119317\"%; s%^address = \":8080\"%address = \":119080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:119090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:119091\"%; s%:8545%:119545%; s%:8546%:119546%; s%:6065%:119065%" $HOME/.teritorid/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:11958\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:11957\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:11960\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:11956\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":11966\"%" $HOME/.teritorid/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:11917\"%; s%^address = \":8080\"%address = \":11980\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:11990\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:11991\"%; s%:8545%:11945%; s%:8546%:11946%; s%:6065%:11965%" $HOME/.teritorid/config/app.toml
 ```
 
 ### Download latest chain snapshot

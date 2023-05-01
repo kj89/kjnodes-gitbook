@@ -22,20 +22,20 @@ Subscribe to our free [🤖 Mainnet Proposal Bot](https://t.me/kjnodes_proposal_
 
 * api: [https://uptick.api.kjnodes.com](https://uptick.api.kjnodes.com)
 * rpc: [https://uptick.rpc.kjnodes.com](https://uptick.rpc.kjnodes.com)
-* grpc: uptick.grpc.kjnodes.com:115090
+* grpc: uptick.grpc.kjnodes.com:11590
 
 ## Peering
 
 **state-sync**
 
 ```text
-d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@uptick.rpc.kjnodes.com:115656
+d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@uptick.rpc.kjnodes.com:11556
 ```
 
 **seed-node**
 
 ```text
-400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@uptick.rpc.kjnodes.com:115659
+400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@uptick.rpc.kjnodes.com:11559
 ```
 
 **addrbook**

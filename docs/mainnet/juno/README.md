@@ -20,20 +20,20 @@ Subscribe to our free [🤖 Mainnet Proposal Bot](https://t.me/kjnodes_proposal_
 
 * api: [https://juno.api.kjnodes.com](https://juno.api.kjnodes.com)
 * rpc: [https://juno.rpc.kjnodes.com](https://juno.rpc.kjnodes.com)
-* grpc: juno.grpc.kjnodes.com:157090
+* grpc: juno.grpc.kjnodes.com:15790
 
 ## Peering
 
 **state-sync**
 
 ```text
-d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@juno.rpc.kjnodes.com:157656
+d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@juno.rpc.kjnodes.com:15756
 ```
 
 **seed-node**
 
 ```text
-400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@juno.rpc.kjnodes.com:157659
+400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@juno.rpc.kjnodes.com:15759
 ```
 
 **addrbook**

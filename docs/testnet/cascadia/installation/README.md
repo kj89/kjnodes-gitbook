@@ -96,7 +96,7 @@ sudo systemctl enable cascadiad
 # Set node configuration
 cascadiad config chain-id cascadia_6102-1
 cascadiad config keyring-backend test
-cascadiad config node tcp://localhost:155657
+cascadiad config node tcp://localhost:15557
 
 # Initialize the node
 cascadiad init $MONIKER --chain-id cascadia_6102-1
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/cascadia-testnet/genesis.json > $HOME/.ca
 curl -Ls https://snapshots.kjnodes.com/cascadia-testnet/addrbook.json > $HOME/.cascadiad/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@cascadia-testnet.rpc.kjnodes.com:155659\"|" $HOME/.cascadiad/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@cascadia-testnet.rpc.kjnodes.com:15559\"|" $HOME/.cascadiad/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"7aCC\"|" $HOME/.cascadiad/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/.cascadiad/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:155658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:155657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:155060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:155656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":155660\"%" $HOME/.cascadiad/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:155317\"%; s%^address = \":8080\"%address = \":155080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:155090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:155091\"%; s%:8545%:155545%; s%:8546%:155546%; s%:6065%:155065%" $HOME/.cascadiad/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:15558\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:15557\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:15560\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:15556\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":15566\"%" $HOME/.cascadiad/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:15517\"%; s%^address = \":8080\"%address = \":15580\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:15590\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:15591\"%; s%:8545%:15545%; s%:8546%:15546%; s%:6065%:15565%" $HOME/.cascadiad/config/app.toml
 ```
 
 ### Download latest chain snapshot

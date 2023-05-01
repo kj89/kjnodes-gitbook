@@ -20,20 +20,20 @@ Subscribe to our free [🤖 Testnet Proposal Bot](https://t.me/kjnodes_testnet_p
 
 * api: [https://teritori-testnet.api.kjnodes.com](https://teritori-testnet.api.kjnodes.com)
 * rpc: [https://teritori-testnet.rpc.kjnodes.com](https://teritori-testnet.rpc.kjnodes.com)
-* grpc: teritori-testnet.grpc.kjnodes.com:119090
+* grpc: teritori-testnet.grpc.kjnodes.com:11990
 
 ## Peering
 
 **state-sync**
 
 ```text
-d5519e378247dfb61dfe90652d1fe3e2b3005a5b@teritori-testnet.rpc.kjnodes.com:119656
+d5519e378247dfb61dfe90652d1fe3e2b3005a5b@teritori-testnet.rpc.kjnodes.com:11956
 ```
 
 **seed-node**
 
 ```text
-3f472746f46493309650e5a033076689996c8881@teritori-testnet.rpc.kjnodes.com:119659
+3f472746f46493309650e5a033076689996c8881@teritori-testnet.rpc.kjnodes.com:11959
 ```
 
 **addrbook**
