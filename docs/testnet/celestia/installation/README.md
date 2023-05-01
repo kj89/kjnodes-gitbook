@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/celestia.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: blockspacerace-0 | **Latest Version Tag**: v0.12.1 | **Custom Port**: 20
+**Chain ID**: blockspacerace-0 | **Latest Version Tag**: v0.12.1 | **Custom Port**: 120
 
 ### Setup validator name
 
@@ -96,7 +96,7 @@ sudo systemctl enable celestia-appd
 # Set node configuration
 celestia-appd config chain-id blockspacerace-0
 celestia-appd config keyring-backend test
-celestia-appd config node tcp://localhost:20657
+celestia-appd config node tcp://localhost:120657
 
 # Initialize the node
 celestia-appd init $MONIKER --chain-id blockspacerace-0
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/celestia-testnet/genesis.json > $HOME/.ce
 curl -Ls https://snapshots.kjnodes.com/celestia-testnet/addrbook.json > $HOME/.celestia-app/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@celestia-testnet.rpc.kjnodes.com:20659\"|" $HOME/.celestia-app/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@celestia-testnet.rpc.kjnodes.com:120659\"|" $HOME/.celestia-app/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.005utia\"|" $HOME/.celestia-app/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/.celestia-app/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:20658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:20657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:20060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:20656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":20660\"%" $HOME/.celestia-app/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:20317\"%; s%^address = \":8080\"%address = \":20080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:20090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:20091\"%; s%:8545%:20545%; s%:8546%:20546%; s%:6065%:20065%" $HOME/.celestia-app/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:120658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:120657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:120060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:120656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":120660\"%" $HOME/.celestia-app/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:120317\"%; s%^address = \":8080\"%address = \":120080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:120090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:120091\"%; s%:8545%:120545%; s%:8546%:120546%; s%:6065%:120065%" $HOME/.celestia-app/config/app.toml
 ```
 
 ### Download latest chain snapshot
@@ -175,11 +175,11 @@ Once you start the Bridge Node, a wallet key will be generated for you. You will
 celestia bridge init \
   --keyring.accname bridge-wallet \
   --core.ip localhost \
-  --core.rpc.port 20657 \
-  --core.grpc.port 20090 \
+  --core.rpc.port 120657 \
+  --core.grpc.port 120090 \
   --p2p.network blockspacerace \
-  --rpc.port 20658 \
-  --gateway.port 20659
+  --rpc.port 120658 \
+  --gateway.port 120659
 ```
 
 ### Create service
@@ -194,11 +194,11 @@ User=$USER
 ExecStart=$(which celestia) bridge start \\
 --keyring.accname bridge-wallet \\
 --core.ip localhost \\
---core.rpc.port 20657 \\
---core.grpc.port 20090 \\
+--core.rpc.port 120657 \\
+--core.grpc.port 120090 \\
 --p2p.network blockspacerace \\
---rpc.port 20658 \\
---gateway.port 20659 \\
+--rpc.port 120658 \\
+--gateway.port 120659 \\
 --metrics.tls=false \\
 --metrics \\
 --metrics.endpoint otel.celestia.tools:4318 
@@ -228,7 +228,7 @@ journalctl -fu celestia-bridge -o cat
 ### Get Bridge Node ID
 ```bash
 AUTH_TOKEN=$(celestia bridge auth admin --p2p.network blockspacerace)
-curl -s -X POST -H "Authorization: Bearer $AUTH_TOKEN" -H 'Content-Type: application/json' -d '{"jsonrpc":"2.0","id":0,"method":"p2p.Info","params":[]}' http://localhost:20658 | jq -r .result.ID
+curl -s -X POST -H "Authorization: Bearer $AUTH_TOKEN" -H 'Content-Type: application/json' -d '{"jsonrpc":"2.0","id":0,"method":"p2p.Info","params":[]}' http://localhost:120658 | jq -r .result.ID
 ```
 
 ### Get Bridge node key

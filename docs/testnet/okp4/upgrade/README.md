@@ -6,7 +6,7 @@ description: Prepare for and the upcomming chain upgrade using Cosmovisor.
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/okp4.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: okp4-nemeton-1 | **Latest Version Tag**: v4.1.0 | **Custom Port**: 36
+**Chain ID**: okp4-nemeton-1 | **Latest Version Tag**: v4.1.0 | **Custom Port**: 136
 
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.

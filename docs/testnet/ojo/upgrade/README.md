@@ -6,7 +6,7 @@ description: Prepare for and the upcomming chain upgrade using Cosmovisor.
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/ojo.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: ojo-devnet | **Latest Version Tag**: v0.1.2 | **Custom Port**: 50
+**Chain ID**: ojo-devnet | **Latest Version Tag**: v0.1.2 | **Custom Port**: 150
 
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.

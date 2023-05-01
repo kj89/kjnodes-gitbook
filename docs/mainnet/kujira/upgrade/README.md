@@ -6,7 +6,7 @@ description: Prepare for and the upcomming chain upgrade using Cosmovisor.
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/kujira.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: kaiyo-1 | **Latest Version Tag**: v0.8.4-mainnet | **Custom Port**: 13
+**Chain ID**: kaiyo-1 | **Latest Version Tag**: v0.8.4-mainnet | **Custom Port**: 113
 
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.

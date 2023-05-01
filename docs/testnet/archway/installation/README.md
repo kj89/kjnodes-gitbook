@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/archway.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: constantine-2 | **Latest Version Tag**: v0.4.0 | **Custom Port**: 56
+**Chain ID**: constantine-2 | **Latest Version Tag**: v0.4.0 | **Custom Port**: 156
 
 ### Setup validator name
 
@@ -96,7 +96,7 @@ sudo systemctl enable archwayd
 # Set node configuration
 archwayd config chain-id constantine-2
 archwayd config keyring-backend test
-archwayd config node tcp://localhost:56657
+archwayd config node tcp://localhost:156657
 
 # Initialize the node
 archwayd init $MONIKER --chain-id constantine-2
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/archway-testnet/genesis.json > $HOME/.arc
 curl -Ls https://snapshots.kjnodes.com/archway-testnet/addrbook.json > $HOME/.archway/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@archway-testnet.rpc.kjnodes.com:56659\"|" $HOME/.archway/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@archway-testnet.rpc.kjnodes.com:156659\"|" $HOME/.archway/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0uconst\"|" $HOME/.archway/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/.archway/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:56658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:56657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:56060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:56656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":56660\"%" $HOME/.archway/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:56317\"%; s%^address = \":8080\"%address = \":56080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:56090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:56091\"%; s%:8545%:56545%; s%:8546%:56546%; s%:6065%:56065%" $HOME/.archway/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:156658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:156657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:156060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:156656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":156660\"%" $HOME/.archway/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:156317\"%; s%^address = \":8080\"%address = \":156080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:156090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:156091\"%; s%:8545%:156545%; s%:8546%:156546%; s%:6065%:156065%" $HOME/.archway/config/app.toml
 ```
 
 ### Download latest chain snapshot

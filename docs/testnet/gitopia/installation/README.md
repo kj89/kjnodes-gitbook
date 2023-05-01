@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/gitopia.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: gitopia-janus-testnet-2 | **Latest Version Tag**: v1.2.0 | **Custom Port**: 41
+**Chain ID**: gitopia-janus-testnet-2 | **Latest Version Tag**: v1.2.0 | **Custom Port**: 141
 
 ### Setup validator name
 
@@ -102,7 +102,7 @@ sudo systemctl enable gitopiad
 # Set node configuration
 gitopiad config chain-id gitopia-janus-testnet-2
 gitopiad config keyring-backend test
-gitopiad config node tcp://localhost:41657
+gitopiad config node tcp://localhost:141657
 
 # Initialize the node
 gitopiad init $MONIKER --chain-id gitopia-janus-testnet-2
@@ -112,7 +112,7 @@ curl -Ls https://snapshots.kjnodes.com/gitopia-testnet/genesis.json > $HOME/.git
 curl -Ls https://snapshots.kjnodes.com/gitopia-testnet/addrbook.json > $HOME/.gitopia/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@gitopia-testnet.rpc.kjnodes.com:41659\"|" $HOME/.gitopia/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@gitopia-testnet.rpc.kjnodes.com:141659\"|" $HOME/.gitopia/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.001utlore\"|" $HOME/.gitopia/config/app.toml
@@ -126,8 +126,8 @@ sed -i \
   $HOME/.gitopia/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:41658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:41657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:41060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:41656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":41660\"%" $HOME/.gitopia/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:41317\"%; s%^address = \":8080\"%address = \":41080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:41090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:41091\"%; s%:8545%:41545%; s%:8546%:41546%; s%:6065%:41065%" $HOME/.gitopia/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:141658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:141657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:141060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:141656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":141660\"%" $HOME/.gitopia/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:141317\"%; s%^address = \":8080\"%address = \":141080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:141090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:141091\"%; s%:8545%:141545%; s%:8546%:141546%; s%:6065%:141065%" $HOME/.gitopia/config/app.toml
 ```
 
 ### Download latest chain snapshot

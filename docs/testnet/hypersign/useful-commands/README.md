@@ -74,7 +74,7 @@ hid-noded tx staking create-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
---node=tcp://localhost:31657 \
+--node=tcp://localhost:131657 \
 -y
 ```
 
@@ -91,14 +91,14 @@ hid-noded tx staking edit-validator \
 --from=wallet \
 --gas-adjustment=1.4 \
 --gas=auto \
---node=tcp://localhost:31657 \
+--node=tcp://localhost:131657 \
 -y
 ```
 
 #### Unjail validator
 
 ```bash
-hid-noded tx slashing unjail --from wallet --chain-id jagrat --gas-adjustment 1.4 --gas auto --node=tcp://localhost:31657 -y
+hid-noded tx slashing unjail --from wallet --chain-id jagrat --gas-adjustment 1.4 --gas auto --node=tcp://localhost:131657 -y
 ```
 
 #### Jail reason
@@ -130,37 +130,37 @@ hid-noded q staking validator $(hid-noded keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-hid-noded tx distribution withdraw-all-rewards --from wallet --chain-id jagrat --gas-adjustment 1.4 --gas auto --node=tcp://localhost:31657 -y
+hid-noded tx distribution withdraw-all-rewards --from wallet --chain-id jagrat --gas-adjustment 1.4 --gas auto --node=tcp://localhost:131657 -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-hid-noded tx distribution withdraw-rewards $(hid-noded keys show wallet --bech val -a) --commission --from wallet --chain-id jagrat --gas-adjustment 1.4 --gas auto --node=tcp://localhost:31657 -y
+hid-noded tx distribution withdraw-rewards $(hid-noded keys show wallet --bech val -a) --commission --from wallet --chain-id jagrat --gas-adjustment 1.4 --gas auto --node=tcp://localhost:131657 -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-hid-noded tx staking delegate $(hid-noded keys show wallet --bech val -a) 1000000uhid --from wallet --chain-id jagrat --gas-adjustment 1.4 --gas auto --node=tcp://localhost:31657 -y
+hid-noded tx staking delegate $(hid-noded keys show wallet --bech val -a) 1000000uhid --from wallet --chain-id jagrat --gas-adjustment 1.4 --gas auto --node=tcp://localhost:131657 -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-hid-noded tx staking delegate <TO_VALOPER_ADDRESS> 1000000uhid --from wallet --chain-id jagrat --gas-adjustment 1.4 --gas auto --node=tcp://localhost:31657 -y
+hid-noded tx staking delegate <TO_VALOPER_ADDRESS> 1000000uhid --from wallet --chain-id jagrat --gas-adjustment 1.4 --gas auto --node=tcp://localhost:131657 -y
 ```
 
 #### Redelegate tokens to another validator
 
 ```bash
-hid-noded tx staking redelegate $(hid-noded keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000uhid --from wallet --chain-id jagrat --gas-adjustment 1.4 --gas auto --node=tcp://localhost:31657 -y
+hid-noded tx staking redelegate $(hid-noded keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000uhid --from wallet --chain-id jagrat --gas-adjustment 1.4 --gas auto --node=tcp://localhost:131657 -y
 ```
 
 #### Unbond tokens from your validator
 
 ```bash
-hid-noded tx staking unbond $(hid-noded keys show wallet --bech val -a) 1000000uhid --from wallet --chain-id jagrat --gas-adjustment 1.4 --gas auto --node=tcp://localhost:31657 -y
+hid-noded tx staking unbond $(hid-noded keys show wallet --bech val -a) 1000000uhid --from wallet --chain-id jagrat --gas-adjustment 1.4 --gas auto --node=tcp://localhost:131657 -y
 ```
 
 #### Send tokens to the wallet
@@ -186,25 +186,25 @@ hid-noded query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-hid-noded tx gov vote 1 yes --from wallet --chain-id jagrat --gas-adjustment 1.4 --gas auto --node=tcp://localhost:31657 -y
+hid-noded tx gov vote 1 yes --from wallet --chain-id jagrat --gas-adjustment 1.4 --gas auto --node=tcp://localhost:131657 -y
 ```
 
 #### Vote 'No'
 
 ```bash
-hid-noded tx gov vote 1 no --from wallet --chain-id jagrat --gas-adjustment 1.4 --gas auto --node=tcp://localhost:31657 -y
+hid-noded tx gov vote 1 no --from wallet --chain-id jagrat --gas-adjustment 1.4 --gas auto --node=tcp://localhost:131657 -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-hid-noded tx gov vote 1 abstain --from wallet --chain-id jagrat --gas-adjustment 1.4 --gas auto --node=tcp://localhost:31657 -y
+hid-noded tx gov vote 1 abstain --from wallet --chain-id jagrat --gas-adjustment 1.4 --gas auto --node=tcp://localhost:131657 -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-hid-noded tx gov vote 1 NoWithVeto --from wallet --chain-id jagrat --gas-adjustment 1.4 --gas auto --node=tcp://localhost:31657 -y
+hid-noded tx gov vote 1 NoWithVeto --from wallet --chain-id jagrat --gas-adjustment 1.4 --gas auto --node=tcp://localhost:131657 -y
 ```
 
 ## ⚡️ Utility
@@ -271,7 +271,7 @@ echo $(hid-noded tendermint show-node-id)'@'$(curl -s ifconfig.me)':'$(cat $HOME
 #### Get live peers
 
 ```bash
-curl -sS http://localhost:31657/net_info | jq -r '.result.peers[] | "\(.node_info.id)@\(.remote_ip):\(.node_info.listen_addr)"' | awk -F ':' '{print $1":"$(NF)}'
+curl -sS http://localhost:131657/net_info | jq -r '.result.peers[] | "\(.node_info.id)@\(.remote_ip):\(.node_info.listen_addr)"' | awk -F ':' '{print $1":"$(NF)}'
 ```
 
 #### Set minimum gas price

@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/paloma.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: messenger | **Latest Version Tag**: v0.11.6 | **Custom Port**: 10
+**Chain ID**: messenger | **Latest Version Tag**: v0.11.6 | **Custom Port**: 110
 
 ### Setup validator name
 
@@ -99,7 +99,7 @@ sudo systemctl enable palomad
 # Set node configuration
 palomad config chain-id messenger
 palomad config keyring-backend file
-palomad config node tcp://localhost:10657
+palomad config node tcp://localhost:110657
 
 # Initialize the node
 palomad init $MONIKER --chain-id messenger
@@ -109,7 +109,7 @@ curl -Ls https://snapshots.kjnodes.com/paloma/genesis.json > $HOME/.paloma/confi
 curl -Ls https://snapshots.kjnodes.com/paloma/addrbook.json > $HOME/.paloma/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@paloma.rpc.kjnodes.com:10659\"|" $HOME/.paloma/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@paloma.rpc.kjnodes.com:110659\"|" $HOME/.paloma/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0ugrain\"|" $HOME/.paloma/config/app.toml
@@ -123,8 +123,8 @@ sed -i \
   $HOME/.paloma/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:10658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:10657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:10060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:10656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":10660\"%" $HOME/.paloma/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:10317\"%; s%^address = \":8080\"%address = \":10080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:10090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:10091\"%; s%:8545%:10545%; s%:8546%:10546%; s%:6065%:10065%" $HOME/.paloma/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:110658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:110657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:110060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:110656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":110660\"%" $HOME/.paloma/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:110317\"%; s%^address = \":8080\"%address = \":110080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:110090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:110091\"%; s%:8545%:110545%; s%:8546%:110546%; s%:6065%:110065%" $HOME/.paloma/config/app.toml
 ```
 
 ### Download latest chain snapshot

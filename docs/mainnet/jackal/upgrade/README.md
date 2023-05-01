@@ -6,7 +6,7 @@ description: Prepare for and the upcomming chain upgrade using Cosmovisor.
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/jackal.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: jackal-1 | **Latest Version Tag**: v2.0.0 | **Custom Port**: 37
+**Chain ID**: jackal-1 | **Latest Version Tag**: v2.0.0 | **Custom Port**: 137
 
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.

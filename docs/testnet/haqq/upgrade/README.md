@@ -6,7 +6,7 @@ description: Prepare for and the upcomming chain upgrade using Cosmovisor.
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/haqq.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: haqq_54211-3 | **Latest Version Tag**: v1.3.1 | **Custom Port**: 35
+**Chain ID**: haqq_54211-3 | **Latest Version Tag**: v1.3.1 | **Custom Port**: 135
 
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.

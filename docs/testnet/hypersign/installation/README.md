@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/hypersign.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: jagrat | **Latest Version Tag**: v0.1.7 | **Custom Port**: 31
+**Chain ID**: jagrat | **Latest Version Tag**: v0.1.7 | **Custom Port**: 131
 
 ### Setup validator name
 
@@ -101,7 +101,7 @@ curl -Ls https://snapshots.kjnodes.com/hypersign-testnet/genesis.json > $HOME/.h
 curl -Ls https://snapshots.kjnodes.com/hypersign-testnet/addrbook.json > $HOME/.hid-node/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@hypersign-testnet.rpc.kjnodes.com:31659\"|" $HOME/.hid-node/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@hypersign-testnet.rpc.kjnodes.com:131659\"|" $HOME/.hid-node/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0uhid\"|" $HOME/.hid-node/config/app.toml
@@ -115,8 +115,8 @@ sed -i \
   $HOME/.hid-node/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:31658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:31657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:31060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:31656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":31660\"%" $HOME/.hid-node/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:31317\"%; s%^address = \":8080\"%address = \":31080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:31090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:31091\"%; s%:8545%:31545%; s%:8546%:31546%; s%:6065%:31065%" $HOME/.hid-node/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:131658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:131657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:131060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:131656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":131660\"%" $HOME/.hid-node/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:131317\"%; s%^address = \":8080\"%address = \":131080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:131090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:131091\"%; s%:8545%:131545%; s%:8546%:131546%; s%:6065%:131065%" $HOME/.hid-node/config/app.toml
 ```
 
 ### Download latest chain snapshot

@@ -271,7 +271,7 @@ echo $(noisd tendermint show-node-id)'@'$(curl -s ifconfig.me)':'$(cat $HOME/.no
 #### Get live peers
 
 ```bash
-curl -sS http://localhost:51657/net_info | jq -r '.result.peers[] | "\(.node_info.id)@\(.remote_ip):\(.node_info.listen_addr)"' | awk -F ':' '{print $1":"$(NF)}'
+curl -sS http://localhost:151657/net_info | jq -r '.result.peers[] | "\(.node_info.id)@\(.remote_ip):\(.node_info.listen_addr)"' | awk -F ':' '{print $1":"$(NF)}'
 ```
 
 #### Set minimum gas price

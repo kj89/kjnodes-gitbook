@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/nibiru.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: nibiru-itn-1 | **Latest Version Tag**: v0.19.2 | **Custom Port**: 39
+**Chain ID**: nibiru-itn-1 | **Latest Version Tag**: v0.19.2 | **Custom Port**: 139
 
 ### Setup validator name
 
@@ -96,7 +96,7 @@ sudo systemctl enable nibid
 # Set node configuration
 nibid config chain-id nibiru-itn-1
 nibid config keyring-backend test
-nibid config node tcp://localhost:39657
+nibid config node tcp://localhost:139657
 
 # Initialize the node
 nibid init $MONIKER --chain-id nibiru-itn-1
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/nibiru-testnet/genesis.json > $HOME/.nibi
 curl -Ls https://snapshots.kjnodes.com/nibiru-testnet/addrbook.json > $HOME/.nibid/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@nibiru-testnet.rpc.kjnodes.com:39659\"|" $HOME/.nibid/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@nibiru-testnet.rpc.kjnodes.com:139659\"|" $HOME/.nibid/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.025unibi\"|" $HOME/.nibid/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/.nibid/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:39658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:39657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:39060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:39656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":39660\"%" $HOME/.nibid/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:39317\"%; s%^address = \":8080\"%address = \":39080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:39090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:39091\"%; s%:8545%:39545%; s%:8546%:39546%; s%:6065%:39065%" $HOME/.nibid/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:139658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:139657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:139060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:139656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":139660\"%" $HOME/.nibid/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:139317\"%; s%^address = \":8080\"%address = \":139080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:139090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:139091\"%; s%:8545%:139545%; s%:8546%:139546%; s%:6065%:139065%" $HOME/.nibid/config/app.toml
 ```
 
 ### Download latest chain snapshot

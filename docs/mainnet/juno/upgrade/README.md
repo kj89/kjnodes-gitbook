@@ -6,7 +6,7 @@ description: Prepare for and the upcomming chain upgrade using Cosmovisor.
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/juno.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: juno-1 | **Latest Version Tag**: v14.0.0 | **Custom Port**: 57
+**Chain ID**: juno-1 | **Latest Version Tag**: v14.0.0 | **Custom Port**: 157
 
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.

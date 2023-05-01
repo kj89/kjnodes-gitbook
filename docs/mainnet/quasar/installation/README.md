@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/quasar.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: quasar-1 | **Latest Version Tag**: v0.1.0 | **Custom Port**: 48
+**Chain ID**: quasar-1 | **Latest Version Tag**: v0.1.0 | **Custom Port**: 148
 
 ### Setup validator name
 
@@ -96,7 +96,7 @@ sudo systemctl enable quasarnoded
 # Set node configuration
 quasarnoded config chain-id quasar-1
 quasarnoded config keyring-backend file
-quasarnoded config node tcp://localhost:48657
+quasarnoded config node tcp://localhost:148657
 
 # Initialize the node
 quasarnoded init $MONIKER --chain-id quasar-1
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/quasar/genesis.json > $HOME/.quasarnode/c
 curl -Ls https://snapshots.kjnodes.com/quasar/addrbook.json > $HOME/.quasarnode/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@quasar.rpc.kjnodes.com:48659\"|" $HOME/.quasarnode/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@quasar.rpc.kjnodes.com:148659\"|" $HOME/.quasarnode/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.01ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B,0.01ibc/FA0006F056DB6719B8C16C551FC392B62F5729978FC0B125AC9A432DBB2AA1A5,0.01ibc/FA7775734CC73176B7425910DE001A1D2AD9B6D9E93129A5D0750EAD13E4E63A\"|" $HOME/.quasarnode/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/.quasarnode/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:48658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:48657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:48060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:48656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":48660\"%" $HOME/.quasarnode/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:48317\"%; s%^address = \":8080\"%address = \":48080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:48090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:48091\"%; s%:8545%:48545%; s%:8546%:48546%; s%:6065%:48065%" $HOME/.quasarnode/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:148658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:148657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:148060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:148656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":148660\"%" $HOME/.quasarnode/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:148317\"%; s%^address = \":8080\"%address = \":148080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:148090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:148091\"%; s%:8545%:148545%; s%:8546%:148546%; s%:6065%:148065%" $HOME/.quasarnode/config/app.toml
 ```
 
 ### Download latest chain snapshot

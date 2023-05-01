@@ -22,20 +22,20 @@ Subscribe to our free [🤖 Mainnet Proposal Bot](https://t.me/kjnodes_proposal_
 
 * api: [https://bitcanna.api.kjnodes.com](https://bitcanna.api.kjnodes.com)
 * rpc: [https://bitcanna.rpc.kjnodes.com](https://bitcanna.rpc.kjnodes.com)
-* grpc: bitcanna.grpc.kjnodes.com:42090
+* grpc: bitcanna.grpc.kjnodes.com:142090
 
 ## Peering
 
 **state-sync**
 
 ```text
-d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@bitcanna.rpc.kjnodes.com:42656
+d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@bitcanna.rpc.kjnodes.com:142656
 ```
 
 **seed-node**
 
 ```text
-400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@bitcanna.rpc.kjnodes.com:42659
+400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@bitcanna.rpc.kjnodes.com:142659
 ```
 
 **addrbook**
@@ -45,6 +45,6 @@ curl -Ls https://snapshots.kjnodes.com/bitcanna/addrbook.json > $HOME/.bcna/conf
 
 **live-peers** (10)
 ```bash
-peers="7c00beb4956bc40cd33ced6e2c2ffe07d4fa32e7@95.216.242.82:36656,23671067d0fd40aec523290585c7d8e91034a771@65.108.43.170:26656,dd4d3c0de38aa0575436c34c237b33bc0dda3ef2@142.132.158.93:13056,0a658df9d9fab096983a12e6f878e87281a15ce6@5.189.128.119:27656,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:42656,d7322625044ad733bce4178dc397b2b9b5f68b41@43.153.27.130:26656,cb9741ce22ab5f615913ac11b211c3c7f58dee71@107.191.36.154:26656,b212d5740b2e11e54f56b072dc13b6134650cfb5@169.155.168.54:26656,89757803f40da51678451735445ad40d5b15e059@169.155.168.66:26656,a7d96dc929824613315dcc1c90fee119f28cc51f@134.65.193.132:26656"
+peers="23671067d0fd40aec523290585c7d8e91034a771@65.108.43.170:26656,3b893f134e9af03e94c5185006bf056f4ec25250@135.148.169.198:13056,5bb0a042e8a4ee28bcda1e26148e57787e75a42e@23.88.69.22:28466,b587bf827b5f680c417601b536ffbd505c88bb07@193.70.45.106:13056,dd4d3c0de38aa0575436c34c237b33bc0dda3ef2@142.132.158.93:13056,4dabde84771e8689403ce7c8b76d27e555ab2f00@65.21.136.170:50656,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:42656,9532a13b05e5f68f2ca01f90b3d1ba9a762af817@65.108.131.190:21956,732056d0099fe653391c7044d6e735ed18c13cd8@139.144.233.120:26456,5af4f132d1c63cbe9d828d58522fdbb4bd508880@136.244.29.116:31656"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.bcna/config/config.toml
 ```

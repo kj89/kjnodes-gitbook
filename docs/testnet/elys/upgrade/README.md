@@ -6,7 +6,7 @@ description: Prepare for and the upcomming chain upgrade using Cosmovisor.
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/elys.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: elystestnet-1 | **Latest Version Tag**: v0.4.0 | **Custom Port**: 53
+**Chain ID**: elystestnet-1 | **Latest Version Tag**: v0.4.0 | **Custom Port**: 153
 
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.

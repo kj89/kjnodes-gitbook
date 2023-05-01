@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/althea.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: althea_7357-1 | **Latest Version Tag**: v0.3.2 | **Custom Port**: 52
+**Chain ID**: althea_7357-1 | **Latest Version Tag**: v0.3.2 | **Custom Port**: 152
 
 ### Setup validator name
 
@@ -96,7 +96,7 @@ sudo systemctl enable althea
 # Set node configuration
 althea config chain-id althea_7357-1
 althea config keyring-backend test
-althea config node tcp://localhost:52657
+althea config node tcp://localhost:152657
 
 # Initialize the node
 althea init $MONIKER --chain-id althea_7357-1
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/althea-testnet/genesis.json > $HOME/.alth
 curl -Ls https://snapshots.kjnodes.com/althea-testnet/addrbook.json > $HOME/.althea/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@althea-testnet.rpc.kjnodes.com:52659\"|" $HOME/.althea/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@althea-testnet.rpc.kjnodes.com:152659\"|" $HOME/.althea/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0ualthea\"|" $HOME/.althea/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/.althea/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:52658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:52657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:52060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:52656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":52660\"%" $HOME/.althea/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:52317\"%; s%^address = \":8080\"%address = \":52080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:52090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:52091\"%; s%:8545%:52545%; s%:8546%:52546%; s%:6065%:52065%" $HOME/.althea/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:152658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:152657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:152060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:152656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":152660\"%" $HOME/.althea/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:152317\"%; s%^address = \":8080\"%address = \":152080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:152090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:152091\"%; s%:8545%:152545%; s%:8546%:152546%; s%:6065%:152065%" $HOME/.althea/config/app.toml
 ```
 
 ### Download latest chain snapshot

@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/mars.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: mars-1 | **Latest Version Tag**: v1.0.0 | **Custom Port**: 45
+**Chain ID**: mars-1 | **Latest Version Tag**: v1.0.0 | **Custom Port**: 145
 
 ### Setup validator name
 
@@ -96,7 +96,7 @@ sudo systemctl enable marsd
 # Set node configuration
 marsd config chain-id mars-1
 marsd config keyring-backend file
-marsd config node tcp://localhost:45657
+marsd config node tcp://localhost:145657
 
 # Initialize the node
 marsd init $MONIKER --chain-id mars-1
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/mars/genesis.json > $HOME/.mars/config/ge
 curl -Ls https://snapshots.kjnodes.com/mars/addrbook.json > $HOME/.mars/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@mars.rpc.kjnodes.com:45659\"|" $HOME/.mars/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@mars.rpc.kjnodes.com:145659\"|" $HOME/.mars/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0umars\"|" $HOME/.mars/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/.mars/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:45658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:45657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:45060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:45656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":45660\"%" $HOME/.mars/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:45317\"%; s%^address = \":8080\"%address = \":45080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:45090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:45091\"%; s%:8545%:45545%; s%:8546%:45546%; s%:6065%:45065%" $HOME/.mars/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:145658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:145657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:145060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:145656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":145660\"%" $HOME/.mars/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:145317\"%; s%^address = \":8080\"%address = \":145080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:145090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:145091\"%; s%:8545%:145545%; s%:8546%:145546%; s%:6065%:145065%" $HOME/.mars/config/app.toml
 ```
 
 ### Download latest chain snapshot

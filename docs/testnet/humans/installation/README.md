@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/humans.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: humans_3000-1 | **Latest Version Tag**: v0.1.0 | **Custom Port**: 22
+**Chain ID**: humans_3000-1 | **Latest Version Tag**: v0.1.0 | **Custom Port**: 122
 
 ### Setup validator name
 
@@ -96,7 +96,7 @@ sudo systemctl enable humansd
 # Set node configuration
 humansd config chain-id humans_3000-1
 humansd config keyring-backend test
-humansd config node tcp://localhost:22657
+humansd config node tcp://localhost:122657
 
 # Initialize the node
 humansd init $MONIKER --chain-id humans_3000-1
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/humans-testnet/genesis.json > $HOME/.huma
 curl -Ls https://snapshots.kjnodes.com/humans-testnet/addrbook.json > $HOME/.humansd/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@humans-testnet.rpc.kjnodes.com:22659\"|" $HOME/.humansd/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@humans-testnet.rpc.kjnodes.com:122659\"|" $HOME/.humansd/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0aheart\"|" $HOME/.humansd/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/.humansd/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:22658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:22657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:22060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:22656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":22660\"%" $HOME/.humansd/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:22317\"%; s%^address = \":8080\"%address = \":22080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:22090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:22091\"%; s%:8545%:22545%; s%:8546%:22546%; s%:6065%:22065%" $HOME/.humansd/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:122658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:122657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:122060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:122656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":122660\"%" $HOME/.humansd/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:122317\"%; s%^address = \":8080\"%address = \":122080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:122090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:122091\"%; s%:8545%:122545%; s%:8546%:122546%; s%:6065%:122065%" $HOME/.humansd/config/app.toml
 ```
 
 ### Download latest chain snapshot

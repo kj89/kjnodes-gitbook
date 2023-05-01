@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/ojo.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: ojo-devnet | **Latest Version Tag**: v0.1.2 | **Custom Port**: 50
+**Chain ID**: ojo-devnet | **Latest Version Tag**: v0.1.2 | **Custom Port**: 150
 
 ### Setup validator name
 
@@ -96,7 +96,7 @@ sudo systemctl enable ojod
 # Set node configuration
 ojod config chain-id ojo-devnet
 ojod config keyring-backend test
-ojod config node tcp://localhost:50657
+ojod config node tcp://localhost:150657
 
 # Initialize the node
 ojod init $MONIKER --chain-id ojo-devnet
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/ojo-testnet/genesis.json > $HOME/.ojo/con
 curl -Ls https://snapshots.kjnodes.com/ojo-testnet/addrbook.json > $HOME/.ojo/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@ojo-testnet.rpc.kjnodes.com:50659\"|" $HOME/.ojo/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@ojo-testnet.rpc.kjnodes.com:150659\"|" $HOME/.ojo/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0uojo\"|" $HOME/.ojo/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/.ojo/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:50658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:50657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:50060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:50656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":50660\"%" $HOME/.ojo/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:50317\"%; s%^address = \":8080\"%address = \":50080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:50090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:50091\"%; s%:8545%:50545%; s%:8546%:50546%; s%:6065%:50065%" $HOME/.ojo/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:150658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:150657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:150060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:150656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":150660\"%" $HOME/.ojo/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:150317\"%; s%^address = \":8080\"%address = \":150080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:150090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:150091\"%; s%:8545%:150545%; s%:8546%:150546%; s%:6065%:150065%" $HOME/.ojo/config/app.toml
 ```
 
 ### Download latest chain snapshot
@@ -176,8 +176,8 @@ ojod keys add pricefeeder-wallet --keyring-backend os
 ```
 export KEYRING="os"
 export LISTEN_PORT=7172
-export RPC_PORT=50657
-export GRPC_PORT=50090
+export RPC_PORT=150657
+export GRPC_PORT=150090
 export VALIDATOR_ADDRESS=$(ojod keys show wallet --bech val -a)
 export MAIN_WALLET_ADDRESS=$(ojod keys show wallet -a)
 export PRICEFEEDER_ADDRESS=$(echo -e $KEYRING_PASSWORD | ojod keys show pricefeeder-wallet --keyring-backend os -a)

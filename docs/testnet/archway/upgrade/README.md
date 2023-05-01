@@ -6,7 +6,7 @@ description: Prepare for and the upcomming chain upgrade using Cosmovisor.
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/archway.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: constantine-2 | **Latest Version Tag**: v0.4.0 | **Custom Port**: 56
+**Chain ID**: constantine-2 | **Latest Version Tag**: v0.4.0 | **Custom Port**: 156
 
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.

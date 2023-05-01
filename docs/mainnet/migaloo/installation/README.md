@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/migaloo.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: migaloo-1 | **Latest Version Tag**: v2.0.2 | **Custom Port**: 49
+**Chain ID**: migaloo-1 | **Latest Version Tag**: v2.0.2 | **Custom Port**: 149
 
 ### Setup validator name
 
@@ -96,7 +96,7 @@ sudo systemctl enable migalood
 # Set node configuration
 migalood config chain-id migaloo-1
 migalood config keyring-backend file
-migalood config node tcp://localhost:49657
+migalood config node tcp://localhost:149657
 
 # Initialize the node
 migalood init $MONIKER --chain-id migaloo-1
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/migaloo/genesis.json > $HOME/.migalood/co
 curl -Ls https://snapshots.kjnodes.com/migaloo/addrbook.json > $HOME/.migalood/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@migaloo.rpc.kjnodes.com:49659\"|" $HOME/.migalood/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@migaloo.rpc.kjnodes.com:149659\"|" $HOME/.migalood/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.25uwhale\"|" $HOME/.migalood/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/.migalood/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:49658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:49657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:49060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:49656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":49660\"%" $HOME/.migalood/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:49317\"%; s%^address = \":8080\"%address = \":49080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:49090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:49091\"%; s%:8545%:49545%; s%:8546%:49546%; s%:6065%:49065%" $HOME/.migalood/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:149658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:149657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:149060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:149656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":149660\"%" $HOME/.migalood/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:149317\"%; s%^address = \":8080\"%address = \":149080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:149090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:149091\"%; s%:8545%:149545%; s%:8546%:149546%; s%:6065%:149065%" $HOME/.migalood/config/app.toml
 ```
 
 ### Download latest chain snapshot

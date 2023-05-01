@@ -6,7 +6,7 @@ description: Prepare for and the upcomming chain upgrade using Cosmovisor.
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/cosmoshub.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: cosmoshub-4 | **Latest Version Tag**: v9.0.0 | **Custom Port**: 34
+**Chain ID**: cosmoshub-4 | **Latest Version Tag**: v9.0.0 | **Custom Port**: 134
 
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.

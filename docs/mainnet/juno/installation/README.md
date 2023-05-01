@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/juno.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: juno-1 | **Latest Version Tag**: v14.0.0 | **Custom Port**: 57
+**Chain ID**: juno-1 | **Latest Version Tag**: v14.0.0 | **Custom Port**: 157
 
 ### Setup validator name
 
@@ -96,7 +96,7 @@ sudo systemctl enable junod
 # Set node configuration
 junod config chain-id juno-1
 junod config keyring-backend file
-junod config node tcp://localhost:57657
+junod config node tcp://localhost:157657
 
 # Initialize the node
 junod init $MONIKER --chain-id juno-1
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/juno/genesis.json > $HOME/.juno/config/ge
 curl -Ls https://snapshots.kjnodes.com/juno/addrbook.json > $HOME/.juno/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@juno.rpc.kjnodes.com:57659\"|" $HOME/.juno/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@juno.rpc.kjnodes.com:157659\"|" $HOME/.juno/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0ujuno\"|" $HOME/.juno/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/.juno/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:57658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:57657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:57060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:57656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":57660\"%" $HOME/.juno/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:57317\"%; s%^address = \":8080\"%address = \":57080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:57090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:57091\"%; s%:8545%:57545%; s%:8546%:57546%; s%:6065%:57065%" $HOME/.juno/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:157658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:157657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:157060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:157656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":157660\"%" $HOME/.juno/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:157317\"%; s%^address = \":8080\"%address = \":157080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:157090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:157091\"%; s%:8545%:157545%; s%:8546%:157546%; s%:6065%:157065%" $HOME/.juno/config/app.toml
 ```
 
 ### Download latest chain snapshot

@@ -6,7 +6,7 @@ description: Prepare for and the upcomming chain upgrade using Cosmovisor.
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/nolus.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: nolus-rila | **Latest Version Tag**: v0.2.2-equalize-store-heights | **Custom Port**: 43
+**Chain ID**: nolus-rila | **Latest Version Tag**: v0.2.2-equalize-store-heights | **Custom Port**: 143
 
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.

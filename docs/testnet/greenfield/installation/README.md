@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/greenfield.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: greenfield_5600-1 | **Latest Version Tag**: v0.1.1 | **Custom Port**: 54
+**Chain ID**: greenfield_5600-1 | **Latest Version Tag**: v0.1.1 | **Custom Port**: 154
 
 ### Setup validator name
 
@@ -96,7 +96,7 @@ sudo systemctl enable gnfd
 # Set node configuration
 gnfd config chain-id greenfield_5600-1
 gnfd config keyring-backend test
-gnfd config node tcp://localhost:54657
+gnfd config node tcp://localhost:154657
 
 # Initialize the node
 gnfd init $MONIKER --chain-id greenfield_5600-1
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/greenfield-testnet/genesis.json > $HOME/.
 curl -Ls https://snapshots.kjnodes.com/greenfield-testnet/addrbook.json > $HOME/.gnfd/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@greenfield-testnet.rpc.kjnodes.com:54659\"|" $HOME/.gnfd/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@greenfield-testnet.rpc.kjnodes.com:154659\"|" $HOME/.gnfd/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"5000000000BNB\"|" $HOME/.gnfd/config/app.toml
@@ -123,8 +123,8 @@ sed -i \
   $HOME/.gnfd/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:54658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:54657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:54060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:54656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":54660\"%" $HOME/.gnfd/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:54317\"%; s%^address = \":8080\"%address = \":54080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:54090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:54091\"%; s%:8545%:54545%; s%:8546%:54546%; s%:6065%:54065%" $HOME/.gnfd/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:154658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:154657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:154060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:154656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":154660\"%" $HOME/.gnfd/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:154317\"%; s%^address = \":8080\"%address = \":154080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:154090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:154091\"%; s%:8545%:154545%; s%:8546%:154546%; s%:6065%:154065%" $HOME/.gnfd/config/app.toml
 ```
 
 ### Download latest chain snapshot

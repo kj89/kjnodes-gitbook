@@ -20,20 +20,20 @@ Subscribe to our free [🤖 Testnet Proposal Bot](https://t.me/kjnodes_testnet_p
 
 * api: [https://greenfield-testnet.api.kjnodes.com](https://greenfield-testnet.api.kjnodes.com)
 * rpc: [https://greenfield-testnet.rpc.kjnodes.com](https://greenfield-testnet.rpc.kjnodes.com)
-* grpc: greenfield-testnet.grpc.kjnodes.com:54090
+* grpc: greenfield-testnet.grpc.kjnodes.com:154090
 
 ## Peering
 
 **state-sync**
 
 ```text
-d5519e378247dfb61dfe90652d1fe3e2b3005a5b@greenfield-testnet.rpc.kjnodes.com:54656
+d5519e378247dfb61dfe90652d1fe3e2b3005a5b@greenfield-testnet.rpc.kjnodes.com:154656
 ```
 
 **seed-node**
 
 ```text
-3f472746f46493309650e5a033076689996c8881@greenfield-testnet.rpc.kjnodes.com:54659
+3f472746f46493309650e5a033076689996c8881@greenfield-testnet.rpc.kjnodes.com:154659
 ```
 
 **addrbook**

@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/defund.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: orbit-alpha-1 | **Latest Version Tag**: v0.2.6 | **Custom Port**: 40
+**Chain ID**: orbit-alpha-1 | **Latest Version Tag**: v0.2.6 | **Custom Port**: 140
 
 ### Setup validator name
 
@@ -96,7 +96,7 @@ sudo systemctl enable defundd
 # Set node configuration
 defundd config chain-id orbit-alpha-1
 defundd config keyring-backend test
-defundd config node tcp://localhost:40657
+defundd config node tcp://localhost:140657
 
 # Initialize the node
 defundd init $MONIKER --chain-id orbit-alpha-1
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/defund-testnet/genesis.json > $HOME/.defu
 curl -Ls https://snapshots.kjnodes.com/defund-testnet/addrbook.json > $HOME/.defund/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@defund-testnet.rpc.kjnodes.com:40659\"|" $HOME/.defund/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@defund-testnet.rpc.kjnodes.com:140659\"|" $HOME/.defund/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0ufetf\"|" $HOME/.defund/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/.defund/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:40658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:40657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:40060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:40656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":40660\"%" $HOME/.defund/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:40317\"%; s%^address = \":8080\"%address = \":40080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:40090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:40091\"%; s%:8545%:40545%; s%:8546%:40546%; s%:6065%:40065%" $HOME/.defund/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:140658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:140657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:140060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:140656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":140660\"%" $HOME/.defund/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:140317\"%; s%^address = \":8080\"%address = \":140080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:140090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:140091\"%; s%:8545%:140545%; s%:8546%:140546%; s%:6065%:140065%" $HOME/.defund/config/app.toml
 ```
 
 ### Download latest chain snapshot

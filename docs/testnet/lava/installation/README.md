@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/lava.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: lava-testnet-1 | **Latest Version Tag**: v0.9.8 | **Custom Port**: 44
+**Chain ID**: lava-testnet-1 | **Latest Version Tag**: v0.10.1 | **Custom Port**: 144
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf lava
 git clone https://github.com/lavanet/lava.git
 cd lava
-git checkout v0.9.8
+git checkout v0.10.1
 
 # Build binaries
 make build
@@ -95,7 +95,7 @@ sudo systemctl enable lavad
 # Set node configuration
 lavad config chain-id lava-testnet-1
 lavad config keyring-backend test
-lavad config node tcp://localhost:44657
+lavad config node tcp://localhost:144657
 
 # Initialize the node
 lavad init $MONIKER --chain-id lava-testnet-1
@@ -105,7 +105,7 @@ curl -Ls https://snapshots.kjnodes.com/lava-testnet/genesis.json > $HOME/.lava/c
 curl -Ls https://snapshots.kjnodes.com/lava-testnet/addrbook.json > $HOME/.lava/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@lava-testnet.rpc.kjnodes.com:44659\"|" $HOME/.lava/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@lava-testnet.rpc.kjnodes.com:144659\"|" $HOME/.lava/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0ulava\"|" $HOME/.lava/config/app.toml
@@ -119,8 +119,8 @@ sed -i \
   $HOME/.lava/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:44658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:44657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:44060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:44656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":44660\"%" $HOME/.lava/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:44317\"%; s%^address = \":8080\"%address = \":44080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:44090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:44091\"%; s%:8545%:44545%; s%:8546%:44546%; s%:6065%:44065%" $HOME/.lava/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:144658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:144657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:144060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:144656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":144660\"%" $HOME/.lava/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:144317\"%; s%^address = \":8080\"%address = \":144080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:144090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:144091\"%; s%:8545%:144545%; s%:8546%:144546%; s%:6065%:144065%" $HOME/.lava/config/app.toml
 ```
 
 ### Update chain specific configuration

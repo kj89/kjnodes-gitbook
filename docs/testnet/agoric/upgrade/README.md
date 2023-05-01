@@ -6,7 +6,7 @@ description: Prepare for and the upcomming chain upgrade using Cosmovisor.
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/agoric.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: agoric-emerynet-5 | **Latest Version Tag**: pismoC | **Custom Port**: 27
+**Chain ID**: agoric-emerynet-5 | **Latest Version Tag**: pismoC | **Custom Port**: 127
 
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.

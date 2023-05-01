@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/elys.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: elystestnet-1 | **Latest Version Tag**: v0.4.0 | **Custom Port**: 53
+**Chain ID**: elystestnet-1 | **Latest Version Tag**: v0.4.0 | **Custom Port**: 153
 
 ### Setup validator name
 
@@ -96,7 +96,7 @@ sudo systemctl enable elysd
 # Set node configuration
 elysd config chain-id elystestnet-1
 elysd config keyring-backend test
-elysd config node tcp://localhost:53657
+elysd config node tcp://localhost:153657
 
 # Initialize the node
 elysd init $MONIKER --chain-id elystestnet-1
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/elys-testnet/genesis.json > $HOME/.elys/c
 curl -Ls https://snapshots.kjnodes.com/elys-testnet/addrbook.json > $HOME/.elys/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@elys-testnet.rpc.kjnodes.com:53659\"|" $HOME/.elys/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@elys-testnet.rpc.kjnodes.com:153659\"|" $HOME/.elys/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0uelys\"|" $HOME/.elys/config/app.toml
@@ -120,8 +120,8 @@ sed -i \
   $HOME/.elys/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:53658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:53657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:53060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:53656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":53660\"%" $HOME/.elys/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:53317\"%; s%^address = \":8080\"%address = \":53080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:53090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:53091\"%; s%:8545%:53545%; s%:8546%:53546%; s%:6065%:53065%" $HOME/.elys/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:153658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:153657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:153060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:153656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":153660\"%" $HOME/.elys/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:153317\"%; s%^address = \":8080\"%address = \":153080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:153090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:153091\"%; s%:8545%:153545%; s%:8546%:153546%; s%:6065%:153065%" $HOME/.elys/config/app.toml
 ```
 
 ### Download latest chain snapshot

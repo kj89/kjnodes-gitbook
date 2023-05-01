@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/nolus.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: nolus-rila | **Latest Version Tag**: v0.2.2-equalize-store-heights | **Custom Port**: 43
+**Chain ID**: nolus-rila | **Latest Version Tag**: v0.2.2-equalize-store-heights | **Custom Port**: 143
 
 ### Setup validator name
 
@@ -96,7 +96,7 @@ sudo systemctl enable nolusd
 # Set node configuration
 nolusd config chain-id nolus-rila
 nolusd config keyring-backend test
-nolusd config node tcp://localhost:43657
+nolusd config node tcp://localhost:143657
 
 # Initialize the node
 nolusd init $MONIKER --chain-id nolus-rila
@@ -106,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/nolus-testnet/genesis.json > $HOME/.nolus
 curl -Ls https://snapshots.kjnodes.com/nolus-testnet/addrbook.json > $HOME/.nolus/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@nolus-testnet.rpc.kjnodes.com:43659\"|" $HOME/.nolus/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@nolus-testnet.rpc.kjnodes.com:143659\"|" $HOME/.nolus/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.0025unls\"|" $HOME/.nolus/config/app.toml
@@ -117,8 +117,8 @@ sed -i \
   $HOME/.nolus/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:43658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:43657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:43060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:43656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":43660\"%" $HOME/.nolus/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:43317\"%; s%^address = \":8080\"%address = \":43080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:43090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:43091\"%; s%:8545%:43545%; s%:8546%:43546%; s%:6065%:43065%" $HOME/.nolus/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:143658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:143657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:143060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:143656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":143660\"%" $HOME/.nolus/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:143317\"%; s%^address = \":8080\"%address = \":143080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:143090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:143091\"%; s%:8545%:143545%; s%:8546%:143546%; s%:6065%:143065%" $HOME/.nolus/config/app.toml
 ```
 
 ### Download latest chain snapshot
