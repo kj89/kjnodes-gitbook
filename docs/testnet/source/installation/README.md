@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/source.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: sourcechain-testnet | **Latest Version Tag**: e06b810e842e57ec8f5432c9cdd57883a69b3cee | **Custom Port**: 28
+**Chain ID**: sourcechain-testnet | **Latest Version Tag**: e06b810e842e57ec8f5432c9cdd57883a69b3cee | **Custom Port**: 128
 
 ### Setup validator name
 
@@ -32,7 +32,7 @@ sudo apt -qy upgrade
 
 ```bash
 sudo rm -rf /usr/local/go
-curl -Ls https://go.dev/dl/go1.19.5.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
+curl -Ls https://go.dev/dl/go1.19.8.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
 eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/golang.sh)
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
@@ -81,6 +81,7 @@ LimitNOFILE=65535
 Environment="DAEMON_HOME=$HOME/.source"
 Environment="DAEMON_NAME=sourced"
 Environment="UNSAFE_SKIP_BACKUP=true"
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:$HOME/.source/cosmovisor/current/bin"
 
 [Install]
 WantedBy=multi-user.target
@@ -95,7 +96,7 @@ sudo systemctl enable sourced
 # Set node configuration
 sourced config chain-id sourcechain-testnet
 sourced config keyring-backend test
-sourced config node tcp://localhost:28657
+sourced config node tcp://localhost:12857
 
 # Initialize the node
 sourced init $MONIKER --chain-id sourcechain-testnet
@@ -105,7 +106,7 @@ curl -Ls https://snapshots.kjnodes.com/source-testnet/genesis.json > $HOME/.sour
 curl -Ls https://snapshots.kjnodes.com/source-testnet/addrbook.json > $HOME/.source/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@source-testnet.rpc.kjnodes.com:28659\"|" $HOME/.source/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@source-testnet.rpc.kjnodes.com:12859\"|" $HOME/.source/config/config.toml
 
 # Set minimum gas price
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0usource\"|" $HOME/.source/config/app.toml
@@ -119,8 +120,8 @@ sed -i \
   $HOME/.source/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:28658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:28657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:28060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:28656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":28666\"%" $HOME/.source/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:28317\"%; s%^address = \":8080\"%address = \":28080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:28090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:28091\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:28545\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:28546\"%" $HOME/.source/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:12858\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:12857\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:12860\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:12856\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":12866\"%" $HOME/.source/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:12817\"%; s%^address = \":8080\"%address = \":12880\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:12890\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:12891\"%; s%:8545%:12845%; s%:8546%:12846%; s%:6065%:12865%" $HOME/.source/config/app.toml
 ```
 
 ### Download latest chain snapshot
