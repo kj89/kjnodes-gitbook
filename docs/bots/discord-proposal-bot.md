@@ -22,7 +22,7 @@ Our bot supports three workflows giving the projects oportunity to choose workfl
 
 <figure><img src="../.gitbook/assets/simple_proposals.gif" alt=""><figcaption><p>Simple Proposals example</p></figcaption></figure>
 
-2. **Proposal notifications with threads** - more advanded worflow where bot is invited to the server with set of permissions. This workflow is similar to first one, but it also adds reactions ✅  and 🧵 threads to the posts where validators can do discussions.
+2. **Proposal notifications with threads** - more advanced worflow where bot is invited to the server with set of permissions. This workflow is similar to first one, but it also adds reactions ✅  and 🧵 threads to the posts where validators can do discussions.
 
 <figure><img src="../.gitbook/assets/threaded_proposals.gif" alt=""><figcaption><p>Threaded Proposals example</p></figcaption></figure>
 
