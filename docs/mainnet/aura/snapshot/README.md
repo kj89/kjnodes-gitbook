@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **05:30 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 662282 | 2 hours | [snapshot (0.4 GB)](https://snapshots.kjnodes.com/aura/snapshot\_latest.tar.lz4) |
+| 673824 | 23 minutes | [snapshot (0.41 GB)](https://snapshots.kjnodes.com/aura/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

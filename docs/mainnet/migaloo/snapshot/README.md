@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **07:30 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 1168177 | 53 minutes | [snapshot (0.72 GB)](https://snapshots.kjnodes.com/migaloo/snapshot\_latest.tar.lz4) |
+| 1171943 | 10 hours | [snapshot (0.71 GB)](https://snapshots.kjnodes.com/migaloo/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
