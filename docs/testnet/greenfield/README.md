@@ -41,8 +41,8 @@ d5519e378247dfb61dfe90652d1fe3e2b3005a5b@greenfield-testnet.rpc.kjnodes.com:1545
 curl -Ls https://snapshots.kjnodes.com/greenfield-testnet/addrbook.json > $HOME/.gnfd/config/addrbook.json
 ```
 
-**live-peers** (2)
+**live-peers** (1)
 ```bash
-peers="20c3e15d8dcc3988f533dd456a55d4584b2e78f6@131.153.158.3:26656,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:15456"
+peers="20c3e15d8dcc3988f533dd456a55d4584b2e78f6@131.153.158.3:26656"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.gnfd/config/config.toml
 ```
