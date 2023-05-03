@@ -4,9 +4,9 @@ description: Setting up your validator node has never been so easy. Get your val
 
 # Installation
 
-<figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/source.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/${PROJECT_NAME}.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: sourcechain-testnet | **Latest Version Tag**: e06b810e842e57ec8f5432c9cdd57883a69b3cee | **Custom Port**: 28
+**Chain ID**: ${CHAIN_ID} | **Latest Version Tag**: e06b810e842e57ec8f5432c9cdd57883a69b3cee | **Custom Port**: ${CHAIN_PORT}
 
 ### Setup validator name
 
@@ -32,7 +32,7 @@ sudo apt -qy upgrade
 
 ```bash
 sudo rm -rf /usr/local/go
-curl -Ls https://go.dev/dl/go1.19.5.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
+curl -Ls https://go.dev/dl/go${GO_VERSION}.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
 eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/golang.sh)
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
@@ -42,34 +42,34 @@ eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```bash
 # Clone project repository
 cd $HOME
-rm -rf source
-git clone https://github.com/Source-Protocol-Cosmos/source.git
-cd source
+rm -rf ${GIT_DIR}
+git clone ${GIT_URL}
+cd ${GIT_DIR}
 git checkout e06b810e842e57ec8f5432c9cdd57883a69b3cee
 
 # Build binaries
 make build
 
 # Prepare binaries for Cosmovisor
-mkdir -p $HOME/.source/cosmovisor/genesis/bin
-mv bin/sourced $HOME/.source/cosmovisor/genesis/bin/
+mkdir -p $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin
+mv ${CHAIN_BINARY_SRC} $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.source/cosmovisor/genesis $HOME/.source/cosmovisor/current
-sudo ln -s $HOME/.source/cosmovisor/current/bin/sourced /usr/local/bin/sourced
+ln -s $HOME/${CHAIN_DIR}/cosmovisor/genesis $HOME/${CHAIN_DIR}/cosmovisor/current
+sudo ln -s $HOME/${CHAIN_DIR}/cosmovisor/current/bin/${CHAIN_APP} /usr/local/bin/${CHAIN_APP}
 ```
 
 ### Install Cosmovisor and create a service
 
 ```bash
 # Download and install Cosmovisor
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.4.0
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v${COSMOVISOR_VERSION}
 
 # Create service
-sudo tee /etc/systemd/system/sourced.service > /dev/null << EOF
+sudo tee /etc/systemd/system/${CHAIN_APP}.service > /dev/null << EOF
 [Unit]
-Description=source-testnet node service
+Description=${CHAIN_NAME} node service
 After=network-online.target
 
 [Service]
@@ -78,37 +78,38 @@ ExecStart=$(which cosmovisor) run start
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
-Environment="DAEMON_HOME=$HOME/.source"
-Environment="DAEMON_NAME=sourced"
+Environment="DAEMON_HOME=$HOME/${CHAIN_DIR}"
+Environment="DAEMON_NAME=${CHAIN_APP}"
 Environment="UNSAFE_SKIP_BACKUP=true"
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:$HOME/${CHAIN_DIR}/cosmovisor/current/bin"
 
 [Install]
 WantedBy=multi-user.target
 EOF
 sudo systemctl daemon-reload
-sudo systemctl enable sourced
+sudo systemctl enable ${CHAIN_APP}
 ```
 
 ### Initialize the node
 
 ```bash
 # Set node configuration
-sourced config chain-id sourcechain-testnet
-sourced config keyring-backend test
-sourced config node tcp://localhost:28657
+${CHAIN_APP} config chain-id ${CHAIN_ID}
+${CHAIN_APP} config keyring-backend ${KEYRING_BACKEND}
+${CHAIN_APP} config node tcp://localhost:${CHAIN_PORT}57
 
 # Initialize the node
-sourced init $MONIKER --chain-id sourcechain-testnet
+${CHAIN_APP} init $MONIKER --chain-id ${CHAIN_ID}
 
 # Download genesis and addrbook
-curl -Ls https://snapshots.kjnodes.com/source-testnet/genesis.json > $HOME/.source/config/genesis.json
-curl -Ls https://snapshots.kjnodes.com/source-testnet/addrbook.json > $HOME/.source/config/addrbook.json
+curl -Ls https://snapshots.kjnodes.com/${CHAIN_NAME}/genesis.json > $HOME/${CHAIN_DIR}/config/genesis.json
+curl -Ls https://snapshots.kjnodes.com/${CHAIN_NAME}/addrbook.json > $HOME/${CHAIN_DIR}/config/addrbook.json
 
 # Add seeds
-sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@source-testnet.rpc.kjnodes.com:28659\"|" $HOME/.source/config/config.toml
+sed -i -e "s|^seeds *=.*|seeds = \"${CHAIN_TENDERSEED_PEER}@${CHAIN_NAME}.rpc.kjnodes.com:${CHAIN_PORT}59\"|" $HOME/${CHAIN_DIR}/config/config.toml
 
 # Set minimum gas price
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0usource\"|" $HOME/.source/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"${MIN_GAS_PRICE}\"|" $HOME/${CHAIN_DIR}/config/app.toml
 
 # Set pruning
 sed -i \
@@ -116,22 +117,22 @@ sed -i \
   -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
   -e 's|^pruning-keep-every *=.*|pruning-keep-every = "0"|' \
   -e 's|^pruning-interval *=.*|pruning-interval = "19"|' \
-  $HOME/.source/config/app.toml
+  $HOME/${CHAIN_DIR}/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:28658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:28657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:28060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:28656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":28666\"%" $HOME/.source/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:28317\"%; s%^address = \":8080\"%address = \":28080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:28090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:28091\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:28545\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:28546\"%" $HOME/.source/config/app.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CHAIN_PORT}58\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${CHAIN_PORT}57\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CHAIN_PORT}60\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CHAIN_PORT}56\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CHAIN_PORT}66\"%" $HOME/${CHAIN_DIR}/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${CHAIN_PORT}17\"%; s%^address = \":8080\"%address = \":${CHAIN_PORT}80\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:${CHAIN_PORT}90\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${CHAIN_PORT}91\"%; s%:8545%:${CHAIN_PORT}45%; s%:8546%:${CHAIN_PORT}46%; s%:6065%:${CHAIN_PORT}65%" $HOME/${CHAIN_DIR}/config/app.toml
 ```
 
 ### Download latest chain snapshot
 
 ```bash
-curl -L https://snapshots.kjnodes.com/source-testnet/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.source
-[[ -f $HOME/.source/data/upgrade-info.json ]] && cp $HOME/.source/data/upgrade-info.json $HOME/.source/cosmovisor/genesis/upgrade-info.json
+curl -L https://snapshots.kjnodes.com/${CHAIN_NAME}/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/${CHAIN_DIR}
+[[ -f $HOME/${CHAIN_DIR}/data/upgrade-info.json ]] && cp $HOME/${CHAIN_DIR}/data/upgrade-info.json $HOME/${CHAIN_DIR}/cosmovisor/genesis/upgrade-info.json
 ```
 
 ### Start service and check the logs
 
 ```bash
-sudo systemctl start sourced && sudo journalctl -u sourced -f --no-hostname -o cat
+sudo systemctl start ${CHAIN_APP} && sudo journalctl -u ${CHAIN_APP} -f --no-hostname -o cat
 ```
