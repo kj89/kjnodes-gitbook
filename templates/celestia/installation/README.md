@@ -145,7 +145,7 @@ cd $HOME
 rm -rf celestia-node 
 git clone https://github.com/celestiaorg/celestia-node.git 
 cd celestia-node
-git checkout v0.9.1
+git checkout v0.9.2
 make build
 sudo mv build/celestia /usr/local/bin
 make cel-key
@@ -254,7 +254,7 @@ cd $HOME
 rm -rf celestia-node 
 git clone https://github.com/celestiaorg/celestia-node.git 
 cd celestia-node
-git checkout v0.9.1
+git checkout v0.9.2
 make build
 sudo mv build/celestia /usr/local/bin
 make cel-key
@@ -277,11 +277,11 @@ rm -rf $HOME/.celestia-bridge-blockspacerace-0/config.toml
 celestia bridge init \
   --keyring.accname bridge-wallet \
   --core.ip localhost \
-  --core.rpc.port 20657 \
-  --core.grpc.port 20090 \
+  --core.rpc.port ${CHAIN_PORT}57 \
+  --core.grpc.port ${CHAIN_PORT}90 \
   --p2p.network blockspacerace \
-  --rpc.port 20658 \
-  --gateway.port 20659
+  --rpc.port ${CHAIN_PORT}58 \
+  --gateway.port ${CHAIN_PORT}59
 ```
 
 ### Start Bridge node
