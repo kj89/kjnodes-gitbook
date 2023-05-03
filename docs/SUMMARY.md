@@ -194,6 +194,13 @@
   * [State sync](testnet/celestia/state-sync/README.md)
   * [Useful commands](testnet/celestia/useful-commands/README.md)
 
+* [Composable](testnet/composable/README.md)
+  * [Installation](testnet/composable/installation/README.md)
+  * [Upgrade](testnet/composable/upgrade/README.md)
+  * [Snapshot](testnet/composable/snapshot/README.md)
+  * [State sync](testnet/composable/state-sync/README.md)
+  * [Useful commands](testnet/composable/useful-commands/README.md)
+
 * [Defund](testnet/defund/README.md)
   * [Installation](testnet/defund/installation/README.md)
   * [Upgrade](testnet/defund/upgrade/README.md)
