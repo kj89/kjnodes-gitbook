@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **01:00 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 559399 | 5 hours | [snapshot (0.65 GB)](https://snapshots.kjnodes.com/uptick/snapshot\_latest.tar.lz4) |
+| 563106 | 38 minutes | [snapshot (0.67 GB)](https://snapshots.kjnodes.com/uptick/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
