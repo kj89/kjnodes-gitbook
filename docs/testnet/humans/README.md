@@ -4,7 +4,7 @@
 
 Humans is Blockchain of AIs. It is the first blockchain network  from the Cosmos ecosystem capable of managing, deploying and  executing artificial intelligence on the blockchain.
 
-**Chain ID**: humans_3000-1 | **Latest Version Tag**: v0.1.0 | **Wasm**: OFF
+**Chain ID**: humans_3000-2 | **Latest Version Tag**: v0.1.2 | **Wasm**: OFF
 
 [Website](https://humans.ai) | [Discord](https://discord.gg/humansdotai) | [Twitter](https://twitter.com/humansdotai)
 
