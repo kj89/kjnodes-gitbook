@@ -56,8 +56,8 @@ mv build/nibid $HOME/.nibid/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.nibid/cosmovisor/genesis $HOME/.nibid/cosmovisor/current
-sudo ln -s $HOME/.nibid/cosmovisor/current/bin/nibid /usr/local/bin/nibid
+sudo ln -s $HOME/.nibid/cosmovisor/genesis $HOME/.nibid/cosmovisor/current -f
+sudo ln -s $HOME/.nibid/cosmovisor/current/bin/nibid /usr/local/bin/nibid -f
 ```
 
 ### Install Cosmovisor and create a service

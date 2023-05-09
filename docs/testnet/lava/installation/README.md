@@ -56,8 +56,8 @@ mv build/lavad $HOME/.lava/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.lava/cosmovisor/genesis $HOME/.lava/cosmovisor/current
-sudo ln -s $HOME/.lava/cosmovisor/current/bin/lavad /usr/local/bin/lavad
+sudo ln -s $HOME/.lava/cosmovisor/genesis $HOME/.lava/cosmovisor/current -f
+sudo ln -s $HOME/.lava/cosmovisor/current/bin/lavad /usr/local/bin/lavad -f
 ```
 
 ### Install Cosmovisor and create a service

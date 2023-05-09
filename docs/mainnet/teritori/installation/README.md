@@ -56,8 +56,8 @@ mv build/teritorid $HOME/.teritorid/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.teritorid/cosmovisor/genesis $HOME/.teritorid/cosmovisor/current
-sudo ln -s $HOME/.teritorid/cosmovisor/current/bin/teritorid /usr/local/bin/teritorid
+sudo ln -s $HOME/.teritorid/cosmovisor/genesis $HOME/.teritorid/cosmovisor/current -f
+sudo ln -s $HOME/.teritorid/cosmovisor/current/bin/teritorid /usr/local/bin/teritorid -f
 ```
 
 ### Install Cosmovisor and create a service

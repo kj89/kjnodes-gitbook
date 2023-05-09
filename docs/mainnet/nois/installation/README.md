@@ -56,8 +56,8 @@ mv build/noisd $HOME/.noisd/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.noisd/cosmovisor/genesis $HOME/.noisd/cosmovisor/current
-sudo ln -s $HOME/.noisd/cosmovisor/current/bin/noisd /usr/local/bin/noisd
+sudo ln -s $HOME/.noisd/cosmovisor/genesis $HOME/.noisd/cosmovisor/current -f
+sudo ln -s $HOME/.noisd/cosmovisor/current/bin/noisd /usr/local/bin/noisd -f
 ```
 
 ### Install Cosmovisor and create a service

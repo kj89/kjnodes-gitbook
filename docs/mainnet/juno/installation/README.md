@@ -56,8 +56,8 @@ mv bin/junod $HOME/.juno/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.juno/cosmovisor/genesis $HOME/.juno/cosmovisor/current
-sudo ln -s $HOME/.juno/cosmovisor/current/bin/junod /usr/local/bin/junod
+sudo ln -s $HOME/.juno/cosmovisor/genesis $HOME/.juno/cosmovisor/current -f
+sudo ln -s $HOME/.juno/cosmovisor/current/bin/junod /usr/local/bin/junod -f
 ```
 
 ### Install Cosmovisor and create a service

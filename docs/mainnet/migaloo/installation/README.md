@@ -56,8 +56,8 @@ mv bin/migalood $HOME/.migalood/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.migalood/cosmovisor/genesis $HOME/.migalood/cosmovisor/current
-sudo ln -s $HOME/.migalood/cosmovisor/current/bin/migalood /usr/local/bin/migalood
+sudo ln -s $HOME/.migalood/cosmovisor/genesis $HOME/.migalood/cosmovisor/current -f
+sudo ln -s $HOME/.migalood/cosmovisor/current/bin/migalood /usr/local/bin/migalood -f
 ```
 
 ### Install Cosmovisor and create a service

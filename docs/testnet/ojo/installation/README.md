@@ -56,8 +56,8 @@ mv build/ojod $HOME/.ojo/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.ojo/cosmovisor/genesis $HOME/.ojo/cosmovisor/current
-sudo ln -s $HOME/.ojo/cosmovisor/current/bin/ojod /usr/local/bin/ojod
+sudo ln -s $HOME/.ojo/cosmovisor/genesis $HOME/.ojo/cosmovisor/current -f
+sudo ln -s $HOME/.ojo/cosmovisor/current/bin/ojod /usr/local/bin/ojod -f
 ```
 
 ### Install Cosmovisor and create a service

@@ -56,8 +56,8 @@ mv build/humansd $HOME/.humansd/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.humansd/cosmovisor/genesis $HOME/.humansd/cosmovisor/current
-sudo ln -s $HOME/.humansd/cosmovisor/current/bin/humansd /usr/local/bin/humansd
+sudo ln -s $HOME/.humansd/cosmovisor/genesis $HOME/.humansd/cosmovisor/current -f
+sudo ln -s $HOME/.humansd/cosmovisor/current/bin/humansd /usr/local/bin/humansd -f
 ```
 
 ### Install Cosmovisor and create a service

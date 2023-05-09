@@ -56,8 +56,8 @@ mv build/haqqd $HOME/.haqqd/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.haqqd/cosmovisor/genesis $HOME/.haqqd/cosmovisor/current
-sudo ln -s $HOME/.haqqd/cosmovisor/current/bin/haqqd /usr/local/bin/haqqd
+sudo ln -s $HOME/.haqqd/cosmovisor/genesis $HOME/.haqqd/cosmovisor/current -f
+sudo ln -s $HOME/.haqqd/cosmovisor/current/bin/haqqd /usr/local/bin/haqqd -f
 ```
 
 ### Install Cosmovisor and create a service

@@ -56,8 +56,8 @@ mv build/elysd $HOME/.elys/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.elys/cosmovisor/genesis $HOME/.elys/cosmovisor/current
-sudo ln -s $HOME/.elys/cosmovisor/current/bin/elysd /usr/local/bin/elysd
+sudo ln -s $HOME/.elys/cosmovisor/genesis $HOME/.elys/cosmovisor/current -f
+sudo ln -s $HOME/.elys/cosmovisor/current/bin/elysd /usr/local/bin/elysd -f
 ```
 
 ### Install Cosmovisor and create a service

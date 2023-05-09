@@ -56,8 +56,8 @@ mv build/kujirad $HOME/.kujira/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.kujira/cosmovisor/genesis $HOME/.kujira/cosmovisor/current
-sudo ln -s $HOME/.kujira/cosmovisor/current/bin/kujirad /usr/local/bin/kujirad
+sudo ln -s $HOME/.kujira/cosmovisor/genesis $HOME/.kujira/cosmovisor/current -f
+sudo ln -s $HOME/.kujira/cosmovisor/current/bin/kujirad /usr/local/bin/kujirad -f
 ```
 
 ### Install Cosmovisor and create a service

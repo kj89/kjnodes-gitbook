@@ -56,8 +56,8 @@ mv build/althea $HOME/.althea/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.althea/cosmovisor/genesis $HOME/.althea/cosmovisor/current
-sudo ln -s $HOME/.althea/cosmovisor/current/bin/althea /usr/local/bin/althea
+sudo ln -s $HOME/.althea/cosmovisor/genesis $HOME/.althea/cosmovisor/current -f
+sudo ln -s $HOME/.althea/cosmovisor/current/bin/althea /usr/local/bin/althea -f
 ```
 
 ### Install Cosmovisor and create a service

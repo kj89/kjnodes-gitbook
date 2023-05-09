@@ -56,8 +56,8 @@ mv target/release/nolusd $HOME/.nolus/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.nolus/cosmovisor/genesis $HOME/.nolus/cosmovisor/current
-sudo ln -s $HOME/.nolus/cosmovisor/current/bin/nolusd /usr/local/bin/nolusd
+sudo ln -s $HOME/.nolus/cosmovisor/genesis $HOME/.nolus/cosmovisor/current -f
+sudo ln -s $HOME/.nolus/cosmovisor/current/bin/nolusd /usr/local/bin/nolusd -f
 ```
 
 ### Install Cosmovisor and create a service

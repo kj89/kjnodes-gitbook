@@ -56,8 +56,8 @@ mv bin/ollod $HOME/.ollo/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.ollo/cosmovisor/genesis $HOME/.ollo/cosmovisor/current
-sudo ln -s $HOME/.ollo/cosmovisor/current/bin/ollod /usr/local/bin/ollod
+sudo ln -s $HOME/.ollo/cosmovisor/genesis $HOME/.ollo/cosmovisor/current -f
+sudo ln -s $HOME/.ollo/cosmovisor/current/bin/ollod /usr/local/bin/ollod -f
 ```
 
 ### Install Cosmovisor and create a service

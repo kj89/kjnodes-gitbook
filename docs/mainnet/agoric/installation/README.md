@@ -74,8 +74,8 @@ cp golang/cosmos/build/agd $HOME/.agoric/cosmovisor/genesis/bin/
 cp golang/cosmos/build/ag-cosmos-helper $HOME/.agoric/cosmovisor/genesis/bin/
 
 # Create application symlinks
-ln -s $HOME/.agoric/cosmovisor/genesis $HOME/.agoric/cosmovisor/current
-sudo ln -s $HOME/.agoric/cosmovisor/current/bin/agd /usr/local/bin/agd
+sudo ln -s $HOME/.agoric/cosmovisor/genesis $HOME/.agoric/cosmovisor/current -f
+sudo ln -s $HOME/.agoric/cosmovisor/current/bin/agd /usr/local/bin/agd -f
 ```
 
 ### Install Cosmovisor and create a service

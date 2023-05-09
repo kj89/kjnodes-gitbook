@@ -56,8 +56,8 @@ mv build/hid-noded $HOME/.hid-node/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.hid-node/cosmovisor/genesis $HOME/.hid-node/cosmovisor/current
-sudo ln -s $HOME/.hid-node/cosmovisor/current/bin/hid-noded /usr/local/bin/hid-noded
+sudo ln -s $HOME/.hid-node/cosmovisor/genesis $HOME/.hid-node/cosmovisor/current -f
+sudo ln -s $HOME/.hid-node/cosmovisor/current/bin/hid-noded /usr/local/bin/hid-noded -f
 ```
 
 ### Install Cosmovisor and create a service

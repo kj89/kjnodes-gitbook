@@ -56,8 +56,8 @@ mv build/canined $HOME/.canine/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.canine/cosmovisor/genesis $HOME/.canine/cosmovisor/current
-sudo ln -s $HOME/.canine/cosmovisor/current/bin/canined /usr/local/bin/canined
+sudo ln -s $HOME/.canine/cosmovisor/genesis $HOME/.canine/cosmovisor/current -f
+sudo ln -s $HOME/.canine/cosmovisor/current/bin/canined /usr/local/bin/canined -f
 ```
 
 ### Install Cosmovisor and create a service

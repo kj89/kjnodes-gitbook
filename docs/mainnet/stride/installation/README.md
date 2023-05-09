@@ -56,8 +56,8 @@ mv build/strided $HOME/.stride/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.stride/cosmovisor/genesis $HOME/.stride/cosmovisor/current
-sudo ln -s $HOME/.stride/cosmovisor/current/bin/strided /usr/local/bin/strided
+sudo ln -s $HOME/.stride/cosmovisor/genesis $HOME/.stride/cosmovisor/current -f
+sudo ln -s $HOME/.stride/cosmovisor/current/bin/strided /usr/local/bin/strided -f
 ```
 
 ### Install Cosmovisor and create a service

@@ -56,8 +56,8 @@ mv bin/sourced $HOME/.source/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.source/cosmovisor/genesis $HOME/.source/cosmovisor/current
-sudo ln -s $HOME/.source/cosmovisor/current/bin/sourced /usr/local/bin/sourced
+sudo ln -s $HOME/.source/cosmovisor/genesis $HOME/.source/cosmovisor/current -f
+sudo ln -s $HOME/.source/cosmovisor/current/bin/sourced /usr/local/bin/sourced -f
 ```
 
 ### Install Cosmovisor and create a service

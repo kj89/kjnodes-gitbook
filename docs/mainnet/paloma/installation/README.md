@@ -59,8 +59,8 @@ mv build/palomad $HOME/.paloma/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.paloma/cosmovisor/genesis $HOME/.paloma/cosmovisor/current
-sudo ln -s $HOME/.paloma/cosmovisor/current/bin/palomad /usr/local/bin/palomad
+sudo ln -s $HOME/.paloma/cosmovisor/genesis $HOME/.paloma/cosmovisor/current -f
+sudo ln -s $HOME/.paloma/cosmovisor/current/bin/palomad /usr/local/bin/palomad -f
 ```
 
 ### Install Cosmovisor and create a service

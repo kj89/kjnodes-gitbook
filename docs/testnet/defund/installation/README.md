@@ -56,8 +56,8 @@ mv build/defundd $HOME/.defund/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.defund/cosmovisor/genesis $HOME/.defund/cosmovisor/current
-sudo ln -s $HOME/.defund/cosmovisor/current/bin/defundd /usr/local/bin/defundd
+sudo ln -s $HOME/.defund/cosmovisor/genesis $HOME/.defund/cosmovisor/current -f
+sudo ln -s $HOME/.defund/cosmovisor/current/bin/defundd /usr/local/bin/defundd -f
 ```
 
 ### Install Cosmovisor and create a service

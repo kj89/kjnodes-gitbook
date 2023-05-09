@@ -56,8 +56,8 @@ mv build/aurad $HOME/.aura/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.aura/cosmovisor/genesis $HOME/.aura/cosmovisor/current
-sudo ln -s $HOME/.aura/cosmovisor/current/bin/aurad /usr/local/bin/aurad
+sudo ln -s $HOME/.aura/cosmovisor/genesis $HOME/.aura/cosmovisor/current -f
+sudo ln -s $HOME/.aura/cosmovisor/current/bin/aurad /usr/local/bin/aurad -f
 ```
 
 ### Install Cosmovisor and create a service

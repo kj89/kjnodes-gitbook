@@ -56,8 +56,8 @@ mv build/bcnad $HOME/.bcna/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.bcna/cosmovisor/genesis $HOME/.bcna/cosmovisor/current
-sudo ln -s $HOME/.bcna/cosmovisor/current/bin/bcnad /usr/local/bin/bcnad
+sudo ln -s $HOME/.bcna/cosmovisor/genesis $HOME/.bcna/cosmovisor/current -f
+sudo ln -s $HOME/.bcna/cosmovisor/current/bin/bcnad /usr/local/bin/bcnad -f
 ```
 
 ### Install Cosmovisor and create a service

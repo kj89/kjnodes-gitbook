@@ -56,8 +56,8 @@ mv bin/banksyd $HOME/.banksy/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.banksy/cosmovisor/genesis $HOME/.banksy/cosmovisor/current
-sudo ln -s $HOME/.banksy/cosmovisor/current/bin/banksyd /usr/local/bin/banksyd
+sudo ln -s $HOME/.banksy/cosmovisor/genesis $HOME/.banksy/cosmovisor/current -f
+sudo ln -s $HOME/.banksy/cosmovisor/current/bin/banksyd /usr/local/bin/banksyd -f
 ```
 
 ### Install Cosmovisor and create a service

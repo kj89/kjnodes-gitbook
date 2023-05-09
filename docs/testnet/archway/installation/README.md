@@ -56,8 +56,8 @@ mv build/archwayd $HOME/.archway/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.archway/cosmovisor/genesis $HOME/.archway/cosmovisor/current
-sudo ln -s $HOME/.archway/cosmovisor/current/bin/archwayd /usr/local/bin/archwayd
+sudo ln -s $HOME/.archway/cosmovisor/genesis $HOME/.archway/cosmovisor/current -f
+sudo ln -s $HOME/.archway/cosmovisor/current/bin/archwayd /usr/local/bin/archwayd -f
 ```
 
 ### Install Cosmovisor and create a service

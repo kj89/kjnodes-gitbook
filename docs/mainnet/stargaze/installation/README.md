@@ -56,8 +56,8 @@ mv bin/starsd $HOME/.starsd/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.starsd/cosmovisor/genesis $HOME/.starsd/cosmovisor/current
-sudo ln -s $HOME/.starsd/cosmovisor/current/bin/starsd /usr/local/bin/starsd
+sudo ln -s $HOME/.starsd/cosmovisor/genesis $HOME/.starsd/cosmovisor/current -f
+sudo ln -s $HOME/.starsd/cosmovisor/current/bin/starsd /usr/local/bin/starsd -f
 ```
 
 ### Install Cosmovisor and create a service

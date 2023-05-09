@@ -56,8 +56,8 @@ mv build/quasarnoded $HOME/.quasarnode/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.quasarnode/cosmovisor/genesis $HOME/.quasarnode/cosmovisor/current
-sudo ln -s $HOME/.quasarnode/cosmovisor/current/bin/quasarnoded /usr/local/bin/quasarnoded
+sudo ln -s $HOME/.quasarnode/cosmovisor/genesis $HOME/.quasarnode/cosmovisor/current -f
+sudo ln -s $HOME/.quasarnode/cosmovisor/current/bin/quasarnoded /usr/local/bin/quasarnoded -f
 ```
 
 ### Install Cosmovisor and create a service

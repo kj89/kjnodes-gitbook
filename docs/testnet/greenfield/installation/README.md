@@ -56,8 +56,8 @@ mv build/bin/gnfd $HOME/.gnfd/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.gnfd/cosmovisor/genesis $HOME/.gnfd/cosmovisor/current
-sudo ln -s $HOME/.gnfd/cosmovisor/current/bin/gnfd /usr/local/bin/gnfd
+sudo ln -s $HOME/.gnfd/cosmovisor/genesis $HOME/.gnfd/cosmovisor/current -f
+sudo ln -s $HOME/.gnfd/cosmovisor/current/bin/gnfd /usr/local/bin/gnfd -f
 ```
 
 ### Install Cosmovisor and create a service

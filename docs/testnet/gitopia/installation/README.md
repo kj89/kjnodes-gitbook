@@ -63,8 +63,8 @@ mv build/gitopiad $HOME/.gitopia/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.gitopia/cosmovisor/genesis $HOME/.gitopia/cosmovisor/current
-sudo ln -s $HOME/.gitopia/cosmovisor/current/bin/gitopiad /usr/local/bin/gitopiad
+sudo ln -s $HOME/.gitopia/cosmovisor/genesis $HOME/.gitopia/cosmovisor/current -f
+sudo ln -s $HOME/.gitopia/cosmovisor/current/bin/gitopiad /usr/local/bin/gitopiad -f
 ```
 
 ### Install Cosmovisor and create a service

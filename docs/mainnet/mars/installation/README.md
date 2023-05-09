@@ -56,8 +56,8 @@ mv build/marsd $HOME/.mars/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.mars/cosmovisor/genesis $HOME/.mars/cosmovisor/current
-sudo ln -s $HOME/.mars/cosmovisor/current/bin/marsd /usr/local/bin/marsd
+sudo ln -s $HOME/.mars/cosmovisor/genesis $HOME/.mars/cosmovisor/current -f
+sudo ln -s $HOME/.mars/cosmovisor/current/bin/marsd /usr/local/bin/marsd -f
 ```
 
 ### Install Cosmovisor and create a service

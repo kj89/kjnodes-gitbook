@@ -56,8 +56,8 @@ mv build/andromedad $HOME/.andromedad/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.andromedad/cosmovisor/genesis $HOME/.andromedad/cosmovisor/current
-sudo ln -s $HOME/.andromedad/cosmovisor/current/bin/andromedad /usr/local/bin/andromedad
+sudo ln -s $HOME/.andromedad/cosmovisor/genesis $HOME/.andromedad/cosmovisor/current -f
+sudo ln -s $HOME/.andromedad/cosmovisor/current/bin/andromedad /usr/local/bin/andromedad -f
 ```
 
 ### Install Cosmovisor and create a service

@@ -56,8 +56,8 @@ mv target/dist/okp4d $HOME/.okp4d/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.okp4d/cosmovisor/genesis $HOME/.okp4d/cosmovisor/current
-sudo ln -s $HOME/.okp4d/cosmovisor/current/bin/okp4d /usr/local/bin/okp4d
+sudo ln -s $HOME/.okp4d/cosmovisor/genesis $HOME/.okp4d/cosmovisor/current -f
+sudo ln -s $HOME/.okp4d/cosmovisor/current/bin/okp4d /usr/local/bin/okp4d -f
 ```
 
 ### Install Cosmovisor and create a service

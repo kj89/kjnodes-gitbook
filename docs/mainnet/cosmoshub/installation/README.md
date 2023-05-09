@@ -56,8 +56,8 @@ mv build/gaiad $HOME/.gaia/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
-ln -s $HOME/.gaia/cosmovisor/genesis $HOME/.gaia/cosmovisor/current
-sudo ln -s $HOME/.gaia/cosmovisor/current/bin/gaiad /usr/local/bin/gaiad
+sudo ln -s $HOME/.gaia/cosmovisor/genesis $HOME/.gaia/cosmovisor/current -f
+sudo ln -s $HOME/.gaia/cosmovisor/current/bin/gaiad /usr/local/bin/gaiad -f
 ```
 
 ### Install Cosmovisor and create a service
