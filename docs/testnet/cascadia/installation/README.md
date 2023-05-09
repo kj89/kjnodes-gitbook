@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/cascadia.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: cascadia_6102-1 | **Latest Version Tag**: v0.1.1 | **Custom Port**: 155
+**Chain ID**: cascadia_6102-1 | **Latest Version Tag**: v0.1.2 | **Custom Port**: 155
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf cascadia
 git clone https://github.com/CascadiaFoundation/cascadia.git
 cd cascadia
-git checkout v0.1.1
+git checkout v0.1.2
 
 # Build binaries
 make build
