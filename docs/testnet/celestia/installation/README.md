@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/celestia.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: blockspacerace-0 | **Latest Version Tag**: v0.12.1 | **Custom Port**: 120
+**Chain ID**: blockspacerace-0 | **Latest Version Tag**: v0.13.0 | **Custom Port**: 120
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf celestia-app
 git clone https://github.com/celestiaorg/celestia-app.git
 cd celestia-app
-git checkout v0.12.1
+git checkout v0.13.0
 
 # Build binaries
 make build
@@ -145,7 +145,7 @@ cd $HOME
 rm -rf celestia-node 
 git clone https://github.com/celestiaorg/celestia-node.git 
 cd celestia-node
-git checkout v0.9.2
+git checkout v0.9.3
 make build
 sudo mv build/celestia /usr/local/bin
 make cel-key
@@ -254,7 +254,7 @@ cd $HOME
 rm -rf celestia-node 
 git clone https://github.com/celestiaorg/celestia-node.git 
 cd celestia-node
-git checkout v0.9.2
+git checkout v0.9.3
 make build
 sudo mv build/celestia /usr/local/bin
 make cel-key
@@ -266,13 +266,31 @@ sudo mv cel-key /usr/local/bin
 celestia version
 ```
 
-### Clear data store
+### Node upgrade
+To upgrade Celestia Bridge node you have two options
+
+#### (OPTION 1) Soft upgrade
+{% hint style="info" %}
+This option will only update attributes of configuration files without deleting any data.
+{% endhint %}
+
+Update configuration file
+```
+celestia bridge config-update --p2p.network blockspacerace
+```
+
+#### (OPTION 2) Hard upgrade
+{% hint style="warning" %}
+This option will clear data store and re-initialize the node. Keys will not be deleted.
+{% endhint %}
+
+Clear data store and remove configuration file
 ```
 celestia bridge unsafe-reset-store --p2p.network blockspacerace
 rm -rf $HOME/.celestia-bridge-blockspacerace-0/config.toml
 ```
 
-### Initialize Bridge node
+Initialize Bridge node
 ```
 celestia bridge init \
   --keyring.accname bridge-wallet \

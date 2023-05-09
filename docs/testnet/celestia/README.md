@@ -4,7 +4,7 @@
 
 Celestia is a minimal blockchain that only orders and publishes transactions and  does not execute them. By decoupling the consensus and application execution layers,  Celestia modularizes the blockchain technology stack and unlocks new possibilities  for decentralized application builders.
 
-**Chain ID**: blockspacerace-0 | **Latest Version Tag**: v0.12.1 | **Wasm**: OFF
+**Chain ID**: blockspacerace-0 | **Latest Version Tag**: v0.13.0 | **Wasm**: OFF
 
 [Website](https://celestia.org) | [Discord](https://discord.gg/celestiacommunity) | [Twitter](https://twitter.com/CelestiaOrg)
 
@@ -41,8 +41,8 @@ d5519e378247dfb61dfe90652d1fe3e2b3005a5b@celestia-testnet.rpc.kjnodes.com:12056
 curl -Ls https://snapshots.kjnodes.com/celestia-testnet/addrbook.json > $HOME/.celestia-app/config/addrbook.json
 ```
 
-**live-peers** (9)
+**live-peers** (11)
 ```bash
-peers="b1b42ed03d101f8d0225b9796bfc9b628a2418c7@104.248.129.29:26656,62f6abc162db99389f13a1cdf1abaeb6efb647a7@35.210.78.75:26656,af66f28f19f747bd2b5a18d91d143dc8e035f86a@47.147.226.228:52656,92e7087b3dec79fb2b8105e5a61935d28927d511@45.83.104.218:2000,de36dc2bc32ecaacafb213d173f6218f93ebb306@144.76.105.14:26656,a20a5f47307049619d2fe689f3c33f1f7ab9470c@162.55.245.144:2130,10c84789386c2ee3aacd8e09f04b78fac14fb3d7@209.126.86.119:26656,6c73374cb78a543e2dd3eb218c29386392da2cf5@35.210.99.77:26656,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:12056"
+peers="d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:12056,00a7e4228936c514fa7e9df6466ddad0d08cbef2@18.191.143.132:31380,62f6abc162db99389f13a1cdf1abaeb6efb647a7@35.210.78.75:26656,6c73374cb78a543e2dd3eb218c29386392da2cf5@35.210.99.77:26656,0aaea869d3c651143114f8e9529da72e40fe0828@46.4.5.45:11656,a20a5f47307049619d2fe689f3c33f1f7ab9470c@162.55.245.144:2130,2b9c71541bb54d13e887b9ec6ff88bf09ea4c4a3@138.197.134.254:26656,de36dc2bc32ecaacafb213d173f6218f93ebb306@144.76.105.14:26656,60e771182358034b4ce475b7a0d8d48734aa9dc8@85.190.134.34:26656,7a89c8c63ee0a305d236eabb435ea54f1c08d3dd@125.143.190.194:17002,dc76534dfede17c47ec162fce0937b446a627820@206.189.92.202:26656"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.celestia-app/config/config.toml
 ```

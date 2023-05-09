@@ -6,7 +6,7 @@ description: Prepare for and the upcomming chain upgrade using Cosmovisor.
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/celestia.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: blockspacerace-0 | **Latest Version Tag**: v0.12.1 | **Custom Port**: 120
+**Chain ID**: blockspacerace-0 | **Latest Version Tag**: v0.13.0 | **Custom Port**: 120
 
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.
