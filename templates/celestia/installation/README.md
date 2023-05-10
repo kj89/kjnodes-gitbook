@@ -311,3 +311,93 @@ sudo systemctl start celestia-bridge
 ```bash
 journalctl -fu celestia-bridge -o cat
 ```
+
+# Install Orchestrator
+
+### Download and build binaries
+```bash
+cd $HOME 
+rm -rf orchestrator-relayer
+git clone https://github.com/celestiaorg/orchestrator-relayer.git
+cd orchestrator-relayer
+git checkout v0.2.0-app-v0.13.2-beta 
+make build
+sudo mv build/qgb /usr/local/bin
+```
+
+### Initialize Orchestrator node
+```bash
+qgb orchestrator init
+```
+
+### Add Orchestrator EVM wallet
+The EVM private key needs to correspond to the EVM address provided when creating the validator.
+
+#### Import EVM wallet private key
+```bash
+qgb orchestrator keys evm import ecdsa <private key in hex format>
+```
+
+### Create service
+```bash
+sudo tee /etc/systemd/system/celestia-orchestrator.service > /dev/null << EOF
+[Unit]
+Description=Celestia Orchestrator service
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=$(which qgb) orchestrator start \\
+--celes-grpc <GRPC_ENDPOINT> \\
+--celes-rpc <RPC_ENDPOINT> \\
+--evm-address <EVM_ADDRESS> \\
+--evm-passphrase <EVM_PASSPHRASE> \\
+--p2p-bootstrappers /dns/bootstr-incent-1.celestia.tools/tcp/30000/p2p/12D3KooWSGZ2LXW2soQFHgU82uLfN7pNW5gMMkTnu1fhMXG43TvP
+Restart=on-failure
+RestartSec=10
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
+EOF
+sudo systemctl daemon-reload
+sudo systemctl enable celestia-orchestrator
+```
+
+Example of service execution command
+```
+ExecStart=$(which qgb) orchestrator start \\
+--celes-grpc localhost:12090 \\
+--celes-rpc http://localhost:12057 \\
+--evm-address 0x0bd244CcD11892232G990a7b7F37F68042952f42 \\
+--evm-passphrase mypassphrasegoeshere \\
+--p2p-bootstrappers /dns/bootstr-incent-1.celestia.tools/tcp/30000/p2p/12D3KooWSGZ2LXW2soQFHgU82uLfN7pNW5gMMkTnu1fhMXG43TvP
+```
+
+{% hint style="info" %}
+Before running the orchestrator, make sure to have the indexing enabled on your RPC node. If the indexer was just activated, then, by default, it will not have the previous transactions indexed. 
+And, if you run the orchestrator at the same time, it will try to create the commitments and will fail as the transactions are not indexed.
+{% endhint %}
+
+### Start Orchestrator node
+```bash
+systemctl restart celestia-orchestrator
+```
+
+### Check Bridge node logs
+```bash
+journalctl -fu celestia-orchestrator -o cat
+```
+
+## Useful commands
+
+### View validator details
+Check the `evm_address` field if it has an address that you want to use to sign attestations.
+```bash
+celestia-appd q staking validator $(celestia-appd keys show wallet --bech val -a)
+```
+
+### Change validator evm_address
+```
+celestia-appd tx staking edit-validator --evm-address=<NEW_EVM_ADDRESS> --from=wallet --chain-id blockspacerace-0 --gas-adjustment 1.4 --gas auto --gas-prices 0.005utia -y
+```

@@ -53,12 +53,10 @@ celestia-appd q bank balances $(celestia-appd keys show wallet -a)
 ## 👷 Validator management
 
 {% hint style="info" %}
-Please make sure you have adjusted **moniker**, **identity**, **details**, **website**, **evm-address** and **orchestrator-address** to match your values.
+Please make sure you have adjusted **moniker**, **identity**, **details**, **website**, **evm-address** to match your values.
 {% endhint %}
 
 > `--evm-address`: This flag should contain a 0x EVM address. Here, you can add any Ethereum-based address to this flag. You can also modify it later if you decide to switch addresses.
->
-> `--orchestrator-address`: This flag should contain a newly-generated celestia1 Celestia address. Validators certainly can use their existing Celestia addresses here but it is recommended to create a new one.
 
 #### Create new validator
 
