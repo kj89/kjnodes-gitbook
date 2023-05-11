@@ -4,7 +4,7 @@
 
 Elys is a fast layer 1 blockchain powered by the Cosmos-SDK.  It is the first, and only, decentralized suite of financial  applications in the Cosmos ecosystem that has built-in native  bridging capabilities for optimal user experience and value  capture, and native margin trading capabilities that are  powered by liquidity pools & liquidity providers.
 
-**Chain ID**: elystestnet-1 | **Latest Version Tag**: v0.5.2 | **Wasm**: OFF
+**Chain ID**: elystestnet-1 | **Latest Version Tag**: v0.5.3 | **Wasm**: OFF
 
 [Website](https://elys.network) | [Discord](https://discord.gg/R9Gr6Vh7vC) | [Twitter](https://twitter.com/elys_network)
 
