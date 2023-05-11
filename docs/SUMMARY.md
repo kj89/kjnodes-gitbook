@@ -222,26 +222,12 @@
   * [State sync](testnet/elys/state-sync/README.md)
   * [Useful commands](testnet/elys/useful-commands/README.md)
 
-* [Gitopia](testnet/gitopia/README.md)
-  * [Installation](testnet/gitopia/installation/README.md)
-  * [Upgrade](testnet/gitopia/upgrade/README.md)
-  * [Snapshot](testnet/gitopia/snapshot/README.md)
-  * [State sync](testnet/gitopia/state-sync/README.md)
-  * [Useful commands](testnet/gitopia/useful-commands/README.md)
-
 * [BNB Greenfield](testnet/greenfield/README.md)
   * [Installation](testnet/greenfield/installation/README.md)
   * [Upgrade](testnet/greenfield/upgrade/README.md)
   * [Snapshot](testnet/greenfield/snapshot/README.md)
   * [State sync](testnet/greenfield/state-sync/README.md)
   * [Useful commands](testnet/greenfield/useful-commands/README.md)
-
-* [Haqq](testnet/haqq/README.md)
-  * [Installation](testnet/haqq/installation/README.md)
-  * [Upgrade](testnet/haqq/upgrade/README.md)
-  * [Snapshot](testnet/haqq/snapshot/README.md)
-  * [State sync](testnet/haqq/state-sync/README.md)
-  * [Useful commands](testnet/haqq/useful-commands/README.md)
 
 * [Hypersign](testnet/hypersign/README.md)
   * [Installation](testnet/hypersign/installation/README.md)
