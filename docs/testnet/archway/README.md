@@ -4,7 +4,7 @@
 
 Archway is an incentivized smart contract chain for Cosmos  ecosystem which gives developers a simple way to build  scalable cross-chain dapps. The developers automatically  receive rewards for their contributions to the network.
 
-**Chain ID**: constantine-2 | **Latest Version Tag**: v0.4.0 | **Wasm**: ON
+**Chain ID**: constantine-3 | **Latest Version Tag**: v0.5.1 | **Wasm**: ON
 
 [Website](https://archway.io) | [Discord](https://discord.gg/archwayhq) | [Twitter](https://twitter.com/archwayhq)
 
@@ -41,8 +41,8 @@ d5519e378247dfb61dfe90652d1fe3e2b3005a5b@archway-testnet.rpc.kjnodes.com:15656
 curl -Ls https://snapshots.kjnodes.com/archway-testnet/addrbook.json > $HOME/.archway/config/addrbook.json
 ```
 
-**live-peers** (10)
+**live-peers** (5)
 ```bash
-peers="dda46cff53d11de64585e89cbe751671762c9ae9@176.9.28.41:26656,7d870183ad7e6ae3f441160530a2cd11896da522@46.4.5.45:11556,92f4a62a35bf75c771709d94e39eb8fca2bd0059@54.36.227.1:26656,8df8a64ecf0aaba1e1faee06d005aa912d578549@65.109.89.5:41656,1413664d3cfa37c2d661f740b2b47105433f3872@65.21.139.155:34656,d18fba39ca91d2192f73e0af0cde2a49b130604e@95.217.144.107:11556,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:15656,06aeab3dfcdbafba3db0010342b6e5596123e583@66.42.38.167:26656,85c669e01f5fca4d1ef7636a9526296a0083bb1d@15.235.193.57:26656,7077f0635772fd56e9bfb704f9069694a42daf6b@148.113.6.190:25656"
+peers="d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:15656,e40e240706e5c551de40fefab1ad9fbf4a4bec23@141.94.73.39:42656,b2d39b9b7991c0a9a7678994f5afe04a1b3df923@34.122.164.239:26656,434015482b70fff4e6bc96299dee7b84aca01343@35.223.36.227:26656,930bf53d3858340d52bb7e541617740d91477ff0@35.239.130.141:26656"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.archway/config/config.toml
 ```

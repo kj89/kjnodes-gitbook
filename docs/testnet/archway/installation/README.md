@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/archway.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: constantine-2 | **Latest Version Tag**: v0.4.0 | **Custom Port**: 156
+**Chain ID**: constantine-3 | **Latest Version Tag**: v0.5.1 | **Custom Port**: 156
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf archway
 git clone https://github.com/archway-network/archway.git
 cd archway
-git checkout v0.4.0
+git checkout v0.5.1
 
 # Build binaries
 make build
@@ -94,12 +94,12 @@ sudo systemctl enable archwayd
 
 ```bash
 # Set node configuration
-archwayd config chain-id constantine-2
+archwayd config chain-id constantine-3
 archwayd config keyring-backend test
 archwayd config node tcp://localhost:15657
 
 # Initialize the node
-archwayd init $MONIKER --chain-id constantine-2
+archwayd init $MONIKER --chain-id constantine-3
 
 # Download genesis and addrbook
 curl -Ls https://snapshots.kjnodes.com/archway-testnet/genesis.json > $HOME/.archway/config/genesis.json

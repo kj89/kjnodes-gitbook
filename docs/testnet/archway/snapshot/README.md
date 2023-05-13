@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **09:15 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: v0.4.0
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v0.5.1
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 1876002 | 10 hours | [snapshot (0.62 GB)](https://snapshots.kjnodes.com/archway-testnet/snapshot\_latest.tar.lz4) |
+| 10018 | 1 minutes | [snapshot (0.03 GB)](https://snapshots.kjnodes.com/archway-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
