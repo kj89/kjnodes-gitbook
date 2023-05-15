@@ -37,6 +37,13 @@
   * [State sync](mainnet/cosmoshub/state-sync/README.md)
   * [Useful commands](mainnet/cosmoshub/useful-commands/README.md)
 
+* [Gitopia](mainnet/gitopia/README.md)
+  * [Installation](mainnet/gitopia/installation/README.md)
+  * [Upgrade](mainnet/gitopia/upgrade/README.md)
+  * [Snapshot](mainnet/gitopia/snapshot/README.md)
+  * [State sync](mainnet/gitopia/state-sync/README.md)
+  * [Useful commands](mainnet/gitopia/useful-commands/README.md)
+
 * [Jackal](mainnet/jackal/README.md)
   * [Installation](mainnet/jackal/installation/README.md)
   * [Upgrade](mainnet/jackal/upgrade/README.md)
