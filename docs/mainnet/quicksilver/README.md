@@ -4,7 +4,7 @@
 
 Quicksilver is a permissionless, sovereign Cosmos SDK zone providing liquid staking for the entire Cosmos Ecosystem.
 
-**Chain ID**: quicksilver-2 | **Latest Version Tag**: v1.2.10 | **Wasm**: OFF
+**Chain ID**: quicksilver-2 | **Latest Version Tag**: v1.2.10-hotfix | **Wasm**: OFF
 
 [Website](https://quicksilver.zone) | [Discord](https://discord.gg/quicksilverprotocol) | [Twitter](https://twitter.com/quicksilverzone)
 
@@ -45,6 +45,6 @@ curl -Ls https://snapshots.kjnodes.com/quicksilver/addrbook.json > $HOME/.quicks
 
 **live-peers** (10)
 ```bash
-peers="d5a9c9ae08f0d30e36c8f64eca046fc52b00561e@65.109.92.160:26656,67c3cc1397d0a0f03a45d4cae6ff3380be7364f9@95.217.229.18:11656,a1f5e0b68f36091d5fc8f30aba914b6c191f21fa@65.108.128.201:11156,161f453c9ff27f3120ec5078f56b505316fbc720@65.108.6.45:61156,fb1e7a989ff78f0bdd7828dc3ade95dcd67cd5d0@65.109.116.151:15656,602700ce2ed57b2176514ec2ecbda079caa7a536@178.170.40.28:15620,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:11156,51070ba609ede6d7eb334b8cf0ed585f2b1ab66b@135.181.76.99:26656,5fa47201aa5208c30982b6f9d8ca44222d256fc5@51.91.70.90:48656,b71ddbe0702383c73128f759a910a6d55ccee3b6@46.4.112.18:11656"
+peers="1b569bf57da79df4f85d207a161a97626988af76@65.109.92.241:20026,51070ba609ede6d7eb334b8cf0ed585f2b1ab66b@135.181.76.99:26656,06230bbaabb6c9c6223275b57d8e10fc609ae7ba@51.89.7.184:26633,71b753819eb653e99e6a825b80af20ca9bccb087@135.125.163.63:24666,ebafaa0d0087ecfc785b095d6a91a67a12eecd80@5.9.100.25:26656,271419d3eb3878c902ebb0064490ad702d9d067f@144.76.145.150:26656,c0beca70dbd3ef5bb433f7aa280d56d2a150bbd3@95.214.52.144:26656,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:11156,833a368b9e639d50dcbeaa2e8347306979d55e50@199.217.117.78:11156,61d96fee29a9615c208c4db72526d23b45094cb4@65.108.195.30:36656"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.quicksilverd/config/config.toml
 ```

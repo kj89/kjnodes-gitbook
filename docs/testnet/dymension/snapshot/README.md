@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **06:45 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 1312914 | 3 hours | [snapshot (3.17 GB)](https://snapshots.kjnodes.com/dymension-testnet/snapshot\_latest.tar.lz4) |
+| 1320394 | 6 minutes | [snapshot (3.19 GB)](https://snapshots.kjnodes.com/dymension-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

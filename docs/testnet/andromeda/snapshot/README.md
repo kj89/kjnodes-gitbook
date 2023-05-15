@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **07:00 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 1297890 | 2 hours | [snapshot (0.79 GB)](https://snapshots.kjnodes.com/andromeda-testnet/snapshot\_latest.tar.lz4) |
+| 1301335 | 5 hours | [snapshot (0.81 GB)](https://snapshots.kjnodes.com/andromeda-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
