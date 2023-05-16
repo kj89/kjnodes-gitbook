@@ -114,9 +114,6 @@ sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"${MIN_GAS_PRICE}\"|
 # Set pruning
 sed -i \
   -e 's|^pruning *=.*|pruning = "nothing"|' \
-  -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
-  -e 's|^pruning-keep-every *=.*|pruning-keep-every = "0"|' \
-  -e 's|^pruning-interval *=.*|pruning-interval = "19"|' \
   $HOME/${CHAIN_DIR}/config/app.toml
 
 # Set custom ports
