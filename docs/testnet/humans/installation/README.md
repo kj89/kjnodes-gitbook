@@ -74,7 +74,7 @@ After=network-online.target
 
 [Service]
 User=$USER
-ExecStart=$(which cosmovisor) run start
+ExecStart=$(which cosmovisor) run start --metrics --pruning=nothing --evm.tracer=json --minimum-gas-prices=1800000000aheart json-rpc.api eth,net,web3,miner --api.enable
 Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
@@ -120,8 +120,37 @@ sed -i \
   $HOME/.humansd/config/app.toml
 
 # Set custom ports
-sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:12258\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:12257\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:12260\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:12256\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":12266\"%" $HOME/.humansd/config/config.toml
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://0.0.0.0:12258\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://0.0.0.0:12257\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:12266\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:12256\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":12260\"%" $HOME/.humansd/config/config.toml
 sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:12217\"%; s%^address = \":8080\"%address = \":12280\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:12290\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:12291\"%; s%:8545%:12245%; s%:8546%:12246%; s%:6065%:12265%" $HOME/.humansd/config/app.toml
+```
+
+# Configuration changes for optimization and metrics
+```
+# config.toml
+sed -i \
+  -e 's|^create_empty_blocks *=.*|create_empty_blocks = false|' \
+  -e 's|^prometheus *=.*|prometheus = true|' \
+  -e 's|^create_empty_blocks_interval *=.*|create_empty_blocks_interval = "30s"|' \
+  -e 's|^timeout_propose *=.*|timeout_propose = "30s"|' \
+  -e 's|^timeout_propose_delta *=.*|timeout_propose_delta = "5s"|' \
+  -e 's|^timeout_prevote *=.*|timeout_prevote = "10s"|' \
+  -e 's|^timeout_prevote_delta *=.*|timeout_prevote_delta = "5s"|' \
+  -e 's|^cors_allowed_origins *=.*|cors_allowed_origins = ["*.humans.ai","*.humans.zone"]|' \
+  -e 's|^timeout_prevote_delta *=.*|timeout_prevote_delta = "5s"|' \
+  $HOME/.humansd/config/config.toml
+
+# app.toml
+sed -i \
+  -e 's|^prometheus-retention-time *=.*|prometheus-retention-time = 1000000000000|' \
+  -e 's|^enabled *=.*|enabled = true|' \
+  -e '/^\[api\]$/,/^\[/ s/enable = false/enable = true/' \
+  -e 's|^swagger *=.*|swagger = true|' \
+  -e 's|^max-open-connections *=.*|max-open-connections = 100|' \
+  -e 's|^rpc-read-timeout *=.*|rpc-read-timeout = 5|' \
+  -e 's|^rpc-write-timeout *=.*|rpc-write-timeout = 3|' \
+  -e 's|^rpc-max-body-bytes *=.*|rpc-max-body-bytes = 1000000|' \
+  -e 's|^enabled-unsafe-cors *=.*|enabled-unsafe-cors = false|' \
+  $HOME/.humansd/config/app.toml
 ```
 
 ### Download latest chain snapshot
