@@ -121,7 +121,7 @@ sed -i \
 
 # Set custom ports
 sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://0.0.0.0:12258\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://0.0.0.0:12257\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:12266\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:12256\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":12260\"%" $HOME/.humansd/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:12217\"%; s%^address = \":8080\"%address = \":12280\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:12290\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:12291\"%; s%:8545%:12245%; s%:8546%:12246%; s%:6065%:12265%" $HOME/.humansd/config/app.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:12217\"%; s%^address = \":8080\"%address = \":12280\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:12290\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:12291\"%; s%^address = \"127.0.0.1:8545\"%address = \"0.0.0.0:12245\"%; s%^ws-address = \"127.0.0.1:8546\"%ws-address = \"0.0.0.0:12246\"%; s%^metrics-address = \"127.0.0.1:6065\"%metrics-address = \"0.0.0.0:12265\"%" $HOME/.humansd/config/app.toml
 ```
 
 # Configuration changes for optimization and metrics
