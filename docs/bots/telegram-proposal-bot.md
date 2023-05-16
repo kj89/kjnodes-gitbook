@@ -10,9 +10,15 @@ description: >-
 
 Kjnodes team have built bots to keep validators notified when there is a new proposal on the chain. To distinguish mainnet from testnet we have created two separate bots that can be found by following links provided below.
 
-[🤖 Proposal Bot | kjnodes](https://t.me/kjnodes\_proposal\_bot)
+[🤖 Mainnet Proposal Bot](https://t.me/kjnodes\_proposal\_bot) | **Supported chains**: 17 | **Users**: 140 | **Active subscriptions**: 226
 
-[🤖 Testnet Proposal bot | kjnodes](https://t.me/kjnodes\_testnet\_proposal\_bot)
+[🤖 Testnet Proposal bot](https://t.me/kjnodes\_testnet\_proposal\_bot) | **Supported chains**: 27 | **Users**: 421 | **Active subscriptions**: 1331
+
+## Subscription Stats
+
+**Environment**: mainnet | **Latest Version Tag**: pismoC | **Wasm**: OFF
+
+**Environment**: testnet | **Latest Version Tag**: pismoC | **Wasm**: OFF
 
 ## How to use
 
