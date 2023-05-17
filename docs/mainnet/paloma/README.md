@@ -4,7 +4,7 @@
 
 Paloma is a fast, permissionless, Cosmos-SDK blockchain that  moves messages securely, between any other blockchains.
 
-**Chain ID**: messenger | **Latest Version Tag**: v0.11.6 | **Wasm**: ON
+**Chain ID**: messenger | **Latest Version Tag**: v1.0.0 | **Wasm**: ON
 
 [Website](https://www.palomachain.com) | [Discord](https://discord.gg/tKVFpfdSw4) | [Twitter](https://twitter.com/paloma_chain)
 

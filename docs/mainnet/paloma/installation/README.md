@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/paloma.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: messenger | **Latest Version Tag**: v0.11.6 | **Custom Port**: 110
+**Chain ID**: messenger | **Latest Version Tag**: v1.0.0 | **Custom Port**: 110
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf paloma
 git clone https://github.com/palomachain/paloma.git
 cd paloma
-git checkout v0.11.6
+git checkout v1.0.0
 
 # Fix version handling: https://github.com/palomachain/paloma/commit/d0f1746754041cd39d2dbd96cd8dd44f5e6ba2c5
 sed -i -r -e 's/^  VERSION := \$\(shell git describe --exact-match 2>\/dev\/null\)$/  VERSION := $(shell git describe --exact-match --tags 2>\/dev\/null | sed '"'"'s\/^v\/\/'"'"')/' Makefile
