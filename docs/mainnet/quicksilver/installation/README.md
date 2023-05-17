@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/quicksilver.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: quicksilver-2 | **Latest Version Tag**: v1.2.10-hotfix | **Custom Port**: 111
+**Chain ID**: quicksilver-2 | **Latest Version Tag**: v1.2.11 | **Custom Port**: 111
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf quicksilver
 git clone https://github.com/ingenuity-build/quicksilver.git
 cd quicksilver
-git checkout v1.2.10-hotfix
+git checkout v1.2.11
 
 # Build binaries
 make build

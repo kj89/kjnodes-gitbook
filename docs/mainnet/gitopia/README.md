@@ -41,8 +41,8 @@ d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@gitopia.rpc.kjnodes.com:14156
 curl -Ls https://snapshots.kjnodes.com/gitopia/addrbook.json > $HOME/.gitopia/config/addrbook.json
 ```
 
-**live-peers** (0)
+**live-peers** (3)
 ```bash
-peers=""
+peers="f6bb45c38d0a9abc926b5baa8f27473f2cd37d30@141.95.157.139:11356,4cf66531681c92f15c95c25bd1bff524f9dca35e@65.109.154.181:26656,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:14156"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.gitopia/config/config.toml
 ```
