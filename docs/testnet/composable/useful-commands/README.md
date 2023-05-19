@@ -60,13 +60,13 @@ Please make sure you have adjusted **moniker**, **identity**, **details** and **
 
 ```bash
 banksyd tx staking create-validator \
---amount 1000000ubanksy \
+--amount 1000000upica \
 --pubkey $(banksyd tendermint show-validator) \
 --moniker "YOUR_MONIKER_NAME" \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL" \
---chain-id banksy-testnet-1 \
+--chain-id banksy-testnet-2 \
 --commission-rate 0.05 \
 --commission-max-rate 0.20 \
 --commission-max-change-rate 0.01 \
@@ -74,7 +74,7 @@ banksyd tx staking create-validator \
 --from wallet \
 --gas-adjustment 1.4 \
 --gas auto \
---gas-prices 0ubanksy \
+--gas-prices 0upica \
 -y
 ```
 
@@ -86,19 +86,19 @@ banksyd tx staking edit-validator \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL" \
---chain-id banksy-testnet-1 \
+--chain-id banksy-testnet-2 \
 --commission-rate 0.05 \
 --from wallet \
 --gas-adjustment 1.4 \
 --gas auto \
---gas-prices 0ubanksy \
+--gas-prices 0upica \
 -y
 ```
 
 #### Unjail validator
 
 ```bash
-banksyd tx slashing unjail --from wallet --chain-id banksy-testnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubanksy -y
+banksyd tx slashing unjail --from wallet --chain-id banksy-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0upica -y
 ```
 
 #### Jail reason
@@ -130,43 +130,43 @@ banksyd q staking validator $(banksyd keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-banksyd tx distribution withdraw-all-rewards --from wallet --chain-id banksy-testnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubanksy -y
+banksyd tx distribution withdraw-all-rewards --from wallet --chain-id banksy-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0upica -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-banksyd tx distribution withdraw-rewards $(banksyd keys show wallet --bech val -a) --commission --from wallet --chain-id banksy-testnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubanksy -y
+banksyd tx distribution withdraw-rewards $(banksyd keys show wallet --bech val -a) --commission --from wallet --chain-id banksy-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0upica -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-banksyd tx staking delegate $(banksyd keys show wallet --bech val -a) 1000000ubanksy --from wallet --chain-id banksy-testnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubanksy -y
+banksyd tx staking delegate $(banksyd keys show wallet --bech val -a) 1000000upica --from wallet --chain-id banksy-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0upica -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-banksyd tx staking delegate <TO_VALOPER_ADDRESS> 1000000ubanksy --from wallet --chain-id banksy-testnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubanksy -y
+banksyd tx staking delegate <TO_VALOPER_ADDRESS> 1000000upica --from wallet --chain-id banksy-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0upica -y
 ```
 
 #### Redelegate tokens to another validator
 
 ```bash
-banksyd tx staking redelegate $(banksyd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000ubanksy --from wallet --chain-id banksy-testnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubanksy -y
+banksyd tx staking redelegate $(banksyd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000upica --from wallet --chain-id banksy-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0upica -y
 ```
 
 #### Unbond tokens from your validator
 
 ```bash
-banksyd tx staking unbond $(banksyd keys show wallet --bech val -a) 1000000ubanksy --from wallet --chain-id banksy-testnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubanksy -y
+banksyd tx staking unbond $(banksyd keys show wallet --bech val -a) 1000000upica --from wallet --chain-id banksy-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0upica -y
 ```
 
 #### Send tokens to the wallet
 
 ```bash
-banksyd tx bank send wallet <TO_WALLET_ADDRESS> 1000000ubanksy --from wallet --chain-id banksy-testnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubanksy -y
+banksyd tx bank send wallet <TO_WALLET_ADDRESS> 1000000upica --from wallet --chain-id banksy-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0upica -y
 ```
 
 ## 🗳 Governance
@@ -186,25 +186,25 @@ banksyd query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-banksyd tx gov vote 1 yes --from wallet --chain-id banksy-testnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubanksy -y
+banksyd tx gov vote 1 yes --from wallet --chain-id banksy-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0upica -y
 ```
 
 #### Vote 'No'
 
 ```bash
-banksyd tx gov vote 1 no --from wallet --chain-id banksy-testnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubanksy -y
+banksyd tx gov vote 1 no --from wallet --chain-id banksy-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0upica -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-banksyd tx gov vote 1 abstain --from wallet --chain-id banksy-testnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubanksy -y
+banksyd tx gov vote 1 abstain --from wallet --chain-id banksy-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0upica -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-banksyd tx gov vote 1 NoWithVeto --from wallet --chain-id banksy-testnet-1 --gas-adjustment 1.4 --gas auto --gas-prices 0ubanksy -y
+banksyd tx gov vote 1 NoWithVeto --from wallet --chain-id banksy-testnet-2 --gas-adjustment 1.4 --gas auto --gas-prices 0upica -y
 ```
 
 ## ⚡️ Utility
@@ -277,7 +277,7 @@ curl -sS http://localhost:15957/net_info | jq -r '.result.peers[] | "\(.node_inf
 #### Set minimum gas price
 
 ```bash
-sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0ubanksy\"/" $HOME/.banksy/config/app.toml
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0upica\"/" $HOME/.banksy/config/app.toml
 ```
 
 #### Enable prometheus
