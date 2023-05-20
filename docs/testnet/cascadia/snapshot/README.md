@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **09:00 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 639437 | 5 hours | [snapshot (0.64 GB)](https://snapshots.kjnodes.com/cascadia-testnet/snapshot\_latest.tar.lz4) |
+| 649605 | 4 hours | [snapshot (0.55 GB)](https://snapshots.kjnodes.com/cascadia-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

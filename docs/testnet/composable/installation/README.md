@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/composable.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: banksy-testnet-2 | **Latest Version Tag**: v2.3.2 | **Custom Port**: 159
+**Chain ID**: banksy-testnet-2 | **Latest Version Tag**: v2.3.3-testnet2fork | **Custom Port**: 159
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf composable-testnet
 git clone https://github.com/notional-labs/composable-testnet.git
 cd composable-testnet
-git checkout v2.3.2
+git checkout v2.3.3-testnet2fork
 
 # Build binaries
 make build
@@ -102,7 +102,8 @@ banksyd config node tcp://localhost:15957
 banksyd init $MONIKER --chain-id banksy-testnet-2
 
 # Download genesis and addrbook
-curl -Ls https://raw.githubusercontent.com/notional-labs/composable-networks/main/testnet-2/genesis.json > $HOME/.banksy/config/genesis.json
+curl -Ls https://snapshots.kjnodes.com/composable-testnet/genesis.json > $HOME/.banksy/config/genesis.json
+curl -Ls https://snapshots.kjnodes.com/composable-testnet/addrbook.json > $HOME/.banksy/config/addrbook.json
 
 # Add seeds
 sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@composable-testnet.rpc.kjnodes.com:15959\"|" $HOME/.banksy/config/config.toml
@@ -121,6 +122,13 @@ sed -i \
 # Set custom ports
 sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:15958\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:15957\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:15960\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:15956\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":15966\"%" $HOME/.banksy/config/config.toml
 sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:15917\"%; s%^address = \":8080\"%address = \":15980\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:15990\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:15991\"%; s%:8545%:15945%; s%:8546%:15946%; s%:6065%:15965%" $HOME/.banksy/config/app.toml
+```
+
+### Download latest chain snapshot
+
+```bash
+curl -L https://snapshots.kjnodes.com/composable-testnet/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.banksy
+[[ -f $HOME/.banksy/data/upgrade-info.json ]] && cp $HOME/.banksy/data/upgrade-info.json $HOME/.banksy/cosmovisor/genesis/upgrade-info.json
 ```
 
 ### Start service and check the logs
