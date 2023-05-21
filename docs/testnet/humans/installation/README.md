@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/humans.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: humans_3000-23 | **Latest Version Tag**: v0.2.2 | **Custom Port**: 122
+**Chain ID**: humans_3000-31 | **Latest Version Tag**: v0.2.2 | **Custom Port**: 122
 
 ### Setup validator name
 
@@ -94,12 +94,12 @@ sudo systemctl enable humansd
 
 ```bash
 # Set node configuration
-humansd config chain-id humans_3000-23
+humansd config chain-id humans_3000-31
 humansd config keyring-backend test
 humansd config node tcp://localhost:12257
 
 # Initialize the node
-humansd init $MONIKER --chain-id humans_3000-23
+humansd init $MONIKER --chain-id humans_3000-31
 
 # Download genesis and addrbook
 curl -Ls https://snapshots.kjnodes.com/humans-testnet/genesis.json > $HOME/.humansd/config/genesis.json

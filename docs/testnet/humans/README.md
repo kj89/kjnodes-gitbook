@@ -4,7 +4,7 @@
 
 Humans is Blockchain of AIs. It is the first blockchain network  from the Cosmos ecosystem capable of managing, deploying and  executing artificial intelligence on the blockchain.
 
-**Chain ID**: humans_3000-23 | **Latest Version Tag**: v0.2.2 | **Wasm**: OFF
+**Chain ID**: humans_3000-31 | **Latest Version Tag**: v0.2.2 | **Wasm**: OFF
 
 [Website](https://humans.ai) | [Discord](https://discord.gg/humansdotai) | [Twitter](https://twitter.com/humansdotai)
 
@@ -41,8 +41,8 @@ d5519e378247dfb61dfe90652d1fe3e2b3005a5b@humans-testnet.rpc.kjnodes.com:12256
 curl -Ls https://snapshots.kjnodes.com/humans-testnet/addrbook.json > $HOME/.humansd/config/addrbook.json
 ```
 
-**live-peers** (10)
+**live-peers** (9)
 ```bash
-peers="6271d80b8fc42da3a2825cc5ef75818dd52423d1@138.201.121.185:26656,a41f29c2d498b232c18f75364e38cee06fac198d@78.46.64.59:26656,417089d6681abacc685c2eff9e029d85231a04a0@141.95.34.193:46656,0ae23e03040dd3e3a6c3a2326c62a206f531d671@162.19.31.150:26656,5e1f23a66fafd1a73871f055a6dd2165c01fe1c2@65.109.25.62:26656,2685f8e77fec93c99a55f2adb13835a50124d04e@135.181.18.112:55686,5ca0389db000da1ce87d992816a4aefa387c3998@143.110.190.223:26656,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:12256,22ccc03acda4e7230f779dc3955a0097a32c358e@69.197.6.24:26656,ceba57f1376d4949cc0419918d110f0085b24b25@135.181.113.225:26656"
+peers="907cb9da5d7d7182a80a6e38aad59bd067059bb3@65.21.200.54:26656,2685f8e77fec93c99a55f2adb13835a50124d04e@135.181.18.112:55686,d70c9343af28023a78aceb653e885666c12fec3b@138.201.121.185:26687,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:12256,6e2dac7a826fa2c21867dc6620b5945574a89865@65.109.155.238:29656,b99df5397a6104fac055f21195f1fb25b77f5704@65.109.92.79:17656,5e1f23a66fafd1a73871f055a6dd2165c01fe1c2@65.109.25.62:26656,35ad999115e2a58540f6cf3bc3b90cc3adc9debc@65.109.116.95:26656,c467f8c292dbbebc654c8429956d15f09eb38a1d@65.109.13.83:26656"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.humansd/config/config.toml
 ```
