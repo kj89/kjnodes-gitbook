@@ -14,12 +14,6 @@ Kjnodes team have built bots to keep validators notified when there is a new pro
 
 [🤖 Testnet Proposal bot](https://t.me/kjnodes\_testnet\_proposal\_bot) | **Supported chains**: 27 | **Users**: 421 | **Active subscriptions**: 1331
 
-## Subscription Stats
-
-**Environment**: mainnet | **Latest Version Tag**: pismoC | **Wasm**: OFF
-
-**Environment**: testnet | **Latest Version Tag**: pismoC | **Wasm**: OFF
-
 ## How to use
 
 To start using the bot type `/start` command and choose the networks in which you want to get notified. 🥝 icon will tell you which network notifications are turned on.
