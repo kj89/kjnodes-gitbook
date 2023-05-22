@@ -6,7 +6,7 @@ description: Prepare for and the upcomming chain upgrade using Cosmovisor.
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/agoric.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: agoric-emerynet-5 | **Latest Version Tag**: pismoC | **Custom Port**: 127
+**Chain ID**: agoric-emerynet-5 | **Latest Version Tag**: mainnet1B-rc0 | **Custom Port**: 127
 
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.
@@ -18,10 +18,10 @@ You just have to build new binaries and move it into cosmovisor upgrades directo
 ```bash
 # Clone project repository
 cd $HOME
-rm -rf pismoC
-git clone https://github.com/Agoric/agoric-sdk.git pismoC
-cd pismoC
-git checkout pismoC
+rm -rf mainnet1B-rc0
+git clone https://github.com/Agoric/agoric-sdk.git mainnet1B-rc0
+cd mainnet1B-rc0
+git checkout mainnet1B-rc0
 
 # Install and build Agoric Javascript packages
 yarn install && yarn build
@@ -30,11 +30,11 @@ yarn install && yarn build
 (cd packages/cosmic-swingset && make)
 
 # Prepare binaries for Cosmovisor
-mkdir -p $HOME/.agoric/cosmovisor/upgrades/agorictest-upgrade-9/bin
-ln -s $HOME/pismoC/packages/cosmic-swingset/bin/ag-chain-cosmos $HOME/.agoric/cosmovisor/upgrades/agorictest-upgrade-9/bin/ag-chain-cosmos
-ln -s $HOME/pismoC/packages/cosmic-swingset/bin/ag-nchainz $HOME/.agoric/cosmovisor/upgrades/agorictest-upgrade-9/bin/ag-nchainz
-cp golang/cosmos/build/agd $HOME/.agoric/cosmovisor/upgrades/agorictest-upgrade-9/bin/
-cp golang/cosmos/build/ag-cosmos-helper $HOME/.agoric/cosmovisor/upgrades/agorictest-upgrade-9/bin/
+mkdir -p $HOME/.agoric/cosmovisor/upgrades/agorictest-upgrade-10/bin
+ln -s $HOME/mainnet1B-rc0/packages/cosmic-swingset/bin/ag-chain-cosmos $HOME/.agoric/cosmovisor/upgrades/agorictest-upgrade-10/bin/ag-chain-cosmos
+ln -s $HOME/mainnet1B-rc0/packages/cosmic-swingset/bin/ag-nchainz $HOME/.agoric/cosmovisor/upgrades/agorictest-upgrade-10/bin/ag-nchainz
+cp golang/cosmos/build/agd $HOME/.agoric/cosmovisor/upgrades/agorictest-upgrade-10/bin/
+cp golang/cosmos/build/ag-cosmos-helper $HOME/.agoric/cosmovisor/upgrades/agorictest-upgrade-10/bin/
 ```
 
 *Thats it! Now when upgrade block height is reached, Cosmovisor will handle it automatically!*
