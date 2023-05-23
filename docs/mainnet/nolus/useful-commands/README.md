@@ -66,7 +66,7 @@ nolusd tx staking create-validator \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL" \
---chain-id nolus-rila \
+--chain-id pirin-1 \
 --commission-rate 0.05 \
 --commission-max-rate 0.20 \
 --commission-max-change-rate 0.01 \
@@ -86,7 +86,7 @@ nolusd tx staking edit-validator \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL" \
---chain-id nolus-rila \
+--chain-id pirin-1 \
 --commission-rate 0.05 \
 --from wallet \
 --gas-adjustment 1.4 \
@@ -98,7 +98,7 @@ nolusd tx staking edit-validator \
 #### Unjail validator
 
 ```bash
-nolusd tx slashing unjail --from wallet --chain-id nolus-rila --gas-adjustment 1.4 --gas auto --fees 2500unls -y
+nolusd tx slashing unjail --from wallet --chain-id pirin-1 --gas-adjustment 1.4 --gas auto --fees 2500unls -y
 ```
 
 #### Jail reason
@@ -130,43 +130,43 @@ nolusd q staking validator $(nolusd keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-nolusd tx distribution withdraw-all-rewards --from wallet --chain-id nolus-rila --gas-adjustment 1.4 --gas auto --fees 2500unls -y
+nolusd tx distribution withdraw-all-rewards --from wallet --chain-id pirin-1 --gas-adjustment 1.4 --gas auto --fees 2500unls -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-nolusd tx distribution withdraw-rewards $(nolusd keys show wallet --bech val -a) --commission --from wallet --chain-id nolus-rila --gas-adjustment 1.4 --gas auto --fees 2500unls -y
+nolusd tx distribution withdraw-rewards $(nolusd keys show wallet --bech val -a) --commission --from wallet --chain-id pirin-1 --gas-adjustment 1.4 --gas auto --fees 2500unls -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-nolusd tx staking delegate $(nolusd keys show wallet --bech val -a) 1000000unls --from wallet --chain-id nolus-rila --gas-adjustment 1.4 --gas auto --fees 2500unls -y
+nolusd tx staking delegate $(nolusd keys show wallet --bech val -a) 1000000unls --from wallet --chain-id pirin-1 --gas-adjustment 1.4 --gas auto --fees 2500unls -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-nolusd tx staking delegate <TO_VALOPER_ADDRESS> 1000000unls --from wallet --chain-id nolus-rila --gas-adjustment 1.4 --gas auto --fees 2500unls -y
+nolusd tx staking delegate <TO_VALOPER_ADDRESS> 1000000unls --from wallet --chain-id pirin-1 --gas-adjustment 1.4 --gas auto --fees 2500unls -y
 ```
 
 #### Redelegate tokens to another validator
 
 ```bash
-nolusd tx staking redelegate $(nolusd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000unls --from wallet --chain-id nolus-rila --gas-adjustment 1.4 --gas auto --fees 2500unls -y
+nolusd tx staking redelegate $(nolusd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000unls --from wallet --chain-id pirin-1 --gas-adjustment 1.4 --gas auto --fees 2500unls -y
 ```
 
 #### Unbond tokens from your validator
 
 ```bash
-nolusd tx staking unbond $(nolusd keys show wallet --bech val -a) 1000000unls --from wallet --chain-id nolus-rila --gas-adjustment 1.4 --gas auto --fees 2500unls -y
+nolusd tx staking unbond $(nolusd keys show wallet --bech val -a) 1000000unls --from wallet --chain-id pirin-1 --gas-adjustment 1.4 --gas auto --fees 2500unls -y
 ```
 
 #### Send tokens to the wallet
 
 ```bash
-nolusd tx bank send wallet <TO_WALLET_ADDRESS> 1000000unls --from wallet --chain-id nolus-rila --gas-adjustment 1.4 --gas auto --fees 2500unls -y
+nolusd tx bank send wallet <TO_WALLET_ADDRESS> 1000000unls --from wallet --chain-id pirin-1 --gas-adjustment 1.4 --gas auto --fees 2500unls -y
 ```
 
 ## 🗳 Governance
@@ -186,25 +186,25 @@ nolusd query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-nolusd tx gov vote 1 yes --from wallet --chain-id nolus-rila --gas-adjustment 1.4 --gas auto --fees 2500unls -y
+nolusd tx gov vote 1 yes --from wallet --chain-id pirin-1 --gas-adjustment 1.4 --gas auto --fees 2500unls -y
 ```
 
 #### Vote 'No'
 
 ```bash
-nolusd tx gov vote 1 no --from wallet --chain-id nolus-rila --gas-adjustment 1.4 --gas auto --fees 2500unls -y
+nolusd tx gov vote 1 no --from wallet --chain-id pirin-1 --gas-adjustment 1.4 --gas auto --fees 2500unls -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-nolusd tx gov vote 1 abstain --from wallet --chain-id nolus-rila --gas-adjustment 1.4 --gas auto --fees 2500unls -y
+nolusd tx gov vote 1 abstain --from wallet --chain-id pirin-1 --gas-adjustment 1.4 --gas auto --fees 2500unls -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-nolusd tx gov vote 1 NoWithVeto --from wallet --chain-id nolus-rila --gas-adjustment 1.4 --gas auto --fees 2500unls -y
+nolusd tx gov vote 1 NoWithVeto --from wallet --chain-id pirin-1 --gas-adjustment 1.4 --gas auto --fees 2500unls -y
 ```
 
 ## ⚡️ Utility
