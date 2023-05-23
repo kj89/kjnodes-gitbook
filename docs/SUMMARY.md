@@ -86,6 +86,13 @@
   * [State sync](mainnet/nois/state-sync/README.md)
   * [Useful commands](mainnet/nois/useful-commands/README.md)
 
+* [Nolus](mainnet/nolus/README.md)
+  * [Installation](mainnet/nolus/installation/README.md)
+  * [Upgrade](mainnet/nolus/upgrade/README.md)
+  * [Snapshot](mainnet/nolus/snapshot/README.md)
+  * [State sync](mainnet/nolus/state-sync/README.md)
+  * [Useful commands](mainnet/nolus/useful-commands/README.md)
+
 * [Quasar](mainnet/quasar/README.md)
   * [Installation](mainnet/quasar/installation/README.md)
   * [Upgrade](mainnet/quasar/upgrade/README.md)
