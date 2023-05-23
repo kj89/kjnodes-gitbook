@@ -50,7 +50,7 @@ Currently state sync does not support copy of the `wasm` folder. Therefore, you 
 {% endhint %}
 
 ```bash
-curl -L https://snapshots.kjnodes.com/nolus-testnet/wasm_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.nolus
+curl -L https://snapshots.kjnodes.com/nolus/wasm_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.nolus
 ```
 
 ### Restart the service and check the log
