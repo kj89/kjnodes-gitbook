@@ -13,6 +13,23 @@ Since we are using Cosmovisor, it makes it very easy to prepare for upcomming up
 You just have to build new binaries and move it into cosmovisor upgrades directory.
 {% endhint %}
 
-{% hint style='warning' %}
-Currently there are no upgrades available for rhye-1!
-{% endhint %}
+## Download and build upgrade binaries
+
+```bash
+# Clone project repository
+cd $HOME
+rm -rf quicksilver
+git clone https://github.com/ingenuity-build/quicksilver.git
+cd quicksilver
+git checkout v1.4.2-rc7
+
+# Build binaries
+make build
+
+# Prepare binaries for Cosmovisor
+mkdir -p $HOME/.quicksilverd/cosmovisor/upgrades/v1.4.2-rc7/bin
+mv build/quicksilverd $HOME/.quicksilverd/cosmovisor/upgrades/v1.4.2-rc7/bin/
+rm -rf build
+```
+
+*Thats it! Now when upgrade block height is reached, Cosmovisor will handle it automatically!*
