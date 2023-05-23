@@ -66,7 +66,7 @@ quicksilverd tx staking create-validator \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL" \
---chain-id innuendo-5 \
+--chain-id rhye-1 \
 --commission-rate 0.05 \
 --commission-max-rate 0.20 \
 --commission-max-change-rate 0.01 \
@@ -86,7 +86,7 @@ quicksilverd tx staking edit-validator \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL" \
---chain-id innuendo-5 \
+--chain-id rhye-1 \
 --commission-rate 0.05 \
 --from wallet \
 --gas-adjustment 1.4 \
@@ -98,7 +98,7 @@ quicksilverd tx staking edit-validator \
 #### Unjail validator
 
 ```bash
-quicksilverd tx slashing unjail --from wallet --chain-id innuendo-5 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
+quicksilverd tx slashing unjail --from wallet --chain-id rhye-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
 ```
 
 #### Jail reason
@@ -130,43 +130,43 @@ quicksilverd q staking validator $(quicksilverd keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-quicksilverd tx distribution withdraw-all-rewards --from wallet --chain-id innuendo-5 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
+quicksilverd tx distribution withdraw-all-rewards --from wallet --chain-id rhye-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-quicksilverd tx distribution withdraw-rewards $(quicksilverd keys show wallet --bech val -a) --commission --from wallet --chain-id innuendo-5 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
+quicksilverd tx distribution withdraw-rewards $(quicksilverd keys show wallet --bech val -a) --commission --from wallet --chain-id rhye-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-quicksilverd tx staking delegate $(quicksilverd keys show wallet --bech val -a) 1000000uqck --from wallet --chain-id innuendo-5 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
+quicksilverd tx staking delegate $(quicksilverd keys show wallet --bech val -a) 1000000uqck --from wallet --chain-id rhye-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-quicksilverd tx staking delegate <TO_VALOPER_ADDRESS> 1000000uqck --from wallet --chain-id innuendo-5 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
+quicksilverd tx staking delegate <TO_VALOPER_ADDRESS> 1000000uqck --from wallet --chain-id rhye-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
 ```
 
 #### Redelegate tokens to another validator
 
 ```bash
-quicksilverd tx staking redelegate $(quicksilverd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000uqck --from wallet --chain-id innuendo-5 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
+quicksilverd tx staking redelegate $(quicksilverd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000uqck --from wallet --chain-id rhye-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
 ```
 
 #### Unbond tokens from your validator
 
 ```bash
-quicksilverd tx staking unbond $(quicksilverd keys show wallet --bech val -a) 1000000uqck --from wallet --chain-id innuendo-5 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
+quicksilverd tx staking unbond $(quicksilverd keys show wallet --bech val -a) 1000000uqck --from wallet --chain-id rhye-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
 ```
 
 #### Send tokens to the wallet
 
 ```bash
-quicksilverd tx bank send wallet <TO_WALLET_ADDRESS> 1000000uqck --from wallet --chain-id innuendo-5 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
+quicksilverd tx bank send wallet <TO_WALLET_ADDRESS> 1000000uqck --from wallet --chain-id rhye-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
 ```
 
 ## 🗳 Governance
@@ -186,25 +186,25 @@ quicksilverd query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-quicksilverd tx gov vote 1 yes --from wallet --chain-id innuendo-5 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
+quicksilverd tx gov vote 1 yes --from wallet --chain-id rhye-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
 ```
 
 #### Vote 'No'
 
 ```bash
-quicksilverd tx gov vote 1 no --from wallet --chain-id innuendo-5 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
+quicksilverd tx gov vote 1 no --from wallet --chain-id rhye-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-quicksilverd tx gov vote 1 abstain --from wallet --chain-id innuendo-5 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
+quicksilverd tx gov vote 1 abstain --from wallet --chain-id rhye-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-quicksilverd tx gov vote 1 NoWithVeto --from wallet --chain-id innuendo-5 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
+quicksilverd tx gov vote 1 NoWithVeto --from wallet --chain-id rhye-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.0001uqck -y
 ```
 
 ## ⚡️ Utility

@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/quicksilver.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: innuendo-5 | **Latest Version Tag**: v1.4.0-rc10.2 | **Custom Port**: 111
+**Chain ID**: rhye-1 | **Latest Version Tag**: v1.4.2-rc7 | **Custom Port**: 111
 
 ### Setup validator name
 
@@ -32,7 +32,7 @@ sudo apt -qy upgrade
 
 ```bash
 sudo rm -rf /usr/local/go
-curl -Ls https://go.dev/dl/go1.19.9.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
+curl -Ls https://go.dev/dl/go1.20.4.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
 eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/golang.sh)
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf quicksilver
 git clone https://github.com/ingenuity-build/quicksilver.git
 cd quicksilver
-git checkout v1.4.0-rc10.2
+git checkout v1.4.2-rc7
 
 # Build binaries
 make build
@@ -94,12 +94,12 @@ sudo systemctl enable quicksilverd
 
 ```bash
 # Set node configuration
-quicksilverd config chain-id innuendo-5
+quicksilverd config chain-id rhye-1
 quicksilverd config keyring-backend test
 quicksilverd config node tcp://localhost:11157
 
 # Initialize the node
-quicksilverd init $MONIKER --chain-id innuendo-5
+quicksilverd init $MONIKER --chain-id rhye-1
 
 # Download genesis and addrbook
 curl -Ls https://snapshots.kjnodes.com/quicksilver-testnet/genesis.json > $HOME/.quicksilverd/config/genesis.json
