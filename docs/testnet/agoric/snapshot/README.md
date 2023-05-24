@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **04:15 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: agorictest-upgrade-9
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: pismoC
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 4382110 | 15 hours | [snapshot (2.22 GB)](https://snapshots.kjnodes.com/agoric-testnet/snapshot\_latest.tar.lz4) |
+| 5268 | 1 minutes | [snapshot (0.14 GB)](https://snapshots.kjnodes.com/agoric-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
