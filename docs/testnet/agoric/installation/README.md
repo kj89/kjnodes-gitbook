@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/agoric.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: agoric-emerynet-5 | **Latest Version Tag**: mainnet1B-rc0 | **Custom Port**: 127
+**Chain ID**: agoric-emerynet-6 | **Latest Version Tag**: pismoC | **Custom Port**: 127
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ sudo apt -qy upgrade
 
 ```bash
 sudo rm -rf /usr/local/go
-curl -Ls https://go.dev/dl/go1.20.4.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
+curl -Ls https://go.dev/dl/go1.19.9.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
 eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/golang.sh)
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
@@ -55,10 +55,10 @@ eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```bash
 # Clone project repository
 cd $HOME
-rm -rf mainnet1B-rc0
-git clone https://github.com/Agoric/agoric-sdk.git mainnet1B-rc0
-cd mainnet1B-rc0
-git checkout mainnet1B-rc0
+rm -rf pismoC
+git clone https://github.com/Agoric/agoric-sdk.git pismoC
+cd pismoC
+git checkout pismoC
 
 # Install and build Agoric Javascript packages
 yarn install && yarn build
@@ -68,8 +68,8 @@ yarn install && yarn build
 
 # Prepare binaries for Cosmovisor
 mkdir -p $HOME/.agoric/cosmovisor/genesis/bin
-ln -s $HOME/mainnet1B-rc0/packages/cosmic-swingset/bin/ag-chain-cosmos $HOME/.agoric/cosmovisor/genesis/bin/ag-chain-cosmos
-ln -s $HOME/mainnet1B-rc0/packages/cosmic-swingset/bin/ag-nchainz $HOME/.agoric/cosmovisor/genesis/bin/ag-nchainz
+ln -s $HOME/pismoC/packages/cosmic-swingset/bin/ag-chain-cosmos $HOME/.agoric/cosmovisor/genesis/bin/ag-chain-cosmos
+ln -s $HOME/pismoC/packages/cosmic-swingset/bin/ag-nchainz $HOME/.agoric/cosmovisor/genesis/bin/ag-nchainz
 cp golang/cosmos/build/agd $HOME/.agoric/cosmovisor/genesis/bin/
 cp golang/cosmos/build/ag-cosmos-helper $HOME/.agoric/cosmovisor/genesis/bin/
 
@@ -112,12 +112,12 @@ sudo systemctl enable agd
 
 ```bash
 # Set node configuration
-agd config chain-id agoric-emerynet-5
+agd config chain-id agoric-emerynet-6
 agd config keyring-backend test
 agd config node tcp://localhost:12757
 
 # Initialize the node
-agd init $MONIKER --chain-id agoric-emerynet-5
+agd init $MONIKER --chain-id agoric-emerynet-6
 
 # Download genesis and addrbook
 curl -Ls https://snapshots.kjnodes.com/agoric-testnet/genesis.json > $HOME/.agoric/config/genesis.json
