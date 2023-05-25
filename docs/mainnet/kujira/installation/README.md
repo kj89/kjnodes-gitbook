@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/kujira.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: kaiyo-1 | **Latest Version Tag**: v0.8.4-mainnet | **Custom Port**: 113
+**Chain ID**: kaiyo-1 | **Latest Version Tag**: v0.8.6 | **Custom Port**: 113
 
 ### Setup validator name
 
@@ -32,7 +32,7 @@ sudo apt -qy upgrade
 
 ```bash
 sudo rm -rf /usr/local/go
-curl -Ls https://go.dev/dl/go1.19.9.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
+curl -Ls https://go.dev/dl/go1.19.7.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
 eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/golang.sh)
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf core
 git clone https://github.com/Team-Kujira/core.git
 cd core
-git checkout v0.8.4-mainnet
+git checkout v0.8.6
 
 # Build binaries
 make build

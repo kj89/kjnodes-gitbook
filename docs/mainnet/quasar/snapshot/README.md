@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **07:15 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: v0.1.0
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v0.1.1
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 973031 | 1 hours | [snapshot (0.58 GB)](https://snapshots.kjnodes.com/quasar/snapshot\_latest.tar.lz4) |
+| 976846 | 1 hours | [snapshot (0.55 GB)](https://snapshots.kjnodes.com/quasar/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/quasar.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: quasar-1 | **Latest Version Tag**: v0.1.0 | **Custom Port**: 148
+**Chain ID**: quasar-1 | **Latest Version Tag**: v0.1.1 | **Custom Port**: 148
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf quasar-preview
 git clone https://github.com/quasar-finance/quasar-preview.git
 cd quasar-preview
-git checkout v0.1.0
+git checkout v0.1.1
 
 # Build binaries
 make build

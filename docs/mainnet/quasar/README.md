@@ -4,7 +4,7 @@
 
 Quasar (pronounced QWAY-ZAR) is a decentralized  appchain enabling interchain digital asset management.
 
-**Chain ID**: quasar-1 | **Latest Version Tag**: v0.1.0 | **Wasm**: ON
+**Chain ID**: quasar-1 | **Latest Version Tag**: v0.1.1 | **Wasm**: ON
 
 [Website](https://www.quasar.fi) | [Discord](https://discord.gg/quasarfi) | [Twitter](https://twitter.com/QuasarFi)
 
@@ -41,8 +41,8 @@ d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@quasar.rpc.kjnodes.com:14856
 curl -Ls https://snapshots.kjnodes.com/quasar/addrbook.json > $HOME/.quasarnode/config/addrbook.json
 ```
 
-**live-peers** (10)
+**live-peers** (8)
 ```bash
-peers="1bf81f0f4e35769d075300bc46e3998d63bf2bb2@135.181.210.186:26656,c124ce0b508e8b9ed1c5b6957f362225659b5343@134.65.193.11:26656,a286b35c9e9626cc7b780120ebe4afa883c059ce@144.76.40.53:18256,b5d43d295863db6675d07877878b2d7b47cb2ae5@157.90.36.48:26966,bbf8c1562c20726a436f1c1476ad49e560ca179b@51.89.190.33:26656,58a4943a150cc77ab77ded222c44b23548ee702a@146.59.81.23:26667,6cceba286b498d4a1931f85e35ea0fa433373057@169.155.170.222:26656,298e0e1faf8a5da43514cc2908d2908658e732a0@38.146.3.148:18256,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:14856,a7d96dc929824613315dcc1c90fee119f28cc51f@134.65.193.189:26656"
+peers="471518432477e31ea348af246c0b54095d41352c@134.65.195.144:26656,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:14856,89757803f40da51678451735445ad40d5b15e059@169.155.169.149:26656,8267f475e2e6af90353096879d24dc029b8e8c18@185.246.84.59:8090,5a111b281852be31838ecf1202e59981e618355e@89.116.31.95:18256,10e73ac4ab3f9e1edd89e1aa342eb4d4f11120f0@135.181.128.114:18256,0f7eca0da978e4304bb81fa1b9d9a1c87c57f45d@38.146.3.147:18256,a40e1d5f63fad9e14edb9c95458b27f3c1de858c@116.203.236.246:26618"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.quasarnode/config/config.toml
 ```
