@@ -4,7 +4,7 @@
 
 The Migaloo chain is a permissionless Cosmos SDK chain on which  projects are encouraged to build their applications. Migaloo chain  is the home of the White Whale dApp, Interchain Command Center.
 
-**Chain ID**: migaloo-1 | **Latest Version Tag**: v2.0.2 | **Wasm**: ON
+**Chain ID**: migaloo-1 | **Latest Version Tag**: v2.0.3 | **Wasm**: ON
 
 [Website](https://whitewhale.money) | [Discord](https://discord.gg/AyvcgD4jy3) | [Twitter](https://twitter.com/WhiteWhaleDefi)
 
