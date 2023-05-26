@@ -31,10 +31,7 @@ yarn install && yarn build
 
 # Prepare binaries for Cosmovisor
 mkdir -p $HOME/${CHAIN_DIR}/cosmovisor/upgrades/${LATEST_VERSION_NAME}/bin
-ln -s $HOME/${LATEST_VERSION_TAG}/packages/cosmic-swingset/bin/ag-chain-cosmos $HOME/${CHAIN_DIR}/cosmovisor/upgrades/${LATEST_VERSION_NAME}/bin/ag-chain-cosmos
-ln -s $HOME/${LATEST_VERSION_TAG}/packages/cosmic-swingset/bin/ag-nchainz $HOME/${CHAIN_DIR}/cosmovisor/upgrades/${LATEST_VERSION_NAME}/bin/ag-nchainz
-cp golang/cosmos/build/agd $HOME/${CHAIN_DIR}/cosmovisor/upgrades/${LATEST_VERSION_NAME}/bin/
-cp golang/cosmos/build/ag-cosmos-helper $HOME/${CHAIN_DIR}/cosmovisor/upgrades/${LATEST_VERSION_NAME}/bin/
+ln -s $HOME/${LATEST_VERSION_TAG}/bin/agd $HOME/${CHAIN_DIR}/cosmovisor/upgrades/${LATEST_VERSION_NAME}/bin/agd
 ```
 
 *Thats it! Now when upgrade block height is reached, Cosmovisor will handle it automatically!*

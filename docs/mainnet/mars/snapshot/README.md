@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **06:00 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: v1.0.0
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v1.0.1
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 1700423 | 1 hours | [snapshot (0.8 GB)](https://snapshots.kjnodes.com/mars/snapshot\_latest.tar.lz4) |
+| 1700423 | 2 hours | [snapshot (0.8 GB)](https://snapshots.kjnodes.com/mars/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

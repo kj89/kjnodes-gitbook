@@ -41,8 +41,8 @@ d5519e378247dfb61dfe90652d1fe3e2b3005a5b@nois-testnet.rpc.kjnodes.com:15156
 curl -Ls https://snapshots.kjnodes.com/nois-testnet/addrbook.json > $HOME/.noisd/config/addrbook.json
 ```
 
-**live-peers** (2)
+**live-peers** (5)
 ```bash
-peers="d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:15156,d5d9d4b0af4c4ee119cd640fbbca72ff96f5c8c0@209.126.81.240:26631"
+peers="d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:15156,1e9f3c5da72edebe751b108aa52657b190c8991d@65.108.225.158:17356,711a4b20ce63e3a69725d27c73145519a2a1b559@161.97.159.68:17356,4af23e5bbb434e58082054a7d97b41b62cdb4a83@195.201.197.4:30656,08b081a1791ff0a8fdfa1d8e4a3c7e17af7a91aa@65.109.158.90:37656"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.noisd/config/config.toml
 ```

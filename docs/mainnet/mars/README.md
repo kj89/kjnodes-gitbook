@@ -4,7 +4,7 @@
 
 Mars is a credit protocol for the future: non-custodial,  open-source, transparent, algorithmic and community-governed.
 
-**Chain ID**: mars-1 | **Latest Version Tag**: v1.0.0 | **Wasm**: ON
+**Chain ID**: mars-1 | **Latest Version Tag**: v1.0.1 | **Wasm**: ON
 
 [Website](https://marsprotocol.io) | [Discord](https://discord.gg/marsprotocol) | [Twitter](https://twitter.com/mars_protocol)
 
