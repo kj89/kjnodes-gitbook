@@ -12,13 +12,13 @@ Snapshot contains compressed copy of chain data directory. To keep backup files 
 snapshot server is periodically beeing state-synced.
 {% endhint %}
 
-Snapshots are taken automatically every 6 hours starting at **01:15 UTC**
+Snapshots are taken automatically every 6 hours starting at **10:30 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: 
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: latest
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-|  |  | [snapshot ()](https://snapshots.kjnodes.com/zetachain-testnet/snapshot\_latest.tar.lz4) |
+| 29102 | 1 minutes | [snapshot (0.15 GB)](https://snapshots.kjnodes.com/zetachain-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

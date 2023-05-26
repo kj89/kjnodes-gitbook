@@ -43,15 +43,7 @@ sed -i \
 mv $HOME/.zetacored/priv_validator_state.json.backup $HOME/.zetacored/data/priv_validator_state.json
 ```
 
-### Download latest wasm
 
-{% hint style='info' %}
-Currently state sync does not support copy of the `wasm` folder. Therefore, you will have to download it manually.
-{% endhint %}
-
-```bash
-curl -L https://snapshots.kjnodes.com/zetachain-testnet/wasm_latest.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.zetacored
-```
 
 ### Restart the service and check the log
 

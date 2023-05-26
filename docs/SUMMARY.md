@@ -334,3 +334,10 @@
   * [State sync](testnet/uptick/state-sync/README.md)
   * [Useful commands](testnet/uptick/useful-commands/README.md)
 
+* [Zetachain](testnet/zetachain/README.md)
+  * [Installation](testnet/zetachain/installation/README.md)
+  * [Upgrade](testnet/zetachain/upgrade/README.md)
+  * [Snapshot](testnet/zetachain/snapshot/README.md)
+  * [State sync](testnet/zetachain/state-sync/README.md)
+  * [Useful commands](testnet/zetachain/useful-commands/README.md)
+
