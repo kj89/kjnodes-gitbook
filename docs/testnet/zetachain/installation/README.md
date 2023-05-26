@@ -40,20 +40,10 @@ eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ### Download and build binaries
 
 ```bash
-# Clone project repository
-cd $HOME
-rm -rf gravity-bin
-git clone 
-cd gravity-bin
-git checkout latest
-
-# Build binaries
-make build
-
-# Prepare binaries for Cosmovisor
+# Download project binaries
 mkdir -p $HOME/.zetacored/cosmovisor/genesis/bin
-mv build/zetacored $HOME/.zetacored/cosmovisor/genesis/bin/
-rm -rf build
+wget -O $HOME/.zetacored/cosmovisor/genesis/bin/zetacored https://zetachain-external-files.s3.amazonaws.com/binaries/athens3/latest/zetacored-ubuntu-22-amd64
+chmod +x $HOME/.zetacored/cosmovisor/genesis/bin/zetacored
 
 # Create application symlinks
 sudo ln -s $HOME/.zetacored/cosmovisor/genesis $HOME/.zetacored/cosmovisor/current -f
