@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **08:00 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: v1.0.2
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v1.0.3
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 1145543 | 3 weeks | [snapshot (0.74 GB)](https://snapshots.kjnodes.com/nois-testnet/snapshot\_latest.tar.lz4) |
+| 2139041 | 1 minutes | [snapshot (0.36 GB)](https://snapshots.kjnodes.com/nois-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

@@ -4,7 +4,7 @@
 
 Gitopia is the next-generation Code Collaboration Platform fuelled by  a decentralized network and interactive token economy. It is designed  to optimize the open-source software development process through  collaboration, transparency, and incentivization.
 
-**Chain ID**: gitopia | **Latest Version Tag**: v2.0.0 | **Wasm**: OFF
+**Chain ID**: gitopia | **Latest Version Tag**: v2.1.0 | **Wasm**: OFF
 
 [Website](https://gitopia.com/) | [Discord](https://discord.gg/hFTXCGNYDZ) | [Twitter](https://twitter.com/gitopiaDAO)
 

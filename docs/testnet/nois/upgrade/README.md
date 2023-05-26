@@ -6,7 +6,7 @@ description: Prepare for and the upcomming chain upgrade using Cosmovisor.
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/nois.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: nois-testnet-005 | **Latest Version Tag**: v1.0.2 | **Custom Port**: 151
+**Chain ID**: nois-testnet-005 | **Latest Version Tag**: v1.0.3 | **Custom Port**: 151
 
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.

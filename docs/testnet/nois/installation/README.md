@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/nois.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: nois-testnet-005 | **Latest Version Tag**: v1.0.2 | **Custom Port**: 151
+**Chain ID**: nois-testnet-005 | **Latest Version Tag**: v1.0.3 | **Custom Port**: 151
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf noisd
 git clone https://github.com/noislabs/noisd.git
 cd noisd
-git checkout v1.0.2
+git checkout v1.0.3
 
 # Build binaries
 make build
