@@ -60,7 +60,7 @@ Please make sure you have adjusted **moniker**, **identity**, **details** and **
 
 ```bash
 archwayd tx staking create-validator \
---amount 1000000uconst \
+--amount 1000000aconst \
 --pubkey $(archwayd tendermint show-validator) \
 --moniker "YOUR_MONIKER_NAME" \
 --identity "YOUR_KEYBASE_ID" \
@@ -74,7 +74,7 @@ archwayd tx staking create-validator \
 --from wallet \
 --gas-adjustment 1.4 \
 --gas auto \
---fees 500uconst \
+--gas-prices 1000000000000aconst \
 -y
 ```
 
@@ -91,14 +91,14 @@ archwayd tx staking edit-validator \
 --from wallet \
 --gas-adjustment 1.4 \
 --gas auto \
---fees 500uconst \
+--gas-prices 1000000000000aconst \
 -y
 ```
 
 #### Unjail validator
 
 ```bash
-archwayd tx slashing unjail --from wallet --chain-id constantine-3 --gas-adjustment 1.4 --gas auto --fees 500uconst -y
+archwayd tx slashing unjail --from wallet --chain-id constantine-3 --gas-adjustment 1.4 --gas auto --gas-prices 1000000000000aconst -y
 ```
 
 #### Jail reason
@@ -130,43 +130,43 @@ archwayd q staking validator $(archwayd keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-archwayd tx distribution withdraw-all-rewards --from wallet --chain-id constantine-3 --gas-adjustment 1.4 --gas auto --fees 500uconst -y
+archwayd tx distribution withdraw-all-rewards --from wallet --chain-id constantine-3 --gas-adjustment 1.4 --gas auto --gas-prices 1000000000000aconst -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-archwayd tx distribution withdraw-rewards $(archwayd keys show wallet --bech val -a) --commission --from wallet --chain-id constantine-3 --gas-adjustment 1.4 --gas auto --fees 500uconst -y
+archwayd tx distribution withdraw-rewards $(archwayd keys show wallet --bech val -a) --commission --from wallet --chain-id constantine-3 --gas-adjustment 1.4 --gas auto --gas-prices 1000000000000aconst -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-archwayd tx staking delegate $(archwayd keys show wallet --bech val -a) 1000000uconst --from wallet --chain-id constantine-3 --gas-adjustment 1.4 --gas auto --fees 500uconst -y
+archwayd tx staking delegate $(archwayd keys show wallet --bech val -a) 1000000aconst --from wallet --chain-id constantine-3 --gas-adjustment 1.4 --gas auto --gas-prices 1000000000000aconst -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-archwayd tx staking delegate <TO_VALOPER_ADDRESS> 1000000uconst --from wallet --chain-id constantine-3 --gas-adjustment 1.4 --gas auto --fees 500uconst -y
+archwayd tx staking delegate <TO_VALOPER_ADDRESS> 1000000aconst --from wallet --chain-id constantine-3 --gas-adjustment 1.4 --gas auto --gas-prices 1000000000000aconst -y
 ```
 
 #### Redelegate tokens to another validator
 
 ```bash
-archwayd tx staking redelegate $(archwayd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000uconst --from wallet --chain-id constantine-3 --gas-adjustment 1.4 --gas auto --fees 500uconst -y
+archwayd tx staking redelegate $(archwayd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000aconst --from wallet --chain-id constantine-3 --gas-adjustment 1.4 --gas auto --gas-prices 1000000000000aconst -y
 ```
 
 #### Unbond tokens from your validator
 
 ```bash
-archwayd tx staking unbond $(archwayd keys show wallet --bech val -a) 1000000uconst --from wallet --chain-id constantine-3 --gas-adjustment 1.4 --gas auto --fees 500uconst -y
+archwayd tx staking unbond $(archwayd keys show wallet --bech val -a) 1000000aconst --from wallet --chain-id constantine-3 --gas-adjustment 1.4 --gas auto --gas-prices 1000000000000aconst -y
 ```
 
 #### Send tokens to the wallet
 
 ```bash
-archwayd tx bank send wallet <TO_WALLET_ADDRESS> 1000000uconst --from wallet --chain-id constantine-3 --gas-adjustment 1.4 --gas auto --fees 500uconst -y
+archwayd tx bank send wallet <TO_WALLET_ADDRESS> 1000000aconst --from wallet --chain-id constantine-3 --gas-adjustment 1.4 --gas auto --gas-prices 1000000000000aconst -y
 ```
 
 ## 🗳 Governance
@@ -186,25 +186,25 @@ archwayd query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-archwayd tx gov vote 1 yes --from wallet --chain-id constantine-3 --gas-adjustment 1.4 --gas auto --fees 500uconst -y
+archwayd tx gov vote 1 yes --from wallet --chain-id constantine-3 --gas-adjustment 1.4 --gas auto --gas-prices 1000000000000aconst -y
 ```
 
 #### Vote 'No'
 
 ```bash
-archwayd tx gov vote 1 no --from wallet --chain-id constantine-3 --gas-adjustment 1.4 --gas auto --fees 500uconst -y
+archwayd tx gov vote 1 no --from wallet --chain-id constantine-3 --gas-adjustment 1.4 --gas auto --gas-prices 1000000000000aconst -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-archwayd tx gov vote 1 abstain --from wallet --chain-id constantine-3 --gas-adjustment 1.4 --gas auto --fees 500uconst -y
+archwayd tx gov vote 1 abstain --from wallet --chain-id constantine-3 --gas-adjustment 1.4 --gas auto --gas-prices 1000000000000aconst -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-archwayd tx gov vote 1 NoWithVeto --from wallet --chain-id constantine-3 --gas-adjustment 1.4 --gas auto --fees 500uconst -y
+archwayd tx gov vote 1 NoWithVeto --from wallet --chain-id constantine-3 --gas-adjustment 1.4 --gas auto --gas-prices 1000000000000aconst -y
 ```
 
 ## ⚡️ Utility
@@ -277,7 +277,7 @@ curl -sS http://localhost:15657/net_info | jq -r '.result.peers[] | "\(.node_inf
 #### Set minimum gas price
 
 ```bash
-sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0uconst\"/" $HOME/.archway/config/app.toml
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0aconst\"/" $HOME/.archway/config/app.toml
 ```
 
 #### Enable prometheus

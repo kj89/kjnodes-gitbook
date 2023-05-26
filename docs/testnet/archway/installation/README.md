@@ -109,7 +109,7 @@ curl -Ls https://snapshots.kjnodes.com/archway-testnet/addrbook.json > $HOME/.ar
 sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@archway-testnet.rpc.kjnodes.com:15659\"|" $HOME/.archway/config/config.toml
 
 # Set minimum gas price
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0uconst\"|" $HOME/.archway/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0aconst\"|" $HOME/.archway/config/app.toml
 
 # Set pruning
 sed -i \
