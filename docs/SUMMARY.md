@@ -236,13 +236,6 @@
   * [State sync](testnet/elys/state-sync/README.md)
   * [Useful commands](testnet/elys/useful-commands/README.md)
 
-* [BNB Greenfield](testnet/greenfield/README.md)
-  * [Installation](testnet/greenfield/installation/README.md)
-  * [Upgrade](testnet/greenfield/upgrade/README.md)
-  * [Snapshot](testnet/greenfield/snapshot/README.md)
-  * [State sync](testnet/greenfield/state-sync/README.md)
-  * [Useful commands](testnet/greenfield/useful-commands/README.md)
-
 * [Hypersign](testnet/hypersign/README.md)
   * [Installation](testnet/hypersign/installation/README.md)
   * [Upgrade](testnet/hypersign/upgrade/README.md)
