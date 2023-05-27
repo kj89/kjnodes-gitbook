@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **10:45 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: 
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v1.2.0
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-|  |  | [snapshot ()](https://snapshots.kjnodes.com/noria-testnet/snapshot\_latest.tar.lz4) |
+| 1013953 | 1 minutes | [snapshot (0.19 GB)](https://snapshots.kjnodes.com/noria-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

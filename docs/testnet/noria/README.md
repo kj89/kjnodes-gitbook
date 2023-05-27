@@ -41,8 +41,8 @@ d5519e378247dfb61dfe90652d1fe3e2b3005a5b@noria-testnet.rpc.kjnodes.com:16156
 curl -Ls https://snapshots.kjnodes.com/noria-testnet/addrbook.json > $HOME/.noria/config/addrbook.json
 ```
 
-**live-peers** (0)
+**live-peers** (1)
 ```bash
-peers=""
+peers="d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:16156"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.noria/config/config.toml
 ```

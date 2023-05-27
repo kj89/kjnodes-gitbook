@@ -13,6 +13,23 @@ Since we are using Cosmovisor, it makes it very easy to prepare for upcomming up
 You just have to build new binaries and move it into cosmovisor upgrades directory.
 {% endhint %}
 
-{% hint style='warning' %}
-Currently there are no upgrades available for oasis-3!
-{% endhint %}
+## Download and build upgrade binaries
+
+```bash
+# Clone project repository
+cd $HOME
+rm -rf noria
+git clone https://github.com/noria-net/noria.git
+cd noria
+git checkout v1.2.0
+
+# Build binaries
+make build
+
+# Prepare binaries for Cosmovisor
+mkdir -p $HOME/.noria/cosmovisor/upgrades/v1.2.0/bin
+mv build/noriad $HOME/.noria/cosmovisor/upgrades/v1.2.0/bin/
+rm -rf build
+```
+
+*Thats it! Now when upgrade block height is reached, Cosmovisor will handle it automatically!*
