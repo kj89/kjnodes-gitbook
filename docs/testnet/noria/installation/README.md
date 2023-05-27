@@ -121,7 +121,7 @@ sed -i \
 
 # Set custom ports
 sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:16158\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:16157\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:16160\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:16156\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":16166\"%" $HOME/.noria/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:16117\"%; s%^address = \":8080\"%address = \":16180\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:16190\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:16191\"%; s%:8545%:16145%; s%:8546%:16146%; s%:6065%:16165%" $HOME/.noria/config/app.toml
+sed -i -e "s%^address = \"tcp://localhost:1317\"%address = \"tcp://0.0.0.0:16117\"%; s%^address = \":8080\"%address = \":16180\"%; s%^address = \"localhost:9090\"%address = \"0.0.0.0:16190\"%; s%^address = \"localhost:9091\"%address = \"0.0.0.0:16191\"%; s%:8545%:16145%; s%:8546%:16146%; s%:6065%:16165%" $HOME/.noria/config/app.toml
 ```
 
 ### Download latest chain snapshot
