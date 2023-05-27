@@ -4,7 +4,7 @@ description: Discover base tools contributed to the projects by kjnodes team.
 
 # 🖤 Supported chains
 
-**Chains supported**: 47 | **Assets staked**: $2,284,300 | **Clients**: 4021
+**Chains supported**: 48 | **Assets staked**: $2,236,505 | **Clients**: 4022
 
 ## MAINNET
 
@@ -88,6 +88,8 @@ description: Discover base tools contributed to the projects by kjnodes team.
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/nois.png" alt="" data-size="line"> [Nois](testnet/nois/)
 
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/nolus.png" alt="" data-size="line"> [Nolus](testnet/nolus/)
+
+<img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/noria.png" alt="" data-size="line"> [Noria](testnet/noria/)
 
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/okp4.png" alt="" data-size="line"> [Okp4](testnet/okp4/)
 

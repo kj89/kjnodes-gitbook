@@ -285,6 +285,13 @@
   * [State sync](testnet/nolus/state-sync/README.md)
   * [Useful commands](testnet/nolus/useful-commands/README.md)
 
+* [Noria](testnet/noria/README.md)
+  * [Installation](testnet/noria/installation/README.md)
+  * [Upgrade](testnet/noria/upgrade/README.md)
+  * [Snapshot](testnet/noria/snapshot/README.md)
+  * [State sync](testnet/noria/state-sync/README.md)
+  * [Useful commands](testnet/noria/useful-commands/README.md)
+
 * [Okp4](testnet/okp4/README.md)
   * [Installation](testnet/okp4/installation/README.md)
   * [Upgrade](testnet/okp4/upgrade/README.md)
