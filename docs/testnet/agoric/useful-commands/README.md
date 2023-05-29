@@ -66,7 +66,7 @@ agd tx staking create-validator \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL" \
---chain-id agoric-emerynet-6 \
+--chain-id agoric-emerynet-7 \
 --commission-rate 0.05 \
 --commission-max-rate 0.20 \
 --commission-max-change-rate 0.01 \
@@ -86,7 +86,7 @@ agd tx staking edit-validator \
 --identity "YOUR_KEYBASE_ID" \
 --details "YOUR_DETAILS" \
 --website "YOUR_WEBSITE_URL" \
---chain-id agoric-emerynet-6 \
+--chain-id agoric-emerynet-7 \
 --commission-rate 0.05 \
 --from wallet \
 --gas-adjustment 1.4 \
@@ -98,7 +98,7 @@ agd tx staking edit-validator \
 #### Unjail validator
 
 ```bash
-agd tx slashing unjail --from wallet --chain-id agoric-emerynet-6 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ubld -y
+agd tx slashing unjail --from wallet --chain-id agoric-emerynet-7 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ubld -y
 ```
 
 #### Jail reason
@@ -130,43 +130,43 @@ agd q staking validator $(agd keys show wallet --bech val -a)
 #### Withdraw rewards from all validators
 
 ```bash
-agd tx distribution withdraw-all-rewards --from wallet --chain-id agoric-emerynet-6 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ubld -y
+agd tx distribution withdraw-all-rewards --from wallet --chain-id agoric-emerynet-7 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ubld -y
 ```
 
 #### Withdraw commission and rewards from your validator
 
 ```bash
-agd tx distribution withdraw-rewards $(agd keys show wallet --bech val -a) --commission --from wallet --chain-id agoric-emerynet-6 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ubld -y
+agd tx distribution withdraw-rewards $(agd keys show wallet --bech val -a) --commission --from wallet --chain-id agoric-emerynet-7 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ubld -y
 ```
 
 #### Delegate tokens to yourself
 
 ```bash
-agd tx staking delegate $(agd keys show wallet --bech val -a) 1000000ubld --from wallet --chain-id agoric-emerynet-6 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ubld -y
+agd tx staking delegate $(agd keys show wallet --bech val -a) 1000000ubld --from wallet --chain-id agoric-emerynet-7 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ubld -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-agd tx staking delegate <TO_VALOPER_ADDRESS> 1000000ubld --from wallet --chain-id agoric-emerynet-6 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ubld -y
+agd tx staking delegate <TO_VALOPER_ADDRESS> 1000000ubld --from wallet --chain-id agoric-emerynet-7 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ubld -y
 ```
 
 #### Redelegate tokens to another validator
 
 ```bash
-agd tx staking redelegate $(agd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000ubld --from wallet --chain-id agoric-emerynet-6 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ubld -y
+agd tx staking redelegate $(agd keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000ubld --from wallet --chain-id agoric-emerynet-7 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ubld -y
 ```
 
 #### Unbond tokens from your validator
 
 ```bash
-agd tx staking unbond $(agd keys show wallet --bech val -a) 1000000ubld --from wallet --chain-id agoric-emerynet-6 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ubld -y
+agd tx staking unbond $(agd keys show wallet --bech val -a) 1000000ubld --from wallet --chain-id agoric-emerynet-7 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ubld -y
 ```
 
 #### Send tokens to the wallet
 
 ```bash
-agd tx bank send wallet <TO_WALLET_ADDRESS> 1000000ubld --from wallet --chain-id agoric-emerynet-6 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ubld -y
+agd tx bank send wallet <TO_WALLET_ADDRESS> 1000000ubld --from wallet --chain-id agoric-emerynet-7 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ubld -y
 ```
 
 ## 🗳 Governance
@@ -186,25 +186,25 @@ agd query gov proposal 1
 #### Vote 'Yes'
 
 ```bash
-agd tx gov vote 1 yes --from wallet --chain-id agoric-emerynet-6 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ubld -y
+agd tx gov vote 1 yes --from wallet --chain-id agoric-emerynet-7 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ubld -y
 ```
 
 #### Vote 'No'
 
 ```bash
-agd tx gov vote 1 no --from wallet --chain-id agoric-emerynet-6 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ubld -y
+agd tx gov vote 1 no --from wallet --chain-id agoric-emerynet-7 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ubld -y
 ```
 
 #### Vote 'Abstain'
 
 ```bash
-agd tx gov vote 1 abstain --from wallet --chain-id agoric-emerynet-6 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ubld -y
+agd tx gov vote 1 abstain --from wallet --chain-id agoric-emerynet-7 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ubld -y
 ```
 
 #### Vote 'NoWithVeto'
 
 ```bash
-agd tx gov vote 1 NoWithVeto --from wallet --chain-id agoric-emerynet-6 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ubld -y
+agd tx gov vote 1 NoWithVeto --from wallet --chain-id agoric-emerynet-7 --gas-adjustment 1.4 --gas auto --gas-prices 0.025ubld -y
 ```
 
 ## ⚡️ Utility
