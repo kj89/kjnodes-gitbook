@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **10:15 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: v2.3.3-testnet2fork
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v2.3.5
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 146571 | 2 hours | [snapshot (0.34 GB)](https://snapshots.kjnodes.com/composable-testnet/snapshot\_latest.tar.lz4) |
+| 150380 | 1 hours | [snapshot (0.33 GB)](https://snapshots.kjnodes.com/composable-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

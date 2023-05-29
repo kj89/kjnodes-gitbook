@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/composable.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: banksy-testnet-2 | **Latest Version Tag**: v2.3.3-testnet2fork | **Custom Port**: 159
+**Chain ID**: banksy-testnet-3 | **Latest Version Tag**: v2.3.5 | **Custom Port**: 159
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf composable-testnet
 git clone https://github.com/notional-labs/composable-testnet.git
 cd composable-testnet
-git checkout v2.3.3-testnet2fork
+git checkout v2.3.5
 
 # Build binaries
 make build
@@ -94,12 +94,12 @@ sudo systemctl enable banksyd
 
 ```bash
 # Set node configuration
-banksyd config chain-id banksy-testnet-2
+banksyd config chain-id banksy-testnet-3
 banksyd config keyring-backend test
 banksyd config node tcp://localhost:15957
 
 # Initialize the node
-banksyd init $MONIKER --chain-id banksy-testnet-2
+banksyd init $MONIKER --chain-id banksy-testnet-3
 
 # Download genesis and addrbook
 curl -Ls https://snapshots.kjnodes.com/composable-testnet/genesis.json > $HOME/.banksy/config/genesis.json
@@ -109,7 +109,7 @@ curl -Ls https://snapshots.kjnodes.com/composable-testnet/addrbook.json > $HOME/
 sed -i -e "s|^seeds *=.*|seeds = \"3f472746f46493309650e5a033076689996c8881@composable-testnet.rpc.kjnodes.com:15959\"|" $HOME/.banksy/config/config.toml
 
 # Set minimum gas price
-sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0upica\"|" $HOME/.banksy/config/app.toml
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0ppica\"|" $HOME/.banksy/config/app.toml
 
 # Set pruning
 sed -i \
