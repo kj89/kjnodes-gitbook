@@ -41,8 +41,8 @@ d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@humans.rpc.kjnodes.com:12256
 curl -Ls https://snapshots.kjnodes.com/humans/addrbook.json > $HOME/.humansd/config/addrbook.json
 ```
 
-**live-peers** (0)
+**live-peers** (8)
 ```bash
-peers=""
+peers="f9344349e8435362bc7f21f67b9b61d2f1d6891b@152.32.174.173:26656,f913050241ce5fd49ea3783ed21724ad05db7291@65.109.125.235:26656,20f95f8b8dd32b94b593dc3e8fcf0b0aeb74b85d@94.237.93.65:26656,250d5926777e735519813157e444f84212fc8290@5.161.216.102:26656,2b882f794ed974031b5b435fbf1a755b668d7529@178.23.126.79:26656,f9a289d71b2325ee87e9a358540e64fe97c3cf36@148.113.143.77:26656,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:12256,025cdc1186815f3f28567b30a1667130f0f6c863@212.47.234.245:26656"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.humansd/config/config.toml
 ```
