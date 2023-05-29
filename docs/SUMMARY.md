@@ -44,6 +44,13 @@
   * [State sync](mainnet/gitopia/state-sync/README.md)
   * [Useful commands](mainnet/gitopia/useful-commands/README.md)
 
+* [Humans](mainnet/humans/README.md)
+  * [Installation](mainnet/humans/installation/README.md)
+  * [Upgrade](mainnet/humans/upgrade/README.md)
+  * [Snapshot](mainnet/humans/snapshot/README.md)
+  * [State sync](mainnet/humans/state-sync/README.md)
+  * [Useful commands](mainnet/humans/useful-commands/README.md)
+
 * [Jackal](mainnet/jackal/README.md)
   * [Installation](mainnet/jackal/installation/README.md)
   * [Upgrade](mainnet/jackal/upgrade/README.md)
