@@ -60,7 +60,7 @@ Please make sure you have adjusted **moniker**, **identity**, **details** and **
 
 ```bash
 noriad tx staking create-validator \
---amount 1000000ucrd \
+--amount 1000000unoria \
 --pubkey $(noriad tendermint show-validator) \
 --moniker "YOUR_MONIKER_NAME" \
 --identity "YOUR_KEYBASE_ID" \
@@ -142,31 +142,31 @@ noriad tx distribution withdraw-rewards $(noriad keys show wallet --bech val -a)
 #### Delegate tokens to yourself
 
 ```bash
-noriad tx staking delegate $(noriad keys show wallet --bech val -a) 1000000ucrd --from wallet --chain-id oasis-3 --gas-adjustment 1.4 --gas auto --gas-prices 0.0025ucrd -y
+noriad tx staking delegate $(noriad keys show wallet --bech val -a) 1000000unoria --from wallet --chain-id oasis-3 --gas-adjustment 1.4 --gas auto --gas-prices 0.0025ucrd -y
 ```
 
 #### Delegate tokens to validator
 
 ```bash
-noriad tx staking delegate <TO_VALOPER_ADDRESS> 1000000ucrd --from wallet --chain-id oasis-3 --gas-adjustment 1.4 --gas auto --gas-prices 0.0025ucrd -y
+noriad tx staking delegate <TO_VALOPER_ADDRESS> 1000000unoria --from wallet --chain-id oasis-3 --gas-adjustment 1.4 --gas auto --gas-prices 0.0025ucrd -y
 ```
 
 #### Redelegate tokens to another validator
 
 ```bash
-noriad tx staking redelegate $(noriad keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000ucrd --from wallet --chain-id oasis-3 --gas-adjustment 1.4 --gas auto --gas-prices 0.0025ucrd -y
+noriad tx staking redelegate $(noriad keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000unoria --from wallet --chain-id oasis-3 --gas-adjustment 1.4 --gas auto --gas-prices 0.0025ucrd -y
 ```
 
 #### Unbond tokens from your validator
 
 ```bash
-noriad tx staking unbond $(noriad keys show wallet --bech val -a) 1000000ucrd --from wallet --chain-id oasis-3 --gas-adjustment 1.4 --gas auto --gas-prices 0.0025ucrd -y
+noriad tx staking unbond $(noriad keys show wallet --bech val -a) 1000000unoria --from wallet --chain-id oasis-3 --gas-adjustment 1.4 --gas auto --gas-prices 0.0025ucrd -y
 ```
 
 #### Send tokens to the wallet
 
 ```bash
-noriad tx bank send wallet <TO_WALLET_ADDRESS> 1000000ucrd --from wallet --chain-id oasis-3 --gas-adjustment 1.4 --gas auto --gas-prices 0.0025ucrd -y
+noriad tx bank send wallet <TO_WALLET_ADDRESS> 1000000unoria --from wallet --chain-id oasis-3 --gas-adjustment 1.4 --gas auto --gas-prices 0.0025ucrd -y
 ```
 
 ## 🗳 Governance

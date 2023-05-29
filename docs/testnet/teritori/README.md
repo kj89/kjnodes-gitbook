@@ -4,7 +4,7 @@
 
 Teritori is a multi-chain hub designed to allow IBC and non IBC communities  to connect, trade services & NFTs, launch new projects & build further existing ones.
 
-**Chain ID**: teritori-testnet-v3 | **Latest Version Tag**: v1.3.1 | **Wasm**: ON
+**Chain ID**: teritori-testnet-v3 | **Latest Version Tag**: v1.4.0 | **Wasm**: ON
 
 [Website](https://teritori.com) | [Discord](https://discord.gg/teritori) | [Twitter](https://twitter.com/TeritoriNetwork)
 
@@ -43,6 +43,6 @@ curl -Ls https://snapshots.kjnodes.com/teritori-testnet/addrbook.json > $HOME/.t
 
 **live-peers** (10)
 ```bash
-peers="a97eb7a4f3d857f1ff82265d2905fc0762a6bfd4@135.125.5.31:54256,a2785cabecc10f591d9e8c396c8e162e95a206ec@65.108.226.183:15956,bf100c1b6b44a6e96ab5691f3023cec3c27747fd@144.126.142.78:46656,b33ebb4672f929dddde1365c9678a39abfd881fb@54.202.144.51:26656,c9dbed7dced2ac0fa86eb51949fc7beefc56db95@116.202.227.117:19656,4ebfdac0d496be2407c02202e5ad6f226a11b37a@65.21.134.202:26736,31413c99357d0cfc48a46767ade171db2ea0205e@135.181.138.160:46656,3b539b6cff93fb3631d0a600a56ade3c6ca6bea3@162.19.236.64:26656,5ae1012f9b0f4672d8152de903d115dd2f1a3ee3@65.21.170.3:27656,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:11956"
+peers="3614bc766d73bebf6b73737b6690af60e7f0683e@65.108.206.118:46656,bf100c1b6b44a6e96ab5691f3023cec3c27747fd@144.126.142.78:46656,4ebfdac0d496be2407c02202e5ad6f226a11b37a@65.21.134.202:26736,a97eb7a4f3d857f1ff82265d2905fc0762a6bfd4@135.125.5.31:54256,a2785cabecc10f591d9e8c396c8e162e95a206ec@65.108.226.183:15956,5ae1012f9b0f4672d8152de903d115dd2f1a3ee3@65.21.170.3:27656,e1b331c1f3cba509960c65d6c6bc9b49532bcbaa@65.109.85.170:27656,3b539b6cff93fb3631d0a600a56ade3c6ca6bea3@162.19.236.64:26656,b33ebb4672f929dddde1365c9678a39abfd881fb@54.202.144.51:26656,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:11956"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.teritorid/config/config.toml
 ```

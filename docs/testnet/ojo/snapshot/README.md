@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **07:45 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 1457567 | 46 minutes | [snapshot (0.91 GB)](https://snapshots.kjnodes.com/ojo-testnet/snapshot\_latest.tar.lz4) |
+| 1486091 | 4 hours | [snapshot (0.97 GB)](https://snapshots.kjnodes.com/ojo-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

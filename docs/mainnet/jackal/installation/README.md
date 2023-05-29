@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/jackal.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: jackal-1 | **Latest Version Tag**: v2.0.0 | **Custom Port**: 137
+**Chain ID**: jackal-1 | **Latest Version Tag**: v2.0.1 | **Custom Port**: 137
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf canine-chain
 git clone https://github.com/JackalLabs/canine-chain.git
 cd canine-chain
-git checkout v2.0.0
+git checkout v2.0.1
 
 # Build binaries
 make build
