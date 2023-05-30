@@ -8,11 +8,13 @@ Nolus aims to be the leading DeFi Lease platform. The protocol  intends to becom
 
 [Website](https://www.nolus.io) | [Discord](https://discord.gg/nolus-protocol) | [Twitter](https://twitter.com/NolusProtocol)
 
-
+[![Stake with kjnodes](https://i.ibb.co/cr44Q8j/button-stake-with-kjnodes.png)](https://restake.app/nolus/nolusvaloper126szq5tqtwrmd4guk4wxejxry4c55507d0vh3g)
 
 Subscribe to our free [🤖 Mainnet Proposal Bot](https://t.me/kjnodes_proposal_bot) to never miss upcoming proposals
 
+## Restake
 
+[Restake with kjnodes](https://restake.app/nolus/nolusvaloper126szq5tqtwrmd4guk4wxejxry4c55507d0vh3g) (every 5 minutes)
 ## Chain explorer
 [https://explorer.kjnodes.com/nolus](https://explorer.kjnodes.com/nolus)
 
@@ -41,8 +43,8 @@ d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@nolus.rpc.kjnodes.com:14356
 curl -Ls https://snapshots.kjnodes.com/nolus/addrbook.json > $HOME/.nolus/config/addrbook.json
 ```
 
-**live-peers** (9)
+**live-peers** (10)
 ```bash
-peers="d3f29b638d089a73651a290c3f2e27b8da663f92@65.109.122.105:60756,e6be58138f6e654ea5a935dd9e1683266312de18@54.37.129.110:3000,cbbb839a7fee054f7e272688787200b2b847bbf0@103.180.28.91:26656,6cceba286b498d4a1931f85e35ea0fa433373057@169.155.170.20:26656,7f56b6dc16831d5b417bc7a3106b5529a9aceda8@162.19.95.239:19756,21b6e67a9048037f2a6829912c97dd45b99b3900@65.108.105.134:3000,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:14356,c124ce0b508e8b9ed1c5b6957f362225659b5343@134.65.193.172:26656,b22fcc033291f44aec43d8fc464dbd5bee5394b8@185.162.250.199:26656"
+peers="c124ce0b508e8b9ed1c5b6957f362225659b5343@134.65.193.172:26656,488c9ee36fc5ee54e662895dfed5e5df9a5ff2d5@136.243.39.118:26656,b22fcc033291f44aec43d8fc464dbd5bee5394b8@185.162.250.199:26656,471518432477e31ea348af246c0b54095d41352c@169.155.46.141:26656,a7d96dc929824613315dcc1c90fee119f28cc51f@164.152.160.154:26656,4868bb0024f54952ae5e2f191e1363ac29aab49c@65.108.71.163:2640,21b6e67a9048037f2a6829912c97dd45b99b3900@65.108.105.134:3000,e6be58138f6e654ea5a935dd9e1683266312de18@54.37.129.110:3000,b212d5740b2e11e54f56b072dc13b6134650cfb5@134.65.193.110:26656,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:14356"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.nolus/config/config.toml
 ```
