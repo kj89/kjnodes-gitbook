@@ -4,7 +4,7 @@ description: Discover base tools contributed to the projects by kjnodes team.
 
 # 🖤 Supported chains
 
-**Chains supported**: 49 | **Assets staked**: $2,197,453 | **Clients**: 4014
+**Chains supported**: 47 | **Assets staked**: $2,186,056 | **Clients**: 4014
 
 ## MAINNET
 
@@ -21,8 +21,6 @@ description: Discover base tools contributed to the projects by kjnodes team.
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/humans.png" alt="" data-size="line"> [Humans](mainnet/humans/)
 
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/jackal.png" alt="" data-size="line"> [Jackal](mainnet/jackal/)
-
-<img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/juno.png" alt="" data-size="line"> [Juno](mainnet/juno/)
 
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/kujira.png" alt="" data-size="line"> [Kujira](mainnet/kujira/)
 
@@ -41,8 +39,6 @@ description: Discover base tools contributed to the projects by kjnodes team.
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/osmosis.png" alt="" data-size="line"> [Osmosis](mainnet/osmosis/)
 
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/paloma.png" alt="" data-size="line"> [Paloma](mainnet/paloma/)
-
-<img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/stargaze.png" alt="" data-size="line"> [Stargaze](mainnet/stargaze/)
 
 <img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/icons/stride.png" alt="" data-size="line"> [Stride](mainnet/stride/)
 
