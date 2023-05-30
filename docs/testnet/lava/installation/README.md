@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/lava.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: lava-testnet-1 | **Latest Version Tag**: v0.11.2 | **Custom Port**: 144
+**Chain ID**: lava-testnet-1 | **Latest Version Tag**: v0.12.1 | **Custom Port**: 144
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf lava
 git clone https://github.com/lavanet/lava.git
 cd lava
-git checkout v0.11.2
+git checkout v0.12.1
 
 # Build binaries
 make build

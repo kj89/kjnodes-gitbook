@@ -43,8 +43,8 @@ d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@bitcanna.rpc.kjnodes.com:14256
 curl -Ls https://snapshots.kjnodes.com/bitcanna/addrbook.json > $HOME/.bcna/config/addrbook.json
 ```
 
-**live-peers** (5)
+**live-peers** (6)
 ```bash
-peers="7c00beb4956bc40cd33ced6e2c2ffe07d4fa32e7@95.216.242.82:36656,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:14256,2c46e946a2375111b345f5bd2a8617c0e5438767@94.130.200.168:46656,b765241852675e8e698715db13b832cbf95a720f@136.243.1.82:28656,6be83de3e5ab1a912340ddad3e67d10c32d5b574@161.97.170.83:26656"
+peers="cb0848b84987c37ba0fa465585c6b9d6cec6deab@65.108.77.98:26696,b212d5740b2e11e54f56b072dc13b6134650cfb5@169.155.168.54:26656,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:14256,65b12d58cc642eb8a1eb4e8344eaf26afce2e6d3@37.120.191.47:36656,d7322625044ad733bce4178dc397b2b9b5f68b41@43.153.27.130:26656,a9f839c6e24221fb093f13ee41a0af842378fec5@94.130.12.22:26642"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.bcna/config/config.toml
 ```
