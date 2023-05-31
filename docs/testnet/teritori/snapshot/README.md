@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **01:15 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: v1.3.1
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v1.4.0
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 5058263 | 8 hours | [snapshot (0.99 GB)](https://snapshots.kjnodes.com/teritori-testnet/snapshot\_latest.tar.lz4) |
+| 5077857 | 1 hours | [snapshot (0.99 GB)](https://snapshots.kjnodes.com/teritori-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
