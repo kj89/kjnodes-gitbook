@@ -74,6 +74,7 @@ ln -s $HOME/mainnet1B-rc2/bin/agd $HOME/.agoric/cosmovisor/upgrades/agorictest-u
 sudo ln -s $HOME/.agoric/cosmovisor/genesis $HOME/.agoric/cosmovisor/current -f
 
 # Link binaries
+sudo rm /usr/local/bin/agd
 sudo tee /usr/local/bin/agd > /dev/null << EOF
 #!/bin/bash
 exec $HOME/.agoric/cosmovisor/current/bin/agd "$@"

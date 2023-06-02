@@ -74,6 +74,7 @@ ln -s $HOME/pismoC/bin/agd $HOME/.agoric/cosmovisor/upgrades/agoric-upgrade-9/bi
 sudo ln -s $HOME/.agoric/cosmovisor/genesis $HOME/.agoric/cosmovisor/current -f
 
 # Link binaries
+sudo rm /usr/local/bin/agd
 sudo tee /usr/local/bin/agd > /dev/null << EOF
 #!/bin/bash
 exec $HOME/.agoric/cosmovisor/current/bin/agd "$@"

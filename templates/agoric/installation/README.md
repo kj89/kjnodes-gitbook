@@ -74,6 +74,7 @@ ln -s $HOME/${LATEST_VERSION_TAG}/bin/${CHAIN_APP} $HOME/${CHAIN_DIR}/cosmovisor
 sudo ln -s $HOME/${CHAIN_DIR}/cosmovisor/genesis $HOME/${CHAIN_DIR}/cosmovisor/current -f
 
 # Link binaries
+sudo rm /usr/local/bin/${CHAIN_APP}
 sudo tee /usr/local/bin/${CHAIN_APP} > /dev/null << EOF
 #!/bin/bash
 exec $HOME/${CHAIN_DIR}/cosmovisor/current/bin/${CHAIN_APP} "$@"
