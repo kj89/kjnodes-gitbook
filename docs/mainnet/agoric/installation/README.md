@@ -77,7 +77,7 @@ sudo ln -s $HOME/.agoric/cosmovisor/genesis $HOME/.agoric/cosmovisor/current -f
 sudo rm /usr/local/bin/agd
 sudo tee /usr/local/bin/agd > /dev/null << EOF
 #!/bin/bash
-exec $HOME/.agoric/cosmovisor/current/bin/agd "$@"
+exec \$HOME/.agoric/cosmovisor/current/bin/agd "\$@"
 EOF
 sudo chmod 777 /usr/local/bin/agd
 ```

@@ -77,7 +77,7 @@ sudo ln -s $HOME/${CHAIN_DIR}/cosmovisor/genesis $HOME/${CHAIN_DIR}/cosmovisor/c
 sudo rm /usr/local/bin/${CHAIN_APP}
 sudo tee /usr/local/bin/${CHAIN_APP} > /dev/null << EOF
 #!/bin/bash
-exec $HOME/${CHAIN_DIR}/cosmovisor/current/bin/${CHAIN_APP} "$@"
+exec \$HOME/.agoric/cosmovisor/current/bin/agd "\$@"
 EOF
 sudo chmod 777 /usr/local/bin/${CHAIN_APP}
 ```
