@@ -6,7 +6,7 @@ description: Prepare for and the upcomming chain upgrade using Cosmovisor.
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/agoric.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: agoric-emerynet-7 | **Latest Version Tag**: pismoC | **Custom Port**: 127
+**Chain ID**: agoric-emerynet-7 | **Latest Version Tag**: mainnet1B-rc2 | **Custom Port**: 127
 
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.
@@ -18,10 +18,10 @@ You just have to build new binaries and move it into cosmovisor upgrades directo
 ```bash
 # Clone project repository
 cd $HOME
-rm -rf pismoC
-git clone https://github.com/Agoric/agoric-sdk.git pismoC
-cd pismoC
-git checkout pismoC
+rm -rf mainnet1B-rc2
+git clone https://github.com/Agoric/agoric-sdk.git mainnet1B-rc2
+cd mainnet1B-rc2
+git checkout mainnet1B-rc2
 
 # Install and build Agoric Javascript packages
 yarn install && yarn build
@@ -30,8 +30,8 @@ yarn install && yarn build
 (cd packages/cosmic-swingset && make)
 
 # Prepare binaries for Cosmovisor
-mkdir -p $HOME/.agoric/cosmovisor/upgrades/genesis/bin
-ln -s $HOME/pismoC/bin/agd $HOME/.agoric/cosmovisor/upgrades/genesis/bin/agd
+mkdir -p $HOME/.agoric/cosmovisor/upgrades/agorictest-upgrade-10/bin
+ln -s $HOME/mainnet1B-rc2/bin/agd $HOME/.agoric/cosmovisor/upgrades/agorictest-upgrade-10/bin/agd
 ```
 
 *Thats it! Now when upgrade block height is reached, Cosmovisor will handle it automatically!*
