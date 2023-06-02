@@ -68,14 +68,17 @@ yarn install && yarn build
 
 # Prepare binaries for Cosmovisor
 mkdir -p $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin
-ln -s $HOME/${LATEST_VERSION_TAG}/packages/cosmic-swingset/bin/ag-chain-cosmos $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin/ag-chain-cosmos
-ln -s $HOME/${LATEST_VERSION_TAG}/packages/cosmic-swingset/bin/ag-nchainz $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin/ag-nchainz
-cp golang/cosmos/build/agd $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin/
-cp golang/cosmos/build/ag-cosmos-helper $HOME/${CHAIN_DIR}/cosmovisor/genesis/bin/
+ln -s $HOME/${LATEST_VERSION_TAG}/bin/${CHAIN_APP} $HOME/${CHAIN_DIR}/cosmovisor/upgrades/${LATEST_VERSION_NAME}/bin/${CHAIN_APP}
 
 # Create application symlinks
 sudo ln -s $HOME/${CHAIN_DIR}/cosmovisor/genesis $HOME/${CHAIN_DIR}/cosmovisor/current -f
-sudo ln -s $HOME/${CHAIN_DIR}/cosmovisor/current/bin/${CHAIN_APP} /usr/local/bin/${CHAIN_APP} -f
+
+# Link binaries
+sudo tee /usr/local/bin/${CHAIN_APP} > /dev/null << EOF
+#!/bin/bash
+exec $HOME/${CHAIN_DIR}/cosmovisor/current/bin/${CHAIN_APP} "$@"
+EOF
+sudo chmod 777 /usr/local/bin/${CHAIN_APP}
 ```
 
 ### Install Cosmovisor and create a service

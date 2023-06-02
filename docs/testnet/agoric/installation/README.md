@@ -68,14 +68,17 @@ yarn install && yarn build
 
 # Prepare binaries for Cosmovisor
 mkdir -p $HOME/.agoric/cosmovisor/genesis/bin
-ln -s $HOME/mainnet1B-rc2/packages/cosmic-swingset/bin/ag-chain-cosmos $HOME/.agoric/cosmovisor/genesis/bin/ag-chain-cosmos
-ln -s $HOME/mainnet1B-rc2/packages/cosmic-swingset/bin/ag-nchainz $HOME/.agoric/cosmovisor/genesis/bin/ag-nchainz
-cp golang/cosmos/build/agd $HOME/.agoric/cosmovisor/genesis/bin/
-cp golang/cosmos/build/ag-cosmos-helper $HOME/.agoric/cosmovisor/genesis/bin/
+ln -s $HOME/mainnet1B-rc2/bin/agd $HOME/.agoric/cosmovisor/upgrades/agorictest-upgrade-10/bin/agd
 
 # Create application symlinks
 sudo ln -s $HOME/.agoric/cosmovisor/genesis $HOME/.agoric/cosmovisor/current -f
-sudo ln -s $HOME/.agoric/cosmovisor/current/bin/agd /usr/local/bin/agd -f
+
+# Link binaries
+sudo tee /usr/local/bin/agd > /dev/null << EOF
+#!/bin/bash
+exec $HOME/.agoric/cosmovisor/current/bin/agd "$@"
+EOF
+sudo chmod 777 /usr/local/bin/agd
 ```
 
 ### Install Cosmovisor and create a service
