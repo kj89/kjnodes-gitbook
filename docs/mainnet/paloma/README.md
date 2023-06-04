@@ -4,7 +4,7 @@
 
 Paloma is a fast, permissionless, Cosmos-SDK blockchain that  moves messages securely, between any other blockchains.
 
-**Chain ID**: messenger | **Latest Version Tag**: v1.0.0 | **Wasm**: ON
+**Chain ID**: messenger | **Latest Version Tag**: v1.1.0 | **Wasm**: ON
 
 [Website](https://www.palomachain.com) | [Discord](https://discord.gg/tKVFpfdSw4) | [Twitter](https://twitter.com/paloma_chain)
 
@@ -41,8 +41,8 @@ d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@paloma.rpc.kjnodes.com:11056
 curl -Ls https://snapshots.kjnodes.com/paloma/addrbook.json > $HOME/.paloma/config/addrbook.json
 ```
 
-**live-peers** (9)
+**live-peers** (10)
 ```bash
-peers="7eae755c119f538e0dc99f3c37289de628bc9526@209.182.239.169:26656,8ed8cddfac504d986a2c6545def0e57b2c6aa5db@65.109.106.172:38656,1a0232b9426aa1c7a78c92a2136b69d050bb6942@65.108.224.126:26656,60066422d3b70fbf7571012b267dc2cccd9603d5@149.102.156.223:26656,dfa0d66a3713bf6b49bc509a2a4fc75bee042a30@23.88.77.188:20009,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:11056,ff09fa406702cb607a0ca7389d5c1ccf9d09c8b3@65.109.53.22:54056,0bcc8119877ba0c701cd230e35c5477da2657bef@5.78.102.204:26656,cb8a1e9e12ac06dbd565311137f6c93d66fd96f8@104.167.221.18:26656"
+peers="98b54cd6696e616fe966008ebf2bac409e3e0773@65.108.194.44:26656,b3ba407aef9e18e16e8e9a3b523a1b026dabeab3@84.46.248.174:26656,2c6772b11c1f9eff2a923eb2bf808543cdd501c5@79.143.179.196:26656,16f0d09580054101394ea08bbb48b1ad5bb91a27@95.214.52.144:10656,53f37ac93aec70dea3abc40108f42a00877b4665@64.227.142.91:26656,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:11056,0bcc8119877ba0c701cd230e35c5477da2657bef@5.78.102.204:26656,317141e329bc214a76ba92201f6818574ebe5323@135.181.114.98:36656,9319a0981d4baab6dbd6c4eaecf530f016ccfff9@37.120.191.47:60656,0c5156a1b644d05c0601063e55984a1909321e29@144.76.97.251:45656"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.paloma/config/config.toml
 ```

@@ -6,7 +6,7 @@ description: Prepare for and the upcomming chain upgrade using Cosmovisor.
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/cosmoshub.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: cosmoshub-4 | **Latest Version Tag**: v9.1.0 | **Custom Port**: 134
+**Chain ID**: cosmoshub-4 | **Latest Version Tag**: v10.0.0 | **Custom Port**: 134
 
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.
@@ -21,14 +21,14 @@ cd $HOME
 rm -rf gaia
 git clone https://github.com/cosmos/gaia.git
 cd gaia
-git checkout v9.1.0
+git checkout v10.0.0
 
 # Build binaries
 make build
 
 # Prepare binaries for Cosmovisor
-mkdir -p $HOME/.gaia/cosmovisor/upgrades/v9-lambda/bin
-mv build/gaiad $HOME/.gaia/cosmovisor/upgrades/v9-lambda/bin/
+mkdir -p $HOME/.gaia/cosmovisor/upgrades/v10/bin
+mv build/gaiad $HOME/.gaia/cosmovisor/upgrades/v10/bin/
 rm -rf build
 ```
 

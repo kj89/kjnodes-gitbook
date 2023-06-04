@@ -6,7 +6,7 @@ description: Prepare for and the upcomming chain upgrade using Cosmovisor.
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/teritori.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: teritori-1 | **Latest Version Tag**: v1.3.1 | **Custom Port**: 119
+**Chain ID**: teritori-1 | **Latest Version Tag**: v1.4.0 | **Custom Port**: 119
 
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.
@@ -21,14 +21,14 @@ cd $HOME
 rm -rf teritori-chain
 git clone https://github.com/TERITORI/teritori-chain.git
 cd teritori-chain
-git checkout v1.3.1
+git checkout v1.4.0
 
 # Build binaries
 make build
 
 # Prepare binaries for Cosmovisor
-mkdir -p $HOME/.teritorid/cosmovisor/upgrades/v1.3.1/bin
-mv build/teritorid $HOME/.teritorid/cosmovisor/upgrades/v1.3.1/bin/
+mkdir -p $HOME/.teritorid/cosmovisor/upgrades/v1.4.0/bin
+mv build/teritorid $HOME/.teritorid/cosmovisor/upgrades/v1.4.0/bin/
 rm -rf build
 ```
 

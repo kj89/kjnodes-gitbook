@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/teritori.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: teritori-1 | **Latest Version Tag**: v1.3.1 | **Custom Port**: 119
+**Chain ID**: teritori-1 | **Latest Version Tag**: v1.4.0 | **Custom Port**: 119
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf teritori-chain
 git clone https://github.com/TERITORI/teritori-chain.git
 cd teritori-chain
-git checkout v1.3.1
+git checkout v1.4.0
 
 # Build binaries
 make build
