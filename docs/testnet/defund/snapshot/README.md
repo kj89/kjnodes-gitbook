@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **04:30 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 8416602 | 2 hours | [snapshot (5.98 GB)](https://snapshots.kjnodes.com/defund-testnet/snapshot\_latest.tar.lz4) |
+| 8486243 | 2 hours | [snapshot (5.94 GB)](https://snapshots.kjnodes.com/defund-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
