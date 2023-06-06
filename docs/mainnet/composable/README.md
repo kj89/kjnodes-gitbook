@@ -41,8 +41,8 @@ d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@composable.rpc.kjnodes.com:15956
 curl -Ls https://snapshots.kjnodes.com/composable/addrbook.json > $HOME/.banksy/config/addrbook.json
 ```
 
-**live-peers** (0)
+**live-peers** (10)
 ```bash
-peers=""
+peers="d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:15956,92336725dc7fda1504ea5962bb551f2610126377@65.108.198.118:22256,c6eefdcc5cbe41dd457183c7c3bd7311ddf97638@65.109.116.119:16156,c19bab4c4e5965b1ee079e19337332a2ec3d648d@135.181.79.62:26656,67852a010896f7d28f0bb649f5e05cda44d71875@144.76.40.53:22256,548b18f0288f4c128ef3ff133dcadf004263c363@38.242.230.118:26656,41caa4106f68977e3a5123e56f57934a2d34a1c1@185.248.24.20:26976,0fe72ab099fac951f5a37f51ba895717460a08d0@65.109.53.60:28656,3f72dfcaa83c4922dd6e72bc5b9da7840ef8adaa@57.128.96.155:22256,77975a9a8117248712cdb0b371accfff2a686182@15.235.40.124:26656"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.banksy/config/config.toml
 ```
