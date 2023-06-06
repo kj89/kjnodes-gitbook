@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **06:15 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: v1.0.0
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v1.1.0
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 1779527 | 43 minutes | [snapshot (0.82 GB)](https://snapshots.kjnodes.com/paloma/snapshot\_latest.tar.lz4) |
+| 1794656 | 59 minutes | [snapshot (0.82 GB)](https://snapshots.kjnodes.com/paloma/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

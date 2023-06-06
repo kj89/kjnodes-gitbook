@@ -37,6 +37,13 @@
   * [State sync](mainnet/cosmoshub/state-sync/README.md)
   * [Useful commands](mainnet/cosmoshub/useful-commands/README.md)
 
+* [Composable](mainnet/composable/README.md)
+  * [Installation](mainnet/composable/installation/README.md)
+  * [Upgrade](mainnet/composable/upgrade/README.md)
+  * [Snapshot](mainnet/composable/snapshot/README.md)
+  * [State sync](mainnet/composable/state-sync/README.md)
+  * [Useful commands](mainnet/composable/useful-commands/README.md)
+
 * [Gitopia](mainnet/gitopia/README.md)
   * [Installation](mainnet/gitopia/installation/README.md)
   * [Upgrade](mainnet/gitopia/upgrade/README.md)
