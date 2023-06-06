@@ -174,7 +174,7 @@ Once you start the Bridge Node, a wallet key will be generated for you. You will
 ```bash
 celestia bridge init \
   --keyring.accname bridge-wallet \
-  --core.ip localhost \
+  --core.ip http://localhost \
   --core.rpc.port ${CHAIN_PORT}57 \
   --core.grpc.port ${CHAIN_PORT}90 \
   --p2p.network blockspacerace \
@@ -193,7 +193,7 @@ After=network-online.target
 User=$USER
 ExecStart=$(which celestia) bridge start \\
 --keyring.accname bridge-wallet \\
---core.ip localhost \\
+--core.ip http://localhost \\
 --core.rpc.port ${CHAIN_PORT}57 \\
 --core.grpc.port ${CHAIN_PORT}90 \\
 --p2p.network blockspacerace \\
