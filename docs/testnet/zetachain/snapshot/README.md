@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **10:30 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 183829 | 9 hours | [snapshot (1.19 GB)](https://snapshots.kjnodes.com/zetachain-testnet/snapshot\_latest.tar.lz4) |
+| 195110 | 3 hours | [snapshot (1.29 GB)](https://snapshots.kjnodes.com/zetachain-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

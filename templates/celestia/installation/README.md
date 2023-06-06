@@ -145,7 +145,7 @@ cd $HOME
 rm -rf celestia-node 
 git clone https://github.com/celestiaorg/celestia-node.git 
 cd celestia-node
-git checkout v0.10.2
+git checkout v0.10.4
 make build
 sudo mv build/celestia /usr/local/bin
 make cel-key
@@ -254,7 +254,7 @@ cd $HOME
 rm -rf celestia-node 
 git clone https://github.com/celestiaorg/celestia-node.git 
 cd celestia-node
-git checkout v0.10.2
+git checkout v0.10.4
 make build
 sudo mv build/celestia /usr/local/bin
 make cel-key
