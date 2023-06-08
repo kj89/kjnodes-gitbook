@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/gitopia.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: gitopia | **Latest Version Tag**: v2.1.0 | **Custom Port**: 141
+**Chain ID**: gitopia | **Latest Version Tag**: v2.1.1 | **Custom Port**: 141
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf gitopia
 git clone https://github.com/gitopia/gitopia.git
 cd gitopia
-git checkout v2.1.0
+git checkout v2.1.1
 
 # Build binaries
 make build

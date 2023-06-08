@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/mars.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: mars-1 | **Latest Version Tag**: v1.0.1 | **Custom Port**: 145
+**Chain ID**: mars-1 | **Latest Version Tag**: v1.0.2 | **Custom Port**: 145
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf hub
 git clone https://github.com/mars-protocol/hub.git
 cd hub
-git checkout v1.0.1
+git checkout v1.0.2
 
 # Build binaries
 make build

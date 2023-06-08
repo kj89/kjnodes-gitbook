@@ -4,7 +4,7 @@
 
 Stride is a blockchain ("zone") that provides liquidity for staked assets.  Using Stride, you can earn both staking and DeFi yields across the Cosmos IBC ecosystem
 
-**Chain ID**: stride-1 | **Latest Version Tag**: v9.0.1 | **Wasm**: OFF
+**Chain ID**: stride-1 | **Latest Version Tag**: v9.2.1 | **Wasm**: OFF
 
 [Website](https://stride.zone) | [Discord](https://discord.gg/mzQZ8dAE7u) | [Twitter](https://twitter.com/stride_zone)
 
@@ -45,6 +45,6 @@ curl -Ls https://snapshots.kjnodes.com/stride/addrbook.json > $HOME/.stride/conf
 
 **live-peers** (10)
 ```bash
-peers="b212d5740b2e11e54f56b072dc13b6134650cfb5@164.152.160.97:26656,2254e6968e5c7ebc98ef5b79b388502fa44e10e1@5.161.134.44:26656,be546a9a1b8b664a32ad5f45fa1d4087b44e0f83@135.181.214.120:26656,d2247f7b919f0781c90ee61958d7044665a22d38@169.155.44.213:26656,04b797b5a56fb939a97a3c7d9c3230d09b85e8d7@93.189.30.118:26656,ade7d4d0009c7725ee991b8c40a7f646f76bf1e3@149.102.140.108:26656,fb8505c994cb90927c766e3c3d2db38044a596bc@139.59.31.201:26656,a7d96dc929824613315dcc1c90fee119f28cc51f@164.152.160.155:26656,bf0f5782650ddbf8121543b94705e5849f87120a@130.211.230.106:26656,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:11656"
+peers="c948379b649bc6609557dd74f5a4e70716f100ea@51.210.240.201:10456,fb8505c994cb90927c766e3c3d2db38044a596bc@139.59.31.201:26656,2254e6968e5c7ebc98ef5b79b388502fa44e10e1@5.161.134.44:26656,d36ac7580cc8907a00b0add8c3b047caea6df4ed@107.155.67.202:26636,8ade90b45b991088c92e8583e8bc93589d6cd81e@84.244.95.247:26656,5af431abc2f72f7143289d15bd226aa3da728413@5.9.106.214:10256,fc305427390397f8c4eebe5bc22919c1cc5d4532@65.109.43.75:27007,5093547fdf0430143ac66b4ee55d80e6542a6c10@217.174.247.163:26656,b212d5740b2e11e54f56b072dc13b6134650cfb5@164.152.160.97:26656,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:11656"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.stride/config/config.toml
 ```

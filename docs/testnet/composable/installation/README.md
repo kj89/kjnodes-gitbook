@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/composable.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: banksy-testnet-3 | **Latest Version Tag**: v2.3.5 | **Custom Port**: 159
+**Chain ID**: banksy-testnet-3 | **Latest Version Tag**: v3.0.0 | **Custom Port**: 159
 
 ### Setup validator name
 
@@ -45,19 +45,19 @@ cd $HOME
 rm -rf composable-testnet
 git clone https://github.com/notional-labs/composable-testnet.git
 cd composable-testnet
-git checkout v2.3.5
+git checkout v3.0.0
 
 # Build binaries
 make build
 
 # Prepare binaries for Cosmovisor
 mkdir -p $HOME/.banksy/cosmovisor/genesis/bin
-mv bin/banksyd $HOME/.banksy/cosmovisor/genesis/bin/
+mv bin/centaurid $HOME/.banksy/cosmovisor/genesis/bin/
 rm -rf build
 
 # Create application symlinks
 sudo ln -s $HOME/.banksy/cosmovisor/genesis $HOME/.banksy/cosmovisor/current -f
-sudo ln -s $HOME/.banksy/cosmovisor/current/bin/banksyd /usr/local/bin/banksyd -f
+sudo ln -s $HOME/.banksy/cosmovisor/current/bin/centaurid /usr/local/bin/centaurid -f
 ```
 
 ### Install Cosmovisor and create a service
@@ -67,7 +67,7 @@ sudo ln -s $HOME/.banksy/cosmovisor/current/bin/banksyd /usr/local/bin/banksyd -
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.4.0
 
 # Create service
-sudo tee /etc/systemd/system/banksyd.service > /dev/null << EOF
+sudo tee /etc/systemd/system/centaurid.service > /dev/null << EOF
 [Unit]
 Description=composable-testnet node service
 After=network-online.target
@@ -79,7 +79,7 @@ Restart=on-failure
 RestartSec=10
 LimitNOFILE=65535
 Environment="DAEMON_HOME=$HOME/.banksy"
-Environment="DAEMON_NAME=banksyd"
+Environment="DAEMON_NAME=centaurid"
 Environment="UNSAFE_SKIP_BACKUP=true"
 Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:$HOME/.banksy/cosmovisor/current/bin"
 
@@ -87,19 +87,19 @@ Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/
 WantedBy=multi-user.target
 EOF
 sudo systemctl daemon-reload
-sudo systemctl enable banksyd
+sudo systemctl enable centaurid
 ```
 
 ### Initialize the node
 
 ```bash
 # Set node configuration
-banksyd config chain-id banksy-testnet-3
-banksyd config keyring-backend test
-banksyd config node tcp://localhost:15957
+centaurid config chain-id banksy-testnet-3
+centaurid config keyring-backend test
+centaurid config node tcp://localhost:15957
 
 # Initialize the node
-banksyd init $MONIKER --chain-id banksy-testnet-3
+centaurid init $MONIKER --chain-id banksy-testnet-3
 
 # Download genesis and addrbook
 curl -Ls https://snapshots.kjnodes.com/composable-testnet/genesis.json > $HOME/.banksy/config/genesis.json
@@ -134,5 +134,5 @@ curl -L https://snapshots.kjnodes.com/composable-testnet/snapshot_latest.tar.lz4
 ### Start service and check the logs
 
 ```bash
-sudo systemctl start banksyd && sudo journalctl -u banksyd -f --no-hostname -o cat
+sudo systemctl start centaurid && sudo journalctl -u centaurid -f --no-hostname -o cat
 ```

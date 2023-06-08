@@ -14,18 +14,18 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **10:15 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: v2.3.5
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v3.0.0
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 117042 | 4 hours | [snapshot (0.29 GB)](https://snapshots.kjnodes.com/composable-testnet/snapshot\_latest.tar.lz4) |
+| 146388 | 2 hours | [snapshot (0.31 GB)](https://snapshots.kjnodes.com/composable-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
 ### Stop the service and reset the data
 
 ```bash
-sudo systemctl stop banksyd
+sudo systemctl stop centaurid
 cp $HOME/.banksy/data/priv_validator_state.json $HOME/.banksy/priv_validator_state.json.backup
 rm -rf $HOME/.banksy/data
 ```
@@ -40,5 +40,5 @@ mv $HOME/.banksy/priv_validator_state.json.backup $HOME/.banksy/data/priv_valida
 ### Restart the service and check the log
 
 ```bash
-sudo systemctl start banksyd && sudo journalctl -u banksyd -f --no-hostname -o cat
+sudo systemctl start centaurid && sudo journalctl -u centaurid -f --no-hostname -o cat
 ```

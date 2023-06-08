@@ -14,11 +14,11 @@ snapshot server is periodically beeing state-synced.
 
 Snapshots are taken automatically every 6 hours starting at **04:00 UTC**
 
-**pruning**: 100/0/19 | **indexer**: null | **version tag**: v2.1.0
+**pruning**: 100/0/19 | **indexer**: null | **version tag**: v2.1.1
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 989749 | 4 hours | [snapshot (1.35 GB)](https://snapshots.kjnodes.com/gitopia/snapshot\_latest.tar.lz4) |
+| 1089645 | 2 hours | [snapshot (1.36 GB)](https://snapshots.kjnodes.com/gitopia/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

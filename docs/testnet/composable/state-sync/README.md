@@ -18,9 +18,9 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ### Stop the service and reset the data
 
 ```bash
-sudo systemctl stop banksyd
+sudo systemctl stop centaurid
 cp $HOME/.banksy/data/priv_validator_state.json $HOME/.banksy/priv_validator_state.json.backup
-banksyd tendermint unsafe-reset-all --home $HOME/.banksy
+centaurid tendermint unsafe-reset-all --home $HOME/.banksy
 ```
 
 ### Get and configure the state sync information
@@ -48,5 +48,5 @@ mv $HOME/.banksy/priv_validator_state.json.backup $HOME/.banksy/data/priv_valida
 ### Restart the service and check the log
 
 ```bash
-sudo systemctl start banksyd && sudo journalctl -u banksyd -f --no-hostname -o cat
+sudo systemctl start centaurid && sudo journalctl -u centaurid -f --no-hostname -o cat
 ```
