@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/agoric.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: agoric-emerynet-7 | **Latest Version Tag**: mainnet1B-rc2 | **Custom Port**: 127
+**Chain ID**: agoric-emerynet-8 | **Latest Version Tag**: mainnet1B-rc2 | **Custom Port**: 127
 
 ### Setup validator name
 
@@ -116,12 +116,12 @@ sudo systemctl enable agd
 
 ```bash
 # Set node configuration
-agd config chain-id agoric-emerynet-7
+agd config chain-id agoric-emerynet-8
 agd config keyring-backend test
 agd config node tcp://localhost:12757
 
 # Initialize the node
-agd init $MONIKER --chain-id agoric-emerynet-7
+agd init $MONIKER --chain-id agoric-emerynet-8
 
 # Download genesis and addrbook
 curl -Ls https://snapshots.kjnodes.com/agoric-testnet/genesis.json > $HOME/.agoric/config/genesis.json
