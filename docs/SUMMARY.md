@@ -72,13 +72,6 @@
   * [State sync](mainnet/kujira/state-sync/README.md)
   * [Useful commands](mainnet/kujira/useful-commands/README.md)
 
-* [Mars](mainnet/mars/README.md)
-  * [Installation](mainnet/mars/installation/README.md)
-  * [Upgrade](mainnet/mars/upgrade/README.md)
-  * [Snapshot](mainnet/mars/snapshot/README.md)
-  * [State sync](mainnet/mars/state-sync/README.md)
-  * [Useful commands](mainnet/mars/useful-commands/README.md)
-
 * [Migaloo](mainnet/migaloo/README.md)
   * [Installation](mainnet/migaloo/installation/README.md)
   * [Upgrade](mainnet/migaloo/upgrade/README.md)
