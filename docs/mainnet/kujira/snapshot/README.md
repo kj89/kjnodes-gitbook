@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **00:15 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 11478519 | 5 hours | [snapshot (5.44 GB)](https://snapshots.kjnodes.com/kujira/snapshot\_latest.tar.lz4) |
+| 11482568 | 37 minutes | [snapshot (4.29 GB)](https://snapshots.kjnodes.com/kujira/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
