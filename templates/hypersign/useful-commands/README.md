@@ -289,7 +289,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/${CHAIN_DIR}/config/co
 #### Reset chain data
 
 ```bash
-${CHAIN_APP} tendermint unsafe-reset-all --home $HOME/${CHAIN_DIR} --keep-addr-book
+${CHAIN_APP} tendermint unsafe-reset-all --keep-addr-book --home $HOME/${CHAIN_DIR} --keep-addr-book
 ```
 
 #### Remove node

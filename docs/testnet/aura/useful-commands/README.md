@@ -289,7 +289,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.aura/config/config.to
 #### Reset chain data
 
 ```bash
-aurad tendermint unsafe-reset-all --home $HOME/.aura --keep-addr-book
+aurad tendermint unsafe-reset-all --keep-addr-book --home $HOME/.aura --keep-addr-book
 ```
 
 #### Remove node

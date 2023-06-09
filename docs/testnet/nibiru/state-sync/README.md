@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop nibid
 cp $HOME/.nibid/data/priv_validator_state.json $HOME/.nibid/priv_validator_state.json.backup
-nibid tendermint unsafe-reset-all --home $HOME/.nibid
+nibid tendermint unsafe-reset-all --keep-addr-book --home $HOME/.nibid
 ```
 
 ### Get and configure the state sync information

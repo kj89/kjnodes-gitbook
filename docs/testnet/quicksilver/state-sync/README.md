@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop quicksilverd
 cp $HOME/.quicksilverd/data/priv_validator_state.json $HOME/.quicksilverd/priv_validator_state.json.backup
-quicksilverd tendermint unsafe-reset-all --home $HOME/.quicksilverd
+quicksilverd tendermint unsafe-reset-all --keep-addr-book --home $HOME/.quicksilverd
 ```
 
 ### Get and configure the state sync information

@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop sourced
 cp $HOME/.source/data/priv_validator_state.json $HOME/.source/priv_validator_state.json.backup
-sourced tendermint unsafe-reset-all --home $HOME/.source
+sourced tendermint unsafe-reset-all --keep-addr-book --home $HOME/.source
 ```
 
 ### Get and configure the state sync information

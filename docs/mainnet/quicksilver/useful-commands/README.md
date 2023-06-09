@@ -289,7 +289,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.quicksilverd/config/c
 #### Reset chain data
 
 ```bash
-quicksilverd tendermint unsafe-reset-all --home $HOME/.quicksilverd --keep-addr-book
+quicksilverd tendermint unsafe-reset-all --keep-addr-book --home $HOME/.quicksilverd --keep-addr-book
 ```
 
 #### Remove node

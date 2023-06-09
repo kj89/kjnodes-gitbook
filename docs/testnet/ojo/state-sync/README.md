@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop ojod
 cp $HOME/.ojo/data/priv_validator_state.json $HOME/.ojo/priv_validator_state.json.backup
-ojod tendermint unsafe-reset-all --home $HOME/.ojo
+ojod tendermint unsafe-reset-all --keep-addr-book --home $HOME/.ojo
 ```
 
 ### Get and configure the state sync information

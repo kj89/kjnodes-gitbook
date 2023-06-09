@@ -289,7 +289,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.hid-node/config/confi
 #### Reset chain data
 
 ```bash
-hid-noded tendermint unsafe-reset-all --home $HOME/.hid-node --keep-addr-book
+hid-noded tendermint unsafe-reset-all --keep-addr-book --home $HOME/.hid-node --keep-addr-book
 ```
 
 #### Remove node

@@ -289,7 +289,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.gaia/config/config.to
 #### Reset chain data
 
 ```bash
-gaiad tendermint unsafe-reset-all --home $HOME/.gaia --keep-addr-book
+gaiad tendermint unsafe-reset-all --keep-addr-book --home $HOME/.gaia --keep-addr-book
 ```
 
 #### Remove node

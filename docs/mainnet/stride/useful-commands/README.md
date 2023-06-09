@@ -289,7 +289,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.stride/config/config.
 #### Reset chain data
 
 ```bash
-strided tendermint unsafe-reset-all --home $HOME/.stride --keep-addr-book
+strided tendermint unsafe-reset-all --keep-addr-book --home $HOME/.stride --keep-addr-book
 ```
 
 #### Remove node

@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop bcnad
 cp $HOME/.bcna/data/priv_validator_state.json $HOME/.bcna/priv_validator_state.json.backup
-bcnad tendermint unsafe-reset-all --home $HOME/.bcna
+bcnad tendermint unsafe-reset-all --keep-addr-book --home $HOME/.bcna
 ```
 
 ### Get and configure the state sync information

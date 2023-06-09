@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop kujirad
 cp $HOME/.kujira/data/priv_validator_state.json $HOME/.kujira/priv_validator_state.json.backup
-kujirad tendermint unsafe-reset-all --home $HOME/.kujira
+kujirad tendermint unsafe-reset-all --keep-addr-book --home $HOME/.kujira
 ```
 
 ### Get and configure the state sync information

@@ -289,7 +289,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.agoric/config/config.
 #### Reset chain data
 
 ```bash
-agd tendermint unsafe-reset-all --home $HOME/.agoric --keep-addr-book
+agd tendermint unsafe-reset-all --keep-addr-book --home $HOME/.agoric --keep-addr-book
 ```
 
 #### Remove node

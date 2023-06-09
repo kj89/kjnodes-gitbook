@@ -289,7 +289,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.elys/config/config.to
 #### Reset chain data
 
 ```bash
-elysd tendermint unsafe-reset-all --home $HOME/.elys --keep-addr-book
+elysd tendermint unsafe-reset-all --keep-addr-book --home $HOME/.elys --keep-addr-book
 ```
 
 #### Remove node

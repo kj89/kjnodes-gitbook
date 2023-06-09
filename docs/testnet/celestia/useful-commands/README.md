@@ -293,7 +293,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.celestia-app/config/c
 #### Reset chain data
 
 ```bash
-celestia-appd tendermint unsafe-reset-all --home $HOME/.celestia-app --keep-addr-book
+celestia-appd tendermint unsafe-reset-all --keep-addr-book --home $HOME/.celestia-app --keep-addr-book
 ```
 
 #### Remove node

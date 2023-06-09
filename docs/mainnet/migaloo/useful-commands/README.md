@@ -289,7 +289,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.migalood/config/confi
 #### Reset chain data
 
 ```bash
-migalood tendermint unsafe-reset-all --home $HOME/.migalood --keep-addr-book
+migalood tendermint unsafe-reset-all --keep-addr-book --home $HOME/.migalood --keep-addr-book
 ```
 
 #### Remove node

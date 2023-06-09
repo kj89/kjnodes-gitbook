@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop andromedad
 cp $HOME/.andromedad/data/priv_validator_state.json $HOME/.andromedad/priv_validator_state.json.backup
-andromedad tendermint unsafe-reset-all --home $HOME/.andromedad
+andromedad tendermint unsafe-reset-all --keep-addr-book --home $HOME/.andromedad
 ```
 
 ### Get and configure the state sync information

@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop lavad
 cp $HOME/.lava/data/priv_validator_state.json $HOME/.lava/priv_validator_state.json.backup
-lavad tendermint unsafe-reset-all --home $HOME/.lava
+lavad tendermint unsafe-reset-all --keep-addr-book --home $HOME/.lava
 ```
 
 ### Get and configure the state sync information

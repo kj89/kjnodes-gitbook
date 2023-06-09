@@ -289,7 +289,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.canine/config/config.
 #### Reset chain data
 
 ```bash
-canined tendermint unsafe-reset-all --home $HOME/.canine --keep-addr-book
+canined tendermint unsafe-reset-all --keep-addr-book --home $HOME/.canine --keep-addr-book
 ```
 
 #### Remove node

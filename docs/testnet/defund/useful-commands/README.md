@@ -289,7 +289,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.defund/config/config.
 #### Reset chain data
 
 ```bash
-defundd tendermint unsafe-reset-all --home $HOME/.defund --keep-addr-book
+defundd tendermint unsafe-reset-all --keep-addr-book --home $HOME/.defund --keep-addr-book
 ```
 
 #### Remove node

@@ -289,7 +289,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.teritorid/config/conf
 #### Reset chain data
 
 ```bash
-teritorid tendermint unsafe-reset-all --home $HOME/.teritorid --keep-addr-book
+teritorid tendermint unsafe-reset-all --keep-addr-book --home $HOME/.teritorid --keep-addr-book
 ```
 
 #### Remove node

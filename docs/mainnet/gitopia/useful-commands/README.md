@@ -289,7 +289,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.gitopia/config/config
 #### Reset chain data
 
 ```bash
-gitopiad tendermint unsafe-reset-all --home $HOME/.gitopia --keep-addr-book
+gitopiad tendermint unsafe-reset-all --keep-addr-book --home $HOME/.gitopia --keep-addr-book
 ```
 
 #### Remove node

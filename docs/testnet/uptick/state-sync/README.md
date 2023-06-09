@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop uptickd
 cp $HOME/.uptickd/data/priv_validator_state.json $HOME/.uptickd/priv_validator_state.json.backup
-uptickd tendermint unsafe-reset-all --home $HOME/.uptickd
+uptickd tendermint unsafe-reset-all --keep-addr-book --home $HOME/.uptickd
 ```
 
 ### Get and configure the state sync information

@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop gaiad
 cp $HOME/.gaia/data/priv_validator_state.json $HOME/.gaia/priv_validator_state.json.backup
-gaiad tendermint unsafe-reset-all --home $HOME/.gaia
+gaiad tendermint unsafe-reset-all --keep-addr-book --home $HOME/.gaia
 ```
 
 ### Get and configure the state sync information

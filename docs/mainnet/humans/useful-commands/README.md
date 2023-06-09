@@ -289,7 +289,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.humansd/config/config
 #### Reset chain data
 
 ```bash
-humansd tendermint unsafe-reset-all --home $HOME/.humansd --keep-addr-book
+humansd tendermint unsafe-reset-all --keep-addr-book --home $HOME/.humansd --keep-addr-book
 ```
 
 #### Remove node

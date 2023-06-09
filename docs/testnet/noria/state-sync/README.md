@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop noriad
 cp $HOME/.noria/data/priv_validator_state.json $HOME/.noria/priv_validator_state.json.backup
-noriad tendermint unsafe-reset-all --home $HOME/.noria
+noriad tendermint unsafe-reset-all --keep-addr-book --home $HOME/.noria
 ```
 
 ### Get and configure the state sync information

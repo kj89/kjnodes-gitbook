@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop osmosisd
 cp $HOME/.osmosisd/data/priv_validator_state.json $HOME/.osmosisd/priv_validator_state.json.backup
-osmosisd tendermint unsafe-reset-all --home $HOME/.osmosisd
+osmosisd tendermint unsafe-reset-all --keep-addr-book --home $HOME/.osmosisd
 ```
 
 ### Get and configure the state sync information

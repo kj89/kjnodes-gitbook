@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop zetacored
 cp $HOME/.zetacored/data/priv_validator_state.json $HOME/.zetacored/priv_validator_state.json.backup
-zetacored tendermint unsafe-reset-all --home $HOME/.zetacored
+zetacored tendermint unsafe-reset-all --keep-addr-book --home $HOME/.zetacored
 ```
 
 ### Get and configure the state sync information

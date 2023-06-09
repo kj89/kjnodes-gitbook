@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop hid-noded
 cp $HOME/.hid-node/data/priv_validator_state.json $HOME/.hid-node/priv_validator_state.json.backup
-hid-noded tendermint unsafe-reset-all --home $HOME/.hid-node
+hid-noded tendermint unsafe-reset-all --keep-addr-book --home $HOME/.hid-node
 ```
 
 ### Get and configure the state sync information

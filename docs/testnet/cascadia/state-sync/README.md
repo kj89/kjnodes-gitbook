@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop cascadiad
 cp $HOME/.cascadiad/data/priv_validator_state.json $HOME/.cascadiad/priv_validator_state.json.backup
-cascadiad tendermint unsafe-reset-all --home $HOME/.cascadiad
+cascadiad tendermint unsafe-reset-all --keep-addr-book --home $HOME/.cascadiad
 ```
 
 ### Get and configure the state sync information

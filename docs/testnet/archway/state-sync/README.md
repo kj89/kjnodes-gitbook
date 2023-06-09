@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop archwayd
 cp $HOME/.archway/data/priv_validator_state.json $HOME/.archway/priv_validator_state.json.backup
-archwayd tendermint unsafe-reset-all --home $HOME/.archway
+archwayd tendermint unsafe-reset-all --keep-addr-book --home $HOME/.archway
 ```
 
 ### Get and configure the state sync information

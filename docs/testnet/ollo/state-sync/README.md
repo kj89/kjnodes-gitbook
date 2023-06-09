@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop ollod
 cp $HOME/.ollo/data/priv_validator_state.json $HOME/.ollo/priv_validator_state.json.backup
-ollod tendermint unsafe-reset-all --home $HOME/.ollo
+ollod tendermint unsafe-reset-all --keep-addr-book --home $HOME/.ollo
 ```
 
 ### Get and configure the state sync information

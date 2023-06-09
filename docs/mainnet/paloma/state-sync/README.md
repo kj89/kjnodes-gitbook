@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop palomad
 cp $HOME/.paloma/data/priv_validator_state.json $HOME/.paloma/priv_validator_state.json.backup
-palomad tendermint unsafe-reset-all --home $HOME/.paloma
+palomad tendermint unsafe-reset-all --keep-addr-book --home $HOME/.paloma
 ```
 
 ### Get and configure the state sync information

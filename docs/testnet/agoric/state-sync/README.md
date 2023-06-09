@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop agd
 cp $HOME/.agoric/data/priv_validator_state.json $HOME/.agoric/priv_validator_state.json.backup
-agd tendermint unsafe-reset-all --home $HOME/.agoric
+agd tendermint unsafe-reset-all --keep-addr-book --home $HOME/.agoric
 ```
 
 ### Get and configure the state sync information

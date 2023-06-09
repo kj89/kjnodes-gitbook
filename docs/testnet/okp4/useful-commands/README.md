@@ -289,7 +289,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.okp4d/config/config.t
 #### Reset chain data
 
 ```bash
-okp4d tendermint unsafe-reset-all --home $HOME/.okp4d --keep-addr-book
+okp4d tendermint unsafe-reset-all --keep-addr-book --home $HOME/.okp4d --keep-addr-book
 ```
 
 #### Remove node

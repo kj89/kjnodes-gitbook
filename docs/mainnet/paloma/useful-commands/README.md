@@ -289,7 +289,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.paloma/config/config.
 #### Reset chain data
 
 ```bash
-palomad tendermint unsafe-reset-all --home $HOME/.paloma --keep-addr-book
+palomad tendermint unsafe-reset-all --keep-addr-book --home $HOME/.paloma --keep-addr-book
 ```
 
 #### Remove node

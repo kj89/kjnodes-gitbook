@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop quasarnoded
 cp $HOME/.quasarnode/data/priv_validator_state.json $HOME/.quasarnode/priv_validator_state.json.backup
-quasarnoded tendermint unsafe-reset-all --home $HOME/.quasarnode
+quasarnoded tendermint unsafe-reset-all --keep-addr-book --home $HOME/.quasarnode
 ```
 
 ### Get and configure the state sync information

@@ -287,7 +287,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.uptickd/config/config
 #### Reset chain data
 
 ```bash
-uptickd tendermint unsafe-reset-all --home $HOME/.uptickd --keep-addr-book
+uptickd tendermint unsafe-reset-all --keep-addr-book --home $HOME/.uptickd --keep-addr-book
 ```
 
 #### Remove node

@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop elysd
 cp $HOME/.elys/data/priv_validator_state.json $HOME/.elys/priv_validator_state.json.backup
-elysd tendermint unsafe-reset-all --home $HOME/.elys
+elysd tendermint unsafe-reset-all --keep-addr-book --home $HOME/.elys
 ```
 
 ### Get and configure the state sync information

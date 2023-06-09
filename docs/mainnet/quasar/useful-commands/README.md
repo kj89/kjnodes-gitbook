@@ -289,7 +289,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.quasarnode/config/con
 #### Reset chain data
 
 ```bash
-quasarnoded tendermint unsafe-reset-all --home $HOME/.quasarnode --keep-addr-book
+quasarnoded tendermint unsafe-reset-all --keep-addr-book --home $HOME/.quasarnode --keep-addr-book
 ```
 
 #### Remove node

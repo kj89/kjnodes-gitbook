@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop nolusd
 cp $HOME/.nolus/data/priv_validator_state.json $HOME/.nolus/priv_validator_state.json.backup
-nolusd tendermint unsafe-reset-all --home $HOME/.nolus
+nolusd tendermint unsafe-reset-all --keep-addr-book --home $HOME/.nolus
 ```
 
 ### Get and configure the state sync information

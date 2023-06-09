@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop althea
 cp $HOME/.althea/data/priv_validator_state.json $HOME/.althea/priv_validator_state.json.backup
-althea tendermint unsafe-reset-all --home $HOME/.althea
+althea tendermint unsafe-reset-all --keep-addr-book --home $HOME/.althea
 ```
 
 ### Get and configure the state sync information

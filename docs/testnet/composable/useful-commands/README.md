@@ -289,7 +289,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.banksy/config/config.
 #### Reset chain data
 
 ```bash
-centaurid tendermint unsafe-reset-all --home $HOME/.banksy --keep-addr-book
+centaurid tendermint unsafe-reset-all --keep-addr-book --home $HOME/.banksy --keep-addr-book
 ```
 
 #### Remove node

@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop canined
 cp $HOME/.canine/data/priv_validator_state.json $HOME/.canine/priv_validator_state.json.backup
-canined tendermint unsafe-reset-all --home $HOME/.canine
+canined tendermint unsafe-reset-all --keep-addr-book --home $HOME/.canine
 ```
 
 ### Get and configure the state sync information

@@ -289,7 +289,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.nibid/config/config.t
 #### Reset chain data
 
 ```bash
-nibid tendermint unsafe-reset-all --home $HOME/.nibid --keep-addr-book
+nibid tendermint unsafe-reset-all --keep-addr-book --home $HOME/.nibid --keep-addr-book
 ```
 
 #### Remove node

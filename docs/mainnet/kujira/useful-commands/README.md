@@ -289,7 +289,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.kujira/config/config.
 #### Reset chain data
 
 ```bash
-kujirad tendermint unsafe-reset-all --home $HOME/.kujira --keep-addr-book
+kujirad tendermint unsafe-reset-all --keep-addr-book --home $HOME/.kujira --keep-addr-book
 ```
 
 #### Remove node

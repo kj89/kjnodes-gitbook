@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop teritorid
 cp $HOME/.teritorid/data/priv_validator_state.json $HOME/.teritorid/priv_validator_state.json.backup
-teritorid tendermint unsafe-reset-all --home $HOME/.teritorid
+teritorid tendermint unsafe-reset-all --keep-addr-book --home $HOME/.teritorid
 ```
 
 ### Get and configure the state sync information

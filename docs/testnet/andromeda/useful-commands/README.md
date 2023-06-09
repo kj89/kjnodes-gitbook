@@ -289,7 +289,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.andromedad/config/con
 #### Reset chain data
 
 ```bash
-andromedad tendermint unsafe-reset-all --home $HOME/.andromedad --keep-addr-book
+andromedad tendermint unsafe-reset-all --keep-addr-book --home $HOME/.andromedad --keep-addr-book
 ```
 
 #### Remove node

@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop noisd
 cp $HOME/.noisd/data/priv_validator_state.json $HOME/.noisd/priv_validator_state.json.backup
-noisd tendermint unsafe-reset-all --home $HOME/.noisd
+noisd tendermint unsafe-reset-all --keep-addr-book --home $HOME/.noisd
 ```
 
 ### Get and configure the state sync information

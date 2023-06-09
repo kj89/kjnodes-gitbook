@@ -289,7 +289,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.archway/config/config
 #### Reset chain data
 
 ```bash
-archwayd tendermint unsafe-reset-all --home $HOME/.archway --keep-addr-book
+archwayd tendermint unsafe-reset-all --keep-addr-book --home $HOME/.archway --keep-addr-book
 ```
 
 #### Remove node

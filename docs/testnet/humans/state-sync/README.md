@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop humansd
 cp $HOME/.humansd/data/priv_validator_state.json $HOME/.humansd/priv_validator_state.json.backup
-humansd tendermint unsafe-reset-all --home $HOME/.humansd
+humansd tendermint unsafe-reset-all --keep-addr-book --home $HOME/.humansd
 ```
 
 ### Get and configure the state sync information

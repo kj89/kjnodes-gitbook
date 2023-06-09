@@ -289,7 +289,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.lava/config/config.to
 #### Reset chain data
 
 ```bash
-lavad tendermint unsafe-reset-all --home $HOME/.lava --keep-addr-book
+lavad tendermint unsafe-reset-all --keep-addr-book --home $HOME/.lava --keep-addr-book
 ```
 
 #### Remove node

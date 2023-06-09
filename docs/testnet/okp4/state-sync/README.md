@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop okp4d
 cp $HOME/.okp4d/data/priv_validator_state.json $HOME/.okp4d/priv_validator_state.json.backup
-okp4d tendermint unsafe-reset-all --home $HOME/.okp4d
+okp4d tendermint unsafe-reset-all --keep-addr-book --home $HOME/.okp4d
 ```
 
 ### Get and configure the state sync information

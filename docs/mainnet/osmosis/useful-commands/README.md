@@ -289,7 +289,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.osmosisd/config/confi
 #### Reset chain data
 
 ```bash
-osmosisd tendermint unsafe-reset-all --home $HOME/.osmosisd --keep-addr-book
+osmosisd tendermint unsafe-reset-all --keep-addr-book --home $HOME/.osmosisd --keep-addr-book
 ```
 
 #### Remove node

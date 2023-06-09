@@ -289,7 +289,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.althea/config/config.
 #### Reset chain data
 
 ```bash
-althea tendermint unsafe-reset-all --home $HOME/.althea --keep-addr-book
+althea tendermint unsafe-reset-all --keep-addr-book --home $HOME/.althea --keep-addr-book
 ```
 
 #### Remove node

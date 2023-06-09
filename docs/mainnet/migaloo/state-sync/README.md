@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop migalood
 cp $HOME/.migalood/data/priv_validator_state.json $HOME/.migalood/priv_validator_state.json.backup
-migalood tendermint unsafe-reset-all --home $HOME/.migalood
+migalood tendermint unsafe-reset-all --keep-addr-book --home $HOME/.migalood
 ```
 
 ### Get and configure the state sync information

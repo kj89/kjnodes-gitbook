@@ -289,7 +289,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.bcna/config/config.to
 #### Reset chain data
 
 ```bash
-bcnad tendermint unsafe-reset-all --home $HOME/.bcna --keep-addr-book
+bcnad tendermint unsafe-reset-all --keep-addr-book --home $HOME/.bcna --keep-addr-book
 ```
 
 #### Remove node

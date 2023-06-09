@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop aurad
 cp $HOME/.aura/data/priv_validator_state.json $HOME/.aura/priv_validator_state.json.backup
-aurad tendermint unsafe-reset-all --home $HOME/.aura
+aurad tendermint unsafe-reset-all --keep-addr-book --home $HOME/.aura
 ```
 
 ### Get and configure the state sync information

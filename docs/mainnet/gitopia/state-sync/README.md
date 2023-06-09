@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop gitopiad
 cp $HOME/.gitopia/data/priv_validator_state.json $HOME/.gitopia/priv_validator_state.json.backup
-gitopiad tendermint unsafe-reset-all --home $HOME/.gitopia
+gitopiad tendermint unsafe-reset-all --keep-addr-book --home $HOME/.gitopia
 ```
 
 ### Get and configure the state sync information

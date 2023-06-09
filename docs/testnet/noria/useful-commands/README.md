@@ -289,7 +289,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.noria/config/config.t
 #### Reset chain data
 
 ```bash
-noriad tendermint unsafe-reset-all --home $HOME/.noria --keep-addr-book
+noriad tendermint unsafe-reset-all --keep-addr-book --home $HOME/.noria --keep-addr-book
 ```
 
 #### Remove node

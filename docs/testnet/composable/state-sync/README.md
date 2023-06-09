@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop centaurid
 cp $HOME/.banksy/data/priv_validator_state.json $HOME/.banksy/priv_validator_state.json.backup
-centaurid tendermint unsafe-reset-all --home $HOME/.banksy
+centaurid tendermint unsafe-reset-all --keep-addr-book --home $HOME/.banksy
 ```
 
 ### Get and configure the state sync information

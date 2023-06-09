@@ -289,7 +289,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.zetacored/config/conf
 #### Reset chain data
 
 ```bash
-zetacored tendermint unsafe-reset-all --home $HOME/.zetacored --keep-addr-book
+zetacored tendermint unsafe-reset-all --keep-addr-book --home $HOME/.zetacored --keep-addr-book
 ```
 
 #### Remove node

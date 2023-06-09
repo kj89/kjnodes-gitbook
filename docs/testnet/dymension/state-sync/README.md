@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop dymd
 cp $HOME/.dymension/data/priv_validator_state.json $HOME/.dymension/priv_validator_state.json.backup
-dymd tendermint unsafe-reset-all --home $HOME/.dymension
+dymd tendermint unsafe-reset-all --keep-addr-book --home $HOME/.dymension
 ```
 
 ### Get and configure the state sync information

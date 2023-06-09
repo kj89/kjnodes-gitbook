@@ -289,7 +289,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.ojo/config/config.tom
 #### Reset chain data
 
 ```bash
-ojod tendermint unsafe-reset-all --home $HOME/.ojo --keep-addr-book
+ojod tendermint unsafe-reset-all --keep-addr-book --home $HOME/.ojo --keep-addr-book
 ```
 
 #### Remove node

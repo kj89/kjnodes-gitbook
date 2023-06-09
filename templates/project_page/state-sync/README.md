@@ -20,7 +20,7 @@ faster than replaying blocks, this can reduce the time to sync with the network 
 ```bash
 sudo systemctl stop ${CHAIN_APP}
 cp $HOME/${CHAIN_DIR}/data/priv_validator_state.json $HOME/${CHAIN_DIR}/priv_validator_state.json.backup
-${CHAIN_APP} tendermint unsafe-reset-all --home $HOME/${CHAIN_DIR}
+${CHAIN_APP} tendermint unsafe-reset-all --keep-addr-book --home $HOME/${CHAIN_DIR}
 ```
 
 ### Get and configure the state sync information

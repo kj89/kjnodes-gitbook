@@ -289,7 +289,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.cascadiad/config/conf
 #### Reset chain data
 
 ```bash
-cascadiad tendermint unsafe-reset-all --home $HOME/.cascadiad --keep-addr-book
+cascadiad tendermint unsafe-reset-all --keep-addr-book --home $HOME/.cascadiad --keep-addr-book
 ```
 
 #### Remove node

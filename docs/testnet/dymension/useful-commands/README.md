@@ -289,7 +289,7 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.dymension/config/conf
 #### Reset chain data
 
 ```bash
-dymd tendermint unsafe-reset-all --home $HOME/.dymension --keep-addr-book
+dymd tendermint unsafe-reset-all --keep-addr-book --home $HOME/.dymension --keep-addr-book
 ```
 
 #### Remove node
