@@ -4,7 +4,7 @@
 
 The Migaloo chain is a permissionless Cosmos SDK chain on which  projects are encouraged to build their applications. Migaloo chain  is the home of the White Whale dApp, Interchain Command Center.
 
-**Chain ID**: migaloo-1 | **Latest Version Tag**: v2.0.3 | **Wasm**: ON
+**Chain ID**: migaloo-1 | **Latest Version Tag**: v2.0.5 | **Wasm**: ON
 
 [Website](https://whitewhale.money) | [Discord](https://discord.gg/AyvcgD4jy3) | [Twitter](https://twitter.com/WhiteWhaleDefi)
 
@@ -43,8 +43,8 @@ d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@migaloo.rpc.kjnodes.com:14956
 curl -Ls https://snapshots.kjnodes.com/migaloo/addrbook.json > $HOME/.migalood/config/addrbook.json
 ```
 
-**live-peers** (9)
+**live-peers** (10)
 ```bash
-peers="9cb7ba30c7eb7e9b516b90e09ca0f53250927440@146.59.52.135:8095,e91f650bb3d5b66762093150718af358c6355cc5@15.235.10.35:36656,5429bc670b77cd9c61481912ea194bea8aa6d0cd@51.81.155.189:20756,a0a450ead908bd65813322c1373802ef32c5736d@65.108.235.33:4000,7e2bf7bdcc3b40a1dae4c9befb1ef1cb47d03c6d@65.108.10.37:26656,2f1650c361f2f92d0e456960b01579c3484fa683@116.202.143.93:26656,6870906f86e474d88d077c7c55af36debe49da04@178.162.165.194:7095,1d3809b25bbe6a29bc2415df77c9fc82e46fd384@18.117.74.187:26656,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:14956"
+peers="d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.109.88.38:14956,2f1650c361f2f92d0e456960b01579c3484fa683@116.202.143.93:26656,6870906f86e474d88d077c7c55af36debe49da04@178.162.165.194:7095,0c38efdc028867765e68f02979958468384ad087@51.89.155.2:23656,1dbde442aa955aa77f62ddfea74ee18bf706a50f@15.235.114.194:20756,9780ea85f4d0f4cb5ebca14992ce11ebe1982d35@188.172.229.26:26656,e3fee82bd16509145c45b3dc0b8f4db25315078e@212.227.13.120:26656,5429bc670b77cd9c61481912ea194bea8aa6d0cd@51.81.155.189:20756,dfe5f91f824880e19d47475546d9874e0f2cea8c@5.79.74.229:8095,2bd1bfb7a8d73e573b3a27cd01835b67d48f1f04@51.159.214.226:42103"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.migalood/config/config.toml
 ```

@@ -6,7 +6,7 @@ description: Prepare for and the upcomming chain upgrade using Cosmovisor.
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/migaloo.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: migaloo-1 | **Latest Version Tag**: v2.0.3 | **Custom Port**: 149
+**Chain ID**: migaloo-1 | **Latest Version Tag**: v2.0.5 | **Custom Port**: 149
 
 {% hint style='info' %}
 Since we are using Cosmovisor, it makes it very easy to prepare for upcomming upgrade.
@@ -21,7 +21,7 @@ cd $HOME
 rm -rf migaloo-chain
 git clone https://github.com/White-Whale-Defi-Platform/migaloo-chain.git
 cd migaloo-chain
-git checkout v2.0.3
+git checkout v2.0.5
 
 # Build binaries
 make build
