@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/agoric.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: agoric-emerynet-8 | **Latest Version Tag**: mainnet1B-rc2 | **Custom Port**: 127
+**Chain ID**: agoric-emerynet-8 | **Latest Version Tag**: mainnet1B-rc3 | **Custom Port**: 127
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ sudo apt -qy upgrade
 
 ```bash
 sudo rm -rf /usr/local/go
-curl -Ls https://go.dev/dl/go1.20.4.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
+curl -Ls https://go.dev/dl/go1.20.5.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
 eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/golang.sh)
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
@@ -55,10 +55,10 @@ eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```bash
 # Clone project repository
 cd $HOME
-rm -rf mainnet1B-rc2
-git clone https://github.com/Agoric/agoric-sdk.git mainnet1B-rc2
-cd mainnet1B-rc2
-git checkout mainnet1B-rc2
+rm -rf mainnet1B-rc3
+git clone https://github.com/Agoric/agoric-sdk.git mainnet1B-rc3
+cd mainnet1B-rc3
+git checkout mainnet1B-rc3
 
 # Install and build Agoric Javascript packages
 yarn install && yarn build
@@ -68,7 +68,7 @@ yarn install && yarn build
 
 # Prepare binaries for Cosmovisor
 mkdir -p $HOME/.agoric/cosmovisor/genesis/bin
-ln -s $HOME/mainnet1B-rc2/bin/agd $HOME/.agoric/cosmovisor/upgrades/agorictest-upgrade-10/bin/agd
+ln -s $HOME/mainnet1B-rc3/bin/agd $HOME/.agoric/cosmovisor/upgrades/agorictest-upgrade-10/bin/agd
 
 # Create application symlinks
 sudo ln -s $HOME/.agoric/cosmovisor/genesis $HOME/.agoric/cosmovisor/current -f

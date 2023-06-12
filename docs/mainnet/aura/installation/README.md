@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/aura.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: xstaxy-1 | **Latest Version Tag**: aura_v0.4.4 | **Custom Port**: 117
+**Chain ID**: xstaxy-1 | **Latest Version Tag**: aura_v0.4.5 | **Custom Port**: 117
 
 ### Setup validator name
 
@@ -32,7 +32,7 @@ sudo apt -qy upgrade
 
 ```bash
 sudo rm -rf /usr/local/go
-curl -Ls https://go.dev/dl/go1.19.9.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
+curl -Ls https://go.dev/dl/go1.19.10.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
 eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/golang.sh)
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf aura
 git clone https://github.com/aura-nw/aura.git
 cd aura
-git checkout aura_v0.4.4
+git checkout aura_v0.4.5
 
 # Build binaries
 make build
