@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/uptick.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: uptick_117-1 | **Latest Version Tag**: v0.2.4 | **Custom Port**: 115
+**Chain ID**: uptick_117-1 | **Latest Version Tag**: v0.2.8 | **Custom Port**: 115
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf uptick
 git clone https://github.com/UptickNetwork/uptick.git
 cd uptick
-git checkout v0.2.4
+git checkout v0.2.8
 
 # Build binaries
 make build
