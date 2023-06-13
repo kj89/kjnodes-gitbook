@@ -4,7 +4,7 @@
 
 Lava powers a trustless market for RPC data access. The protocol  governs over peer to peer and private Provider-Application pairings,  ensuring high quality RPC service while creating consensus around data served.
 
-**Chain ID**: lava-testnet-1 | **Latest Version Tag**: v0.12.1-hf | **Wasm**: OFF
+**Chain ID**: lava-testnet-1 | **Latest Version Tag**: v0.13.1 | **Wasm**: OFF
 
 [Website](https://lavanet.xyz) | [Discord](https://discord.com/invite/Tbk5NxTCdA) | [Twitter](https://twitter.com/lavanetxyz)
 
@@ -41,8 +41,8 @@ d5519e378247dfb61dfe90652d1fe3e2b3005a5b@lava-testnet.rpc.kjnodes.com:14456
 curl -Ls https://snapshots.kjnodes.com/lava-testnet/addrbook.json > $HOME/.lava/config/addrbook.json
 ```
 
-**live-peers** (10)
+**live-peers** (9)
 ```bash
-peers="14ae45e7f2ff7491cfa686a8fcac7cc095bc38ff@213.239.217.52:39656,47385d0a7051109de5342e3b27890c4a4b9e0763@65.108.72.233:16656,5c2a752c9b1952dbed075c56c600c3a79b58c395@185.16.39.172:27066,5c107bb2b72c930a5ab3406a1f7c7345b7229b49@148.251.11.99:11656,257856431ef33f9fbfe6c119fdf3820035891d0c@38.242.197.140:26656,bfe21dd5af98aa42d213cd5bd943162a36b0505f@92.243.165.98:26656,5e068fccd370b2f2e5ab4240a304323af6385f1f@172.93.110.154:27656,b16eb3c538b9a460612a4cea37c2657f15579126@65.109.30.90:11656,0d08a1b452e6d7ccdfbc9b54658b5f9ed24eff7b@135.181.138.160:29956,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:14456"
+peers="abef1d647b77b701d81ae15e093bf00d29cc56e1@46.4.50.247:13656,2a588e5ddcfd8c9095cc6f34b5b6966e31020cfd@65.21.123.172:11656,13a9209a4d08803a3becac57de8eb02dd51f8f41@65.109.23.114:19956,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:14456,bb8c8cea499a1fa7e97922b5a9882c2360c6575a@176.103.222.21:26656,bfe21dd5af98aa42d213cd5bd943162a36b0505f@92.243.165.98:26656,5e068fccd370b2f2e5ab4240a304323af6385f1f@172.93.110.154:27656,1550fe479ee2dcfa35f7dcd2c66f37a50d34b0e3@178.63.132.243:2237,daf1720b75cd6f200daac9c453910257e20e6e52@161.97.74.88:26256"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.lava/config/config.toml
 ```
