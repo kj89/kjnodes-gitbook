@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/nolus.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: nolus-rila | **Latest Version Tag**: v0.3.0 | **Custom Port**: 143
+**Chain ID**: rila-1 | **Latest Version Tag**: v0.3.0 | **Custom Port**: 143
 
 ### Setup validator name
 
@@ -32,7 +32,7 @@ sudo apt -qy upgrade
 
 ```bash
 sudo rm -rf /usr/local/go
-curl -Ls https://go.dev/dl/go1.19.10.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
+curl -Ls https://go.dev/dl/go1.20.4.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
 eval $(echo 'export PATH=$PATH:/usr/local/go/bin' | sudo tee /etc/profile.d/golang.sh)
 eval $(echo 'export PATH=$PATH:$HOME/go/bin' | tee -a $HOME/.profile)
 ```
@@ -94,12 +94,12 @@ sudo systemctl enable nolusd
 
 ```bash
 # Set node configuration
-nolusd config chain-id nolus-rila
+nolusd config chain-id rila-1
 nolusd config keyring-backend test
 nolusd config node tcp://localhost:14357
 
 # Initialize the node
-nolusd init $MONIKER --chain-id nolus-rila
+nolusd init $MONIKER --chain-id rila-1
 
 # Download genesis and addrbook
 curl -Ls https://snapshots.kjnodes.com/nolus-testnet/genesis.json > $HOME/.nolus/config/genesis.json

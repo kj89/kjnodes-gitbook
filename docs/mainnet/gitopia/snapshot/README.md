@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **04:00 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 1375485 | 2 hours | [snapshot (1.47 GB)](https://snapshots.kjnodes.com/gitopia/snapshot\_latest.tar.lz4) |
+| 1375485 | 5 hours | [snapshot (1.47 GB)](https://snapshots.kjnodes.com/gitopia/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **10:45 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 1293925 | 1 hours | [snapshot (0.25 GB)](https://snapshots.kjnodes.com/noria-testnet/snapshot\_latest.tar.lz4) |
+| 1293925 | 5 hours | [snapshot (0.25 GB)](https://snapshots.kjnodes.com/noria-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 

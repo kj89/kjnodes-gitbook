@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **03:15 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 2762799 | 3 hours | [snapshot (6.41 GB)](https://snapshots.kjnodes.com/nolus-testnet/snapshot\_latest.tar.lz4) |
+| 2766523 | 44 minutes | [snapshot (6.72 GB)](https://snapshots.kjnodes.com/nolus-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
