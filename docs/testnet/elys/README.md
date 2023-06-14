@@ -4,7 +4,7 @@
 
 Elys is a fast layer 1 blockchain powered by the Cosmos-SDK.  It is the first, and only, decentralized suite of financial  applications in the Cosmos ecosystem that has built-in native  bridging capabilities for optimal user experience and value  capture, and native margin trading capabilities that are  powered by liquidity pools & liquidity providers.
 
-**Chain ID**: elystestnet-1 | **Latest Version Tag**: v0.6.0 | **Wasm**: OFF
+**Chain ID**: elystestnet-1 | **Latest Version Tag**: v0.7.0 | **Wasm**: OFF
 
 [Website](https://elys.network) | [Discord](https://discord.gg/R9Gr6Vh7vC) | [Twitter](https://twitter.com/elys_network)
 
@@ -43,6 +43,6 @@ curl -Ls https://snapshots.kjnodes.com/elys-testnet/addrbook.json > $HOME/.elys/
 
 **live-peers** (10)
 ```bash
-peers="fed5ba77a69a4e75f44588f794999e9ca0c6b440@45.67.217.22:21956,a346d8325a9c3cd40e32236eb6de031d1a2d895e@95.217.107.96:26156,609c64cc50fb4ebbe7cae3347545d3950ea2c018@65.108.195.29:23656,ae22b82b1dc34fa0b1a64854168692310f562136@198.27.74.140:26656,def2a9a89a7cf66e7e73f277384e6a66f82a68f4@95.214.55.138:13656,e27c08c6159ebe0fb6293336ee51e68c35fe2102@31.220.84.183:60756,3a69f577b14bb5e3829489881cc80841b785e092@116.203.129.0:26656,fc48fa26c32273b10fdbba438da9b23a36f92a53@209.182.237.121:27656,9e456e22da0930be2761123b7036e386a3247647@57.128.110.141:26656,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:15356"
+peers="7a496b16d41c366f736135b3b362a9ce80ca7dfa@161.97.167.196:38656,44f3a9ac5bfe5292edaea6e00ed2fdc4b0384573@143.198.198.204:26656,dc06b3547cf81c40c931a748679ce22161e5ac43@148.113.6.121:19656,86987eeff225699e67a6543de3622b8a986cce28@91.183.62.162:26656,fed5ba77a69a4e75f44588f794999e9ca0c6b440@45.67.217.22:21956,c67026e855a3ed0cb04f35445a9af48e6c5ae323@95.216.190.39:22656,f3480371baafae419bfef68a64ace00dd8944bd6@65.109.92.241:10126,ab4068efcb0e1401ff1b08f9269fa88151a640c0@154.12.229.78:26656,147683d8ae2c34281fc73d6a9f6cedd5f28a15ed@185.216.203.176:21956,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:15356"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.elys/config/config.toml
 ```
