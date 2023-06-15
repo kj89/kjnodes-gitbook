@@ -43,6 +43,6 @@ curl -Ls https://snapshots.kjnodes.com/nolus-testnet/addrbook.json > $HOME/.nolu
 
 **live-peers** (4)
 ```bash
-peers="388acecb06c21f4ea243d3ba756d28965ae6ed00@78.128.61.41:26611,f51e1663a3c3393eda437191fba66f220a7c3bfb@142.132.208.26:26356,7042490bf1526d8c61c43ffe4d700388b73b905f@65.108.192.123:35656,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:14356"
+peers="f51e1663a3c3393eda437191fba66f220a7c3bfb@142.132.208.26:26356,d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:14356,388acecb06c21f4ea243d3ba756d28965ae6ed00@78.128.61.41:26611,7042490bf1526d8c61c43ffe4d700388b73b905f@65.108.192.123:35656"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.nolus/config/config.toml
 ```

@@ -135,6 +135,13 @@
   * [State sync](mainnet/teritori/state-sync/README.md)
   * [Useful commands](mainnet/teritori/useful-commands/README.md)
 
+* [Umee](mainnet/umee/README.md)
+  * [Installation](mainnet/umee/installation/README.md)
+  * [Upgrade](mainnet/umee/upgrade/README.md)
+  * [Snapshot](mainnet/umee/snapshot/README.md)
+  * [State sync](mainnet/umee/state-sync/README.md)
+  * [Useful commands](mainnet/umee/useful-commands/README.md)
+
 * [Uptick](mainnet/uptick/README.md)
   * [Installation](mainnet/uptick/installation/README.md)
   * [Upgrade](mainnet/uptick/upgrade/README.md)
