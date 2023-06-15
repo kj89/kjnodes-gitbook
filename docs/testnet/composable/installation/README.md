@@ -6,7 +6,7 @@ description: Setting up your validator node has never been so easy. Get your val
 
 <figure><img src="https://raw.githubusercontent.com/kj89/cosmos-images/main/logos/composable.png" alt=""><figcaption></figcaption></figure>
 
-**Chain ID**: banksy-testnet-3 | **Latest Version Tag**: v3.0.0 | **Custom Port**: 159
+**Chain ID**: banksy-testnet-3 | **Latest Version Tag**: v3.0.3-testnet | **Custom Port**: 159
 
 ### Setup validator name
 
@@ -45,7 +45,7 @@ cd $HOME
 rm -rf composable-testnet
 git clone https://github.com/notional-labs/composable-testnet.git
 cd composable-testnet
-git checkout v3.0.0
+git checkout v3.0.3-testnet
 
 # Build binaries
 make build

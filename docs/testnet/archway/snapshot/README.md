@@ -18,7 +18,7 @@ Snapshots are taken automatically every 6 hours starting at **09:15 UTC**
 
 | BLOCK             | AGE             | DOWNLOAD                                                                                            |
 | ----------------- | --------------- | --------------------------------------------------------------------------------------------------- |
-| 445385 | 1 hours | [snapshot (0.56 GB)](https://snapshots.kjnodes.com/archway-testnet/snapshot\_latest.tar.lz4) |
+| 449155 | 9 hours | [snapshot (0.64 GB)](https://snapshots.kjnodes.com/archway-testnet/snapshot\_latest.tar.lz4) |
 
 ## Instructions
 
